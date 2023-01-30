@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-ssd-cache-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Edite el nombre de la caché SSD y visualice el estado, la capacidad máxima y actual, el estado de las funciones Drive Security y Garantía de datos, y los volúmenes y las unidades asociadas. 
+---
+= Cambiar la configuración de la caché SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible editar el nombre de la caché SSD y visualizar el estado, las capacidades máxima y actual, el estado de las funciones Drive Security y Garantía de datos, y los volúmenes y las unidades asociadas.
+
+
+NOTE: Esta función no está disponible en los sistemas de almacenamiento EF600 o EF300.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la caché SSD.
+. Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+. Seleccione la caché SSD que desea editar y, a continuación, haga clic en *Ver/editar configuración*.
++
+Se muestra el cuadro de diálogo Configuración de caché SSD.
+
+. Revise o edite la configuración de la caché SSD según corresponda.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Muestra el nombre de la caché SSD, que se puede modificar. El nombre de la caché SSD es obligatorio.
+
+
+
+ a| 
+Características
+ a| 
+Muestra el estado de la caché SSD. Los Estados posibles incluyen los siguientes:
+
+** Óptimo
+** Desconocido
+** Degradado
+** Con errores (Un estado fallido genera un evento MEL crítico).
+** Suspendida
+
+
+
+
+ a| 
+Capacidades
+ a| 
+Muestra la capacidad actual y la capacidad máxima permitida de la caché SSD. La capacidad máxima permitida de la caché SSD depende del tamaño de la caché primaria de la controladora:
+
+** Hasta 1 GIB
+** 1 GIB a 2 GIB
+** 2 GIB a 4 GIB
+** Más de 4 GIB
+
+
+
+
+ a| 
+Seguridad y DA
+ a| 
+Muestra el estado de Drive Security y Garantía de datos de la caché SSD.
+
+** *Compatible con la función de seguridad*: Indica si la caché SSD está compuesta íntegramente por unidades compatibles con la función de seguridad. Una unidad compatible con la función de seguridad es una unidad de autocifrado que puede proteger los datos contra el acceso no autorizado.
+** *Secure-enabled* -- indica si la seguridad está habilitada en la caché SSD.
+** *Compatible con DA*: Indica si la caché SSD está compuesta íntegramente por unidades compatibles con DA. Una unidad compatible con DA puede comprobar la existencia de errores que pueden producirse durante la comunicación de los datos entre el host y la cabina de almacenamiento, y corregirlos.
+
+
+
+
+ a| 
+Objetos asociados
+ a| 
+Muestra los volúmenes y las unidades asociados con la caché SSD.
+
+|===
+====
+. Haga clic en *Guardar*.
+

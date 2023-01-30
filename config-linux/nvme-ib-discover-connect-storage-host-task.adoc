@@ -1,0 +1,143 @@
+---
+permalink: config-linux/nvme-ib-discover-connect-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Antes de realizar definiciones de cada host en SANtricity System Manager, es necesario detectar los puertos de la controladora de destino del host y, a continuación, establecer conexiones NVMe. 
+---
+= Detectar y conectarse al almacenamiento desde el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de realizar definiciones de cada host en SANtricity System Manager, es necesario detectar los puertos de la controladora de destino del host y, a continuación, establecer conexiones NVMe.
+
+.Pasos
+. Detecte subsistemas disponibles en el destino NVMe-of para todas las rutas usando el siguiente comando:
++
+[listing]
+----
+nvme discover -t rdma -a target_ip_address
+----
++
+En este comando, `target_ip_address` Es la dirección IP del puerto de destino.
+
++
+
+NOTE: La `nvme discover` el comando detecta todos los puertos de la controladora en el subsistema, independientemente del acceso al host.
+
++
+[listing]
+----
+# nvme discover -t rdma -a 10.10.10.100
+ Discovery Log Number of Records 2, Generation counter 0
+ =====Discovery Log Entry 0======
+ trtype:  rdma
+ adrfam:  ipv4
+ subtype: nvme subsystem
+ treq:    not specified
+ portid:  0
+ trsvcid: 4420
+ subnqn:  nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be
+ traddr: 10.10.10.100
+ rdma_prtype: infiniband
+ rdma_qptype: connected
+ rdma_cms:    rdma-cm
+ rdma_pkey: 0x0000
+=====Discovery Log Entry 1======
+ trtype:  rdma
+ adrfam:  ipv4
+ subtype: nvme subsystem
+ treq:    not specified
+ portid:  1
+ trsvcid: 4420
+ subnqn:  nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be
+ traddr: 11.11.11.100
+ rdma_prtype: infiniband
+ rdma_qptype: connected
+ rdma_cms:    rdma-cm
+ rdma_pkey: 0x0000
+----
+. Repita el paso 1 para cualquier otra conexión.
+. Conéctese al subsistema detectado en la primera ruta con el comando: `nvme connect -t rdma -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
++
+
+NOTE: El comando anterior no continúa durante el reinicio. La `nvme connect` Será necesario ejecutar el comando después de cada reinicio para volver a establecer las conexiones NVMe.
+
++
+
+NOTE: Las conexiones NVMe no persisten durante el reinicio del sistema o durante períodos prolongados de que la controladora no está disponible.
+
++
+
+NOTE: No se establecen conexiones para ningún puerto detectado al que el host no puede acceder.
+
++
+
+NOTE: Si especifica un número de puerto con este comando, la conexión genera un error. El puerto predeterminado es el único puerto configurado para las conexiones.
+
++
+
+NOTE: El ajuste de profundidad de cola recomendado es 1024. Anule el ajuste predeterminado de 128 con 1024 mediante la ``-Q 1024``opción de línea de comandos, como se muestra en el siguiente ejemplo.
+
++
+
+NOTE: El tiempo de espera de pérdida de la controladora recomendado en segundos es de 60 minutos (3600 segundos). Anule el ajuste predeterminado de 600 segundos con 3600 segundos mediante el `-l 3600` opción de línea de comandos, como se muestra en el siguiente ejemplo:
+
++
+[listing]
+----
+# nvme connect -t rdma -a 10.10.10.100 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600
+----
+. Utilice la `nvme list` Comando para ver una lista de los dispositivos NVMe conectados actualmente. En el siguiente ejemplo, lo es `nvme0n1`.
++
+[listing]
+----
+ # nvme list
+
+ Node          SN            Model             Namespace
+ -------------------------------------------------------
+ /dev/nvme0n1  021648023161  NetApp E-Series      1
+----
++
+[listing]
+----
+Usage                 Format           FW Rev
+--------------------------------------------------------------
+5.37 GB /5.37 GB      512 B + 0 B      0842XXXX
+----
+. Conéctese al subsistema detectado en la segunda ruta:
++
+[listing]
+----
+  # nvme connect -t rdma -a 11.11.11.100 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600
+----
+. Utilice Linux `lsblk` y.. `grep` comandos para mostrar información adicional sobre cada dispositivo de bloque:
++
+[listing]
+----
+ # lsblk | grep nvme
+
+ nvme0n1    259:0    0     5G  0 disk
+ nvme1n1    259:0    0     5G  0 disk
+----
+. Utilice la `nvme list` Comando para ver una nueva lista de los dispositivos NVMe conectados actualmente. En el siguiente ejemplo, lo es `nvme0n1` y.. `nvme0n1`.
++
+[listing]
+----
+ # nvme list
+ Node          SN            Model                   Namespace
+ -------------------------------------------------------------
+ /dev/nvme0n1  021648023161  NetApp E-Series          1
+ /dev/nvme1n1  021648023161  NetApp E-Series          1
+----
++
+[listing]
+----
+Usage                 Format           FW Rev
+--------------------------------------------------------------
+5.37 GB /5.37 GB          512 B + 0 B      0842XXXX
+5.37 GB /5.37 GB          512 B + 0 B      0842XXXX
+----
+

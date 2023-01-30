@@ -1,0 +1,35 @@
+---
+permalink: remote-storage-volumes/index.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: Use la función volúmenes de almacenamiento remoto para importar datos desde un dispositivo de almacenamiento remoto directamente a un volumen de E-Series local. 
+---
+= Información general sobre volúmenes de almacenamiento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la función volúmenes de almacenamiento remoto de SANtricity® para importar datos desde un dispositivo de almacenamiento remoto directamente a un volumen de E-Series local. Esta función permite agilizar el proceso de actualizaciones de equipos y proporciona funcionalidades de migración de datos para mover datos desde dispositivos que no son E-Series a sistemas E-Series.
+
+
+
+== Información general de configuración
+
+La función almacenamiento remoto volúmenes está disponible con SANtricity System Manager en los identificadores de submodelo seleccionados. Para utilizar esta función, debe configurar un sistema de almacenamiento remoto y un sistema de almacenamiento E-Series para que se comuniquen entre sí.
+
+Use el siguiente flujo de trabajo:
+
+. link:system-reqs-concept.html["Revise los requisitos y las restricciones"].
+. link:setup-remote-volumes-concept.html["Configure el hardware"].
+. link:import-remote-storage-task.html["Importe el almacenamiento remoto"].
+
+
+
+
+== Obtenga más información
+
+* Ayuda en línea, disponible en la interfaz de usuario de System Manager o en la https://docs.netapp.com/us-en/e-series-santricity/index.html["Sitio de documentación del software SANtricity"^].
+* Para obtener información técnica adicional sobre la función almacenamiento remoto volúmenes, consulte https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["Informe técnico sobre volúmenes de almacenamiento remotos"^].
+

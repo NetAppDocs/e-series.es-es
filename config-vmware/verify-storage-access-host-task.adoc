@@ -1,0 +1,16 @@
+---
+permalink: config-vmware/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: verify storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Antes de usar un volumen, debe verificar que el host puede escribir datos en el volumen y leerlos nuevamente. 
+---
+= Verificar el acceso al almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar un volumen, compruebe que el host puede escribir datos en el volumen y leerlos.
+
+Para ello, compruebe que el volumen se haya usado como almacén de datos de Virtual Machine File System (VMFS) o que se haya asignado directamente a una máquina virtual para usarla como asignación de dispositivo sin formato (RDM).

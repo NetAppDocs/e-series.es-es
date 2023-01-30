@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Quite una o varias cabinas de almacenamiento si ya no desea gestionarlas desde el complemento de almacenamiento de para vCenter. 
+---
+= Quite las cabinas de almacenamiento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede quitar una o varias cabinas de almacenamiento si ya no quiere gestionarlas desde el complemento de almacenamiento de para vCenter.
+
+.Acerca de esta tarea
+No es posible acceder a ninguna de las cabinas de almacenamiento que se quiten. Sin embargo, puede establecerse una conexión con cualquiera de las cabinas de almacenamiento eliminadas si se apunta un explorador directamente a su dirección IP o nombre de host.
+
+Al quitar una cabina de almacenamiento, ni ella ni sus datos se ven afectados de forma alguna. Si una cabina de almacenamiento se quita por error, es posible volver a añadirla.
+
+.Pasos
+. En la página *gestionar*, seleccione una o más matrices de almacenamiento que desee quitar.
+. Seleccione menú:tareas no comunes[Quitar cabinas de almacenamiento].
++
+La cabina de almacenamiento se elimina de todas las vistas de la interfaz del plugin.
+
+

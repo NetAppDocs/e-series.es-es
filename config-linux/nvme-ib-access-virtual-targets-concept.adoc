@@ -1,0 +1,126 @@
+---
+permalink: config-linux/nvme-ib-access-virtual-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volume virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Configure la E/S dirigida al destino del dispositivo en función de su versión de SLES \(SUSE Linux version\).' 
+---
+= Acceda a volúmenes NVMe para destinos de dispositivos virtuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar la E/S dirigida al destino del dispositivo en función del SO (y del método de acceso múltiple de extensión) que esté utilizando.
+
+Para RHEL 7 y SLES 12, el host Linux dirige la I/o a los destinos de dispositivos virtuales. DM-MP gestiona las rutas físicas subyacentes a estos destinos virtuales.
+
+
+
+== Los dispositivos virtuales son destinos de I/O.
+
+Asegúrese de ejecutar I/o solo en los dispositivos virtuales creados por DM-MP, no en las rutas de los dispositivos físicos. Si ejecuta I/o en las rutas físicas, DM-MP no podrá gestionar un evento de conmutación al nodo de respaldo y la I/o fallará.
+
+Puede acceder a estos dispositivos de bloque a través del `dm` o el `symlink` en /dev/mapper. Por ejemplo:
+
+[listing]
+----
+/dev/dm-1
+/dev/mapper/eui.00001bc7593b7f5f00a0980000af4462
+----
+
+
+== Resultado de ejemplo
+
+El siguiente ejemplo es el resultado de `nvme list` El comando muestra el nombre del nodo del host y su correlación con el identificador de espacio de nombres.
+
+[listing]
+----
+
+NODE         SN           MODEL           NAMESPACE
+
+/dev/nvme1n1 021648023072 NetApp E-Series 10
+/dev/nvme1n2 021648023072 NetApp E-Series 11
+/dev/nvme1n3 021648023072 NetApp E-Series 12
+/dev/nvme1n4 021648023072 NetApp E-Series 13
+/dev/nvme2n1 021648023151 NetApp E-Series 10
+/dev/nvme2n2 021648023151 NetApp E-Series 11
+/dev/nvme2n3 021648023151 NetApp E-Series 12
+/dev/nvme2n4 021648023151 NetApp E-Series 13
+----
+|===
+| Columna | Descripción 
+
+
+ a| 
+`Node`
+ a| 
+El nombre de nodo incluye dos partes:
+
+* La notación `nvme1` Representa a la controladora a y `nvme2` Representa la controladora B.
+* La notación `n1`, `n2`, etc. representa el identificador de espacio de nombres desde la perspectiva del host. Estos identificadores se repiten en la tabla, una vez para la controladora y otra para la controladora B.
+
+
+
+
+ a| 
+`Namespace`
+ a| 
+La columna Namespace enumera el identificador de espacio de nombres (NSID), que es el identificador desde la perspectiva de la cabina de almacenamiento.
+
+|===
+En lo siguiente `multipath -ll` salida, las rutas optimizadas se muestran con un `prio` valor de 50, mientras que las rutas no optimizadas se muestran con un `prio` valor de 10.
+
+El sistema operativo Linux enruta la I/o al grupo de rutas que se muestra como `status=active`, mientras que los grupos de rutas aparecen como `status=enabled` están disponibles para recuperación tras fallos.
+
+[listing]
+----
+eui.00001bc7593b7f500a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- #:#:#:# nvme1n1 259:5 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+  `- #:#:#:# nvme2n1 259:9  active ready running
+
+eui.00001bc7593b7f5f00a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=0 status=enabled
+| `- #:#:#:# nvme1n1 259:5 failed faulty running
+`-+- policy='service-time 0' prio=10 status=active
+  `- #:#:#:# nvme2n1 259:9  active ready running
+----
+|===
+| Elemento de línea | Descripción 
+
+
+ a| 
+`policy='service-time 0' prio=50 status=active`
+ a| 
+Esta línea y la línea siguiente lo muestran `nvme1n1`, Que es el espacio de nombres con un NSID de 10, se optimiza en la ruta con un `prio` valor de 50 y a. `status` valor de `active`.
+
+La controladora a es la propietaria de este espacio de nombres
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=enabled`
+ a| 
+Esta línea muestra la ruta de recuperación tras fallos del espacio de nombres 10, con un `prio` valor de 10 y a. `status` valor de `enabled`. En este momento, no se dirigen I/o al espacio de nombres en esta ruta.
+
+La controladora B es la propietaria de este espacio de nombres
+
+
+
+ a| 
+`policy='service-time 0' prio=0 status=enabled`
+ a| 
+Este ejemplo muestra ``multipath -ll``Salida de otro momento, mientras se está reiniciando la controladora A. La ruta al espacio de nombres 10 se muestra como con un `prio` valor 0 y a. `status` valor de `enabled`.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=active`
+ a| 
+Observe que el `active` ruta hace referencia a. `nvme2`, Por lo tanto, la E/S se dirige a esta ruta al controlador B.
+
+|===

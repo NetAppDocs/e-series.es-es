@@ -1,0 +1,69 @@
+---
+permalink: maintenance-e2800/batteries-remove-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Para quitar la batería, primero debe quitar el compartimento de controladoras de la bandeja de controladoras. 
+---
+= Quite el contenedor de controladora E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe quitar el compartimento de controladoras de la bandeja de controladoras para poder quitar la batería.
+
+Cuando quita un compartimento de controladoras, debe desconectar todos los cables. Así, puede sacar el compartimento de controladoras de la bandeja de controladoras.
+
+.Lo que necesitará
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Si los puertos de host en el contenedor de controladora utilizan transceptores SFP+, déjelo instalados.
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Apriete el pestillo de la palanca de leva hasta que se suelte y, a continuación, abra la palanca de leva a la derecha para liberar el contenedor del controlador de la bandeja.
++
+La siguiente figura es un ejemplo de bandeja de controladoras E2812, bandeja de controladoras E2824 o una cabina flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
++
+La siguiente figura es un ejemplo de una bandeja de controladoras E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
+. Con dos manos y el asa de leva, deslice el recipiente del controlador para sacarlo del estante.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+Si va a quitar el compartimento de controladoras de una bandeja de controladoras E2812, una bandeja de controladoras E2824 o una cabina flash EF280, un solapa se acerca a bloquear la bahía vacía, lo que ayuda a mantener el flujo de aire y la refrigeración.
+
+. Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia arriba.
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+. Vaya a. link:batteries-remove-failed-task.html["Quite la batería E2800 con errores"].
+

@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-santricity-os.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Puede actualizar una o varias cabinas de almacenamiento con el software más reciente y NVSRAM para asegurarse de contar con las funciones y correcciones de errores más recientes. 
+---
+= Actualice el sistema operativo SANtricity
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede actualizar una o varias cabinas de almacenamiento con el software más reciente y NVSRAM para asegurarse de contar con las funciones y correcciones de errores más recientes. NVSRAM de controladora es un archivo de la controladora que especifica las configuraciones predeterminadas para las controladoras.
+
+.Antes de empezar
+Asegúrese de que:
+
+* Los archivos del sistema operativo SANtricity más reciente están disponibles en el sistema host donde se ejecuta el plugin.
+* Sabe si desea activar la actualización del software ahora o más adelante. Puede optar por activarlos más tarde por los siguientes motivos:
++
+** *Hora del día* -- la activación del software puede llevar mucho tiempo, por lo que es posible que desee esperar hasta que las cargas de E/S sean más livianas. Las controladoras conmutan al nodo de respaldo durante la activación, de manera que el rendimiento podría ser inferior al habitual hasta que finalice la actualización.
+** *Tipo de paquete*: Es posible que desee probar el nuevo software de sistema operativo en una matriz de almacenamiento antes de actualizar los archivos en otras matrices de almacenamiento.
+
+
+
+
+
+CAUTION: *Riesgo de pérdida de datos o riesgo de daños a la matriz de almacenamiento* -- no haga cambios en la matriz de almacenamiento mientras se realiza la actualización. Mantenga encendida la cabina de almacenamiento.
+
+.Pasos
+. Si la cabina de almacenamiento contiene una sola controladora o un controlador multivía no está en uso, detenga la actividad de I/o de la cabina de almacenamiento para evitar errores en la aplicación. Si la cabina de almacenamiento tiene dos controladoras y existe un controlador multivía instalado, no necesita detener la actividad de I/O.
+. En la vista principal, seleccione *gestionar* y, a continuación, seleccione una o varias cabinas de almacenamiento que desee actualizar.
+. Seleccione MENU:Centro de actualización[Actualizar > SANtricity OS > Software].
++
+Se muestra la página Actualizar software de sistema operativo SANtricity.
+
+. Descargue el paquete de software de sistema operativo de SANtricity del sitio de soporte en el equipo local.
++
+.. Haga clic en Añadir nuevo archivo a repositorio de software
+.. Haga clic en el enlace para buscar las últimas descargas de SANtricity OS.
+.. Haga clic en el enlace *Descargar la versión más reciente*.
+.. Siga las restantes instrucciones para descargar el archivo de sistema operativo y el archivo de NVSRAM en el equipo local.
++
+
+NOTE: Se requiere firmware con firma digital en la versión 8.42 y posteriores. Si intenta descargar firmware sin firmar, se muestra un error y se anula la descarga.
+
+
+
+. Seleccione el archivo de software de sistema operativo y el archivo de NVSRAM que desea usar para actualizar las controladoras:
++
+.. En el menú desplegable, seleccione el archivo del sistema operativo que descargó en el equipo local.
++
+Si hay varios archivos disponibles, se ordenarán del más reciente al más antiguo.
+
++
+
+NOTE: En el repositorio de software, figuran todos los archivos de software asociados con el plugin. Si no ve el archivo que desea utilizar, haga clic en el vínculo *Agregar nuevo archivo al repositorio de software*, para buscar la ubicación donde reside el archivo de sistema operativo que desea agregar.
+
+.. En el menú desplegable *Seleccione un archivo NVSRAM*, seleccione el archivo de la controladora que desea utilizar.
++
+Si hay varios archivos, se ordenarán del más reciente al más antiguo.
+
+
+
+. En la tabla cabina de almacenamiento compatible, revise las cabinas de almacenamiento que son compatibles con el archivo de software del sistema operativo seleccionado. A continuación, seleccione las cabinas que desea actualizar.
++
+** Las cabinas de almacenamiento seleccionadas en la vista gestionar que son compatibles con el archivo de firmware elegido están seleccionadas de forma predeterminada en la tabla cabina de almacenamiento compatible.
+** Las matrices de almacenamiento que no se pueden actualizar con el archivo de firmware seleccionado no se pueden seleccionar en la tabla matriz de almacenamiento compatible, como indica el estado *incompatible*.
+
+
+. (Opcional) para transferir el archivo de software a las cabinas de almacenamiento sin activarlo, active la casilla de comprobación *transferir el software de sistema operativo a las cabinas de almacenamiento, marcarlo como preconfigurado y activarlo posteriormente*.
+. Haga clic en *Inicio*.
+. Según elija activar ahora o más adelante, realice una de las siguientes acciones:
++
+** Tipo `TRANSFER` Para confirmar que desea transferir las versiones propuestas de software del sistema operativo en las matrices que seleccionó para actualizar y, a continuación, haga clic en *transferir*. Para activar el software transferido, seleccione MENU:Centro de actualización[Activar software de sistema operativo SANtricity preconfigurado].
+** Tipo `UPGRADE` Para confirmar que desea transferir y activar las versiones propuestas de software del sistema operativo en las matrices que seleccionó para actualizar y, a continuación, haga clic en *Actualizar*.
++
+El sistema transfiere el archivo de software a cada cabina de almacenamiento que seleccionó para actualizar y, luego, activa el archivo mediante un reinicio.
+
++
+Durante la operación de actualización, ocurren las siguientes acciones:
+
+** Como parte del proceso de actualización, se ejecuta una comprobación del estado previa a la actualización. La comprobación del estado antes de la actualización evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización.
+** Si ocurre un error en la comprobación del estado de una cabina de almacenamiento, la actualización se detiene. Puede hacer clic en los puntos suspensivos (…). Y seleccione *Guardar registro* para revisar los errores. También puede optar por anular el error de comprobación del estado y hacer clic en *continuar* para continuar con la actualización.
+** Puede cancelar la operación de actualización después de la comprobación del estado previa a la actualización.
+
+
+. (Opcional) una vez completada la actualización, puede ver una lista de lo que se actualizó en una cabina de almacenamiento en particular. Para ello, haga clic en los tres puntos (...) Y, a continuación, seleccione *Guardar registro*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre `upgrade_log-<date>. json`.
+
+

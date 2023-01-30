@@ -1,0 +1,26 @@
+---
+permalink: config-linux/sas-install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Linux Unified Host Utilities 7.1 incluye herramientas para gestionar el almacenamiento de NetApp, incluidas las políticas de conmutación al nodo de respaldo y las rutas físicas. 
+---
+= Instale y configure Linux Unified Host Utilities
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las herramientas de Unified Host Utilities de Linux le ayudan a gestionar el almacenamiento de NetApp, incluidas las políticas de conmutación al nodo de respaldo y las rutas físicas.
+
+.Pasos
+. Utilice la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] Para determinar la versión adecuada de Unified Host Utilities que se debe instalar.
++
+Las versiones se enumeran en una columna dentro de cada configuración compatible.
+
+. Descargue las utilidades unificadas de host desde https://mysupport.netapp.com/site/["Soporte de NetApp"^].
++
+
+NOTE: También puede utilizar la utilidad SMdevices de SANtricity para realizar las mismas funciones que la herramienta Unified Host Utility. La utilidad SMdevices se incluye como parte del paquete SMutils. El paquete SMutils es una recogida de utilidades para verificar lo que el host puede ver en la cabina de almacenamiento. Se incluye como parte de la instalación del software SANtricity.
+
+

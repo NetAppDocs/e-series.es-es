@@ -1,0 +1,228 @@
+---
+permalink: web-services-proxy/access-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, roles WSP, user access WSP 
+summary: Es posible gestionar el acceso de los usuarios a la API de servicios web y Unified Manager con fines de seguridad. 
+---
+= Gestione el acceso de usuarios en el proxy de servicios web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible gestionar el acceso de los usuarios a la API de servicios web y Unified Manager con fines de seguridad.
+
+
+
+== Información general sobre la gestión de acceso
+
+La gestión de acceso incluye inicios de sesión basados en roles, cifrado de contraseña, autenticación básica e integración LDAP.
+
+
+
+=== Acceso basado en funciones
+
+El control de acceso basado en roles (RBAC) asocia usuarios predefinidos con roles. Cada función otorga permisos a un nivel específico de funcionalidad.
+
+En la siguiente tabla se describe cada rol.
+
+|===
+| Función | Descripción 
+
+
+ a| 
+security.admin
+ a| 
+SSL y gestión de certificados.
+
+
+
+ a| 
+storage.admin
+ a| 
+Acceso completo de lectura/escritura a la configuración del sistema de almacenamiento.
+
+
+
+ a| 
+storage.monitor
+ a| 
+Acceso de solo lectura para ver los datos del sistema de almacenamiento.
+
+
+
+ a| 
+support.admin
+ a| 
+Acceso a todos los recursos de hardware en los sistemas de almacenamiento y operaciones de soporte como la recuperación de AutoSupport (ASUP).
+
+|===
+Las cuentas de usuario predeterminadas se definen en el archivo users.propertiesI. Se pueden cambiar cuentas de usuario modificando directamente el archivo users.properties o mediante las funciones Access Management en Unified Manager.
+
+En la siguiente tabla, se enumeran los inicios de sesión de usuario disponibles para el proxy de servicios web.
+
+|===
+| Inicio de sesión de usuario predefinido | Descripción 
+
+
+ a| 
+admin
+ a| 
+Un súper administrador que tiene acceso a todas las funciones e incluye todas las funciones. Para Unified Manager, debe establecer la contraseña en el inicio de sesión por primera vez.
+
+
+
+ a| 
+Reducida
+ a| 
+El administrador responsable de todo el aprovisionamiento de almacenamiento. Este usuario incluye los siguientes roles: Storage.admin, support.admin y Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+
+
+ a| 
+seguridad
+ a| 
+El usuario responsable de la configuración de seguridad. Este usuario incluye los siguientes roles: Security.admin y Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+
+
+ a| 
+soporte técnico
+ a| 
+El usuario responsable de los recursos de hardware, los datos de fallos y las actualizaciones de firmware. Este usuario incluye los siguientes roles: Support.admin y Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+
+
+ a| 
+supervisar
+ a| 
+Un usuario con acceso de solo lectura al sistema. Este usuario incluye únicamente el rol Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+
+
+ a| 
+rw (heredado para matrices antiguas)
+ a| 
+el usuario rw (lectura/escritura) incluye los siguientes roles: Storage.admin, support.admin y Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+
+
+ a| 
+ro (heredado para cabinas antiguas)
+ a| 
+El usuario ro (solo lectura) incluye únicamente el rol Storage.monitor. Esta cuenta está deshabilitada hasta que se defina una contraseña.
+
+|===
+
+
+=== Cifrado de contraseñas
+
+Para cada contraseña, puede aplicar un proceso de cifrado adicional mediante la codificación de contraseña SHA256 existente. Este proceso de cifrado adicional aplica un conjunto aleatorio de bytes a cada contraseña (Salt) para cada cifrado hash SHA256. El cifrado SHA256 salado se aplica a todas las contraseñas recién creadas.
+
+
+NOTE: Antes de la versión 3.0 de Web Services Proxy, las contraseñas se cifraban sólo mediante hash SHA256. Todas las contraseñas cifradas SHA256 sólo hash conservan esta codificación y siguen siendo válidas en el archivo users.properties. Sin embargo, las contraseñas cifradas SHA256 sólo hash no son tan seguras como las contraseñas con cifrado SHA256 con salado.
+
+
+
+=== Autenticación básica
+
+De forma predeterminada, la autenticación básica está habilitada, lo que significa que el servidor devuelve un desafío de autenticación básico. Esta configuración se puede cambiar en el archivo wsconfig.xml.
+
+
+
+=== LDAP
+
+El proxy de servicios web habilita un protocolo ligero de acceso a directorios (LDAP), un protocolo de aplicación para acceder a servicios distribuidos de información de directorio y mantenerlos. La integración LDAP permite la autenticación de usuarios y la asignación de roles a grupos.
+
+Para obtener información sobre la configuración de la funcionalidad LDAP, consulte las opciones de configuración en la interfaz de Unified Manager o en la sección LDAP de la documentación de API interactiva.
+
+
+
+== Configurar el acceso del usuario
+
+Para gestionar el acceso de los usuarios, se puede aplicar cifrado adicional a las contraseñas, configurar la autenticación básica y definir el acceso basado en roles.
+
+
+
+=== Aplicar cifrado adicional a las contraseñas
+
+Para obtener el nivel más alto de seguridad, puede aplicar cifrado adicional a las contraseñas mediante la codificación de contraseña SHA256 existente.
+
+Este proceso de cifrado adicional aplica un conjunto aleatorio de bytes a cada contraseña (Salt) para cada cifrado hash SHA256. El cifrado SHA256 salado se aplica a todas las contraseñas recién creadas.
+
+.Pasos
+. Abra el archivo users.properties, ubicado en:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\data\config
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy/data/config
+
+
+. Vuelva a introducir la contraseña cifrada como texto sin formato.
+. Ejecute el `securepasswds` Utilidad de línea de comandos para volver a cifrar la contraseña o simplemente reiniciar el proxy de servicios web. Esta utilidad se instala en el directorio raíz de instalación del proxy de servicios web.
++
+
+NOTE: Como alternativa, es posible saldar y hash de contraseñas de usuario local siempre que se realice la edición de contraseñas mediante Unified Manager.
+
+
+
+
+
+=== Configurar la autenticación básica
+
+La autenticación básica predeterminada está habilitada, lo que significa que el servidor devuelve un desafío de autenticación básico. Si lo desea, puede cambiar esa configuración en el archivo wsconfig.xmlI.
+
+. Abra el archivo wsconfig.xml, ubicado en:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy
+
+
+. Modifique la siguiente línea del archivo especificando false (no habilitado) o true (activado).
++
+Por ejemplo: `<env key="enable-basic-auth">true</env>`
+
+. Guarde el archivo.
+. Reinicie el servicio Webserver para que el cambio surta efecto.
+
+
+
+
+=== Configure el acceso basado en roles
+
+Para limitar el acceso de los usuarios a funciones específicas, puede modificar qué roles se especifican para cada cuenta de usuario.
+
+El proxy de servicios web incluye el control de acceso basado en roles (RBAC), en el cual los roles están asociados con usuarios predefinidos. Cada función otorga permisos a un nivel específico de funcionalidad. Puede cambiar los roles asignados a las cuentas de usuario modificando directamente el archivo users.properties.
+
+
+NOTE: También es posible cambiar las cuentas de usuario mediante Access Management en Unified Manager. Para obtener más información, consulte la ayuda en línea disponible con Unified Manager.
+
+.Pasos
+. Abra el archivo users.properties, ubicado en:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\data\config
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy/data/config
+
+
+. Busque la línea de la cuenta de usuario que desea modificar (almacenamiento, seguridad, supervisión, soporte, rw, o ro).
++
+
+NOTE: No modifique el usuario administrador. Se trata de un superusuario con acceso a todas las funciones.
+
+. Añada o quite los roles especificados, según lo desee.
++
+Entre los roles, se incluyen:
+
++
+** Security.admin -- SSL y gestión de certificados.
+** Storage.admin -- acceso completo de lectura/escritura a la configuración del sistema de almacenamiento.
+** Storage.monitor -- acceso de solo lectura para ver los datos del sistema de almacenamiento.
+** Support.admin -- brinda acceso a todos los recursos de hardware en los sistemas de almacenamiento y a operaciones de soporte como la recuperación AutoSupport (ASUP).
++
+
+NOTE: El rol Storage.monitor se requiere para todos los usuarios, incluido el administrador.
+
+
+
+. Guarde el archivo.
+

@@ -1,0 +1,16 @@
+---
+permalink: install-hw-ef600/overview-concept.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation process overview 
+summary: Revise el proceso de instalación y configuración de un EF300 o EF600. 
+---
+= Proceso de instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar y configurar el nuevo sistema de almacenamiento, familiarícese con el proceso de instalación:
+
+image::../media/ef600_isi_workflow_v_2_inst-hw-ef600.bmp[e600 isi workflow v 2 in st hw ef600]

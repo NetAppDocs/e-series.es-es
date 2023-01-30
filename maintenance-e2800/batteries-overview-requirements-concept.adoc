@@ -1,0 +1,91 @@
+---
+permalink: maintenance-e2800/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Revise los requisitos y consideraciones sobre la sustitución de batería E2800. 
+---
+= Requisitos para reemplazar una batería E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una batería E2800, revise los requisitos y consideraciones.
+
+Cada contenedor de controladora incluye una batería que conserva los datos en caché si falla la alimentación de CA.
+
+
+
+== Alertas de Recovery Guru
+
+Si Recovery Guru en SANtricity System Manager informa de uno de los siguientes Estados, debe sustituir la batería afectada:
+
+* Error de batería
+* Se requiere reemplazo de la batería
+
+
+En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que hay un problema con una batería y para garantizar que no primero no tenga que resolver otros elementos.
+
+
+
+== Descripción general del procedimiento
+
+Para proteger los datos, es necesario reemplazar un Lo antes posible. de batería con fallos.
+
+A continuación se ofrece información general sobre los pasos necesarios para reemplazar una batería en una controladora E2800:
+
+. Prepárese para el reemplazo, siguiendo los pasos adecuados para una configuración doble o simple.
+. Quite el compartimento de la controladora.
+. Quite la batería con errores.
+. Instale la batería nueva.
+. Vuelva a instalar el compartimento de controladoras.
+. Complete el reemplazo, siguiendo los pasos adecuados para una configuración doble o simple.
+
+
+
+
+== Configuración doble o simple
+
+Los pasos para sustituir una batería dependen de si tiene una o dos controladoras, de la siguiente manera:
+
+|===
+| Si la cabina de almacenamiento tiene... | Debe... 
+
+
+ a| 
+Dos controladoras (doble)
+ a| 
+. Desconectar la controladora.
+. Quite el compartimento de la controladora.
+. Sustituya la batería.
+. Sustituya el compartimento de la controladora.
+. Coloque la controladora en línea.
+
+
+
+
+ a| 
+Una controladora (simple)
+ a| 
+. Detenga las operaciones de I/o del host.
+. Apague la bandeja de controladoras.
+. Quite el compartimento de la controladora.
+. Sustituya la batería.
+. Sustituya el compartimento de la controladora.
+. Aplique energía a la bandeja de controladoras.
+
+
+|===
+
+
+== Requisitos para la sustitución de una batería
+
+Si piensa sustituir una batería con errores, debe tener:
+
+* Una batería de repuesto.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+

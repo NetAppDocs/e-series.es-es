@@ -1,0 +1,129 @@
+---
+permalink: config-linux/iscsi-configure-array-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure las redes iSCSI en el lado de la cabina. 
+---
+= Configurar las redes del lado de la cabina
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
+
+.Lo que necesitará
+* La dirección IP o el nombre de dominio de una de las controladoras de la cabina de almacenamiento.
+* Una contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio configurado para el acceso de seguridad apropiado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.
+
+
+.Acerca de esta tarea
+En esta tarea, se describe cómo acceder a la configuración del puerto iSCSI desde la página hardware de System Manager. También puede acceder a la configuración desde MENU:System[Ajustes > Configurar puertos iSCSI].
+
+.Pasos
+. Desde el explorador, introduzca la siguiente URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` es la dirección de una de las controladoras de la cabina de almacenamiento.
+
++
+La primera vez que se abre SANtricity System Manager en una cabina sin configurar, aparece el aviso Set Administrator Password. La gestión del acceso basada en roles configura cuatro roles locales: Administración, soporte, seguridad y supervisión. Los últimos tres roles tienen contraseñas aleatorias que no se pueden descifrar. Una vez que configura una contraseña para el rol de administración, puede cambiar todas las contraseñas con las credenciales de administración. Para obtener más información sobre los cuatro roles de usuario local, consulte la ayuda en línea disponible en la interfaz de usuario de System Manager de SANtricity.
+
+. Introduzca la contraseña del administrador del sistema para la función admin en los campos Set Administrator Password y Confirm Password y, a continuación, haga clic en *Set Password*.
++
+El asistente de configuración se inicia si no hay pools, grupos de volúmenes, cargas de trabajo ni notificaciones configurados.
+
+. Cierre el asistente de configuración.
++
+Más adelante se utilizará el asistente para completar las tareas de configuración adicionales.
+
+. Seleccione *hardware*.
+. Si el gráfico muestra las unidades, haga clic en *Mostrar parte posterior de la bandeja*.
++
+El gráfico cambia y muestra las controladoras en lugar de las unidades.
+
+. Haga clic en la controladora con los puertos iSCSI que desea configurar.
++
+Aparece el menú contextual de la controladora.
+
+. Seleccione *Configurar puertos iSCSI*.
++
+Se abre el cuadro de diálogo Configurar puertos iSCSI.
+
+. En la lista desplegable, seleccione el puerto que desea configurar y, a continuación, haga clic en *Siguiente*.
+. Seleccione los valores del puerto de configuración y, a continuación, haga clic en *Siguiente*.
++
+Para ver todas las configuraciones de puerto, haga clic en el enlace *Mostrar más opciones de puerto* situado a la derecha del cuadro de diálogo.
+
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Velocidad de puerto ethernet configurada
+ a| 
+Seleccione la velocidad deseada. Las opciones que aparecen en la lista desplegable dependen de la velocidad máxima que pueda soportar la red (por ejemplo, 10 Gbps).
+
+
+NOTE: Las tarjetas de interfaz del host iSCSI de 25 GB opcionales disponibles en las controladoras no negocian automáticamente las velocidades. Debe configurar la velocidad de cada puerto en 10 GB o 25 GB. Todos los puertos deben tener la misma velocidad.
+
+
+
+ a| 
+Habilite IPv4/Habilitar IPv6
+ a| 
+Seleccione una o ambas opciones para habilitar la compatibilidad con las redes IPv4 e IPv6.
+
+
+
+ a| 
+Puerto de escucha TCP (disponible haciendo clic en *Mostrar más opciones de puerto*).
+ a| 
+De ser necesario, introduzca un nuevo número de puerto.
+
+El puerto de escucha es el número de puerto TCP que la controladora utiliza para escuchar inicios de sesión iSCSI de iniciadores iSCSI del host. El puerto de escucha predeterminado es 3260. Debe introducir 3260 o un valor entre 49 49152 y 65 65535.
+
+
+
+ a| 
+Tamaño de MTU (disponible haciendo clic en *Mostrar más opciones de puerto*).
+ a| 
+De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU).
+
+El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 9000.
+
+
+
+ a| 
+Habilite las respuestas PING de ICMP PING
+ a| 
+Seleccione esta opción para habilitar el protocolo de mensajes de control de Internet (ICMP). Los sistemas operativos de equipos en red usan ese protocolo para enviar mensajes. Esos mensajes ICMP determinan si es posible acceder a un host y cuánto tiempo debe transcurrir para enviar y recibir los paquetes de ese host.
+
+|===
++
+Si seleccionó *Activar IPv4*, se abre un cuadro de diálogo para seleccionar la configuración IPv4 después de hacer clic en *Siguiente*. Si seleccionó *Activar IPv6*, se abre un cuadro de diálogo para seleccionar la configuración de IPv6 después de hacer clic en *Siguiente*. Si seleccionó ambas opciones, primero se abre el cuadro de diálogo de configuración IPv4 y después de hacer clic en *Siguiente*, se abre el cuadro de diálogo de configuración de IPv6.
+
+. Configure los valores para IPv4 o IPv6 de forma automática o manual. Para ver todas las opciones de configuración de puertos, haga clic en el enlace *Mostrar más valores* situado a la derecha del cuadro de diálogo.
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Obtener configuración automáticamente
+ a| 
+Seleccione esta opción para obtener automáticamente la configuración.
+
+
+
+ a| 
+Especificar manualmente la configuración estática
+ a| 
+Seleccione esta opción e introduzca una dirección estática en los campos. En el caso de IPv4, incluya la máscara de subred y la puerta de enlace. En el caso de IPv6, incluya la dirección IP enrutable y la dirección IP del enrutador.
+
+|===
+. Haga clic en *Finalizar*.
+. Cierre System Manager.
+

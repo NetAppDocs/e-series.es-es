@@ -1,0 +1,145 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-pools-and-volume-group-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Para aprovisionar almacenamiento, es posible crear un pool o un grupo de volúmenes que contendrá las unidades de disco duro (HDD) o los discos de estado sólido (SSD) que se desean usar en la cabina de almacenamiento.' 
+---
+= Información general sobre los pools y el grupo de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para aprovisionar almacenamiento en el complemento de almacenamiento para vCenter, debe crear un pool o un grupo de volúmenes que contendrá las unidades de disco duro (HDD) o los discos de estado sólido (SSD) que desea usar en la cabina de almacenamiento.
+
+
+
+== El provisionamiento
+
+El hardware físico se aprovisiona en componentes lógicos para que los datos puedan organizarse y recuperarse fácilmente. Se admiten dos tipos de agrupamientos:
+
+* Piscinas
+* Grupos de volúmenes
+
+
+Los pools y los grupos de volúmenes son las unidades de almacenamiento de nivel superior en una cabina de almacenamiento: Separan la capacidad de las unidades en divisiones gestionables. Dentro de estas divisiones lógicas se encuentran los volúmenes individuales o LUN, donde se almacenan los datos.
+
+Cuando se implementa un sistema de almacenamiento, el primer paso es presentar la capacidad disponible de las unidades a los distintos hosts mediante:
+
+* Creación de pools o grupos de volúmenes con capacidad suficiente
+* Adición de la cantidad de unidades requerida para satisfacer los requisitos de rendimiento del pool o grupo de volúmenes
+* Selección del nivel adecuado de protección RAID (si se usan grupos de volúmenes) para satisfacer requisitos comerciales específicos
+
+
+Es posible tener pools o grupos de volúmenes en el mismo sistema de almacenamiento, pero una unidad no puede formar parte de más de un pool o grupo de volúmenes. Los volúmenes que se presentan a los hosts para I/o se crean a continuación, con el espacio del pool o grupo de volúmenes.
+
+
+
+== Piscinas
+
+Los pools están diseñados para añadir unidades de disco duro físicas a un gran espacio de almacenamiento y proporcionar protección RAID. Un pool crea muchos conjuntos RAID virtuales de la cantidad de unidades totales asignadas al pool y reparte los datos de manera uniforme entre todas las unidades participantes. Si se pierde o se añade una unidad, el sistema vuelve a equilibrar dinámicamente los datos entre todas las unidades activas.
+
+Los pools funcionan como otro nivel de RAID y virtualizan la arquitectura RAID subyacente para optimizar el rendimiento y la flexibilidad cuando se realizan tareas de reconstrucción, ampliación de unidades y gestión de pérdida de unidades. El sistema establece automáticamente el nivel de RAID en 6 con una configuración de 8+2 (ocho discos de datos más dos discos de paridad).
+
+
+
+=== Emparejamiento de unidades
+
+Es posible seleccionar HDD o SSD para usar en pools; sin embargo, como sucede con los grupos de volúmenes, todas las unidades del pool deben usar la misma tecnología. Los controladores seleccionan automáticamente las unidades que deben incluirse; por lo tanto, debe asegurarse de contar con la cantidad suficiente de unidades para la tecnología seleccionada.
+
+
+
+=== Gestión de unidades con error
+
+Los pools tienen una capacidad mínima de 11 discos; sin embargo, se reserva la capacidad equivalente a una unidad para capacidad de reserva en caso de fallo de unidad. Esta capacidad de reserva se denomina “capacidad de conservación”.
+
+Cuando se crean pools, se conserva una cierta capacidad para uso de emergencia. Esta capacidad se expresa en términos de una cantidad de unidades, pero la implementación real se reparte entre todo el pool de unidades. La cantidad predeterminada de capacidad que se conserva se basa en la cantidad de unidades del pool.
+
+Después de crear el pool, es posible cambiar el valor de capacidad de conservación a más o menos capacidad, o incluso configurarlo para que no exista capacidad de conservación (valor equivalente a 0 unidades). La cantidad máxima de capacidad que puede conservarse (expresada como cantidad de unidades) es 10, pero la capacidad que está disponible puede ser menor, según la cantidad total de unidades en el pool.
+
+
+
+== Grupos de volúmenes
+
+Los grupos de volúmenes definen de qué forma se asigna la capacidad a los volúmenes en el sistema de almacenamiento. Las unidades de disco se organizan en grupos y volúmenes RAID entre las unidades en un grupo RAID. Por lo tanto, las opciones de configuración de grupos de volúmenes identifican qué unidades forman parte del grupo y qué nivel de RAID se utiliza.
+
+Cuando se crea un grupo de volúmenes, las controladoras seleccionan automáticamente las unidades que se incluirán en el grupo. Debe seleccionar manualmente el nivel de RAID para el grupo. La capacidad del grupo de volúmenes es la cantidad total de unidades seleccionadas multiplicadas por su capacidad.
+
+
+
+=== Emparejamiento de unidades
+
+Debe emparejar las unidades del grupo de volúmenes según el tamaño y el rendimiento. Si existen unidades pequeñas y grandes en el grupo de volúmenes, se reconocen todas las unidades con el tamaño de capacidad menor. Si existen unidades lentas y rápidas en el grupo de volúmenes, se reconocen todas las unidades con la velocidad menor. Estos factores afectan al rendimiento y a la capacidad general del sistema de almacenamiento.
+
+No puede combinar tecnologías de unidad distintas (unidades de disco duro y unidades SSD). RAID 3, 5 y 6 se limitan a un máximo de 30 unidades. RAID 1 y RAID 10 utilizan mirroring y, en consecuencia, estos grupos de volúmenes tienen una cantidad uniforme de discos.
+
+
+
+=== Gestión de unidades con error
+
+Los grupos de volúmenes utilizan unidades de repuesto como reserva en caso de fallos en los volúmenes RAID 1/10, RAID 3, RAID 5 o RAID 6 incluidos en un grupo de volúmenes. Una unidad de repuesto no contiene datos y añade otro nivel de redundancia a una cabina de almacenamiento.
+
+Si se produce un error en una unidad de la cabina de almacenamiento, la unidad de repuesto automáticamente sustituye a la unidad con error sin necesidad de realizar un cambio físico. Si la unidad de repuesto está disponible cuando se produce un error en una unidad, la controladora utiliza datos de redundancia para reconstruir los datos de la unidad con error en la unidad de repuesto.
+
+
+
+== Decidir si se deben usar pools o grupos de volúmenes
+
+
+
+=== Seleccione un pool
+
+* Si necesita recompilaciones de la unidad más rápidas y gestión de almacenamiento simplificada y/o tiene una carga de trabajo altamente aleatoria.
+* Si desea distribuir los datos para cada volumen de manera aleatoria en una serie de unidades que componen el pool.no puede configurar o cambiar el nivel de RAID de los pools o los volúmenes en los pools. Los pools utilizan RAID nivel 6.
+
+
+
+
+=== Seleccione un grupo de volúmenes
+
+* Si necesita el máximo ancho de banda del sistema, la capacidad para modificar la configuración de almacenamiento y una carga de trabajo altamente secuencial.
+* Si desea distribuir datos en las unidades según un nivel de RAID. Es posible especificar el nivel de RAID al crear el grupo de volúmenes.
+* Si desea escribir los datos para cada volumen secuencialmente a través del conjunto de unidades que componen el grupo de volúmenes.
+
+
+
+NOTE: Debido a que los pools pueden coexistir con los grupos de volúmenes, una cabina de almacenamiento puede incluir tanto pools como grupos de volúmenes.
+
+
+
+== Creación de pools automática versus manual
+
+Según la configuración del almacenamiento, puede permitir que el sistema cree pools de forma automática o puede crearlos manualmente. Un pool es un conjunto de unidades agrupadas lógicamente.
+
+Antes de crear y gestionar pools, revise las siguientes secciones sobre cómo se crean automáticamente los pools y cuándo es posible que deba crearlos manualmente.
+
+
+
+=== Creación automática
+
+Cuando el sistema detecta capacidad sin asignar en la cabina de almacenamiento, inicia la creación automática de pools cuando el sistema detecta capacidad sin asignar en una cabina de almacenamiento. Solicita automáticamente crear uno o varios pools, añadir la capacidad sin asignar a un pool existente, o ambas opciones.
+
+La creación de pools automática se produce cuando se cumple alguna de estas condiciones:
+
+* La cabina de almacenamiento no contiene pools y existen unidades similares suficientes para crear un pool nuevo.
+* Se añaden nuevas unidades a una cabina de almacenamiento que contiene al menos un pool.cada unidad de un pool debe ser del mismo tipo (unidad de disco duro o unidad de estado sólido) y tener una capacidad similar. El sistema le solicitará que complete las siguientes tareas:
+* Cree un solo pool si existe una cantidad suficiente de unidades de esos tipos.
+* Cree varios pools si la capacidad sin asignar consta de diferentes tipos de unidades.
+* Añada las unidades a un pool existente si ya existe un pool definido en la cabina de almacenamiento, y añada nuevas unidades del mismo tipo al pool.
+* Añada las unidades del mismo tipo al pool existente y use los otros tipos de unidades para crear distintos pools si las unidades nuevas son de distinto tipo.
+
+
+
+
+=== Creación manual
+
+Quizás sea conveniente crear un pool manualmente cuando la creación automática no puede determinar cuál es la mejor configuración. Esta situación puede ocurrir por uno de los siguientes motivos:
+
+* Las unidades nuevas pueden añadirse potencialmente a varios pools.
+* Uno o varios de los candidatos de pool nuevos pueden usar protección contra pérdida de bandeja o protección contra pérdida de cajón.
+* Uno o varios de los candidatos a pool existentes no pueden mantener su estado de protección contra pérdida de bandeja o protección contra pérdida de cajón.también es posible crear un pool manualmente si tiene varias aplicaciones en la cabina de almacenamiento y no quiere que compitan por los mismos recursos de la unidad. En este caso, puede considerarse la creación manual de un pool más pequeño para una o varias de aplicaciones. Puede asignar solo uno o dos volúmenes en lugar de asignar la carga de trabajo a un pool más grande que tiene varios volúmenes en los cuales se pueden distribuir los datos. La creación manual de un pool individual dedicado a la carga de trabajo de una aplicación específica puede permitir que las operaciones de cabina de almacenamiento sean más rápidas y con menos contención.
+

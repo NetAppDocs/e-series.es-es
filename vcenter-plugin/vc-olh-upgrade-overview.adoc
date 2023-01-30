@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible gestionar las actualizaciones de NVSRAM y de software SANtricity para varias cabinas de almacenamiento del mismo tipo. 
+---
+= Información general de la actualización
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+En el complemento de almacenamiento para vCenter, puede gestionar las actualizaciones de NVSRAM y de software SANtricity para varias cabinas de almacenamiento del mismo tipo.
+
+
+
+== Actualizar el flujo de trabajo
+
+Los siguientes pasos constituyen un flujo de trabajo de alto nivel para ejecutar actualizaciones de software:
+
+. Descargue el archivo del sistema operativo SANtricity más reciente en el sitio de soporte (hay un enlace disponible en la página Soporte). Guarde el archivo en el sistema host de gestión (el host desde donde se accede al plugin en un explorador) y descomprima el archivo.
+. En el complemento, puede cargar el archivo de software del sistema operativo SANtricity y el archivo NVSRAM en el repositorio (un área del servidor donde se almacenan los archivos).
+. Una vez que se hayan cargado los archivos en el repositorio, seleccione el archivo que usará en la actualización. En la página Actualizar software de sistema operativo SANtricity, puede seleccionar el archivo de software de sistema operativo y el archivo de NVSRAM. Después de seleccionar un archivo de software, se muestra en la página una lista con las cabinas de almacenamiento compatibles. A continuación, seleccione las cabinas de almacenamiento que desea actualizar con el nuevo software. (No puede seleccionar cabinas incompatibles).
+. Luego, puede iniciar una transferencia y activación inmediatas del software, o puede optar por preconfigurar los archivos para su activación más adelante. Durante el proceso de actualización, el plugin realiza las siguientes tareas:
++
+** Realiza una comprobación del estado de las cabinas de almacenamiento para determinar si existe alguna condición que pudiera impedir que se complete la actualización. Si ocurre un error en la comprobación del estado de alguna cabina, puede omitir esa cabina en particular y continuar la actualización de las otras cabinas. Otra opción es detener el proceso por completo y solucionar los problemas de las cabinas que presentaron errores.
+** Transfiere los archivos de actualización a cada controladora.
+** Reinicia las controladoras y activa el nuevo software del sistema operativo, una controladora por vez. Durante la activación, el archivo del sistema operativo existente se reemplaza por el nuevo archivo.
+
+
+
+
+
+NOTE: También es posible especificar que el software se active en otro momento.
+
+
+
+== Consideraciones de renovación
+
+Antes de actualizar varias cabinas de almacenamiento, revise las consideraciones fundamentales como parte de la planificación.
+
+
+
+=== Versiones actuales
+
+Puede ver las versiones actuales del software de sistema operativo SANtricity desde la página gestionar del complemento de almacenamiento para vCenter para cada cabina de almacenamiento detectada. La versión se muestra en la columna Software de sistema operativo SANtricity. Si hace clic en la versión de sistema operativo en cada fila, puede encontrar información de NVSRAM y del firmware de la controladora en un cuadro de diálogo emergente.
+
+
+
+=== Otros componentes que requieren actualización
+
+Como parte del proceso de actualización, es posible que también necesite actualizar el controlador de conmutación al nodo de respaldo/multivía del host o el controlador de HBA de modo que el host pueda interactuar con las controladoras correctamente. Para obtener información sobre compatibilidad, consulte link:https://imt.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^].
+
+
+
+=== Controladoras dobles
+
+Si una cabina de almacenamiento contiene dos controladoras y existe un controlador multivía instalado, la cabina de almacenamiento puede seguir procesando las operaciones de I/o mientras se realiza la actualización. Durante la actualización, ocurre el siguiente proceso:
+
+. La controladora A conmuta todos sus LUN a la controladora B.
+. La actualización se produce en la controladora A.
+. La controladora A recupera sus LUN y todos los LUN de la controladora B.
+. La actualización se produce en la controladora B.
+
+
+Una vez que finaliza la actualización, es posible que sea necesario redistribuir los volúmenes manualmente entre las controladoras para garantizar que los volúmenes regresen a la controladora correspondiente.

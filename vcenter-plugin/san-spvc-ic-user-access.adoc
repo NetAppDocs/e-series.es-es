@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-user-access.html 
+keywords: user access vCenter plugin, user roles vCenter plugin, privileges vCenter plugin, access permissions vCenter plugin 
+summary: Configure los permisos de acceso para Storage Plugin para vCenter de. 
+---
+= Configure los permisos de acceso al complemento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede configurar permisos de acceso para el complemento de almacenamiento para vCenter, lo que incluye usuarios, roles y privilegios.
+
+
+
+== Revise los privilegios de vSphere requeridos
+
+Para acceder al plugin dentro de vSphere Client, debe asignarse a una función que tenga los privilegios de vSphere correspondientes. Los usuarios con el privilegio “Configure datastore” vSphere tienen acceso de lectura y escritura al plugin, mientras que los usuarios con el privilegio “Browse datastore” tienen acceso de solo lectura. Si un usuario no tiene ninguno de estos privilegios, el plugin muestra un mensaje de “privilegios insuficientes”.
+
+|===
+| Tipo de acceso de complemento | Se requiere el privilegio de vSphere 
+
+
+| Lectura/escritura (configurar) | Datastore.Configure 
+
+
+| Solo lectura (Ver) | Datastore.Browse 
+|===
+
+
+== Configure las funciones de administrador de almacenamiento
+
+Para proporcionar privilegios de lectura/escritura a los usuarios del plugin, puede crear, clonar o editar un rol. Para obtener más información sobre la configuración de roles en vSphere Client, consulte el siguiente tema en el centro de documentación de VMware:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html["Cree un rol personalizado"^]
+
+
+
+
+=== Acceder a acciones de funciones
+
+. En la página de inicio de vSphere Client, seleccione *Administrator* en el área de control de acceso.
+. Haga clic en *roles* en el área de control de acceso.
+. Ejecute una de las siguientes acciones:
++
+** *Crear nuevo rol*: Haga clic en el icono de acción *Crear rol*.
+** *Clone Role*: Seleccione una función existente y haga clic en el icono de acción *Clone Role*.
+** *Editar función existente*: Seleccione una función existente y haga clic en el icono de acción *Editar función*.
+
+
+
+
+
+NOTE: La función de administrador no se puede editar.
+
+Aparecerá el asistente apropiado, en función de la selección anterior.
+
+
+
+=== Crear un rol nuevo
+
+. En la lista privilegios, seleccione los permisos de acceso que desea asignar a este rol.
++
+Para permitir el acceso de solo lectura al plugin, seleccione menu:Datastore[Browse datastore]. Para permitir el acceso de lectura/escritura, seleccione MENU:Datastore[Configure datastore].
+
+. Si es necesario, asigne otros privilegios a la lista y, a continuación, haga clic en *Siguiente*.
+. Asigne un nombre al rol y proporcione una descripción.
+. Haga clic en *Finalizar*.
+
+
+
+
+=== Clonar un rol
+
+. Asigne un nombre al rol y proporcione una descripción.
+. Haga clic en *Aceptar* para finalizar el asistente.
+. Seleccione la función clonada de la lista y, a continuación, haga clic en *Editar función*.
+. En la lista privilegios, seleccione los permisos de acceso que desea asignar a este rol.
++
+Para permitir el acceso de solo lectura al plugin, seleccione menu:Datastore[Browse datastore]. Para permitir el acceso de lectura/escritura, seleccione MENU:Datastore[Configure datastore].
+
+. Haga clic en *Siguiente*.
+. Actualice el nombre y la descripción, si lo desea.
+. Haga clic en *Finalizar*.
+
+
+
+
+=== Editar una función existente
+
+. En la lista privilegios, seleccione los permisos de acceso que desea asignar a este rol.
++
+Para permitir el acceso de solo lectura al plugin, seleccione menu:Datastore[Browse datastore]. Para permitir el acceso de lectura/escritura, seleccione MENU:Datastore[Configure datastore].
+
+. Haga clic en *Siguiente*.
+. Actualice el nombre o la descripción, si lo desea.
+. Haga clic en *Finalizar*.
+
+
+
+
+== Establezca permisos para vCenter Server Appliance
+
+Después de configurar privilegios para un rol, debe añadir un permiso a vCenter Server Appliance. Este permiso permite que un usuario o grupo dado tenga acceso al plugin.
+
+. En la lista desplegable del menú, seleccione *hosts y clústeres*.
+. Seleccione *vCenter Server Appliance* en el área de control de acceso.
+. Haga clic en la ficha *permisos*.
+. Haga clic en el icono de acción *Agregar permiso*.
+. Seleccione el dominio y usuario/grupo adecuados.
+. Seleccione la función creada que permite el privilegio de plugin de lectura/escritura.
+. Active la opción *propagar a niños*, si es necesario.
+. Haga clic en *Aceptar*.
+
+
+
+NOTE: Es posible seleccionar un permiso existente y modificarlo para usar el rol creado. *Sin embargo, tenga en cuenta que el rol debe tener los mismos privilegios junto con los privilegios de plugin de lectura/escritura que para evitar una regresión en los permisos.*
+
+Para acceder al plugin, debe iniciar sesión en vSphere Client en la cuenta de usuario que tiene los privilegios de lectura/escritura del plugin.
+
+Para obtener más información sobre la gestión de permisos, consulte los siguientes temas en el centro de documentación de VMware:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-3B78EEB3-23E2-4CEB-9FBD-E432B606011A.html["Gestionar los permisos para vCenter Components"^]
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-FAA074CC-E8C9-4F13-ABCF-6CF7F15F04EE.html["Prácticas recomendadas para roles y permisos"^]
+

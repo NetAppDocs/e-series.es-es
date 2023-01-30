@@ -1,0 +1,204 @@
+---
+permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+summary: Para completar la actualización de la controladora, encienda la bandeja de controladoras y valide la versión de software de la controladora. A continuación, se pueden recoger datos de soporte y reanudar las operaciones. 
+---
+= Complete la actualización de la controladora
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para completar la actualización de la controladora, encienda la bandeja de controladoras y valide la versión de software de la controladora. A continuación, se pueden recoger datos de soporte y reanudar las operaciones.
+
+Si va a actualizar controladoras en un soporte de controladora-unidad dúplex, repita todos los pasos para completar la actualización de la segunda controladora.
+
+
+
+== Paso 1: Encienda la controladora
+
+Debe encender la bandeja de controladoras para confirmar que funciona correctamente.
+
+.Pasos
+. Encienda el switch de alimentación de la parte posterior de cada soporte de unidades conectado al soporte de controladoras-unidades
+. Espere dos minutos para que las unidades aumente su velocidad de giro.
+. Encienda el interruptor de alimentación en la parte posterior del soporte de la controladora-unidad
+. Espere tres minutos hasta que finalice el proceso de encendido.
+. Si está realizando un reemplazo de controladora completo para las controladoras E2800 o E5700, siga uno de los siguientes procedimientos según el escenario de seguridad de una unidad.
++
+|===
+| Complete el tipo de reemplazo de la controladora | Procedimiento y requisitos previos 
+
+
+ a| 
+Todas las unidades no seguras, ni la gestión de claves internas o externas
+ a| 
+Continúe con el próximo paso.
+
+
+
+ a| 
+Combinación de unidades seguras y no seguras, gestión de claves interna
+ a| 
+En primer lugar, debe crear una clave de seguridad interna y, luego, importar la clave de seguridad manualmente para desbloquear las unidades seguras. Una vez desbloqueadas, es posible acceder a las unidades.
+
+.. Cree una clave de seguridad interna
+.. Swap de controladora con gestión de claves interna y una o más unidades protegidas
+
+
+
+
+ a| 
+Todas las unidades seguras, gestión de claves interna
+ a| 
+Swap de controladora con gestión de claves interna y una o más unidades protegidas
+
+
+
+ a| 
+Combinación de unidades seguras y no seguras, gestión de claves externa
+ a| 
+Continúe con el próximo paso.
+
+Una vez que se realiza el reemplazo de la controladora, las controladoras se resincronizarán automáticamente con el servidor de gestión de claves externo y se desbloquearán y podrán acceder a las unidades.
+
+
+NOTE: Si recibe un código de bloqueo de visualización de siete segmentos de `L5` después de realizar un reemplazo de una controladora de unidades seguras mixtas con gestión de claves internas, póngase en contacto con el soporte técnico.
+
+
+
+ a| 
+Todas las unidades seguras, gestión de claves externa, se deben volver temporalmente a la gestión de claves interna para el procedimiento de reemplazo de la controladora
+ a| 
+Primero debe desbloquear las unidades seguras mediante el procedimiento interno de gestión de claves. Después de desbloquear las unidades, para volver a una gestión de claves externa, cree una nueva clave de seguridad externa para la cabina de almacenamiento.
+
+.. Swap de controladora con gestión de claves interna y una o más unidades protegidas
+.. Cree una clave de seguridad externa
+
+
+
+
+ a| 
+Todas las unidades seguras, gestión de claves externa, no se cambió temporalmente a gestión de claves interna para el procedimiento de reemplazo de la controladora
+ a| 
+La controladora se puede intercambiar con la gestión de claves externas y todas las unidades se protegen
+
+|===
+
+
+
+
+== Paso 2: Comprobar el estado de las controladoras y los soportes
+
+Puede utilizar los LED y el software de administración del almacenamiento para comprobar el estado de las controladoras y los soportes.
+
+.Pasos
+. Observe los LED de la controladora A para asegurarse de que arranca correctamente.
++
+Los LED de acción de servicio requerida de Host Link se vuelven verdes durante el reinicio. La pantalla de siete segmentos muestra la secuencia OS+ SD+ en blanco para indicar que el controlador está realizando el procesamiento de comienzo del día (SOD).
+
++
+Una vez que la controladora finaliza correctamente el reinicio, la pantalla de siete segmentos muestra el ID de soporte que coincide con la visualización de siete segmentos de la segunda controladora. De este modo, es posible detectar el compartimento de controladoras nuevo mediante el software de administración del almacenamiento.
+
+. Si alguno de los LED de acción de servicio requerida de la bandeja de la controladora-unidad es _on_, o si el LED de acción de servicio requerida de la controladora es _on_:
++
+.. Compruebe que el compartimento de controladoras se haya instalado correctamente y que todos los cables estén correctamente asentados. Si es necesario, vuelva a instalar el contenedor de la controladora.
+.. Compruebe los LED de acción de servicio requerida del soporte de la controladora-unidad y el LED de acción de servicio requerida de la controladora otra vez. Si no se corrige el problema, póngase en contacto con el soporte técnico.
+
+
+. Para una configuración doble, repita del paso 1 al paso 2 para la controladora B.
+. Con los LED y el software de administración del almacenamiento, compruebe el estado de todos los soportes de la cabina de almacenamiento. Si alguno de los componentes tiene el estado necesita atención, use Recovery Guru para solucionar el problema. Si no se resuelve el problema, póngase en contacto con el soporte técnico.
+
+
+
+
+== Paso 3: Validar la versión del software de la controladora
+
+Debe asegurarse de que las nuevas controladoras se ejecuten con el nivel de sistema operativo (firmware de la controladora) correcto y NVSRAM.
+
+.Pasos
+. Debe realizar una de las siguientes acciones:
++
+** Si va a actualizar a controladoras que no son compatibles con SANtricity 11.30 y el firmware de la controladora 8.30, asegúrese de que la versión que se ejecuta en las nuevas controladoras coincida con la versión que se ejecutaba por última vez en las controladoras originales. Normalmente, esta será la versión más reciente que admitan las controladoras antiguas. Si es necesario, instale la versión adecuada en las nuevas controladoras.
+** Si va a actualizar a controladoras que ejecutan SANtricity 11.30 y el firmware de la controladora 8.30, descargue e instale la última NVSRAM después de encender las controladoras nuevas.
+
+
+. Si la actualización de la controladora implica un cambio de protocolo (por ejemplo, Fibre Channel a iSCSI) y hay hosts definidos para la cabina de almacenamiento, asocie los nuevos puertos de host con los hosts:
++
+.. En System Manager, seleccione MENU:Storage[hosts].
+.. Seleccione el host al que se asociarán los puertos y, a continuación, haga clic en *Ver/editar configuración*.
++
+Se muestra un cuadro de diálogo en el que se proporciona la configuración actual de los hosts.
+
+.. Haga clic en la ficha *puertos de host*.
++
+En el cuadro de diálogo, se muestran los identificadores de puerto de host actuales.
+
+.. Para actualizar la información de identificador de puerto de host asociada con cada host, sustituya los ID de puerto de host de los adaptadores de host anteriores con los nuevos ID de puerto de host para el nuevo adaptador de host.
+.. Repita el paso d para cada host.
+.. Haga clic en *Guardar*.
+
+
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] y la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
+
+. Si se deshabilitó Write Back Caching para todos los volúmenes finos al preparar el cambio de cabezal, vuelva a habilitar Write Back Caching.
++
+.. En System Manager, seleccione MENU:Storage[Volumes].
+.. Seleccione cualquier volumen y luego seleccione MENU:más[Cambiar configuración de caché].
++
+Se muestra el cuadro de diálogo Cambiar configuración de caché. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
+
+.. Seleccione la ficha *básico* y cambie la configuración para el almacenamiento en caché de lectura y escritura.
+.. Haga clic en *Guardar*.
+
+
+. Si SAML estaba deshabilitado a preparar el cambio de cabezal, vuelva a habilitar SAML.
++
+.. En System Manager, seleccione MENU:Settings[Access Management].
+.. Seleccione la ficha *SAML* y siga las instrucciones de la página.
+
+
+. Recopile datos de soporte sobre la cabina de almacenamiento mediante la interfaz gráfica de usuario o la CLI:
++
+** Use System Manager o Array Management Window de Storage Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
++
+*** En System Manager, seleccione menu:Support[Centro de soporte > pestaña Diagnóstico]. A continuación, seleccione *recopilar datos de soporte* y haga clic en *recopilar*.
+*** En la barra de herramientas de Array Management Window, seleccione MENU:Monitor[Estado > recoger datos de soporte manualmente]. A continuación, introduzca un nombre y especifique una ubicación en el sistema donde se desea almacenar el paquete de soporte.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre `support-data.7z`.
+
++
+Si la bandeja tiene cajones, los datos de diagnóstico de esa bandeja se archivan en otro archivo comprimido con el nombre `tray-component-state-capture.7z`
+
+
+
+** Utilice la interfaz de línea de comandos para ejecutar el `save storageArray supportData` comando para recopilar datos de soporte completos sobre la cabina de almacenamiento.
++
+
+NOTE: La recopilación de datos de soporte puede afectar temporalmente el rendimiento de la cabina de almacenamiento.
+
+
+
+. Envíe una alerta al soporte técnico de NetApp sobre los cambios realizados en la configuración de la cabina de almacenamiento.
++
+.. Obtenga el número de serie del soporte de controladora-unidad que registró xref:prepare-upgrade-controllers-task.adoc[Prepare la actualización de las controladoras].
+.. Inicie sesión en el sitio de soporte de NetApp en http://mysupport.netapp.com/eservice/assistant["mysupport.netapp.com/eservice/assistant"^].
+.. Seleccione *Registro del producto* en la lista desplegable en *Categoría 1*.
+.. Introduzca el texto siguiente en el cuadro de texto **Comentarios**, sustituyendo el número de serie de la bandeja de la controladora-unidad por el número de serie:
++
+`Please create alert against Serial Number: serial number. The alert name should be “E-Series Upgrade”. The alert text should read as follows:`
+
++
+`“Attention: The controllers in this system have been upgraded from the original configuration. Verify the controller configuration before ordering replacement controllers and notify dispatch that the system has been upgraded.”`
+
+.. Haga clic en el botón *Enviar* situado en la parte inferior del formulario.
+
+
+
+
+.El futuro
+Si la actualización de la controladora produce un cambio de ID de proveedor de LSI a NETAPP, vaya a. link:remount-volumes-lsi-task.html["Vuelva a montar volúmenes después de cambiar el proveedor de LSI a NETAPP"]; de lo contrario, la actualización de la controladora se completa y puede reanudar las operaciones normales.

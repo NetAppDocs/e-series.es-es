@@ -1,0 +1,361 @@
+---
+permalink: maintenance-e2800/hics-upgrade-supertask-task.html 
+sidebar: sidebar 
+keywords: upgrading E2800 HIC, upgrade E2800 HIC, upgrade host interface card, E2800, E-Series, eseries 
+summary: 'Actualice una tarjeta de interfaz del host (HIC) en una cabina E2800.' 
+---
+= Actualizar tarjeta de interfaz del host E2800 (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible actualizar una tarjeta de interfaz del host (HIC) en una cabina E2800 para aumentar la cantidad de puertos de host o cambiar los protocolos de host.
+
+.Acerca de esta tarea
+Al actualizar las HIC, debe apagar la cabina de almacenamiento, quitar la HIC existente de cada controladora, instalar una HIC nueva y volver a aplicar la alimentación.
+
+.Antes de empezar
+* Revisar link:hics-overview-supertask-concept.html["Requisitos para reemplazar E2800 HIC"].
+* Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, esto se debe a que ambas controladoras deben tener la misma configuración de HIC cuando están encendidas.)
+
+
+.Lo que necesitará
+* Una o dos HIC, según si hay una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un destornillador Phillips número 1.
+* Cualquier hardware de host nuevo instalado para los puertos de host nuevos, como los switches o los adaptadores de bus de host (HBA).
+* Todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los puertos de host nuevos.
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] o la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
+
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Preparar la actualización de las tarjetas de interfaz del host
+
+Prepare para actualizar tarjetas de interfaz del host (HIC). Para ello, realice un backup de la base de datos de configuración de la cabina de almacenamiento, recoja datos de soporte y detenga las operaciones de I/o del host. Esto le permite apagar la bandeja de controladoras.
+
+.Pasos
+. En la página Inicio de SANtricity System Manager, asegúrese de que la cabina de almacenamiento tenga el estado Optimal.
++
+Si el estado no es óptimo, use Recovery Guru o póngase en contacto con el soporte técnico para resolver el problema. No continúe con este procedimiento.
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema durante este procedimiento, puede utilizar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema durante este procedimiento, puede utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. Si la cabina de almacenamiento participa en una relación de mirroring, detenga todas las operaciones de I/o del host en la cabina de almacenamiento secundaria.
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+
++
+*(1)* _Cache Active LED_
+
+. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. Apague la bandeja de controladoras.
++
+.. Apague ambos switches de alimentación de la bandeja de controladoras.
+.. Espere a que se apagen todos los LED de la bandeja de controladoras.
+
+
+
+
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Se quita el contenedor de controladoras para poder actualizar la nueva tarjeta de interfaz del host (HIC). Cuando quita un compartimento de controladoras, debe desconectar todos los cables. Así, puede sacar el compartimento de controladoras de la bandeja de controladoras.
+
+.Pasos
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Si los puertos HIC utilizan transceptores SFP+, quite ellos.
++
+Según el tipo de HIC a la que se esté actualizando, es posible que pueda reutilizar estos SFP.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que este LED se apague antes de quitar el compartimento de controladoras.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+
++
+*(1)* _Cache Active LED_
+
+. Apriete el pestillo de la palanca de leva hasta que se suelte y, a continuación, abra la palanca de leva a la derecha para liberar el contenedor del controlador de la bandeja.
++
+La siguiente figura es un ejemplo de bandeja de controladoras E2812, bandeja de controladoras E2824 o una cabina flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
++
+La siguiente figura es un ejemplo de una bandeja de controladoras E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
+. Con dos manos y el asa de leva, deslice el recipiente del controlador para sacarlo del estante.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+Si va a quitar el compartimento de controladoras de una bandeja de controladoras E2812, una bandeja de controladoras E2824 o una cabina flash EF280, un solapa se acerca a bloquear la bahía vacía, lo que ayuda a mantener el flujo de aire y la refrigeración.
+
+. Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia arriba.
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+== Paso 3: Extraiga una tarjeta de interfaz del host
+
+Quite la tarjeta de interfaz del host (HIC) original de manera que pueda reemplazarla por una actualizada.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador presionando el botón hacia abajo y deslizando la cubierta hacia fuera.
+. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+
++
+*(1)* _Internal Cache Active_
+
++
+*(2)* _Battery_
+
+. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC al compartimento de controladoras.
++
+Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+
+. Quite la placa frontal de HIC.
+. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
+. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
++
+
+CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+
++
+*(1)* _Tarjeta de interfaz del host (HIC)_
+
++
+*(2)* _thumbtornillos_
+
+. Coloque la HIC en una superficie sin estática.
+
+
+
+
+== Paso 4: Instalar la tarjeta de interfaz del host
+
+Instale la nueva tarjeta de interfaz del host (HIC) para aumentar la cantidad de puertos de host en la cabina de almacenamiento.
+
+
+CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladora E2800 si esa HIC estaba diseñada para otra controladora E-Series. Además, si tiene una configuración doble, ambas controladoras y ambas HIC deben ser idénticas. La presencia de HIC incompatible o con discrepancias hará que las controladoras se bloqueen cuando aplique alimentación.
+
+.Pasos
+. Desembale la nueva HIC y la nueva placa frontal de HIC.
+. Con un destornillador Phillips del número 1, quite los cuatro tornillos que conectan la placa frontal de HIC al compartimento de controladoras y quite la placa frontal.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+
+. Alinee los tres tornillos de ajuste manual de la HIC con los orificios correspondientes de la controladora y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
++
+Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
+. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
++
+
+CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+
++
+*(1)* _Tarjeta de interfaz del host_
+
++
+*(2)* _thumbtornillos_
+
+. Apriete a mano los tornillos de mariposa HIC.
++
+No utilice un destornillador, o puede apretar los tornillos en exceso.
+
+. Con un destornillador Phillips del número 1, conecte la nueva placa frontal de la HIC al compartimento de la controladora con los cuatro tornillos que quitó anteriormente.
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de la controladora
+
+Vuelva a instalar el contenedor de controladoras en la bandeja de controladoras después de instalar la nueva tarjeta de interfaz del host (HIC).
+
+.Pasos
+. Vuelva a instalar la cubierta en el contenedor del controlador deslizando la cubierta de atrás hacia delante hasta que el botón haga clic.
+. Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
+. Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
++
+La siguiente figura es un ejemplo de una bandeja de controladoras E2824 o una cabina flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
++
+La siguiente figura es un ejemplo de una bandeja de controladoras E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
+. Mueva la palanca de leva hacia la izquierda para bloquear el contenedor del controlador en su lugar.
+. Vuelva a conectar todos los cables que quitó.
++
+
+NOTE: No conecte los cables de datos a los puertos HIC nuevos en este momento.
+
+. (Opcional) Si va a actualizar HIC en una configuración doble, repita todos los pasos para quitar el otro compartimento de controladoras, quite la HIC, instale la nueva HIC y sustituya el segundo contenedor de controladora.
+
+
+
+
+== Paso 6: Actualización completa de la tarjeta de interfaz del host
+
+Complete el proceso de actualizar una tarjeta de interfaz del host. Para ello, revise los LED de la controladora y la pantalla de siete segmentos, y confirme que el estado de la controladora es óptimo.
+
+.Pasos
+. Encienda los dos switches de alimentación que se encuentran en la parte posterior de la bandeja de controladoras.
++
+** No apague los interruptores de alimentación durante el proceso de encendido, que normalmente tarda 90 segundos o menos en completarse.
+** Los ventiladores de cada bandeja son muy altos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Cuando se arranca la controladora, compruebe los LED de la controladora y la pantalla de siete segmentos.
++
+** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *SD*, *_blank_* para indicar que el controlador está realizando el procesamiento de comienzo del día (SOD). Una vez que se inició correctamente una controladora, su pantalla de siete segmentos debe mostrar el ID de soporte.
+** El LED de atención ámbar del controlador se enciende y se apaga, a menos que se produzca un error.
+** Los LED verde del enlace de host permanecen apagados hasta que se conectan los cables del host.
++
+
+NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maint e2800]
+
++
+*(1)* _LED de atención (ámbar)_
+
++
+*(2)* _pantalla de siete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. En SANtricity System Manager, confirme que el estado de la controladora es óptimo.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están conectados correctamente y compruebe que la HIC y el compartimento de controladoras estén instalados correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras y la HIC.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Si los puertos HIC nuevos requieren transceptores SFP+, instale estos SFP.
+. Conecte los cables entre los puertos de host de la controladora y los hosts de datos.
+
+
+.El futuro
+Se completó el proceso de actualización de una tarjeta de interfaz del host en la cabina de almacenamiento. Es posible reanudar las operaciones normales.

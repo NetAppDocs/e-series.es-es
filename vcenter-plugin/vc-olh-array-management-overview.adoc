@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-management-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Utilice la función Añadir/detectar para encontrar y añadir las cabinas de almacenamiento que desea gestionar en la red de la organización. 
+---
+= Información general de la gestión de cabinas
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Use la función Añadir/detectar para encontrar y añadir las cabinas de almacenamiento que desea gestionar en el plugin de almacenamiento para vCenter. En la página gestionar, también puede cambiar el nombre, quitar y proporcionar contraseñas nuevas para estas cabinas detectadas.
+
+
+
+== Consideraciones sobre la detección de cabinas
+
+Para mostrar y gestionar los recursos de almacenamiento, debe detectar las cabinas de almacenamiento que desea gestionar en la red de la organización. Puede detectar y añadir una sola cabina o varias.
+
+
+
+=== Varias cabinas de almacenamiento
+
+Si decide detectar varias cabinas de almacenamiento, debe introducir un rango de direcciones IP de red. A continuación, el sistema intentar establecer conexiones individuales con cada dirección IP de ese rango. En el plugin se muestra toda cabina de almacenamiento a la que se pudo acceder correctamente y luego se pueden añadir al dominio de gestión.
+
+
+
+=== Cabina de almacenamiento única
+
+Si decide detectar una sola cabina de almacenamiento, debe introducir la dirección IP única para una de las controladoras de la cabina de almacenamiento y, a continuación, añadir esa cabina al dominio de gestión.
+
+
+NOTE: El plugin detecta y muestra solamente la dirección IP única o la dirección IP dentro del rango asignado a un controlador. Si hay controladoras alternativas o direcciones IP asignadas a estas controladoras que no se incluyen en esta dirección IP única o este rango de direcciones IP, el plugin no las detectará ni las mostrará. Sin embargo, una vez añadida la cabina de almacenamiento, se detectarán todas las direcciones IP asociadas y se mostrarán en la vista gestionar.
+
+
+
+=== Credenciales de usuario
+
+Debe suministrar la contraseña de administrador para cada cabina de almacenamiento que desee añadir.
+
+
+
+=== Certificados
+
+Como parte del proceso de detección, el sistema verifica que las cabinas de almacenamiento detectadas utilicen certificados de un origen de confianza. El sistema utiliza dos tipos de autenticación basada en certificados para todas las conexiones que establece con el explorador:
+
+* *Certificados de confianza* -- puede que necesite instalar certificados de confianza adicionales proporcionados por la entidad emisora de certificados si uno o ambos certificados del controlador han caducado, revocado o falta un certificado en su cadena.
+* *Certificados autofirmados* -- los arreglos también pueden utilizar certificados autofirmados. Si se intentan detectar cabinas sin importar los certificados firmados, el plugin proporciona un paso adicional que permite aceptar el certificado autofirmado. El certificado autofirmado de la cabina de almacenamiento se marcará como de confianza y la cabina de almacenamiento se añadirá al plugin. Si no confía en las conexiones a la cabina de almacenamiento, seleccione *Cancelar* y valide la estrategia de certificado de seguridad de la cabina de almacenamiento antes de añadir la cabina de almacenamiento al plugin.
+
+
+
+
+== Estado de la cabina de almacenamiento
+
+Al abrir el complemento de almacenamiento para vCenter, se establece la comunicación con cada cabina de almacenamiento y se muestra el estado de cada una.
+
+En la página *gestionar - todo*, es posible ver el estado de la cabina de almacenamiento y el estado de la conexión de la cabina de almacenamiento.
+
+|===
+| Estado | Lo que indica 
+
+
+| Óptimo | La cabina de almacenamiento tiene el estado óptimo. No hay problemas de certificados y la contraseña es válida. 
+
+
+| Contraseña no válida | Se proporcionó una contraseña no válida para la cabina de almacenamiento. 
+
+
+| Certificado no confiable | Una o varias conexiones con la cabina de almacenamiento no son de confianza porque el certificado HTTPS está autofirmado o no se ha importado; o bien, se trata de un certificado firmado por una CA y los certificados de CA raíz e intermedios no se importaron. 
+
+
+| Necesita atención | Hay un problema con la cabina de almacenamiento que requiere de su intervención para corregirlo. 
+
+
+| Bloqueo | La cabina de almacenamiento está en estado bloqueado. 
+
+
+| Desconocido | No se contactó a la cabina de almacenamiento. Esto puede ocurrir cuando el plugin se está iniciando y aún no ha establecido contacto con la cabina de almacenamiento, o bien cuando la cabina se encuentra sin conexión y nunca se la contactó desde que se inició el plugin. 
+
+
+| Sin conexión | El plugin se había contactado previamente con la cabina de almacenamiento, pero ahora perdió toda conexión con ella. 
+|===
+
+
+== Comparación de la interfaz de complementos con System Manager
+
+Puede utilizar el complemento de almacenamiento para vCenter para tareas operativas básicas en su cabina de almacenamiento; sin embargo, puede haber horas cuando necesite ejecutar System Manager para realizar tareas que no estén disponibles en el plugin.
+
+System Manager es una aplicación integrada en la controladora de la cabina de almacenamiento, que está conectada a la red a través de un puerto de gestión Ethernet. System Manager incluye todas las funciones basadas en cabina.
+
+La siguiente tabla ayuda a decidir si se puede usar la interfaz del plugin o la interfaz de System Manager para una tarea concreta de la cabina de almacenamiento.
+
+|===
+| Función | Interfaz de complemento | Interfaz de System Manager 
+
+
+| Operaciones de lote en grupos de varias cabinas de almacenamiento | Sí | No Las operaciones se ejecutan en una sola cabina. 
+
+
+| Actualizaciones para el firmware del sistema operativo SANtricity | Sí. Una o varias cabinas en una operación en lote. | Sí. Solo cabina única. 
+
+
+| Importe la configuración de una cabina a varias cabinas | Sí | No 
+
+
+| Gestión de hosts y clústeres de hosts (crear, asignar volúmenes, actualizar y eliminar) | Sí | Sí 
+
+
+| Gestión de pools y grupos de volúmenes (crear, actualizar, habilitar la seguridad y eliminar) | Sí | Sí 
+
+
+| Gestión de volúmenes (creación, cambio de tamaño, actualización y eliminación) | Sí | Sí 
+
+
+| Gestión de la caché SSD (creación, actualización y eliminación) | Sí | Sí 
+
+
+| Gestión de mirroring y Snapshot | No | Sí 
+
+
+| Gestión del hardware (ver el estado de la controladora, configurar conexiones de puertos, desconectar la controladora, habilitar piezas de repuesto, borrar unidades, etc.) | No | Sí 
+
+
+| Gestionar alertas (correo electrónico, SNMP y syslog) | No | Sí 
+
+
+| Gestión de claves de seguridad | No | Sí 
+
+
+| Gestión de certificados para las controladoras | No | Sí 
+
+
+| Gestión de acceso para controladoras (LDAP, SAML, etc.) | No | Sí 
+
+
+| Gestión de AutoSupport | No | Sí 
+|===

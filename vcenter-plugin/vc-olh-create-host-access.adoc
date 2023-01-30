@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-access.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para gestionar el almacenamiento con el complemento de almacenamiento para vCenter, debe detectar o definir cada host de la red. 
+---
+= Cree acceso de hosts
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gestionar el almacenamiento con el complemento de almacenamiento para vCenter, debe detectar o definir cada host de la red.
+
+.Acerca de esta tarea
+Al crear un host, se deben definir los parámetros de host para proporcionar conexión a la cabina de almacenamiento y acceso de I/o a los volúmenes.
+
+Puede permitir que el agente de contexto de host (HCA) detecte automáticamente los hosts y, a continuación, verificar que la información sea correcta seleccionando *Ver/editar configuración* en la página Configurar hosts. Sin embargo, HCA no está disponible en todos los sistemas operativos compatibles y debe crear el host manualmente.
+
+Al crear un host, tenga en cuenta las siguientes directrices:
+
+* Se deben definir los puertos identificadores de host que están asociados con el host.
+* Asegúrese de proporcionar el mismo nombre que el nombre de sistema del host asignado.
+* Esta operación no funciona si el nombre que eligió ya está en uso.
+* La longitud del nombre no puede ser mayor de 30 caracteres.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Haga clic en MENU:Create[Host].
++
+Se muestra el cuadro de diálogo Crear host.
+
+. Seleccione la configuración del host que corresponda.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Escriba un nombre para el host nuevo.
+
+
+
+ a| 
+Tipo de sistema operativo de host
+ a| 
+Seleccione el sistema operativo que funciona en el host nuevo de la lista desplegable.
+
+
+
+ a| 
+Tipo de interfaz del host
+ a| 
+(Opcional) Si la cabina de almacenamiento es compatible con más de un tipo de interfaz del host, seleccione el tipo de interfaz del host que desea usar.
+
+
+
+ a| 
+Puertos host
+ a| 
+Debe realizar una de las siguientes acciones:
+
+** *Seleccione interfaz de E/S* -- generalmente, los puertos de host deberían haber iniciado sesión y estar disponibles en la lista desplegable. Puede seleccionar los identificadores de puerto de host de la lista.
+** *Manual add* -- Si un identificador de puerto de host no aparece en la lista, significa que el puerto de host no ha iniciado sesión. Se puede usar una utilidad de HBA o una utilidad de iniciador de iSCSI para encontrar los identificadores de puerto de host y asociarlos con el host. Se pueden introducir los identificadores de puerto de host manualmente o copiarlos/pegarlos desde la utilidad (de uno en uno) en el campo puertos de host. Se debe seleccionar un identificador de puerto de host para asociarlo con el host, pero es posible seguir seleccionando identificadores que estén asociados con el host. Cada identificador se muestra en el campo puertos de host. Si es necesario, también puede eliminar un identificador seleccionando *X* junto a él.
+
+
+
+
+ a| 
+Configure secreto CHAP del iniciador
+ a| 
+(Opcional) Si seleccionó o introdujo manualmente un puerto de host mediante un IQN de iSCSI y desea solicitar la autenticación de un host que intenta acceder a la cabina de almacenamiento mediante un protocolo de autenticación por desafío mutuo (CHAP), seleccione la casilla de verificación “establecer secreto de iniciador CHAP”. Para cada puerto de host iSCSI que seleccione o introduzca manualmente, haga lo siguiente:
+
+** Introduzca el mismo secreto CHAP que se estableció en cada iniciador de host iSCSI para la autenticación de CHAP. Si va a utilizar la autenticación CHAP mutuo (autenticación bidireccional que permite la validación de un host en la cabina de almacenamiento y de una cabina de almacenamiento en el host), también debe configurar el secreto CHAP para la cabina de almacenamiento en la configuración inicial o cambiar la configuración.
+** Deje el campo en blanco si no requiere la autenticación del host. Actualmente, el único método de autenticación de iSCSI utilizado es CHAP.
+
+
+|===
+====
+. Haga clic en *Crear*.
+. Si necesita actualizar la información del host, seleccione el host en la tabla y haga clic en *Ver/editar configuración*.
+
+
+.Resultado
+Una vez que el host se creó correctamente, el sistema crea un nombre predeterminado para cada puerto de host configurado para el host (etiqueta de usuario). El alias predeterminado es `<Hostname_Port Number>`. Por ejemplo, el alias predeterminado para el primer puerto creado para la IPT del host es `IPT_1`.
+
+.Después de terminar
+Es necesario asignar un volumen a un host para que se pueda usar en operaciones de I/O. Vaya a. link:vc-olh-assign-volumes-to-hosts.html["Asignar volúmenes a hosts"].

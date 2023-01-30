@@ -1,0 +1,272 @@
+---
+permalink: web-services-proxy/array-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, discover storage WSP, 
+summary: Para gestionar los sistemas de almacenamiento en la red, primero debe detectarlos y después añadirlos a la lista de gestión. 
+---
+= Gestione los sistemas de almacenamiento mediante Web Services Proxy
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para gestionar los sistemas de almacenamiento en la red, primero debe detectarlos y después añadirlos a la lista de gestión.
+
+
+
+== Detectar sistemas de almacenamiento
+
+Es posible establecer la detección automática o detectar manualmente los sistemas de almacenamiento.
+
+
+
+=== Detección automática de sistemas de almacenamiento
+
+Se puede especificar que los sistemas de almacenamiento se detecten automáticamente en la red mediante la modificación de la configuración del archivo wsconfig.xml. De manera predeterminada, la detección automática de IPv6 está deshabilitada y IPv4 está habilitada.
+
+Solo debe proporcionar una dirección IP o DNS de gestión para añadir un sistema de almacenamiento. El servidor detecta automáticamente todas las rutas de administración cuando las rutas no están configuradas o las rutas están configuradas y podridas.
+
+
+NOTE: Si intenta utilizar un protocolo IPv6 para detectar automáticamente sistemas de almacenamiento de la configuración de la controladora después de establecer una conexión inicial, es posible que se produzca un error en el proceso. Entre las posibles causas de este fallo se encuentran problemas durante el reenvío de direcciones IP o la activación de IPv6 en los sistemas de almacenamiento, pero no la activación en el servidor.
+
+.Antes de empezar
+Antes de habilitar la configuración de detección IPv6, compruebe que la infraestructura admite conectividad IPv6 con los sistemas de almacenamiento para mitigar cualquier problema de conexión.
+
+.Pasos
+. Abra el archivo wsconfig.xml, ubicado en:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy
+
+
+. En las cadenas de detección automática, cambie la configuración desde `true` para `false`, según se desee. Vea el ejemplo siguiente.
++
+[listing]
+----
+<env key="autodiscover.ipv6.enable">true</env>
+----
++
+
+NOTE: Cuando las rutas están configuradas, pero no configuradas para que el servidor pueda enrutar a las direcciones, se producen errores intermitentes de conexión. Si no puede configurar las direcciones IP para que se puedan enrutar desde el host, desactive la detección automática (cambie la configuración a. `false`).
+
+. Guarde el archivo.
+
+
+
+
+=== Detectar y añadir sistemas de almacenamiento con extremos API
+
+Puede usar extremos de API para detectar y añadir sistemas de almacenamiento en la lista gestionada. Este procedimiento crea una conexión de gestión entre el sistema de almacenamiento y la API.
+
+
+NOTE: En esta tarea, se describe cómo detectar y añadir sistemas de almacenamiento mediante la API DE REST, para poder gestionar estos sistemas en la documentación de API interactiva. Sin embargo, es posible que se desee gestionar sistemas de almacenamiento en Unified Manager, que proporciona una interfaz fácil de usar. Para obtener más información, consulte la ayuda en línea disponible con Unified Manager.
+
+.Antes de empezar
+Para los sistemas de almacenamiento con SANtricity versión 11.30 y posteriores, debe habilitarse la interfaz de gestión heredada para Symbol en la interfaz de SANtricity System Manager. De lo contrario, los extremos de detección se fallarán. Para encontrar este ajuste, abra System Manager y vaya a MENU:Configuración[sistema > Configuración adicional > Cambiar interfaz de gestión].
+
+.Pasos
+. Inicie sesión en la link:install-login-task.html["Documentación de API interactiva"].
+. Detecte los sistemas de almacenamiento:
++
+.. En la documentación de la API, asegúrese de que *V2* está seleccionado en la lista desplegable y, a continuación, expanda la categoría *sistemas de almacenamiento*.
+.. Haga clic en el punto final *POST: /Discovery* y, a continuación, haga clic en *Inténtelo*.
+.. Introduzca los parámetros como se describe en la tabla.
++
+|===
+
+
+ a| 
+IP inicial
+
+IP final
+ a| 
+Reemplace string por el rango de direcciones IP inicial y final para uno o más sistemas de almacenamiento en la red.
+
+
+
+ a| 
+UseAgents
+ a| 
+Establezca este valor en:
+
+*** True = utilizar agentes en banda para la exploración de red.
+*** False = no utilice agentes en banda para la exploración de red.
+
+
+
+
+ a| 
+ConnectionTimeout
+ a| 
+Introduzca los segundos permitidos para la exploración antes de que se agote el tiempo de espera de la conexión.
+
+
+
+ a| 
+MaxPortsToUse
+ a| 
+Introduzca un número máximo de puertos utilizados para la exploración de red.
+
+|===
+.. Haga clic en *Ejecutar*.
++
+
+NOTE: Las acciones de API se ejecutan sin las peticiones del usuario.
+
++
+El proceso de detección se ejecuta en segundo plano.
+
+.. Asegúrese de que el código devuelve un 202.
+.. En *cuerpo de respuesta*, busque el valor devuelto para el Id. De solicitud. Necesita el ID de solicitud para ver los resultados en el siguiente paso.
+
+
+. Vea los resultados de la detección de la siguiente manera:
++
+.. Haga clic en el punto final *GET: /Discovery* y, a continuación, haga clic en *Inténtelo*.
+.. Introduzca el ID de solicitud del paso anterior. Si deja el *ID de solicitud* en blanco, el extremo tomará por defecto el último ID de solicitud ejecutado.
+.. Haga clic en *Ejecutar*.
+.. Asegúrese de que el código devuelve 200.
+.. En el cuerpo de respuesta, busque su ID de solicitud y las cadenas de sistemas de almacenamiento. Las cadenas tienen un aspecto similar al siguiente ejemplo:
++
+[listing]
+----
+"storageSystems": [
+    {
+      "serialNumber": "123456789",
+      "wwn": "000A011000AF0000000000001A0C000E",
+      "label": "EF570_Array",
+      "firmware": "08.41.10.01",
+      "nvsram": "N5700-841834-001",
+      "ipAddresses": [
+        "10.xxx.xx.213",
+        "10.xxx.xx.214"
+      ],
+----
+.. Escriba los valores para wwn, etiqueta e direcciones IP. Se necesitan para el siguiente paso.
+
+
+. Añada los sistemas de almacenamiento de la siguiente manera:
++
+.. Haga clic en el extremo *POST: /Storage-system* y, a continuación, haga clic en *probar fuera*.
+.. Introduzca los parámetros como se describe en la tabla.
++
+|===
+
+
+ a| 
+id
+ a| 
+Introduzca un nombre único para este sistema de almacenamiento. Puede introducir la etiqueta (que se muestra en LA respuesta DE GET: /Discovery), pero el nombre puede ser cualquier cadena que elija. Si no proporciona un valor para este campo, Web Services asigna automáticamente un identificador exclusivo.
+
+
+
+ a| 
+ControladorAddresses
+ a| 
+Introduzca las direcciones IP que se muestran en la respuesta PARA GET: /Discovery. En el caso de controladoras dobles, las direcciones IP deben separarse con una coma. Por ejemplo:
+
+`"IP address 1","IP address 2"`
+
+
+
+ a| 
+validar
+ a| 
+Introduzca `true`, Para recibir la confirmación de que los servicios Web se pueden conectar al sistema de almacenamiento.
+
+
+
+ a| 
+contraseña
+ a| 
+Introduzca la contraseña de administración para el sistema de almacenamiento.
+
+
+
+ a| 
+wwn
+ a| 
+Introduzca el WWN del sistema de almacenamiento (se muestra en la respuesta PARA GET: /Discovery).
+
+|===
+.. Quite todas las cadenas después `"enableTrace": true`, de forma que todo el conjunto de cadenas sea similar al ejemplo siguiente:
++
+[listing]
+----
+{
+  "id": "EF570_Array",
+  "controllerAddresses": [
+    "Controller-A-Mgmt-IP","Controller-B-Mgmt_IP"
+  ],
+  "validate":true,
+  "password": "array-admin-password",
+  "wwn": "000A011000AF0000000000001A0C000E",
+  "enableTrace": true
+}
+----
+.. Haga clic en *Ejecutar*.
+.. Asegúrese de que la respuesta de código es 201, lo que indica que el punto final se ha ejecutado correctamente.
++
+El punto final *Post: /Storage-systems* está en cola. Puede ver los resultados utilizando el extremo *GET: /Storage-systems* en el siguiente paso.
+
+
+
+. Confirme la adición de la lista de la siguiente manera:
++
+.. Haga clic en el extremo *GET: /Storage-system*.
++
+No es necesario ningún parámetro.
+
+.. Haga clic en *Ejecutar*.
+.. Asegúrese de que la respuesta de código es 200, lo que indica que el punto final se ha ejecutado correctamente.
+.. En el cuerpo de respuesta, busque la información del sistema de almacenamiento. Los valores devueltos indican que se agregó correctamente a la lista de cabinas gestionadas, de forma similar al siguiente ejemplo:
++
+[listing]
+----
+[
+  {
+    "id": "EF570_Array",
+    "name": "EF570_Array",
+    "wwn": "000A011000AF0000000000001A0C000E",
+    "passwordStatus": "valid",
+    "passwordSet": true,
+    "status": "optimal",
+    "ip1": "10.xxx.xx.213",
+    "ip2": "10.xxx.xx.214",
+    "managementPaths": [
+      "10.xxx.xx.213",
+      "10.xxx.xx.214"
+  ]
+  }
+]
+----
+
+
+
+
+
+
+== Escale verticalmente el número de sistemas de almacenamiento gestionados
+
+De forma predeterminada, la API puede gestionar hasta 100 sistemas de almacenamiento. Si necesita administrar más, debe mejorar los requisitos de memoria para el servidor.
+
+El servidor está configurado para utilizar 512 MB de memoria. Por cada 100 sistemas de almacenamiento adicionales de la red, añada 250 MB a ese número. No añada más memoria de la que tiene físicamente. Deje suficiente espacio adicional para su sistema operativo y otras aplicaciones.
+
+
+NOTE: El tamaño predeterminado de la caché es de 8,192 eventos. El uso aproximado de datos de la caché de eventos MEL es de 1 MB por cada 8,192 eventos. Por tanto, si se conservan los valores predeterminados, el uso de caché debe ser de 1 MB aproximadamente para un sistema de almacenamiento.
+
+
+NOTE: Además de la memoria, el proxy utiliza puertos de red para cada sistema de almacenamiento. Linux y Windows consideran los puertos de red como identificadores de archivos. Como medida de seguridad, la mayoría de los sistemas operativos limitan el número de identificadores de archivos abiertos que un proceso o un usuario pueden tener abiertos al mismo tiempo. Especialmente en entornos Linux, donde se considera que las conexiones TCP abiertas son identificadores de archivos, el proxy de servicios web puede superar fácilmente este límite. Dado que la corrección depende del sistema, debe consultar la documentación del sistema operativo para obtener información sobre cómo elevar este valor.
+
+.Pasos
+. Debe realizar una de las siguientes acciones:
++
+** En Windows, vaya al archivo appserver64.init. Localizar la línea, `vmarg.3=-Xmx512M`
+** En Linux, vaya al archivo webserver.shI. Localizar la línea, `JAVA_OPTIONS="-Xmx512M"`
+
+
+. Para aumentar la memoria, reemplace `512` Con la memoria deseada en MB.
+. Guarde el archivo.
+

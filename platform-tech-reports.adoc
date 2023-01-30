@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: platform-tech-reports.html 
+keywords: platform technical reports, e-series, hardware, santricity, os 
+summary: Informes técnicos de E-Series 
+---
+= Consulte los informes técnicos de la plataforma
+:allow-uri-read: 
+
+
+
+
+== Plataforma TRS
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Descripción general de las funciones de las matrices E2800*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Visión general de las cabinas E5700++*"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Descripción general de las funciones de las cabinas EF300++*"] 
+
+
+| Describe las funciones de hardware y software de la cabina híbrida E2800 y las funciones más recientes del sistema operativo SANtricity. | Describe la información del producto E5700, incluidas las nuevas funciones de hardware y software, incluidas la versión más reciente de SANtricity. | Describe las funciones de hardware y software de la cabina all-flash EF300 y las nuevas funciones del SO SANtricity. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"] |  |  
+
+
+| Describe las funciones de hardware y software de la cabina all-flash EF600 y las nuevas funciones de SO SANtricity. |  |  
+|===

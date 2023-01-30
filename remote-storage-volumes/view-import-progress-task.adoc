@@ -1,0 +1,37 @@
+---
+permalink: remote-storage-volumes/view-import-progress-task.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: Puede ver el estado de cada importación de almacenamiento remoto desde la sección de lista de resultados de la pantalla almacenamiento remoto de SANtricity System Manager. 
+---
+= Gestionar el progreso de importación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una vez que comienza el proceso de importación, puede ver y actuar sobre su progreso.
+
+Para cada operación de importación, la página Operaciones en curso muestra un porcentaje de finalización y el tiempo restante estimado. Las acciones incluyen cambiar la prioridad de importación, detener y reanudar operaciones, y desconectarse de la operación.
+
+
+NOTE: También puede ver Operaciones en curso desde la página de inicio (*Inicio > Mostrar operaciones en curso*).
+
+.Pasos
+. En el Administrador del sistema de SANtricity, vaya a la página almacenamiento remoto y seleccione *Ver operaciones*.
++
+Se muestra el cuadro de diálogo Operaciones en curso.
+
+. Si lo desea, use los enlaces de la columna acciones para detener y reanudar, cambiar la prioridad o desconectarse de una operación.
++
+** *Cambiar prioridad* – Seleccione *Cambiar prioridad* para cambiar la prioridad de procesamiento de una operación en curso o pendiente. Aplique una prioridad a la operación y, a continuación, haga clic en *Aceptar*.
+** *Stop* – Seleccione *Stop* para pausar la copia de datos del dispositivo de almacenamiento remoto. La relación entre el par de importación sigue intacta y puede seleccionar *Reanudar* cuando esté listo para continuar con la operación de importación.
+** *Reanudar* – Seleccione *Reanudar* para comenzar un proceso detenido o fallido desde el punto en que se dejó. A continuación, aplique una prioridad a la operación Reanudar y, a continuación, haga clic en *Aceptar*.
++
+La operación Reanudar *no* reinicia la importación desde el principio. Si desea reiniciar el proceso desde el principio, debe seleccionar *desconectar* y volver a crear la importación a través del asistente Importar almacenamiento remoto.
+
+** *Desconectar* – Seleccione *desconectar* para romper la relación entre los volúmenes de origen y destino para una operación de importación que se haya detenido, completado o fallido.
+
+
+

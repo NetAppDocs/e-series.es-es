@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-reset-management-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Revierte el certificado de gestión a su estado autofirmado original de fábrica. 
+---
+= Restablezca los certificados de gestión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para el sistema de gestión que aloja el complemento de almacenamiento para vCenter, puede revertir el certificado de gestión a su estado autofirmado original de fábrica.
+
+.Acerca de esta tarea
+Esta tarea elimina el certificado de gestión actual del sistema host donde se ejecuta el complemento de almacenamiento para vCenter. Una vez restablecido el certificado, el sistema host se revierte al uso del certificado autofirmado.
+
+.Pasos
+. Seleccione *Gestión de certificados*.
+. En la ficha *Gestión*, seleccione *Restablecer*.
++
+Se abre el cuadro de diálogo Confirmar restablecimiento de certificado de gestión.
+
+. Escriba reset en el campo y haga clic en *Restablecer*.
++
+Una vez que se actualiza el explorador, es posible que el explorador bloquee el acceso al sitio de destino e informe de que el sitio utiliza HTTP estricto Transport Security. Esta condición surge cuando se cambia a certificados autofirmados. Para borrar la condición que bloquea el acceso al destino, debe borrar los datos de navegación del explorador.
+
+
+
+.Resultado
+El sistema se revierte al uso del certificado autofirmado del servidor. Como resultado, el sistema solicita a los usuarios que acepten manualmente el certificado autofirmado para sus sesiones.

@@ -1,0 +1,265 @@
+---
+permalink: maintenance-ef600/dimms-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM 
+summary: Sustituya un DIMM en una cabina EF300 o EF600. 
+---
+= Sustituya los módulos DIMM en EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible sustituir un DIMM en una cabina EF300 o EF600.
+
+.Acerca de esta tarea
+Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, colocar la controladora en estado sin conexión, quitar la controladora, quitar los DIMM e instalar los nuevos DIMM en la controladora. Luego puede volver a conectar la controladora y verificar que la cabina de almacenamiento funcione correctamente.
+
+.Antes de empezar
+* Revisar link:dimms-overview-supertask-concept.html["Requisitos para sustituir un DIMM EF300 o EF600"].
+* Asegúrese de que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+
+
+.Lo que necesitará
+* Un DIMM de reemplazo.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un área de trabajo plana y estática libre.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Determine si necesita sustituir un DIMM
+
+Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
+
+.Pasos
+. Acceda al perfil de la cabina de almacenamiento de la controladora. En SANtricity System Manager, vaya al menú:Soporte[Centro de soporte]. En la página Recursos de soporte, seleccione *Perfil de matriz de almacenamiento*.
+. Desplácese hacia abajo o utilice el campo Buscar para localizar la información *módulo de caché de datos*.
+. Si se presenta una de las siguientes opciones, anote la ubicación del DIMM y continúe con los procedimientos restantes de esta sección para sustituir los DIMM del controlador:
++
+** Un DIMM con errores o un DIMM que informa *módulo de caché de datos* como no óptimo.
+** Un módulo DIMM con una capacidad de *módulo de caché de datos* no coincidente.
+
+
+
+
+
+
+== Paso 2: Coloque la controladora en estado sin conexión
+
+Coloque la controladora en estado sin conexión para que pueda extraer y sustituir los DIMM de forma segura.
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que existe un problema con una memoria que no coincide y para garantizar que primero no se deban tratar otros elementos.
+. En el área Detalles de Recovery Guru, determine qué DIMM desea reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+.. Seleccione *hardware*.
+.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Seleccione la controladora que desea colocar en estado sin conexión.
+.. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione *conectarse a una conexión de red alternativa* para acceder automáticamente al Administrador del sistema de SANtricity utilizando el otro controlador.
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que se muestra Sí el campo Aceptar para eliminar en el área Detalles, lo que indica que es seguro eliminar este componente.
+
+
+
+
+== Paso 3: Quite el contenedor de controladora
+
+Quite el compartimento de controladoras con errores para poder sustituir los DIMM por otros nuevos.
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
++
+image::../media/remove_controller_5.png[retire la controladora 5]
+
+. Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+image::../media/remove_controller_6.png[retire la controladora 6]
+
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+== Paso 4: Retire los módulos DIMM
+
+Si hay un error de coincidencia en la memoria, reemplace los DIMM en el controlador.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador desenroscando el tornillo de mariposa único y levantando la tapa para abrirla.
+. Confirme que el LED verde del interior del controlador está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
+. Ubique los DIMM en el controlador.
+. Tenga en cuenta la orientación del módulo DIMM en el zócalo para que pueda insertar el módulo DIMM de repuesto en la orientación adecuada.
++
+
+NOTE: Una muesca en la parte inferior del DIMM ayuda a alinear el DIMM durante la instalación.
+
+. Empuje lentamente las dos lengüetas expulsoras del DIMM a ambos lados del módulo DIMM para expulsar el módulo DIMM de su ranura y, a continuación, deslícelo fuera de la ranura.
++
+image::../media/dimm_2.png[dimm 2]
+
++
+image::../media/dimim_3.png[dimi 3]
+
++
+
+CAUTION: Sujete con cuidado el módulo DIMM por los bordes para evitar la presión sobre los componentes de la placa de circuitos DIMM.
+
++
+El número y la colocación de los DIMM del sistema depende del modelo del sistema.
+
+
+
+
+
+== Paso 5: Instale módulos DIMM nuevos
+
+Instale un módulo DIMM nuevo para sustituir el antiguo.
+
+.Pasos
+. Sujete el módulo DIMM por las esquinas y alinéelo con la ranura.
++
+La muesca entre las patillas del DIMM debe alinearse con la lengüeta del zócalo.
+
+. Inserte el módulo DIMM directamente en la ranura.
++
+El módulo DIMM encaja firmemente en la ranura, pero debe entrar fácilmente. Si no es así, realinee el DIMM con la ranura y vuelva a insertarlo.
+
++
+
+NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado de forma uniforme y completamente insertado en la ranura.
+
+. Empuje con cuidado, pero firmemente, en el borde superior del DIMM hasta que los pestillos encajen en su lugar sobre las muescas de los extremos del DIMM.
++
+
+NOTE: Los DIMM se ajustan firmemente. Es posible que tenga que presionar suavemente un lado a la vez y fijarlo con cada pestaña individualmente.
+
++
+image::../media/dimm_5.png[dimm 5]
+
+
+
+
+
+== Paso 6: Vuelva a instalar el compartimento de la controladora
+
+Después de instalar los DIMM nuevos, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
+
+.Pasos
+. Baje la cubierta del receptáculo del controlador y fije el tornillo de apriete manual.
+. Al apretar las asas de las controladoras, deslice suavemente el compartimento de controladoras hasta llegar a la bandeja de controladoras.
++
+
+NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
+
++
+image::../media/remove_controller_7.png[retire la controladora 7]
+
+. Vuelva a conectar todos los cables.
+
+
+
+
+== Paso 7: Sustitución completa de los DIMM
+
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Coloque una controladora en línea.
++
+.. En System Manager, desplácese hasta la página hardware.
+.. Seleccione *Mostrar parte posterior del controlador*.
+.. Seleccione la controladora con los DIMM sustituidos.
+.. Seleccione *colocar en línea* en la lista desplegable.
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión de SANtricity OS.
++
+Si es necesario, instale la versión más reciente.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Seleccione MENU:Storage[Volumes]. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione MENU:More[Cambiar propiedad] para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya al menú:más[redistribuir volúmenes].
+.. Si no hay ninguna instancia de Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se ha completado el reemplazo de DIMM. Es posible reanudar las operaciones normales.

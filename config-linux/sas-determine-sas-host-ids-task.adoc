@@ -1,0 +1,29 @@
+---
+permalink: config-linux/sas-determine-sas-host-ids-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para el protocolo SAS, encontrará las direcciones SAS con la utilidad HBA y después use el BIOS del HBA para realizar los ajustes de configuración adecuados. 
+---
+= Determinar los identificadores de host SAS: Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el protocolo SAS, encontrará las direcciones SAS con la utilidad HBA y después use el BIOS del HBA para realizar los ajustes de configuración adecuados.
+
+Antes de iniciar este procedimiento, revise estas directrices para las utilidades de HBA:
+
+* La mayoría de los proveedores de HBA ofrecen una utilidad de HBA. Según el sistema operativo y la CPU host, utilice la utilidad LSI-sas2flash (6G) o sas3flash (12G).
+* Los puertos de I/o del host pueden registrarse automáticamente si se ha instalado el agente de contexto de host.
+
+
+.Pasos
+. Descargue la utilidad HBA del sitio web de su proveedor de HBA.
+. Instale la utilidad.
+. Use el BIOS del HBA para seleccionar los ajustes apropiados para su configuración.
++
+Consulte la columna Notas del https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener recomendaciones.
+
+

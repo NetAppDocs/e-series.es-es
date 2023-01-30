@@ -1,0 +1,22 @@
+---
+permalink: config-linux/nvme-roce-configure-switch-task.html 
+sidebar: sidebar 
+keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Los switches se configuran según las recomendaciones del proveedor para NVMe over roce. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código. 
+---
+= Configure el switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los switches se configuran según las recomendaciones del proveedor para NVMe over roce. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
+
+
+CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* debe habilitar el control de flujo para su uso con Global Pause Control en el switch para eliminar el riesgo de pérdida de datos en un entorno NVMe over roce.
+
+.Pasos
+. Active el control de flujo de fotogramas de pausa Ethernet *fin a fin* como mejor configuración.
+. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
+

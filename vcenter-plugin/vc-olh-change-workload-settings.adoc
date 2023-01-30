@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-workload-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Cambie el nombre de una carga de trabajo y vea el tipo de aplicación asociada a esta. 
+---
+= Cambiar configuración de carga de trabajo
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible cambiar el nombre de una carga de trabajo y ver el tipo de aplicación asociada a esta.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene la carga de trabajo que desea cambiar.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione la ficha *aplicaciones y cargas de trabajo*.
++
+Se muestra la vista aplicaciones y cargas de trabajo.
+
+. Seleccione la carga de trabajo que desea cambiar y, a continuación, seleccione *Ver/editar configuración*.
++
+Se muestra el cuadro de diálogo Configuración de aplicaciones y cargas de trabajo.
+
+. (Opcional) Si lo desea, puede cambiar el nombre de la carga de trabajo provisto por el usuario.
+. Haga clic en *Guardar*.
+

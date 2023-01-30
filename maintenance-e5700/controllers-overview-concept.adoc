@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e5700/controllers-overview-concept.html 
+sidebar: sidebar 
+keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
+summary: Revise los tipos y requisitos de la controladora E5700. 
+---
+= Requisitos para reemplazar la controladora E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una controladora E5700, revise los requisitos y las consideraciones.
+
+Cada contenedor de controladora contiene una tarjeta de controladora, una batería y una tarjeta de interfaz del host (HIC) opcional.
+
+
+
+== Descripción general del procedimiento
+
+Cuando reemplaza un compartimento de controladoras con errores, debe quitar la batería y la HIC, si hay alguna instalada, del compartimento de controladoras original y instalarlas en el compartimento de controladoras de reemplazo.
+
+Puede determinar si tiene un contenedor de controladora con errores de dos maneras:
+
+* Recovery Guru en System Manager de SANtricity le dirige reemplazar el compartimento de controladoras.
+* El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
+
+
+image::../media/e5700_attention_led_callout.png[llamada del led de atención de e5700]
+
+*(1)* _LED de atención_
+
+
+NOTE: En la figura, se muestra un contenedor de controladora de ejemplo; los puertos de host en el contenedor de controladora pueden ser diferentes.
+
+* Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.
+
+
+
+NOTE: Los módulos IOM12B sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12B.
+
+
+NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).
+
+
+
+== Requisitos para reemplazar una controladora con fallos
+
+Antes de sustituir una controladora, debe tener:
+
+* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+
+
+
+NOTE: Las controladoras de repuesto incluyen 16 GB de memoria preinstalada. Si el controlador requiere la configuración de 64 GB, utilice el kit de actualización suministrado antes de instalar el controlador de sustitución.
+
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Un destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
+
++
+** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+
+
+
+
+
+
+== Requisitos de configuración doble
+
+En el caso de una bandeja de controladoras con dos controladoras (configuración doble), es posible sustituir un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, siempre que se cumplan las siguientes condiciones:
+
+* El segundo compartimento de controladoras de la bandeja tiene el estado óptimo.
+* El campo *Aceptar para eliminar* del área Detalles de Recovery Guru en el Administrador del sistema de SANtricity muestra *Sí*, lo que indica que es seguro quitar este componente.
+

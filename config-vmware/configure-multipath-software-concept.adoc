@@ -1,0 +1,22 @@
+---
+permalink: config-vmware/configure-multipath-software-concept.html 
+sidebar: sidebar 
+keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure el software M para proporcionar una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. 
+---
+= Configure el software de multivía
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para proporcionar una ruta redundante a la cabina de almacenamiento, puede configurar el software multivía.
+
+El software multivía proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. El software multivía presenta el sistema operativo con un único dispositivo virtual que representa las rutas físicas activas al almacenamiento. El software multipath también administra el proceso de recuperación tras fallos que actualiza el dispositivo virtual. Para VMware, NVMe/FC utiliza un complemento de alto rendimiento (HPP).
+
+VMware se aplica únicamente a los protocolos FC, iSCSI y SAS y proporciona complementos, conocidos como complementos de tipo de cabina de almacenamiento (SATP), para gestionar las implementaciones de conmutación por error de las cabinas de almacenamiento de proveedores específicos.
+
+La SATP que debería utilizar es *VMW_SATP_ALUA*.
+
+Para obtener más información, consulte https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-DB5BC795-E4D9-4350-9C5D-12BB3C0E6D99.html["SATPS de VMware"^].

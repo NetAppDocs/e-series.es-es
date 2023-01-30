@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-storage-array-to-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Añada una o varias cabinas de almacenamiento a un grupo creado por un usuario. 
+---
+= Añadir una cabina de almacenamiento a un grupo
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible añadir una o varias cabinas de almacenamiento a un grupo creado por un usuario.
+
+* Pasos*
+
+. En la vista principal, seleccione *gestionar* y, a continuación, seleccione el grupo al que desea agregar matrices de almacenamiento.
+. Seleccione menú:gestionar grupos[Añadir cabinas de almacenamiento a grupo].
+. Seleccione las cabinas de almacenamiento que desea añadir al grupo.
+. Haga clic en *Agregar*.
+

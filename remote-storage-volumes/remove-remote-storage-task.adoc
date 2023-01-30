@@ -1,0 +1,27 @@
+---
+permalink: remote-storage-volumes/remove-remote-storage-task.html 
+sidebar: sidebar 
+keywords: remove storage object, disconnect remote storage 
+summary: Es posible quitar cualquier objeto de almacenamiento remoto configurado a través de la Administrador del sistema SANtricity. 
+---
+= Quitar el objeto de almacenamiento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de que finalice la importación, puede quitar un objeto de almacenamiento remoto si ya no desea copiar los datos entre los dispositivos local y remoto.
+
+.Pasos
+. Asegúrese de que no haya importaciones asociadas con el objeto de almacenamiento remoto que desee quitar.
+. En la pantalla almacenamiento remoto de SANtricity System Manager, seleccione el objeto de almacenamiento remoto que desee en la sección de lista de resultados.
+. Haga clic en *Quitar*.
++
+Aparecerá el cuadro de diálogo Confirmar eliminación de conexión de almacenamiento remota.
+
+. Confirme la operación escribiendo `remove` Y, a continuación, haga clic en *Quitar*.
++
+Se elimina el objeto de almacenamiento remoto seleccionado.
+
+

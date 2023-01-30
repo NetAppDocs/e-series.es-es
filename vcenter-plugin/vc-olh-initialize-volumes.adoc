@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-initialize-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Inicialice manualmente un volumen para recuperar el sistema de ciertas condiciones de fallo. 
+---
+= Inicializar volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un volumen se inicializa automáticamente cuando se crea por primera vez. Sin embargo, es posible que Recovery Guru recomiende inicializar manualmente un volumen para la recuperación de ciertas condiciones de fallo.
+
+Use esta opción solo bajo la supervisión del soporte técnico. Es posible seleccionar uno o varios volúmenes para su inicialización.
+
+.Antes de empezar
+* Todas las operaciones de I/o se detuvieron.
+* Todos los dispositivos o sistemas de archivos en los volúmenes que se desean inicializar están desmontados.
+* El volumen está en estado óptimo y no hay operaciones de modificación en curso en el volumen.*atención: *No se puede cancelar la operación después de iniciarse. Se borran todos los datos del volumen. No intente esta operación a menos que Recovery Guru le recomiende hacerlo. Antes de iniciar este procedimiento, póngase en contacto con el soporte técnico.
+
+
+.Acerca de esta tarea
+Cuando se inicializa un volumen, este conserva su configuración de WWN, asignaciones de hosts, capacidad asignada y capacidad reservada. También conserva la misma configuración de Data Assurance (DA) y de seguridad.
+
+Los siguientes tipos de volúmenes no pueden inicializarse:
+
+* Volumen base de un volumen Snapshot
+* Volumen primario en una relación de reflejo
+* Volumen secundario en una relación de reflejo
+* Volumen de origen en una copia de volumen
+* Volumen objetivo en una copia de volumen
+* Volumen que ya posee una inicialización en curso
+
+
+Este procedimiento se aplica solo a volúmenes estándar creados a partir de pools o grupos de volúmenes.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene los volúmenes que desea inicializar.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione cualquier volumen y, a continuación, seleccione MENU:más[inicializar volúmenes].
++
+Se muestra el cuadro de diálogo inicializar volúmenes. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
+
+. Seleccione uno o varios volúmenes para inicializar y confirme que desea realizar la operación.
+
+
+.Resultados
+El sistema ejecuta las siguientes acciones:
+
+* Borra todos los datos de los volúmenes que se inicializaron.
+* Borra los índices de bloque, lo que provoca que los bloques no escritos se lean como si estuvieran llenos de ceros (el volumen aparecerá como completamente vacío).
+
+
+Es posible que esta operación demore y que afecte el rendimiento del sistema.

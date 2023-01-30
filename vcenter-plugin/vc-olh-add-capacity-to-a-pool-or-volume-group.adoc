@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-capacity-to-a-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Añada unidades para expandir la capacidad de un pool o un grupo de volúmenes existente. 
+---
+= Añadir capacidad a un pool o grupo de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible añadir unidades para expandir la capacidad de un pool o un grupo de volúmenes existente.
+
+.Antes de empezar
+* Las unidades deben estar en el estado óptima.
+* Las unidades deben ser del mismo tipo (unidad de disco duro o unidad de estado sólido).
+* El pool o el grupo de volúmenes deben estar en el estado óptima.
+* Si todas las unidades del pool o grupo de volúmenes son compatibles con la función de seguridad, añada únicamente unidades compatibles con la función de seguridad para continuar usando las habilidades de cifrado de ese tipo de unidades.
+
+
+Las unidades compatibles con la función de seguridad pueden ser unidades de cifrado de disco completo (FDE) o de estándar de procesamiento de información federal (FIPS).
+
+.Acerca de esta tarea
+En esta tarea, es posible añadir capacidad libre para incluirse en el pool o el grupo de volúmenes. Se puede utilizar esta capacidad libre para crear volúmenes adicionales. Es posible acceder a los datos de los volúmenes durante esta operación.
+
+En los pools, es posible añadir 60 unidades al mismo tiempo como máximo. En los grupos de volúmenes, es posible añadir 2 unidades al mismo tiempo como máximo. Si necesita añadir más unidades que la cantidad máxima, repita el procedimiento. (Un pool no puede contener más unidades que el límite máximo de una cabina de almacenamiento.)
+
+
+NOTE: Al añadir unidades, es posible que sea necesario aumentar la capacidad de conservación. Se recomienda aumentar la capacidad reservada después de una operación de ampliación.
+
+
+NOTE: Evite el uso de unidades compatibles con la función Data Assurance (DA) para añadir capacidad a un pool o un grupo de volúmenes no compatibles con DA. El pool o el grupo de volúmenes no podrán aprovechar las funcionalidades de las unidades compatibles con DA. Contemple la posibilidad de usar unidades no compatibles con DA en esta situación.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con el pool o el grupo de volúmenes.
+. Seleccione MENU:Provisioning[ Configure Pools and Volume Groups].
+. Seleccione el pool o el grupo de volúmenes a los que desea añadir unidades y haga clic en *Añadir capacidad*.
++
+Se muestra el cuadro de diálogo Añadir capacidad. Solo se muestran las unidades sin asignar que son compatibles con el pool o el grupo de volúmenes.
+
+. En *Seleccione las unidades para añadir capacidad...*, seleccione una o varias unidades que desea añadir al pool o grupo de volúmenes existente.
++
+El firmware de la controladora ordena las unidades sin asignar de modo que las mejores opciones se enumeren primero. La capacidad libre total añadida al pool o grupo de volúmenes se muestra debajo de la lista en *capacidad total seleccionada*.
+
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Campo | Descripción 
+
+
+ a| 
+Bandeja
+ a| 
+Indica la ubicación de la bandeja de la unidad.
+
+
+
+ a| 
+Bahía
+ a| 
+Indica la ubicación de la bahía de la unidad
+
+
+
+ a| 
+Capacidad (GIB)
+ a| 
+Indica la capacidad de la unidad.
+
+** Siempre que sea posible, seleccione unidades con una capacidad igual a la de las unidades actuales en el pool o el grupo de volúmenes.
+** Si debe añadir unidades sin asignar con una capacidad menor, tenga en cuenta que se reducirá la capacidad utilizable de cada unidad actual en el pool o el grupo de volúmenes. Por lo tanto, la capacidad de las unidades es la misma en todo el pool o grupo de volúmenes.
+** Si debe añadir unidades sin asignar con una capacidad mayor, tenga en cuenta que se reducirá la capacidad utilizable de las unidades sin asignar que añada para que coincida con las capacidades actuales de las unidades en el pool o el grupo de volúmenes.
+
+
+
+
+ a| 
+Compatible con la función de seguridad
+ a| 
+Indica si la unidad es compatible con la función de seguridad.
+
+** Puede proteger el pool o el grupo de volúmenes con la función Drive Security, pero todas las unidades deben ser compatibles con la función de seguridad para poder utilizar esta función.
+** Es posible crear un pool o un grupo de volúmenes con una combinación de unidades compatibles y no compatibles con la función de seguridad, pero la función Drive Security no puede estar habilitada.
+** Un pool o un grupo de volúmenes con todas unidades compatibles con la función de seguridad no pueden aceptar una unidad no compatible con la función de seguridad para realizar reservas o expansión, aunque no esté en uso la funcionalidad de cifrado.
+** Las unidades compatibles con la función de seguridad pueden ser unidades de cifrado de disco completo (FDE) o de estándar de procesamiento de información federal (FIPS). Una unidad FIPS puede ser de nivel 140-2 o 140-3, con el nivel 140-3 como mayor nivel de seguridad. Si se selecciona una combinación de unidades de 140-2 y 140-3 niveles, el pool o el grupo de volúmenes luego se operará al nivel de seguridad menor (140-2).
+
+
+
+
+ a| 
+Compatible con DA
+ a| 
+Indica si la unidad es compatible con la función Data Assurance (DA).
+
+** No se recomienda el uso de unidades compatibles con la función Data Assurance (DA) para añadir capacidad a un pool o un grupo de volúmenes compatibles con DA. El pool o el grupo de volúmenes ya no tendrán funcionalidades DE DA y no será posible habilitar DA en los volúmenes recién creados dentro del pool o grupo de volúmenes.
+** No se recomienda el uso de unidades compatibles con la función Data Assurance (DA) para añadir capacidad a un pool o un grupo de volúmenes no compatibles con DA, ya que el pool o el grupo de volúmenes no podrán aprovechar las funcionalidades de las unidades compatible con DA (los atributos de las unidades no coincidirán). Contemple la posibilidad de usar unidades que no sean compatibles con DA en esta situación.
+
+
+
+
+ a| 
+Compatible con DULBE
+ a| 
+Indica si la unidad tiene la opción de error de bloque lógico no escrito o desasignado (DULBE). DULBE es una opción en las unidades NVMe con la que la cabina de almacenamiento EF300 o EF600 puede admitir volúmenes con aprovisionamiento de recursos.
+
+|===
+====
+. Haga clic en *Agregar*.
++
+Si desea añadir unidades a un pool o grupo de volúmenes, se muestra un cuadro de diálogo de confirmación al seleccionar una unidad por la que el pool o el grupo de volúmenes ya no tendrá uno o varios de los siguientes atributos:
+
++
+** Protección contra pérdida de bandeja
+** Protección contra pérdida de cajón
+** Funcionalidad de cifrado de disco completo
+** Funcionalidad de garantía de datos
+** Funcionalidad DULBE
+
+
+. Para continuar, haga clic en *Sí*; de lo contrario, haga clic en *Cancelar*.
+
+
+.Resultado
+Después de añadir las unidades sin asignar a un pool o grupo de volúmenes, se redistribuyen los datos de cada volumen del pool o del grupo de volúmenes para incluir las unidades adicionales.

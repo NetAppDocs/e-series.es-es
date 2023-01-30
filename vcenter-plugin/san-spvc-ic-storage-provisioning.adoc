@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-provisioning.html 
+keywords: create volumes vCenter plugin, provision Plugin for vCenter, vCenter plugin storage provisioning, vCenter plugin host 
+summary: Utilice el complemento para vCenter para crear volúmenes, asignar volúmenes a hosts y, a continuación, asignar volúmenes a almacenes de datos. 
+---
+= Aprovisionar almacenamiento en el complemento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para aprovisionar almacenamiento, debe crear volúmenes, asignar volúmenes a hosts y, a continuación, asignar volúmenes a almacenes de datos.
+
+
+
+== Paso 1: Crear volúmenes
+
+Los volúmenes son contenedores de datos que gestionan y organizan el espacio de almacenamiento en la cabina de almacenamiento. Es posible crear volúmenes a partir de la capacidad de almacenamiento disponible en la cabina de almacenamiento, lo que ayuda a organizar los recursos del sistema. El concepto de "volúmenes" es similar a usar carpetas o directorios en un equipo para organizar archivos con el fin de agilizar el acceso.
+
+Los volúmenes son la única capa de datos visible para los hosts. En un entorno SAN, los volúmenes se asignan a números de unidad lógica (LUN). Estos LUN conservan los datos de usuario a los que se puede acceder mediante uno o varios de los protocolos de acceso de host compatibles con la cabina de almacenamiento.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione MENU:Create[Volumes].
++
+Se muestra el cuadro de diálogo Seleccionar host.
+
+. De la lista desplegable, seleccione el host o el clúster de hosts específicos a los que desea asignar volúmenes o elija asignar el host o el clúster de hosts más adelante.
+. Para continuar con la secuencia de creación de volúmenes para el host o clúster de hosts seleccionados, haga clic en *Siguiente*.
++
+Se muestra el cuadro de diálogo Seleccionar carga de trabajo. Una carga de trabajo contiene volúmenes con características similares, que se optimizan según el tipo de aplicación que es compatible con la carga de trabajo. Es posible definir una carga de trabajo o seleccionar cargas de trabajo existentes.
+
+. Debe realizar una de las siguientes acciones:
++
+** Seleccione la opción *Crear volúmenes para una carga de trabajo existente* y, a continuación, seleccione la carga de trabajo en la lista desplegable.
+** Seleccione la opción *Crear una carga de trabajo nueva* para definir una carga de trabajo nueva para una aplicación compatible o para “otras” aplicaciones y, a continuación, siga estos pasos:
++
+... De la lista desplegable, seleccione el nombre de la aplicación para la cual desea crear la carga de trabajo nueva. Seleccione una de las entradas que figuran como “Other”, si la aplicación que pretende usar en esta cabina de almacenamiento no aparece en la lista.
+... Introduzca el nombre de la carga de trabajo que desea crear.
+
+
+
+
+. Haga clic en *Siguiente*. Si la carga de trabajo está asociada con un tipo de aplicación admitida, introduzca la información solicitada, de lo contrario, vaya al siguiente paso.
++
+Se muestra el cuadro de diálogo Añadir/editar volúmenes. En este cuadro de diálogo, se crean volúmenes a partir de pools o grupos de volúmenes elegibles. Para cada pool o grupo de volúmenes elegible, se muestran la cantidad de unidades y la capacidad libre total disponibles. Para algunas cargas de trabajo específicas de la aplicación, cada pool o grupo de volúmenes elegible muestra la capacidad propuesta según la configuración de volumen sugerido y muestra también la capacidad libre restante en GIB. Para otras cargas de trabajo, la capacidad propuesta aparece a medida que se añaden volúmenes a un pool o un grupo de volúmenes y se especifica la cantidad informada.
+
+. Antes de empezar a añadir volúmenes, lea las directrices de la siguiente tabla.
++
+[cols="25h,~"]
+|===
+| Campo | Descripción 
+
+
+ a| 
+Capacidad libre
+ a| 
+Debido a que se crean volúmenes a partir de pools o grupos de volúmenes, el pool o el grupo de volúmenes seleccionado deben tener suficiente capacidad libre.
+
+
+
+ a| 
+Garantía de datos (DA)
+ a| 
+Para crear un volumen con la función DA habilitada, la conexión de host que se planea usar debe admitir DA.
+
+** Si desea crear un volumen con la función DA habilitada, seleccione un pool o un grupo de volúmenes que sea compatible con DA (asegúrese de *Sí* junto a "DA" en la tabla de candidatos de pools y grupos de volúmenes).
+** Las funcionalidades DE DA se presentan a nivel del pool y grupo de volúmenes. La protección DE DA comprueba y corrige los errores que se pueden producir durante la transferencia de datos a través de las controladoras hasta las unidades. Al seleccionar un pool o un grupo de volúmenes compatibles con DA para el volumen nuevo, se garantizan la detección y la corrección de cualquier error.
+** Si alguna de las conexiones de host de las controladoras de la cabina de almacenamiento no admite DA, los hosts asociados no podrán acceder a los datos de los volúmenes con la función DA habilitada.
+
+
+
+
+ a| 
+Impulse la seguridad
+ a| 
+Para crear un volumen con la función de seguridad habilitada, se debe crear una clave de seguridad para la cabina de almacenamiento.
+
+** Si desea crear un volumen con la función de seguridad habilitada, seleccione un pool o un grupo de volúmenes que sean compatibles con la función de seguridad (asegúrese de que *Sí* junto a "compatible con la función de seguridad" en la tabla de candidatos de pools y grupos de volúmenes).
+** Las funcionalidades de seguridad de la unidad se presentan a nivel del pool y grupo de volúmenes. Las unidades que son compatibles con la función de seguridad evitan el acceso no autorizado a los datos de una unidad que se quita físicamente de la cabina de almacenamiento. Una unidad con la función de seguridad habilitada cifra los datos durante la escritura y descifra los datos durante las lecturas mediante una clave de cifrado única.
+** Un pool o un grupo de volúmenes pueden contener tanto una unidad compatible con la función de seguridad como una que no lo sea, pero todas las unidades deben ser compatibles con la función de seguridad para usar la funcionalidad de cifrado.
+
+
+
+
+ a| 
+Aprovisionamiento de recursos
+ a| 
+Para crear un volumen aprovisionado por recursos, todas las unidades deben ser unidades NVMe con la opción error de bloque lógico no escrito o desasignado (DULBE).
+
+|===
+. Elija una de estas acciones según si seleccionó "otra" o una carga de trabajo específica de la aplicación en el paso anterior:
++
+** *Otros* – haga clic en *Añadir nuevo volumen* en cada pool o grupo de volúmenes que desee utilizar para crear uno o más volúmenes.
+** *Carga de trabajo específica de la aplicación*: Haga clic en *Siguiente* para aceptar los volúmenes y las características recomendados por el sistema para la carga de trabajo seleccionada, o bien haga clic en *Editar volúmenes* para cambiar, añadir o eliminar los volúmenes y las características recomendados por el sistema para la carga de trabajo seleccionada.
++
+Aparecen los siguientes campos.
+
++
+[cols="25h,~"]
+|===
+| Campo | Descripción 
+
+
+ a| 
+Nombre del volumen
+ a| 
+Se asigna un nombre predeterminado a un volumen durante la secuencia de creación de volúmenes. Se puede aceptar el nombre predeterminado o se puede proporcionar un nombre más descriptivo que indique el tipo de datos almacenados en el volumen.
+
+
+
+ a| 
+Capacidad notificada
+ a| 
+Defina la capacidad del volumen nuevo y las unidades de capacidad que desea usar (MIB, GIB o TIB). Para los volúmenes gruesos, la capacidad mínima es 1 MIB y la capacidad máxima se determina mediante la cantidad y la capacidad de las unidades del pool o del grupo de volúmenes. La capacidad de un pool se asigna en incrementos de 4 GIB. Se asigna cualquier capacidad que no sea múltiplo de 4 GIB, pero no se puede usar. Para asegurarse de que toda la capacidad se pueda usar, especifique la capacidad en incrementos de 4 GIB. Si hubiese capacidad que no puede usar, la única manera de recuperarla es aumentar la capacidad del volumen.
+
+
+
+ a| 
+Tipo de volumen
+ a| 
+Si seleccionó "carga de trabajo específica de la aplicación", se muestra el campo Volume Type. Esto indica el tipo de volumen que se creó para una carga de trabajo específica de la aplicación.
+
+
+
+ a| 
+Tamaño de bloque de volumen (solo EF300 y EF600)
+ a| 
+Muestra los tamaños de bloque que se pueden crear para el volumen:
+
+*** 512 – 512 bytes
+*** 4K – 4,096 bytes
+
+
+
+
+ a| 
+Tamaño del segmento
+ a| 
+Muestra la configuración del ajuste de tamaño de segmentos, que solo aparece para los volúmenes de un grupo de volúmenes. Se puede cambiar el tamaño del segmento para optimizar el rendimiento.
+
+*Transiciones de tamaño de segmento permitidas*: El sistema determina las transiciones de tamaño de segmento permitidas. Los tamaños de segmento que no son transiciones adecuadas para el tamaño de segmento actual no están disponibles en la lista desplegable. Las transiciones permitidas, por lo general, son el doble o la mitad del tamaño de segmento actual. Por ejemplo, si el tamaño de segmento del volumen actual es 32 KiB, se permite un tamaño de segmento de volumen nuevo de 16 KiB o 64 KiB.
+
+*Volúmenes con caché SSD habilitada*: Se puede especificar un tamaño de segmento de 4 KiB para volúmenes con la función SSD Cache habilitada. Asegúrese de seleccionar el tamaño de segmento 4 KiB solo para los volúmenes con la función SSD Cache habilitada que controlan operaciones de I/o en bloques pequeños (por ejemplo, tamaños de bloques de I/o de 16 KiB o menos). El rendimiento podría verse afectado si selecciona 4 KiB para el tamaño de segmento en los volúmenes con la función SSD Cache habilitada que controlan operaciones secuenciales de bloques grandes.
+
+*Cantidad de tiempo para cambiar el tamaño de segmento* – la cantidad de tiempo para cambiar el tamaño de segmento de un volumen depende de estas variables:
+
+*** La carga de I/o desde el host
+*** La prioridad de modificación del volumen
+*** La cantidad de unidades del grupo de volúmenes
+*** La cantidad de canales de unidades
+*** La potencia de procesamiento de las controladoras de la cabina de almacenamiento
+
+
+Si cambia el tamaño de segmento de un volumen, el rendimiento de I/o se ve afectado, pero los datos siguen disponibles.
+
+
+
+ a| 
+Compatible con la función de seguridad
+ a| 
+*Sí* aparece junto a "compatible con la función de seguridad" solo si las unidades del pool o grupo de volúmenes son compatibles con el cifrado. Drive Security evita el acceso no autorizado a los datos de una unidad que se quita físicamente de la cabina de almacenamiento. Esta opción solo está disponible si la función Drive Security está habilitada y hay una clave de seguridad configurada para la cabina de almacenamiento. Un pool o un grupo de volúmenes pueden contener tanto una unidad compatible con la función de seguridad como una que no lo sea, pero todas las unidades deben ser compatibles con la función de seguridad para usar la funcionalidad de cifrado.
+
+
+
+| DA | *Sí* aparece junto a "DA" solo si las unidades del pool o grupo de volúmenes admiten Data Assurance (DA). DA mejora la integridad de los datos en todo el sistema de almacenamiento. DA permite que la cabina de almacenamiento compruebe y corrija los errores que se pueden producir durante la transferencia de datos a través de las controladoras hasta las unidades. El uso DE DA en el volumen nuevo garantiza la detección de cualquier error. 
+|===
+
+
+. Para continuar con la secuencia de creación de volúmenes para la aplicación seleccionada, haga clic en *Siguiente*.
+. En el último paso, revise un resumen de los volúmenes que pretende crear y realizar los cambios necesarios. Para realizar cambios, haga clic en *Atrás*. Cuando esté satisfecho con la configuración del volumen, haga clic en *Finalizar*.
+
+
+
+
+== Paso 2: Cree acceso a host y asigne volúmenes
+
+Es posible crear un host de manera automática o manual:
+
+* *Automático* -- la creación automática de host para hosts basados en SCSI (no NVMe-of) es iniciada por el agente de contexto de host (HCA). HCA es una utilidad que puede instalar en cada host conectado a la cabina de almacenamiento. Cada host que posee HCA instalado inserta su información de configuración en la cabina de almacenamiento a través de la ruta de I/O. Según la información del host, las controladoras crean automáticamente el host y los puertos de host asociados para establecer el tipo de host. Si es necesario, puede realizar cualquier cambio adicional en la configuración del host. Después de que HCA realiza la detección automática, el host se configura automáticamente con los siguientes atributos:
++
+** El nombre de host derivado del nombre de sistema del host.
+** Los puertos identificadores del host que están asociados con el host.
+** El tipo de sistema operativo del host.
+
+
+
+
+
+NOTE: Es posible acceder al software del agente de contexto de host para Linux y Windows desde https://mysupport.netapp.com/site/downloads["Soporte de NetApp: Descargas"^].
+
+
+NOTE: Los hosts se crean como hosts independientes; HCA no los crea ni los añade automáticamente a clústeres de hosts.
+
+* *Manual* – durante la creación manual de host, puede asociar los identificadores de puerto de host seleccionándolos de una lista o introduciéndolos manualmente. Después de crear un host, puede asignar volúmenes a él o añadirlo a un clúster de hosts si el objetivo es compartir el acceso a los volúmenes.
+
+
+
+
+=== Use HCA para detectar automáticamente el host
+
+Puede dejar que el agente de contexto de host (HCA) detecte automáticamente los hosts y, luego, verificar que la información sea correcta.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione MENU:Storage[hosts].
++
+En la tabla, se indican los hosts que se crearon automáticamente.
+
+. Verifique que la información provista por HCA sea correcta (nombre, tipo de host, identificadores de puertos de host).
+. Si necesita cambiar alguna información, seleccione el host y, a continuación, haga clic en *Ver/editar configuración*.
+
+
+
+
+=== Creación manual del host
+
+.Antes de empezar
+Lea las siguientes directrices:
+
+* Ya debe haber añadido o detectado cabinas de almacenamiento en el entorno.
+* Se deben definir los puertos identificadores de host que están asociados con el host.
+* Asegúrese de proporcionar el mismo nombre que el nombre de sistema del host asignado.
+* Esta operación no funciona si el nombre que eligió ya está en uso.
+* La longitud del nombre no puede ser mayor de 30 caracteres.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Haga clic en MENU:Create[Host].
++
+Se muestra el cuadro de diálogo Crear host.
+
+. Seleccione la configuración del host que corresponda.
++
+[cols="25h,~"]
+|===
+| Campo | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Escriba un nombre para el host nuevo.
+
+
+
+ a| 
+Tipo de sistema operativo de host
+ a| 
+Seleccione el sistema operativo que funciona en el host nuevo de la lista desplegable.
+
+
+
+ a| 
+Tipo de interfaz del host
+ a| 
+(Opcional) Si la cabina de almacenamiento es compatible con más de un tipo de interfaz del host, seleccione el tipo de interfaz del host que desea usar.
+
+
+
+ a| 
+Puertos host
+ a| 
+Debe realizar una de las siguientes acciones:
+
+** *Seleccione interfaz de E/S* -- generalmente, los puertos de host deberían haber iniciado sesión y estar disponibles en la lista desplegable. Puede seleccionar los identificadores de puerto de host de la lista.
+** *Manual add* -- Si un identificador de puerto de host no aparece en la lista, significa que el puerto de host no ha iniciado sesión. Se puede usar una utilidad de HBA o una utilidad de iniciador de iSCSI para encontrar los identificadores de puerto de host y asociarlos con el host.
+
+
+Se pueden introducir los identificadores de puerto de host manualmente o copiarlos/pegarlos desde la utilidad (de uno en uno) en el campo puertos de host.
+
+Se debe seleccionar un identificador de puerto de host para asociarlo con el host, pero es posible seguir seleccionando identificadores que estén asociados con el host. Cada identificador se muestra en el campo puertos de host. Si es necesario, también puede eliminar un identificador seleccionando *X* junto a él.
+
+
+
+ a| 
+Configure secreto CHAP del iniciador
+ a| 
+(Opcional) Si seleccionó o introdujo manualmente un puerto de host mediante un IQN iSCSI y desea solicitar la autenticación de un host que intenta acceder a la matriz de almacenamiento mediante un protocolo de autenticación por desafío mutuo (CHAP), seleccione la casilla de verificación *establecer secreto de iniciador CHAP*. Para cada puerto de host iSCSI que seleccione o introduzca manualmente, haga lo siguiente:
+
+** Introduzca el mismo secreto CHAP que se estableció en cada iniciador de host iSCSI para la autenticación de CHAP. Si va a utilizar la autenticación CHAP mutuo (autenticación bidireccional que permite la validación de un host en la cabina de almacenamiento y de una cabina de almacenamiento en el host), también debe configurar el secreto CHAP para la cabina de almacenamiento en la configuración inicial o cambiar la configuración.
+** Deje el campo en blanco si no requiere la autenticación del host.
+
+
+Actualmente, el único método de autenticación de iSCSI utilizado es CHAP.
+
+|===
+. Haga clic en *Crear*.
+. Si necesita actualizar la información del host, seleccione el host en la tabla y haga clic en *Ver/editar configuración*.
++
+Una vez que el host se creó correctamente, el sistema crea un nombre predeterminado para cada puerto de host configurado para el host (etiqueta de usuario). El alias predeterminado es `<Hostname_Port Number>`. Por ejemplo, el alias predeterminado para el primer puerto creado para la IPT del host es `IPT_1`.
+
+. A continuación, se debe asignar un volumen a un host o un clúster de hosts para poder usarlo para operaciones de I/O. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione el host o clúster de hosts al que desea asignar volúmenes y, a continuación, haga clic en *asignar volúmenes*.
++
+Se muestra un cuadro de diálogo que enumera todos los volúmenes que pueden asignarse. Es posible seleccionar cualquiera de las columnas o escribir un elemento en el cuadro Filtrar para facilitar la búsqueda de volúmenes en particular.
+
+. Seleccione la casilla de comprobación ubicada junto a cada volumen que desea asignar, o bien seleccione la casilla de comprobación en el encabezado de la tabla para seleccionar todos los volúmenes.
+. Haga clic en *asignar* para completar la operación.
++
+El sistema ejecuta las siguientes acciones:
+
++
+** El volumen asignado recibe el próximo número de unidad lógica disponible. El host utiliza el número de unidad lógica para acceder al volumen.
+** El nombre del volumen proporcionado por el usuario aparece en los listados de volúmenes asociados al host. Si corresponde, el volumen de acceso configurado de fábrica también aparece en los listados de volúmenes asociados al host.
+
+
+
+
+
+
+== Paso 3: Crear un almacén de datos en vSphere Client
+
+Para crear un almacén de datos en vSphere Client, consulte el siguiente tema en el centro de documentación de VMware:
+
+* https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-7EB0CE06-02DD-4B31-85C7-E54993CC06DC.html["Cree un almacén de datos VMFS en vSphere Client"^]
+
+
+
+
+=== Aumente la capacidad del almacén de datos existente aumentando la capacidad del volumen
+
+Es posible aumentar la capacidad notificada (a los hosts) de un volumen con la capacidad libre que está disponible en el pool o el grupo de volúmenes.
+
+.Antes de empezar
+Asegúrese de que:
+
+* Existe capacidad libre suficiente disponible en el pool o el grupo de volúmenes asociado.
+* El volumen es óptimo y no está en ningún estado de modificación.
+* No existen unidades de repuesto en uso en el volumen. (Esto se aplica solo a volúmenes que pertenecen a grupos de volúmenes.)
+
+
+
+NOTE: Solo ciertos sistemas operativos permiten aumentar la capacidad de un volumen. Si aumenta la capacidad de un volumen en un sistema operativo que no admite la expansión de LUN, la capacidad ampliada será inutilizable y no se podrá restaurar la capacidad del volumen original.
+
+.Pasos
+. Desplácese hasta el plugin dentro de vSphere Client.
+. En el plugin, seleccione la cabina de almacenamiento que desee.
+. Haga clic en *aprovisionamiento* y seleccione *gestionar volúmenes*.
+. Seleccione el volumen para el que desea aumentar la capacidad y, a continuación, seleccione *aumentar capacidad*.
++
+Se muestra el cuadro de diálogo Confirmar aumento de capacidad.
+
+. Seleccione *Sí* para continuar.
++
+Se muestra el cuadro de diálogo aumentar capacidad notificada.
+
++
+En este cuadro de diálogo, se muestran la capacidad notificada actual y la capacidad libre disponibles en el pool o el grupo de volúmenes asociado.
+
+. Utilice el cuadro *aumentar capacidad notificada agregando...* para añadir capacidad a la capacidad informada disponible actual. Es posible cambiar el valor de capacidad para que se muestre en mebibytes (MIB), gibibytes (GIB) o tebibytes (TIB).
+. Haga clic en *aumentar*.
+. Vea el panel Recent Tasks para conocer el progreso de la operación de aumento de capacidad que se está ejecutando actualmente para el volumen seleccionado. Es posible que esta operación demore y que afecte el rendimiento del sistema.
+. Una vez completada la capacidad de un volumen, debe aumentar manualmente el tamaño de VMFS para que coincida con el del siguiente tema:
++
+** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^]
+
+
+
+
+
+
+=== Aumente la capacidad del almacén de datos existente añadiendo volúmenes
+
+. Es posible aumentar la capacidad de un almacén de datos mediante la adición de volúmenes. Siga los pasos de <<Paso 1: Crear volúmenes>>.
+. A continuación, asigne los volúmenes al host deseado para aumentar la capacidad del almacén de datos. Consulte el siguiente tema:
++
+** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^]
+
+
+

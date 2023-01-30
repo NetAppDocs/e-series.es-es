@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Puede optar por activar el archivo de software en un momento más conveniente. 
+---
+= Active el software de sistema operativo almacenado temporalmente
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede optar por activar el archivo de actualización inmediatamente o esperar hasta un momento más conveniente. Este procedimiento entiende que se optó por activar el archivo de software más adelante.
+
+.Acerca de esta tarea
+Puede transferir los archivos del firmware sin activarlos. Puede optar por activarlos más tarde por los siguientes motivos:
+
+* *Hora del día* -- la activación del software puede llevar mucho tiempo, por lo que es posible que desee esperar hasta que las cargas de E/S sean más livianas. Las controladoras se reinician y conmutan al nodo de respaldo durante la activación, de manera que el rendimiento podría ser inferior al habitual hasta que finalice la actualización.
+* *Tipo de paquete*: Es posible que desee probar el nuevo software y firmware en una matriz de almacenamiento antes de actualizar los archivos en otras matrices de almacenamiento.
+
+
+
+NOTE: No se puede detener el proceso de activación una vez iniciado.
+
+.Pasos
+. En la vista principal, seleccione *gestionar*. Si es necesario, haga clic en la columna *Estado* para ordenar, en la parte superior de la página, todas las matrices de almacenamiento con el estado "actualización del sistema operativo (esperando la activación)".
+. Seleccione una o varias cabinas de almacenamiento para las cuales desee activar el software y, a continuación, seleccione MENU:Centro de actualización[Activar software de SANtricity almacenado temporalmente].
++
+Durante la operación de actualización, ocurren las siguientes acciones:
+
++
+** Como parte del proceso de activación, se ejecuta una comprobación del estado previa a la actualización. La comprobación del estado antes de la actualización evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la activación.
+** Si ocurre un error en la comprobación del estado de una cabina de almacenamiento, la activación se detiene. Puede hacer clic en los puntos suspensivos (…). Y seleccione *Guardar registro* para revisar los errores. También puede optar por anular el error en la comprobación del estado y hacer clic en *continuar* para continuar con la activación.
+** Puede cancelar la operación de activación después de la comprobación del estado previa a la actualización.
++
+Cuando la comprobación del estado previa a la actualización se realiza correctamente, se produce la activación. El tiempo que requiere la activación depende de la configuración de la cabina de almacenamiento y los componentes que se van a activar.
+
+
+
+. (Opcional) una vez completada la activación, puede ver una lista de lo que se activó en una cabina de almacenamiento en particular. Para ello, haga clic en los tres puntos (...) Y, a continuación, seleccione *Guardar registro*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre `activate_log-<date>. json`.
+
+

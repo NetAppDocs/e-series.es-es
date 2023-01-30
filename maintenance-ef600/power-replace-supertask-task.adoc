@@ -1,0 +1,95 @@
+---
+permalink: maintenance-ef600/power-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Sustituya las fuentes de alimentación cuando fallen en la controladora EF300 o EF600. 
+---
+= Sustituya una fuente de alimentación EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede sustituir una fuente de alimentación si falla en la controladora EF300 o EF600.
+
+Si falla un suministro de alimentación, debe reemplazarlo Lo antes posible. para que la bandeja de controladoras tenga una fuente de alimentación redundante.
+
+.Antes de empezar
+* Revise los detalles en Recovery Guru para confirmar que hay un problema con el suministro de alimentación. Seleccione *Volver a comprobar* en Recovery Guru para asegurarse de que no se deba tratar primero ningún otro elemento.
+* Compruebe que el LED de atención ámbar de la fuente de alimentación está encendido, lo que indica que la fuente de alimentación o el ventilador integrado tienen un fallo.
+
+
+.Lo que necesitará
+* Un suministro de alimentación de reemplazo que se admite para la bandeja de controladoras.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Retire la fuente de alimentación defectuosa
+
+Quite una fuente de alimentación con fallos para poder reemplazarla por una nueva.
+
+.Pasos
+. Desembale la nueva fuente de alimentación y configúrela en una superficie nivelada cerca de la bandeja de unidades.
++
+Guarde todos los materiales de embalaje para utilizarlos cuando devuelva la fuente de alimentación fallida.
+
+. Desconecte los cables de alimentación:
++
+.. Abra el retenedor del cable de alimentación y desconecte el cable de alimentación de la fuente de alimentación.
+.. Desenchufe el cable de alimentación de la fuente de alimentación.
+
+
+. Localice la pestaña situada a la derecha de la fuente de alimentación y presiónela hacia la unidad de fuente de alimentación.
++
+image::../media/psup_2.png[psup 2]
+
+. Localice el mango en la parte frontal de la fuente de alimentación.
+. Utilice el asa para sacar la fuente de alimentación directamente del sistema.
++
+
+CAUTION: Al extraer una fuente de alimentación, utilice siempre dos manos para soportar su peso.
+
++
+image::../media/psup_3.png[psup 3]
+
+
+
+
+
+== Paso 2: Instale una fuente de alimentación nueva y complete la sustitución
+
+Después de extraer la fuente de alimentación defectuosa, instale una nueva.
+
+.Pasos
+. Con ambas manos, sujete y alinee los bordes de la fuente de alimentación con la abertura del chasis del sistema y, a continuación, empuje suavemente la fuente de alimentación hacia el chasis con el asa de leva.
++
+Las fuentes de alimentación están codificadas y sólo se pueden instalar de una manera.
+
++
+
+CAUTION: No ejerza demasiada fuerza al deslizar la fuente de alimentación en el sistema, ya que puede dañar el conector.
+
++
+image::../media/psup_4.png[psup 4]
+
+. Confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. En Administrador del sistema de SANtricity, haga clic en menú:Soporte[Centro de actualización] para asegurarse de que esté instalada la versión más reciente del sistema operativo SANtricity.
++
+Si es necesario, instale la versión más reciente.
+
+
+
+.El futuro
+Se completó la sustitución del suministro de alimentación. Es posible reanudar las operaciones normales.

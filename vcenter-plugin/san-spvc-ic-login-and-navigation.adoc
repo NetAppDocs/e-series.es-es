@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-login-and-navigation.html 
+keywords: log in vCenter plugin, login Plugin for vCenter, browsers vCenter plugin user interface, vCenter GUI, 
+summary: Inicie sesión y navegue por el complemento para vCenter. 
+---
+= Inicie sesión y navegue por el complemento de almacenamiento para vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede iniciar sesión en el complemento de almacenamiento para vCenter para navegar por la interfaz de usuario.
+
+. Antes de iniciar sesión en el plugin, asegúrese de que está utilizando uno de los siguientes navegadores:
++
+** Google Chrome 89 o posterior
+** Mozilla Firefox 80 o posterior
+** Microsoft Edge 90 o posterior
+
+
+. Inicie sesión en vSphere Client con la cuenta de usuario que tiene privilegios de lectura/escritura para el plugin.
+. En la página de inicio de vSphere Client, haga clic en *SANtricity Storage Plugin for vCenter*.
++
+El plugin se abre en una ventana de vSphere Client. La página principal del plugin se abre a *gestionar-todo*.
+
+. Acceda a las tareas de gestión del almacenamiento desde la barra lateral de navegación, que se encuentra a la izquierda:
++
+** *Gestionar*: Permite detectar las cabinas de almacenamiento en la red, abrir System Manager para una cabina, importar la configuración de una cabina a varias, gestionar grupos de cabinas, actualizar el software de sistema operativo y aprovisionar almacenamiento.
+** *Administración de certificados*: Permite administrar certificados para autenticar entre exploradores y clientes.
+** *Operaciones*: Permite ver el progreso de las operaciones por lotes, como importar la configuración de una matriz a otra.
+** *Soporte* – Ver opciones de soporte técnico, recursos y contactos.
+
+
+
+
+
+NOTE: Algunas operaciones no están disponibles si una cabina de almacenamiento no tiene un estado óptimo.

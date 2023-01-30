@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-host-interface-cards-wombat.html 
+sidebar: sidebar 
+keywords: host, interface, card, hic, install, controller, canister, e5700, built-in, port, baseboard 
+summary: 'En forma opcional, se puede instalar una tarjeta de interfaz del host \(HIC\) en un contenedor de controladora. La controladora E5700 incluye puertos de host incorporados en la tarjeta de la controladora misma, como también puertos de host en una HIC opcional. Los puertos de host que están incorporados en la controladora se denominan puertos de host de la placa base. Los puertos de host que están incorporados en HIC se denominan puertos de HIC.' 
+---
+= Tarjetas de interfaz del host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En forma opcional, se puede instalar una tarjeta de interfaz del host (HIC) en un contenedor de controladora. La controladora E5700 incluye puertos de host incorporados en la tarjeta de la controladora misma, como también puertos de host en una HIC opcional. Los puertos de host que están incorporados en la controladora se denominan puertos de host de la placa base. Los puertos de host que están incorporados en HIC se denominan puertos de HIC.

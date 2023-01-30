@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-match-the-host-ports-to-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Si se crea manualmente un host, en primer lugar debe usarse la utilidad de adaptador de bus de host (HBA) adecuada disponible en el host para determinar los identificadores de puerto de host asociados con cada HBA instalada en el host.' 
+---
+= ¿Cómo se emparejan los puertos de host con un host?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si se crea manualmente un host, en primer lugar debe usarse la utilidad de adaptador de bus de host (HBA) adecuada disponible en el host para determinar los identificadores de puerto de host asociados con cada HBA instalada en el host.
+
+Cuando cuente con esta información, seleccione los identificadores de puerto de host con los cuales se inició sesión en la cabina de almacenamiento de la lista proporcionada en el cuadro de diálogo Crear host.
+
+
+CAUTION: Asegúrese de seleccionar los identificadores de puerto de host adecuados para el host que va a crear. Si asocia los identificadores de puerto de host incorrectos, es posible que se provoque un acceso no intencional de otro host a estos datos.
+
+Si va a crear hosts automáticamente con el agente de contexto de host (HCA) instalado en cada host, el HCA debe asociar automáticamente los identificadores de puerto de host con cada host y configurarlos adecuadamente.

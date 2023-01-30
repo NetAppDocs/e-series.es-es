@@ -1,0 +1,136 @@
+---
+permalink: cloud-connector/modify-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector settings 
+summary: Puede acceder a la opción Configuración en el panel de navegación izquierdo de la aplicación SANtricity Cloud Connector. La opción Configuración permite modificar las configuraciones actuales de la aplicación para la cuenta de S3, las cabinas y los hosts gestionados, y las credenciales del proxy de servicios web. También puede cambiar la contraseña de la aplicación SANtricity Cloud Connector mediante la opción Configuración. 
+---
+= Modifique la configuración de SANtricity Cloud Connector
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La opción Configuración permite modificar las configuraciones actuales de la aplicación para la cuenta de S3, las cabinas y los hosts gestionados, y las credenciales del proxy de servicios web. También puede cambiar la contraseña de la aplicación SANtricity Cloud Connector mediante la opción Configuración.
+
+
+
+== Modifique la configuración de la cuenta de S3
+
+Puede modificar la configuración de S3 existente para la aplicación SANtricity Cloud Connector en la ventana S3 Account Settings.
+
+.Antes de empezar
+Al modificar la configuración de etiqueta de bloque de S3 o URL, tenga en cuenta que afectará el acceso a los backups existentes configurados a través del conector cloud de SANtricity.
+
+.Pasos
+. En la barra de herramientas de la izquierda, haga clic en *Configuración > Configuración*.
++
+Aparecerá la página Configuración - Configuración.
+
+. Haga clic en *Ver/editar configuración* para la configuración de la cuenta de S3.
++
+Se mostrará la página S3 Account Settings.
+
+. En el archivo URL, introduzca la URL para el servicio cloud de S3.
+. En el campo *ID de clave de acceso*, introduzca el ID de acceso del destino S3.
+. En el campo *clave de acceso secreta*, introduzca la clave de acceso para el destino S3.
+. En el campo *S3 Bucket Name*, introduzca el nombre del bloque para el destino S3.
+. Seleccione la casilla de verificación *usar acceso de estilo de ruta* si es necesario.
+. Haga clic en *probar conexión* para verificar la conexión para las credenciales S3 introducidas.
+. Haga clic en *Guardar* para aplicar las modificaciones.
++
+Se aplicará la configuración de cuenta de S3 modificada.
+
+
+
+
+
+== Gestione las cabinas de almacenamiento
+
+Es posible añadir o quitar cabinas de almacenamiento del proxy de servicios web registrado en el host del conector cloud de SANtricity en la página gestionar cabinas de almacenamiento.
+
+La página gestionar cabinas de almacenamiento muestra una lista de las cabinas de almacenamiento del proxy de servicios web disponible para el registro con el host del conector cloud de SANtricity.
+
+.Pasos
+. En la barra de herramientas de la izquierda, haga clic en *Configuración > matrices de almacenamiento*.
++
+Se muestra la pantalla Configuración - cabinas de almacenamiento.
+
+. Para agregar matrices de almacenamiento al conector en nube de SANtricity, haga clic en *Agregar*.
++
+.. En la ventana Add Storage Arrays, seleccione cada casilla de comprobación junto a las cabinas de almacenamiento que desee en la lista de resultados.
+.. Haga clic en *Agregar*.
++
+La cabina de almacenamiento seleccionada se añade al conector cloud de SANtricity y se muestra en la sección Lista de resultados de la pantalla Configuración - cabinas de almacenamiento.
+
+
+
+. Para modificar el host para una matriz de almacenamiento agregada, haga clic en *Editar* para el elemento de línea de la sección de lista de resultados de la pantalla Configuración - matrices de almacenamiento.
++
+.. En el menú desplegable Host asociado, seleccione el host que desea para la cabina de almacenamiento.
+.. Haga clic en *Guardar*.
++
+El host seleccionado se asigna a la cabina de almacenamiento.
+
+
+
+. Para eliminar una cabina de almacenamiento existente del host de SANtricity Cloud Connector, seleccione las cabinas de almacenamiento que desee en la lista de resultados inferior y haga clic en *Quitar*.
++
+.. En el campo Confirmar eliminación de cabina de almacenamiento, escriba `REMOVE`.
+.. Haga clic en *Quitar*.
++
+La cabina de almacenamiento seleccionada se quita del host de SANtricity Cloud Connector.
+
+
+
+
+
+
+
+== Modifique la configuración del proxy de servicios web
+
+Puede modificar la configuración del proxy de servicios web existente para la aplicación SANtricity Cloud Connector de la ventana Configuración del proxy de servicios web.
+
+.Antes de empezar
+El proxy de servicios web que se utiliza con el conector cloud de SANtricity debe añadir las cabinas adecuadas y establecer la contraseña correspondiente.
+
+.Pasos
+. En la barra de herramientas de la izquierda, haga clic en *MENU:Settings[Configuration]*.
++
+Aparecerá la pantalla Configuración - Configuración.
+
+. Haga clic en *Ver/editar configuración* para Web Services Proxy.
++
+Se muestra la pantalla de configuración del proxy de servicios web.
+
+. En el campo URL, introduzca la URL del proxy de servicios web utilizado para el conector cloud de SANtricity.
+. En el campo User Name, introduzca el nombre de usuario para la conexión del proxy de servicios web.
+. En el campo Password, introduzca la contraseña de la conexión del proxy de servicios web.
+. Haga clic en *probar conexión* para verificar la conexión de las credenciales de proxy de servicios web introducidas.
+. Haga clic en *Guardar* para aplicar las modificaciones.
+
+
+
+
+== Cambie la contraseña de SANtricity Cloud Connector
+
+Puede cambiar la contraseña de la aplicación SANtricity Cloud Connector en la pantalla Cambiar contraseña.
+
+.Pasos
+. En la barra de herramientas de la izquierda, haga clic en *MENU:Settings[Configuration]*.
++
+Aparecerá la pantalla Configuración - Configuración.
+
+. Haga clic en *Cambiar contraseña* para el conector SANtricity en la nube.
++
+Se mostrará la pantalla Cambiar contraseña.
+
+. En el campo Contraseña actual, introduzca su contraseña actual para la aplicación SANtricity conector Cloud.
+. En el campo Nueva contraseña, introduzca su nueva contraseña para la aplicación SANtricity conector Cloud.
+. En el campo Confirm new password, vuelva a introducir la nueva contraseña.
+. Haga clic en *Cambiar* para aplicar la nueva contraseña.
++
+La contraseña modificada se aplica a la aplicación SANtricity Cloud Connector.
+
+

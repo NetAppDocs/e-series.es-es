@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-prepare-task.html 
+sidebar: sidebar 
+keywords: E2860, E5760, DE460, installation 
+summary: Para instalar E2860, E5760 o DE460, cree una cuenta y registre el hardware. 
+---
+= Preparación de la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda a preparar la instalación de su sistema de almacenamiento serie E2860, E5760 o DE460.
+
+.Pasos
+. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Asegúrese de que los siguientes elementos están en la caja que ha recibido.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Hardware para estante, bisel y montaje en rack
+
+
+
+ a| 
+image:../media/handles_counted.png[""]
+ a| 
+Asas de bandeja x4
+
+|===
++
+En la siguiente tabla se identifican los tipos de cables que pueden recibir. Si recibe un cable que no aparece en la tabla, consulte https://hwu.netapp.com/["Hardware Universe"^] para localizar el cable e identificar su uso.
+
++
+|===
+| Tipo de conector | Tipo de cable | Uso 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Cables Ethernet
+
+(si se solicita)
+ a| 
+Conexión de gestión
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+Cables I/O.
+
+(si se solicita)
+ a| 
+Cableado de los hosts de datos
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Cables de alimentación
+
+x2 por bandeja
+
+(si se solicita)
+ a| 
+Encienda el sistema de almacenamiento
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+Cables SAS (incluidos solo con las bandejas de unidades)
+ a| 
+Cableado de las bandejas
+
+|===
+. Asegúrese de proporcionar los siguientes elementos.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Destornillador Phillips número 2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Linterna
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+Correa ESD
+
+
+
+ a| 
+image:../media/4u_dummy.png[""]
+ a| 
+Espacio en rack de 4 U: Un espacio estándar de 19 pulgadas (48.30 cm) rack para montar bandejas 4U con las siguientes dimensiones.
+
+*Profundidad*: 38.25 pulg. (97.16 cm)
+
+*Anchura*: 17.66 pulg. (44.86 cm)
+
+* Altura*: 6.87 pulg. (17.46 cm)
+
+* Peso máximo*: 113 kg (250 lb)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Un navegador compatible para el software de gestión:
+
+** Google Chrome (versión 47 y posteriores)
+** Microsoft Internet Explorer (versión 11 y posterior)
+** Microsoft Edge (EdgeHTML 12 y posteriores)
+** Mozilla Firefox (versión 31 y posteriores)
+** Safari (versión 9 y posteriores)
+
+
+|===
+

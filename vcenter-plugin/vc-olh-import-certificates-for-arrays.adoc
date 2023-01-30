@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-certificates-for-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importar certificados para las cabinas de almacenamiento de modo que puedan autenticarse con el sistema que aloja el complemento de almacenamiento para vCenter. 
+---
+= Importar certificados para cabinas
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si es necesario, puede importar certificados para las cabinas de almacenamiento de modo que estas se puedan autenticar con el sistema donde se aloja el complemento de almacenamiento para vCenter. Los certificados pueden estar firmados por una entidad de certificación (CA) o ser autofirmados.
+
+.Antes de empezar
+Si desea importar certificados de confianza, es necesario importar los certificados para las controladoras de las cabinas de almacenamiento mediante System Manager.
+
+.Pasos
+. Seleccione *Gestión de certificados*.
+. Seleccione la ficha *Trusted*.
++
+Esta página muestra todos los certificados notificados para las cabinas de almacenamiento.
+
+. Seleccione menú:Importar[certificados] para importar un certificado de CA o menú:Importar[certificados de la cabina de almacenamiento autofirmados] para importar un certificado autofirmado.
+. Para limitar la vista, puede utilizar el campo de filtrado *Mostrar certificados...* o puede ordenar las filas de certificados haciendo clic en uno de los encabezados de columna.
+. En el cuadro de diálogo, seleccione el certificado y, a continuación, haga clic en *Importar*.
++
+El certificado se carga y se valida.
+
+

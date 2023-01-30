@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-host-creation-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para gestionar el almacenamiento con el complemento de almacenamiento para vCenter, debe detectar o definir cada host de la red. 
+---
+= Información general de creación de hosts
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gestionar el almacenamiento con el complemento de almacenamiento para vCenter, debe detectar o definir cada host de la red. Un host es un servidor que envía I/o a un volumen de una cabina de almacenamiento.
+
+
+
+== Creación de hosts automática versus manual
+
+La creación de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. Un host se puede crear de manera automática o manual.
+
+* *Automático* -- la creación automática de host para hosts basados en SCSI (no NVMe-of) es iniciada por el agente de contexto de host (HCA). HCA es una utilidad que puede instalar en cada host conectado a la cabina de almacenamiento. Cada host que posee HCA instalado inserta su información de configuración en la cabina de almacenamiento a través de la ruta de I/O. Según la información del host, las controladoras crean automáticamente el host y los puertos de host asociados para establecer el tipo de host. Si es necesario, puede realizar cualquier cambio adicional en la configuración del host. Después de que HCA realiza la detección automática, el host se configura automáticamente con los siguientes atributos:
++
+** El nombre de host derivado del nombre de sistema del host.
+** Los puertos identificadores del host que están asociados con el host.
+** El tipo de sistema operativo del host.
+
+
+
+
+
+NOTE: Los hosts se crean como hosts independientes; HCA no los crea ni los añade automáticamente a clústeres de hosts.
+
+* *Manual* -- durante la creación manual de host, usted asocia identificadores de puerto de host seleccionándolos de una lista o introduciéndolos manualmente. Después de crear un host, puede asignar volúmenes a él o añadirlo a un clúster de hosts si el objetivo es compartir el acceso a los volúmenes.
+
+
+
+
+== Cómo se asignan volúmenes
+
+Para que un host envíe I/o a un volumen, se debe asignar el volumen. Es posible seleccionar un host o un clúster de hosts cuando se crea un volumen, o asignar un volumen a un host o clúster de hosts más adelante. Un clúster de hosts es un grupo de hosts. Se crea un clúster de hosts para facilitar la asignación de los mismos volúmenes en varios hosts.
+
+La asignación de volúmenes a hosts es flexible y permite satisfacer necesidades de almacenamiento específicas.
+
+* *Host autónomo, no parte de un cluster host* -- puede asignar un volumen a un host individual. Un solo host puede acceder al volumen.
+* *Clúster de host* -- puede asignar un volumen a un clúster de hosts. Todos los hosts del clúster de hosts pueden acceder al volumen.
+* *Host dentro de un cluster host* -- puede asignar un volumen a un host individual que forma parte de un cluster de host. Aunque el host forma parte de un clúster de hosts, solo el host individual puede acceder al volumen y no ningún otro host del clúster de hosts.
+
+
+Cuando se crean volúmenes, se asignan automáticamente números de unidad lógica (LUN). Los LUN actúan como dirección entre el host y la controladora durante las operaciones de I/O. Es posible cambiar el LUN después de crear un volumen.

@@ -1,0 +1,66 @@
+---
+permalink: upgrade-controllers/remount-volumes-lsi-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remount volume, upgrade LSI, vendor ID 
+summary: Vuelva a montar volúmenes si la actualización de la controladora provoca un cambio del ID de proveedor de LSI a NETAPP. 
+---
+= Vuelva a montar volúmenes después de cambiar el proveedor de LSI a NETAPP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la actualización de la controladora produce un cambio del ID de proveedor de LSI a NETAPP, siga el procedimiento correspondiente al tipo de host:
+
+* <<Vuelva a montar volúmenes en un host AIX>>
+* <<Vuelva a montar volúmenes en un host VMware>>
+* <<Vuelva a montar volúmenes en un host Windows>>
+
+
+
+
+== Vuelva a montar volúmenes en un host AIX
+
+Después de reemplazar las controladoras, es posible que se observe que el host muestra los volúmenes nuevos en la cabina de almacenamiento, pero también muestra los volúmenes originales con errores.
+
+.Paso
+Si se muestran volúmenes con errores, ejecute el `cfgmgr` comando.
+
+
+
+== Vuelva a montar volúmenes en un host VMware
+
+Después de sustituir las controladoras, puede observar las siguientes condiciones:
+
+* VMware muestra rutas nuevas para los volúmenes en la cabina de almacenamiento, pero también muestra las rutas originales como rutas muertas.
+* Los hosts aún enumeran los volúmenes de la cabina de almacenamiento como con ID de proveedor de LSI. Esto puede suceder cuando la regla LSI reclama los volúmenes al inicio y, por lo tanto, sigue usando la misma regla LSI cuando los volúmenes vuelven a estar en línea.
+* El nombre para mostrar no refleja el cambio de LSI a NetApp. Esto puede ocurrir porque el nombre para mostrar se convirtió en prueba libre después de la detección inicial. En este caso, puede cambiar manualmente el nombre para mostrar.
+
+
+.Pasos
+. Repita el escaneo en cada host.
+. Detenga todas las operaciones de I/o del host en este subsistema.
+. Recupere los volúmenes bajo la regla de NetApp.
++
+.. Ejecute el `esxcli storage core device list` comando. Compruebe el resultado del comando para identificar volúmenes cuyos nombres tienen el formulario `aa.xxxx`.
+.. Ejecute el comando `do esxcli storage core claiming reclaim -d naa.xxxxx` Para cambiar el ID de proveedor de LSI a NetApp.
+
+
+
+
+
+
+== Vuelva a montar volúmenes en un host Windows
+
+Después de reemplazar las controladoras, debe volver a montar volúmenes en un host Windows para habilitar hosts conectados a fin de realizar operaciones de I/o con los volúmenes ubicados en la cabina de almacenamiento actualizada.
+
+.Pasos
+. En *Administrador de dispositivos*, seleccione *Mostrar dispositivos ocultos*.
+. Para cada dispositivo de disco SCSI DE NETAPP incluido en *Administrador de dispositivos*, haga clic con el botón derecho en la entrada y seleccione *Desinstalar*.
++
+Si Windows muestra un cuadro de diálogo con un mensaje que indica que debe reiniciar el host, termine de desinstalar todos los volúmenes antes de buscar hardware y reiniciar.
+
+. Haga clic con el botón derecho del ratón en *Administrador de dispositivos* y seleccione *Buscar cambios de hardware*.
+. Reinicie el host.
+

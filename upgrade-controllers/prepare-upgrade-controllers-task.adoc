@@ -1,0 +1,163 @@
+---
+permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+summary: Se prepara para actualizar las controladoras. Para ello, se guarda la clave de seguridad de la unidad, se recogen datos de soporte y se desconecta la controladora. 
+---
+= Prepare la actualización de las controladoras
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para preparar la actualización de las controladoras, guarde la clave Drive Security (si se utiliza), anote el número de serie, recopilando datos de soporte, deshabilitando ciertas funciones (si se utilizan) y desconecte la controladora.
+
+
+NOTE: La recopilación de datos de soporte puede afectar temporalmente el rendimiento de la cabina de almacenamiento.
+
+.Pasos
+. Asegúrese de que la cabina de almacenamiento existente se actualice a la versión más reciente del sistema operativo (firmware de la controladora) disponible para las controladoras actuales. En SANtricity System Manager, vaya a MENU:Soporte[Centro de actualización] para ver el inventario de software y firmware.
++
+
+NOTE: Si actualiza a controladoras compatibles con la versión 8.50 de SANtricity OS, debe instalar las versiones más recientes del sistema operativo SANtricity y la NVSRAM más reciente después de instalar y encender las nuevas controladoras. Si no se realiza esta actualización, es posible que la cabina de almacenamiento no se pueda configurar para el equilibrio de carga automático (ALB).
+
+. Si tiene unidades con la función de seguridad habilitada instaladas y se planea realizar una sustitución de controladora completa, consulte la siguiente tabla para completar los pasos adecuados para su tipo de seguridad (interno o externo) y estado de unidad. Si *no* tiene instaladas unidades con la función de seguridad habilitada, puede omitir este paso y ir al paso 3 que aparece debajo de la tabla.
++
+
+NOTE: Algunos pasos de la tabla requieren comandos de la CLI. Para obtener información acerca del uso de estos comandos, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Referencia de la interfaz de línea de comandos"].
+
++
+|===
+| Tipo y contexto de seguridad | Pasos 
+
+
+ a| 
+Gestión de claves internas, una o varias unidades bloqueadas
+ a| 
+Exporte el archivo de claves de seguridad internas a una ubicación conocida en el cliente de gestión (el sistema con un explorador que se utilizó para acceder a System Manager). Utilice la `export storageArray securityKey` Comando de la CLI. Debe proporcionar la frase de contraseña asociada con la clave de seguridad y especificar la ubicación donde desea guardar la clave.
+
+
+
+ a| 
+Gestión de claves externas, todas las unidades bloqueadas, se puede realizar una transición a la gestión de claves internas de forma temporal para la sustitución de la controladora (recomendado).
+ a| 
+Realice los pasos siguientes en orden:
+
+.. Registre la dirección y el número de puerto del servidor KMS externo. En System Manager, vaya a menú:Configuración[sistema > Gestión de claves de seguridad > Ver/editar configuración del servidor de gestión de claves].
+.. Asegúrese de que los certificados de cliente y de servidor estén disponibles en el host local, por este motivo, el servidor de la cabina de almacenamiento y de gestión de claves pueden autenticarse entre sí una vez que haya finalizado el reemplazo de la controladora. Utilice la `save storageArray keyManagementCertificate` Comando de la CLI para guardar los certificados. Asegúrese de ejecutar el comando dos veces, una vez con el `certificateType` parámetro establecido en `client`, y el otro con el parámetro establecido en `server`.
+.. Ejecute la transición a la gestión de claves internas `disable storageArray externalKeyManagement` Comando de la CLI.
+.. Exporte el archivo de claves de seguridad internas a una ubicación conocida en el cliente de gestión (el sistema con un explorador que se utilizó para acceder a System Manager). Utilice la `export storageArray securityKey` Comando de la CLI. Debe proporcionar la frase de contraseña asociada con la clave de seguridad y especificar la ubicación donde desea guardar la clave.
+
+
+
+
+ a| 
+Gestión de claves externas, todas las unidades bloqueadas, *no* puede realizar la transición a la administración de claves internas temporalmente para la sustitución del controlador.
+ a| 
+Realice los pasos siguientes en orden:
+
+.. Registre la dirección y el número de puerto del servidor KMS externo. En System Manager, vaya a menú:Configuración[sistema > Gestión de claves de seguridad > Ver/editar configuración del servidor de gestión de claves].
+.. Asegúrese de que los certificados de cliente y de servidor estén disponibles en el host local, por este motivo, el servidor de la cabina de almacenamiento y de gestión de claves pueden autenticarse entre sí una vez que haya finalizado el reemplazo de la controladora. Utilice la `save storageArray keyManagementCertificate` Comando de la CLI para guardar los certificados. Asegúrese de ejecutar el comando dos veces, una vez con el `certificateType` parámetro establecido en `client`, y el otro con el parámetro establecido en `server`.
+.. Exporte el archivo de claves de seguridad internas a una ubicación conocida en el cliente de gestión (el sistema con un explorador que se utilizó para acceder a System Manager). Utilice la `export storageArray securityKey` Comando de la CLI. Debe proporcionar la frase de contraseña asociada con la clave de seguridad y especificar la ubicación donde desea guardar la clave.
+
+
+
+
+ a| 
+Gestión de claves externas, unidades parciales bloqueadas
+ a| 
+No es necesario realizar pasos adicionales.
+
+|===
++
+
+NOTE: La cabina de almacenamiento debe tener el estado óptimo para recuperar los certificados de cliente y de servidor. Si los certificados no se pueden recuperar, debe crear una nueva CSR, obtener la firma de la CSR y descargar el certificado de servidor del servidor de gestión de claves externo (EKMS).
+
+. Registre el número de serie de la cabina de almacenamiento:
++
+.. En System Manager, seleccione menu:Support[Centro de soporte > pestaña Recursos de soporte].
+.. Desplácese hasta *Iniciar información detallada de la matriz de almacenamiento* y, a continuación, seleccione *Perfil de la matriz de almacenamiento*.
++
+Aparece el informe en la pantalla.
+
+.. Para localizar el número de serie del chasis bajo el perfil de matriz de almacenamiento, escriba *número de serie* en el cuadro de texto *Buscar* y, a continuación, haga clic en *Buscar*.
++
+Se destacan todos los términos que coinciden. Para desplazarse por todos los resultados, uno a la vez, haga clic en *Buscar*.
+
+.. Haga un registro de `Chassis Serial Number`.
++
+Necesita este número de serie para realizar los pasos de link:complete-upgrade-controllers-task.html["Complete la actualización de la controladora"].
+
+
+
+. Recopile datos de soporte sobre la cabina de almacenamiento mediante la interfaz gráfica de usuario o la CLI:
++
+** Use System Manager o Array Management Window en Storage Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
++
+*** En System Manager, seleccione menu:Support[Centro de soporte > pestaña Diagnóstico]. A continuación, seleccione *recopilar datos de soporte* y haga clic en *recopilar*.
+*** En la barra de herramientas de Array Management Window, seleccione MENU:Monitor[Estado > recoger datos de soporte manualmente]. A continuación, introduzca un nombre y especifique una ubicación en el sistema donde se desea almacenar el paquete de soporte.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre `support-data.7z`.
+
++
+Si la bandeja tiene cajones, los datos de diagnóstico de esa bandeja se archivan en otro archivo comprimido con el nombre `tray-component-state-capture.7z`.
+
+
+
+** Utilice la interfaz de línea de comandos para ejecutar el `save storageArray supportData` comando para recopilar datos de soporte completos sobre la cabina de almacenamiento.
+
+
+. Asegúrese de que no se produzcan operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados:
++
+.. Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+.. Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+.. Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, puede perder datos.
+
+
+
+. Si la cabina de almacenamiento participa en una relación de mirroring, detenga todas las operaciones de I/o del host en la cabina de almacenamiento secundaria.
+. Si utiliza el mirroring síncrono o asíncrono, elimine todas las parejas reflejadas y desactive todas las relaciones de mirroring a través de System Manager o la ventana Gestión de cabinas.
+. Si hay un volumen de thin provisioning que se informa al host como un volumen fino y la cabina anterior ejecuta firmware (8.25 de firmware o superior) que admite la función UNMAP, deshabilite el almacenamiento en caché de retroescritura para todos los volúmenes finos:
++
+.. En System Manager, seleccione MENU:Storage[Volumes].
+.. Seleccione cualquier volumen y luego seleccione MENU:más[Cambiar configuración de caché].
++
+Se muestra el cuadro de diálogo Cambiar configuración de caché. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
+
+.. Seleccione la ficha *básico* y cambie la configuración para el almacenamiento en caché de lectura y escritura.
+.. Haga clic en *Guardar*.
+.. Espere cinco minutos para permitir que los datos de la memoria caché se vacíen en el disco.
+
+
+. Si el lenguaje de marcado de aserción de seguridad (SAML) está habilitado en la controladora, comuníquese con el soporte técnico para deshabilitar la autenticación SAML.
++
+
+NOTE: Una vez que se habilita SAML, no se puede deshabilitar desde la interfaz de SANtricity System Manager. Para deshabilitar la configuración de SAML, comuníquese con el soporte técnico para obtener ayuda.
+
+. Espere a que se completen todas las operaciones en curso antes de continuar con el siguiente paso.
++
+.. En la página *Inicio* de System Manager, seleccione *Ver operaciones en curso*.
+.. Asegúrese de que todas las operaciones mostradas en la ventana *Operaciones en curso* están completas antes de continuar.
+
+
+. Apague el soporte de controladoras-unidades
++
+Espere a que se oscurecen todos los LED del soporte de la controladora-unidad.
+
+. Apague cada soporte de unidades conectado al soporte de controladoras-unidad
++
+Espere dos minutos para reducir la velocidad de giro de todas las unidades.
+
+
+
+.El futuro
+Vaya a. link:remove-controllers-task.html["Quite las controladoras"].

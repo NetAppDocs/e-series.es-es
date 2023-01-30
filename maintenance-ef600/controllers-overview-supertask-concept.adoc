@@ -1,0 +1,39 @@
+---
+permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 controller, replace EF600 controller, 
+summary: Requisitos y consideraciones para la sustitución de la controladora EF300 o EF600 
+---
+= Requisitos para la sustitución de la controladora EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una controladora EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.
+
+Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones de System Manager de SANtricity.
+
+
+
+== Requisitos de sustitución de controladoras
+
+Antes de sustituir una controladora, debe tener:
+
+* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Un destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Sustitución mientras está encendido
+
+Es posible sustituir un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, si se cumplen las siguientes condiciones:
+
+* El segundo compartimento de controladoras de la bandeja tiene el estado óptimo.
+* El campo *Aceptar para eliminar* del área Detalles de Recovery Guru en el Administrador del sistema de SANtricity muestra *Sí*, lo que indica que es seguro quitar este componente.
+

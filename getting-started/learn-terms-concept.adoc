@@ -1,0 +1,144 @@
+---
+permalink: getting-started/learn-terms-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
+summary: Obtenga más información acerca de los términos utilizados en E-Series. 
+---
+= Terminología de E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Obtenga más información acerca de los términos utilizados en E-Series.
+
+|===
+| Duración | Descripción 
+
+
+ a| 
+controladora
+ a| 
+Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones.
+
+
+
+ a| 
+configuraciones doble/simple
+ a| 
+Se denomina "doble" a la configuración de un módulo de dos controladoras dentro de la cabina de almacenamiento. Simple es la configuración de módulos de controladora única.
+
+
+
+ a| 
+HDD
+ a| 
+Las unidades de disco duro (HDD) son dispositivos de almacenamiento de datos que utilizan discos de metal giratorios con un revestimiento magnético.
+
+
+
+ a| 
+HIC
+ a| 
+Una tarjeta de interfaz del host (HIC) conecta la cabina al host. Opcionalmente, se puede instalar en un contenedor de controladora.
+
+
+
+ a| 
+IB
+ a| 
+InfiniBand (IB) es una norma de comunicación para la transmisión de datos entre servidores de alto rendimiento y sistemas de almacenamiento.
+
+
+
+ a| 
+IOPS
+ a| 
+IOPS son operaciones de entrada/salida por segundo.
+
+
+
+ a| 
+mirroring
+ a| 
+El mirroring es la replicación de volúmenes de datos en cabinas de almacenamiento individuales para garantizar una disponibilidad continua.
+
+
+
+ a| 
+piscina
+ a| 
+Un pool es un conjunto de unidades que se agrupan en forma lógica. Se puede usar un pool para crear uno o más volúmenes accesibles para un host.
+
+
+
+ a| 
+contenedor de alimentación/ventilador
+ a| 
+Un contenedor de alimentación/ventilador es un ensamblaje que se desliza en una bandeja. Incluye un suministro de alimentación y un ventilador incorporado.
+
+
+
+ a| 
+Unidad de rack (U)
+ a| 
+Una unidad de bastidor (U abreviada) es una unidad de medida definida como 44.50 milímetros (1.75 pulgadas).
+
+
+
+ a| 
+SAS
+ a| 
+SAS es un protocolo en serie de punto a punto que vincula las controladoras directamente con las unidades de disco.
+
+
+
+ a| 
+Roce
+ a| 
+RDMA over Converged Ethernet (roce) es un protocolo de red que permite el acceso remoto a memoria directa (RDMA) sobre una red Ethernet.
+
+
+
+ a| 
+bandeja
+ a| 
+Una bandeja es un compartimento que se instala en un armario o rack. Incluye componentes de hardware para la cabina de almacenamiento. Existen dos tipos de bandejas: Una bandeja de controladoras y una de unidades. La bandeja de controladoras incluye controladoras y unidades. Una bandeja de unidades incluye módulos de I/o (IOM) y unidades.
+
+
+
+ a| 
+snapshot
+ a| 
+Una imagen Snapshot es una copia lógica de datos de volúmenes capturados en un momento específico. Al igual que un punto de restauración, las imágenes Snapshot permiten revertir a un conjunto de datos bien conocidos.
+
+
+
+ a| 
+SSD
+ a| 
+Los discos de estado sólido (SSD) son dispositivos de almacenamiento de datos que usan memoria de estado sólido (flash) para almacenar datos en forma persistente. Los SSD emulan las unidades de discos duros convencionales y están disponibles con las mismas interfaces que usan las unidades de disco duro.
+
+
+
+ a| 
+cabina de almacenamiento
+ a| 
+Una cabina de almacenamiento comprende bandejas, controladoras, unidades, software y firmware.
+
+
+
+ a| 
+volumen
+ a| 
+Un volumen es un contenedor en el cual las aplicaciones, las bases de datos y los sistemas de archivos almacenan datos. Es el componente lógico que se crea para que el host acceda al almacenamiento de la cabina de almacenamiento.
+
+
+
+ a| 
+carga de trabajo
+ a| 
+Una carga de trabajo es un objeto de almacenamiento que admite una aplicación. En algunas aplicaciones, System Manager configura la carga de trabajo para contener volúmenes con características subyacentes similares. Estas características de volumen se optimizan según el tipo de aplicación que es compatible con la carga de trabajo.
+
+|===

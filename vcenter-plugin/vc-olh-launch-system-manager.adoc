@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-launch-system-manager.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para gestionar una sola cabina, use la opción Iniciar para abrir System Manager en una nueva ventana del explorador. 
+---
+= Inicie System Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gestionar una sola cabina, use la opción Iniciar para abrir SANtricity System Manager en una nueva ventana del explorador.
+
+System Manager es una aplicación integrada en la controladora de la cabina de almacenamiento, que está conectada a la red a través de un puerto de gestión Ethernet. System Manager incluye todas las funciones basadas en cabina. Para acceder a System Manager, debe tener una conexión fuera de banda con un cliente de gestión de red en un explorador web.
+
+.Pasos
+. En la página *gestionar*, seleccione una o más matrices de almacenamiento que desee gestionar.
+. Haga clic en *Iniciar*.
++
+El sistema abre una nueva pestaña en el explorador y, a continuación, muestra la página de inicio de sesión de System Manager.
+
+. Introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Iniciar sesión*.
+

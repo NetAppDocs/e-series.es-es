@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Cambiar la configuración de un volumen, como el nombre, la asignación de host, el tamaño de segmento, la prioridad de modificación, el almacenamiento en caché y así sucesivamente. 
+---
+= Cambiar la configuración de un volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible cambiar la configuración de un volumen, como el nombre, la asignación de host, el tamaño de segmento, la prioridad de modificación, el almacenamiento en caché y así sucesivamente.
+
+.Antes de empezar
+Asegúrese de que el volumen que desea cambiar esté en estado óptimo.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene los volúmenes que desea cambiar.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione el volumen que desea cambiar y, a continuación, seleccione *Ver/editar configuración*.
++
+Se muestra el cuadro de diálogo Configuración de volumen. La configuración del volumen seleccionado aparece en este cuadro de diálogo.
+
+. Seleccione la ficha *básico* para cambiar el nombre del volumen y la asignación de host.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Muestra el nombre del volumen. Cambie el nombre de un volumen cuando el actual ya no sea significativo o no corresponda.
+
+
+
+ a| 
+Capacidades
+ a| 
+Muestra la capacidad notificada y asignada del volumen seleccionado.
+
+
+
+ a| 
+Pool / grupo de volúmenes
+ a| 
+Muestra el nombre y nivel de RAID del pool o grupo de volúmenes. Indica si el pool o grupo de volúmenes es compatible con la función de seguridad y si está habilitada.
+
+
+
+ a| 
+Host
+ a| 
+Muestra la asignación del volumen. Es posible asignar un volumen a un host o clúster de hosts para poder acceder a él como parte de operaciones de I/O. Esta asignación otorga acceso a un host o un clúster de hosts a un volumen determinado o a una cantidad de volúmenes en una cabina de almacenamiento.
+
+** *Asignado a* -- identifica el host o clúster de hosts que tiene acceso al volumen seleccionado.
+** *LUN* -- un número de unidad lógica (LUN) es el número asignado al espacio de dirección que un host utiliza para acceder a un volumen. El volumen se presenta al host como capacidad en forma de LUN. Cada host tiene su propio espacio de dirección de LUN. Por lo tanto, distintos hosts pueden utilizar el mismo LUN para acceder a diferentes volúmenes.
+
+
+En las interfaces NVMe, esta columna muestra Namespace ID. Un espacio de nombres es almacenamiento NVM que se formateó para el acceso en bloque. Es análogo a una unidad lógica en SCSI, que se relaciona con un volumen en la cabina de almacenamiento. El ID del espacio de nombres es el identificador único de la controladora NVMe para el espacio de nombres y se puede configurar con un valor entre 1 y 255. Es análogo a un número de unidad lógica (LUN) en SCSI.
+
+
+
+ a| 
+Identificadores
+ a| 
+Muestra los identificadores del volumen seleccionado.
+
+** Identificador a nivel mundial (WWID). Identificador hexadecimal único del volumen.
+** Identificador único extendido (EUI). Un identificador EUI-64 del volumen.
+** Identificador de subsistema (SSID). Identificador del subsistema de la cabina de almacenamiento de un volumen.
+
+
+|===
+====
+. Seleccione la ficha *Avanzado* para cambiar los ajustes de configuración adicionales de un volumen de un pool o de un grupo de volúmenes.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Información de carga de trabajo y aplicación
+ a| 
+Durante la creación del volumen, es posible generar cargas de trabajo específicas de la aplicación u otras cargas de trabajo. Si corresponde, aparece el nombre de la carga de trabajo, el tipo de aplicación y el tipo de volumen del volumen seleccionado. Es posible cambiar el nombre de la carga de trabajo, si así lo desea.
+
+
+
+ a| 
+Configuración de calidad de servicio
+ a| 
+*Deshabilitar permanentemente la garantía de datos* -- esta configuración aparece sólo si el volumen está habilitado para la garantía de datos (DA). DA comprueba y corrige los errores que se pueden producir durante la transferencia de datos a través de las controladoras hasta las unidades. Utilice esta opción para deshabilitar permanentemente LA función DA en el volumen seleccionado. Una vez deshabilitada, LA función DA no puede volver a habilitarse en este volumen. *Activar comprobación de redundancia de lectura previa* -- esta configuración aparece sólo si el volumen es un volumen grueso. Las comprobaciones de redundancia de lectura previa determinan si los datos de un volumen son consistentes cada vez que se realiza una lectura. Un volumen con esta función habilitada devuelve errores de lectura si el firmware de la controladora determina que los datos no son consistentes.
+
+
+
+ a| 
+Propiedad de la controladora
+ a| 
+Define la controladora designada como la controladora propietaria, o primaria, del volumen. La propiedad de la controladora es sumamente importante y debe planificarse con cuidado. Las controladoras deben equilibrarse lo más posible en cuanto a las operaciones de I/o totales.
+
+
+
+ a| 
+Ajuste de tamaño del segmento
+ a| 
+Muestra la configuración de ajuste de tamaño, que solo aparece para los volúmenes de un grupo de volúmenes. Se puede cambiar el tamaño del segmento para optimizar el rendimiento. *Transiciones de tamaño de segmento permitidas* -- el sistema determina las transiciones de tamaño de segmento permitidas. Los tamaños de segmento que no son transiciones adecuadas para el tamaño de segmento actual no están disponibles en la lista desplegable. Las transiciones permitidas, por lo general, son el doble o la mitad del tamaño de segmento actual. Por ejemplo, si el tamaño de segmento del volumen actual es 32 KiB, se permite un tamaño de segmento de volumen nuevo de 16 KiB o 64 KiB. *Volúmenes con caché SSD* habilitada -- se puede especificar un tamaño de segmento de 4 KiB para volúmenes con caché SSD habilitada. Asegúrese de seleccionar el tamaño de segmento 4 KiB solo para los volúmenes con la función SSD Cache habilitada que controlan operaciones de I/o en bloques pequeños (por ejemplo, tamaños de bloques de I/o de 16 KiB o menos). El rendimiento podría verse afectado si selecciona 4 KiB para el tamaño de segmento en los volúmenes con la función SSD Cache habilitada que controlan operaciones secuenciales de bloques grandes. *Cantidad de tiempo para cambiar el tamaño del segmento.* la cantidad de tiempo para cambiar el tamaño del segmento de un volumen depende de estas variables:
+
+** La carga de I/o desde el host
+** La prioridad de modificación del volumen
+** La cantidad de unidades del grupo de volúmenes
+** La cantidad de canales de unidades
+** La potencia de procesamiento de las controladoras de la cabina de almacenamiento
+
+
+Si cambia el tamaño de segmento de un volumen, el rendimiento de I/o se ve afectado, pero los datos siguen disponibles.
+
+
+
+ a| 
+Prioridad de modificación
+ a| 
+Muestra la configuración de prioridad de modificación, que solo aparece para los volúmenes en un grupo de volúmenes. La prioridad de modificación define la cantidad de tiempo de procesamiento que se asigna a las operaciones de modificación del volumen en relación con el rendimiento del sistema. Es posible aumentar la prioridad de modificación del volumen, pero esto puede afectar al rendimiento del sistema. Mueva las barras del control deslizante para seleccionar un nivel de prioridad. *Tasas de prioridad de modificación* -- la tasa de prioridad más baja beneficia el rendimiento del sistema, pero la operación de modificación lleva más tiempo. La tasa de prioridad más alta beneficia a la operación de modificación, pero el rendimiento del sistema puede verse afectado.
+
+
+
+ a| 
+Almacenamiento en caché
+ a| 
+Muestra la configuración de almacenamiento en caché, que se puede modificar para afectar el rendimiento de I/o general de un volumen.
+
+
+
+ a| 
+Caché SSD
+ a| 
+(Esta función no está disponible en los sistemas de almacenamiento EF600 o EF300). Muestra la configuración de caché SSD, que se puede habilitar en volúmenes compatibles a fin de mejorar el rendimiento de solo lectura. Los volúmenes son compatibles si comparten las mismas capacidades de seguridad de unidad y garantía de datos. La función SSD Cache utiliza uno o varios discos de estado sólido (SSD) para implementar una memoria caché de lectura. Se mejora el rendimiento de la aplicación gracias a los tiempos de lectura más rápidos de SSD. Debido a que la caché de lectura se encuentra en la cabina de almacenamiento, todas las aplicaciones que utilizan la cabina de almacenamiento comparten el almacenamiento en caché. Simplemente, seleccione el volumen que desea almacenar en caché y se realizará de forma automática y dinámica.
+
+|===
+====
+. Haga clic en *Guardar*.
+
+
+.Resultado
+La configuración del volumen se modificará según sus preferencias.

@@ -1,0 +1,61 @@
+---
+permalink: maintenance-ef600/drives-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 drive, replace EF600 drive, 
+summary: Revise los requisitos y consideraciones antes de sustituir unidades en EF300 o EF600. 
+---
+= Requisitos para la sustitución de unidades EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una unidad en una cabina EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.
+
+
+CAUTION: Tenga en cuenta que las unidades de la cabina de almacenamiento son frágiles; la gestión inadecuada de unidades es una causa principal de fallo de unidad.
+
+
+
+== Requisitos de sustitución de unidades
+
+Siga estas reglas para evitar dañar las unidades de la cabina de almacenamiento:
+
+* Evitar descargas electrostáticas (ESD):
++
+** Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.
+** Abra la bolsa ESD a mano o corte la parte superior con unas tijeras. No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
+** Guarde la bolsa ESD y cualquier material de embalaje en caso de que deba devolver una unidad más tarde.
+** Utilice siempre una muñequera ESD conectada a una superficie sin pintar en el chasis de la caja de almacenamiento. Si no hay una correa de mano disponible, toque una superficie sin pintar en el chasis de la caja de almacenamiento antes de manejar la unidad.
+
+
+* Gestione las unidades con cuidado:
++
+** Utilice siempre dos manos cuando quite, instale o lleve una unidad.
+** Nunca fuerce una unidad hasta que entre en una estantería y utilice una presión suave y firme para acoplar completamente el pestillo de la unidad.
+** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
+** No golpee las unidades contra otras superficies.
+** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 30 segundos para que la unidad reduzca su velocidad de giro.
+** Utilice siempre paquetes aprobados cuando los lleve.
+
+
+* Evite los campos magnéticos. Mantenga las unidades alejadas de los dispositivos magnéticos.
++
+Los campos magnéticos pueden destruir todos los datos de la unidad y causar daños irreparables en los circuitos de la unidad.
+
+
+
+
+
+== Impulse la asombrosa bandeja de controladoras de 24 unidades
+
+Las bandejas estándar de 24 unidades requieren la asombrosa cantidad de unidades. La siguiente figura muestra el número de las unidades en cada bandeja (se ha extraído el panel frontal de la bandeja).
+
+image::../media/ef600_drives_numbered.png[número de unidades ef600]
+
+Cuando se insertan menos de 24 unidades en una controladora EF300 o EF600, debe alternar entre las dos mitades de la controladora. Empezando por el extremo izquierdo y después moviéndose a la extrema derecha, coloque las unidades de una en una.
+
+La siguiente figura muestra cómo escalonar las unidades entre las dos mitades.
+
+image::../media/ef600_drives_staggering.png[el sistema e600 proporciona la asombrosa cifra]

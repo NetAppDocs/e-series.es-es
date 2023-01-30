@@ -1,0 +1,98 @@
+---
+permalink: config-linux/iscsi-access-sam-setup-wizard-task.html 
+sidebar: sidebar 
+keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: El asistente de configuración de SANtricity System Manager se utiliza para configurar la cabina de almacenamiento. 
+---
+= Acceda a SANtricity System Manager y utilice el asistente de configuración
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar la cabina de almacenamiento, se puede utilizar el asistente de configuración de SANtricity System Manager.
+
+System Manager de SANtricity es una interfaz web integrada en cada controladora. Para acceder a la interfaz de usuario, debe apuntar un explorador a la dirección IP del controlador. Un asistente de configuración le ayuda a comenzar con la configuración del sistema.
+
+.Lo que necesitará
+* Gestión fuera de banda.
+* Una estación de gestión para acceder a System Manager de SANtricity que incluye uno de los siguientes navegadores:
++
+|===
+| Navegador | Versión mínima 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Internet Explorer de Microsoft
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+
+
+.Acerca de esta tarea
+Si es un usuario de iSCSI, debe cerrar el asistente de configuración al configurar iSCSI.
+
+El asistente se vuelve a ejecutar automáticamente cuando abre System Manager o actualiza el explorador y se cumple _al menos una_ de las siguientes condiciones:
+
+* No se detectan pools ni grupos de volúmenes.
+* No se detectan cargas de trabajo.
+* No hay notificaciones configuradas.
+
+
+.Pasos
+. Desde el explorador, introduzca la siguiente URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` es la dirección de una de las controladoras de la cabina de almacenamiento.
+
++
+La primera vez que se abre SANtricity System Manager en una cabina sin configurar, aparece el aviso Set Administrator Password. La gestión del acceso basada en roles configura cuatro roles locales: Administración, soporte, seguridad y supervisión. Los últimos tres roles tienen contraseñas aleatorias que no se pueden descifrar. Una vez que configura una contraseña para el rol de administración, puede cambiar todas las contraseñas con las credenciales de administración. Para obtener más información sobre los cuatro roles de usuario local, consulte la ayuda en línea disponible en la interfaz de usuario de System Manager de SANtricity.
+
+. Introduzca la contraseña del administrador del sistema para la función admin en los campos Set Administrator Password y Confirm Password y, a continuación, haga clic en *Set Password*.
++
+El asistente de configuración se inicia si no hay pools, grupos de volúmenes, cargas de trabajo ni notificaciones configurados.
+
+. Use el asistente de configuración para realizar las siguientes tareas:
++
+** *Verificar hardware (controladores y unidades)* -- verificar el número de controladores y unidades en la matriz de almacenamiento. Asigne un nombre a la cabina.
+** *Verificar hosts y sistemas operativos* -- verificar los tipos de host y sistema operativo a los que puede acceder la matriz de almacenamiento.
+** *Aceptar pools* -- acepte la configuración de pool recomendada para el método de instalación rápida. Un pool es un grupo lógico de unidades.
+** *Configurar alertas* -- permitir que System Manager reciba notificaciones automáticas cuando se produce un problema en la cabina de almacenamiento.
+** *Enable AutoSupport*: Supervise automáticamente el estado de la cabina de almacenamiento y envíe mensajes al soporte técnico.
+
+
+. Si todavía no creó un volumen, cree uno en menu:Storage[Volumes > Create > Volume].
++
+Para obtener más información, consulte la ayuda en línea para System Manager de SANtricity.
+
+

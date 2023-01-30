@@ -1,0 +1,25 @@
+---
+permalink: config-linux/iscsi-configure-network-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure la red iSCSI. 
+---
+= Configurar las redes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar la red iSCSI de varias maneras, según los requisitos de almacenamiento de datos.
+
+Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
+
+Para configurar una red iSCSI con redundancia básica, conecte cada puerto de host y un puerto de cada controladora a switches separados y cree particiones en cada conjunto de puertos de host y puertos de controladora en segmentos de red o VLAN independientes.
+
+Debe habilitar el control de flujo de hardware de envío y recepción *fin a fin*. Debe deshabilitar el control de flujo de prioridad.
+
+Si utiliza tramas gigantes dentro DE LA SAN IP por motivos de rendimiento, asegúrese de configurar la cabina, los switches y los hosts para utilizar tramas gigantes. Consulte la documentación de su sistema operativo y de switches para obtener información sobre cómo habilitar tramas gigantes en los hosts y en los switches. Para habilitar tramas gigantes en la cabina, complete los pasos en link:iscsi-configure-array-side-network-task.html["Configurar las redes del lado de la cabina"].
+
+
+NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para sobrecarga IP. Consulte la documentación de su switch para obtener más información.

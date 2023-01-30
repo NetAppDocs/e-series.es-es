@@ -1,0 +1,150 @@
+---
+permalink: upgrade-santricity/overview-upgrade-consider-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Revisar consideraciones de actualización para el software y el firmware de la controladora del sistema operativo SANtricity de la cabina de almacenamiento y el firmware de la unidad. 
+---
+= Consideraciones de renovación
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar que la actualización se realice correctamente, revise las siguientes consideraciones de actualización.
+
+
+
+== Actualizaciones de controladoras (únicas o múltiples)
+
+Revise estas consideraciones clave antes de actualizar las controladoras.
+
+
+
+=== Versiones actuales
+
+Puede ver las versiones actuales del software y el firmware de la siguiente manera:
+
+* Para una sola controladora, utilice la interfaz de System Manager de SANtricity. Vaya al menú:Soporte[Centro de actualización] y, a continuación, haga clic en el vínculo *Inventario de software y firmware*.
+* En el caso de varias controladoras, utilice la interfaz de Unified Manager de SANtricity. Vaya a la página *gestionar* para ver las cabinas de almacenamiento detectadas. Las versiones se muestran en la columna *Software de sistema operativo SANtricity*. Si hace clic en la versión de sistema operativo SANtricity en cada fila, puede encontrar información de NVSRAM y del firmware de la controladora en un cuadro de diálogo emergente.
+
+
+
+
+=== Componentes incluidos en la actualización
+
+Los siguientes componentes se incluyen en el proceso de actualización del sistema operativo SANtricity:
+
+* *System Manager* -- System Manager es el software que administra la matriz de almacenamiento.
+* *Firmware de la controladora* -- el firmware de la controladora administra las E/S entre hosts y volúmenes.
+* *Firmware del IOM* -- el firmware del módulo de I/o (IOM) administra la conexión entre una controladora y una bandeja de unidades. Además, supervisa el estado de los componentes.
+* *Software de supervisor* -- Software de supervisor es la máquina virtual en un controlador en el que se ejecuta el software.
+
+
+
+
+=== Componentes que se actualizarán por separado
+
+Deben actualizarse los siguientes componentes por separado:
+
+* *NVSRAM de controladora* -- NVSRAM de controladora es un archivo de controladora que especifica las configuraciones predeterminadas para las controladoras. Las instrucciones para actualizar la NVSRAM se incluyen con las instrucciones para actualizar las controladoras.
+* *Firmware de la unidad* -- Consulte link:upgrade-drive-firmware-task.html["Actualice el firmware de la unidad"] para obtener instrucciones independientes.
+* *Multipath/failover driver* -- como parte del proceso de actualización, puede que también sea necesario actualizar el controlador multivía/de conmutación por error del host para que el host pueda interactuar con los controladores correctamente. Si los hosts que ejecutan sistemas operativos distintos de Microsoft Windows tienen conexiones de I/o al sistema de almacenamiento, actualice los controladores multivía para esos hosts. Para obtener información sobre compatibilidad, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^]. Para obtener instrucciones de actualización, consulte la link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+* *SANtricity Unified Manager*: Unified Manager es el software que gestiona múltiples sistemas de almacenamiento, incluidos los modelos E2800, E5700, EF300 y EF600. Unified Manager forma parte del proxy de servicios web de SANtricity, que es un servidor API RESTful que se instala por separado en un sistema host para gestionar cientos de sistemas de almacenamiento E-Series de NetApp nuevos y heredados. Para obtener más información, consulte link:../web-services-proxy/index.html["Información general sobre el proxy de servicios web de SANtricity"].
+* *Utilidades* -- otras utilidades de administración requieren actualizaciones independientes, como la Utilidad de host de Windows SANtricity, la Utilidad de host de SANtricity Linux y el DSM de SANtricity Windows. Para obtener más información sobre estas utilidades, consulte link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+* *Sistemas heredados* -- Si su sistema de almacenamiento forma parte de una red de almacenamiento que incluye sistemas de almacenamiento anteriores, puede que necesite utilizar la ventana de gestión empresarial (EMW) anterior de SANtricity Storage Manager para ofrecer una vista empresarial de todos sus sistemas de almacenamiento. En este caso, compruebe si hay una versión de mantenimiento más reciente del Administrador de almacenamiento de SANtricity.
+
+
+
+
+=== Controladoras dobles y procesamiento de I/O.
+
+Si una cabina de almacenamiento contiene dos controladoras y existe un controlador multivía instalado, la cabina de almacenamiento puede seguir procesando las operaciones de I/o mientras se realiza la actualización. Durante la actualización, ocurre el siguiente proceso:
+
+. La controladora A conmuta todos sus LUN a la controladora B.
+. La actualización se produce en la controladora A.
+. La controladora A recupera sus LUN y todos los LUN de la controladora B.
+. La actualización se produce en la controladora B.
+
+
+Una vez que finaliza la actualización, es posible que sea necesario redistribuir los volúmenes manualmente entre las controladoras para garantizar que los volúmenes regresen a la controladora correspondiente.
+
+
+
+=== Comprobación del estado
+
+Se ejecuta una comprobación del estado como parte del proceso de actualización. Esta comprobación del estado evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización. Las siguientes condiciones podrían evitar la actualización:
+
+* Unidades asignadas con errores
+* Piezas de repuesto en uso
+* Grupos de volúmenes incompletos
+* Operaciones exclusivas en ejecución
+* Volúmenes faltantes
+* Estado no óptimo de la controladora
+* Cantidad excesiva de eventos en el registro de eventos
+* Fallo de validación de la base de datos de configuración
+* Unidades con versiones de DACstore anteriores
+
+
+También se puede ejecutar la comprobación del estado antes de la actualización en forma independiente, sin realizar una actualización.
+
+
+
+=== Actualización inmediata o almacenamiento temporal
+
+Puede activar la actualización de inmediato o almacenarla temporalmente para otro momento. Puede optar por activarlos más tarde por los siguientes motivos:
+
+* *Hora del día* -- la activación del software puede llevar mucho tiempo, por lo que es posible que desee esperar hasta que las cargas de E/S sean más livianas. Según la carga de I/o y el tamaño de caché, la actualización de una controladora generalmente puede demorar entre 15 y 25 minutos en completarse. Las controladoras se reinician y conmutan al nodo de respaldo durante la activación, de manera que el rendimiento podría ser inferior al habitual hasta que finalice la actualización.
+* *Tipo de paquete*: Es posible que desee probar el nuevo software y firmware en una matriz de almacenamiento antes de actualizar los archivos en otras matrices de almacenamiento.
+
+
+
+
+== Actualización del firmware de la unidad
+
+Revise estas consideraciones clave antes de actualizar el firmware de la unidad.
+
+
+
+=== Compatibilidad de unidades
+
+Cada archivo de firmware de la unidad contiene información sobre el tipo de unidad en el que se ejecuta el firmware. Es posible descargar el archivo de firmware específico solo en una unidad compatible. System Manager comprueba automáticamente la compatibilidad durante el proceso de actualización.
+
+
+
+=== Métodos de actualización de unidades
+
+Existen dos tipos de métodos de actualización del firmware de la unidad: En línea y sin conexión.
+
+|===
+| Actualización en línea | Actualización sin conexión 
+
+
+ a| 
+Durante una actualización en línea, las unidades se actualizan secuencialmente, una a la vez. La cabina de almacenamiento sigue procesando las operaciones de I/o mientras se produce la actualización. No es necesario detener la actividad de I/O. Si una unidad puede realizar una actualización en línea, se utiliza automáticamente este método.
+
+Las unidades que pueden realizar una actualización en línea son las siguientes:
+
+* Unidades en un pool óptimo
+* Unidades en un grupo de volúmenes redundante óptimo (RAID 1, RAID 5 y RAID 6)
+* Unidades sin asignar
+* Unidades de repuesto en espera
+
+
+Realizar una actualización del firmware de la unidad en línea puede llevar varias horas, y la cabina de almacenamiento se expone a potenciales fallos de volumen. Los fallos de volumen pueden producirse en los siguientes casos:
+
+* En un grupo de volúmenes RAID 1 o RAID 5, una unidad tiene errores cuando se está actualizando otra unidad en el grupo de volúmenes.
+* En un pool o un grupo de volúmenes RAID 6, dos unidades tienen errores cuando se está actualizando otra unidad en el pool o grupo de volúmenes.
+
+ a| 
+Durante una actualización sin conexión, se actualizan al mismo tiempo todas las unidades del mismo tipo de unidad. Para utilizar este método, hace falta detener la actividad de I/o de los volúmenes asociados con las unidades seleccionadas. Debido a que pueden actualizarse varias unidades de forma simultánea (en paralelo), el tiempo de inactividad total se reduce significativamente. Si una unidad puede realizar únicamente una actualización sin conexión, se utiliza automáticamente este método.
+
+Las siguientes unidades DEBEN utilizar el método sin conexión:
+
+* Unidades en un grupo de volúmenes no redundante (RAID 0)
+* Unidades en un pool o grupo de volúmenes que no es óptimo
+* Unidades en caché SSD
+
+
+|===

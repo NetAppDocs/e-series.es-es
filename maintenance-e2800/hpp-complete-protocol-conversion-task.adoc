@@ -1,0 +1,250 @@
+---
+permalink: maintenance-e2800/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: Complete la conversión del protocolo del puerto de host para una cabina E2800. 
+---
+= Complete la conversión de protocolo del host para E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de convertir el protocolo de los puertos de host, se deben ejecutar pasos adicionales para poder utilizar el nuevo protocolo.
+
+Los pasos dependen de los protocolos de inicio y fin de los puertos de host de la placa base y los puertos de HIC.
+
+
+
+== Conversión de FC a iSCSI completa
+
+Si se convirtieron todos los puertos de host desde FC a iSCSI, es necesario configurar la red de iSCSI.
+
+.Pasos
+. Configure los switches.
++
+Debe configurar los switches utilizados para transportar el tráfico iSCSI según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
+
+. En SANtricity System Manager, seleccione MENU:hardware[Configurar puertos iSCSI].
+. Seleccione las opciones de configuración del puerto.
++
+Puede configurar la red iSCSI de muchas maneras. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
+
+. Actualice las definiciones de host en SANtricity System Manager.
++
+
+NOTE: Si necesita instrucciones para añadir hosts o clústeres de hosts, consulte la ayuda en línea de SANtricity System Manager.
+
++
+.. Seleccione MENU:Storage[hosts].
+.. Seleccione el host al que se asociará el puerto y haga clic en *Ver/editar configuración*.
++
+Se muestra el cuadro de diálogo Configuración de host.
+
+.. Haga clic en la ficha *puertos de host*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e2800.gif[sam1130 ss host settings dialog ports tab maint e2800]
+
+.. Haga clic en *Agregar* y utilice el cuadro de diálogo *Agregar puerto de host* para asociar un nuevo identificador de puerto de host al host.
++
+La longitud del nombre del identificador de puerto de host se determina mediante la tecnología de interfaz del host. Los nombres de identificador de puerto de host de FC deben tener 16 caracteres. Los nombres de identificador de puerto de host iSCSI tienen un máximo de 223 caracteres. El puerto debe ser único. No se permite un número de puerto que ya se haya configurado.
+
+.. Haga clic en *Eliminar* y utilice el cuadro de diálogo *Eliminar puerto de host* para eliminar (desasociar) un identificador de puerto de host.
++
+La opción *Eliminar* no quita físicamente el puerto de host. Esta opción elimina la asociación entre el puerto de host y el host. Salvo que se eliminen el adaptador de bus de host o el iniciador de iSCSI, la controladora seguirá reconociendo el puerto de host.
+
+.. Haga clic en *Guardar* para aplicar los cambios a la configuración del identificador de puerto de host.
+.. Repita estos pasos para añadir y eliminar todos los identificadores de puerto de host adicionales.
+
+
+. Reinicie el host o realice un nuevo análisis para que el host detecte correctamente los LUN.
+. Vuelva a montar volúmenes o comience a utilizar un volumen de bloques.
+
+
+
+
+== Conversión completa de iSCSI a FC
+
+Si se convirtieron todos los puertos de host desde iSCSI a FC, es necesario configurar la conexión a redes de FC.
+
+.Pasos
+. Instale la utilidad HBA y determine los WWPN de iniciador.
+. Dividir los interruptores en zonas.
++
+La división en zonas de los switches permite que los hosts se conecten al almacenamiento y limita el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.
+
+. Actualice las definiciones de host en SANtricity System Manager.
++
+.. Seleccione MENU:Storage[hosts].
+.. Seleccione el host al que se asociará el puerto y haga clic en *Ver/editar configuración*.
++
+Se muestra el cuadro de diálogo Configuración de host.
+
+.. Haga clic en la ficha *puertos de host*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e2800.gif[sam1130 ss host settings dialog ports tab maint e2800]
+
+.. Haga clic en *Agregar* y utilice el cuadro de diálogo *Agregar puerto de host* para asociar un nuevo identificador de puerto de host al host.
++
+La longitud del nombre del identificador de puerto de host se determina mediante la tecnología de interfaz del host. Los nombres de identificador de puerto de host de FC deben tener 16 caracteres. Los nombres de identificador de puerto de host iSCSI tienen un máximo de 223 caracteres. El puerto debe ser único. No se permite un número de puerto que ya se haya configurado.
+
+.. Haga clic en *Eliminar* y utilice el cuadro de diálogo *Eliminar puerto de host* para eliminar (desasociar) un identificador de puerto de host.
++
+La opción *Eliminar* no quita físicamente el puerto de host. Esta opción elimina la asociación entre el puerto de host y el host. Salvo que se eliminen el adaptador de bus de host o el iniciador de iSCSI, la controladora seguirá reconociendo el puerto de host.
+
+.. Haga clic en *Guardar* para aplicar los cambios a la configuración del identificador de puerto de host.
+.. Repita estos pasos para añadir y eliminar todos los identificadores de puerto de host adicionales.
+
+
+. Reinicie el host o realice un escaneo reescaneo para que el host detecte correctamente el almacenamiento asignado.
+. Vuelva a montar volúmenes o comience a utilizar un volumen de bloques.
+
+
+
+
+== Conversión completa de FC a FC/iSCSI
+
+Si anteriormente tenía todos los puertos de host FC y algunos se convirtieron en iSCSI, es posible que deba modificar la configuración existente para ser compatible con iSCSI.
+
+Es posible usar cualquiera de las siguientes opciones para usar los puertos iSCSI nuevos. Los pasos exactos dependen de las topologías de red actuales y planificadas. La opción 1 asume que desea conectar hosts iSCSI nuevos a la cabina. La opción 2 asume que desea convertir los hosts conectados a los puertos convertidos de FC a iSCSI.
+
+
+
+=== Opción 1: Mueva hosts FC y añada nuevos hosts iSCSI
+
+. Mueva cualquier host FC de los puertos iSCSI nuevos a los puertos que siguen siendo FC.
+. Si todavía no utiliza SFP de protocolo doble, quite cualquier SFP FC.
+. Conecte hosts iSCSI nuevos a estos puertos, ya sea directamente o mediante un switch.
+. Configure las redes iSCSI para los hosts y puertos nuevos. Para obtener instrucciones, consulte link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+
+
+
+
+=== Opción 2: Convertir hosts FC a iSCSI
+
+. Apague los hosts FC conectados a los puertos convertidos.
+. Proporciona una topología iSCSI para los puertos convertidos. Por ejemplo, convierta cualquier switch de FC a iSCSI.
+. Si todavía no utiliza SFP de protocolo doble, quite los SFP FC de los puertos convertidos y sustitúyalos por SFP iSCSI o SFP de protocolo doble.
+. Conecte los cables a SFP en los puertos convertidos y confirme que están conectados al switch o host iSCSI correcto.
+. Encienda los hosts.
+. Utilice la https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Herramienta para configurar los hosts iSCSI.
+. Edite la partición de host para añadir los ID de puerto de host iSCSI y eliminar los ID de puerto de host FC.
+. Después de reiniciar los hosts iSCSI, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos a disposición del sistema operativo.
++
+** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
+
+
+
+
+
+
+== Conversión completa de iSCSI a FC/iSCSI
+
+Si anteriormente tenía todos los puertos de host iSCSI y convirtió algunos de ellos en FC, es posible que deba modificar la configuración existente para ser compatible con FC.
+
+Es posible usar cualquiera de las siguientes opciones para usar los puertos FC nuevos. Los pasos exactos dependen de las topologías de red actuales y planificadas. La opción 1 asume que desea conectar los nuevos hosts FC a la cabina. La opción 2 asume que desea convertir los hosts conectados a los puertos convertidos de iSCSI a FC.
+
+
+
+=== Opción 1: Mueva hosts iSCSI y añada nuevos hosts FC
+
+. Mueva cualquier host iSCSI de los puertos FC nuevos a los puertos que siguen siendo iSCSI.
+. Si todavía no utiliza SFP de protocolo doble, quite cualquier SFP FC.
+. Conecte los hosts FC nuevos a estos puertos, ya sea directamente o mediante un switch.
+. Configure las redes de FC para los hosts y los puertos nuevos. Para obtener instrucciones, consulte link:../config-windows/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+
+
+
+
+=== Opción 2: Convertir hosts iSCSI a FC
+
+. Apague los hosts iSCSI conectados a los puertos convertidos.
+. Proporcione una topología de FC para los puertos convertidos. Por ejemplo, convierta cualquier switch de iSCSI a FC.
+. Si todavía no utiliza SFP de protocolo doble, quite los SFP iSCSI de los puertos convertidos y reemplácelos por SFP FC o SFP de protocolo doble.
+. Conecte los cables a SFP en los puertos convertidos y confirme que están conectados al switch o host FC correcto.
+. Encienda los hosts.
+. Utilice la https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Herramienta para configurar los hosts FC.
+. Edite la partición de host para añadir los ID de puerto de host FC y eliminar los ID de puerto de host iSCSI.
+. Después del reinicio de los hosts FC nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
++
+** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
+
+
+
+
+
+
+== Conversión completa de FC/iSCSI a FC
+
+Si anteriormente tenía una combinación de puertos de host FC y puertos de host iSCSI y se convirtieron todos los puertos en FC, es posible que deba modificar la configuración existente para utilizar los nuevos puertos de FC.
+
+Es posible usar cualquiera de las siguientes opciones para usar los puertos FC nuevos. Los pasos exactos dependen de las topologías de red actuales y planificadas. La opción 1 asume que desea conectar los nuevos hosts FC a la cabina. La opción 2 asume que desea convertir los hosts conectados a los puertos 1 y 2 de iSCSI a FC.
+
+
+
+=== Opción 1: Quitar los hosts iSCSI y añadir hosts FC
+
+. Si todavía no utiliza SFP de protocolo doble, quite cualquier SFP iSCSI y reemplácelos por SFP FC o SFP de protocolo doble.
+. Si todavía no utiliza SFP de protocolo doble, quite cualquier SFP FC.
+. Conecte los hosts FC nuevos a estos puertos, ya sea directamente o mediante un switch
+. Configure las redes de FC para los hosts y los puertos nuevos. Para obtener instrucciones, consulte link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+
+
+
+
+=== Opción 2: Convertir hosts iSCSI a FC
+
+. Apague los hosts iSCSI conectados a los puertos que convirtió.
+. Proporcione una topología de FC para estos puertos. Por ejemplo, convierta todos los switches conectados a esos hosts desde iSCSI a FC.
+. Si todavía no utiliza SFP de protocolo doble, quite los SFP iSCSI de los puertos y reemplácelos por SFP FC o SFP de protocolo doble.
+. Conecte los cables a SFP y confirme que están conectados al host o el switch FC correcto.
+. Encienda los hosts.
+. Utilice la https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Herramienta para configurar los hosts FC.
+. Edite la partición de host para añadir los ID de puerto de host FC y eliminar los ID de puerto de host iSCSI.
+. Después del reinicio de los hosts FC nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
++
+** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
+
+
+
+
+
+
+== Conversión completa de FC/iSCSI a iSCSI
+
+Si anteriormente tenía una combinación de puertos de host FC y puertos de host iSCSI y se convirtieron todos los puertos a iSCSI, es posible que sea necesario modificar la configuración existente para usar los puertos iSCSI nuevos.
+
+Es posible usar cualquiera de las siguientes opciones para usar los puertos iSCSI nuevos. Los pasos exactos dependen de las topologías de red actuales y planificadas. La opción 1 asume que desea conectar hosts iSCSI nuevos a la cabina. La opción 2 asume que desea convertir los hosts de FC a iSCSI.
+
+
+
+=== Opción 1: Quite los hosts FC y añada los hosts iSCSI
+
+. Si todavía no utiliza SFP de protocolo doble, quite cualquier SFP FC y sustitúyalo por SFP iSCSI o SFP de doble protocolo.
+. Conecte hosts iSCSI nuevos a estos puertos, ya sea directamente o mediante un switch.
+. Configure las redes iSCSI para los hosts y puertos nuevos. Para obtener instrucciones, consulte link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"].
+
+
+
+
+=== Opción 2: Convertir hosts FC a iSCSI
+
+. Apague los hosts FC conectados a los puertos que convirtió.
+. Proporcione una topología iSCSI para estos puertos. Por ejemplo, convierta cualquier switch conectado a dichos hosts desde FC a iSCSI.
+. Si todavía no utiliza SFP de protocolo doble, quite los SFP FC de los puertos y reemplácelos por SFP iSCSI o SFP de protocolo doble.
+. Conecte los cables a SFP y confirme que están conectados al switch o host iSCSI correcto.
+. Encienda los hosts.
+. Utilice la https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Herramienta para configurar los hosts ISCSI.
+. Edite la partición de host para añadir los ID de puerto de host iSCSI y eliminar los ID de puerto de host FC.
+. Después de reiniciar los hosts iSCSI nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
++
+** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
+
+
+

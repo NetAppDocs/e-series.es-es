@@ -1,0 +1,106 @@
+---
+permalink: maintenance-e2800/drives-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
+summary: Revise los requisitos de sustitución de unidades E2800. 
+---
+= Requisitos para reemplazar unidades E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una unidad E2800, revise los requisitos y consideraciones.
+
+
+
+== Tipos de bandeja
+
+Es posible reemplazar una unidad en una bandeja de controladoras o una bandeja de unidades de 12, 24 o 60 unidades.
+
+
+
+=== bandejas de 12 o 24 unidades
+
+Las figuras muestran la forma en que las unidades están numeradas en cada tipo de bandeja (se quitaron el bisel frontal o las tapas de cierre de la bandeja).
+
+*Numeración de unidades en una bandeja de controladores E2812 o en una bandeja de unidades DE212C:*
+
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 dwg e2812 de212c numeración de unidades]
+
+*Numeración de unidades en una bandeja de controladoras E2824, una cabina flash EF280 o una bandeja de unidades DE224C:*
+
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 dwg e2824 de224c con número de unidades maint e2800]
+
+
+NOTE: La cabina de almacenamiento E2812, E2824, EF280 puede incluir una o más soportes de unidades de expansión heredados SAS-2, incluidos el soporte de 12 unidades DE1600, el soporte DE5600 24 unidades o el soporte de 60 unidades DE6600 Para obtener instrucciones para reemplazar una unidad en uno de estos soportes de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Reemplazar una unidad en soportes E2660, E2760, E5460, E5560 o E5660"^] y.. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Reemplazar una unidad en soportes de 12 o 24 unidades E2600, E2700, E5400, E5500 y E5600"^].
+
+
+
+=== bandejas de 60 unidades
+
+La bandeja de controladoras E2860 y la bandeja de unidades DE460C constan de cinco cajones de unidades que contienen cada uno 12 ranuras de unidad. El cajón de unidades 1 está en la parte superior y el cajón de unidades 5 está en la parte inferior.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c delante sin anotaciones maint e2800]
+
+Para un cajón de bandeja de controladoras E2860 y un cajón de bandejas de unidades DE460C, las unidades están numeradas de 0 a 11 en cada cajón de unidades de la bandeja.
+
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cajón dwg trafford con hdd callouts maint e2800]
+
+
+NOTE: La cabina de almacenamiento E2860 puede incluir una o varias bandejas de unidades de expansión heredadas SAS-2, incluidas la bandeja de 12 unidades DE1600, la bandeja DE5600 24 unidades o la bandeja DE6600 60 unidades Para obtener instrucciones para reemplazar una unidad en uno de estos soportes de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Reemplazar una unidad en soportes E2660, E2760, E5460, E5560 o E5660"^] y.. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Reemplazar una unidad en soportes de 12 o 24 unidades E2600, E2700, E5400, E5500 y E5600"^].
+
+
+
+=== Cajón de unidades
+
+Es posible reemplazar un cajón de unidades en una bandeja de controladoras E2860 y una bandeja de unidades DE460C. Cada una de estas bandejas de 60 unidades tiene cinco cajones de unidades.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c delante sin anotaciones maint e2800]
+
+Cada uno de los cinco cajones puede alojar hasta 12 unidades.
+
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+
+
+
+== Manejo de unidades
+
+Las unidades de la cabina de almacenamiento son frágiles. La gestión incorrecta de unidades es una causa principal de fallo de unidad.
+
+Siga estas reglas para evitar dañar las unidades de la cabina de almacenamiento:
+
+* Evitar descargas electrostáticas (ESD):
++
+** Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.
+** No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
++
+Abra la bolsa ESD a mano o corte la parte superior con unas tijeras.
+
+** Guarde la bolsa ESD y cualquier material de embalaje en caso de que deba devolver una unidad más tarde.
+** Utilice siempre una muñequera ESD conectada a una superficie sin pintar en el chasis de la caja de almacenamiento.
++
+Si no hay una correa de mano disponible, toque una superficie sin pintar en el chasis de la caja de almacenamiento antes de manejar la unidad.
+
+
+
+* Gestione las unidades con cuidado:
++
+** Utilice siempre dos manos cuando quite, instale o lleve una unidad.
+** Nunca fuerce una unidad hasta que entre en una estantería y utilice una presión suave y firme para acoplar completamente el pestillo de la unidad.
+** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
+** No golpee las unidades contra otras superficies.
+** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 30 segundos para que la unidad reduzca su velocidad de giro.
+** Utilice siempre paquetes aprobados cuando los lleve.
+
+
+* Evite campos magnéticos:
++
+** Mantenga las unidades alejadas de los dispositivos magnéticos.
++
+Los campos magnéticos pueden destruir todos los datos de la unidad y causar daños irreparables en los circuitos de la unidad.
+
+
+
+

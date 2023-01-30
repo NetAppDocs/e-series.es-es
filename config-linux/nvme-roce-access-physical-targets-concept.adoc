@@ -1,0 +1,84 @@
+---
+permalink: config-linux/nvme-roce-access-physical-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volume physical, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Puede configurar la E/S dirigida al destino del dispositivo en función de su versión de Linux. 
+---
+= Acceso a volúmenes de NVMe para destinos de dispositivos físicos NVMe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar la E/S dirigida al destino del dispositivo en función del SO (y del método de acceso múltiple de extensión) que esté utilizando.
+
+Para RHEL 8, RHEL 9 y SLES 15, la I/o se dirige a los destinos de dispositivos NVMe físicos mediante el host Linux. Una solución multivía nativa de NVMe gestiona las rutas físicas subyacentes al único dispositivo físico aparente que muestra el host.
+
+
+
+== Los dispositivos físicos NVMe son destinos de I/O.
+
+Se recomienda ejecutar I/o en los enlaces de `/dev/disk/by-id/nvme-eui.[uuid#]` en lugar de directamente a la ruta física del dispositivo nvme `/dev/nvme[subsys#]n[id#]`. El enlace entre estas dos ubicaciones se puede encontrar con el siguiente comando:
+
+[listing]
+----
+# ls /dev/disk/by-id/ -l
+lrwxrwxrwx 1 root root 13 Oct 18 15:14 nvme-eui.0000320f5cad32cf00a0980000af4112 -> ../../nvme0n1
+----
+Ejecución de I/O. `/dev/disk/by-id/nvme-eui.[uuid#]` se pasará directamente a través de `/dev/nvme[subsys#]n[id#]` La cual tiene todas las rutas virtualizadas debajo de ella utilizando la solución multivía nativa de NVMe.
+
+Puede ver sus rutas ejecutando:
+
+[listing]
+----
+# nvme list-subsys
+----
+Resultado de ejemplo:
+
+[listing]
+----
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000a522500000000589aa8a6
+\
++- nvme0 rdma traddr=192.4.21.131 trsvcid=4420 live
++- nvme1 rdma traddr=192.4.22.141 trsvcid=4420 live
+----
+Si especifica un dispositivo de espacio de nombres al utilizar `nvme list-subsys` comando, proporciona información adicional acerca de las rutas a ese espacio de nombres:
+
+[listing]
+----
+# nvme list-subsys /dev/nvme0n1
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000af44620000000058d5dd96
+\
+ +- nvme0 rdma traddr=192.168.130.101 trsvcid=4420 live non-optimized
+ +- nvme1 rdma traddr=192.168.131.101 trsvcid=4420 live non-optimized
+ +- nvme2 rdma traddr=192.168.130.102 trsvcid=4420 live optimized
+ +- nvme3 rdma traddr=192.168.131.102 trsvcid=4420 live optimized
+----
+También hay enlaces en los comandos multivía para permitirle ver la información de la ruta para la recuperación tras fallos nativa a través de ellos:
+
+[listing]
+----
+#multipath -ll
+----
+
+NOTE: Para ver la información de la ruta de acceso, debe configurarse lo siguiente en /etc/multipath.conf:
+
+[listing]
+----
+
+defaults {
+        enable_foreign nvme
+}
+----
+Resultado de ejemplo:
+
+[listing]
+----
+eui.0000a0335c05d57a00a0980000a5229d [nvme]:nvme0n9 NVMe,Netapp E-Series,08520001
+size=4194304 features='n/a' hwhandler='ANA' wp=rw
+|-+- policy='n/a' prio=50 status=optimized
+| `- 0:0:1 nvme0c0n1 0:0 n/a optimized    live
+`-+- policy='n/a' prio-10 status=non-optimized
+`- 0:1:1 nvme0c1n1 0:0 n/a non-optimized    live
+----

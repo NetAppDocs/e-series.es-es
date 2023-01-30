@@ -1,0 +1,50 @@
+---
+permalink: config-linux/iscsi-configure-ip-address-dhcp-task.html 
+sidebar: sidebar 
+keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Utilice el Protocolo de configuración dinámica de host \(DHCP\) para proporcionar direcciones IP.' 
+---
+= Configure las direcciones IP mediante DHCP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar las comunicaciones entre la estación de gestión y la cabina de almacenamiento, utilice el protocolo de configuración dinámica de hosts (DHCP) para proporcionar direcciones IP.
+
+.Lo que necesitará
+Un servidor DHCP instalado y configurado en la misma subred que los puertos de administración del almacenamiento.
+
+.Acerca de esta tarea
+Cada cabina de almacenamiento tiene una controladora (simple) o dos controladoras (doble) y cada controladora tiene dos puertos de gestión de almacenamiento. Cada puerto de gestión se asignará una dirección IP.
+
+Las siguientes instrucciones se refieren a una cabina de almacenamiento con dos controladoras (una configuración doble).
+
+.Pasos
+. Si todavía no lo ha hecho, conecte un cable Ethernet a la estación de gestión y al puerto de gestión 1 de cada controladora (A y B).
++
+El servidor DHCP asigna una dirección IP al puerto 1 de cada controladora.
+
++
+
+NOTE: No use el puerto de gestión 2 en ninguna de las controladoras. El puerto 2 está reservado para uso del personal técnico de NetApp.
+
++
+
+NOTE: Si desconecta y vuelve a conectar el cable Ethernet o si se somete a la cabina de almacenamiento a un ciclo de encendido y apagado, DHCP vuelve a asignar direcciones IP. Este proceso ocurre hasta que se configuran las direcciones IP estáticas. Se recomienda evitar desconectar el cable o apagar y encender la cabina.
+
++
+Si la cabina de almacenamiento no puede obtener direcciones IP asignadas por DHCP en 30 segundos, se configuran las siguientes direcciones IP predeterminadas:
+
++
+** Controladora A, puerto 1: 169.254.128.101
+** Controladora B, puerto 1: 169.254.128.102
+** Máscara de subred: 255.255.0.0
+
+
+. Busque la etiqueta de dirección MAC en la parte posterior de cada controladora y, a continuación, proporcione al administrador de red la dirección MAC para el puerto 1 de cada controladora.
++
+El administrador de red necesita las direcciones MAC para determinar la dirección IP de cada controladora. Necesitará las direcciones IP para conectarse al sistema de almacenamiento a través del explorador.
+
+

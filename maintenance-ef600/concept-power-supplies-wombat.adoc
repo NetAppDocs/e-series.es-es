@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-power-supplies-wombat.html 
+sidebar: sidebar 
+keywords: power, supply, redundant, source, controller, shelf, supplies 
+summary: Un suministro de alimentación proporciona una fuente de alimentación redundante en una bandeja de controladoras. 
+---
+= Suministros de alimentación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un suministro de alimentación proporciona una fuente de alimentación redundante en una bandeja de controladoras.

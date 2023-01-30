@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-system-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importe la configuración del sistema desde una cabina de almacenamiento a otras cabinas de almacenamiento. 
+---
+= Importe la configuración del sistema
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible importar la configuración del sistema desde una cabina de almacenamiento a otras cabinas de almacenamiento. Esta operación en lote permite ahorrar tiempo cuando se necesitan configurar varias matrices en la red.
+
+.Antes de empezar
+Asegúrese de que:
+
+* La configuración del sistema se define en la instancia de System Manager correspondiente a la cabina de almacenamiento que se quiere usar como origen.
+* La configuración actual de las cabinas de almacenamiento objetivo cuenta con una copia de seguridad en System Manager (menú:Configuración[sistema > Guardar configuración de la cabina de almacenamiento]).
+* Ha revisado los requisitos para replicar configuraciones de almacenamiento en link:vc-olh-import-settings-overview.html["Información general sobre la configuración de importación"].
+
+
+.Acerca de esta tarea
+La configuración importada incluye los ajustes de escaneo de medios de un volumen, los ajustes de SSD de las controladoras y el equilibrio de carga automático (no incluye la generación de informes de conectividad de host).
+
+.Pasos
+. En la página gestionar, haga clic en MENU:Actions[Import Settings].
++
+Se abre el asistente Importar configuración.
+
+. En el cuadro de diálogo Seleccionar configuración, seleccione *sistema* y, a continuación, haga clic en *Siguiente*.
++
+Se abre un cuadro de diálogo para seleccionar la cabina de almacenamiento.
+
+. En el cuadro de diálogo Seleccionar origen, seleccione la matriz con la configuración que desea importar y, a continuación, haga clic en *Siguiente*.
+. En el cuadro de diálogo Seleccionar objetivos, elija una o más cabinas para que reciban la nueva configuración.
++
+
+NOTE: Las cabinas de almacenamiento con una versión de firmware inferior a 8.50 no están disponibles y no pueden seleccionarse. Además, una matriz no aparece en este cuadro de diálogo si el plugin no puede comunicarse con esa matriz (por ejemplo, si está desconectada o si tiene problemas de red o con un certificado o una contraseña).
+
+. Haga clic en *Finalizar*.
++
+En la página Operaciones, se muestran los resultados de la operación de importación. Si se produce un error en la operación, puede hacer clic en la fila para ver más información.
+
+
+
+.Resultado
+Las cabinas de almacenamiento objetivo ahora están configuradas con los mismos ajustes del sistema que la cabina de origen.

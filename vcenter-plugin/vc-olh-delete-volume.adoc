@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Elimine uno o más volúmenes para aumentar la capacidad libre de un pool o un grupo de volúmenes. 
+---
+= Elimine el volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible eliminar uno o varios volúmenes para aumentar la capacidad libre de un pool o grupo de volúmenes.
+
+.Antes de empezar
+Asegúrese de que se cumplan las siguientes condiciones en los volúmenes que desea eliminar:
+
+* Existen backups de todos los datos.
+* Todas las entradas y las salidas (I/o) están detenidas.
+* Todos los dispositivos y los sistemas de archivos están desmontados.
+
+
+.Acerca de esta tarea
+Por lo general, debe eliminar volúmenes si se crearon con los parámetros o la capacidad equivocados, o ya no satisfacen las necesidades de configuración del almacenamiento. Al eliminar un volumen, aumenta la capacidad libre en el pool o el grupo de volúmenes.
+
+
+CAUTION: Al eliminar un volumen, se produce la pérdida de todos los datos en estos volúmenes.
+
+Tenga en cuenta que *no puede* eliminar un volumen que tenga una de estas condiciones:
+
+* El volumen se está inicializando.
+* El volumen se está reconstruyendo.
+* El volumen forma parte de un grupo de volúmenes que contiene una unidad que está realizando una operación de copyback.
+* El volumen está sometido a una operación de modificación, como un cambio de tamaño de segmento, a menos que el volumen esté ahora en estado con errores.
+* El volumen mantiene cualquier tipo de reserva persistente.
+* El volumen es un volumen de origen o un volumen objetivo en una operación Copiar volumen con estado Pending, In Progress o con errores.
+
+
+
+NOTE: Cuando un volumen supera un tamaño determinado (actualmente 128 TB), la operación de eliminación se ejecuta en segundo plano y es posible que el espacio liberado no esté disponible inmediatamente.
+
+.Pasos
+. En la página *gestionar*, seleccione la cabina de almacenamiento que contiene los volúmenes que desea eliminar.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Haga clic en *Eliminar*.
++
+Se muestra el cuadro de diálogo Eliminar volúmenes.
+
+. Seleccione uno o varios volúmenes para eliminar y confirme que desea realizar la operación.
+. Haga clic en *Eliminar*.
+

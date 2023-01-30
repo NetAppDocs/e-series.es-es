@@ -1,0 +1,60 @@
+---
+permalink: config-windows/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Compruebe que el host puede escribir datos en la LUN y leerlos. 
+---
+= Verificar el acceso al almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar el volumen, compruebe que el host puede escribir datos en la LUN y leerlos.
+
+.Lo que necesitará
+Debe haber inicializado la LUN y formateado esta con un sistema de archivos.
+
+.Pasos
+. Crear y escribir en un archivo de la nueva LUN.
++
+[listing]
+----
+> echo test file > f:\\test.txt
+----
+. Lea el archivo y verifique que se han escrito los datos.
++
+[listing]
+----
+> type f:\\test.txt
+----
+. Para verificar que la multivía funciona, cambie la propiedad del volumen.
++
+.. Desde la GUI del Administrador del sistema de SANtricity, vaya a *almacenamiento* > *volúmenes* y, a continuación, seleccione *más* > *Cambiar propiedad*.
+.. En el cuadro de diálogo Cambiar propiedad de volumen, utilice el menú desplegable *propietario preferido* para seleccionar la otra controladora para uno de los volúmenes de la lista y, a continuación, confirme la operación.
+.. Compruebe que aún puede acceder a los archivos en la LUN.
++
+[listing]
+----
+> dir f:\\
+----
+
+
+. Busque el ID de destino.
++
+
+NOTE: La utilidad dsmUtil distingue entre mayúsculas y minúsculas.
+
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe -a
+----
+. Vea las rutas a la LUN y compruebe que tiene el número esperado de rutas. En la `<target ID>` Parte del comando, utilice el ID de destino que ha encontrado en el paso anterior.
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe –g <target ID\>
+----
+

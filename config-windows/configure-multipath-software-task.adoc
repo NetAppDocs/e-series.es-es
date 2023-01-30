@@ -1,0 +1,28 @@
+---
+permalink: config-windows/configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Windows, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Instale el paquete DSM, que contiene software de acceso múltiple para Windows. 
+---
+= Configure el software de multivía
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para proporcionar una ruta redundante a la cabina de almacenamiento, puede instalar el paquete de Windows DSM de SANtricity y utilizar el paquete de multivía para Windows.
+
+.Lo que necesitará
+Los privilegios de administrador o superusuario correctos.
+
+.Acerca de esta tarea
+El software multivía proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. Antes de que pueda utilizar el multipathing, debe instalar el paquete SANtricity Windows DSM. Este paquete contiene el software multivía para Windows.
+
+En las instalaciones de Windows se utiliza el controlador nativo del módulo específico de dispositivo MPIO (DSM) para la conmutación por error. Al instalar y habilitar el paquete de Windows DSM de SANtricity, no es necesario que realice ninguna acción adicional para utilizar el multipath.
+
+.Pasos
+. Descargue el paquete *SANtricity Windows DSM* desde https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["Página del software SANtricity OS"^]. Seleccione su versión de software, acepte el contrato de licencia y seleccione *SANtricity Windows DSM* en Descargas adicionales.
+. Ejecute el programa de instalación de *SANtricity Windows DSM*. Haga doble clic en el paquete de instalación que desea ejecutar.
+. Utilice el asistente de instalación para instalar el paquete en la estación de administración.
+

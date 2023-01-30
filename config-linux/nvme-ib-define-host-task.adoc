@@ -1,0 +1,91 @@
+---
+permalink: config-linux/nvme-ib-define-host-task.html 
+sidebar: sidebar 
+keywords: define Linux host, express linux configuration, linux host, 
+summary: Con SANtricity System Manager, se definen los hosts que envían datos a la cabina de almacenamiento. La definición de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. 
+---
+= Defina un host
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con SANtricity System Manager, se definen los hosts que envían datos a la cabina de almacenamiento. La definición de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes.
+
+.Acerca de esta tarea
+Tenga en cuenta estas directrices al definir un host:
+
+* Se deben definir los puertos identificadores de host que están asociados con el host.
+* Asegúrese de proporcionar el mismo nombre que el nombre de sistema del host asignado.
+* Esta operación no funciona si el nombre que eligió ya está en uso.
+* La longitud del nombre no puede ser mayor de 30 caracteres.
+
+
+.Pasos
+. Seleccione MENU:Storage[hosts].
+. Haga clic en MENU:Create[Host].
++
+Se muestra el cuadro de diálogo Crear host.
+
+. Seleccione la configuración del host que corresponda.
++
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Escriba un nombre para el host nuevo.
+
+
+
+ a| 
+Tipo de sistema operativo de host
+ a| 
+Seleccione una de las siguientes opciones de la lista desplegable:
+
+** *Linux* para SANtricity 11.60 y posterior
+** *Linux DM-MP (Kernel 3.10 o posterior)* para anterior a SANtricity 11.60
+
+
+
+
+ a| 
+Tipo de interfaz del host
+ a| 
+Seleccione el tipo de interfaz de host que desea usar.
+
+
+
+ a| 
+Puertos host
+ a| 
+Debe realizar una de las siguientes acciones:
+
+** *Seleccione la interfaz de E/S*
++
+Si los puertos de host inició sesión, es posible seleccionar identificadores de puerto de host de la lista. Este es el método recomendado.
+
+** *Adición manual*
++
+Si los puertos de host no iniciaron sesión, mire en /etc/nvme/hostnqn en el host para encontrar los identificadores de hostnqn y asociarlos con la definición de host.
+
++
+Se pueden introducir los identificadores de puerto de host manualmente o copiarlos/pegarlos desde el archivo /etc/nvme/hostnqn (de uno en uno) en el campo *puertos de host*.
+
++
+Se debe añadir un identificador de puerto de host para asociarlo con el host, pero es posible seguir seleccionando identificadores que estén asociados con el host. Cada identificador se muestra en el campo *puertos de host*. Si es necesario, también puede eliminar un identificador seleccionando *X* junto a él.
+
+
+
+|===
+. Haga clic en *Crear*.
+
+
+.Resultado
+Una vez que el host se creó correctamente, System Manager de SANtricity crea un nombre predeterminado para cada puerto de host configurado para el host.
+
+El alias predeterminado es `<Hostname_Port Number>`. Por ejemplo, el alias predeterminado para el primer puerto creado para `host IPT is IPT_1`.

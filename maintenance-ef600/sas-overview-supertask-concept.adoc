@@ -1,0 +1,26 @@
+---
+permalink: maintenance-ef600/sas-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: Revise los requisitos y consideraciones antes de sustituir una tarjeta de expansión EF300 SAS. 
+---
+= Requisitos para la sustitución de tarjetas de expansión SAS EF300 y EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si planea añadir una tarjeta de expansión SAS a un EF300 o EF600, revise los siguientes requisitos.
+
+* Debe seguir el link:../install-hw-ef600/index.html["Instalar y configurar sistemas de almacenamiento EF300 y EF600"] para configurar la controladora.
+* Debe actualizar el firmware a la versión más reciente. Para actualizar el firmware, siga las instrucciones de link:../upgrade-santricity/index.html["Actualizar el sistema operativo SANtricity"].
+* Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente.
+* Debe realizar esta tarea con ambos contenedores de la controladora.
+* Tiene una muñequera ESD o ha tomado otras precauciones antiestáticas.
+* Tiene un destornillador Phillips del número 1.
+* Tiene etiquetas para identificar cada cable conectado al compartimento de controladoras.
+* Tiene una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+* Las controladoras EF300 pueden tener una tarjeta de expansión SAS instalada en el puerto 1 para permitir la ampliación de la bandeja de unidades.
+* Para cablear la expansión SAS, consulte link:../install-hw-cabling/index.html["Cableado de hardware E-Series"] si desea obtener instrucciones.
+

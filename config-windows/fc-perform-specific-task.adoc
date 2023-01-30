@@ -1,0 +1,180 @@
+---
+permalink: config-windows/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para el protocolo Fibre Channel, se configuran los switches y se determinan los identificadores de puerto de host. 
+---
+= Ejecute tareas específicas de FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el protocolo Fibre Channel, se configuran los switches y se determinan los identificadores de puerto de host.
+
+
+
+== Paso 1: Configuración de los switches FC--Windows
+
+Configurar (dividir en zonas) los switches de Fibre Channel (FC) permite que los hosts se conecten a la cabina de almacenamiento y limita el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.
+
+.Lo que necesitará
+* Credenciales de administrador para los switches.
+* El WWPN de cada puerto de iniciador de host y de cada puerto de destino de la controladora conectado al switch. (Use la utilidad HBA para la detección.)
+
+
+.Acerca de esta tarea
+Debe dividir en zonas por WWPN, no por puerto físico. Cada puerto del iniciador debe estar en una zona separada con todos sus puertos de destino correspondientes. Para obtener detalles acerca de la división en zonas de los switches, consulte la documentación del proveedor del switch.
+
+.Pasos
+. Inicie sesión en el programa de administración del switch FC y, a continuación, seleccione la opción de configuración de división en zonas.
+. Cree una nueva zona que incluya el primer puerto iniciador de host y que también incluya todos los puertos de destino que se conectan al mismo switch de FC que el iniciador.
+. Cree zonas adicionales para cada puerto iniciador de host FC del switch.
+. Guarde las zonas y, a continuación, active la nueva configuración de particiones.
+
+
+
+
+== Paso 2: Determinar los WWPN de host y establecer la configuración recomendada: FC, Windows
+
+Debe instalar una utilidad de HBA de FC para que pueda ver el nombre de puerto WWPN de cada puerto de host. Además, puede utilizar la utilidad HBA para cambiar cualquier configuración recomendada en la columna Notas de http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para la configuración compatible.
+
+.Acerca de esta tarea
+Revise estas directrices para las utilidades de HBA:
+
+* La mayoría de los proveedores de HBA ofrecen una utilidad de HBA. Necesitará la versión correcta de HBA para el sistema operativo y la CPU del host. Entre los ejemplos de utilidades de FC HBA se incluyen:
++
+** Emulex OneCommand Manager para HBA de Emulex
+** Consola QConverge de QLogic para HBA de QLogic
+
+
+* Los puertos de I/o del host pueden registrarse automáticamente si se ha instalado el agente de contexto de host.
+
+
+.Pasos
+. Descargue la utilidad correspondiente del sitio Web de su proveedor de HBA.
+. Instale la utilidad.
+. Seleccione la configuración adecuada en la utilidad HBA.
++
+La configuración adecuada se muestra en la columna Notas de la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+
+
+== Paso 3: Registre su configuración
+
+Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento FC. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+La ilustración muestra un host conectado a una cabina de almacenamiento E-Series en dos zonas. Una zona se indica mediante la línea azul; la otra se indica mediante la línea roja. Cualquier puerto tiene dos rutas al almacenamiento (de una a cada controladora).
+
+image::../media/port_identifiers_host_and_target_conf-win.gif[los identificadores de puerto host y target conf win]
+
+
+
+=== Identificadores de host
+
+|===
+| Número de llamada | Conexiones de puertos de host (iniciador) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_no aplicable_
+
+
+
+ a| 
+2
+ a| 
+Puerto de host 0 a zona 0 del switch FC
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Puerto de host 1 a zona 1 del switch FC
+ a| 
+
+|===
+
+
+=== Identificadores de destino
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | WWPN 
+
+
+ a| 
+3
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+6
+ a| 
+Controladora de cabina (objetivo)
+ a| 
+_no aplicable_
+
+
+
+ a| 
+5
+ a| 
+Controladora A, puerto 1 al switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controladora A, puerto 2 al switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controladora B, puerto 1 al switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controladora B, puerto 2 al switch FC 2
+ a| 
+
+|===
+
+
+=== Asignando el nombre de host
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-consolidate-free-capacity-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Utilice la opción consolidar capacidad libre para consolidar las extensiones libres existentes de un grupo de volúmenes seleccionado. Con esta acción, se pueden crear volúmenes adicionales de la cantidad máxima de capacidad libre de un grupo de volúmenes. 
+---
+= Consolidar la capacidad libre de un grupo de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilice la opción consolidar capacidad libre para consolidar las extensiones libres existentes de un grupo de volúmenes seleccionado. Con esta acción, se pueden crear volúmenes adicionales de la cantidad máxima de capacidad libre de un grupo de volúmenes.
+
+.Antes de empezar
+* El grupo de volúmenes debe contener al menos un área de capacidad libre.
+* Todos los volúmenes del grupo de volúmenes deben estar en línea y con el estado óptima.
+* No debe haber operaciones de modificación de volúmenes en curso, por ejemplo, cambio del tamaño de segmento de un volumen.
+
+
+.Acerca de esta tarea
+No se puede cancelar la operación una vez iniciada. Se puede acceder a los datos durante la operación de consolidación.
+
+Para abrir el cuadro de diálogo consolidar capacidad libre, se puede utilizar cualquiera de los siguientes métodos:
+
+* Si se detecta al menos un área de capacidad libre para un grupo de volúmenes, se muestra la recomendación de que se debe consolidar la capacidad libre en la página Inicio del área notificación. Haga clic en el enlace *consolidar capacidad libre* para abrir el cuadro de diálogo.
+* También se puede abrir el cuadro de diálogo consolidar capacidad libre en la página Pools y grupos de volúmenes, como se describe en la siguiente tarea.
+
+
+.Más información acerca de las áreas de capacidad libre
+[%collapsible]
+====
+Un área de capacidad libre es la capacidad libre que puede surgir después de eliminar un volumen o por no utilizar toda la capacidad libre disponible durante la creación de un volumen. Cuando se crea un volumen en un grupo de volúmenes que tiene una o más áreas de capacidad libre, la capacidad del volumen se limita al área de capacidad libre más grande de ese grupo de volúmenes. Por ejemplo, si un grupo de volúmenes tiene una capacidad libre total de 15 GIB y el área de capacidad libre más grande es 10 GIB, el volumen más grande que se puede crear es de 10 GIB.
+
+Se puede consolidar la capacidad libre de un grupo de volúmenes para mejorar el rendimiento de escritura. La capacidad libre del grupo de volúmenes se fragmentará con el tiempo a medida que el host escribe, modifica y elimina archivos. A la larga, la capacidad disponible ya no estará ubicada en un único bloque contiguo, sino que estará distribuida en pequeños fragmentos del grupo de volúmenes. Esto aumenta la fragmentación del archivo, ya que el host debe escribir archivos nuevos en forma de fragmentos para poder ubicarlos en los rangos disponibles de los clústeres libres.
+
+Cuando se consolida la capacidad libre de un grupo de volúmenes seleccionado, se observa que mejora el rendimiento del sistema de archivos cada vez que el host escribe en archivos nuevos. El proceso de consolidación también ayuda a evitar que se fragmenten archivos nuevos en el futuro.
+
+====
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con el grupo de volúmenes.
+. Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+. Seleccione el grupo de volúmenes que tenga la capacidad libre que se desea consolidar y, luego, seleccione menú:tareas no comunes[consolidar la capacidad libre del grupo de volúmenes].
++
+Se muestra el cuadro de diálogo consolidar capacidad libre.
+
+. Tipo `consolidate` para confirmar que desea llevar a cabo esta operación.
+. Haga clic en *consolidar*.
+
+
+.Resultado
+El sistema comienza a consolidar (desfragmentar) las áreas de capacidad libre del grupo de volúmenes en una cantidad contigua para las tareas subsiguientes de configuración del almacenamiento.
+
+.Después de terminar
+En la barra lateral de navegación, seleccione *Operaciones* para ver el progreso de la operación consolidar capacidad libre. Es posible que esta operación demore y que afecte el rendimiento del sistema.

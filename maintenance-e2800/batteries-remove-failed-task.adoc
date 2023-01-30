@@ -1,0 +1,49 @@
+---
+permalink: maintenance-e2800/batteries-remove-failed-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Después de quitar el compartimento de controladoras de la bandeja de controladoras, es posible quitar la batería. 
+---
+= Quite la batería E2800 con errores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de quitar el compartimento de controladoras de la bandeja de controladoras, es posible quitar la batería.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador presionando el botón hacia abajo y deslizando la cubierta hacia fuera.
+. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+
++
+*(1)* _Internal Cache Active_
+
++
+*(2)* _Battery_
+
+. Localice el pestillo de liberación azul de la batería.
+. Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retire la batería principal e2800]
+
++
+*(1)* _pestillo de liberación de la batería_
+
++
+*(2)* _Battery_
+
+. Levante la batería y sáquela del compartimento de la controladora.
+. Siga los procedimientos apropiados para que su ubicación pueda reciclar o eliminar la batería que ha fallado.
++
+
+CAUTION: Para cumplir con las normativas de la Asociación Internacional de Transporte aéreo (IATA), no envíe nunca una batería de litio por aire a menos que esté instalada en la bandeja del controlador.
+
+. Vaya a. link:batteries-install-new-task.html["Instale la batería nueva"].
+

@@ -1,0 +1,144 @@
+---
+permalink: config-linux/nvme-roce-worksheet-for-concept.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilice esta hoja de datos para registrar la información de configuración del almacenamiento NVMe over roce. 
+---
+= Registre la configuración de NVMe over roce
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento NVMe over roce. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+
+
+== Topología de conexión directa
+
+En una topología de conexión directa, uno o más hosts están conectados directamente al subsistema. En la versión 11.50 de SANtricity OS, admitimos una única conexión desde cada host a una controladora del subsistema, como se muestra a continuación. En esta configuración, un puerto HCA (adaptador de canal de host) de cada host debe estar en la misma subred que el puerto de la controladora E-Series al que está conectado, pero en una subred diferente del otro puerto HCA.
+
+image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+
+Una configuración de ejemplo que satisface los requisitos consta de cuatro subredes de red como se indica a continuación:
+
+* Subred 1: Puerto 1 de HCA de host 1 y puerto de host 1 de controladora
+* Subred 2: Puerto de HCA de host 1 y puerto de host 1 de controladora 2
+* Subred 3: Puerto 1 de HCA de host 2 y puerto de host 2 de controladora 1
+* Subred 4: Puerto de HCA 2 de host y puerto de host 2 de controladora 2
+
+
+
+
+== Topología de la conexión del interruptor
+
+En una topología de estructura, se utilizan uno o varios switches. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] si desea obtener una lista de switches compatibles.
+
+image::../media/nvmeof_switch_connect.gif[nvmeof switch connect]
+
+
+
+== Identificadores de host
+
+Busque y documente el iniciador NQN de cada host.
+
+|===
+| Conexiones de puertos de host | NQN del iniciador de software 
+
+
+ a| 
+Host (iniciador) 1
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+Host (iniciador) 2
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+ a| 
+
+|===
+
+
+== NQN objetivo
+
+Documente el NQN objetivo para la cabina de almacenamiento.
+
+|===
+| Nombre de cabina | NQN objetivo 
+
+
+ a| 
+Controladora de cabina (objetivo)
+ a| 
+
+|===
+
+
+== NQN de destino
+
+Documente los NQN que utilizarán los puertos de la matriz.
+
+|===
+| Conexiones de puertos (objetivo) de la controladora de la cabina | NQN 
+
+
+ a| 
+Controladora A, puerto 1
+ a| 
+
+
+
+ a| 
+Controladora B, puerto 1
+ a| 
+
+
+
+ a| 
+Controladora A, puerto 2
+ a| 
+
+
+
+ a| 
+Controladora B, puerto 2
+ a| 
+
+|===
+
+
+== Asignando el nombre de host
+
+
+NOTE: El nombre del host de asignación se crea durante el flujo de trabajo.
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

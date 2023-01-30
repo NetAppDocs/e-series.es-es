@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-would-i-need-to-create-a-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Debe crear un clúster de hosts si desea que dos o más hosts compartan el acceso al mismo conjunto de volúmenes. 
+---
+= ¿Por qué debería crear un clúster de hosts?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe crear un clúster de hosts si desea que dos o más hosts compartan el acceso al mismo conjunto de volúmenes. Por lo general, los hosts individuales tienen instalado software de clustering a fin de coordinar el acceso a los volúmenes.

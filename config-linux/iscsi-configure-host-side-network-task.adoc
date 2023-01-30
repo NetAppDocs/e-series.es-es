@@ -1,0 +1,209 @@
+---
+permalink: config-linux/iscsi-configure-host-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure las redes iSCSI en el lado del host. 
+---
+= Configurar la conexión a redes del host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar las redes del host, debe realizar varios pasos.
+
+.Acerca de esta tarea
+Para configurar las redes iSCSI en el lado del host, debe establecer el número de sesiones de nodo por ruta física, activar los servicios iSCSI adecuados, configurar la red para los puertos iSCSI, crear vinculaciones de cara iSCSI y establecer las sesiones iSCSI entre iniciadores y destinos.
+
+En la mayoría de los casos, puede utilizar el software-iniciador de la bandeja de entrada para CNA/NIC iSCSI. No es necesario descargar el controlador, el firmware y el BIOS más recientes. Consulte la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para determinar los requisitos de código.
+
+.Pasos
+. Compruebe la `node.session.nr_sessions` variable en el archivo /etc/iscsi/iscsid.conf para ver el número predeterminado de sesiones por ruta física. Si es necesario, cambie el número predeterminado de sesiones a una sesión.
++
+[listing]
+----
+node.session.nr_sessions = 1
+----
+. Cambie el `node.session.timeo.replacement_timeout` variable en el archivo /etc/iscsi/iscsid.conf a. `20`, a partir de un valor predeterminado de `120`.
++
+[listing]
+----
+node.session.timeo.replacement_timeout = 20
+----
+. Opcionalmente, puede realizar esta configuración `node.startup = automatic` en /etc/iscsi/iscsid.conf antes de ejecutar cualquiera `iscsiadm` los comandos para que las sesiones continúen tras el reinicio.
+. Asegúrese `iscsid` y.. `(open-)iscsi` los servicios están activados y activados para el arranque.
++
+[listing]
+----
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
+. Obtenga el nombre del iniciador IQN de host, que se utilizará para configurar el host a una cabina.
++
+[listing]
+----
+# cat /etc/iscsi/initiatorname.iscsi
+----
+. Configure la red para los puertos iSCSI. Estas son instrucciones de ejemplo para RHEL y SLES:
++
+
+NOTE: Además del puerto de red pública, los iniciadores iSCSI deben utilizar dos o más NIC en segmentos privados o VLAN independientes.
+
++
+.. Determine los nombres de los puertos iSCSI mediante el `ifconfig -a` comando.
+.. Configure la dirección IP para los puertos del iniciador iSCSI. Los puertos iniciadores deben estar presentes en la misma subred que los puertos de destino iSCSI.
++
+*Red Hat Enterprise Linux 7 y 8 (RHEL 7 y RHEL 8)*
+
++
+Cree el archivo de ejemplo `/etc/sysconfig/network-scripts/ifcfg-<NIC port>` con el siguiente contenido.
+
++
+[listing]
+----
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=<NIC port>
+UUID=<unique UUID>
+DEVICE=<NIC port>
+ONBOOT=yes
+IPADDR=192.168.xxx.xxx
+PREFIX=24
+NETMASK=255.255.255.0
+NM_CONTROLLED=no
+MTU=
+----
++
+Adiciones opcionales con respecto a IPv6:
+
++
+[listing]
+----
+IPV6INIT=yes
+IPV6_AUTOCONF=no
+IPV6ADDR=fdxx::192:168:xxxx:xxxx/32
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=eui64
+----
++
+*Red Hat Enterprise Linux 9 (RHEL 9)*
+
++
+Utilice la `nmtui` herramienta para activar y editar una conexión. La herramienta generará un `<NIC port>.nmconnection` archivo dentro `/etc/NetworkManager/system-connections/`.
+
++
+*SUSE Linux Enterprise Server 12 y 15 (SLES 12 y SLES 15)*
+
++
+Cree el archivo de ejemplo `/etc/sysconfig/network/ifcfg-<NIC port>` con el siguiente contenido.
+
++
+[listing]
+----
+IPADDR='192.168.xxx.xxx/24'
+BOOTPROTO='static'
+STARTMODE='auto'
+----
++
+Adición opcional con respecto a IPv6:
+
++
+[listing]
+----
+IPADDR_0='fdxx::192:168:xxxx:xxxx/32'
+----
++
+
+NOTE: Asegúrese de configurar la dirección para ambos puertos iniciador iSCSI.
+
+.. Reinicie los servicios de red.
++
+[listing]
+----
+# systemctl restart network
+----
+.. Asegúrese de que el servidor Linux pueda hacer ping _all_ de los puertos de destino iSCSI.
+
+
+. Establecer las sesiones iSCSI entre iniciadores y destinos (cuatro en total) mediante uno de dos métodos.
++
+.. (Opcional) al utilizar ifaces, configure las interfaces iSCSI mediante la creación de dos vinculaciones iSCSI iface.
++
+[listing]
+----
+# iscsiadm -m iface -I iface0 -o new
+# iscsiadm -m iface -I iface0 -o update -n iface.net_ifacename -v <NIC port1>
+----
++
+[listing]
+----
+# iscsiadm -m iface -I iface1 -o new
+# iscsiadm -m iface -I iface1 -o update -n iface.net_ifacename -v <NIC port2>
+----
++
+
+NOTE: Para mostrar las interfaces, utilice `iscsiadm -m iface`.
+
+.. Detectar destinos iSCSI. Guarde el IQN (será el mismo con cada detección) en la hoja de cálculo para el siguiente paso.
++
+*Método 1 (con ifaces)*
+
++
+[listing]
+----
+# iscsiadm -m discovery -t sendtargets -p <target_ip_address>:<target_tcp_listening_port> -I iface0
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0
+----
++
+*Método 2 (sin ifaces)*
+
++
+[listing]
+----
+# iscsiadm -m discovery -t sendtargets -p <target_ip_address>:<target_tcp_listening_port>
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260
+----
++
+
+NOTE: El IQN tiene el aspecto siguiente:
+
++
+[listing]
+----
+iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
+----
+.. Cree la conexión entre los iniciadores de iSCSI y los destinos iSCSI.
++
+*Método 1 (con ifaces)*
+
++
+[listing]
+----
+# iscsiadm -m node -T <target_iqn> -p <target_ip_address>:<target_tcp_listening_port> -I iface0 -l
+# iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3 -p 192.168.0.1:3260 -I iface0 -l
+----
++
+*Método 2 (sin ifaces)*
+
++
+[listing]
+----
+# iscsiadm -m node -L all
+----
+.. Enumere las sesiones iSCSI que se han establecido en el host.
++
+[listing]
+----
+# iscsiadm -m session
+----
+
+
+

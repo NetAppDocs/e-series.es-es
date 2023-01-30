@@ -1,0 +1,62 @@
+---
+permalink: maintenance-e2800/batteries-install-new-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Instale una batería nueva. 
+---
+= Instale la batería E2800 nueva
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de quitar la batería que ha fallado, puede instalar la nueva.
+
+.Lo que necesitará
+* La batería de recambio.
+* Una superficie plana y sin estática.
+
+
+.Pasos
+. Desembale la nueva batería y configúrela en una superficie plana y sin estática.
++
+
+NOTE: Para cumplir con las normativas de seguridad de la IATA, las baterías de reemplazo se envían con un estado de carga (SoC) del 30 por ciento o menos. Cuando vuelva a aplicar la alimentación, tenga en cuenta que el almacenamiento en caché de escritura no se reanudará hasta que se completen la carga de la batería de reemplazo y el ciclo de aprendizaje inicial.
+
+. Oriente el compartimento de la controladora de manera que la ranura de la batería esté orientada hacia usted.
+. Inserte la batería en el compartimento del controlador ligeramente hacia abajo.
++
+Debe insertar la brida metálica en la parte frontal de la batería en la ranura de la parte inferior del compartimento del controlador y deslizar la parte superior de la batería por debajo del pasador de alineación pequeño en el lado izquierdo del contenedor.
+
+. Mueva el pestillo de la batería hacia arriba para fijar la batería.
++
+Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insertar la batería de matiint e2800]
+
++
+*(1)* _pestillo de liberación de la batería_
+
++
+*(2)* _Battery_
+
+. Gire el compartimento de controladoras para confirmar que la batería se ha instalado correctamente.
++
+
+CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal de la batería debe estar completamente insertada en la ranura del contenedor del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la brida metálica podría entrar en contacto con la placa del controlador, causando daños al controlador cuando se aplica alimentación.
+
++
+** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+. Vaya a. link:batteries-reinstall-controller-canister-task.html["Vuelva a instalar el compartimento de controladoras E2800"].
+

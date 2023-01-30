@@ -1,0 +1,192 @@
+---
+permalink: upgrade-santricity/upgrade-multiple-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Utilice Unified Manager de SANtricity para actualizar el software de sistema operativo SANtricity en varias cabinas de almacenamiento del mismo tipo. 
+---
+= Actualice software y firmware de varias controladoras
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede actualizar varias controladoras del mismo tipo con Unified Manager de SANtricity.
+
+.Antes de empezar
+* Revisar link:overview-upgrade-consider-task.html["Consideraciones de renovación"].
+* Determinar si desea activar la actualización del software ahora o más adelante. Puede optar por activarlos más tarde por los siguientes motivos:
++
+** *Hora del día* -- la activación del software puede llevar mucho tiempo, por lo que es posible que desee esperar hasta que las cargas de E/S sean más livianas. Las controladoras conmutan al nodo de respaldo durante la activación, de manera que el rendimiento podría ser inferior al habitual hasta que finalice la actualización.
+** *Tipo de paquete*: Es posible que desee probar el nuevo software de sistema operativo en una matriz de almacenamiento antes de actualizar los archivos en otras matrices de almacenamiento.
+
+
+* Revise estas precauciones:
+
+
+
+CAUTION: Riesgo de pérdida de datos o riesgo de daños a la cabina de almacenamiento: No introduzca cambios en la cabina de almacenamiento mientras se realiza la actualización. Mantenga encendida la cabina de almacenamiento.
+
+
+CAUTION: Si va a actualizar SANtricity OS en un dispositivo StorageGRID (por ejemplo, SG5612 o SG5760), debe detener la actividad de I/o colocando el dispositivo en modo de mantenimiento antes de continuar con este procedimiento o podrían perderse datos. Para conocer los pasos detallados, consulte las instrucciones de instalación y mantenimiento del dispositivo StorageGRID.
+
+
+
+== Paso 1: Realizar la comprobación del estado previa a la actualización
+
+Una comprobación del estado se ejecuta como parte del proceso de actualización, pero también es posible ejecutarla por separado, antes de comenzar. La comprobación del estado evalúa los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización.
+
+.Pasos
+. Abra Unified Manager.
+. En la vista principal, seleccione *gestionar* y, a continuación, elija Menú:Centro de actualización[Comprobación del estado previa a la actualización].
++
+Se abre el cuadro de diálogo Comprobación del estado previa a la actualización, donde se enumeran todos los sistemas de almacenamiento detectados.
+
+. Si es necesario, puede filtrar u ordenar los sistemas de almacenamiento de la lista, de modo que pueda ver todos los sistemas que están actualmente en estado óptimo.
+. Marque las casillas de comprobación de los sistemas de almacenamiento que quiere incluir en la comprobación del estado.
+. Haga clic en *Inicio*.
++
+Mientras se lleva a cabo la comprobación del estado, se muestra el progreso en el cuadro de diálogo.
+
+. Una vez finalizada la comprobación del estado, puede hacer clic en los tres puntos (...) a la derecha de cada fila para ver más información y realizar otras tareas.
++
+
+NOTE: Si ocurre un error en la comprobación del estado de alguna cabina, puede omitir esa cabina en particular y continuar la actualización de las otras cabinas. Otra opción es detener el proceso por completo y solucionar los problemas de las cabinas que presentaron errores.
+
+
+
+
+
+== Paso 2: Descargar archivos de software del sitio de soporte
+
+En este paso, vaya al sitio de soporte de NetApp para guardar los nuevos archivos de software del paquete descargable (DLP) en el sistema host de gestión.
+
+.Pasos
+. Si la cabina de almacenamiento contiene una sola controladora o un controlador multivía no está en uso, detenga la actividad de I/o de la cabina de almacenamiento para evitar errores en la aplicación. Si la cabina de almacenamiento tiene dos controladoras y existe un controlador multivía instalado, no necesita detener la actividad de I/O.
+. En la vista principal de Unified Manager, seleccione *gestionar* y, a continuación, seleccione una o varias cabinas de almacenamiento que desee actualizar.
+. Seleccione MENU:Centro de actualización[Actualizar software de sistema operativo SANtricity].
++
+Se muestra la página Actualizar software de sistema operativo SANtricity.
+
+. Descargue el paquete de software de sistema operativo de SANtricity del sitio de soporte de NetApp en el equipo local.
++
+.. Haga clic en *Agregar nuevo archivo al repositorio de software*.
+.. Haga clic en el enlace para buscar las últimas *Descargas de SANtricity OS*.
+.. Haga clic en el enlace *Descargar la versión más reciente*.
+.. Siga las restantes instrucciones para descargar el archivo de sistema operativo de SANtricity y el archivo de NVSRAM en el equipo local.
+
+
++
+
+NOTE: Se requiere firmware con firma digital en la versión 8.42 y posteriores. Si intenta descargar firmware sin firmar, se muestra un error y se anula la descarga.
+
+
+
+
+
+== Paso 3: Transfiera los archivos de software a las controladoras
+
+Puede cargar el archivo de software de sistema operativo SANtricity y el archivo NVSRAM en el repositorio para poder acceder al centro de actualización de Unified Manager.
+
+
+CAUTION: Riesgo de pérdida de datos o riesgo de daños a la cabina de almacenamiento: No introduzca cambios en la cabina de almacenamiento mientras se realiza la actualización. Mantenga encendida la cabina de almacenamiento.
+
+.Pasos
+. En la vista principal de Unified Manager, seleccione *gestionar* y, a continuación, seleccione una o varias cabinas de almacenamiento que desee actualizar.
+. Seleccione MENU:Centro de actualización[Actualizar software de sistema operativo SANtricity].
++
+Se muestra la página Actualizar software de sistema operativo SANtricity.
+
+. Descargue el paquete de software de sistema operativo de SANtricity del sitio de soporte de NetApp en el equipo local.
++
+.. Haga clic en *Agregar nuevo archivo al repositorio de software*.
+.. Haga clic en el enlace para buscar las últimas *Descargas de SANtricity OS*.
+.. Haga clic en el enlace *Descargar la versión más reciente*.
+.. Siga las restantes instrucciones para descargar el archivo de sistema operativo de SANtricity y el archivo de NVSRAM en el equipo local.
+
+
++
+
+NOTE: Se requiere firmware con firma digital en la versión 8.42 y posteriores. Si intenta descargar firmware sin firmar, se muestra un error y se anula la descarga.
+
+. Seleccione el archivo de software de sistema operativo y el archivo de NVSRAM que desea usar para actualizar las controladoras:
++
+.. En el menú desplegable *Seleccione un archivo de software del sistema operativo SANtricity*, seleccione el archivo del sistema operativo que descargó en el equipo local.
++
+Si hay varios archivos disponibles, se ordenarán del más reciente al más antiguo.
+
++
+
+NOTE: En el repositorio de software, figuran todos los archivos de software relacionados con el proxy de servicios web. Si no ve el archivo que desea utilizar, haga clic en el vínculo *Agregar nuevo archivo al repositorio de software*, para buscar la ubicación donde reside el archivo de sistema operativo que desea agregar.
+
+.. En el menú desplegable *Seleccione un archivo NVSRAM*, seleccione el archivo de la controladora que desea utilizar.
++
+Si hay varios archivos, se ordenarán del más reciente al más antiguo.
+
+
+
+. En la tabla cabina de almacenamiento compatible, revise las cabinas de almacenamiento que son compatibles con el archivo de software del sistema operativo seleccionado. A continuación, seleccione las cabinas que desea actualizar.
++
+** Las cabinas de almacenamiento seleccionadas en la vista gestionar que son compatibles con el archivo de firmware elegido están seleccionadas de forma predeterminada en la tabla cabina de almacenamiento compatible.
+** Las matrices de almacenamiento que no se pueden actualizar con el archivo de firmware seleccionado no se pueden seleccionar en la tabla matriz de almacenamiento compatible, como indica el estado *incompatible*.
+
+
+. (Opcional) para transferir el archivo de software a las cabinas de almacenamiento sin activarlo, active la casilla de comprobación *transferir el software de sistema operativo a las cabinas de almacenamiento, marcarlo como preconfigurado y activarlo posteriormente*.
+. Haga clic en *Inicio*.
+. Según elija activar ahora o más adelante, realice una de las siguientes acciones:
++
+** Escriba *TRANSFER* para confirmar que desea transferir las versiones propuestas de software del sistema operativo en las matrices que seleccionó para actualizar y, a continuación, haga clic en *transferir*.
++
+Para activar el software transferido, seleccione MENU:Centro de actualización[Activar software de sistema operativo almacenado temporalmente].
+
+** Escriba *UPGRADE* para confirmar que desea transferir y activar las versiones propuestas de software del sistema operativo en las matrices que seleccionó para actualizar y, a continuación, haga clic en *Actualizar*.
++
+El sistema transfiere el archivo de software a cada cabina de almacenamiento que seleccionó para actualizar y, luego, activa el archivo mediante un reinicio.
+
+
+
++
+Durante la operación de actualización, ocurren las siguientes acciones:
+
++
+** Como parte del proceso de actualización, se ejecuta una comprobación del estado previa a la actualización. La comprobación del estado antes de la actualización evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización.
+** Si ocurre un error en la comprobación del estado de una cabina de almacenamiento, la actualización se detiene. Puede hacer clic en los tres puntos (...). Y seleccione *Guardar registro* para revisar los errores. También puede optar por anular el error de comprobación del estado y hacer clic en *continuar* para continuar con la actualización.
+** Puede cancelar la operación de actualización después de la comprobación del estado previa a la actualización.
+
+
+. (Opcional) una vez completada la actualización, puede ver una lista de lo que se actualizó en una cabina de almacenamiento en particular. Para ello, haga clic en los tres puntos (...) Y, a continuación, seleccione *Guardar registro*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre``upgrade_log-<date>.json``.
+
+
+
+
+
+== Paso 4: Activación de archivos de software almacenados en etapas (opcional)
+
+Puede optar por activar el archivo de actualización inmediatamente o esperar hasta un momento más conveniente. Este procedimiento entiende que se optó por activar el archivo de software más adelante.
+
+
+NOTE: No se puede detener el proceso de activación una vez iniciado.
+
+.Pasos
+. En la vista principal de Unified Manager, seleccione *gestionar*. Si es necesario, haga clic en la columna Estado para ordenar todas las cabinas de almacenamiento con el estado "actualización del sistema operativo (esperando la activación)".
+. Seleccione una o varias cabinas de almacenamiento para las cuales desee activar el software y, a continuación, seleccione MENU:Centro de actualización[Activar software de sistema operativo almacenado temporalmente].
++
+Durante la operación de actualización, ocurren las siguientes acciones:
+
++
+** Como parte del proceso de activación, se ejecuta una comprobación del estado previa a la actualización. La comprobación del estado antes de la actualización evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la activación.
+** Si ocurre un error en la comprobación del estado de una cabina de almacenamiento, la activación se detiene. Puede hacer clic en los tres puntos (...). Y seleccione *Guardar registro* para revisar los errores. También puede optar por anular el error en la comprobación del estado y hacer clic en *continuar* para continuar con la activación.
+** Puede cancelar la operación de activación después de la comprobación del estado previa a la actualización. Cuando la comprobación del estado previa a la actualización se realiza correctamente, se produce la activación. El tiempo que requiere la activación depende de la configuración de la cabina de almacenamiento y los componentes que se van a activar.
+
+
+. (Opcional) una vez completada la activación, puede ver una lista de lo que se activó en una cabina de almacenamiento en particular. Para ello, haga clic en los tres puntos (...) Y, a continuación, seleccione *Guardar registro*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre `activate_log-<date>.json`.
+
+
+
+.El futuro
+Se completó la actualización del software de la controladora. Es posible reanudar las operaciones normales.

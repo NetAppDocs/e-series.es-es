@@ -1,0 +1,317 @@
+---
+permalink: install-hw-cabinet/prepare-move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Prepárese para mover el armario. 
+---
+= Prepárese para mover el armario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare para mover el gabinete desde su ubicación en su área de recepción estimando su peso total, aclimatando el gabinete, quitando los materiales de embalaje, y comprobando el contenido del envío.
+
+
+
+== Paso 1: Estimar el peso del gabinete
+
+El armario transporta de forma fiable y segura hasta 909.1 kg (2000 lb) de capacidad. Debe saber el peso aproximado del armario para poder moverlo de forma segura.
+
+.Pasos
+. Utilice la siguiente tabla para calcular el peso total aproximado del armario.
++
+El peso total del armario depende del número y tipo de bandejas instaladas en el armario.
+
++
+|===
+| Componente | Peso | Notas 
+
+
+ a| 
+Armario
+ a| 
+138.80 kg (306.0 lb)
+ a| 
+Vacío con la puerta trasera instalada
+
+
+
+ a| 
+Unidades de distribución de energía (PDU [par])
+ a| 
+19.96 kg (44.0 lb)
+ a| 
+
+
+
+ a| 
+Raíles de montaje (par)
+ a| 
+1.59 kg (3.50 lb)
+ a| 
+
+
+
+ a| 
+Soporte de unidades de controladora E2612
+ a| 
+27 kg (59.52 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E2624
+ a| 
+26.12 kg (57.32 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E2660
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidad de controladora E2712
+ a| 
+27.12 kg (59.8 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de controladora E2724
+ a| 
+26 kg (57.32 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E2760
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5412
+ a| 
+27.92 (61.52 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5424
+ a| 
+26.92 kg (59.32 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de controladora-unidad E5460
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5512
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+El soporte de unidades de controladora E5524
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5560
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5612
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5624
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades de controladora E5660
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Cabina Flash EF540
+ a| 
+23.64 kg (52.12 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Cabina flash EF550
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Cabina flash EF560
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades DE1600
+ a| 
+26.3 kg (58 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades DE5600
+ a| 
+25.31 kg (55.8 lb)
+ a| 
+Configuración máxima
+
+
+
+ a| 
+Soporte de unidades DE6600
+ a| 
+104.1 kg (229.6 lb)
+ a| 
+Configuración máxima
+
+|===
+. Revise las siguientes notas.
++
+
+CAUTION: Quite todas las unidades de la bandeja de unidades DE6600 antes de mover el armario a su posición final.
+
++
+
+CAUTION: *Posibles daños en el equipo* -- los armarios con bandejas de unidades DE6600 se envían sin unidades para reducir el peso de envío. Debido a que un armario completamente cargado con bandejas de unidades DE6600 puede tener un peso de más de 1247.3 kg (2750 lb), asegúrese de mover el armario a su sitio antes de cargar las unidades y asegúrese de que la capacidad de carga del suelo del destino del armario sea compatible con ese peso.
+
++
+
+CAUTION: *Posible daño a los componentes de la bandeja* -- no coloque una bandeja de unidades DE6600 sobre una superficie plana. Instale el soporte de unidades DE6600 en el armario antes de utilizar o mover cajones.
+
+
+
+
+
+== Paso 2: Armario acclimate
+
+Asegúrese de que el armario y las bandejas están aclimatados al entorno interior antes de retirar los materiales de embalaje.
+
+.Pasos
+. Si la temperatura exterior es inferior a 0 °C (32 °F), deje el armario y las bandejas dentro de sus cajas en interiores durante al menos 24 horas para evitar la condensación.
+. Aumentar o disminuir el período de estabilización de 24 horas dependiendo de la temperatura exterior a la llegada.
++
+
+CAUTION: *Posible daño a los componentes de la bandeja* -- Si la temperatura exterior es inferior a 0°C (32°F) cuando reciba su armario y bandejas, no los desembale inmediatamente o desembale. La exposición de componentes fríos a temperaturas interiores cálidas puede provocar condensación, lo que puede provocar daños o fallos en los componentes.
+
+
+
+
+
+== Paso 3: Retire los materiales de embalaje
+
+Retire los materiales de embalaje sólo después de que el armario se haya aclimatado a la temperatura interior.
+
+.Pasos
+. Consulte las instrucciones de desembalaje incluidas en la parte frontal de la caja de envío.
+. Retire los materiales de embalaje de acuerdo con las instrucciones que se incluyen.
+
+
+
+
+== Paso 4: Compruebe el contenido de envío
+
+Compruebe el contenido de envío para asegurarse de que todo el equipo ha llegado a las instalaciones.
+
+.Pasos
+. Compare la lista de embalaje con el equipo recibido.
+. Asegúrese de que todos los equipos han llegado a las instalaciones.
+. Si falta algún artículo, póngase en contacto con su representante de ventas.
+
+
+
+
+== Paso 5: Retire los componentes pesados del armario
+
+Retire algunos de los componentes más pesados que se encuentran en la parte superior del armario para garantizar la máxima estabilidad.
+
+.Antes de empezar
+* Asegúrese de que el peso máximo no supere los 2000 lbs antes de mover el armario.
+* Tenga en cuenta la ubicación de cada bandeja, componente y cable antes de extraerlo, de modo que pueda volver a instalar cada elemento en su ubicación original.
+
+
+.Pasos
+. Registre la configuración del cable para su posterior montaje si es necesario desconectar algún cable.
+. Quite los soportes de unidades y los soportes de controladora-unidad de la mitad superior del armario. Mantenga todos los componentes de la misma bandeja juntos.
++
+
+NOTE: No es necesario quitar las fuentes de alimentación ni otros componentes de la parte posterior de cada soporte
+
+. Coloque cada componente en una bolsa antiestática separada. Si las cajas de envío originales están disponibles, utilícela para transportar los componentes.
+

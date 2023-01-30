@@ -1,0 +1,24 @@
+---
+permalink: config-linux/iser-ib-determine-host-port-guids-task.html 
+sidebar: sidebar 
+keywords: host port GUIDs, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Determinar GUID de puerto de host. 
+---
+= Determine los GUID del puerto de host y establezca la configuración recomendada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El paquete infiniband-diags incluye comandos para mostrar el identificador único global (GUID) de cada puerto InfiniBand (IB). La mayoría de las distribuciones de Linux con OFED/RDMA compatibles con los paquetes incluidos también tienen el paquete infiniband-diags, que incluye comandos para mostrar información sobre HCA.
+
+.Pasos
+. Instale el `infiniband-diags` paquete con los comandos de gestión de paquetes del sistema operativo.
+. Ejecute el `ibstat` comando para mostrar la información del puerto.
+. Registre los GUID del iniciador en la xref:iser-ib-worksheet-concept.adoc[Hoja de trabajo de Iser over InfiniBand].
+. Seleccione la configuración adecuada en la utilidad HBA.
++
+La configuración adecuada se muestra en la columna Notas de la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+

@@ -1,0 +1,344 @@
+---
+permalink: maintenance-e2800/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: Revise los requisitos para la conversión del protocolo del puerto de host en una E2800. 
+---
+= Requisitos para cambiar el protocolo de puerto de host E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de convertir el protocolo de host para una cabina E2800, revise los requisitos.
+
+
+
+== Los puertos de host que es posible cambiar
+
+
+NOTE: Solo las HIC FC de 16 GB/10 GB iSCSI y los puertos base ópticos de una controladora E2800 pueden convertirse.
+
+La siguiente figura muestra la parte posterior de una controladora E2800 con dos puertos de host de placa base SFP+ (óptica) *(1)* y cuatro puertos HIC SFP+ (óptica) *(2)*.
+
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base óptica quad sfp hic]
+
+
+NOTE: También hay disponible una HIC de dos puertos.
+
+La controladora E2800 o las controladoras de la cabina de almacenamiento pueden tener diferentes tipos de puertos de host en placa base y diferentes tipos de puertos de HIC. En la tabla, se muestran los puertos de host que se pueden cambiar con un paquete de funciones.
+
+|===
+| Si tiene estos puertos de host en la placa base... | Y tiene estos puertos HIC... | Puede cambiar... 
+
+
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Ninguno
+ a| 
+Solo los puertos de host de la placa base
+
+
+
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Cuatro puertos SFP+ (óptico)
+ a| 
+Todos los puertos
+
+
+
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Todos los puertos
+
+
+
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Dos o cuatro puertos SAS
+ a| 
+Solo los puertos de host de la placa base
+
+
+
+ a| 
+Dos puertos SFP+ (óptico)
+ a| 
+Dos puertos RJ-45 (base-T)
+ a| 
+Solo los puertos de host de la placa base
+
+
+
+ a| 
+Dos puertos RJ-45 (base-T)
+ a| 
+Ninguno
+ a| 
+Ninguno de los puertos
+
+
+
+ a| 
+Dos puertos RJ-45 (base-T)
+ a| 
+Dos puertos RJ-45 (base-T)
+ a| 
+Ninguno de los puertos
+
+|===
+Los puertos de host de la placa base y los puertos HIC pueden usar el mismo protocolo de host o diferentes protocolos de host.
+
+
+
+== Requisitos para cambiar el protocolo del host
+
+* Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
+* Debe detener las operaciones de I/o del host cuando realiza la conversión y no podrá acceder a los datos en la cabina de almacenamiento hasta después de completar correctamente la conversión.
+* Se debe usar la gestión fuera de banda. (No puede utilizar la administración en banda para completar este procedimiento.)
+* Ha obtenido el hardware necesario para la conversión. Su representante de ventas de NetApp puede ayudarle a determinar qué hardware necesita y a solicitar las piezas correctas.
+* Si intenta cambiar los puertos de host en placa base de la cabina de almacenamiento y actualmente utiliza transceptores SFP de protocolo doble (también denominado _Unified_) que ha adquirido de NetApp, no es necesario cambiar los transceptores SFP.
+* Asegúrese de que los transceptores SFP de protocolo doble admiten FC (a 4 Gbps, 16 Gbps) e iSCSI (a 10 Gbps), pero no admiten iSCSI de 1 Gbps. Consulte link:../maintenance-e2800/hpp-change-host-protocol-task.html["Paso 1: Determinar si tiene SFP con doble protocolo"] Para determinar qué tipo de transceptores SFP están instalados.
+
+
+
+
+== Consideraciones que tener en cuenta al cambiar el protocolo del host
+
+Las consideraciones para cambiar el protocolo de host dependen de los protocolos de inicio y finalización de los puertos de host de la placa base y los puertos de HIC.
+
+Si utiliza una función de mirroring o la función Garantía de datos (DA), debe comprender qué sucede con estas funciones cuando cambia el protocolo de puerto de host, como se describe a continuación.
+
+
+NOTE: Las siguientes consideraciones se aplican solo si se convierte una cabina de almacenamiento que ya se encuentra en uso. Estas consideraciones no aplican si se convierte una nueva cabina de almacenamiento que aún no tiene hosts y volúmenes definidos.
+
+
+
+=== Conversión de FC a iSCSI
+
+* Si su configuración contiene hosts DE arranque SAN conectados a los puertos de placa base FC, compruebe el https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Para garantizar que la configuración sea compatible con iSCSI. Si no lo es, no es posible convertir el protocolo de host a iSCSI.
+* ISCSI no admite la función DA.
++
+** Si actualmente utiliza DA y desea convertir puertos de host FC a iSCSI, debe deshabilitar DA en todos los volúmenes.
+** Si no se desactiva DA antes de convertir a iSCSI, la cabina de almacenamiento no cumple las normativas después de la conversión.
+
+
+* La función Synchronous Mirroring no se admite para iSCSI.
++
+** Si actualmente utiliza relaciones de mirroring síncrono y desea convertir los puertos de host de FC a iSCSI, debe desactivar la función de mirroring síncrono.
+** Consulte la ayuda en línea de SANtricity System Manager para quitar todas las parejas reflejadas síncronas, lo cual elimina las relaciones de reflejo de la cabina de almacenamiento local y de la cabina de almacenamiento remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Synchronous Mirroring.
++
+
+CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de convertir a iSCSI, el sistema perderá el acceso a los datos y se pueden producir pérdidas de datos.
+
+
+
+* El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo.
++
+** Si actualmente utiliza mirroring asíncrono y desea convertir todos los puertos de host de FC a iSCSI, debe desactivar la función de mirroring asíncrono antes de aplicar el paquete de funciones.
+** Consulte la ayuda en línea de SANtricity System Manager para eliminar todos los grupos de coherencia de reflejos y quitar todas las parejas reflejadas de las cabinas de almacenamiento local y remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Asynchronous Mirroring.
+
+
+
+
+
+
+=== Conversión de iSCSI a FC
+
+* El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo. Si actualmente utiliza Mirroring asíncrono con los puertos en placa base, debe desactivar la función Mirroring asíncrono antes de cambiar el protocolo.
+* Consulte la ayuda en línea de SANtricity System Manager para eliminar todos los grupos de coherencia de reflejos y quitar todas las parejas reflejadas de las cabinas de almacenamiento local y remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Asynchronous Mirroring.
+
+
+
+
+=== Conversión de FC a FC/iSCSI
+
+Consideraciones de mirroring:
+
+* ISCSI no admite el mirroring síncrono.
+* Si una cabina de almacenamiento utilizada para el mirroring actualmente solo contiene puertos FC y desea convertir algunos de ellos a iSCSI, debe determinar qué puertos se utilizan para el mirroring.
+* No es necesario convertir los puertos de la cabina de almacenamiento local y de la cabina de almacenamiento remota al mismo protocolo siempre que ambas cabinas de almacenamiento tengan al menos un puerto FC activo después de la conversión.
+* Si planea convertir los puertos que se utilizan para las relaciones reflejadas, debe desactivar todas las relaciones de reflejo síncrono o asíncrono antes de aplicar el paquete de funciones.
+* Si planea convertir los puertos que se utilizan _not_ para las operaciones de mirroring, las operaciones de mirroring asíncrono no se verán afectadas.
+* Antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados. Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota.
+
+
+Consideraciones sobre la garantía de datos:
+
+* La función Data Assurance (DA) no se admite para iSCSI.
++
+Para garantizar que el acceso a los datos siga siendo ininterrumpido, es posible que deba reasignar o quitar volúmenes DE DA de clústeres de hosts antes de aplicar el paquete de funciones.
+
++
+
+NOTE: La función de garantía de datos para iSCSI se admite en las versiones 11.40 y posteriores de SANtricity.
+
++
+|===
+| Si tiene... | Debe... 
+
+
+ a| 
+Volúmenes DE DA en el clúster predeterminado
+ a| 
+Reasigne todos los volúmenes DE DA en el clúster predeterminado.
+
+** Si no desea compartir volúmenes DE DA entre hosts, siga estos pasos:
++
+... Cree una partición de host para cada conjunto de puertos de host FC (a menos que esto ya se haya realizado).
+... Reasigne los volúmenes DE DA a los puertos de host adecuados.
+
+
+** Si desea compartir volúmenes DE DA entre hosts, siga estos pasos:
++
+... Cree una partición de host para cada conjunto de puertos de host FC (a menos que esto ya se haya realizado).
+... Cree un clúster de hosts que incluya los puertos de host adecuados.
+... Reasigne los volúmenes DE DA al nuevo clúster de hosts.
++
+
+NOTE: Este método elimina el acceso del volumen a todos los volúmenes que permanezcan en el clúster predeterminado.
+
+
+
+
+
+
+
+ a| 
+Volúmenes DA en un clúster de hosts que contiene hosts solo FC y desea añadir hosts solo iSCSI
+ a| 
+Quite todos los volúmenes DE DA que pertenecen al clúster mediante una de estas opciones.
+
+
+NOTE: Los volúmenes DE DA no pueden compartirse en este escenario.
+
+** Si no se desean compartir volúmenes DE DA entre hosts, reasigne todos los volúmenes DE DA a hosts FC individuales dentro del clúster.
+** Segregue los hosts solo de iSCSI a su propio clúster host y mantenga el clúster de host FC tal como está (con volúmenes DE DA compartidos).
+** Añada un HBA de FC a los hosts solo con iSCSI para permitir el uso compartido de los volúmenes DA y no DA.
+
+
+
+
+ a| 
+Volúmenes DE DA en un clúster de hosts que contiene hosts solo FC o volúmenes DA asignados a una partición de host FC individual
+ a| 
+No es necesario realizar ninguna acción antes de aplicar el paquete de funciones. Los volúmenes DE DA se mantendrán asignados a su host FC respectivo.
+
+
+
+ a| 
+No hay particiones definidas
+ a| 
+No es necesario realizar ninguna acción antes de aplicar el paquete de funciones porque no hay volúmenes asignados actualmente. Después de convertir el protocolo del host, siga el procedimiento adecuado para crear particiones de host y, si lo desea, clústeres de hosts.
+
+|===
+
+
+
+
+=== Conversión de iSCSI a FC/iSCSI
+
+* Si planea convertir un puerto que se está utilizando para la duplicación, debe mover las relaciones de mirroring a un puerto que permanecerá iSCSI después de la conversión.
++
+De lo contrario, el enlace de comunicación puede estar inactivo después de la conversión debido a una discrepancia en el protocolo entre el puerto FC nuevo en la cabina local y el puerto iSCSI existente en la cabina remota.
+
+* Si planea convertir los puertos que no se utilizan para las operaciones de mirroring, las operaciones de mirroring asíncrono no se verán afectadas.
++
+Antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados. Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota.
+
+
+
+
+
+=== Convertir de FC/iSCSI a FC
+
+* Cuando se convierten todos los puertos de host en FC, tenga en cuenta que la función de mirroring asíncrono mediante FC debe producirse en el puerto FC con el número más alto.
+* Si piensa convertir los puertos que se utilizan para las relaciones reflejadas, debe desactivar estas relaciones antes de aplicar el paquete de funciones.
++
+
+CAUTION: *Posible pérdida de datos* -- Si no elimina las relaciones de duplicación asíncrona que ocurrieron a través de iSCSI antes de convertir los puertos a FC, es posible que las controladoras se bloqueen y se pierdan datos.
+
+* Si la cabina de almacenamiento actualmente tiene puertos en la placa base iSCSI y puertos FC HIC, las operaciones de mirroring asíncrono no se verán afectadas.
++
+Antes y después de la conversión, la duplicación se producirá en el puerto FC con el número más alto, que seguirá siendo el puerto HIC con la etiqueta *2* de la figura. Antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados. Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota.
+
+* Si la cabina de almacenamiento tiene puertos FC en placa base y puertos iSCSI HIC, debe eliminar todas las relaciones de mirroring que se produzcan mediante FC antes de aplicar el paquete de funciones.
++
+Cuando aplique el paquete de funciones, el soporte de duplicación pasará del puerto de host de la placa base con el número más alto (con la etiqueta *1* en la figura) al puerto HIC con el número más alto (con la etiqueta *2* en la figura).
+
++
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc a fc]
+
++
+|===
+3+| Antes de la conversión 3+| Después de la conversión .2+| Pasos requeridos 
+
+
+| Puertos de placa base | Puertos HIC | Puerto que se utiliza para mirroring | Puertos de placa base | Puertos HIC | Puerto que se utiliza para mirroring 
+
+
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+FC
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+Sincronice los grupos de coherencia de reflejos antes y pruebe las comunicaciones después
+
+
+
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+*(1)*
+ a| 
+FC
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+Elimine las relaciones de mirroring antes y vuelva a establecer el mirroring después
+
+|===
+
+
+
+
+=== Conversión de FC/iSCSI a iSCSI
+
+* ISCSI no admite el mirroring síncrono.
+* Si planea convertir los puertos que se utilizan para las relaciones reflejadas, debe desactivar las relaciones de mirroring antes de aplicar el paquete de funciones.
++
+
+CAUTION: *Posible pérdida de datos* -- Si no elimina las relaciones de mirroring que ocurrieron sobre FC antes de convertir los puertos a iSCSI, los controladores podrían bloquearse y podría perder datos.
+
+* Si no planea convertir los puertos que se utilizan para las operaciones de mirroring, las operaciones de mirroring no se verán afectadas.
+* Antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados.
+* Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota.
+
+
+
+
+=== El mismo protocolo de host y las mismas operaciones de mirroring
+
+Las operaciones de mirroring no se ven afectadas si los puertos de host que se utilizan para el mirroring mantienen el mismo protocolo después de aplicar el paquete de funciones. Aún así, antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados.
+
+Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota. Consulte la ayuda en línea de System Manager de SANtricity si tiene alguna pregunta sobre cómo hacerlo.

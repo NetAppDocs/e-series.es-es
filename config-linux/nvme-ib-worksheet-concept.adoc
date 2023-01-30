@@ -1,0 +1,237 @@
+---
+permalink: config-linux/nvme-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use esta hoja de datos para registrar la información de configuración de almacenamiento NVMe over InfiniBand. 
+---
+= Registre su configuración de NVMe over IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento NVMe over InfiniBand. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+
+
+== Identificadores de host
+
+
+NOTE: El iniciador del software NQN se determina durante la tarea.
+
+Busque y documente el iniciador NQN de cada host. Normalmente, el NQN se encuentra en el archivo /etc/nvme/hostnqn.
+
+|===
+| Número de llamada | Conexiones de puertos de host | NQN host 
+
+
+ a| 
+1
+ a| 
+Host (iniciador) 1
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+|===
+
+
+== Configuración recomendada
+
+En una topología de conexión directa, uno o más hosts están conectados directamente al subsistema. En la versión 11.50 de SANtricity OS, admitimos una única conexión desde cada host a una controladora del subsistema, como se muestra a continuación. En esta configuración, un puerto HCA (adaptador de canal de host) de cada host debe estar en la misma subred que el puerto de la controladora E-Series al que está conectado, pero en una subred diferente del otro puerto HCA.
+
+image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+
+
+
+== NQN objetivo
+
+Documente el NQN objetivo para la cabina de almacenamiento. Utilizará esta información en xref:nvme-ib-configure-storage-connections-task.adoc[Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento].
+
+Busque el nombre del NQN de la matriz de almacenamiento mediante SANtricity: *Matriz de almacenamiento* > *NVMe sobre InfiniBand* > *gestionar configuración*. Esta información puede ser necesaria cuando se crean sesiones NVMe over InfiniBand desde sistemas operativos que no admiten la detección de objetivos de envío.
+
+|===
+| Número de llamada | Nombre de cabina | IQN objetivo 
+
+
+ a| 
+6
+ a| 
+Controladora de cabina (objetivo)
+ a| 
+
+|===
+
+
+== Configuración de red
+
+Documentar la configuración de red que se utilizará para los hosts y el almacenamiento de la estructura InfiniBand. Estas instrucciones suponen que se utilizarán dos subredes para una redundancia total.
+
+El administrador de red puede proporcionar la siguiente información. Esta información se usa en el tema, xref:nvme-ib-configure-storage-connections-task.adoc[Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento].
+
+
+
+=== Subred a
+
+Defina la subred que se va a usar.
+
+|===
+| Dirección de red | Máscara de red 
+
+
+ a| 
+ a| 
+
+|===
+Documente los NQN que utilizarán los puertos de la matriz y cada puerto de host.
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | NQN 
+
+
+ a| 
+3
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+5
+ a| 
+Controladora A, puerto 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controladora B, puerto 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Host 1, puerto 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, puerto 1
+ a| 
+
+|===
+
+
+=== Subred B
+
+Defina la subred que se va a usar.
+
+|===
+| Dirección de red | Máscara de red 
+
+
+ a| 
+ a| 
+
+|===
+Documentar los IQN que utilizarán los puertos de matriz y cada puerto de host.
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | NQN 
+
+
+ a| 
+8
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+10
+ a| 
+Controladora A, puerto 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controladora B, puerto 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host 1, puerto 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, puerto 2
+ a| 
+
+|===
+
+
+== Asignando el nombre de host
+
+
+NOTE: El nombre del host de asignación se crea durante el flujo de trabajo.
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

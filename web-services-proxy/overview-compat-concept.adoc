@@ -1,0 +1,61 @@
+---
+permalink: web-services-proxy/overview-compat-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Compatibilidad y restricciones para WSP. 
+---
+= Compatibilidad y restricciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las siguientes restricciones y compatibilidad se aplican al uso del proxy de servicios web.
+
+|===
+| Consideración | Compatibilidad o restricción 
+
+
+ a| 
+Soporte HTTP
+ a| 
+El proxy de servicios web permite el uso de HTTP o HTTPS. (La versión incrustada de Web Services requiere HTTPS por motivos de seguridad.)
+
+
+
+ a| 
+Firmware y sistemas de almacenamiento
+ a| 
+El proxy de servicios web puede gestionar todos los sistemas de almacenamiento E-Series, incluida una combinación de sistemas anteriores y las últimas versiones de E2800, EF280, E5700, EF570, EF300, Y sistemas de las series EF600.
+
+
+
+ a| 
+Compatibilidad con IP
+ a| 
+El proxy de servicios web es compatible con el protocolo IPv4 o con el protocolo IPv6.
+
+
+NOTE: Es posible que se produzca un error en el protocolo IPv6 cuando el proxy de servicios web intenta detectar automáticamente la dirección de gestión de la configuración de la controladora. Entre las posibles causas del fallo se encuentran problemas durante el reenvío de direcciones IP o la activación de IPv6 en los sistemas de almacenamiento, pero no en el servidor.
+
+
+
+ a| 
+Restricciones de nombres de archivo de NVSRAM
+ a| 
+El proxy de servicios web utiliza nombres de archivo NVSRAM para identificar la información de la versión con precisión. Por lo tanto, no se pueden cambiar los nombres de los archivos NVSRAM cuando se utilizan con el proxy de servicios web. Es posible que el proxy de servicios web no reconozca un archivo NVSRAM cuyo nombre ha cambiado como un archivo de firmware válido.
+
+
+
+ a| 
+Web Symbol
+ a| 
+Symbol Web es una URL en la API REST. Proporciona acceso a casi todas las llamadas con símbolos. La función Symbol forma parte de la siguiente URL:
+
+`+http://host:port/devmgr/storage-system/storage array ID/symbol/symbol function+`
+
+
+NOTE: Los sistemas de almacenamiento con deshabilitado Symbol se admiten a través del proxy de servicios web.
+
+|===

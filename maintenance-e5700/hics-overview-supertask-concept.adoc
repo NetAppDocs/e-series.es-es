@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e5700/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
+summary: Revise los requisitos para el reemplazo de E5700 HIC. 
+---
+= Requisitos para reemplazar E5700 HIC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC) en una E5700, revise los requisitos y consideraciones.
+
+
+
+== Descripción general del procedimiento
+
+Es posible añadir, actualizar o reemplazar una HIC en la bandeja de controladoras E5724 y la bandeja de controladoras E5760.
+
+A continuación, se ofrece información general de los pasos para reemplazar una HIC en una controladora E5700 (E5724 o E5760):
+
+. Desconectar la controladora
+. Quite el compartimento de la controladora
+. Sustituya la batería
+. Sustituya el compartimento de la controladora
+. Coloque la controladora en línea
+
+
+
+
+== Requisitos para añadir, actualizar o reemplazar una HIC
+
+Si planea añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC), tenga en cuenta los siguientes requisitos.
+
+* Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, esto se debe a que ambas controladoras deben tener la misma configuración de HIC cuando están encendidas.)
+* Debe tener dos HIC que sean compatibles con las controladoras.
++
+Para configuraciones dobles (dos controladoras), las HIC instaladas en los dos contenedores de controladora deben ser idénticas. La presencia de HIC no coincidentes hace que la controladora con la HIC de reemplazo se bloquee cuando lo conecta.
+
+* Tiene todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los puertos de host nuevos.
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] o la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
+
+* Tiene una muñequera ESD o ha tomado otras precauciones antiestáticas.
+* Tiene un destornillador Phillips del número 1.
+* Tiene etiquetas para identificar cada cable conectado al compartimento de controladoras.
+* Tiene una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+

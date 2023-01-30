@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-the-settings-for-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible modificar el nombre, el tipo de sistema operativo del host y los clústeres de hosts asociados de un host o clúster de hosts. 
+---
+= Cambiar la configuración de un host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible modificar el nombre, el tipo de sistema operativo del host y los clústeres de hosts asociados de un host o clúster de hosts.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione el host que desea editar y, a continuación, haga clic en *Ver/editar configuración*.
++
+Se muestra un cuadro de diálogo en el que se proporciona la configuración actual de los hosts.
+
+. Para cambiar las propiedades del host, asegúrese de que la ficha *Propiedades* está seleccionada y, a continuación, cambie la configuración según corresponda.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Es posible modificar el nombre del host provisto por el usuario. Es necesario especificar un nombre para el host.
+
+
+
+ a| 
+Clúster de hosts asociado
+ a| 
+Es posible elegir una de las siguientes opciones:
+
+** *Ninguno* -- el host sigue siendo un host independiente. Si el host se asoció a un clúster, el sistema elimina el host de ese clúster.
+** *<Host Cluster>* -- el sistema asocia el host al clúster seleccionado.
+
+
+
+
+ a| 
+Tipo de sistema operativo de host
+ a| 
+Es posible modificar la clase de sistema operativo que se ejecuta en el host definido.
+
+|===
+====
+. Para cambiar la configuración del puerto, haga clic en la ficha *puertos de host* y cambie la configuración según corresponda.
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+ a| 
+Puerto de host
+ a| 
+Es posible elegir una de las siguientes opciones:
+
+** *Agregar* -- Utilice Agregar para asociar un nuevo identificador de puerto de host al host. La longitud del nombre del identificador de puerto de host se determina mediante la tecnología de interfaz del host. Los nombres de identificador de puerto de host de Fibre Channel e Infiniband deben tener 16 caracteres. Los nombres de identificador de puerto de host iSCSI tienen un máximo de 223 caracteres. El puerto debe ser único. No se permite un número de puerto que ya se haya configurado.
+** *Eliminar* -- Utilice Eliminar para eliminar (desasociar) un identificador de puerto de host. La opción Eliminar no quita físicamente el puerto de host. Esta opción elimina la asociación entre el puerto de host y el host. Salvo que se eliminen el adaptador de bus de host o el iniciador de iSCSI, la controladora seguirá reconociendo el puerto de host.
+
+
+
+CAUTION: Si se elimina el identificador de puerto de host, el identificador ya no sigue asociado a este host. Además, el host pierde acceso a cualquiera de los volúmenes asignados a través de este identificador de puerto de host.
+
+
+
+ a| 
+Etiqueta
+ a| 
+Para cambiar el nombre de la etiqueta del puerto, haga clic en el icono *Editar* (lápiz). El nombre de etiqueta del puerto debe ser único. No se permite un nombre de etiqueta que ya se haya configurado.
+
+
+
+ a| 
+Secreto CHAP
+ a| 
+Solo se muestra para los hosts iSCSI. Es posible configurar o cambiar el secreto CHAP para los iniciadores (hosts iSCSI). El sistema usa el método de protocolo de autenticación por desafío mutuo (CHAP), que valida la identidad de los destinos e iniciadores durante el enlace inicial. La autenticación se basa en una clave de seguridad compartida denominada secreto CHAP.
+
+|===
+====
+. Haga clic en *Guardar*.
+

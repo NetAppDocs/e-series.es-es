@@ -1,0 +1,42 @@
+---
+permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM, 
+summary: Revise los requisitos y consideraciones antes de sustituir los DIMM de EF300 o EF600. 
+---
+= Requisitos para sustituir un DIMM EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir un DIMM en una cabina de almacenamiento EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.
+
+Debe sustituir un DIMM cuando haya un error de coincidencia en la memoria o si tiene un DIMM fallido. Asegúrese de verificar la configuración de las controladoras EF300 o EF600 para asegurarse de reemplazar el tamaño de DIMM correcto.
+
+
+CAUTION: Tenga en cuenta que los DIMM de la cabina de almacenamiento son frágiles; un manejo incorrecto puede ocasionar daños.
+
+Siga estas reglas para evitar dañar los DIMM de la cabina de almacenamiento:
+
+* Evitar descargas electrostáticas (ESD):
++
+** Mantenga el DIMM en la bolsa ESD hasta que esté listo para instalarlo.
+** Abra la bolsa ESD a mano o corte la parte superior con unas tijeras. No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
+** Guarde la bolsa ESD y cualquier material de embalaje en caso de que deba devolver un módulo DIMM más adelante.
++
+
+CAUTION: Utilice siempre una muñequera ESD conectada a una superficie sin pintar en el chasis de la caja de almacenamiento.
+
+
+
+* Administre los DIMM con cuidado:
++
+** Utilice siempre dos manos para extraer, instalar o transportar un módulo DIMM.
+** No fuerce nunca un DIMM a una bandeja y utilice una presión suave y firme para acoplar completamente el pestillo.
+** Utilice siempre el embalaje aprobado cuando se le envien módulos DIMM.
+
+
+* Evite los campos magnéticos. Mantenga los DIMM alejados de los dispositivos magnéticos.
+

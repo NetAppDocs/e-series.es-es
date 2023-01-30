@@ -1,0 +1,105 @@
+---
+permalink: upgrade-controllers/reconfigure-sas-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, reconfigure SAS-2, SAS-2, SAS-3, convert controller shelf, convert drive shelf, 
+summary: 'Es posible convertir la bandeja de controladoras de una cabina SAS-2 aprobada (E2700, E550/EF5500, E5600/EF560) a una bandeja de unidades y, a continuación, colocar la bandeja y todas las bandejas de unidades SAS-2 aprobadas asociadas (DE1600, DE5600, DE6600) detrás de una nueva cabina SAS-3 aprobada (E2800, E5700/EF570) y bandejas de unidades SAS-3 aprobadas (DE212C, DE460C) sin conservación de datos.' 
+---
+= Vuelva a configurar un sistema SAS-2 tras una nueva bandeja de controladoras SAS-3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si es necesario, puede volver a configurar el sistema SAS-2 para utilizarlo detrás de una nueva bandeja de controladoras SAS-3.
+
+Las cabinas SAS-2 aprobadas incluyen E2700, E550/EF5500 y E5600/EF560. Las bandejas de unidades SAS-2 aprobadas incluyen DE1600, DE5600 y DE6600. Las cabinas SAS-3 aprobadas incluyen E2800 y E5700/EF570. Las bandejas de unidades SAS-3 aprobadas incluyen DE212C, DE224C y DE460C.
+
+.Acerca de esta tarea
+En este procedimiento, se convierte la bandeja de controladoras de una cabina SAS-2 aprobada en una bandeja de unidades y luego la bandeja tras una nueva cabina SAS-3 y bandejas de unidades aprobadas, sin conservación de datos.
+
+Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.
+
+
+NOTE: Los módulos IOM12B sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware del controlador se haya actualizado antes de instalar o actualizar a un IOM12B.
+
+.Antes de empezar
+Debido a la complejidad de este procedimiento, es necesario lo siguiente:
+
+* Debe tener una solicitud de variación de producto (FPVR, "Feature Product Variance Request"). Para archivar un FPVR, póngase en contacto con los Servicios profesionales de NetApp.
++
+
+NOTE: Si no se puede adquirir un FPVR antes de intentar este procedimiento, se puede producir un fallo de unidad y el bloqueo de la controladora.
+
+* Si puede realizar un backup de sus datos, puede realizar este procedimiento sin la ayuda de los servicios profesionales de NetApp.
+* Si no puede realizar un backup de sus datos, póngase en contacto con los servicios profesionales de NetApp para obtener ayuda acerca de este procedimiento.
+* Asegúrese de que ambas cabinas estén preparadas para el procedimiento:
++
+** *Matriz existente*: Matriz existente con SANtricity OS 8.25 o posterior que está encendida.
+** *Nueva matriz*: Nueva matriz desempaquetada y apagada.
+
+
+* Registre el número de serie de la bandeja de controladoras SAS-2 que se va a convertir en una bandeja de unidades.
+
+
+
+
+== Paso 1: Apague las controladoras (sin conservación de datos)
+
+Todas las operaciones deben apagarse antes de apagar las controladoras.
+
+.Pasos
+. Si todavía es posible acceder a la cabina SAS-2 existente, elimine todos los grupos de volúmenes, apague ambas controladoras y quite todos los cables.
+. Registre el número de serie de la bandeja de controladoras SAS-2 que se va a convertir en una bandeja de unidades.
+. Si la seguridad de la unidad está en uso en la cabina existente, asegúrese de que la clave de seguridad esté disponible.
+
+
+
+
+== Paso 2: Instalación de las controladoras (sin conservación de datos)
+
+Después de apagarlo correctamente, puede sustituir las controladoras de la cabina.
+
+.Pasos
+. Sustituya ambas controladoras en la cabina existente con IOM o ESM.
+. Si es posible, utilice los cables de host y los cables de red de la cabina existente y conéctelos a las controladoras de la nueva cabina.
++
+
+NOTE: Según las conexiones host de la cabina nueva, es posible que se necesiten diferentes cables.
+
+. Conecte el cable de las bandejas de unidades detrás de las controladoras de la nueva cabina.
++
+El soporte de unidades de controladora existente y todos los soportes de unidades conectadas se convierten en bandejas de unidades y se pueden conectar a las controladoras de la nueva cabina.
+
++
+
+NOTE: La conexión de SAS-2 a SAS-3 requiere cables SAS HD a mini SAS. Si desea obtener información más detallada sobre el cableado de la configuración de la controladora y de la bandeja de expansión en particular, consulte link:../install-hw-cabling/index.html["Cableado"] o la https://library.netapp.com/ecm/ecm_download_file/ECMLP2588749["Guía de cableado de hardware E-Series"^].
+
+
+
+
+
+== Paso 3: Encienda las controladoras (no conservación de datos).
+
+Una vez completada la instalación, encienda las controladoras y envíe los cambios de configuración al soporte técnico de NetApp.
+
+.Pasos
+. Encienda la nueva cabina, incluidas las bandejas de unidades conectadas.
+. Instale el para configurar el puerto de gestión y las direcciones IP https://mysupport.netapp.com/tools/info/ECMLP2563821I.html["Conexión rápida de SANtricity"^] utilidad.
+. Si la seguridad de la unidad estaba en uso en la cabina existente, importe la clave de seguridad.
+. Si no pudo eliminar los grupos de volúmenes de la cabina existente antes de realizar este procedimiento, debe configurar todas las unidades externas para que aparezcan como nativas. Para obtener información detallada sobre cómo configurar unidades en formato nativo, consulte la ayuda en línea de SANtricity.
+. Envíe los cambios de configuración al soporte técnico de NetApp.
++
+.. Obtenga el número de serie del soporte de controladora-unidad antiguo que registró en el paso 2.
+.. Inicie sesión en la http://mysupport.netapp.com/eservice/assistant["Sitio de soporte de NetApp"^].
+.. En la lista desplegable en *Categoría de comentarios*, seleccione *Productos instalados > solicitud de misión*.
+.. Seleccione *Crear caso*. Introduzca el texto siguiente en el cuadro de texto *Comentarios*, sustituyendo el número de serie de la bandeja de la unidad de control por el número de serie:
++
+`Please decommission this serial number as the entitlement has been moved to another serial number in the system. Please reference this in the SN notes.`
+
+.. Seleccione *Enviar*.
+
+
+
+
+Los cambios de configuración de SAS-2 a SAS-3 completados se envían al soporte técnico de NetApp.

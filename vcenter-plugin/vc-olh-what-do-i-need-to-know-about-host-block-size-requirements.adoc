@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-know-about-host-block-size-requirements.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Para los sistemas EF300 y EF600, es posible configurar un volumen para que admita un tamaño de bloque de 512 bytes o 4 KiB (también llamado "tamaño de sector"). Debe configurar el valor correcto durante la creación del volumen.' 
+---
+= ¿Qué debo saber acerca de los requisitos de tamaño de bloque del host?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para los sistemas EF300 y EF600, es posible configurar un volumen para que admita un tamaño de bloque de 512 bytes o 4 KiB (también llamado "tamaño de sector"). Debe configurar el valor correcto durante la creación del volumen. Si es posible, el sistema sugiere el valor predeterminado adecuado.
+
+Antes de configurar el tamaño de bloque de volumen, lea las siguientes limitaciones y directrices.
+
+* Algunos sistemas operativos y máquinas virtuales (principalmente VMware, por el momento) requieren un tamaño de bloque de 512 bytes y no admiten 4 KiB, por lo tanto, asegúrese de conocer los requisitos del host antes de crear un volumen. Por lo general, puede alcanzar el mejor rendimiento configurando un volumen para que presente un tamaño de bloque de 4 KiB; sin embargo, asegúrese de que su host permita bloques de 4 KiB (o “4Kn”).
+* El tipo de unidades que se selecciona para el pool o el grupo de volúmenes también determina qué tamaños de bloque de volumen se admiten, como se indica a continuación:
++
+** Si se crea un grupo de volúmenes con unidades que escriben en bloques de 512 bytes, solo se pueden crear volúmenes con bloques de 512 bytes.
+** Si crea un grupo de volúmenes con unidades que escriben en bloques de 4 KiB, puede crear volúmenes con bloques de 512 bytes o 4 KiB.
+
+
+* Si la cabina tiene una tarjeta de interfaz del host iSCSI, todos los volúmenes se limitan a bloques de 512 bytes (independientemente del tamaño de bloque del grupo de volúmenes). Esto se debe a una implementación específica del hardware.
+* No se puede cambiar el tamaño de un bloque una vez configurado. Si necesita cambiar el tamaño de bloque, debe eliminar el volumen y volver a crearlo.
+

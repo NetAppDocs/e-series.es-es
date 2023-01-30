@@ -1,0 +1,237 @@
+---
+permalink: config-linux/iser-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: iSER worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use esta hoja de datos para registrar la información de configuración de almacenamiento Iser over InfiniBand. 
+---
+= Registre la configuración de Iser over IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración de almacenamiento Iser over InfiniBand. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+
+
+== Identificadores de host
+
+
+NOTE: El IQN del iniciador del software se determina durante la tarea, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configure las redes para los hosts conectados al almacenamiento].
+
+Busque y documente el IQN del iniciador de cada host. Para los iniciadores de software, el IQN se encuentra generalmente en el archivo /etc/iscsi/initiatorname.iscsi.
+
+|===
+| Número de llamada | Conexiones de puertos de host | IQN del iniciador del software 
+
+
+ a| 
+1
+ a| 
+Host (iniciador) 1
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+
+
+ a| 
+n.a.
+ a| 
+ a| 
+
+|===
+
+
+== Configuración recomendada
+
+Las configuraciones recomendadas constan de dos puertos de host (iniciador) y cuatro puertos de destino.
+
+image::../media/port_identifiers_ib_iser.gif[identificadores de puerto ib iser]
+
+
+
+== IQN objetivo
+
+Documente el IQN objetivo para la cabina de almacenamiento. Utilizará esta información en xref:iser-ib-configure-network-attached-hosts-task.adoc[Configure las redes para los hosts conectados al almacenamiento].
+
+Busque el nombre del IQN de la matriz de almacenamiento mediante SANtricity: *Matriz de almacenamiento* > *Iser* > *Administrar configuración*. Esta información puede ser necesaria cuando se crean sesiones Iser desde sistemas operativos que no admiten detección de objetivos de envío.
+
+|===
+| Número de llamada | Nombre de cabina | IQN objetivo 
+
+
+ a| 
+6
+ a| 
+Controladora de cabina (objetivo)
+ a| 
+
+|===
+
+
+== Configuración de red
+
+Documentar la configuración de red que se utilizará para los hosts y el almacenamiento de la estructura InfiniBand. Estas instrucciones suponen que se utilizarán dos subredes para una redundancia total.
+
+El administrador de red puede proporcionar la siguiente información. Esta información se usa en el tema, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configure las redes para los hosts conectados al almacenamiento].
+
+
+
+=== Subred a
+
+Defina la subred que se va a usar.
+
+|===
+| Dirección de red | Máscara de red 
+
+
+ a| 
+ a| 
+
+|===
+Documentar los IQN que utilizarán los puertos de matriz y cada puerto de host.
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | IQN 
+
+
+ a| 
+3
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+5
+ a| 
+Controladora A, puerto 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controladora B, puerto 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Host 1, puerto 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, puerto 1
+ a| 
+
+|===
+
+
+=== Subred B
+
+Defina la subred que se va a usar.
+
+|===
+| Dirección de red | Máscara de red 
+
+
+ a| 
+ a| 
+
+|===
+Documentar los IQN que utilizarán los puertos de matriz y cada puerto de host.
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | IQN 
+
+
+ a| 
+8
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+10
+ a| 
+Controladora A, puerto 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controladora B, puerto 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host 1, puerto 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, puerto 2
+ a| 
+
+|===
+
+
+== Asignando el nombre de host
+
+
+NOTE: El nombre del host de asignación se crea durante el flujo de trabajo.
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

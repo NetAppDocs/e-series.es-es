@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: early-versions.html 
+keywords: early versions, e-series, hardware, santricity, os 
+summary: Versiones anteriores de la documentación 
+---
+= Versiones anteriores
+:allow-uri-read: 
+
+
+[role="lead"]
+Visite los siguientes enlaces para acceder a la documentación de versiones anteriores del hardware E-Series y del software SANtricity. Los vínculos lo llevan a otro sitio de documentación.
+
+
+
+== Documentación de hardware para versiones anteriores
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484026["Instalar los soportes de unidades de controladoras E2712, E2724, E5612 y E5624 y los soportes de unidades de expansión DE1600 y DE5600"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484072["Instale los soportes de unidades de controladoras E2760 y E5660 y los soportes de unidades de expansión DE6600"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484108["Instale las cabinas flash EF560 y las bandejas de expansión flash DE5600"^]
+* https://mysupport.netapp.com/info/web/ECMP11392380.html["Instale sistemas más antiguos"^]
+* https://mysupport.netapp.com/info/web/ECMP11751516.html["Mantenga los sistemas más antiguos"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Añada una segunda controladora a E2600 y E2700"^]
+* https://mysupport.netapp.com/info/web/ECMP11750309.html["Cambie o añada protocolos de host"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Convierta de CA a alimentación de CC"^]
+
+
+
+
+== Documentación de software de versiones anteriores
+
+
+
+=== SANtricity versión 11.6
+
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda de System Manager"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda de Unified Manager"^]
+
+
+
+
+=== SANtricity versión 11.5
+
+* https://docs.netapp.com/us-en/e-series-santricity-115/index.html["Ayuda de System Manager"^]
+
+
+
+
+=== SANtricity versión 11.4
+
+* https://mysupport.netapp.com/ecm/ecm_get_file/ECMLP2862590["AMW (E2700, E5600/EF560) AYUDA"^]
+* https://mysupport.netapp.com/ecm/ecm_get_file/ECMLP2862588["AYUDA DE EMW (E2700, E5600/EF560)"^]
+

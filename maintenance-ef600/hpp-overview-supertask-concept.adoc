@@ -1,0 +1,22 @@
+---
+permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: convert EF300 host protocol, convert EF600 host protocol, 
+summary: Revise los requisitos y consideraciones antes de convertir el protocolo de host de EF300 o EF600. 
+---
+= Requisitos para la conversión del protocolo de host de EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de convertir el protocolo de host para una cabina EF300 o EF600, revise los siguientes requisitos.
+
+* Ha programado una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
+* Debe detener las operaciones de I/o del host cuando se realiza la conversión. No podrá acceder a los datos en la cabina de almacenamiento hasta después de completar correctamente la conversión.
+* Se está utilizando gestión fuera de banda. (No puede utilizar la administración en banda para completar este procedimiento.)
+* Ha obtenido el hardware necesario para la conversión, que puede incluir un nuevo conjunto de HIC y/o SFP. Su representante de ventas de NetApp puede ayudarle a determinar qué hardware necesita y a solicitar las piezas correctas.
+* Los transceptores SFP de protocolo doble admiten FC de 16 GB y 8 GB, así como iSCSI de 10 GB. Por lo tanto, es posible que no necesite cambiar SFP si tiene el protocolo doble y simplemente cambia entre FC e iSCSI o viceversa.
+* Algunas conversiones de protocolo de puerto de host pueden requerir la adición o la actualización de una tarjeta de interfaz del host.
+

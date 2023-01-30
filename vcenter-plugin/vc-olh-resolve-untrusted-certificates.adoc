@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Este tipo de certificados se resuelve importando un certificado autofirmado de la cabina de almacenamiento o importando un certificado de una entidad de certificación (CA) que haya sido emitido por un tercero de confianza.' 
+---
+= Resuelva los certificados que no son de confianza
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la página Certificado, puede resolver certificados que no son de confianza al importar un certificado autofirmado de la cabina de almacenamiento o al importar un certificado de una entidad de certificación (CA) que emitió un tercero de confianza.
+
+.Antes de empezar
+Si tiene pensado importar un certificado firmado por una CA, asegúrese de que:
+
+* Generó una solicitud de firma de certificación (archivo .CSR) para cada controladora en la cabina de almacenamiento y la envió a la CA.
+* La CA devolvió archivos de certificado de confianza.
+* Los archivos de certificado están disponibles en el sistema local.
+
+
+.Acerca de esta tarea
+Los certificados dejan de ser de confianza cuando una cabina de almacenamiento intenta establecer una conexión con el plugin, pero no se confirma que la conexión sea segura. Es posible que necesite instalar otros certificados de CA de confianza si se da alguna de las siguientes condiciones:
+
+* Añadió recientemente una cabina de almacenamiento.
+* Uno o ambos certificados caducaron o fueron revocados.
+* Falta un certificado raíz o intermedio en uno o ambos certificados.
+
+
+.Pasos
+. Seleccione *Gestión de certificados*.
+. Seleccione la ficha *Trusted*.
++
+Esta página muestra todos los certificados notificados para las cabinas de almacenamiento.
+
+. Seleccione menú:Importar[certificados] para importar un certificado de CA o menú:Importar[certificados de la cabina de almacenamiento autofirmados] para importar un certificado autofirmado.
+. Para limitar la vista, puede utilizar el campo de filtrado *Mostrar certificados...* o puede ordenar las filas de certificados haciendo clic en uno de los encabezados de columna.
+. En el cuadro de diálogo, seleccione el certificado y, a continuación, haga clic en *Importar*.
++
+El certificado se carga y se valida.
+
+

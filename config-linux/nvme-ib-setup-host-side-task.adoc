@@ -1,0 +1,308 @@
+---
+permalink: config-linux/nvme-ib-setup-host-side-task.html 
+sidebar: sidebar 
+keywords: configure Linux host, express linux configuration, linux host, 
+summary: La configuración de un iniciador de NVMe en un entorno InfiniBand incluye la instalación y la configuración de los paquetes infiniband, nvme-cli y rdma, la configuración de direcciones IP del iniciador y la configuración de la capa NVMe-of en el host. 
+---
+= Configure NVMe over InfiniBand en el lado del host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuración de un iniciador de NVMe en un entorno InfiniBand incluye la instalación y la configuración de los paquetes infiniband, nvme-cli y rdma, la configuración de direcciones IP del iniciador y la configuración de la capa NVMe-of en el host.
+
+.Lo que necesitará
+Debe ejecutar el sistema operativo RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 o 15 Service Pack más reciente compatible. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener una lista completa de los requisitos más recientes.
+
+.Pasos
+. Instale los paquetes rdma, nvme-cli e infiniband:
++
+*SLES 12 o SLES 15*
+
++
+[listing]
+----
+
+# zypper install infiniband-diags
+# zypper install rdma-core
+# zypper install nvme-cli
+----
++
+* RHEL 7, RHEL 8 O RHEL 9*
+
++
+[listing]
+----
+
+# yum install infiniband-diags
+# yum install rdma-core
+# yum install nvme-cli
+----
+. Para RHEL 8 o RHEL 9, instale los scripts de red:
++
+* RHEL 8*
+
++
+[listing]
+----
+# yum install network-scripts
+----
++
+* RHEL 9*
+
++
+[listing]
+----
+# yum install NetworkManager-initscripts-updown
+----
+. Para RHEL 7, habilite `ipoib`. Edite el archivo /etc/rdma/rdma.conf y modifique la entrada para cargar `ipoib`:
++
+[listing]
+----
+IPOIB_LOAD=yes
+----
+. Obtenga el host NQN, que se usarán para configurar el host en una cabina de.
++
+[listing]
+----
+# cat /etc/nvme/hostnqn
+----
+. Compruebe que ambos enlaces de puertos IB estén activos y que el estado = activo:
++
+[listing]
+----
+# ibstat
+----
++
+[listing]
+----
+CA 'mlx4_0'
+        CA type: MT4099
+        Number of ports: 2
+        Firmware version: 2.40.7000
+        Hardware version: 1
+        Node GUID: 0x0002c90300317850
+        System image GUID: 0x0002c90300317853
+        Port 1:
+                State: Active
+                Physical state: LinkUp
+                Rate: 40
+                Base lid: 4
+                LMC: 0
+                SM lid: 4
+                Capability mask: 0x0259486a
+                Port GUID: 0x0002c90300317851
+                Link layer: InfiniBand
+        Port 2:
+                State: Active
+                Physical state: LinkUp
+                Rate: 56
+                Base lid: 5
+                LMC: 0
+                SM lid: 4
+                Capability mask: 0x0259486a
+                Port GUID: 0x0002c90300317852
+                Link layer: InfiniBand
+----
+. Configure direcciones IP IPv4 en los puertos ib.
++
+*SLES 12 o SLES 15*
+
++
+Cree el archivo /etc/sysconfig/network/ifcfg-ib0 con el siguiente contenido.
+
++
+[listing]
+----
+
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='10.10.10.100/24'
+IPOIB_MODE='connected'
+MTU='65520'
+NAME=
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
++
+A continuación, cree el archivo /etc/sysconfig/network/ifcfg-ib1:
+
++
+[listing]
+----
+
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='11.11.11.100/24'
+IPOIB_MODE='connected'
+MTU='65520'
+NAME=
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
++
+* RHEL 7 o RHEL 8*
+
++
+Cree el archivo /etc/sysconfig/network-scripts/ifcfg-ib0 con el contenido siguiente.
+
++
+[listing]
+----
+
+CONNECTED_MODE=no
+TYPE=InfiniBand
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+IPADDR='10.10.10.100/24'
+DEFROUTE=no
+IPV4=FAILURE_FATAL=yes
+IPV6INIT=no
+NAME=ib0
+ONBOOT=yes
+----
++
+A continuación, cree el archivo /etc/sysconfig/network-scripts/ifcfg-ib1:
+
++
+[listing]
+----
+
+CONNECTED_MODE=no
+TYPE=InfiniBand
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+IPADDR='11.11.11.100/24'
+DEFROUTE=no
+IPV4=FAILURE_FATAL=yes
+IPV6INIT=no
+NAME=ib1
+ONBOOT=yes
+----
++
+* RHEL 9*
+
++
+Utilice la `nmtui` herramienta para activar y editar una conexión. A continuación se muestra un archivo de ejemplo `/etc/NetworkManager/system-connections/ib0.nmconnection` la herramienta generará:
+
++
+[listing]
+----
+[connection]
+id=ib0
+uuid=<unique uuid>
+type=infiniband
+interface-name=ib0
+
+[infiniband]
+mtu=4200
+
+[ipv4]
+address1=10.10.10.100/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+----
++
+A continuación se muestra un archivo de ejemplo `/etc/NetworkManager/system-connections/ib1.nmconnection` la herramienta generará:
+
++
+[listing]
+----
+[connection]
+id=ib1
+uuid=<unique uuid>
+type=infiniband
+interface-name=ib1
+
+[infiniband]
+mtu=4200
+
+[ipv4]
+address1=11.11.11.100/24'
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+----
+. Habilite el `ib` interfaz:
++
+[listing]
+----
+
+# ifup ib0
+# ifup ib1
+----
+. Compruebe las direcciones IP que usará para conectarse a la cabina. Ejecute este comando para ambos `ib0` y.. `ib1`:
++
+[listing]
+----
+
+# ip addr show ib0
+# ip addr show ib1
+----
++
+Como se muestra en el ejemplo siguiente, la dirección IP para `ib0` es `10.10.10.255`.
+
++
+[listing]
+----
+10: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 65520 qdisc pfifo_fast state UP group default qlen 256
+    link/infiniband 80:00:02:08:fe:80:00:00:00:00:00:00:00:02:c9:03:00:31:78:51 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+    inet 10.10.10.255 brd 10.10.10.255 scope global ib0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::202:c903:31:7851/64 scope link
+       valid_lft forever preferred_lft forever
+----
++
+Como se muestra en el ejemplo siguiente, la dirección IP para `ib1` es `11.11.11.255`.
+
++
+[listing]
+----
+10: ib1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 65520 qdisc pfifo_fast state UP group default qlen 256
+    link/infiniband 80:00:02:08:fe:80:00:00:00:00:00:00:00:02:c9:03:00:31:78:51 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+    inet 11.11.11.255 brd 11.11.11.255 scope global ib0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::202:c903:31:7851/64 scope link
+       valid_lft forever preferred_lft forever
+----
+. Configure la capa NVMe-of en el host. Cree los siguientes archivos en /etc/modules-load.d/ para cargar el `nvme-rdma` el módulo del kernel y asegúrese de que el módulo del kernel estará siempre encendido, incluso después de un reinicio:
++
+[listing]
+----
+
+# cat /etc/modules-load.d/nvme-rdma.conf
+  nvme-rdma
+----
++
+Para comprobar la `nvme-rdma` el módulo del kernel está cargado, ejecute este comando:
+
++
+[listing]
+----
+
+# lsmod | grep nvme
+nvme_rdma              36864  0
+nvme_fabrics           24576  1 nvme_rdma
+nvme_core             114688  5 nvme_rdma,nvme_fabrics
+rdma_cm               114688  7 rpcrdma,ib_srpt,ib_srp,nvme_rdma,ib_iser,ib_isert,rdma_ucm
+ib_core               393216  15 rdma_cm,ib_ipoib,rpcrdma,ib_srpt,ib_srp,nvme_rdma,iw_cm,ib_iser,ib_umad,ib_isert,rdma_ucm,ib_uverbs,mlx5_ib,qedr,ib_cm
+t10_pi                 16384  2 sd_mod,nvme_core
+----
+

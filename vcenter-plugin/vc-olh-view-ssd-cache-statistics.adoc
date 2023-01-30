@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ver estadísticas de la caché SSD, como lecturas, escrituras, aciertos en caché, porcentaje de asignación de caché, y el porcentaje de utilización de la caché. 
+---
+= Ver estadísticas de la caché SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible ver estadísticas de la caché SSD, como lecturas, escrituras, aciertos en caché, porcentaje de asignación de caché, y el porcentaje de utilización de la caché.
+
+
+NOTE: Esta función no está disponible en los sistemas de almacenamiento EF600 o EF300.
+
+.Acerca de esta tarea
+Las estadísticas nominales, que son un subconjunto de estadísticas detalladas, se muestran en el cuadro de diálogo Ver estadísticas de la caché SSD. Es posible ver estadísticas detalladas de la caché SSD solo cuando se exportan todas las estadísticas de SSD a un archivo .csv.
+
+Al revisar e interpretar las estadísticas, tenga en cuenta que algunas interpretaciones provienen del análisis de una combinación de estadísticas.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la caché SSD.
+. Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+. Seleccione la caché SSD para la cual desea ver estadísticas y haga clic en menú:más[Ver caché SSD] estadísticas.
++
+Se muestra el cuadro de diálogo Ver estadísticas de la caché SSD, donde se proporcionan las estadísticas nominales de la caché SSD seleccionada.
+
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Ajuste | Descripción 
+
+
+| Lecturas | Se muestra el número total de lecturas del host de los volúmenes con la función de caché SSD habilitada. Cuanto más alto sea el ratio de lecturas a escrituras, mejor será el funcionamiento de la caché. 
+
+
+| Escrituras | El número total de escrituras del host en los volúmenes con la función de caché SSD habilitada. Cuanto más alto sea el ratio de lecturas a escrituras, mejor será el funcionamiento de la caché. 
+
+
+| Aciertos en caché | Se muestra el número de aciertos en caché. 
+
+
+| Aciertos en caché | Se muestra el porcentaje de aciertos en caché. Este número deriva de los aciertos en caché/(lecturas + escrituras). El porcentaje de aciertos en caché debe ser mayor que 50 % para un funcionamiento eficaz de la caché SSD. 
+
+
+| Asignación en caché | Se muestra el porcentaje de almacenamiento de la caché SSD asignado, expresado como un porcentaje del almacenamiento de la caché SSD que está disponible para esta controladora y deriva de los bytes asignados/bytes disponibles. 
+
+
+| Uso de caché | Se muestra el porcentaje de almacenamiento de la caché SSD que contiene datos de volúmenes habilitados, expresado como un porcentaje del almacenamiento de la caché SSD asignado. Esta cantidad representa la utilización o la densidad de la caché SSD. Derivado de bytes asignados/bytes disponibles. 
+
+
+| Exportar todo | Exporta todas las estadísticas de la caché SSD a un formato CSV. El archivo exportado contiene todas las estadísticas disponibles de la caché SSD (tanto nominales como detalladas). 
+|===
+====
+. Haga clic en *Cancelar* para cerrar el cuadro de diálogo.
+

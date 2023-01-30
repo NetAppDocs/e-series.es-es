@@ -1,0 +1,184 @@
+---
+permalink: config-vmware/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para el protocolo Fibre Channel, se configuran los switches y se determinan los identificadores de puerto de host. 
+---
+= Ejecute tareas específicas de FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el protocolo Fibre Channel, se configuran los switches y se determinan los identificadores de puerto de host.
+
+
+NOTE: Para EF300 y EF600, debe configurar el tamaño de bloque en 512 bytes para garantizar la compatibilidad con VMware. Consulte la ayuda en línea de SANtricity System Manager para obtener más información sobre cómo configurar un volumen en 512 bytes.
+
+
+
+== Paso 1: Configuración de los switches FC--VMware
+
+Configurar (dividir en zonas) los switches de Fibre Channel (FC) permite que los hosts se conecten a la cabina de almacenamiento y limita el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.
+
+.Lo que necesitará
+* Credenciales de administrador para los switches.
+* El WWPN de cada puerto de iniciador de host y de cada puerto de destino de la controladora conectado al switch. (Use la utilidad HBA para la detección.)
+
+
+
+NOTE: La utilidad HBA de un proveedor se puede utilizar para actualizar y obtener información específica acerca del HBA. Consulte la sección de soporte del sitio web del proveedor para obtener instrucciones sobre cómo obtener la utilidad HBA.
+
+.Acerca de esta tarea
+Cada puerto del iniciador debe estar en una zona separada con todos sus puertos de destino correspondientes. Para obtener detalles acerca de la división en zonas de los switches, consulte la documentación del proveedor del switch.
+
+.Pasos
+. Inicie sesión en el programa de administración del switch FC y, a continuación, seleccione la opción de configuración de división en zonas.
+. Cree una nueva zona que incluya el primer puerto iniciador de host y que también incluya todos los puertos de destino que se conectan al mismo switch de FC que el iniciador.
+. Cree zonas adicionales para cada puerto iniciador de host FC del switch.
+. Guarde las zonas y, a continuación, active la nueva configuración de particiones.
+
+
+
+
+== Paso 2: Determinar los WWPN de puerto de host--FC
+
+Para configurar la división en zonas de FC, debe determinar el nombre de puerto WWPN de cada puerto iniciador.
+
+.Pasos
+. Conéctese al host ESXi mediante SSH o el shell ESXi.
+. Ejecute el siguiente comando:
++
+[listing]
+----
+esxcfg-scsidevs –a
+----
+. Registre los identificadores de iniciador. El resultado será similar a este ejemplo:
++
+[listing]
+----
+vmhba3 lpfc link-up  fc.20000090fa05e848:10000090fa05e848 (0000:03:00.0)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+vmhba4 lpfc link-up  fc.20000090fa05e849:10000090fa05e849 (0000:03:00.1)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+----
+
+
+
+
+== Paso 3: Registre su configuración
+
+Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento FC. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+La ilustración muestra un host conectado a una cabina de almacenamiento E-Series en dos zonas. Una zona se indica mediante la línea azul; la otra se indica mediante la línea roja. Cada zona contiene un puerto iniciador y todos los puertos de destino.
+
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[los identificadores de puerto host y target conf vmw]
+
+
+
+=== Identificadores de host
+
+|===
+| Número de llamada | Conexiones de puertos de host (iniciador) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_no aplicable_
+
+
+
+ a| 
+2
+ a| 
+Puerto de host 0 a zona 0 del switch FC
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Puerto de host 1 a zona 1 del switch FC
+ a| 
+
+|===
+
+
+=== Identificadores de destino
+
+|===
+| Número de llamada | Conexiones de puertos (objetivo) de la controladora de la cabina | WWPN 
+
+
+ a| 
+3
+ a| 
+Conmutador
+ a| 
+_no aplicable_
+
+
+
+ a| 
+6
+ a| 
+Controladora de cabina (objetivo)
+ a| 
+_no aplicable_
+
+
+
+ a| 
+5
+ a| 
+Controladora A, puerto 1 al switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controladora A, puerto 2 al switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controladora B, puerto 1 al switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controladora B, puerto 2 al switch FC 2
+ a| 
+
+|===
+
+
+=== Host de asignación
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

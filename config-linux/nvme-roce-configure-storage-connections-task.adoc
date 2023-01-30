@@ -1,0 +1,125 @@
+---
+permalink: config-linux/nvme-roce-configure-storage-connections-task.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Si la controladora incluye una conexión para NVMe over roce \(RDMA over Converged Ethernet\), es posible configurar las opciones del puerto NVMe desde la página hardware o la página sistema en SANtricity System Manager.' 
+---
+= Configurar las conexiones NVMe over roce de la cabina de almacenamiento
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la controladora incluye una conexión para NVMe over roce (RDMA over Converged Ethernet), es posible configurar las opciones del puerto NVMe desde la página hardware o la página sistema en SANtricity System Manager.
+
+.Lo que necesitará
+* Un puerto de host NVMe over roce en la controladora; de lo contrario, los ajustes de NVMe over roce no estarán disponibles en System Manager.
+* La dirección IP de la conexión de host.
+
+
+.Acerca de esta tarea
+Es posible acceder a la configuración de NVMe over roce desde la página *hardware* o desde el menú:Configuración[sistema]. En esta tarea, se describe cómo configurar los puertos desde la página hardware.
+
+
+NOTE: La configuración y las funciones de NVMe over roce aparecen solamente si la controladora de la cabina de almacenamiento contiene un puerto NVMe over roce.
+
+.Pasos
+. En la interfaz de System Manager, seleccione *hardware*.
+. Haga clic en la controladora que tenga el puerto NVMe over roce que desea configurar.
++
+Aparece el menú contextual de la controladora.
+
+. Seleccione *Configurar puertos NVMe over roce*.
++
+Se abre el cuadro de diálogo *Configurar puertos NVMe over roce*.
+
+. En la lista desplegable, seleccione el puerto que desea configurar y, a continuación, haga clic en *Siguiente*.
+. Seleccione la configuración de puertos que desea utilizar y, a continuación, haga clic en *Siguiente*.
++
+Para ver todas las configuraciones de puerto, haga clic en el enlace *Mostrar más opciones de puerto* situado a la derecha del cuadro de diálogo.
+
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Velocidad de puerto ethernet configurada
+ a| 
+Seleccione la velocidad deseada. Las opciones que aparecen en la lista desplegable dependen de la velocidad máxima que pueda soportar la red (por ejemplo, 10 Gbps). Los valores posibles incluyen:
+
+** Autonegociar
+** 10 Gbps
+** 25 Gbps
+** 40 Gbps
+** 50 Gbps
+** 100 Gbps
+** 200 Gbps
+
+
+
+NOTE: Cuando una HIC de 200 GB está conectada con un cable QSFP56, la negociación automática sólo está disponible cuando se conecta a switches y/o adaptadores Mellanox.
+
+
+NOTE: La velocidad del puerto NVMe over roce debe coincidir con la funcionalidad de velocidad de SFP en el puerto seleccionado. Todos los puertos deben tener la misma velocidad.
+
+
+
+ a| 
+Habilite IPv4 o habilite IPv6
+ a| 
+Seleccione una o ambas opciones para habilitar la compatibilidad con las redes IPv4 e IPv6.
+
+
+
+ a| 
+Tamaño de MTU (disponible haciendo clic en *Mostrar más opciones de puerto*).
+ a| 
+De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU). El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 4200.
+
+|===
++
+Si seleccionó *Activar IPv4*, se abre un cuadro de diálogo para seleccionar la configuración IPv4 después de hacer clic en *Siguiente*. Si seleccionó *Activar IPv6*, se abre un cuadro de diálogo para seleccionar la configuración de IPv6 después de hacer clic en *Siguiente*. Si seleccionó ambas opciones, primero se abre el cuadro de diálogo de configuración IPv4 y después de hacer clic en *Siguiente*, se abre el cuadro de diálogo de configuración de IPv6.
+
+. Configure los valores para IPv4 o IPv6 de forma automática o manual. Para ver todas las opciones de configuración de puertos, haga clic en el enlace *Mostrar más valores* situado a la derecha del cuadro de diálogo.
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Obtener automáticamente la configuración del servidor DHCP
+ a| 
+Seleccione esta opción para obtener automáticamente la configuración.
+
+
+
+ a| 
+Especificar manualmente la configuración estática
+ a| 
+Seleccione esta opción e introduzca una dirección estática en los campos. En el caso de IPv4, incluya la máscara de subred y la puerta de enlace. En el caso de IPv6, incluya las direcciones IP enrutable y la dirección IP del enrutador.
+
+
+NOTE: Si solo hay una dirección IP enrutable, defina la dirección restante como 0:0:0:0:0:0:0:0.
+
+
+
+ a| 
+Active la compatibilidad con VLAN (disponible haciendo clic en *Mostrar más opciones*).
+ a| 
+
+NOTE: Esta opción solo está disponible en un entorno iSCSI. No está disponible en entornos NVMe over roce.
+
+
+
+ a| 
+Activar prioridad ethernet (disponible haciendo clic en *Mostrar más valores*).
+ a| 
+
+NOTE: Esta opción solo está disponible en un entorno iSCSI. No está disponible en entornos NVMe over roce.
+
+|===
+. Haga clic en *Finalizar*.
+

@@ -1,0 +1,36 @@
+---
+permalink: install-hw-e2800-e5700/index.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Instale y configure la cabina E2800 o E5700. 
+---
+= Instalar y configurar sistemas de almacenamiento E2800 y E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda a instalar y configurar el sistema de almacenamiento E2800 o E5700.
+
+Puede elegir uno de los siguientes formatos para guiarle en la instalación y configuración del nuevo sistema de almacenamiento.
+
+* *PDF*
++
+Este es un PDF imprimible de instrucciones paso a paso con enlaces en directo a contenido adicional. Elija uno de los siguientes carteles para empezar.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Póster PDF de E2860, E5760 y DE460C"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["E5724, EF570, EF280, E2824, E2812 Y Póster PDF de DE212C y DE224C"^]
+
+
+* *Instrucciones en línea*
++
+Estas son las instrucciones de configuración descritas en este sitio. Comience con uno de los siguientes temas.
+
++
+** xref:e2860-e5760-prepare-task.adoc[Prepare la instalación de E2860, E5760 y DE460C]
+** xref:e2824-e5724-prepare-task.adoc[Prepare para instalar E5724, EF570, EF280, E2812, E2824, DE212C y DE224C]
+
+
+

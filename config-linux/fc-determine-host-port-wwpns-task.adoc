@@ -1,0 +1,37 @@
+---
+permalink: config-linux/fc-determine-host-port-wwpns-task.html 
+sidebar: sidebar 
+keywords: host wwpn, HBA utility, express linux configuration, software configuration, linux host, 
+summary: Debe instalar una utilidad HBA FC para que pueda ver el nombre de puerto WWPN\ de cada puerto de host. Además, puede usar la utilidad HBA para cambiar cualquier configuración recomendada en la columna Notas de la herramienta de matriz de interoperabilidad de NetApp para la configuración admitida. 
+---
+= Determinar los WWPN de host y realizar la configuración recomendada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe instalar una utilidad de HBA de FC para que pueda ver el nombre de puerto WWPN de cada puerto de host.
+
+Además, puede utilizar la utilidad HBA para cambiar cualquier configuración recomendada en la columna Notas de https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para la configuración compatible.
+
+.Acerca de esta tarea
+Revise estas directrices para las utilidades de HBA:
+
+* La mayoría de los proveedores de HBA ofrecen una utilidad de HBA. Necesitará la versión correcta de HBA para el sistema operativo y la CPU del host. Entre los ejemplos de utilidades de FC HBA se incluyen:
++
+** Emulex OneCommand Manager para HBA de Emulex
+** Consola QConverge de QLogic para HBA de QLogic
+
+
+* Los puertos de I/o del host pueden registrarse automáticamente si se ha instalado el agente de contexto de host.
+
+
+.Pasos
+. Descargue la utilidad correspondiente del sitio Web de su proveedor de HBA.
+. Instale la utilidad.
+. Seleccione la configuración adecuada en la utilidad HBA.
++
+La configuración adecuada se muestra en la columna Notas de la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+

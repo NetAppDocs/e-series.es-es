@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-shelf-loss-protection-and-drawer-loss-protection.html 
+keywords:  
+summary:  
+---
+= ¿Qué son la protección contra pérdida de bandeja y la protección contra pérdida de cajón?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La protección contra pérdida de bandeja y de cajón son atributos de los pools y los grupos de volúmenes para mantener el acceso a los datos en caso de fallo de una bandeja o un cajón individuales.
+
+
+
+=== Protección contra pérdida de bandeja
+
+Una bandeja es el compartimento que contiene las unidades o las unidades y la controladora. La protección contra pérdida de bandeja garantiza la accesibilidad a los datos en los volúmenes de un pool o un grupo de volúmenes en caso de pérdida total de comunicación con una bandeja de unidades única. Un ejemplo de pérdida total de comunicación podría ser la pérdida de energía en la bandeja de unidades o el fallo de ambos módulos de I/o (IOM).
+
+
+NOTE: La protección contra pérdida de bandeja no está garantizada si una unidad ya falló en el pool o en el grupo de volúmenes. En este caso, la pérdida de acceso a la bandeja de unidades y, en consecuencia, a otra unidad en el pool o el grupo de volúmenes provoca la pérdida de datos.
+
+El criterio de protección contra pérdida de bandeja depende del método de protección, tal como se describe en la tabla siguiente.
+
+|===
+| Nivel | Criterios para la protección contra pérdida de bandeja | Cantidad mínima requerida de bandejas 
+
+
+| Piscina | El pool debe incluir unidades de al menos cinco bandejas y debe haber la misma cantidad de unidades en cada bandeja. La protección contra pérdida de bandeja no es aplicable a las bandejas de gran capacidad; si el sistema incluye bandejas de gran capacidad, consulte la protección contra pérdida de cajón. | 5 
+
+
+| RAID 6 | El grupo de volúmenes consta de dos unidades como máximo en un solo cajón. | 3 
+
+
+| RAID 3 o RAID 5 | Cada unidad del grupo de volúmenes se encuentra en una bandeja aparte. | 3 
+
+
+| RAID 1 | Cada unidad de una pareja RAID 1 se debe ubicar en una bandeja aparte. | 2 
+
+
+| RAID 0 | No puede contar con protección contra pérdida de bandeja. | No aplicable 
+|===
+
+
+=== Protección contra pérdida de cajón
+
+Un cajón es uno de los compartimentos de una bandeja que se extrae para acceder a las unidades. Solo las bandejas de gran capacidad poseen cajones. La protección contra pérdida de cajón garantiza la accesibilidad a los datos en los volúmenes de un pool o un grupo de volúmenes en caso de pérdida total de comunicación con un cajón único. Un ejemplo de pérdida total de comunicación podría ser la pérdida de energía en el cajón o el fallo de un componente interno dentro del cajón.
+
+
+CAUTION: La protección contra pérdida de cajón no está garantizada si una unidad ya falló en el pool o en el grupo de volúmenes. En este caso, la pérdida de acceso al cajón (y, en consecuencia, a otra unidad en el pool o el grupo de volúmenes) provoca la pérdida de datos.
+
+El criterio de protección contra pérdida de cajón depende del método de protección, tal como se describe en la tabla siguiente:
+
+|===
+| Nivel | Criterios para la protección contra pérdida de cajón | Cantidad mínima requerida de cajones 
+
+
+| Piscina | Los candidatos de pool deben incluir unidades de todos los cajones y debe haber la misma cantidad de unidades por cajón. El pool debe incluir unidades de al menos cinco cajones y debe haber la misma cantidad de unidades por cajón. Una bandeja de 60 unidades puede contar con protección contra pérdida de cajón cuando el pool consta de 15, 20, 25, 30, 35, 40, 45, 50, 55 o 60 unidades. Los incrementos en múltiplos de 5 se pueden agregar al pool después de la creación inicial. | 5 
+
+
+| RAID 6 | El grupo de volúmenes consta de dos unidades como máximo en un solo cajón. | 3 
+
+
+| RAID 3 o 5 | Cada unidad del grupo de volúmenes se encuentra en un cajón aparte | 3 
+
+
+| RAID 1 | Cada unidad de una pareja reflejada se debe ubicar en un cajón aparte. | 2 
+
+
+| RAID 0 | No puede contar con protección contra pérdida de cajón. | No aplicable 
+|===

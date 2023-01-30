@@ -1,0 +1,72 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Instale E2800 o E5700 en un rack de dos parantes o un armario del sistema de NetApp. 
+---
+= Instale el hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda a instalar E5724, EF570, EF280, E2812, E2824, Sistema de almacenamiento DE212C o DE224C en un rack de dos puestos o un armario rack de sistema de NetApp.
+
+.Antes de empezar
+Antes de instalar el hardware, asegúrese de hacer lo siguiente:
+
+* Registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Prepare un área de trabajo plana y sin estática.
+* Obtenga una muñequera ESD y tome precauciones antiestáticas.
+
+
+Lea todas las instrucciones antes de continuar con los pasos a continuación.
+
+.Pasos
+. Extraiga el contenido del hardware y, a continuación, realice el inventario del hardware contenido contra el recibo del embalaje.
+. Instale los rieles.
++
+Si se incluyeron instrucciones con el hardware para montaje en rack, consulte ellas para obtener información detallada sobre cómo instalar los rieles. Para obtener instrucciones adicionales para el montaje en rack, consulte link:../rackmount-hardware.html["Hardware para montaje en rack"].
+
++
+
+NOTE: Instale la tornillería desde la parte inferior del bastidor o armario hasta la parte superior para evitar que el equipo se caiga.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+. Instale la bandeja.
++
+
+CAUTION: Cuando se carga completamente con unidades, cada bandeja pesa aproximadamente 64 lb (29 kg). Se necesitan dos personas o elevación mecánica para mover la estantería de forma segura.
+
++
+.. Empezando por la bandeja que desea en la parte inferior del armario, coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
+.. Apoye la estantería desde la parte inferior y deslícela en el armario.image:../media/4_person_lift_source.png[""]
+
+
+. Asegure la bandeja.
++
+Asegure la bandeja al rack según lo indicado en el link:../rackmount-hardware.html["Hardware para montaje en rack"].
+
++
+.. Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados para fijarlo a la parte frontal del armario.
+.. Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte para fijar la parte posterior del armario.
+
+
++
+image:../media/trafford_secure.png[""]
+
+. Instale el bisel o las tapas de cierre.
++
+.. Coloque el bisel frontal en la parte delantera de la bandeja del controlador de forma que los orificios de cada extremo se alineen con los cierres de la bandeja del controlador.
+.. Encaje la cubierta protectora en su lugar.
+.. Si tiene estantes de accionamiento opcionales, coloque la tapa del extremo izquierdo delante de la bandeja de accionamiento de manera que los orificios de la tapa del extremo se alineen con los cierres del lado izquierdo de la bandeja.
+.. Encaje la tapa del extremo en su sitio.
+.. Repita los pasos anteriores para la tapa del extremo derecho.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]

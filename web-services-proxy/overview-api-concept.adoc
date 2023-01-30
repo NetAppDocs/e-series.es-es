@@ -1,0 +1,220 @@
+---
+permalink: web-services-proxy/overview-api-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Obtenga más información acerca de Web Services API 
+---
+= Conceptos básicos de API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la API de servicios web, las comunicaciones HTTP implican un ciclo de solicitud y respuesta.
+
+
+
+== Elementos de URL en las solicitudes
+
+Independientemente del lenguaje de programación o la herramienta utilizada, cada llamada a la API de servicios web tiene una estructura similar, con una dirección URL, un verbo HTTP y un encabezado Accept.
+
+image::../media/web_services_proxy_api.gif[api del proxy de servicios web]
+
+Todas las solicitudes incluyen una dirección URL, como en el ejemplo siguiente, y contienen los elementos descritos en la tabla.
+
+`+https://webservices.name.com:8443/devmgr/v2/storage-systems+`
+
+|===
+| Zona | Descripción 
+
+
+ a| 
+Transporte HTTP
+
+`https://`
+ a| 
+El proxy de servicios web permite el uso de HTTP o HTTPS.
+
+Los servicios web integrados requieren HTTPS por motivos de seguridad.
+
+
+
+ a| 
+Puerto y URL básicos
+
+`webservices.name.com:8443`
+ a| 
+Cada solicitud debe enrutarse correctamente a una instancia activa de Web Services. Se requiere el FQDN (nombre de dominio completo) o la dirección IP de la instancia, junto con el puerto de escucha. De forma predeterminada, Web Services se comunica a través del puerto 8080 (para HTTP) y el puerto 8443 (para HTTPS).
+
+Para el proxy de servicios web, ambos puertos se pueden cambiar durante la instalación del proxy o en el archivo wsconfig.xml. La contención de puertos es común en los hosts de centro de datos que ejecutan diversas aplicaciones de gestión.
+
+En el caso de los servicios web integrados, no se puede cambiar el puerto de la controladora; de forma predeterminada, se establece en el puerto 8443 para conexiones seguras.
+
+
+
+ a| 
+Ruta API
+
+`devmgr/v2/storage-systems`
+ a| 
+Se realiza una solicitud a un recurso DE REST o un extremo específico dentro de la API de servicios web. La mayoría de los extremos tienen el siguiente formato:
+
+`devmgr/v2/<resource>/[id]`
+
+La ruta API consta de tres partes:
+
+* `devmgr` (Administrador de dispositivos) es el espacio de nombres de la API de servicios web.
+* `v2` Indica la versión de la API a la que tiene acceso. También puede utilizar `utils` para acceder a los extremos de inicio de sesión.
+* `storage-systems` es una categoría de la documentación.
+
+
+|===
+
+
+== Verbos HTTP admitidos
+
+Los verbos HTTP admitidos incluyen GET, POST y DELETE:
+
+* Las solicitudes GET se utilizan para solicitudes de sólo lectura.
+* LAS solicitudes POST se utilizan para crear y actualizar objetos, así como para solicitudes de lectura que podrían tener implicaciones de seguridad.
+* Las solicitudes DE ELIMINACIÓN suelen utilizarse para quitar un objeto de la gestión, quitar un objeto por completo o restablecer el estado del objeto.
+
+
+
+NOTE: Actualmente, la API de servicios web no admite PUT ni PARCHE. En su lugar, puede usar POST para proporcionar la funcionalidad típica de estos verbos.
+
+
+
+== Aceptar encabezados
+
+Al devolver un cuerpo de la solicitud, Web Services devuelve los datos en formato JSON (a menos que se especifique lo contrario). Algunos clientes solicitan por defecto "'text/html'" o algo similar. En estos casos, la API responde con un código HTTP 406, indicando que no puede proporcionar datos en este formato. Como práctica recomendada, debe definir el encabezado Accept como "'Application/json'" para los casos en los que espere JSON como tipo de respuesta. En otros casos en los que no se devuelve un cuerpo de respuesta (por ejemplo, ELIMINAR), siempre que el encabezado Accept no provoque ningún efecto no intencional.
+
+
+
+== Respuestas
+
+Cuando se realiza una solicitud a la API, una respuesta devuelve dos partes fundamentales de información:
+
+* Código de estado HTTP: Indica si la solicitud se ha realizado correctamente.
+* Cuerpo de respuesta opcional -- normalmente proporciona un cuerpo JSON que representa el estado del recurso o un cuerpo que proporciona más detalles sobre la naturaleza de un fallo.
+
+
+Debe comprobar el código de estado y la cabecera de tipo de contenido para determinar el aspecto del cuerpo de respuesta resultante. Para los códigos de estado HTTP 200-203 y 422, Web Services devuelve un cuerpo JSON con la respuesta. Para otros códigos de estado HTTP, Web Services generalmente no devuelve un cuerpo JSON adicional, ya sea porque la especificación no lo permite (204) o porque el estado es autoexplicativo. En la tabla se enumeran los códigos de estado HTTP comunes y las definiciones. También indica si la información asociada con cada código HTTP se devuelve en un cuerpo JSON.
+
+|===
+| Código de estado HTTP | Descripción | Cuerpo JSON 
+
+
+ a| 
+200 DE ACUERDO
+ a| 
+Indica una respuesta correcta.
+ a| 
+Sí
+
+
+
+ a| 
+201 creado
+ a| 
+Indica que se creó un objeto. Este código se utiliza en unos pocos casos excepcionales en lugar de un estado de 200.
+ a| 
+Sí
+
+
+
+ a| 
+202 aceptado
+ a| 
+Indica que la solicitud se acepta para su procesamiento como una solicitud asíncrona, pero debe realizar una solicitud posterior para obtener el resultado real.
+ a| 
+Sí
+
+
+
+ a| 
+203 Información no autoritativa
+ a| 
+Similar a una respuesta de 200, pero Web Services no puede garantizar que los datos estén actualizados (por ejemplo, solo los datos en caché están disponibles en este momento).
+ a| 
+Sí
+
+
+
+ a| 
+204 sin contenido
+ a| 
+Indica una operación correcta, pero no hay cuerpo de respuesta.
+ a| 
+No
+
+
+
+ a| 
+400 solicitud incorrecta
+ a| 
+Indica que el cuerpo JSON proporcionado en la solicitud no es válido.
+ a| 
+No
+
+
+
+ a| 
+401 no autorizado
+ a| 
+Indica que se ha producido un error de autenticación. No se han proporcionado credenciales o el nombre de usuario o la contraseña no son válidos.
+ a| 
+No
+
+
+
+ a| 
+403 Prohibido
+ a| 
+Un error de autorización, que indica que el usuario autenticado no tiene permiso para acceder al extremo solicitado.
+ a| 
+No
+
+
+
+ a| 
+404 no encontrado
+ a| 
+Indica que no se pudo ubicar el recurso solicitado. Este código es válido para API no existentes o recursos no existentes solicitados por el identificador.
+ a| 
+No
+
+
+
+ a| 
+422 entidad no procesable
+ a| 
+Indica que por lo general, la solicitud está bien formada, pero los parámetros de entrada no son válidos o el estado del sistema de almacenamiento no permite que los servicios web satisfagan la solicitud.
+ a| 
+Sí
+
+
+
+ a| 
+424 Dependencia con error
+ a| 
+Se utiliza en el proxy de servicios web para indicar que no se puede acceder al sistema de almacenamiento solicitado en ese momento. Por lo tanto, Web Services no puede satisfacer la solicitud.
+ a| 
+No
+
+
+
+ a| 
+429 demasiadas solicitudes
+ a| 
+Indica que se ha superado el límite de solicitudes y que se debe volver a intentar más tarde.
+ a| 
+No
+
+|===
+
+
+== Scripts de ejemplo
+
+GitHub contiene un repositorio de la colección y la organización de scripts de muestra que ilustra el uso de la API de servicios web de SANtricity de NetApp. Para acceder al repositorio, consulte https://github.com/NetApp/webservices-samples["Ejemplos de WebServices de NetApp"^].

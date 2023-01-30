@@ -1,0 +1,55 @@
+---
+permalink: install-hw-ef600/power-controller-shelves-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, power on, power cables 
+summary: Conecte los cables de alimentación y encienda las bandejas de unidades. 
+---
+= Enciende las bandejas de controladoras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda a conectar los cables de alimentación y a encender las bandejas de unidades.
+
+.Antes de empezar
+Antes de encender las bandejas de controladoras, asegúrese de hacer lo siguiente:
+
+* Instale el hardware.
+* Tome precauciones antiestáticas.
+
+
+.Pasos
+. Conecte los cables de alimentación, uno a cada controladora (EF600 se muestra a continuación).
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-ef600.png[""]
+ a| 
+*Cables de alimentación*
+
+|===
++
+|===
+
+
+ a| 
+image:../media/cabling_power.png[""]
+
+|===
+. Conecte los dos cables de alimentación, uno de cada controladora, a dos unidades de distribución de alimentación (PDU) separadas en el armario o rack.
++
+
+CAUTION: El acceso a un contenedor de controladoras EF300 o EF600 de la bandeja puede bloquearse con PDU de terceros. No utilice tomas de alimentación directamente detrás del compartimento de controladoras.
+
+. Permita que la controladora arranque durante cinco minutos antes de completar la configuración y configuración del sistema de almacenamiento.
+
+
+.Resultado
+La controladora arranca automáticamente. Los LED parpadean y los ventiladores comienzan a indicar que la controladora se está encendiendo.
+
+
+NOTE: Los ventiladores son muy ruidosos cuando se conectan por primera vez.

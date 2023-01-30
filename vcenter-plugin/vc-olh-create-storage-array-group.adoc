@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: El grupo de almacenamiento define las unidades que proporcionan el almacenamiento con el que se compone el volumen. 
+---
+= Cree un grupo de cabinas de almacenamiento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cree grupos de almacenamiento y, a continuación, añada cabinas de almacenamiento a los grupos. El grupo de almacenamiento define las unidades que proporcionan el almacenamiento con el que se compone el volumen.
+
+* Pasos*
+
+. En la página gestionar, seleccione menu:gestionar grupos[Crear grupo de cabinas de almacenamiento].
+. En el campo *Nombre*, escriba un nombre para el nuevo grupo.
+. Seleccione las cabinas de almacenamiento que desea añadir al nuevo grupo.
+. Haga clic en *Crear*.
+

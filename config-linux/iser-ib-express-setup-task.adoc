@@ -1,0 +1,12 @@
+---
+permalink: config-linux/iser-ib-express-setup-task.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Configuración exprés de Iser over InfiniBand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

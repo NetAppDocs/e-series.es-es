@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-check-volume-redundancy.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible comprobar la redundancia de un volumen en un pool o grupo de volúmenes para determinar si los datos de ese volumen son consistentes. Los datos de redundancia se utilizan para reconstruir información rápidamente en una unidad de reemplazo si falla una de las unidades de un pool o grupo de volúmenes. 
+---
+= Compruebe la redundancia de un volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con ayuda del soporte técnico o según indique Recovery Guru, puede comprobar la redundancia de un volumen en un pool o grupo de volúmenes para determinar si los datos de ese volumen son consistentes.
+
+Los datos de redundancia se utilizan para reconstruir información rápidamente en una unidad de reemplazo si falla una de las unidades de un pool o grupo de volúmenes.
+
+.Antes de empezar
+* El estado del pool o del grupo de volúmenes debe ser óptimo.
+* El pool o grupo de volúmenes no debe tener operaciones de modificación del volumen en curso.
+* Es posible verificar la redundancia en cualquier nivel de RAID excepto en RAID 0, ya que RAID 0 no tiene redundancia de datos. (Los pools se configuran solamente como RAID 6.)
+
+
+
+NOTE: Compruebe la redundancia del volumen solamente cuando Recovery Guru le indique hacerlo y con la ayuda del soporte técnico.
+
+.Acerca de esta tarea
+Es posible realizar esta comprobación solo en un pool o grupo de volúmenes a la vez. Una comprobación de redundancia de un volumen realiza las acciones siguientes:
+
+* Analiza los bloques de datos en un volumen RAID 3, un volumen RAID 5 o un volumen RAID 6, y verifica la información de redundancia de cada bloque. (RAID 3 solo puede asignarse a grupos de volúmenes con interfaz de línea de comandos.)
+* Compara los bloques de datos en unidades reflejadas RAID 1.
+* Devuelve errores de redundancia si el firmware de la controladora determina que los datos no coinciden.
+
+
+
+NOTE: Si se ejecuta de inmediato una comprobación de redundancia en el mismo pool o grupo de volúmenes, se puede generar un error. Para evitar este problema, espere de uno a dos minutos antes de ejecutar otra comprobación de redundancia en el mismo pool o grupo de volúmenes.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con el pool o el grupo de volúmenes.
+. Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+. Seleccione menú:tareas no comunes[comprobar redundancia de volumen].
++
+Se muestra el cuadro de diálogo comprobar redundancia.
+
+. Seleccione los volúmenes que desea verificar y después escriba check para confirmar que desea llevar a cabo esta operación.
+. Haga clic en *Comprobación*.
++
+Comienza la operación de comprobación de redundancia del volumen. Los volúmenes del pool o grupo de volúmenes se analizan secuencialmente, comenzando por la parte superior de la tabla en el cuadro de diálogo. Estas acciones ocurren a medida que se analiza cada volumen:
+
++
+** Se selecciona el volumen en la tabla de volúmenes.
+** El estado de la comprobación de redundancia se muestra en la columna Estado.
+** La comprobación se detiene en cada error de medios o de paridad detectado, y después informa ese error. En la siguiente tabla, se proporciona más información sobre el estado de la comprobación de redundancia:
+
+
++
+.Detalles del campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Estado | Descripción 
+
+
+| Pendiente | Este es el primer volumen que se analizará, y no ha hecho clic en Inicio para comenzar la comprobación de redundancia. -O- la operación de comprobación de redundancia se lleva a cabo en otros volúmenes del pool o grupo de volúmenes. 
+
+
+| Comprobando | El volumen está sometido a la comprobación de redundancia. 
+
+
+| Superada | El volumen superó la comprobación de redundancia. No se detectaron faltas de coincidencia en la información sobre redundancia. 
+
+
+| Error | El volumen no superó la comprobación de redundancia. Se detectaron faltas de coincidencia en la información sobre redundancia. 
+
+
+| Error de medios | Los medios de la unidad presentan defectos y son ilegibles. Siga las instrucciones que se señalan en Recovery Guru. 
+
+
+| Error de paridad | La paridad no es lo que debería ser en una cierta porción de los datos. Un error de paridad es potencialmente grave y puede producir la pérdida permanente de los datos. 
+|===
+====
+. Haga clic en *hecho* después de comprobar el último volumen del pool o grupo de volúmenes.
+

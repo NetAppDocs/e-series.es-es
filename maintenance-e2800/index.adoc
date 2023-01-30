@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e2800/index.html 
+sidebar: sidebar 
+keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
+summary: Realizar el mantenimiento de los componentes E2800. 
+---
+= Mantenga hardware de E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el sistema de almacenamiento E2800, es posible realizar procedimientos de mantenimiento en los siguientes componentes.
+
+
+
+== Pilas
+
+Cada contenedor de controladora incluye una batería que conserva los datos en caché si falla la alimentación de CA.
+
+
+
+== Controladoras
+
+Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones de System Manager.
+
+
+
+== Contenedores
+
+Los contenedores constan de tres tipos distintos: Contenedores de alimentación/ventilador (fuentes de alimentación) que proporcionan una fuente de alimentación redundante y una refrigeración adecuada en una bandeja de controladoras o de 24 unidades de 12 o de unidades; contenedores de alimentación que se usan para la redundancia de alimentación en una bandeja de controladoras o bandeja de unidades de 60 unidades; y los contenedores de ventiladores que se usan para refrigerar la bandeja de controladoras de 60 unidades o la bandeja de unidades.
+
+
+
+== Unidades
+
+Una unidad es un dispositivo mecánico electromagnético que proporciona medios de almacenamiento físico para datos.
+
+
+
+== Tarjetas de interfaz del host (HIC)
+
+En forma opcional, se puede instalar una tarjeta de interfaz del host (HIC) en un contenedor de controladora. La controladora E2800 incluye puertos de host incorporados en la tarjeta de la controladora misma, como también puertos de host en una HIC opcional. Los puertos de host que están incorporados en la controladora se denominan puertos de host de la placa base. Los puertos de host que están incorporados en HIC se denominan puertos de HIC.
+
+
+
+== Protocolo de puerto de host
+
+Es posible convertir el protocolo de un host a otro protocolo para poder establecer la compatibilidad y la comunicación.

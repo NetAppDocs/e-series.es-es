@@ -1,0 +1,21 @@
+---
+permalink: config-vmware/configure-storage-host-task.html 
+sidebar: sidebar 
+keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Es posible usar el almacenamiento asignado a un host ESXi como almacén de datos Virtual Machine File System \(VMFS\) o una asignación de dispositivo sin formato \(RDM\). No se admiten RDM en el protocolo NVMe over Fibre Channel.' 
+---
+= Configurar el almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar el almacenamiento asignado a un host ESXi como almacén de datos Virtual Machine File System (VMFS) o una asignación de dispositivo sin formato (RDM). No se admiten RDM en el protocolo NVMe over Fibre Channel.
+
+Las versiones 6._x_ y 7 _x_ de ESXi admiten las versiones 5 y 6 de VMFS.
+
+.Pasos
+. Asegúrese de que los volúmenes asignados al host ESXi se hayan detectado correctamente.
+. Para obtener instrucciones sobre la creación de almacenes de datos VMFS o el uso de volúmenes como RDM en vSphere Client o vSphere Web Client, consulte la https://www.vmware.com/support/pubs/["Sitio web de documentación de VMware"^].
+

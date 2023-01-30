@@ -1,0 +1,173 @@
+---
+permalink: getting-started/learn-software-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
+summary: Los sistemas E-Series incluyen el software SANtricity para el aprovisionamiento de almacenamiento y otras tareas. 
+---
+= Información general del software SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los sistemas E-Series incluyen el software SANtricity para el aprovisionamiento de almacenamiento y otras tareas.
+
+El software SANtricity consta de las siguientes interfaces de gestión:
+
+* System Manager: Interfaz basada en web utilizada para gestionar una controladora en una cabina de almacenamiento.
+* Unified Manager: Interfaz basada en web que se utiliza para ver y gestionar todas las cabinas de almacenamiento de la red.
+* Proxy de servicios web: Una API DE REST que se utiliza para ver y gestionar todas las cabinas de almacenamiento de la red.
+* Interfaz de línea de comandos (CLI): Aplicación de software para la configuración y supervisión de cabinas de almacenamiento.
+
+
+
+NOTE: Las cabinas de almacenamiento EF600 y EF300 no admiten las funciones de mirroring, volúmenes finos o caché SSD.
+
+
+
+== System Manager de SANtricity
+
+System Manager es un software de gestión basado en web integrado en cada controladora. Para acceder a la interfaz de usuario, apunte un explorador a la dirección IP de la controladora. Un asistente de configuración le ayuda a comenzar con la configuración del sistema.
+
+System Manager ofrece diversas funciones de gestión como:
+
+|===
+
+
+ a| 
+image:../media/sam1130_icon_performance.gif[""] *Rendimiento*
+ a| 
+Visualice hasta 30 días de datos de rendimiento, incluida la latencia de I/o, IOPS, utilización de CPU y rendimiento.
+
+
+
+ a| 
+image:../media/sam1130_icon_volumes.gif[""] *Almacenamiento*
+ a| 
+Aprovisione el almacenamiento mediante pools o grupos de volúmenes y cree cargas de trabajo de aplicaciones.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] *Protección de datos*
+ a| 
+Realice operaciones de backup y recuperación ante desastres mediante copias Snapshot, copias de volúmenes y mirroring remoto.
+
+
+
+ a| 
+image:../media/sam1130_icon_controllers.gif[""] *Hardware*
+ a| 
+Compruebe el estado de los componentes y realice algunas funciones relacionadas con esos componentes, como la asignación de unidades de repuesto.
+
+
+
+ a| 
+image:../media/sam1130_icon_alerts.gif[""] *Alertas*
+ a| 
+Notifique a los administradores sobre eventos importantes que se producen en la cabina de almacenamiento. Las alertas se pueden enviar por correo electrónico, capturas SNMP y syslog.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Administración de acceso*
+ a| 
+Configurar la autenticación de usuario que requiere que los usuarios inicien sesión en el sistema con credenciales asignadas.
+
+
+
+ a| 
+image:../media/sam1130_icon_settings.gif[""] *Ajustes del sistema*
+ a| 
+Configure otras funciones de rendimiento del sistema, como la caché SSD y el equilibrio de carga automático.
+
+
+
+ a| 
+image:../media/sam1130_icon_support.gif[""] *Soporte*
+ a| 
+Ver datos de diagnóstico, gestionar actualizaciones y configurar AutoSupport, que supervisa el estado de una cabina de almacenamiento y envía mensajes automáticos al soporte técnico.
+
+|===
+
+
+== Unified Manager de SANtricity
+
+Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central, puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E2800, EF280, EF300, E5700, EF570 Y EF600. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.
+
+Unified Manager se encuentra instalado en un servidor de gestión junto con el proxy de servicios web. Para acceder a Unified Manager, se abre un explorador e introduce la URL que indica el servidor donde está instalado el proxy de servicios web.
+
+Unified Manager ofrece varias funciones de gestión, como:
+
+|===
+
+
+ a| 
+image:../media/artboard_9.png[""] *Descubra las matrices de almacenamiento*
+ a| 
+Busque y añada las cabinas de almacenamiento que desea gestionar en la red de la organización. Luego, es posible ver el estado de todas las cabinas de almacenamiento desde una sola página.
+
+
+
+ a| 
+image:../media/artboard_11.png[""] *Lanzamiento*
+ a| 
+Abra una instancia de System Manager para realizar operaciones de gestión individuales en una determinada cabina de almacenamiento.
+
+
+
+ a| 
+image:../media/sam1130_icon_system.gif[""] *Importar configuración*
+ a| 
+Ejecute una importación en lote desde una cabina de almacenamiento a varias cabinas, incluida la configuración de las alertas, AutoSupport y servicios de directorio.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] *Mirroring*
+ a| 
+Configure las parejas reflejadas asíncronas o síncronas entre dos cabinas de almacenamiento.
+
+
+
+ a| 
+image:../media/artboard_10.png[""] *Gestionar grupos*
+ a| 
+Organice las cabinas de almacenamiento en grupos para facilitar la gestión.
+
+
+
+ a| 
+image:../media/sam1130_icon_upgrade_center.gif[""] *Centro de actualización*
+ a| 
+Actualice el software de sistema operativo SANtricity en varias cabinas de almacenamiento.
+
+
+
+ a| 
+image:../media/sam1140_icon_certs.gif[""] *Certificados*
+ a| 
+Cree solicitudes de firma de certificados (CSR), importe certificados y gestione certificados existentes para varias cabinas de almacenamiento.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Administración de acceso*
+ a| 
+Configurar la autenticación de usuario que requiere que los usuarios inicien sesión en Unified Manager con credenciales asignadas.
+
+|===
+
+
+== Proxy de servicios web de SANtricity
+
+El proxy de servicios web es un servidor API RESTful que puede gestionar cientos de cabinas E-Series nuevas y antiguas. El proxy se instala por separado en servidores Windows o Linux.
+
+Web Services incluye documentación de API que permite interactuar directamente con la API DE REST. Para acceder a la documentación de API de servicios web, abra un explorador e introduzca la URL que indica el servidor donde está instalado el proxy de servicios web.
+
+
+
+== Interfaz de línea de comandos (CLI)
+
+La interfaz de línea de comandos (CLI) es una aplicación de software que permite configurar y supervisar cabinas de almacenamiento. La CLI permite ejecutar comandos desde el símbolo del sistema de un sistema operativo, como C: En dos, una ruta de sistema operativo Linux o una ruta de sistema operativo Solaris.

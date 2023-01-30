@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-array-discovery.html 
+keywords: discover arrays vCenter plugin, discover storage resources Plugin for vCenter, resolve certificates vCenter plugin 
+summary: Utilice la interfaz del complemento para vCenter para detectar las direcciones IP de las cabinas en su red. 
+---
+= Detectar cabinas de almacenamiento en el plugin
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para mostrar y gestionar recursos de almacenamiento, debe utilizar la interfaz del complemento de almacenamiento para vCenter para detectar las direcciones IP de las cabinas en la red.
+
+.Antes de empezar
+* Debe conocer las direcciones IP de red (o el rango de direcciones) de las controladoras de la cabina.
+* Las cabinas de almacenamiento deben estar configuradas y configuradas correctamente, y deben conocer las credenciales de inicio de sesión de la cabina de almacenamiento (nombre de usuario y contraseña).
+
+
+
+
+== Paso 1: Introduzca las direcciones de red para la detección
+
+.Pasos
+. En la página gestionar, seleccione *Agregar/detectar*.
++
+Se muestra el cuadro de diálogo introducir rango de direcciones de red.
+
+. Debe realizar una de las siguientes acciones:
++
+** Para detectar una cabina de almacenamiento, seleccione el botón de opción *detectar una sola cabina de almacenamiento* y luego introduzca la dirección IP de una de las controladoras de la cabina de almacenamiento.
+** Para detectar varias cabinas de almacenamiento, seleccione el botón de opción *detectar todas las cabinas de almacenamiento dentro de un rango de red* y, a continuación, introduzca la dirección de red inicial y la dirección de red final para buscar en la subred local.
+
+
+. Haga clic en *Iniciar descubrimiento*.
++
+Cuando comienza el proceso de detección, el cuadro de diálogo muestra las cabinas de almacenamiento a medida que se detectan. El proceso puede tardar varios minutos en completarse.
+
++
+Si no se detectan cabinas gestionables, compruebe que las cabinas de almacenamiento estén bien conectadas a la red y que las direcciones asignadas se encuentren dentro del rango correspondiente. Haga clic en *nuevos parámetros de descubrimiento* para volver a la página Agregar/detectar.
+
+. Marque la casilla de comprobación junto a la cabina de almacenamiento que desea añadir al dominio de gestión.
++
+El sistema comprueba las credenciales de cada cabina que se añade al dominio de gestión. Es posible que deba resolver problemas con certificados que no son de confianza antes de continuar.
+
+. Haga clic en *Siguiente* para continuar con el siguiente paso del asistente.
++
+Si las cabinas de almacenamiento tienen certificados válidos, vaya a. <<Paso 3: Proporcionar contraseñas>>.
+
++
+Si alguna cabina de almacenamiento no tiene certificados válidos, se muestra el cuadro de diálogo resolver certificados autofirmados. Vaya a. <<Paso 2: Resolver certificados que no son de confianza durante la detección>>.
+
++
+Si desea importar certificados firmados por CA, cancele el asistente de detección y haga clic en *Gestión de certificados* en el panel izquierdo. Consulte la ayuda en línea para obtener más instrucciones.
+
+
+
+
+
+== Paso 2: Resolver certificados que no son de confianza durante la detección
+
+Debe resolver todos los problemas de los certificados antes de continuar con el proceso de detección.
+
+. Si se abre el cuadro de diálogo resolver certificados autofirmados, revise la información que se muestra para los certificados que no son de confianza. Para obtener más información, también puede hacer clic en los tres puntos del extremo de la tabla y seleccionar *Ver* en el menú emergente.
+. Debe realizar una de las siguientes acciones:
++
+** Si confía en las conexiones con las matrices de almacenamiento detectadas, haga clic en *Siguiente* y, a continuación, en *Sí* para confirmar y continuar con el siguiente cuadro de diálogo del asistente. Los certificados autofirmados se marcan como de confianza y las cabinas de almacenamiento se añadirán al plugin.
+** Si no confía en dichas conexiones, seleccione *Cancelar* y valide la estrategia de certificado de seguridad de cada cabina de almacenamiento antes de añadir cualquiera de ellas.
+
+
+. Haga clic en *Siguiente* para continuar con el siguiente paso del asistente.
+
+
+
+
+== Paso 3: Proporcionar contraseñas
+
+Como último paso para la detección, debe introducir las contraseñas de las cabinas de almacenamiento que desea añadir al dominio de gestión.
+
+. Para cada cabina detectada, introduzca su contraseña de administrador en los campos.
+. Haga clic en *Finalizar*.
++
+El sistema puede tardar varios minutos en conectarse a las cabinas de almacenamiento especificadas. Cuando finaliza el proceso, las cabinas de almacenamiento se añaden al dominio de gestión y se asocian con el grupo seleccionado (si se especificó alguno).
+
+

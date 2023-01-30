@@ -1,0 +1,74 @@
+---
+permalink: config-windows/configure-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, configure LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configurar el almacenamiento en el host para el método exprés de Windows. 
+---
+= Configurar el almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dado que un nuevo LUN está sin conexión y no tiene ninguna partición ni sistema de archivos cuando un host de Windows lo detecta por primera vez, debe conectar el volumen e iniciarlo en Windows. De manera opcional, puede formatear el LUN con un sistema de archivos.
+
+Es posible inicializar el disco como un disco básico con una tabla de particiones GPT o MBR. Normalmente, el LUN se formatea con un sistema de archivos como New Technology File System (NTFS).
+
+.Lo que necesitará
+Una LUN detectada por el host.
+
+.Pasos
+. Desde un símbolo del sistema de Windows, introduzca el `diskpart` contexto.
++
+[listing]
+----
+> diskpart
+----
+. Consulte la lista de discos disponibles.
++
+[listing]
+----
+> list disk
+----
+. Seleccione el disco para conectar.
++
+[listing]
+----
+> select disk 1
+----
+. Conectar el disco.
++
+[listing]
+----
+> online disk
+----
+. Cree una partición.
++
+[listing]
+----
+> create partition primary
+----
++
+
+NOTE: En Windows Server 2008 y posterior, se le pedirá inmediatamente después de crear la partición para dar formato al disco y darle un nombre. Seleccione *Cancelar* en el mensaje para continuar utilizando estas instrucciones para dar formato y asignar nombre a la partición.
+
+. Asigne una letra de unidad.
++
+[listing]
+----
+> assign letter=f
+----
+. Formatear el disco.
++
+[listing]
+----
+> format FS=NTFS LABEL=”New Volume” QUICK
+----
+. Salga del contexto de diskpart.
++
+[listing]
+----
+> exit
+----
+

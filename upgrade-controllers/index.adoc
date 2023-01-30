@@ -1,0 +1,35 @@
+---
+permalink: upgrade-controllers/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
+summary: Información general sobre la actualización de una cabina E-Series mediante el reemplazo de controladoras. 
+---
+= Información general sobre la actualización de las controladoras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible actualizar la cabina de almacenamiento mediante la sustitución de las controladoras existentes.
+
+
+
+== Componentes de la controladora
+
+Una controladora consta de una placa, un firmware y un software. Controla las unidades y también implementa las funciones del software de administración.
+
+
+
+== Cuándo utilizar este procedimiento
+
+Normalmente, debe utilizar este procedimiento cuando desea actualizar todas las controladoras a un modelo o plataforma diferente. Este procedimiento implica sustituir todas las controladoras de un soporte de controladora-unidad
+
+También puede utilizar este procedimiento en las siguientes situaciones:
+
+* Cuando todas las controladoras de un soporte de controladora-unidad encuentran errores de hardware y ya no son funcionales.
+* Para actualizar los módulos de memoria en línea dobles (DIMM) de su soporte de controladora-unidad, reemplace ambas controladoras por el mismo modelo de controladoras pero con diferentes DIMM.
+
+
+
+NOTE: Los escenarios de actualización de HIC no se tratan dentro de este procedimiento. En su lugar, consulte los procedimientos de adición, actualización y sustitución de HIC en su sistema E-Series.

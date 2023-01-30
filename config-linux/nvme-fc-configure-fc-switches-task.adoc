@@ -1,0 +1,31 @@
+---
+permalink: config-linux/nvme-fc-configure-fc-switches-task.html 
+sidebar: sidebar 
+keywords: FC switch, zoning, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Si se configuran los switches \(zoning\) Fibre Channel \(FC\), los hosts pueden conectarse a la cabina de almacenamiento y limitan el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.' 
+---
+= Configure los switches FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Configurar (dividir en zonas) los switches de Fibre Channel (FC) permite que los hosts se conecten a la cabina de almacenamiento y limita el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.
+
+.Lo que necesitará
+* Credenciales de administrador para los switches.
+* El WWPN de cada puerto de iniciador de host y de cada puerto de destino de la controladora conectado al switch. (Use la utilidad HBA para la detección.)
+
+
+.Acerca de esta tarea
+Para obtener detalles acerca de la división en zonas de los switches, consulte la documentación del proveedor del switch.
+
+Cada puerto del iniciador debe estar en una zona separada con todos sus puertos de destino correspondientes.
+
+.Pasos
+. Inicie sesión en el programa de administración del switch FC y, a continuación, seleccione la opción de configuración de división en zonas.
+. Cree una nueva zona que incluya el primer puerto iniciador de host y que también incluya todos los puertos de destino que se conectan al mismo switch de FC que el iniciador.
+. Cree zonas adicionales para cada puerto iniciador de host FC del switch.
+. Guarde las zonas y, a continuación, active la nueva configuración de particiones.
+

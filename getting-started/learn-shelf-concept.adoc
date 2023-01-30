@@ -1,0 +1,66 @@
+---
+permalink: getting-started/learn-shelf-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
+summary: Los sistemas E-Series están disponibles en diferentes tamaños de bandeja. 
+---
+= Tipos de bandeja E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los sistemas E-Series están disponibles en diferentes tamaños de bandeja.
+
+|===
+| Tipo de bandeja | Ilustración 
+
+
+ a| 
+*DE212C:*
+
+* 2u12 (2 unidades rack; 12 unidades)
+* HDD de 3.5" y/o SSD de 2.5" (con adaptador)
+* Solo controladoras E2800
+
+ a| 
+image:../media/e2812_front.gif[""]
+
+
+
+ a| 
+*DE224C:*
+
+* 2u24 (2 unidades rack; 24 unidades)
+* Unidades HDD de 2.5" o SSD de 2.5"
+* Controladoras E2800, EF280, E5700 y EF570
+
+ a| 
+image:../media/e2824_front.gif[""]
+
+
+
+ a| 
+*DE460C:*
+
+* 4u60 (4 unidades rack; 60 unidades)
+* Unidades de 3.5 y 2.5 pulgadas (NL-SAS, SAS y SSD)
+* Controladoras E2800 y E5700
+
+ a| 
+image:../media/de460c.gif[""]
+
+
+
+ a| 
+*NE224:*
+
+* 2u24 (2 unidades rack; 24 unidades)
+* Unidades SSD NVMe de 2.5"
+* Controladoras EF300 y EF600
+
+ a| 
+image:../media/ne224.gif[""]
+
+|===

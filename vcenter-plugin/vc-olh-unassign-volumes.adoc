@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-unassign-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Si ya no necesita acceso de I/o a un volumen, es posible anular la asignación de este recurso desde el host o clúster de hosts. 
+---
+= Anule la asignación de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si ya no necesita acceso de I/o a un volumen, es posible anular la asignación de este recurso desde el host o clúster de hosts.
+
+.Acerca de esta tarea
+Recuerde estas directrices cuando anule la asignación de un volumen:
+
+* Si va a eliminar el último volumen asignado de un clúster de hosts, y el clúster de hosts también tiene hosts con volúmenes específicos asignados, asegúrese de eliminar o mover tales asignaciones antes de eliminar la última asignación para el clúster de hosts.
+* Si se asignan un clúster de hosts, un host o un puerto de host a un volumen que está registrado en el sistema operativo, se debe borrar este registro para poder eliminar estos nodos.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione el host o clúster de hosts que desea editar y, a continuación, haga clic en *Anular asignación de volúmenes*.
++
+Se muestra un cuadro de diálogo que muestra todos los volúmenes asignados actualmente.
+
+. Seleccione la casilla de comprobación junto a cada volumen cuya asignación desee anular o seleccione la casilla de comprobación en el encabezado de la tabla para seleccionar todos los volúmenes.
+. Haga clic en *Anular asignación*.
+
+
+.Resultados
+* Los volúmenes para los cuales se anuló la asignación están disponibles para una nueva asignación.
+* El sistema operativo del host sigue reconociendo el volumen hasta que se configuran los cambios en el host.
+

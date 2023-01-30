@@ -1,0 +1,72 @@
+---
+permalink: config-linux/fc-configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Linux, express linux configuration, software configuration, linux host, 
+summary: Configure el software multivía, que proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. 
+---
+= Configure el software de multivía
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para proporcionar una ruta redundante a la cabina de almacenamiento, puede configurar el software multivía.
+
+.Lo que necesitará
+Debe instalar los paquetes necesarios en el sistema.
+
+* En el caso de los hosts Red Hat (RHEL), compruebe que los paquetes se han instalado en ejecución `rpm -q device-mapper-multipath`.
+* En el caso de los hosts SLES, verifique que los paquetes se han instalado ejecutando `rpm -q multipath-tools`.
+
+
+Si aún no ha instalado el sistema operativo, utilice los soportes suministrados por el proveedor del sistema operativo.
+
+.Acerca de esta tarea
+El software multivía proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. El software multivía presenta el sistema operativo con un único dispositivo virtual que representa las rutas físicas activas al almacenamiento. El software multipath también administra el proceso de recuperación tras fallos que actualiza el dispositivo virtual.
+
+Es posible utilizar la herramienta multivía para el asignador de dispositivos (DM-MP) para instalaciones de Linux. De manera predeterminada, DM-MP está deshabilitado en RHEL y SLES. Complete los siguientes pasos para activar los componentes DM-MP en el host.
+
+.Pasos
+. Si aún no se ha creado un archivo multipath.conf, ejecute el `# touch /etc/multipath.conf` comando.
+. Utilice la configuración de multivía predeterminada dejando el archivo multipath.conf en blanco.
+. Inicie el servicio multivía.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Guarde la versión del kernel ejecutando `uname -r` comando.
++
+[listing]
+----
+# uname -r
+3.10.0-327.el7.x86_64
+----
++
+Se usará esta información cuando se asignen volúmenes al host.
+
+. Active el daemon multipathd en el inicio.
++
+[listing]
+----
+systemctl enable multipathd
+----
+. Vuelva a generar el `initramfs` o la `initrd` imagen en el directorio /boot:
++
+[listing]
+----
+dracut --force --add multipath
+----
+. Asegúrese de que la imagen recién creada /boot/initrams-* o la imagen /boot/initrd-* esté seleccionada en el archivo de configuración de arranque.
++
+Por ejemplo, para grub lo es `/boot/grub/menu.lst` y para la gruña2 lo es `/boot/grub2/menu.cfg`.
+
+. Utilice la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Crear hosts manualmente"] procedimiento en la ayuda en línea para comprobar si los hosts están definidos. Compruebe que cada configuración del tipo de host se basa en la información de kernel recogida en <<step4,paso 4>>.
+
+
+
+NOTE: La función Automatic Load Balancing está deshabilitada para todos los volúmenes asignados a hosts que ejecutan kernel 3.9 o versiones anteriores.
+
+. Reinicie el host.
+

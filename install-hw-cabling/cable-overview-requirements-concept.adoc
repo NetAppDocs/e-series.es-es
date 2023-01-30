@@ -1,0 +1,22 @@
+---
+permalink: install-hw-cabling/cable-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: cabling, cabling requirements, drive shelf cabling, controller cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: El cableado de las bandejas E-Series requiere varios componentes. 
+---
+= Requisitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Además de las bandejas de controladoras y de unidades, es posible que necesite algunos de los siguientes componentes o todos al cablear el sistema de almacenamiento:
+
+* Cables: SAS, Fibre Channel (FC), Ethernet, InfiniBand
+* Transceptores de factor de forma pequeño conectable (SFP) o SFP cuádruple (QSFP)
+* Interruptores
+* Adaptadores de bus de host (HBA)
+* Adaptadores de canal de host (AQA)
+* Tarjetas de interfaz de red (NIC)
+

@@ -1,0 +1,110 @@
+---
+permalink: config-linux/nvme-ib-set-up-failover-task.html 
+sidebar: sidebar 
+keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure el host para que ejecute la conmutación al nodo de respaldo. 
+---
+= Configurar la conmutación por error
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para proporcionar una ruta redundante a la cabina de almacenamiento, puede configurar el host para que ejecute una conmutación al nodo de respaldo.
+
+.Lo que necesitará
+Debe instalar los paquetes necesarios en el sistema.
+
+* En el caso de los hosts Red Hat (RHEL), compruebe que los paquetes se han instalado en ejecución `rpm -q device-mapper-multipath`
+* En el caso de los hosts SLES, verifique que los paquetes se han instalado ejecutando `rpm -q multipath-tools`
++
+
+NOTE: Consulte  https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] Para garantizar que se hayan instalado las actualizaciones necesarias, ya que es posible que el acceso multivía no funcione correctamente con las versiones GA de SLES o RHEL.
+
+
+
+.Acerca de esta tarea
+RHEL 7 y SLES 12 utilizan Device Mapper Multipath (DMMP) para una multivía cuando se utiliza NVMe over InfiniBand. RHEL 8, RHEL9 y SLES 15 utilizan una conmutación por error nativa de NVMe integrada. En función del sistema operativo que esté ejecutando, se requiere alguna configuración adicional de multivía para que funcione correctamente.
+
+
+
+== Habilite Device Mapper Multipath (DMMP) para RHEL 7 o SLES 12
+
+De manera predeterminada, DM-MP está deshabilitado en RHEL y SLES. Complete los siguientes pasos para activar los componentes DM-MP en el host.
+
+.Pasos
+. Añada la entrada del dispositivo NVMe E-Series a la sección dispositivos del archivo /etc/multipath.conf, como se muestra en el siguiente ejemplo:
++
+[listing]
+----
+
+devices {
+        device {
+                vendor "NVME"
+                product "NetApp E-Series*"
+                path_grouping_policy group_by_prio
+                failback immediate
+                no_path_retry 30
+        }
+}
+----
+. Configurar `multipathd` para iniciar al iniciar el sistema.
++
+[listing]
+----
+# systemctl enable multipathd
+----
+. Comenzar `multipathd` si no se está ejecutando actualmente.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Compruebe el estado de `multipathd` para asegurarse de que está activo y en funcionamiento:
++
+[listing]
+----
+# systemctl status multipathd
+----
+
+
+
+
+== Configuración de RHEL 8 con accesos múltiples nativos de NVMe
+
+La función multivía nativa de NVMe está deshabilitada de manera predeterminada en RHEL 8 y debe habilitarse mediante los pasos siguientes.
+
+. Configuración `modprobe` Regla para activar la tecnología multivía nativa del NVMe.
++
+[listing]
+----
+# echo "options nvme_core multipath=y" >> /etc/modprobe.d/50-nvme_core.conf
+----
+. Repetir `initramfs` con nuevo `modprobe` parámetro.
++
+[listing]
+----
+# dracut -f
+----
+. Reinicie el servidor para que esté disponible con el sistema multivía nativo de NVMe habilitado.
++
+[listing]
+----
+# reboot
+----
+. Compruebe que se haya habilitado el acceso multivía nativo de NVMe después de que el host arranca de nuevo.
++
+[listing]
+----
+# cat /sys/module/nvme_core/parameters/multipath
+----
++
+.. Si el resultado del comando es `N`, A continuación, el acceso multivía nativo de NVMe sigue desactivado.
+.. Si el resultado del comando es `Y`, Entonces el acceso multivía nativo de NVMe está activado y cualquier dispositivo NVMe que descubra lo utilizará.
+
+
+
+
+
+NOTE: Para SLES 15 y RHEL 9, la función multivía nativa de NVMe está habilitada de forma predeterminada y no se requiere ninguna configuración adicional.

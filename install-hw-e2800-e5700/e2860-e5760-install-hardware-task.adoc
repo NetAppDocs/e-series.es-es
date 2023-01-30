@@ -1,0 +1,103 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Instale E2800 o E5700 en un rack de dos parantes o un armario del sistema de NetApp. 
+---
+= Instale el hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda a instalar un sistema de almacenamiento E2860, E5760 o DE460 en un rack de dos parantes o un armario del sistema de NetApp.
+
+.Antes de empezar
+* Registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Prepare un área de trabajo plana y sin estática.
+* Obtenga una muñequera ESD y tome precauciones antiestáticas.
+
+
+Lea todas las instrucciones antes de continuar con los pasos a continuación.
+
+.Pasos
+. Extraiga el contenido del hardware y, a continuación, realice el inventario del hardware contenido contra el recibo del embalaje.
+. Instale los rieles.
++
+Si se incluyeron instrucciones con el hardware para montaje en rack, consulte ellos para aprender cómo instalar los rieles. Para obtener instrucciones adicionales para el montaje en rack, consulte link:../rackmount-hardware.html["Hardware para montaje en rack"].
+
++
+
+NOTE: En el caso de armarios con orificios cuadrados, primero debe instalar las tuercas de jaula proporcionadas para asegurar la parte delantera y trasera de la estantería con tornillos.
+
++
+|===
+|  
+
+
+ a| 
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+|===
+. Instale la bandeja.
++
+
+CAUTION: Un estante vacío pesa aproximadamente 60 kg (132 lb). Se requiere un elevador mecánico o cuatro personas que utilicen asas de elevación para mover de forma segura una estantería vacía.
+
++
+.. Si se levanta el estante a mano, fije las cuatro asas de elevación. Empuje cada asa hasta que encaje en su sitio.
+.. Apoye la estantería desde la parte inferior y deslícela en el armario. Si se utilizan las asas de elevación, retírelas de una serie a la vez que las bandejas se deslizan en el armario. Para quitar las asas, tire hacia atrás del pestillo de liberación, empuje hacia abajo y tire hacia fuera de la bandeja.
+
+
++
+image:../media/4_person_lift_source.png[""]
+
+. Asegure la bandeja.
++
+.. Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados para fijarlo a la parte frontal del armario.
+.. Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte para fijar la parte posterior del armario.
++
+image:../media/trafford_secure.png[""]
+
+
+
+. Instale las unidades.
++
+.. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+.. Empezando por la ranura delantera izquierda del cajón superior, instale cada unidad colocando suavemente la ranura de la unidad y bajando el asa de la unidad elevada hasta que encaje en su lugar.
++
+*** Si instala menos de 60 unidades, si tiene unidades de estado sólido (SSD) o si sus unidades tienen capacidades diferentes:
++
+**** Mantenga un mínimo de 20 unidades por bandeja. Instale primero las unidades en las cuatro ranuras frontales en cada cajón para que el aire fluya correctamente a la refrigeración.
+**** Distribuya las unidades restantes a través de los cajones. Si es posible, instale un número igual de cada tipo de unidad en cada cajón para permitir la creación de grupos de volúmenes o pools de discos protegidos contra pérdida de cajón.
+**** Distribuya todos los SSD de manera uniforme entre los cajones.
+
+
+
+
+.. Deslice con cuidado el cajón hacia adentro empujando el centro y cerrando con cuidado ambos pestillos.
++
+*** No fuerce el cajón en su lugar.
+*** Utilice la herramienta de conector, desconecte el conector del cable de la serpiente y vuelva a conectarlo, asegúrese de que oye un clic para determinar que la reconexión se realiza correctamente.
+*** La desconexión y reconexión solo deben ser necesarias durante la configuración inicial o si la bandeja se envía a una ubicación diferente.
+
+
+.. Conecte el panel frontal.
+
+
+
+
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+
+
+
+ a| 
+
+CAUTION: Riesgo de daños en el equipo -- deje de empujar el cajón si siente agarrotamiento. Utilice las palancas de liberación de la parte delantera del cajón para desdeslizar el cajón hacia atrás. A continuación, vuelva a insertar con cuidado el cajón en la ranura.
+
+|===

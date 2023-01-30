@@ -1,0 +1,110 @@
+---
+permalink: maintenance-e5700/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, converting host port protocol, 
+summary: Convertir el protocolo de host para un E5700. 
+---
+= Requisitos para cambiar el protocolo de puerto de host de E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de convertir el protocolo de puerto de host en E5700, revise los requisitos.
+
+
+
+== Los puertos de host que es posible cambiar
+
+
+NOTE: Solo los puertos de la base óptica de una controladora E5700 pueden convertirse.
+
+En la siguiente figura, se muestra E5700 con sus puertos de host de placa base SFP+ (ópticos) *(1)* y los dos puertos HIC IB *(2)* opcionales.
+
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 con 2 puertos 100g edr infiniband con anotaciones]
+
+
+
+== Requisitos
+
+* Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
+* Debe detener las operaciones de I/o del host cuando realiza la conversión y no podrá acceder a los datos en la cabina de almacenamiento hasta después de completar correctamente la conversión.
+* Se debe usar la gestión fuera de banda. (No puede utilizar la administración en banda para completar este procedimiento.)
+* Ha obtenido el hardware necesario para la conversión. Su representante de ventas de NetApp puede ayudarle a determinar qué hardware necesita y a solicitar las piezas correctas.
+* Si intenta cambiar los puertos de host en placa base de la cabina de almacenamiento y actualmente utiliza transceptores SFP de protocolo doble (también denominado _Unified_) que ha adquirido de NetApp, no es necesario cambiar los transceptores SFP.
+* Asegúrese de que los transceptores SFP de protocolo doble admiten FC (a 4 Gbps o 16 Gbps) e iSCSI (a 10 Gbps), pero no admiten iSCSI de 1 Gbps. Consulte link:hpp-change-host-protocol-task.html["Paso 1: Determinar si tiene SFP con doble protocolo"] Para determinar qué tipo de transceptores SFP están instalados.
+
+
+
+
+== Consideraciones que tener en cuenta al cambiar el protocolo del host
+
+Las consideraciones para cambiar el protocolo de host dependen de los protocolos de inicio y finalización de los puertos de host de la placa base y los puertos de HIC.
+
+Si utiliza una función de mirroring o la función Garantía de datos (DA), debe comprender lo que sucede con estas funciones cuando cambia el protocolo de puerto de host.
+
+
+NOTE: Las siguientes consideraciones se aplican solo si se convierte una cabina de almacenamiento que ya se encuentra en uso. Estas consideraciones no aplican si se convierte una nueva cabina de almacenamiento que aún no tiene hosts y volúmenes definidos.
+
+
+
+=== Conversión de FC a iSCSI
+
+* El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo.
++
+** Si actualmente utiliza mirroring asíncrono a través de la placa base, debe desactivar las relaciones de mirroring asíncrono mediante esos puertos antes de aplicar el paquete de funciones.
+** Consulte la ayuda en línea de SANtricity System Manager para eliminar todos los grupos de coherencia de reflejos y quitar todas las parejas reflejadas de las cabinas de almacenamiento local y remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Asynchronous Mirroring.
++
+
+NOTE: Si su configuración contiene hosts DE arranque SAN conectados a los puertos de placa base FC, compruebe el https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Para garantizar que la configuración sea compatible con iSCSI. Si no lo es, no es posible convertir el protocolo de host a iSCSI.
+
+
+
+* La función Synchronous Mirroring no se admite para iSCSI.
++
+** Si actualmente utiliza relaciones de mirroring síncrono a través de los puertos en placa base, debe desactivar esas relaciones de mirroring síncrono.
+** Consulte la ayuda en línea de SANtricity System Manager para quitar todas las parejas reflejadas síncronas, lo cual elimina las relaciones de reflejo de la cabina de almacenamiento local y de la cabina de almacenamiento remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Synchronous Mirroring.
++
+
+CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de convertir a iSCSI, el sistema perderá el acceso a los datos y se pueden producir pérdidas de datos.
+
+
+
+
+
+
+
+=== Conversión de iSCSI a FC
+
+* El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo. Si actualmente utiliza Mirroring asíncrono con los puertos en placa base, debe desactivar la función Mirroring asíncrono antes de cambiar el protocolo.
+* Consulte la ayuda en línea de SANtricity System Manager para eliminar todos los grupos de coherencia de reflejos y quitar todas las parejas reflejadas de las cabinas de almacenamiento local y remota. Además, siga las instrucciones de la ayuda en línea para desactivar la función Asynchronous Mirroring.
+
+
+
+
+=== Convertir IB-Iser a/desde IB-SRP
+
+* No es necesario realizar cambios en el hardware al convertir de/a Iser a SRP.
+* La función Data Assurance (DA) no es compatible con SRP.
+* La función DA no es compatible con IB-SRP. Si actualmente utiliza esta función a través de IB-HIC y desea convertir esos puertos de Iser a SRP, debe deshabilitar DA de forma permanente en todos los volúmenes. Consulte la ayuda en línea de SANtricity System Manager para cambiar la configuración de un volumen a fin de deshabilitar permanentemente la configuración de garantía de datos.
++
+
+NOTE: Una vez deshabilitada, LA función DA no puede volver a habilitarse en el volumen.
+
+* Confirme lo siguiente:
++
+** Se puede acceder a System Manager de SANtricity mediante un navegador web.
+** El sistema de almacenamiento ejecuta SANtricity OS (firmware de la controladora), versión 08.40.11.00 o posterior.
+
+
+
+
+
+
+=== Las operaciones de mirroring necesitan el mismo protocolo de host
+
+Las operaciones de mirroring no se ven afectadas si los puertos de host que se utilizan para el mirroring mantienen el mismo protocolo después de aplicar el paquete de funciones. Aún así, antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados. Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota. Consulte la ayuda en línea de System Manager de SANtricity si tiene alguna pregunta sobre cómo hacerlo.
+
+
+NOTE: No se admiten el mirroring síncrono ni asíncrono para NVMe over Fabrics. Para deshabilitar el mirroring asíncrono y síncrono, se puede usar el `disable storageArray feature=asyncMirror` o. `disable storageArray feature=syncMirror` a través de la interfaz de línea de comandos. Consulte la http://docs.netapp.com/ess-11/topic/com.netapp.doc.ssm-cli-115/GUID-0F156C94-C2A7-4458-A922-56439A098C09.html["Deshabilite la función de cabina de almacenamiento"^] Comandos de mirroring en la ayuda en línea de referencia de comandos de la CLI para obtener más información sobre cómo deshabilitar el mirroring.

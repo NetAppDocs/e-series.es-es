@@ -1,0 +1,213 @@
+---
+permalink: maintenance-ef600/fans-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 fan, replace EF600 fan, fan fail 
+summary: Sustituya un ventilador en un sistema EF300 o EF600. 
+---
+= Sustituya un ventilador EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible sustituir un ventilador de una cabina EF300 o EF600.
+
+.Acerca de esta tarea
+Cada bandeja de controladoras EF300 y EF600 o bandeja de unidades incluye cinco ventiladores. Si se produce un error en un ventilador, debe reemplazarlo Lo antes posible. para garantizar que la bandeja tenga la refrigeración adecuada.
+
+.Lo que necesitará
+* Un ventilador de repuesto.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un área de trabajo plana y estática libre.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Coloque la controladora en estado sin conexión
+
+Coloque el compartimento de controladoras en estado sin conexión para que pueda sustituir el ventilador con errores de forma segura.
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que hay un problema con un ventilador y para asegurarse de que no primero debe abordarse ningún otro elemento.
+. En el área Detalles de Recovery Guru, determine qué ventilador reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+.. Seleccione *hardware*.
+.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Seleccione la controladora que desea colocar en estado sin conexión.
+.. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
+
+
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione *conectarse a una conexión de red alternativa* para acceder automáticamente al Administrador del sistema de SANtricity utilizando el otro controlador.
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que el campo *Aceptar para eliminar* en el área Detalles muestra Sí, lo que indica que es seguro eliminar este componente.
+
+
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Quite el compartimento de controladoras para que pueda sustituir el ventilador con errores por uno nuevo.
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
++
+image::../media/remove_controller_5.png[retire la controladora 5]
+
+. Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+image::../media/remove_controller_6.png[retire la controladora 6]
+
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+== Paso 3: Quite el ventilador con fallos
+
+Quite un ventilador con errores para que pueda reemplazarlo por un nuevo.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador desenroscando el tornillo de mariposa único y levantando la tapa para abrirla.
+. Confirme que el LED verde del interior del controlador está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
+. Levante con cuidado el ventilador averiado del controlador.
++
+image::../media/fan_2.png[ventilador 2]
+
+
+
+
+
+== Paso 4: Instale un ventilador nuevo
+
+Instale un ventilador nuevo para sustituir el que ha fallado.
+
+.Pasos
+. Deslice completamente el ventilador de repuesto en la bandeja.
++
+image::../media/fan_3.png[ventilador 3]
+
++
+image::../media/fan_3_a.png[ventilador 3 a]
+
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de la controladora
+
+Después de instalar el ventilador nuevo, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
+
+.Pasos
+. Baje la cubierta del receptáculo del controlador y fije el tornillo de apriete manual.
+. Al apretar las asas de las controladoras, deslice suavemente el compartimento de controladoras hasta llegar a la bandeja de controladoras.
++
+
+NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
+
++
+image::../media/remove_controller_7.png[retire la controladora 7]
+
+
+
+
+
+== Paso 6: Sustitución completa del ventilador
+
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+. Coloque una controladora en línea.
++
+.. En System Manager, desplácese hasta la página hardware.
+.. Seleccione *Mostrar parte posterior del controlador*.
+.. Seleccione el controlador con el ventilador sustituido.
+.. Seleccione *colocar en línea* en la lista desplegable.
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión de SANtricity OS.
++
+Si es necesario, instale la versión más reciente.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Seleccione MENU:Storage[Volumes]. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione MENU:More[Cambiar propiedad] para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya al menú:más[redistribuir volúmenes].
+.. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras la distribución automática o la distribución manual, debe comprobar Recovery Guru para encontrar problemas de conectividad de host.
+.. Si no hay Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se ha completado el reemplazo del ventilador. Es posible reanudar las operaciones normales.

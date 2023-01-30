@@ -1,0 +1,31 @@
+---
+permalink: install-hw-cabinet/index.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: Descripción general de la instalación de bandejas de unidades en armarios 40U E-Series 3040 
+---
+= Instale las bandejas en el armario de 3040 40U
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible instalar los siguientes soportes de unidades de controladora y soportes de unidades de expansión en los armarios 40U E-Series 3040:
+
+* Soportes de unidades de controladora E2612, E2624 y E2660
+* Soportes de unidades de controladora E2712, E2724 y E2760
+* Soportes de unidades de controladora E5412, E5424 y E5460
+* Soportes de unidades de controladoras E5512, E5524 y E5560
+* Soportes de unidades de controladoras E5612, E5624 y E5660
+* Cabinas flash EF540, EF550 y EF560
+* Bandejas de unidades DE1600, DE5600 y DE6600
+
+
+También puede instalar las siguientes bandejas de controladoras SAS-3 y bandejas de unidades en el armario.
+
+* Bandejas de controladoras E2812, E2824 y E5724
+* Bandejas de unidades DE212C y DE224C
+
+
+Sin embargo, las especificaciones de estas bandejas no se enumeran en estos procedimientos. Consulte https://hwu.netapp.com["Hardware Universe de NetApp"^].

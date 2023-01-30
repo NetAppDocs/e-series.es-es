@@ -1,0 +1,32 @@
+---
+permalink: config-windows/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, discover LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Detectar almacenamiento para el método exprés de Windows. 
+---
+= Detectar el almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando añade nuevos LUN, debe volver a analizar manualmente los discos asociados para detectarlos. El host no detecta automáticamente nuevos LUN.
+
+Las LUN del sistema de almacenamiento aparecen como discos en el host de Windows.
+
+.Pasos
+. Inicie sesión como administrador.
+. Para detectar el almacenamiento de, ejecute el siguiente comando desde el símbolo del sistema de Windows.
++
+[listing]
+----
+# echo rescan | diskpart
+----
+. Para verificar la adición de un nuevo almacenamiento, ejecute el siguiente comando.
++
+[listing]
+----
+# echo list disk | diskpart
+----
+

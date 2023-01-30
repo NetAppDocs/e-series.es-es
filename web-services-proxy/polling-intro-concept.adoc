@@ -1,0 +1,100 @@
+---
+permalink: web-services-proxy/polling-intro-concept.html 
+sidebar: sidebar 
+keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
+summary: Es posible configurar el sondeo automático para todas las estadísticas de disco y volumen en sistemas de almacenamiento detectados. 
+---
+= Administrar el sondeo automático para las estadísticas del proxy de servicios web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar el sondeo automático para todas las estadísticas de disco y volumen en sistemas de almacenamiento detectados.
+
+
+
+== Descripción general de las estadísticas
+
+Las estadísticas proporcionan información acerca de las tasas de recogida de datos y el rendimiento de los sistemas de almacenamiento.
+
+El proxy de servicios web proporciona acceso a los siguientes tipos de estadísticas:
+
+* Estadísticas sin procesar -- total de contadores para puntos de datos en el momento de la recopilación de datos. Las estadísticas sin configurar se pueden utilizar para operaciones de lectura totales o operaciones de escritura totales.
+* Estadísticas analizadas: Información calculada para un intervalo. Los ejemplos de estadísticas analizadas son operaciones de entrada/salida (IOPS) de lectura por segundo o rendimiento de escritura.
+
+
+Las estadísticas sin procesar son lineales y normalmente requieren al menos dos puntos de datos recopilados para derivar datos utilizables de ellos. Las estadísticas analizadas son una derivación de las estadísticas sin procesar, que proporcionan mediciones importantes. Muchos valores que pueden derivarse de las estadísticas sin configurar se muestran en un formato utilizable y momento específico en las estadísticas analizadas para su comodidad.
+
+Es posible recuperar las estadísticas sin procesar independientemente de si el sondeo automático está habilitado o no. Puede agregar el `usecache=true` Cadena de consulta al final de la URL para recuperar las estadísticas en caché del último sondeo. El uso de resultados almacenados en la caché aumenta significativamente el rendimiento de la recuperación de estadísticas. Sin embargo, varias llamadas a una velocidad igual o inferior a la caché de intervalos de sondeo configurada recuperan los mismos datos.
+
+
+
+== Funcionalidad de estadísticas
+
+El proxy de servicios web proporciona extremos API que permiten recuperar estadísticas sin configurar y analizadas de la controladora y la interfaz desde los modelos de hardware y las versiones de software compatibles.
+
+
+
+=== API de estadísticas sin procesar
+
+* `+/storage-systems/{system-id}/controller-statistics+`
+* `+/storage-systems/{system-id}/drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{system-id}/interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{system-id}/volume-statistics/{optional list of volume ids}+`
+
+
+
+
+=== API de estadísticas analizadas
+
+* `+/storage-systems/{id}/analysed-controller-statistics/+`
+* `+/storage-systems/{id}/analysed-drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{id}/analysed-interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{id}/analysed-volume-statistics/{optional list of volume ids}+`
+
+
+Estas URL recuperan las estadísticas analizadas de la última encuesta y sólo están disponibles cuando se activa el sondeo. Estas direcciones URL incluyen los siguientes datos de entrada y salida:
+
+* Operaciones por segundo
+* Rendimiento en megabytes por segundo
+* Tiempos de respuesta en milisegundos
+
+
+Los cálculos se basan en las diferencias entre las iteraciones estadísticas de sondeo, que son las medidas más comunes de rendimiento de almacenamiento. Estas estadísticas son preferibles a las estadísticas no analizadas.
+
+
+NOTE: Cuando se inicia el sistema, no hay ninguna recopilación de estadísticas anterior que utilizar para calcular las diversas métricas, por lo que las estadísticas analizadas requieren al menos un ciclo de sondeo tras el inicio para devolver los datos. Además, si se restablecen los contadores acumulativos, el siguiente ciclo de sondeo tendrá números impredecibles para los datos.
+
+
+
+== Configurar intervalos de sondeo
+
+Para configurar los intervalos de sondeo, modifique el archivo wsconfig.xml para especificar un intervalo de sondeo en segundos.
+
+
+NOTE: Debido a que las estadísticas se almacenan en la memoria caché, es posible que observe un aumento de aproximadamente 1.5 MB de uso de memoria para cada sistema de almacenamiento.
+
+.Antes de empezar
+* El proxy debe detectar los sistemas de almacenamiento.
+
+
+.Pasos
+. Abra el archivo wsconfig.xml, ubicado en:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy
+
+
+. Añada la siguiente línea dentro del `<env-entries>` etiquetar, en el que `n` es el número de segundos para el intervalo entre las solicitudes de sondeo:
++
+[listing]
+----
+<env key="stats.poll.interval">n</env>
+----
++
+Por ejemplo, si se introduce 60, el sondeo comienza a intervalos de 60 segundos. Es decir, el sistema solicita que el sondeo comience 60 segundos después de haber finalizado el periodo de sondeo anterior (independientemente de la duración del periodo de sondeo anterior). Todas las estadísticas están impresas con el tiempo exacto en que fueron recuperadas. El sistema utiliza la Marca de tiempo o la diferencia de tiempo en la que se basa el cálculo de 60 segundos.
+
+. Guarde el archivo.
+

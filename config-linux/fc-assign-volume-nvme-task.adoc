@@ -1,0 +1,58 @@
+---
+permalink: config-linux/fc-assign-volume-nvme-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, assign volume, assign namespace, 
+summary: 'Se debe asignar un volumen \(espacio de nombres\) a un host o clúster de hosts para que se pueda utilizar en operaciones de I/O. Esta asignación otorga a un host o un clúster de hosts acceso a uno o varios espacios de nombres en una cabina de almacenamiento.' 
+---
+= Asigne un volumen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es necesario asignar un volumen (espacio de nombres) a un host o un clúster de hosts para que se pueda usar en operaciones de I/O. Esta asignación otorga a un host o un clúster de hosts acceso a uno o varios espacios de nombres en una cabina de almacenamiento.
+
+.Acerca de esta tarea
+Tenga en cuenta estas directrices al asignar volúmenes:
+
+* Es posible asignar un volumen a un solo host o clúster de hosts al mismo tiempo.
+* Los volúmenes asignados se comparten entre controladoras de la cabina de almacenamiento.
+* El host o un clúster de hosts no pueden usar el mismo ID de espacio de nombres (NSID) dos veces para acceder a un volumen. Se debe usar un NSID único.
+
+
+La asignación de un volumen falla en las siguientes condiciones:
+
+* Todos los volúmenes están asignados.
+* El volumen ya está asignado a otro host o clúster de hosts.
+
+
+La capacidad para asignar un volumen no está disponible debido a las siguientes condiciones:
+
+* No existen hosts ni clústeres de hosts válidos.
+* Se definieron todas las asignaciones de volúmenes.
+
+
+Se muestran todos los volúmenes sin asignar, pero las funciones para hosts con o sin Data Assurance (DA) se aplican de la siguiente manera:
+
+* Para un host compatible con DA, es posible seleccionar volúmenes con o sin LA función DA habilitada.
+* Para un host no compatible con DA, si selecciona un volumen con la función DA habilitada, una advertencia indica que el sistema debe desactivar automáticamente DA antes de asignar el volumen al host.
+
+
+.Pasos
+. Seleccione MENU:Storage[hosts].
+. Seleccione el host o clúster de hosts al que desea asignar volúmenes y, a continuación, haga clic en *asignar volúmenes*.
++
+Se muestra un cuadro de diálogo que enumera todos los volúmenes que pueden asignarse. Puede ordenar cualquiera de las columnas o escribir algo en el cuadro *filtro* para facilitar la búsqueda de volúmenes concretos.
+
+. Seleccione la casilla de comprobación ubicada junto a cada volumen que desea asignar, o bien seleccione la casilla de comprobación en el encabezado de la tabla para seleccionar todos los volúmenes.
+. Haga clic en *asignar* para completar la operación.
+
+
+.Resultado
+Después de asignar correctamente uno o varios volúmenes a un host o un clúster de hosts, el sistema realiza las siguientes acciones:
+
+* El volumen asignado recibe el próximo NSID disponible. El host usa el NSID para acceder al volumen.
+* El nombre del volumen proporcionado por el usuario aparece en los listados de volúmenes asociados al host.
+

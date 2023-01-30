@@ -1,0 +1,89 @@
+---
+permalink: config-linux/sas-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SAS worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilice esta hoja de trabajo para registrar la información de configuración del almacenamiento SAS. 
+---
+= Registre la configuración de SAS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento SAS. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+image::../media/sas_topology_diagram_conf-lin.gif[Diagrama: Topología de SAS]
+
+
+
+== Identificadores de host
+
+|===
+| Número de llamada | Conexiones de puertos de host (iniciador) | Dirección SAS 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_no aplicable_
+
+
+
+ a| 
+2
+ a| 
+Puerto de host (iniciador) 1 conectado a la controladora A, puerto 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Puerto de host (iniciador) 1 conectado a la controladora B, puerto 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Puerto de host (iniciador) 2 conectado a la controladora A, puerto 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Puerto de host (iniciador) 2 conectado a la controladora B, puerto 1
+ a| 
+
+|===
+
+
+== Identificadores de destino
+
+Las configuraciones recomendadas constan de dos puertos de destino.
+
+
+
+== Host de asignación
+
+|===
+
+
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+Tipo de SO del host
+ a| 
+
+|===

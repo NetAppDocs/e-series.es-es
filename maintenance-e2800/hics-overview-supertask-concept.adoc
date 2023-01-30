@@ -1,0 +1,70 @@
+---
+permalink: maintenance-e2800/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace HIC, E2800 replace host interface card, replacing E2800 HIC, E2800 replace HIC, adding E2800 HIC, upgrading E2800 HIC, E2800, E-Series, eseries 
+summary: Revise los requisitos para el reemplazo de E2800 HIC. 
+---
+= Requisitos para reemplazar E2800 HIC
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC) en un E2800, revise los requisitos y consideraciones.
+
+
+
+== Descripción general del procedimiento
+
+Los pasos para reemplazar una HIC dependen de si tiene una o dos controladoras de la siguiente manera:
+
+|===
+| Si la cabina de almacenamiento tiene... | Debe... 
+
+
+ a| 
+Una controladora (E2812 o E2824 simplex)
+ a| 
+. Detenga las operaciones de I/o del host
+. Apague la bandeja de controladoras
+. Quite el compartimento de la controladora
+. Sustituya la batería
+. Sustituya el compartimento de la controladora
+. Aplique energía a la bandeja de controladoras
+
+
+
+
+ a| 
+Dos controladoras (E2860, E2824 o E2812 dúplex)
+ a| 
+. Desconectar la controladora
+. Quite el compartimento de la controladora
+. Sustituya la batería
+. Sustituya el compartimento de la controladora
+. Coloque la controladora en línea
+
+
+|===
+
+
+== Requisitos para añadir, actualizar o reemplazar una HIC
+
+Si planea añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC), tenga en cuenta los siguientes requisitos.
+
+* Ha programado una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, esto se debe a que ambas controladoras deben tener la misma configuración de HIC cuando están encendidas.)
+* Tendrá una o dos HIC, según si tendrá una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras.
++
+Si tiene una configuración doble (dos controladoras), las HIC instaladas en los dos contenedores de controladoras deben ser idénticas. La presencia de HIC no coincidentes hace que la controladora con la HIC de reemplazo se bloquee cuando lo conecta.
+
+* Tiene todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los puertos de host nuevos.
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] o la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
+
+* Tiene una muñequera ESD o ha tomado otras precauciones antiestáticas.
+* Tiene un destornillador Phillips del número 1.
+* Tiene etiquetas para identificar cada cable conectado al compartimento de controladoras.
+* Tiene una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+

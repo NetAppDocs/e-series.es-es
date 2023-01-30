@@ -1,0 +1,26 @@
+---
+permalink: config-linux/srp-ib-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Antes de usar el volumen, debe verificar que el host puede escribir datos en el volumen y leerlos nuevamente. 
+---
+= Verificar el acceso al almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar el volumen, debe verificar que el host puede escribir datos en el volumen y leerlos nuevamente.
+
+.Lo que necesitará
+Un volumen inicializado que está formateado con un sistema de archivos.
+
+.Pasos
+. En el host, copie uno o más archivos en el punto de montaje del disco.
+. Vuelva a copiar los archivos en una carpeta diferente del disco original.
+. Ejecute el `diff` comando para comparar los archivos copiados con los originales.
+
+
+.Después de terminar
+Elimine el archivo y la carpeta que ha copiado.

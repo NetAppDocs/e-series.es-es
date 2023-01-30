@@ -1,0 +1,26 @@
+---
+permalink: cloud-connector/login-task.html 
+sidebar: sidebar 
+keywords: Cloud Connector login, log in Cloud Connector 
+summary: Puede acceder a la interfaz gráfica de usuario para la aplicación SANtricity Cloud Connector a través del servidor configurado en un explorador compatible. Asegúrese de tener una cuenta de conector de cloud de SANtricity establecida. 
+---
+= Inicie sesión en el conector cloud de SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede acceder a la interfaz gráfica de usuario para la aplicación SANtricity Cloud Connector a través del servidor configurado en un explorador compatible. Asegúrese de tener una cuenta de conector de cloud de SANtricity establecida.
+
+.Pasos
+. En un explorador compatible, conéctese al servidor configurado de SANtricity Cloud Connector (por ejemplo, `+http://localhost:8080/+`).
++
+Aparece la página de inicio de sesión de la aplicación SANtricity Cloud Connector.
+
+. Introduzca la contraseña de administrador configurada.
+. Haga clic en *Inicio de sesión*.
++
+Aparece la página de destino de la aplicación SANtricity Cloud Connector.
+
+

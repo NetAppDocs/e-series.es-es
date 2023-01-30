@@ -1,0 +1,254 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: whats new, new features, SANtricity 11.73 
+summary: Nuevas funciones del sistema operativo SANtricity. 
+---
+= Novedades en SANtricity OS
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En las tablas siguientes se describen las nuevas funciones del sistema operativo SANtricity 11.7 para la gestión integrada de las controladoras EF300, EF600, E2800/EF280 y E5700/EF570.
+
+
+
+== Nuevas funciones en la versión 11.74
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Compatibilidad con FIPS 140-3
+ a| 
+FIPS 140-3 ahora es compatible con ciertas unidades para SAS y SSD basadas en NVMe. Las unidades SSD de nivel FIPS 140-3 pueden coexistir con unidades SSD de nivel FIPS 140-2, siempre y cuando las unidades estén basadas en NVMe o en todas las basadas en SAS. Cuando se usa una combinación de estos niveles en grupos de volúmenes y pools de discos, tenga en cuenta que el grupo o el pool funcionarán con el nivel de seguridad más bajo (140-2).
+
+
+
+ a| 
+Compatibilidad con MFA y SSH
+ a| 
+Para las versiones 11.74 y posteriores de SANtricity, la función de inicio de sesión remoto permite configurar la autorización multifactor (MFA) al requerir a los usuarios que introduzcan una clave SSH o una contraseña SSH. La opción de menú de la sección hardware ha cambiado de *Cambiar inicio de sesión remoto* a *Configurar inicio de sesión remoto (SSH)*.
+
+
+
+ a| 
+Tokens de acceso
+ a| 
+Esta versión incluye una nueva función para crear tokens de acceso. Estas tokens le permiten autenticar con la API REST o la interfaz de línea de comandos (CLI) sin exponer los nombres de usuario ni las contraseñas. Esta función se proporciona en la sección Access Management.
+
+|===
+
+
+== Nuevas funciones en la versión 11.73
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Compatibilidad con aprovisionamiento de recursos y DULBE
+ a| 
+Las funcionalidades de aprovisionamiento de recursos y las funcionalidades de unidad DULBE ahora son compatibles completamente en esta versión. Esta compatibilidad incluye hacer que LA ANULACIÓN de ASIGNACIÓN dirigida por el host en los volúmenes aprovisionados mediante recursos sea más utilizable.
+
+
+
+ a| 
+Expansión de SAS (512e) EF600
+ a| 
+Esta versión admite la ampliación a compartimentos SAS-3 para el sistema de almacenamiento EF600. Con esta expansión, los SSD NVMe de bloque de 4 KiB pueden coexistir con las SSD y HDD SAS 512e. Sin embargo, no es posible configurar unidades con tamaños de bloque diferentes en el mismo pool o grupo de volúmenes.
+
+
+
+ a| 
+Soporte PARA SSD QLC
+ a| 
+Esta versión es compatible con la generación actual de SSD QLC que tienen la función ONTAP establecida en el firmware de la unidad, pero no tienen todo el conjunto de funciones específicas de E-Series. LAS unidades QLC (solo NVMe) son de menor coste, pero tienen un rendimiento de escritura menor y un índice de resistencia menor, por lo que no se deben utilizar con cargas de trabajo con gran volumen de escritura.
+
+
+
+ a| 
+Soporte TLS 1.3
+ a| 
+TLS 1.3 ahora es compatible con la administración integrada. Este soporte se aplica a System Manager y a los servicios web integrados, con la capacidad de habilitarla o deshabilitarla. (La compatibilidad con TLS 1.3 se añadió a una versión anterior de proxy de servicios web y Unified Manager).
+
+
+
+ a| 
+RAID 1 DDP con un mínimo de 8 unidades
+ a| 
+Con esta versión, RAID 1 DDP ya no requiere como mínimo 11 SSD en un pool. El valor mínimo ahora permite pools SSD de 8 unidades si solo se crean volúmenes RAID 1 en el pool.
+
+
+
+ a| 
+Eliminación de clave EKMS
+ a| 
+Ahora un administrador de almacenamiento puede solicitar un servidor de gestión de claves externo (EKMS) para eliminar una clave anterior. La eliminación de claves solo se realiza durante un proceso de nueva clave una vez que las unidades instaladas tienen la clave nueva.
+
+|===
+
+
+== Nuevas funciones en la versión 11.72
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Compatibilidad con SNMPv3
+ a| 
+SNMPv3 ahora es compatible con notificaciones de alerta, configurables en el menú:Configuración[Alertas]. SNMPv3 proporciona seguridad a través de una sólida autenticación y cifrado de datos.
+
+
+
+ a| 
+Admita la replicación de claves en varios servidores de claves
+ a| 
+Para la gestión de claves externas para unidades de autocifrado, el cuadro de diálogo Crear gestión de claves externa incluye una nueva opción para añadir varios servidores de claves.
+
+
+
+ a| 
+Se han actualizado las versiones del explorador
+ a| 
+Se actualizaron las versiones mínimas de explorador de System Manager.
+
+|===
+
+
+== Nuevas funciones en la versión 11.71
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Ampliación EF300
+| Esta versión proporciona compatibilidad para la ampliación a carcasas SAS-3 para el sistema de almacenamiento EF300. Con esta expansión, los SSD NVMe de bloque de 4 KiB pueden coexistir con las SSD y HDD SAS 512e. Sin embargo, no es posible configurar unidades con tamaños de bloque diferentes en el mismo pool o grupo de volúmenes. 
+
+
+ a| 
+Opción de modo FEC en la configuración de iSCSI
+ a| 
+En el caso de las cabinas de almacenamiento que utilizan la tarjeta de interfaz del host iSCSI de 25 GB, hay disponible una nueva opción para configurar el modo de corrección de errores de reenvío (FEC) al configurar los puertos iSCSI.
+
+
+
+ a| 
+Volúmenes de almacenamiento remoto
+ a| 
+La función opcional volúmenes de almacenamiento remoto permite importar volúmenes desde un sistema de almacenamiento remoto a un sistema de almacenamiento E-Series local mediante una conexión iSCSI. El almacenamiento remoto puede tener la misma Marca que su sistema E-Series o de un proveedor de almacenamiento diferente, siempre que se pueda acceder a él a través de iSCSI.
+
+
+
+ a| 
+Funcionalidad de saneamiento (borrado) añadida para unidades sin FDE
+ a| 
+La función de saneamiento de unidades ahora incluye unidades sin FDE en el procedimiento. En la página hardware, puede abrir el menú contextual de la unidad y seleccionar "Borrar" (anteriormente, esta selección era "borrado seguro").
+
+
+
+ a| 
+Conexión segura para alertas por correo electrónico
+ a| 
+Para habilitar las notificaciones por correo electrónico cifradas, es posible configurar correos electrónicos salientes (alertas, mensajes de ASUP) para suministrar credenciales de autenticación. Los tipos de cifrado incluyen SMTPS y STARTTLS.
+
+
+
+ a| 
+Adiciones a AutoSupport
+ a| 
+Ahora aparece una alerta en el área Notificaciones cuando AutoSupport no está habilitado.
+
+
+
+ a| 
+Cambio de formato de alertas de syslog
+ a| 
+El formato de alerta Syslog ahora es compatible con RFC 5424.
+
+|===
+
+
+== Nuevas funciones en la versión 11.70
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Nuevo modelo de sistema de almacenamiento: EF300
+ a| 
+Esta versión presenta el sistema de almacenamiento all-flash de bajo coste EF300. El EF300 incluye 24 unidades SSD NVMe y una sola tarjeta de interfaz host (HIC) por controladora. Las interfaces del host NVMe over Fabrics admitidas incluyen NVMe over IB, NVMe over roce y NVMe over FC. Las interfaces SCSI admitidas incluyen FC, IB over Iser e IB over SRP. Es posible ver y gestionar varios sistemas de almacenamiento EF300 y otros sistemas de almacenamiento E-Series en Unified Manager.
+
+
+
+ a| 
+Nueva función de aprovisionamiento de recursos (solo EF300 y EF600)
+ a| 
+La función de aprovisionamiento de recursos es una novedad para los sistemas de almacenamiento EF300 y EF600. Los volúmenes aprovisionados mediante recursos pueden utilizarse inmediatamente sin un proceso de inicialización en segundo plano.
+
+
+
+ a| 
+Añadir la opción de tamaño de bloque 512e (solo EF300 y EF600)
+ a| 
+Para los sistemas de almacenamiento EF300 y EF600, es posible configurar un volumen para que admita un tamaño de bloque de 512 bytes o 4 KiB. La funcionalidad 512e se ha añadido para permitir la compatibilidad con la interfaz de host iSCSI y el sistema operativo VMware. Si es posible, System Manager sugiere el valor predeterminado adecuado.
+
+
+
+ a| 
+Nueva opción para enviar mensajes de AutoSupport bajo demanda
+ a| 
+Una nueva función de envío de AutoSupport le permite enviar datos al soporte técnico sin esperar a que se programe un envío. Esta opción está disponible en la pestaña AutoSupport del Centro de soporte.
+
+
+
+ a| 
+Mejoras del servidor de gestión de claves externas
+ a| 
+La función para conectarse a un servidor de gestión de claves externo incluye las siguientes mejoras:
+
+* Omita la función para crear una clave de backup.
+* Seleccione un certificado intermedio para el servidor de gestión de claves, además de los certificados de cliente y de servidor.
+
+
+
+
+ a| 
+Mejoras en los certificados
+ a| 
+En esta versión, se puede usar una herramienta externa como OpenSSL para generar una solicitud de firma de certificación (CSR), lo cual también requiere importar un archivo de claves privadas junto con el certificado firmado.
+
+
+
+ a| 
+Nueva función de inicialización sin conexión para grupos de volúmenes
+ a| 
+Para la creación de volúmenes, System Manager ofrece un método para omitir el paso de asignación de host para que los volúmenes nuevos se inicialicen sin conexión. Esta funcionalidad solo se puede aplicar a grupos de volúmenes RAID en unidades SAS (es decir, no a pools de discos dinámicos o a SSD NVMe incluidos en los sistemas de almacenamiento EF300 y EF600). Esta función es para las cargas de trabajo que necesitan tener los volúmenes a todo el rendimiento cuando comienza el uso, en lugar de que se ejecute la inicialización en segundo plano.
+
+
+
+ a| 
+Nueva función recopilar datos de configuración
+ a| 
+Esta nueva función guarda datos de configuración RAID de la controladora, que incluye todos los datos de los grupos de volúmenes y pools de discos (la misma información que el comando CLI para `save storageArray dbmDatabase`). Esta funcionalidad se ha añadido a ayudar al soporte técnico y se encuentra en la pestaña Diagnóstico del Centro de soporte.
+
+
+
+ a| 
+Cambie la capacidad de conservación predeterminada para pools de discos en 12 casos de unidad
+ a| 
+Anteriormente, se creó un pool de discos de 12 unidades con suficiente capacidad de conservación (repuesto) para cubrir dos unidades. Ahora el valor predeterminado se cambia para manejar el fallo de una sola unidad para ofrecer un valor predeterminado de pool pequeño más rentable.
+
+|===

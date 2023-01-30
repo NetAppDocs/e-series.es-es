@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-raid-level-is-best-for-my-application.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para maximizar el rendimiento de un grupo de volúmenes, se debe seleccionar el nivel de RAID adecuado. 
+---
+= ¿Cuál es el nivel de RAID óptimo para cada aplicación?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para maximizar el rendimiento de un grupo de volúmenes, se debe seleccionar el nivel de RAID adecuado.
+
+Es posible determinar el nivel de RAID apropiado si se conocen los porcentajes de escritura y lectura de las aplicaciones que acceden al grupo de volúmenes. Utilice la página rendimiento para obtener estos porcentajes.
+
+
+
+== Niveles de RAID y rendimiento de la aplicación
+
+RAID se basa en una serie de configuraciones, denominadas niveles, para determinar cómo los datos de redundancia y usuario se escriben en las unidades y se recuperan de ellas. Cada nivel de RAID proporciona diferentes funciones de rendimiento. Las aplicaciones con un porcentaje alto de lectura tendrán un buen rendimiento con volúmenes RAID 5 o RAID 6 debido al rendimiento de lectura destacado de las configuraciones RAID 5 y RAID 6.
+
+Las aplicaciones con un porcentaje bajo de lectura (de escritura intensiva) no rinden tan bien con volúmenes RAID 5 o RAID 6. El rendimiento degradado resulta de la forma en que una controladora escribe los datos y los datos de redundancia en las unidades de un grupo de volúmenes RAID 5 o RAID 6.
+
+Seleccione un nivel de RAID según la información siguiente.
+
+
+
+=== RAID 0
+
+*Descripción:*
+
+* No redundante, modo de segmentación.
+* RAID 0 segmenta los datos en todas las unidades del grupo de volúmenes.
+
+
+*Funciones de protección de datos:*
+
+* RAID 0 no se recomienda para necesidades de alta disponibilidad. RAID 0 es más adecuado para datos no cruciales.
+* Si una unidad única falla en el grupo de volúmenes, todos los volúmenes asociados fallarán y se perderán todos los datos.
+
+
+*Requisitos del número de la unidad:*
+
+* Se requiere un mínimo de una unidad para el nivel de RAID 0.
+* Los grupos de volúmenes de RAID 0 pueden tener más de 30 unidades.
+* Es posible crear un grupo de volúmenes que incluya todas las unidades en la cabina de almacenamiento.
+
+
+
+
+=== RAID 1 o RAID 10
+
+*Descripción:*
+
+* Modo de segmentación/reflejo.
+
+
+*Cómo funciona:*
+
+* RAID 1 utiliza las operaciones de mirroring de discos para escribir datos en dos discos duplicados en simultáneo.
+* RAID 10 utiliza la segmentación de unidades para segmentar los datos de un conjunto de parejas de unidades reflejadas.
+
+
+*Funciones de protección de datos:*
+
+* RAID 1 y RAID 10 ofrecen alto rendimiento y la mejor disponibilidad de datos.
+* RAID 1 y RAID 10 utilizan las operaciones de mirroring de unidades para realizar una copia exacta de una unidad en otra.
+* Si una de las unidades de una pareja de unidades falla, la cabina de almacenamiento puede cambiar instantáneamente a la otra sin perder datos o servicios.
+* Un fallo de unidad única provoca el estado degradado de los volúmenes asociados. La unidad reflejo permite acceder a los datos.
+* Un fallo de la pareja de unidades en un grupo de volúmenes provoca el fallo de todos los volúmenes asociados, y podría ocurrir una pérdida de datos.
+
+
+*Requisitos del número de la unidad:*
+
+* Se requiere un mínimo de dos unidades para RAID 1: Una unidad para los datos de usuario y una unidad para los datos reflejados.
+* Si se seleccionan cuatro o más unidades, RAID 10 se configura automáticamente en el grupo de volúmenes: Dos unidades para los datos de usuario y dos unidades para los datos reflejados.
+* El grupo de volúmenes debe tener un número par de unidades. Si no se cuenta con un número par de unidades y quedan algunas sin asignar, vaya a *Pools y grupos de volúmenes* para añadir unidades adicionales al grupo de volúmenes y vuelva a intentar la operación.
+* Los grupos de volúmenes de RAID 1 y RAID 10 pueden tener más de 30 unidades. Se puede crear un grupo de volúmenes que incluya todas las unidades de la cabina de almacenamiento.
+
+
+
+
+=== RAID 5
+
+*Descripción:*
+
+* Modo de I/o elevado.
+
+
+*Cómo funciona:*
+
+* Los datos de usuario y la información redundante (paridad) se segmentan en las unidades.
+* Se utiliza la capacidad equivalente de una unidad para la información redundante.
+
+
+*Funciones de protección de datos*
+
+* Si una unidad única falla en un grupo de volúmenes RAID 5, todos los volúmenes asociados se degradan. La información redundante permite que aún pueda accederse a los datos.
+* Si dos o más unidades fallan en un grupo de volúmenes RAID 5, todos los volúmenes asociados fallarán y se perderán todos los datos.
+
+
+*Requisitos del número de la unidad:*
+
+* Se debe contar con un mínimo de tres unidades en el grupo de volúmenes.
+* Por lo general, el grupo de volúmenes tiene un límite máximo de 30 unidades.
+
+
+
+
+=== RAID 6
+
+*Descripción:*
+
+* Modo de I/o elevado.
+
+
+*Cómo funciona:*
+
+* Los datos de usuario y la información redundante (doble paridad) se segmentan en las unidades.
+* Se utiliza la capacidad equivalente de dos unidades para la información redundante.
+
+
+*Funciones de protección de datos:*
+
+* Si una o dos unidades fallan en un grupo de volúmenes RAID 6, todos los volúmenes asociados se degradarán, pero la información redundante permitirá que aún pueda accederse a los datos.
+* Si tres o más unidades fallan en un grupo de volúmenes RAID 6, todos los volúmenes asociados fallarán y se perderán todos los datos.
+
+
+*Requisitos del número de la unidad:*
+
+* Se debe contar con un mínimo de cinco unidades en el grupo de volúmenes.
+* Por lo general, el grupo de volúmenes tiene un límite máximo de 30 unidades.
+
+
+
+NOTE: No es posible cambiar el nivel de RAID de un pool. La interfaz de usuario configura automáticamente los pools como RAID 6.
+
+
+
+== Niveles de RAID y protección de datos
+
+RAID 1, RAID 5 y RAID 6 escriben los datos de redundancia en los medios de la unidad para la tolerancia a fallos. Los datos de redundancia pueden ser una copia de los datos (reflejados) o un código de corrección de error derivado de los datos. Es posible utilizar los datos de redundancia para reconstruir información rápidamente en una unidad de reemplazo si se produce un error en una unidad.
+
+Se configura un nivel de RAID único en un grupo de volúmenes único. Todos los datos de redundancia de ese grupo de volúmenes se almacenan en el grupo de volúmenes. La capacidad del grupo de volúmenes es la capacidad agregada de las unidades miembro menos la capacidad reservada para los datos de redundancia. La cantidad de capacidad necesaria para la redundancia depende del nivel de RAID utilizado.

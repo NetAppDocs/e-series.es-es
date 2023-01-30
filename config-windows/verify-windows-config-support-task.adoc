@@ -1,0 +1,55 @@
+---
+permalink: config-windows/verify-windows-config-support-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Compruebe que la configuración de Windows es compatible. 
+---
+= Compruebe que la configuración de Windows es compatible
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar una operación fiable, cree un plan de implementación y, a continuación, utilice la herramienta de matriz de interoperabilidad (IMT) de NetApp para verificar que se admite toda la configuración.
+
+.Pasos
+. Vaya a la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+. Haga clic en el icono *Búsqueda de soluciones de almacenamiento*.
+. En el área de menú:Protocolos[Host SAN], haga clic en el botón *Agregar* situado junto a *Host SAN E-Series*.
+. Haga clic en *Ver criterios de búsqueda de afinado*.
++
+Se muestra la sección criterios de búsqueda de afinado. En esta sección, puede seleccionar el protocolo aplicable, así como otros criterios para la configuración como sistema operativo, sistema operativo de NetApp y controlador multivía de host. Seleccione los criterios que sabe que desea utilizar para su configuración y, a continuación, vea los elementos de configuración compatibles que se aplican. Según sea necesario, realice las actualizaciones para el sistema operativo y el protocolo que se prescriben en la herramienta. Puede acceder a la información detallada de la configuración elegida en la página Ver configuraciones admitidas haciendo clic en la flecha de la página derecha.
+
+. Según sea necesario, realice las actualizaciones para el sistema operativo y el protocolo tal como se indica en la tabla.
++
+|===
+| Actualizaciones del sistema operativo | Protocolo | Actualizaciones relacionadas con protocolos 
+
+
+ a| 
+Es posible que necesite instalar controladores listos para usar para garantizar una funcionalidad y compatibilidad adecuadas.
+
+Cada proveedor de HBA tiene métodos específicos para actualizar el código de arranque y el firmware. Consulte la sección de asistencia técnica del sitio web del proveedor para obtener las instrucciones y el software necesarios para actualizar el código de arranque y el firmware del HBA.
+ a| 
+FC
+ a| 
+Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+
+
+ a| 
+ISCSI
+ a| 
+Controlador de la tarjeta de interfaz de red (NIC), firmware y código de inicio.
+
+
+
+ a| 
+SAS
+ a| 
+Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+|===
+

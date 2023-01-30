@@ -1,0 +1,55 @@
+---
+permalink: config-vmware/verify-vmware-config-support-task.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Compruebe que la configuración de VMware es compatible. 
+---
+= Compruebe que la configuración de VMware es compatible
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar una operación fiable, debe crear un plan de implementación y, a continuación, utilizar la herramienta de matriz de interoperabilidad (IMT) de NetApp para verificar que se admite toda la configuración.
+
+.Pasos
+. Vaya a la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+. Haga clic en el icono *Búsqueda de soluciones*.
+. En el área de menú:Protocolos[Host SAN], haga clic en el botón *Agregar* situado junto a *Host SAN E-Series*.
+. Haga clic en *Ver criterios de búsqueda de afinado*.
++
+Se muestra la sección criterios de búsqueda de afinado. En esta sección, puede seleccionar el protocolo aplicable, así como otros criterios para la configuración como sistema operativo, sistema operativo de NetApp y controlador multivía de host. Seleccione los criterios que sabe que desea utilizar para su configuración y, a continuación, vea los elementos de configuración compatibles que se aplican. Según sea necesario, realice las actualizaciones para el sistema operativo y el protocolo que se prescriben en la herramienta. Puede acceder a la información detallada de la configuración elegida en la página Ver configuraciones admitidas haciendo clic en la flecha de la página derecha.
+
+. Según sea necesario, realice las actualizaciones para el sistema operativo y el protocolo tal como se indica en la tabla.
++
+|===
+| Actualizaciones del sistema operativo | Protocolo | Actualizaciones relacionadas con protocolos 
+
+
+ a| 
+** Es posible que necesite instalar controladores listos para usar para garantizar una funcionalidad y compatibilidad adecuadas. Los controladores HBA pueden instalarse mediante el shell ESXi o una conexión SSH remota al host ESXi. Para acceder al host mediante cualquiera de estos métodos, se debe habilitar el shell ESXi y el acceso SSH. Para obtener más información sobre el shell ESXi, consulte la base de conocimientos de VMware acerca del uso del shell ESXi en ESXi. Para ver los comandos de instalación, consulte las instrucciones que acompañan a los controladores HBA.
+** Cada proveedor de HBA tiene métodos específicos para actualizar el código de arranque y el firmware. Algunos de estos métodos pueden incluir el uso de un complemento de vCenter o la instalación del proveedor CIM en el host ESXi. Los complementos de vCenter se pueden usar para obtener información acerca del HBA específico del proveedor. Consulte la sección de asistencia técnica del sitio web del proveedor para obtener las instrucciones y el software necesarios para actualizar el código de arranque o el firmware del HBA. Consulte la _Guía de compatibilidad de VMware_ o el sitio web del proveedor de HBA para obtener el código de arranque o el firmware correctos.
+
+ a| 
+FC
+ a| 
+Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+
+
+ a| 
+ISCSI
+ a| 
+Controlador de la tarjeta de interfaz de red (NIC), firmware y código de inicio
+
+
+
+ a| 
+SAS
+ a| 
+Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+|===
+

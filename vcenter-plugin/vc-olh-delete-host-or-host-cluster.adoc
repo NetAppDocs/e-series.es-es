@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-host-or-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible quitar un host o un clúster de hosts para que los volúmenes ya no estén asociados con ese host. 
+---
+= Elimine host o clúster de hosts
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible quitar un host o un clúster de hosts para que los volúmenes ya no estén asociados con ese host.
+
+.Acerca de esta tarea
+Tenga en cuenta lo siguiente al eliminar un host o un clúster de hosts:
+
+* Se eliminan todas las asignaciones de volúmenes específicas, y los volúmenes asociados están disponibles para una nueva asignación.
+* Si el host forma parte de un clúster de hosts que posee sus propias asignaciones específicas, el clúster de hosts no se ve afectado. Sin embargo, si el host forma parte de un clúster de hosts que no tiene ninguna otra asignación, el clúster de hosts y todos los demás hosts o identificadores de puertos de hosts asociados heredan las asignaciones predeterminadas.
+* Todos los identificadores de puertos de hosts que se asociaron con el host quedan sin definir.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione el host o clúster de hosts que desea eliminar y, a continuación, haga clic en *Eliminar*.
++
+Se muestra un cuadro de diálogo de confirmación.
+
+. Confirme que desea realizar la operación y, a continuación, haga clic en *Eliminar*.
+
+
+.Resultados
+Si eliminó un host, el sistema realiza las siguientes acciones:
+
+* Elimina el host y, si corresponde, lo elimina del clúster de hosts.
+* Elimina el acceso a todos los volúmenes asignados.
+* Vuelve a colocar los volúmenes asociados en el estado Unassigned.
+* Vuelve a colocar todos los identificadores de puerto de host asociados con el host en el estado Unassociated. Si eliminó un clúster de hosts, el sistema realiza las siguientes acciones:
++
+** Elimina el clúster de hosts y sus hosts asociados (si los hubiera).
+** Elimina el acceso a todos los volúmenes asignados.
+** Vuelve a colocar los volúmenes asociados en el estado Unassigned.
+** Vuelve a colocar todos los identificadores de puerto de host asociados con los hosts en un estado sin asociación.
+
+
+

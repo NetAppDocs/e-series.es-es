@@ -1,0 +1,23 @@
+---
+permalink: config-vmware/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Después de asignar volúmenes al host, es posible volver a analizar para que el host detecte y configure los volúmenes para el acceso multivía. 
+---
+= Detectar el almacenamiento en el host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de asignar volúmenes al host, es posible volver a analizar para que el host detecte y configure los volúmenes para el acceso multivía.
+
+De forma predeterminada, un host ESXi ejecuta automáticamente una nueva detección cada cinco minutos. Es posible que un volumen aparezca entre el momento en el que se crea y se lo asigne a un host, antes de ejecutar una detección manual. De todos modos, es posible realizar una detección repetida manual para garantizar que todos los volúmenes estén configurados correctamente.
+
+.Pasos
+. Cree uno o varios volúmenes y asígnelos al host ESXi.
+. Si se usa una instancia de vCenter Server, añada el host al inventario del servidor.
+. Utilice vSphere Client o vSphere Web Client para la conexión directa a vCenter Server o al host ESXi.
+. Para obtener instrucciones sobre cómo realizar una nueva detección del almacenamiento en un host ESXi, busque el https://kb.vmware.com/s/["Base de conocimientos de VMware"^] artículo sobre este tema.
+

@@ -1,0 +1,1088 @@
+---
+settings:
+  name: E-Series Systems
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr
+sidebar:
+  entries:
+  - title: Documentos de sistemas E-Series
+    url: "/index.html"
+  - title: Notas de la versión
+    entries:
+    - title: Novedades
+      url: "/whats-new.html"
+    - title: Notas de la versión
+      url: "/known-issues.html"
+  - title: Manos a la obra
+    entries:
+    - title: Lo que se incluye en este sitio
+      url: "/getting-started/index.html"
+    - title: Obtenga más información sobre los sistemas E-Series
+      entries:
+      - title: Terminología de E-Series
+        url: "/getting-started/learn-terms-concept.html"
+      - title: Información general del hardware de E-Series
+        url: "/getting-started/learn-hardware-concept.html"
+      - title: Tipos de bandeja E-Series
+        url: "/getting-started/learn-shelf-concept.html"
+      - title: Información general del software SANtricity
+        url: "/getting-started/learn-software-concept.html"
+      - title: Vídeos de E-Series
+        url: "/getting-started/learn-video-concept.html"
+    - title: Póngase en marcha con E-Series
+      url: "/getting-started/getup-run-concept.html"
+  - title: Instale el hardware
+    entries:
+    - title: EF300 y EF600
+      entries:
+      - title: Descripción general
+        url: "/install-hw-ef600/index.html"
+      - title: Proceso de instalación
+        url: "/install-hw-ef600/overview-concept.html"
+      - title: Prepare la instalación
+        url: "/install-hw-ef600/prepare-for-install-task.html"
+      - title: Instale el hardware
+        url: "/install-hw-ef600/install-hardware-task.html"
+      - title: Encienda las bandejas de controladoras
+        url: "/install-hw-ef600/power-controller-shelves-task.html"
+      - title: Completar la configuración del sistema de almacenamiento
+        url: "/install-hw-ef600/complete-setup-task.html"
+    - title: E2800 y E5700
+      entries:
+      - title: Descripción general
+        url: "/install-hw-e2800-e5700/index.html"
+      - title: Proceso de instalación
+        url: "/install-hw-e2800-e5700/install-setup-overview-concept.html"
+      - title: Instalar y configurar 60 unidades
+        entries:
+        - title: Prepare la instalación
+          url: "/install-hw-e2800-e5700/e2860-e5760-prepare-task.html"
+        - title: Instale el hardware
+          url: "/install-hw-e2800-e5700/e2860-e5760-install-hardware-task.html"
+        - title: Las bandejas de cables
+          url: "/install-hw-e2800-e5700/e2860-e5760-connect-cables-task.html"
+        - title: Completar la configuración del sistema de almacenamiento
+          url: "/install-hw-e2800-e5700/e2860-e5760-complete-setup-task.html"
+      - title: Instalar y configurar 12 y 24 unidades
+        entries:
+        - title: Prepare la instalación
+          url: "/install-hw-e2800-e5700/e2824-e5724-prepare-task.html"
+        - title: Instale el hardware
+          url: "/install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html"
+        - title: Conectar los cables
+          url: "/install-hw-e2800-e5700/e2824-e5724-connect-cables-task.html"
+        - title: Completar la configuración del sistema de almacenamiento
+          url: "/install-hw-e2800-e5700/e2824-e5724-complete-setup-task.html"
+    - title: 3040 armarios 40U
+      entries:
+      - title: Descripción general
+        url: "/install-hw-cabinet/index.html"
+      - title: Especificaciones
+        url: "/install-hw-cabinet/overview-cabinet-specs-concept.html"
+      - title: Reúna las herramientas y el equipo necesarios
+        url: "/install-hw-cabinet/cabinet-gather-tools-equipment-task.html"
+      - title: Prepárese para mover el armario
+        url: "/install-hw-cabinet/prepare-move-cabinet-task.html"
+      - title: Mueva el armario a la ubicación permanente
+        url: "/install-hw-cabinet/move-cabinet-task.html"
+      - title: Instalación completa del armario
+        url: "/install-hw-cabinet/complete-cabinet-install-task.html"
+    - title: Hardware para montaje en rack
+      url: "/rackmount-hardware.html"
+    - title: Cableado
+      entries:
+      - title: Descripción general
+        url: "/install-hw-cabling/index.html"
+      - title: Requisitos
+        url: "/install-hw-cabling/cable-overview-requirements-concept.html"
+      - title: Cableado de host
+        url: "/install-hw-cabling/host-cable-task.html"
+      - title: Cableado de la bandeja de unidades
+        url: "/install-hw-cabling/driveshelf-cable-task.html"
+      - title: Cableado de alimentación
+        url: "/install-hw-cabling/power-cable-task.html"
+      - title: Bandeja de unidades adicional en caliente
+        url: "/install-hw-cabling/hotadd-drive-shelf-task.html"
+      - title: Cableado Ethernet
+        url: "/install-hw-cabling/ethernet-cable-task.html"
+  - title: Poner en marcha el software
+    entries:
+    - title: Configuración exprés de Linux
+      entries:
+      - title: Descripción general
+        url: "/config-linux/index.html"
+      - title: Supuestos
+        url: "/config-linux/overview-concept.html"
+      - title: Configuración exprés de Fibre Channel
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/fc-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/fc-configure-ip-address-dhcp-task.html"
+        - title: Instalar y configurar utilidades del host
+          url: "/config-linux/fc-install-configure-host-utilities-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/fc-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/fc-access-sam-setup-wizard-task.html"
+        - title: Configure el software multivía
+          url: "/config-linux/fc-configure-multipath-software-task.html"
+        - title: Configure el archivo multipath.conf
+          url: "/config-linux/fc-setup-multipath-conf-file-concept.html"
+        - title: Configurar los switches FC
+          url: "/config-linux/fc-configure-switches-task.html"
+        - title: Determinar los WWPN del host
+          url: "/config-linux/fc-determine-host-port-wwpns-task.html"
+        - title: Crear particiones y sistemas de archivos
+          url: "/config-linux/fc-create-partition-file-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/fc-verify-storage-access-host-task.html"
+        - title: Hoja de cálculo de FC para Linux
+          url: "/config-linux/fc-worksheet-concept.html"
+      - title: Configuración SAS
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/sas-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/sas-configure-ip-address-dhcp-task.html"
+        - title: Instalar y configurar utilidades del host
+          url: "/config-linux/sas-install-configure-host-utilities-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/sas-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/sas-access-sam-setup-wizard-task.html"
+        - title: Configure el software multivía
+          url: "/config-linux/sas-configure-multipath-software-task.html"
+        - title: Configure el archivo multipath.conf
+          url: "/config-linux/sas-setup-multipath-conf-file-concept.html"
+        - title: Determinar los identificadores de host de SAS
+          url: "/config-linux/sas-determine-sas-host-ids-task.html"
+        - title: Crear particiones y sistemas de archivos
+          url: "/config-linux/sas-create-partitions-filesystems-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/sas-verify-storage-access-host-task.html"
+        - title: Hoja de cálculo de SAS para Linux
+          url: "/config-linux/sas-worksheet-concept.html"
+      - title: Configuración de iSCSI
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/iscsi-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/iscsi-configure-ip-address-dhcp-task.html"
+        - title: Instalar y configurar utilidades del host
+          url: "/config-linux/iscsi-install-configure-host-utilities-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/iscsi-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/iscsi-access-sam-setup-wizard-task.html"
+        - title: Configure el software multivía
+          url: "/config-linux/iscsi-configure-multipath-software-task.html"
+        - title: Configure el archivo multipath.conf
+          url: "/config-linux/iscsi-setup-multipath-conf-file-concept.html"
+        - title: Configurar los switches
+          url: "/config-linux/iscsi-configure-switches-concept.html"
+        - title: Configurar las redes
+          url: "/config-linux/iscsi-configure-network-concept.html"
+        - title: Configurar las redes del lado de la cabina
+          url: "/config-linux/iscsi-configure-array-side-network-task.html"
+        - title: Configurar la conexión a redes del host
+          url: "/config-linux/iscsi-configure-host-side-network-task.html"
+        - title: Compruebe las conexiones de red IP
+          url: "/config-linux/iscsi-verify-ip-network-connections-task.html"
+        - title: Crear particiones y sistemas de archivos
+          url: "/config-linux/iscsi-create-partition-file-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/iscsi-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de iSCSI para Linux
+          url: "/config-linux/iscsi-worksheet-concept.html"
+      - title: Configuración de Iser over InfiniBand
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/iser-ib-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/iser-ib-configure-ip-address-dhcp-task.html"
+        - title: Determine los GUID del puerto de host y establezca la configuración
+            recomendada
+          url: "/config-linux/iser-ib-determine-host-port-guids-task.html"
+        - title: Configure el gestor de subredes
+          url: "/config-linux/iser-ib-configure-subnet-manager-task.html"
+        - title: Instalar y configurar utilidades del host
+          url: "/config-linux/iser-ib-install-configure-host-utilities-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/iser-ib-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/iser-ib-access-sam-setup-wizard-task.html"
+        - title: Configure el software multivía
+          url: "/config-linux/iser-ib-configure-multipath-software-task.html"
+        - title: Configure el archivo multipath.conf
+          url: "/config-linux/iser-ib-setup-multipath-conf-file-concept.html"
+        - title: Configurar las conexiones de red
+          url: "/config-linux/iser-ib-configure-network-connections-task.html"
+        - title: Configurar las redes
+          url: "/config-linux/iser-ib-configure-network-attached-hosts-task.html"
+        - title: Crear particiones y sistemas de archivos
+          url: "/config-linux/iser-ib-create-partition-files-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/iser-ib-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de Iser over InfiniBand
+          url: "/config-linux/iser-ib-worksheet-concept.html"
+      - title: Configuración de SRP over InfiniBand
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/srp-ib-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/srp-ib-configure-ip-address-dhcp-task.html"
+        - title: Determinar GUID de puerto de host
+          url: "/config-linux/srp-ib-determine-host-port-guids-task.html"
+        - title: Configure el gestor de subredes
+          url: "/config-linux/srp-ib-configure-subnet-manager-task.html"
+        - title: Instalar y configurar utilidades del host
+          url: "/config-linux/srp-ib-install-configure-host-utilities-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/srp-ib-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/srp-ib-access-sam-setup-wizard-task.html"
+        - title: Configure el software multivía
+          url: "/config-linux/srp-ib-configure-multipath-software-task.html"
+        - title: Configure el archivo multipath.conf
+          url: "/config-linux/srp-ib-setup-multipath-conf-file-concept.html"
+        - title: 'Configurar conexiones de red: ​SRP a través de InfiniBand'
+          url: "/config-linux/srp-ib-configure-network-connections-task.html"
+        - title: Crear particiones y sistemas de archivos
+          url: "/config-linux/srp-ib-create-partitions-filesystems-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/srp-ib-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de SRP over InfiniBand
+          url: "/config-linux/srp-ib-worksheet-concept.html"
+      - title: Configuración de NVMe over InfiniBand
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/nvme-ib-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/nvme-ib-configure-ip-address-dhcp-task.html"
+        - title: Instale SANtricity Storage Manager para SMcli
+          url: "/config-linux/nvme-ib-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager y utilice el asistente de configuración
+          url: "/config-linux/nvme-ib-access-sam-setup-wizard-task.html"
+        - title: Determine los GUID del puerto de host y establezca la configuración
+            recomendada
+          url: "/config-linux/nvme-ib-determine-host-port-guids-task.html"
+        - title: Configure el gestor de subredes
+          url: "/config-linux/nvme-ib-configure-subnet-manager-task.html"
+        - title: Configure NVMe over InfiniBand en el lado del host
+          url: "/config-linux/nvme-ib-setup-host-side-task.html"
+        - title: Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento
+          url: "/config-linux/nvme-ib-configure-storage-connections-task.html"
+        - title: Detectar y conectarse al almacenamiento desde el host
+          url: "/config-linux/nvme-ib-discover-connect-storage-host-task.html"
+        - title: Defina un host
+          url: "/config-linux/nvme-ib-define-host-task.html"
+        - title: Asigne un volumen
+          url: "/config-linux/ib-assign-volume-nvme-task.html"
+        - title: Mostrar los volúmenes visibles para el host
+          url: "/config-linux/nvme-ib-display-devices-visible-host-task.html"
+        - title: Configurar la conmutación por error
+          url: "/config-linux/nvme-ib-set-up-failover-task.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos virtuales
+          url: "/config-linux/nvme-ib-access-virtual-targets-concept.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos físicos
+          url: "/config-linux/nvme-ib-access-physical-targets-concept.html"
+        - title: Crear sistemas de archivos (RHEL 7 y SLES 12)
+          url: "/config-linux/nvme-ib-create-filesystems-sles-12-task.html"
+        - title: Crear sistemas de archivos (RHEL 8, RHEL 9 y SLES 15)
+          url: "/config-linux/nvme-ib-create-filesystems-sles-15-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/nvme-ib-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de NVMe over InfiniBand
+          url: "/config-linux/nvme-ib-worksheet-concept.html"
+      - title: Configuración de NVMe over roce
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/nvme-roce-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/nvme-roce-configure-ip-address-dhcp-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/nvme-roce-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/nvme-roce-access-sam-setup-wizard-task.html"
+        - title: Configurar el switch
+          url: "/config-linux/nvme-roce-configure-switch-task.html"
+        - title: Configure NVMe over roce en el host
+          url: "/config-linux/nvme-roce-setup-host-side-task.html"
+        - title: Configure las opciones del puerto NVMe
+          url: "/config-linux/nvme-roce-configure-storage-connections-task.html"
+        - title: Conéctese al almacenamiento desde el host
+          url: "/config-linux/nvme-roce-discover-connect-storage-host-task.html"
+        - title: Definir el host
+          url: "/config-linux/nvme-roce-define-host-task.html"
+        - title: Asignar volumen
+          url: "/config-linux/nvme-roce-assign-volume-task.html"
+        - title: Mostrar volúmenes visibles para el host
+          url: "/config-linux/nvme-roce-display-volumes-visible-host-task.html"
+        - title: Configurar la conmutación al nodo de respaldo en el host
+          url: "/config-linux/nvme-roce-setup-failover-host-task.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos virtuales
+          url: "/config-linux/nvme-roce-access-virtual-targets-concept.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos físicos
+          url: "/config-linux/nvme-roce-access-physical-targets-concept.html"
+        - title: Crear sistemas de archivos (RHEL 7 y SLES 12)
+          url: "/config-linux/nvme-roce-create-filesystems-sles-12-task.html"
+        - title: Crear sistemas de archivos (RHEL 8, RHEL 9 y SLES 15)
+          url: "/config-linux/nvme-roce-create-filesystems-sles-15-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/nvme-roce-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de NVMe over roce para Linux
+          url: "/config-linux/nvme-roce-worksheet-for-concept.html"
+      - title: Configuración de NVMe over Fibre Channel
+        entries:
+        - title: Verificación de la configuración de Linux
+          url: "/config-linux/nvme-fc-verify-linux-config-support-task.html"
+        - title: Configure las direcciones IP mediante DHCP
+          url: "/config-linux/nvme-fc-configure-ip-address-dhcp-task.html"
+        - title: Instale SANtricity Storage Manager
+          url: "/config-linux/nvme-fc-install-smcli-11-53-task.html"
+        - title: Acceda a SANtricity System Manager
+          url: "/config-linux/nvme-fc-access-sam-setup-wizard-task.html"
+        - title: Configurar los switches FC
+          url: "/config-linux/nvme-fc-configure-fc-switches-task.html"
+        - title: Configure NVMe over Fibre Channel en el lado del host
+          url: "/config-linux/nvme-fc-setup-host-side-task.html"
+        - title: Definir el host
+          url: "/config-linux/nvme-fc-define-host-task.html"
+        - title: Asignar volumen
+          url: "/config-linux/fc-assign-volume-nvme-task.html"
+        - title: Mostrar los volúmenes visibles para el host
+          url: "/config-linux/nvme-fc-display-volumes-visible-host-task.html"
+        - title: Configurar la conmutación al nodo de respaldo en el host
+          url: "/config-linux/nvme-fc-setup-failover-host-task.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos virtuales
+          url: "/config-linux/nvme-fc-access-virtual-targets-concept.html"
+        - title: Acceda a volúmenes NVMe para destinos de dispositivos físicos
+          url: "/config-linux/nvme-fc-access-physical-targets-concept.html"
+        - title: Crear sistemas de archivos (RHEL 7 y SLES 12)
+          url: "/config-linux/nvme-fc-create-filesystems-sles-12-task.html"
+        - title: Crear sistemas de archivos (RHEL 8, RHEL 9 y SLES 15)
+          url: "/config-linux/nvme-fc-create-filesystems-sles-15-task.html"
+        - title: Verificar el acceso al almacenamiento en el host
+          url: "/config-linux/nvme-fc-verify-storage-access-host-task.html"
+        - title: Hoja de trabajo de NVMe over Fibre Channel para Linux
+          url: "/config-linux/nvme-fc-worksheet-concept.html"
+    - title: Configuración exprés de VMware
+      entries:
+      - title: Descripción general
+        url: "/config-vmware/index.html"
+      - title: Supuestos
+        url: "/config-vmware/overview-concept.html"
+      - title: Comprender el flujo de trabajo
+        url: "/config-vmware/understand-vmware-workflow-concept.html"
+      - title: Comprobar la configuración de VMware
+        url: "/config-vmware/verify-vmware-config-support-task.html"
+      - title: Configure las direcciones IP mediante DHCP
+        url: "/config-vmware/configure-ip-address-using-dhcp-task.html"
+      - title: Configure el software de multivía
+        url: "/config-vmware/configure-multipath-software-concept.html"
+      - title: Acceda a SANtricity System Manager
+        url: "/config-vmware/access-sam-setup-wizard-task.html"
+      - title: Ejecute tareas específicas de FC
+        url: "/config-vmware/fc-perform-specific-task.html"
+      - title: Realice NMVe sobre tareas específicas de FC
+        url: "/config-vmware/nmve-fc-perform-specific-task.html"
+      - title: Ejecute tareas específicas de iSCSI
+        url: "/config-vmware/iscsi-perform-specific-task.html"
+      - title: Ejecute tareas específicas de SAS
+        url: "/config-vmware/sas-perform-specific-task.html"
+      - title: Detectar el almacenamiento en el host
+        url: "/config-vmware/discover-storage-host-task.html"
+      - title: Configurar el almacenamiento en el host
+        url: "/config-vmware/configure-storage-host-task.html"
+      - title: Verificar el acceso al almacenamiento en el host
+        url: "/config-vmware/verify-storage-access-host-task.html"
+    - title: Configuración exprés de Windows
+      entries:
+      - title: Descripción general
+        url: "/config-windows/index.html"
+      - title: Supuestos
+        url: "/config-windows/overview-concept.html"
+      - title: Comprender el flujo de trabajo
+        url: "/config-windows/understand-windows-concept.html"
+      - title: Verificación de la configuración de Windows
+        url: "/config-windows/verify-windows-config-support-task.html"
+      - title: Configure las direcciones IP mediante DHCP
+        url: "/config-windows/configure-ip-address-dhcp-task.html"
+      - title: Configure el software multivía
+        url: "/config-windows/configure-multipath-software-task.html"
+      - title: Instale y configure Unified Host Utilities
+        url: "/config-windows/install-configure-host-utilities-task.html"
+      - title: Instale SANtricity Storage Manager
+        url: "/config-windows/install-storage-manager-for-smcli-task.html"
+      - title: Acceda a SANtricity System Manager
+        url: "/config-windows/access-sam-setup-wizard-task.html"
+      - title: Ejecute tareas específicas de FC
+        url: "/config-windows/fc-perform-specific-task.html"
+      - title: Ejecute tareas específicas de iSCSI
+        url: "/config-windows/iscsi-perform-specific-task.html"
+      - title: Ejecute tareas específicas de SAS
+        url: "/config-windows/sas-perform-specific-task.html"
+      - title: Detectar almacenamiento en el host
+        url: "/config-windows/discover-storage-host-task.html"
+      - title: Configurar el almacenamiento en el host
+        url: "/config-windows/configure-storage-host-task.html"
+      - title: Verificar el acceso al almacenamiento en el host
+        url: "/config-windows/verify-storage-access-host-task.html"
+  - title: Actualizar los sistemas
+    entries:
+    - title: Controladoras
+      pdf-filename: Actualización del hardware de la controladora
+      entries:
+      - title: Descripción general
+        url: "/upgrade-controllers/index.html"
+      - title: Consideraciones de renovación
+        url: "/upgrade-controllers/overview-requirements-concept.html"
+      - title: Prepare la actualización de las controladoras
+        url: "/upgrade-controllers/prepare-upgrade-controllers-task.html"
+      - title: Quite las controladoras
+        url: "/upgrade-controllers/remove-controllers-task.html"
+      - title: Instale nuevas controladoras
+        url: "/upgrade-controllers/install-controllers-task.html"
+      - title: Desbloquear unidades
+        url: "/upgrade-controllers/upgrade-unlock-drives-task.html"
+      - title: Complete la actualización de la controladora
+        url: "/upgrade-controllers/complete-upgrade-controllers-task.html"
+      - title: Vuelva a montar volúmenes después de cambiar el proveedor de LSI a
+          NETAPP
+        url: "/upgrade-controllers/remount-volumes-lsi-task.html"
+      - title: Vuelva a configurar el sistema SAS-2
+        url: "/upgrade-controllers/reconfigure-sas-task.html"
+    - title: Sistema operativo SANtricity
+      pdf-filename: Actualización de software SANtricity
+      entries:
+      - title: Descripción general
+        url: "/upgrade-santricity/index.html"
+      - title: Consideraciones de renovación
+        url: "/upgrade-santricity/overview-upgrade-consider-task.html"
+      - title: Actualice una sola controladora
+        url: "/upgrade-santricity/upgrade-single-controller-task.html"
+      - title: Actualice varias controladoras
+        url: "/upgrade-santricity/upgrade-multiple-controller-task.html"
+      - title: Actualice el firmware de la unidad
+        url: "/upgrade-santricity/upgrade-drive-firmware-task.html"
+  - title: Mantenimiento de los sistemas
+    entries:
+    - title: EF300 y EF600
+      pdf-filename: EF300-EF600 Maintain Systems
+      entries:
+      - title: Descripción general
+        url: "/maintenance-ef600/index.html"
+      - title: Pilas
+        pdf-filename: EF300-EF600 mantiene las baterías
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/batteries-overview-requirements-concept.html"
+        - title: Sustituya la batería
+          url: "/maintenance-ef600/batteries-replace-supertask-task.html"
+      - title: Controladoras
+        pdf-filename: EF300-EF600 mantienen las controladoras
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/controllers-overview-supertask-concept.html"
+        - title: Sustituya la controladora
+          url: "/maintenance-ef600/controllers-replace-supertask-task.html"
+      - title: DIMM
+        pdf-filename: EF300-EF600 mantiene los DIMM
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/dimms-overview-supertask-concept.html"
+        - title: Reemplace los DIMM
+          url: "/maintenance-ef600/dimms-replace-supertask-task.html"
+      - title: Unidades
+        pdf-filename: EF300-EF600 mantienen las unidades
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/drives-overview-supertask-concept.html"
+        - title: Sustituya la unidad EF300
+          url: "/maintenance-ef600/drives-replace-EF300-supertask-task.html"
+        - title: Sustituya la unidad EF600
+          url: "/maintenance-ef600/drives-replace-EF600-supertask-task.html"
+        - title: Añada en caliente una bandeja de unidades
+          url: "/maintenance-ef600/drives-hotadd-drive-shelf-task.html"
+      - title: Ventiladores
+        pdf-filename: Mantenimiento de ventiladores EF300-EF600
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/fans-overview-requirements-replacing2-concept.html"
+        - title: Sustituya el ventilador
+          url: "/maintenance-ef600/fans-replace-supertask-task.html"
+      - title: Tarjetas de interfaz del host
+        pdf-filename: EF300-EF600 mantiene las HIC
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/hics-overview-supertask-concept.html"
+        - title: Actualizar tarjeta de interfaz del host
+          url: "/maintenance-ef600/hics-upgrade-intro.html"
+        - title: Sustituya la tarjeta de interfaz del host con fallos
+          url: "/maintenance-ef600/hics-replace-supertask-task.html"
+      - title: Conversión de protocolo del puerto de host
+        pdf-filename: EF300-EF600 mantienen el puerto de host
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/hpp-overview-supertask-concept.html"
+        - title: Cambiar el protocolo del host
+          url: "/maintenance-ef600/hpp-change-supertask-task.html"
+        - title: Conversión de protocolo de host completa
+          url: "/maintenance-ef600/hpp-complete-protocol-conversion-task.html"
+      - title: Fuentes de alimentación
+        pdf-filename: EF300-EF600 mantiene las fuentes de alimentación
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/power-overview-requirements2-concept.html"
+        - title: Sustituya el suministro de alimentación
+          url: "/maintenance-ef600/power-replace-supertask-task.html"
+      - title: Tarjetas de expansión SAS
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-ef600/sas-overview-supertask-concept.html"
+        - title: Añada tarjetas de expansión SAS
+          url: "/maintenance-ef600/sas-add-supertask-task.html"
+    - title: E2800
+      pdf-filename: Mantenimiento del sistema E2800
+      entries:
+      - title: Descripción general
+        url: "/maintenance-e2800/index.html"
+      - title: Pilas
+        pdf-filename: E2800 mantiene las baterías
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/batteries-overview-requirements-concept.html"
+        - title: Prepárese para sustituir la batería
+          url: "/maintenance-e2800/batteries-prepare-replace-task.html"
+        - title: Quite el contenedor de la controladora
+          url: "/maintenance-e2800/batteries-remove-controller-canister-task.html"
+        - title: Retire la batería que ha fallado
+          url: "/maintenance-e2800/batteries-remove-failed-task.html"
+        - title: Instale la batería nueva
+          url: "/maintenance-e2800/batteries-install-new-task.html"
+        - title: Vuelva a instalar el compartimento de controladoras
+          url: "/maintenance-e2800/batteries-reinstall-controller-canister-task.html"
+        - title: Sustitución completa de la batería
+          url: "/maintenance-e2800/batteries-complete-replacement-task.html"
+      - title: Controladoras
+        pdf-filename: E2800 mantiene controladoras
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/controllers-overview-supertask-concept.html"
+        - title: Añada un segundo contenedor de controladora
+          url: "/maintenance-e2800/controllers-second-add-task.html"
+        - title: Sustituya la controladora en la configuración doble
+          url: "/maintenance-e2800/controllers-duplex-supertask-task.html"
+        - title: Sustituya la controladora en una configuración simple
+          url: "/maintenance-e2800/controllers-simplex-supertask-task.html"
+      - title: Contenedores
+        pdf-filename: E2800 mantiene contenedores
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/canisters-overview-supertask-concept.html"
+        - title: Sustitución de la fuente de alimentación (12 o 24 unidades)
+          url: "/maintenance-e2800/canisters-supply-supertask-task.html"
+        - title: Sustituir contenedor de alimentación (60 unidades)
+          url: "/maintenance-e2800/canisters-60-replace-power-task.html"
+        - title: Sustituir contenedor de ventilador (60 unidades)
+          url: "/maintenance-e2800/canisters-fan-supertask-task.html"
+      - title: Unidades
+        pdf-filename: E2800 mantiene unidades
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/drives-overview-supertask-concept.html"
+        - title: Sustitución de unidad (12 o 24 unidades)
+          url: "/maintenance-e2800/drives-12-24-supertask-task.html"
+        - title: Sustitución de unidad (60 unidades)
+          url: "/maintenance-e2800/drives-60-replace-task.html"
+        - title: Reemplazar cajón de unidades (60 unidades)
+          url: "/maintenance-e2800/drives-60-supertask-task.html"
+        - title: Añada en caliente una bandeja de unidades
+          url: "/maintenance-e2800/drives-hotadd-drive-shelf-task.html"
+      - title: Tarjetas de interfaz del host
+        pdf-filename: E2800 mantiene HIC
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/hics-overview-supertask-concept.html"
+        - title: Agregue tarjetas de interfaz del host
+          url: "/maintenance-e2800/hics-add-supertask-task.html"
+        - title: Actualizar tarjeta de interfaz del host
+          url: "/maintenance-e2800/hics-upgrade-supertask-task.html"
+        - title: Reemplace la tarjeta de interfaz del host
+          url: "/maintenance-e2800/hics-replace-supertask-task.html"
+      - title: Conversión de protocolo del puerto de host
+        pdf-filename: E2800 Convert Host Protocol
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e2800/hpp-overview-supertask-concept.html"
+        - title: Cambiar el protocolo del host
+          url: "/maintenance-e2800/hpp-change-host-protocol-task.html"
+        - title: Conversión de protocolo de host completa
+          url: "/maintenance-e2800/hpp-complete-protocol-conversion-task.html"
+    - title: E5700
+      pdf-filename: Sistema de mantenimiento E5700
+      entries:
+      - title: Descripción general
+        url: "/maintenance-e5700/index.html"
+      - title: Pilas
+        pdf-filename: E5700 mantenga las baterías
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/batteries-intro-concept.html"
+        - title: Sustituya la batería
+          url: "/maintenance-e5700/batteries-replace-supertask-task.html"
+      - title: Controladoras
+        pdf-filename: E5700 mantiene controladoras
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/controllers-overview-concept.html"
+        - title: Sustituya la controladora en la configuración doble
+          url: "/maintenance-e5700/controllers-duplex-supertask-task.html"
+      - title: Contenedores
+        pdf-filename: E5700 mantenga contenedores
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/canisters-overview-supertask-concept.html"
+        - title: Sustitución de la fuente de alimentación (24 unidades)
+          url: "/maintenance-e5700/canisters-supply-replace-task.html"
+        - title: Sustituir contenedor de alimentación (60 unidades)
+          url: "/maintenance-e5700/canisters-power-supertask-task.html"
+        - title: Sustituir contenedor de ventilador (60 unidades)
+          url: "/maintenance-e5700/canisters-fan-replace-task.html"
+      - title: Unidades
+        pdf-filename: E5700 mantenga las unidades
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/drives-overview-supertask-concept.html"
+        - title: Sustitución de unidad (24 unidades)
+          url: "/maintenance-e5700/drives-24-supertask-task.html"
+        - title: Sustitución de unidad (60 unidades)
+          url: "/maintenance-e5700/drives-60-replace-task.html"
+        - title: Reemplazar cajón de unidades (60 unidades)
+          url: "/maintenance-e5700/drives-drawer-supertask-task.html"
+        - title: Añada en caliente una bandeja de unidades
+          url: "/maintenance-e5700/drives-hotadd-drive-shelf-task.html"
+      - title: Tarjetas de interfaz del host
+        pdf-filename: E5700 mantenga HIC
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/hics-overview-supertask-concept.html"
+        - title: Agregue tarjetas de interfaz del host
+          url: "/maintenance-e5700/hics-add-supertask-task.html"
+        - title: Actualizar tarjeta de interfaz del host
+          url: "/maintenance-e5700/hics-upgrade-supertask-task.html"
+        - title: Reemplace la tarjeta de interfaz del host
+          url: "/maintenance-e5700/hics-replace-supertask-task.html"
+      - title: Protocolo de puerto de host
+        pdf-filename: E5700 Cambiar el protocolo del host
+        entries:
+        - title: Descripción general y requisitos
+          url: "/maintenance-e5700/hpp-overview-supertask-concept.html"
+        - title: Cambiar el protocolo del host
+          url: "/maintenance-e5700/hpp-change-host-protocol-task.html"
+        - title: Conversión de protocolo de host completa
+          url: "/maintenance-e5700/hpp-complete-protocol-conversion-task.html"
+  - title: Gestionar el almacenamiento
+    url: "/manage-storage.html"
+  - title: Utilice las soluciones SANtricity
+    entries:
+    - title: Proxy de servicios web
+      entries:
+      - title: Descripción general
+        url: "/web-services-proxy/index.html"
+      - title: Obtenga más información acerca de los servicios web
+        entries:
+        - title: Información general de la API de servicios web
+          url: "/web-services-proxy/overview-intro-concept.html"
+        - title: Compatibilidad y restricciones
+          url: "/web-services-proxy/overview-compat-concept.html"
+        - title: Conceptos básicos de API
+          url: "/web-services-proxy/overview-api-concept.html"
+        - title: Términos y conceptos
+          url: "/web-services-proxy/overview-terms-concept.html"
+      - title: Instalar y configurar
+        entries:
+        - title: Revise los requisitos
+          url: "/web-services-proxy/install-reqs-task.html"
+        - title: Instale el proxy de servicios web
+          url: "/web-services-proxy/install-wsp-task.html"
+        - title: Inicie sesión en API y Unified Manager
+          url: "/web-services-proxy/install-login-task.html"
+        - title: Configure el proxy de servicios web
+          url: "/web-services-proxy/install-config-task.html"
+        - title: Desinstale el proxy de servicios web
+          url: "/web-services-proxy/install-uninstall-task.html"
+      - title: Gestione el acceso de los usuarios
+        url: "/web-services-proxy/access-intro-concept.html"
+      - title: Administrar la seguridad y los certificados
+        url: "/web-services-proxy/certificates-intro-concept.html"
+      - title: Gestionar los sistemas de almacenamiento
+        url: "/web-services-proxy/array-intro-concept.html"
+      - title: Administrar el sondeo automático
+        url: "/web-services-proxy/polling-intro-concept.html"
+      - title: Gestione AutoSupport
+        url: "/web-services-proxy/asup-intro-concept.html"
+    - title: Mirroring de volumen remoto
+      entries:
+      - title: Descripción general
+        url: "/remote-storage-volumes/index.html"
+      - title: Requisitos y restricciones
+        url: "/remote-storage-volumes/system-reqs-concept.html"
+      - title: Configure el hardware
+        url: "/remote-storage-volumes/setup-remote-volumes-concept.html"
+      - title: Importe el almacenamiento remoto
+        url: "/remote-storage-volumes/import-remote-storage-task.html"
+      - title: Gestionar el progreso de importación
+        url: "/remote-storage-volumes/view-import-progress-task.html"
+      - title: Modificar la configuración de conexión
+        url: "/remote-storage-volumes/modify-remote-storage-task.html"
+      - title: Quitar el objeto de almacenamiento remoto
+        url: "/remote-storage-volumes/remove-remote-storage-task.html"
+    - title: Complemento de almacenamiento para vCenter
+      entries:
+      - title: Descripción general
+        url: "/vcenter-plugin/san-spvc-ic-overview.html"
+      - title: Manos a la obra
+        entries:
+        - title: Revise los requisitos
+          url: "/vcenter-plugin/san-spvc-ic-reqs.html"
+        - title: Instale el complemento
+          url: "/vcenter-plugin/san-spvc-ic-installation.html"
+        - title: Configure los permisos de acceso
+          url: "/vcenter-plugin/san-spvc-ic-user-access.html"
+        - title: Inicie sesión y navegue
+          url: "/vcenter-plugin/san-spvc-ic-login-and-navigation.html"
+        - title: Detectar las cabinas de almacenamiento
+          url: "/vcenter-plugin/san-spvc-ic-storage-array-discovery.html"
+        - title: Aprovisionar almacenamiento
+          url: "/vcenter-plugin/san-spvc-ic-storage-provisioning.html"
+        - title: Ver estado
+          url: "/vcenter-plugin/vc-olh-view-status.html"
+      - title: Gestionar certificados
+        entries:
+        - title: Información general sobre certificados
+          url: "/vcenter-plugin/vc-olh-certificates-overview.html"
+        - title: Usar certificados firmados por CA
+          url: "/vcenter-plugin/vc-olh-use-ca-signed-certificates.html"
+        - title: Restablezca los certificados de gestión
+          url: "/vcenter-plugin/vc-olh-reset-management-certificates.html"
+        - title: Importar certificados para cabinas
+          url: "/vcenter-plugin/vc-olh-import-certificates-for-arrays.html"
+        - title: Ver certificados
+          url: "/vcenter-plugin/vc-olh-view-certificates.html"
+        - title: Exportar certificados
+          url: "/vcenter-plugin/vc-olh-export-certificates.html"
+        - title: Elimine certificados de confianza
+          url: "/vcenter-plugin/vc-olh-delete-trusted-certificates.html"
+        - title: Resuelva los certificados que no son de confianza
+          url: "/vcenter-plugin/vc-olh-resolve-untrusted-certificates.html"
+      - title: Gestione las cabinas
+        entries:
+        - title: Información general de la gestión de cabinas
+          url: "/vcenter-plugin/vc-olh-array-management-overview.html"
+        - title: Detectar las cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-discover-storage-arrays.html"
+        - title: Cambie el nombre de la cabina de almacenamiento
+          url: "/vcenter-plugin/vc-olh-rename-storage-array.html"
+        - title: Cambiar contraseñas de las cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-change-storage-array-passwords.html"
+        - title: Quite las cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-remove-storage-arrays.html"
+        - title: Inicie System Manager
+          url: "/vcenter-plugin/vc-olh-launch-system-manager.html"
+      - title: Importar la configuración
+        entries:
+        - title: Información general sobre la configuración de importación
+          url: "/vcenter-plugin/vc-olh-import-settings-overview.html"
+        - title: Importar la configuración de alerta
+          url: "/vcenter-plugin/vc-olh-import-alert-settings.html"
+        - title: Importe la configuración de AutoSupport
+          url: "/vcenter-plugin/vc-olh-import-autosupport-settings.html"
+        - title: Importe la configuración de servicios de directorio
+          url: "/vcenter-plugin/vc-olh-import-directory-services-settings.html"
+        - title: Importe la configuración del sistema
+          url: "/vcenter-plugin/vc-olh-import-system-settings.html"
+        - title: Importe los ajustes de configuración de almacenamiento
+          url: "/vcenter-plugin/vc-olh-import-storage-configuration-settings.html"
+      - title: Gestione grupos de cabinas
+        entries:
+        - title: Información general sobre grupos de cabinas
+          url: "/vcenter-plugin/vc-olh-array-groups-overview.html"
+        - title: Cree un grupo de cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-create-storage-array-group.html"
+        - title: Añadir una cabina de almacenamiento a un grupo
+          url: "/vcenter-plugin/vc-olh-add-storage-array-to-group.html"
+        - title: Cambiar el nombre de un grupo de cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-rename-storage-array-group.html"
+        - title: Quite las cabinas de almacenamiento del grupo
+          url: "/vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html"
+        - title: Elimine grupo de cabinas de almacenamiento
+          url: "/vcenter-plugin/vc-olh-delete-storage-array-group.html"
+      - title: Actualizar el software del sistema operativo
+        entries:
+        - title: Información general de la actualización
+          url: "/vcenter-plugin/vc-olh-upgrade-overview.html"
+        - title: Realice la comprobación del estado previa a la actualización
+          url: "/vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html"
+        - title: Actualice el sistema operativo SANtricity
+          url: "/vcenter-plugin/vc-olh-upgrade-santricity-os.html"
+        - title: Active el software de sistema operativo almacenado temporalmente
+          url: "/vcenter-plugin/vc-olh-activate-staged-os-software.html"
+        - title: Borre el software de sistema operativo almacenado temporalmente
+          url: "/vcenter-plugin/vc-olh-clear-staged-os-software.html"
+        - title: Gestionar el repositorio de software
+          url: "/vcenter-plugin/vc-olh-manage-software-repository.html"
+      - title: Aprovisionar almacenamiento
+        entries:
+        - title: Información general de aprovisionamiento
+          url: "/vcenter-plugin/vc-olh-provisioning-overview.html"
+        - title: Crear almacenamiento
+          url: "/vcenter-plugin/vc-olh-create-storage.html"
+        - title: Aumente la capacidad de un volumen
+          url: "/vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html"
+        - title: Cambiar la configuración de un volumen
+          url: "/vcenter-plugin/vc-olh-change-settings-for-a-volume.html"
+        - title: Añadir volúmenes a la carga de trabajo
+          url: "/vcenter-plugin/vc-olh-add-volumes-to-workload.html"
+        - title: Cambiar configuración de carga de trabajo
+          url: "/vcenter-plugin/vc-olh-change-workload-settings.html"
+        - title: Inicializar volúmenes
+          url: "/vcenter-plugin/vc-olh-initialize-volumes.html"
+        - title: Redistribuir volúmenes
+          url: "/vcenter-plugin/vc-olh-redistribute-volumes.html"
+        - title: Cambiar propiedad de la controladora de un volumen
+          url: "/vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html"
+        - title: Cambiar la configuración de caché de un volumen
+          url: "/vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html"
+        - title: Cambiar la configuración de análisis de medios para un volumen
+          url: "/vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html"
+        - title: Elimine el volumen
+          url: "/vcenter-plugin/vc-olh-delete-volume.html"
+      - title: Configurar hosts
+        entries:
+        - title: Información general de creación de hosts
+          url: "/vcenter-plugin/vc-olh-host-creation-overview.html"
+        - title: Cree acceso de hosts
+          url: "/vcenter-plugin/vc-olh-create-host-access.html"
+        - title: Cree un clúster de hosts
+          url: "/vcenter-plugin/vc-olh-create-host-cluster.html"
+        - title: Asignar volúmenes a hosts
+          url: "/vcenter-plugin/vc-olh-assign-volumes-to-hosts.html"
+        - title: Anule la asignación de volúmenes
+          url: "/vcenter-plugin/vc-olh-unassign-volumes.html"
+        - title: Cambiar la configuración de un host
+          url: "/vcenter-plugin/vc-olh-change-the-settings-for-a-host.html"
+        - title: Elimine host o clúster de hosts
+          url: "/vcenter-plugin/vc-olh-delete-host-or-host-cluster.html"
+      - title: Configure los pools y los grupos de volúmenes
+        entries:
+        - title: Información general sobre los pools y el grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-pools-and-volume-group-overview.html"
+        - title: Crear un pool automáticamente
+          url: "/vcenter-plugin/vc-olh-create-pool-automatically.html"
+        - title: Crear un pool manualmente
+          url: "/vcenter-plugin/vc-olh-create-pool-manually.html"
+        - title: Cree un grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-create-a-volume-group.html"
+        - title: Añadir capacidad a un pool o grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-add-capacity-to-a-pool-or-volume-group.html"
+        - title: Cree una caché SSD
+          url: "/vcenter-plugin/vc-olh-create-ssd-cache.html"
+        - title: Cambiar la configuración de un pool
+          url: "/vcenter-plugin/vc-olh-change-configuration-settings-for-a-pool.html"
+        - title: Cambiar la configuración de un grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-change-configuration-settings-for-a-volume-group.html"
+        - title: Cambiar la configuración de la caché SSD
+          url: "/vcenter-plugin/vc-olh-change-ssd-cache-settings.html"
+        - title: Ver estadísticas de la caché SSD
+          url: "/vcenter-plugin/vc-olh-view-ssd-cache-statistics.html"
+        - title: Compruebe la redundancia de un volumen
+          url: "/vcenter-plugin/vc-olh-check-volume-redundancy.html"
+        - title: Elimine un pool o grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-delete-pool-or-volume-group.html"
+        - title: Consolidar la capacidad libre de un grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-consolidate-free-capacity-for-a-volume-group.html"
+        - title: Encender las luces de localización
+          url: "/vcenter-plugin/vc-olh-turn-on-locator-lights.html"
+        - title: Elimine capacidad
+          url: "/vcenter-plugin/vc-olh-remove-capacity.html"
+        - title: Habilite la seguridad para un pool o un grupo de volúmenes
+          url: "/vcenter-plugin/vc-olh-enable-security-for-a-pool-or-volume-group.html"
+      - title: Quitar el plugin
+        url: "/vcenter-plugin/san-spvc-ic-plugin-removal.html"
+      - title: Preguntas frecuentes
+        entries:
+        - title: "¿Qué configuración se importa?"
+          url: "/vcenter-plugin/vc-olh-what-settings-are-imported.html"
+        - title: "¿Por qué no se muestran todas las cabinas de almacenamiento?"
+          url: "/vcenter-plugin/vc-olh-why-do-i-not-see-all-of-my-storage-arrays.html"
+        - title: "¿Por qué estos volúmenes no están asociados a una carga de trabajo?"
+          url: "/vcenter-plugin/vc-olh-why-are-these-volumes-not-associated-with-a-workload.html"
+        - title: "¿Cómo afecta la creación de volúmenes la carga de trabajo seleccionada?"
+          url: "/vcenter-plugin/vc-olh-how-does-my-selected-workload-impact-volume-creation.html"
+        - title: "¿Por qué no se muestran todos los volúmenes, los hosts o los clústeres
+            de hosts?"
+          url: "/vcenter-plugin/vc-olh-why-do-i-not-see-all-my-volumes,-hosts,-or-host-clusters.html"
+        - title: "¿Por qué no se puede eliminar la carga de trabajo seleccionada?"
+          url: "/vcenter-plugin/vc-olh-why-can-i-not-delete-the-selected-workload.html"
+        - title: "¿Cómo ayudan las cargas de trabajo específicas de la aplicación
+            a gestionar la cabina de almacenamiento?"
+          url: "/vcenter-plugin/vc-olh-how-do-application-specific-workloads-help-me-manage-my-storage-array.html"
+        - title: "¿Qué debo hacer para reconocer la capacidad expandida?"
+          url: "/vcenter-plugin/vc-olh-what-do-i-need-to-do-to-recognize-the-expanded-capacity.html"
+        - title: "¿Cuándo quieres usar la selección asignar el host más adelante?"
+          url: "/vcenter-plugin/vc-olh-when-would-i-want-to-use-the-assign-host-later-selection.html"
+        - title: "¿Qué debo saber acerca de los requisitos de tamaño de bloque del
+            host?"
+          url: "/vcenter-plugin/vc-olh-what-do-i-need-to-know-about-host-block-size-requirements.html"
+        - title: "¿Por qué debería crear un clúster de hosts?"
+          url: "/vcenter-plugin/vc-olh-why-would-i-need-to-create-a-host-cluster.html"
+        - title: "¿Cómo saber cuál es el tipo de sistema operativo de host correcto?"
+          url: "/vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html"
+        - title: "¿Cómo se emparejan los puertos de host con un host?"
+          url: "/vcenter-plugin/vc-olh-how-do-i-match-the-host-ports-to-a-host.html"
+        - title: "¿Qué es el clúster predeterminado?"
+          url: "/vcenter-plugin/vc-olh-what-is-the-default-cluster.html"
+        - title: "¿Qué es una comprobación de redundancia?"
+          url: "/vcenter-plugin/vc-olh-what-is-redundancy-check.html"
+        - title: "¿Qué es la capacidad de conservación?"
+          url: "/vcenter-plugin/vc-olh-what-is-preservation-capacity.html"
+        - title: "¿Cuál es el nivel de RAID óptimo para cada aplicación?"
+          url: "/vcenter-plugin/vc-olh-what-raid-level-is-best-for-my-application.html"
+        - title: "¿Por qué no se muestran algunas unidades?"
+          url: "/vcenter-plugin/vc-olh-why-are-some-drives-not-showing-up.html"
+        - title: "¿Por qué no es posible aumentar la capacidad de conservación?"
+          url: "/vcenter-plugin/vc-olh-why-can-i-not-increase-my-preservation-capacity.html"
+        - title: "¿Qué es la garantía de datos?"
+          url: "/vcenter-plugin/vc-olh-what-is-data-assurance.html"
+        - title: "¿Qué es la seguridad FDE/FIPS?"
+          url: "/vcenter-plugin/vc-olh-what-is-fde-fips-security.html"
+        - title: "¿Qué significa ser compatible con la función de seguridad (Drive
+            Security)?"
+          url: "/vcenter-plugin/vc-olh-what-is-secure-capable-drive-security.html"
+        - title: "¿Cómo se visualizan y se interpretan todas las estadísticas de caché
+            SSD?"
+          url: "/vcenter-plugin/vc-olh-how-do-i-view-and-interpret-all-ssd-cache-statistics.html"
+        - title: "¿Qué son la protección contra pérdida de bandeja y la protección
+            contra pérdida de cajón?"
+          url: "/vcenter-plugin/vc-olh-what-is-shelf-loss-protection-and-drawer-loss-protection.html"
+        - title: "¿Cómo se mantiene la protección contra pérdida de bandeja y cajón?"
+          url: "/vcenter-plugin/vc-olh-how-do-i-maintain-shelf-and-drawer-loss-protection.html"
+        - title: "¿Qué es la capacidad de optimización para pools?"
+          url: "/vcenter-plugin/vc-olh-what-is-optimization-capacity-for-pools.html"
+        - title: "¿Qué es la capacidad de optimización de los grupos de volúmenes?"
+          url: "/vcenter-plugin/vc-olh-what-is-optimization-capacity-for-volume-groups.html"
+        - title: "¿Qué permite el aprovisionamiento de recursos?"
+          url: "/vcenter-plugin/vc-olh-what-is-resource-provisioning-capable.html"
+        - title: "¿Qué debo saber acerca de la función de volúmenes aprovisionados
+            mediante recursos?"
+          url: "/vcenter-plugin/vc-olh-what-do-i-need-to-know-about-the-resource-provisioned-volumes-feature.html"
+        - title: "¿Cuál es la diferencia entre la gestión de claves de seguridad interna
+            y de claves de seguridad externa?"
+          url: "/vcenter-plugin/vc-olh-what-is-the-difference-between-internal-security-key-and-external-security-key-management.html"
+        - title: "¿Qué debo saber antes de crear una clave de seguridad?"
+          url: "/vcenter-plugin/vc-olh-what-do-i-need-to-know-before-creating-a-security-key.html"
+        - title: "¿Por qué debo definir una frase de contraseña?"
+          url: "/vcenter-plugin/vc-olh-why-do-i-need-to-define-a-pass-phrase.html"
+    - title: Soluciones heredadas
+      entries:
+      - title: Conector de cloud
+        entries:
+        - title: Descripción general
+          url: "/cloud-connector/index.html"
+        - title: Requisitos
+          url: "/cloud-connector/learn-intro-concept.html"
+        - title: Instale el conector en la nube
+          url: "/cloud-connector/install-intro-concept.html"
+        - title: Configure Cloud Connector por primera vez
+          url: "/cloud-connector/config-intro-concept.html"
+        - title: Inicie sesión en Cloud Connector
+          url: "/cloud-connector/login-task.html"
+        - title: Completos
+          url: "/cloud-connector/backup-intro-concept.html"
+        - title: Restauraciones
+          url: "/cloud-connector/restore-intro-concept.html"
+        - title: Modificar configuración
+          url: "/cloud-connector/modify-intro-concept.html"
+        - title: Desinstale Cloud Connector
+          url: "/cloud-connector/uninstall-intro-concept.html"
+  - title: Versiones anteriores
+    url: "/early-versions.html"
+  - title: Informes técnicos
+    entries:
+    - title: Plataforma TRS
+      url: "/platform-tech-reports.html"
+    - title: TRS de seguridad
+      url: "/security-tech-reports.html"
+    - title: Función TRS
+      url: "/feature-tech-reports.html"
+    - title: Solución TRS
+      url: "/solution-tech-reports.html"
+  - title: Avisos legales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Manos a la obra
+    links:
+    - title: Inicio rápido
+      url: "/getting-started/getup-run-concept.html"
+    - title: Especificaciones técnicas de EF-Series
+      url: https://www.netapp.com/pdf.html?item=/media/19339-DS-4082.pdf
+    - title: 'E5700: Especificaciones técnicas'
+      url: https://www.netapp.com/pdf.html?item=/media/7572-ds-3894.pdf
+    - title: 'E2800: Especificaciones técnicas'
+      url: https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf
+  - title: Software SANtricity
+    links:
+    - title: System Manager 11.7 de SANtricity
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: Unified Manager 5 de SANtricity
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+    - title: Referencia de interfaz de línea de comandos (CLI)
+      url: https://docs.netapp.com/us-en/e-series-cli/index.html
+  - title: API de SANtricity
+    links:
+    - title: Servicios web
+      url: "/web-services-proxy/index.html"
+    - title: Plugin para vCenter
+      url: "/vcenter-plugin/san-spvc-ic-overview.html"
+    - title: Proveedores SMI-S.
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62208
+  - title: Aplicaciones de rendimiento y complementos
+    links:
+    - title: Aplicación SANtricity para Splunk Enterprise
+      url: https://splunkbase.splunk.com/app/1932/
+    - title: Complemento tecnológico de Splunk para SANtricity
+      url: https://splunkbase.splunk.com/app/1933/
+    - title: Analizador de rendimiento con E-Series + Grafana
+      url: https://github.com/NetApp/eseries-perf-analyzer
+    - title: Blog sobre el Analizador de rendimiento E-Series
+      url: https://blog.netapp.com/monitoring-netapp-eseries
+  - title: Para los ejecutivos de ventas
+    links:
+    - title: Formación técnica de E-Series/EF-Series (se requiere inicio de sesión)
+      url: https://fieldportal.netapp.com/content/199944
+    - title: Descripción general y detalles técnicos de EF300 (se requiere inicio
+        de sesión)
+      url: https://fieldportal.netapp.com/content/1417672
+    - title: NetApp Fusion (se requiere inicio de sesión)
+      url: https://fusion.netapp.com/
+  - title: Herramientas y soporte
+    links:
+    - title: Matriz de interoperabilidad de NetApp
+      url: http://mysupport.netapp.com/matrix/
+    - title: Base de conocimientos de NetApp
+      url: https://kb.netapp.com/
+    - title: Active IQ (se requiere inicio de sesión)
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: Descargas de E-Series/SANtricity (se requiere inicio de sesión)
+      url: https://mysupport.netapp.com/site/downloads#E
+product-family:
+  name: E-Series
+  repo: e-series-family

@@ -1,0 +1,171 @@
+---
+permalink: maintenance-e2800/batteries-prepare-replace-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Prepare la sustitución de la batería E2800, siguiendo los pasos adecuados para doble o simple. 
+---
+= Prepare para sustituir la batería E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los pasos para prepararse para la sustitución de la batería dependen de si tiene una configuración doble (dos controladoras) o una configuración simple (una sola controladora).
+
+* Para configuraciones dobles, consulte <<Colocar una controladora en estado sin conexión (doble)>>.
+* Para configuraciones simples, consulte <<Apague la bandeja de controladoras (simple)>>.
+
+
+.Antes de empezar
+* Verifique que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+* Revise la link:batteries-overview-requirements-concept.html["Requisitos para reemplazar una batería E2800"].
+
+
+
+
+== Colocar una controladora en estado sin conexión (doble)
+
+Si tiene una configuración doble, debe colocar la controladora afectada en estado sin conexión para poder quitar la batería con errores de forma segura. La controladora que no se coloca en estado sin conexión debe estar en línea (en el estado óptimo).
+
+
+NOTE: Realice esta tarea solo si la cabina de almacenamiento tiene dos controladoras (configuración doble).
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que hay un problema con una batería y para garantizar que no primero no tenga que resolver otros elementos.
+. En el área Detalles de Recovery Guru, determine qué batería desea reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, es posible utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+** Desde SANtricity System Manager:
++
+... Seleccione *hardware*.
+... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+... Seleccione la controladora que desea colocar en estado sin conexión.
+... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione *conectarse a una conexión de red alternativa* para acceder automáticamente al Administrador del sistema de SANtricity utilizando el otro controlador.
+
+
+
+** Como alternativa, puede desconectar las controladoras utilizando los siguientes comandos de la CLI:
++
+*Para el controlador A:* `set controller [a] availability=offline`
+
++
+*Para el controlador B:* `set controller [b] availability=offline`
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
+. Vaya a. link:batteries-remove-controller-canister-task.html["Quite el contenedor de controladora E2800"].
++
+
+CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+
+
+
+
+== Apague la bandeja de controladoras (simple)
+
+Si tiene una configuración simple, apague la bandeja de controladoras para que pueda quitar de forma segura la batería con errores.
+
+
+NOTE: Realice esta tarea solo si la cabina de almacenamiento tiene una controladora (configuración simple).
+
+.Pasos
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, es posible utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+.. Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+.. Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+.. Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, puede perder datos.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
+. Apague ambos switches de alimentación de la bandeja de controladoras.
+. Espere a que se apagen todos los LED de la bandeja de controladoras.
+. Vaya a. link:batteries-remove-controller-canister-task.html["Quite el contenedor de controladora E2800"].
+

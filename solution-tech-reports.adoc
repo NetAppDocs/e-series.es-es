@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: solution-tech-reports.html 
+keywords: solution technical reports, e-series, hardware, santricity, os 
+summary: Informes técnicos de E-Series 
+---
+= Consulte los informes técnicos de la solución
+:allow-uri-read: 
+
+
+
+
+== Splunk
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf["*TR-4623: E5700 con Splunk Enterprise*"^] | https://www.netapp.com/media/57104-tr-4903.pdf["*TR-4903: EF300 con Splunk Enterprise*"^] | https://www.netapp.com/pdf.html?item=/media/72003-tr-4930.pdf["*TR-4930: EF600 con Splunk Enterprise*"^] 
+
+
+| Describe la arquitectura integrada del sistema E5700 y el diseño de Splunk. En este documento también se resumen los resultados de las pruebas de rendimiento obtenidos a partir de una herramienta de simulación de eventos de registro de máquina de Splunk. | Describe la arquitectura integrada de la cabina all-flash EF300 y el diseño de Splunk. En este documento también se resumen los resultados de las pruebas de rendimiento obtenidos a partir de una herramienta de simulación de eventos de registro de máquina de Splunk. | Describe la arquitectura integrada de la cabina all-flash EF600 y el diseño de Splunk. En este documento también se resumen los resultados de las pruebas de rendimiento obtenidos a partir de una herramienta de simulación de eventos de registro de máquina de Splunk. 
+|===
+
+
+== Bases de datos empresariales
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf["*TR-4764: Guía de mejores prácticas para Microsoft SQL Server con EF-Series* de NetApp"^] | https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf["*TR-4794: Bases de datos de Oracle en EF-Series* de NetApp"^] |  
+
+
+| Ayuda a los administradores de almacenamiento y a los administradores de bases de datos a poner en marcha Microsoft SQL Server en sistemas de almacenamiento EF-Series de NetApp. | Ayuda a los administradores de almacenamiento y a los administradores de bases de datos a poner en marcha Oracle en almacenamiento EF-Series de NetApp. |  
+|===
+
+
+== Respaldo y recuperación
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17042-tr4320pdf.pdf["*TR-4320: Mejores prácticas con CommVault Data Platform V11*"^] | https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf["*TR-4471: Mejores prácticas con Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["*TR-4704: Implementación de Veritas NetBackup con almacenamiento E-Series de NetApp*"^] 
+
+
+| Describe la arquitectura de referencia y las prácticas recomendadas al usar el almacenamiento E-Series de NetApp en un entorno CommVault Data Platform V11. | Describe la arquitectura de referencia y las prácticas recomendadas al usar el almacenamiento E-Series de NetApp en un entorno de Veeam Backup & Replication 9.5. | Describe la implementación de Veritas NetBackup en almacenamiento E-Series de NetApp. 
+|===
+
+
+== VSS
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17200-tr4825pdf.pdf["*TR-4825: Guía de mejores prácticas de E-Series de NetApp para la videovigilancia*"^] | https://www.netapp.com/pdf.html?item=/media/6143-tr4818pdf.pdf["*TR-4818: Virtualización de sistemas de gestión de vídeos con almacenamiento E-Series de NetApp*"^] | https://www.netapp.com/pdf.html?item=/media/19400-tr-4848.pdf["*TR-4848: Solución de grabación de vídeo de Bosch con la matriz de almacenamiento en disco E2800 E-Series de NetApp*"^] 
+
+
+| Describe las prácticas recomendadas para poner en marcha cabinas E-Series en entornos de videovigilancia. | Describe cómo diseñar y poner en marcha sistemas de gestión de vídeo con almacenamiento E-Series de NetApp. | Describe la arquitectura de la solución de videovigilancia e incluye detalles de los componentes y las prácticas recomendadas de almacenamiento. 
+
+
+| https://www.netapp.com/pdf.html?item=/media/19427-tr-4838.pdf&v=2020106216["*TR-4838: Informe de certificación de VMS E2800 y E5700 con Milestone XProtect*"^] | https://www.netapp.com/media/17106-tr4771design.pdf["*TR-4771-DESIGN: Software para la gestión de vídeo E-Series y Genetec de NetApp*"^] |  
+
+
+| Describe los resultados de las pruebas de certificación realizadas en las cabinas de almacenamiento híbridas E2800 y E5700 de NetApp. | Describe los resultados de la certificación de Genetec Security Center Video Management Software (VMS) en las cabinas de almacenamiento híbrido E2800 y E5700 de NetApp. |  
+|===
+
+
+== HPC
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: Sistemas HPC de gama básica con E-Series de NetApp e IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Implementación de IBM Spectrum Scale con almacenamiento E-Series de NetApp*"^] | https://www.netapp.com/pdf.html?item=/media/19407-tr-4856-deploy.pdf["*TR-4856: Alta disponibilidad de BeeGFS con E-Series mediante Red Hat Enterprise Linux Server*"^] 
+
+
+| Describe la arquitectura de referencia para sistemas de informática de alto rendimiento de gama básica basados en sistemas de almacenamiento E-Series de NetApp y IBM Spectrum Scale. | Describe el proceso de implementación de una solución de sistema de archivos en paralelo completa basada en la pila de software Spectrum Scale de IBM. | Describe las configuraciones necesarias para implementar una alta disponibilidad en una arquitectura BeeGFS respaldada por el sistema E-Series de NetApp y usar RedHat Enterprise Linux para servicios de almacenamiento, metadatos y gestión BeeGFS. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/19431-tr-4862.pdf["*TR-4862: Alta disponibilidad de BeeGFS con E-Series mediante SUSE Linux Enterprise Server*"^] |  |  
+
+
+| Describe las configuraciones necesarias para implementar una alta disponibilidad en una arquitectura BeeGFS respaldada por el sistema E-Series de NetApp y el uso de SUSE Linux Enterprise Server para servicios de gestión, metadatos y almacenamiento de BeeGFS. |  |  
+|===

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-are-some-drives-not-showing-up.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: En el cuadro de diálogo Añadir capacidad, no todas las unidades se encuentran disponibles para añadir capacidad a un pool o grupo de volúmenes existente. 
+---
+= ¿Por qué no se muestran algunas unidades?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+En el cuadro de diálogo Añadir capacidad, no todas las unidades se encuentran disponibles para añadir capacidad a un pool o grupo de volúmenes existente.
+
+Las unidades no serán elegibles por cualquiera de los motivos siguientes:
+
+* Una unidad debe estar sin asignar y no debe tener la función de seguridad habilitada. Las unidades que son parte de otro pool, de otro grupo de volúmenes o que están configuradas como pieza de repuesto no son elegibles. Si una unidad está sin asignar, pero tiene la función de seguridad habilitada, se debe eliminar manualmente esa unidad para que sea elegible.
+* Una unidad que se encuentra en un estado distinto a Optimal no es elegible.
+* Si una unidad tiene muy poca capacidad, no es elegible.
+* El tipo de medios de la unidad debe coincidir dentro de un pool o grupo de volúmenes. No puede mezclar lo siguiente:
++
+** Unidades de disco duro (HDD) con discos de estado sólido (SSD)
+** NVMe con unidades SAS
+** Unidades con tamaños de bloques de volúmenes de 512 bytes y 4 KiB
+
+
+* Si todas las unidades de un pool o un grupo de volúmenes son compatibles con la función de seguridad, las unidades no compatibles con la función de seguridad no se enumeran.
+* Si un pool o grupo de volúmenes contiene todas unidades compatibles con el estándar de procesamiento de información federal (FIPS), las unidades no compatibles con FIPS no se enumeran.
+* Si un pool o grupo de volúmenes contiene todas unidades compatibles con la función Garantía de datos (DA) y al menos un volumen del pool o grupo de volúmenes tiene habilitada la función DA, una unidad que no sea compatible con DA no es elegible, por lo que no puede añadirse a ese pool o grupo de volúmenes. Sin embargo, si ningún volumen tiene la función DA habilitada en el pool o grupo de volúmenes, una unidad que no sea compatible con LA función DA puede añadirse a ese pool o grupo de volúmenes. Si decide combinar estas unidades, tenga en cuenta que no podrá crear ningún volumen con la función DA habilitada.
+
+
+
+NOTE: Es posible aumentar la capacidad de la cabina de almacenamiento con la adición de unidades nuevas o la eliminación de pools o grupos de volúmenes.

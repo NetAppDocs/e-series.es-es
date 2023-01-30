@@ -1,0 +1,16 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: E-Series systems give you an integrated hardware and software solution for dedicated, high-bandwidth applications like data analytics, video surveillance, and disk-based backup that need simple, fast, reliable SAN storage. 
+summary: Los sistemas E-Series le proporcionan una solución de hardware y software integrada para aplicaciones dedicadas de ancho de banda elevado, como el análisis de datos, la videovigilancia y el backup basado en disco que necesitan un almacenamiento SAN sencillo, rápido y fiable. 
+---
+= Documentación de los sistemas E-Series
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

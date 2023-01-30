@@ -1,0 +1,75 @@
+---
+permalink: install-hw-cabling/index.html 
+sidebar: sidebar 
+keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Conecte un host directamente a una controladora o utilice switches. 
+---
+= Información general sobre el cableado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible conectar un host directamente a una controladora o usar switches para conectar un host a una controladora.
+
+Si el sistema de almacenamiento incluye una o varias bandejas de unidades, debe cablearlas a la bandeja de controladoras. Es posible añadir una nueva bandeja de unidades mientras la alimentación se sigue aplicando a otros componentes del sistema de almacenamiento. Además, es posible conectar el sistema de almacenamiento a una red para la gestión fuera de banda.
+
+La información de cableado está destinada a un instalador de hardware o administrador de sistemas que esté instalando o ampliando un sistema de almacenamiento. Se supone que ha instalado el sistema de almacenamiento tal y como se describe en las _instrucciones de instalación y configuración_ del hardware.
+
+
+
+== Modelo de hardware aplicable
+
+La información de cableado se aplica a los siguientes modelos de hardware.
+
+|===
+| *Bandeja del controlador* | *Bandeja de unidades* 
+
+
+ a| 
+EF300, EF600
+ a| 
+DE212C, DE224C Y DE460
+
+
+
+ a| 
+E5724, EF570, E2812, E2824, EF280
+ a| 
+DE212C Y DE224C
+
+
+
+ a| 
+E2860, E5760
+ a| 
+DE460C
+
+|===
+
+
+== Información adicional sobre cableado
+
+Si va a cablear la siguiente configuración, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente."^]
+
+|===
+| *Bandeja del controlador* | *Bandeja de unidades* 
+
+
+ a| 
+E2712, E2724, E5612, E5624, EF560
+ a| 
+DE212C Y DE224C
+
+
+
+ a| 
+E2760 Y E5660
+ a| 
+DE460C
+
+|===
+Para obtener información sobre otras opciones de cableado, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Guía de cableado de hardware E-Series"^] para sistemas más antiguos.
+
+Para obtener información sobre el cableado para admitir funciones de mirroring, consulte https://www.netapp.com/us/media/tr-4656.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].

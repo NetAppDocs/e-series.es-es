@@ -1,0 +1,315 @@
+---
+permalink: config-vmware/iscsi-perform-specific-task.html 
+sidebar: sidebar 
+keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para el protocolo iSCSI, es posible configurar los switches y la red en el lado de la cabina y del host. Luego, debe verificar las conexiones de red IP. 
+---
+= Ejecute tareas específicas de iSCSI
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el protocolo iSCSI, es posible configurar los switches y la red en el lado de la cabina y del host. Luego, debe verificar las conexiones de red IP.
+
+
+
+== Paso 1: Configuración de los switches--iSCSI, VMware
+
+Los switches se configuran según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
+
+.Lo que necesitará
+* Dos redes separadas para una mayor disponibilidad. Asegúrese de aislar el tráfico de iSCSI para separar los segmentos de red.
+* Activación del control de flujo de hardware de envío y recepción *fin a fin*.
+* Control de flujo de prioridad desactivado.
+* Si corresponde, tramas gigantes habilitadas
+
+
+
+NOTE: LACP/canales de puerto no se admite en los puertos del switch de la controladora. No se recomienda LACP del lado del host; el acceso multivía proporciona los mismos beneficios o mejor.
+
+.Pasos
+Consulte la documentación de su proveedor de switches.
+
+
+
+== Paso 2: Configuración de redes--iSCSI VMware
+
+Es posible configurar la red iSCSI de varias maneras, según los requisitos de almacenamiento de datos. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
+
+.Lo que necesitará
+* Activación del control de flujo de hardware de envío y recepción *fin a fin*.
+* Control de flujo de prioridad desactivado.
+* Si corresponde, tramas gigantes habilitadas
++
+Si utiliza tramas gigantes dentro DE LA SAN IP por motivos de rendimiento, asegúrese de configurar la cabina, los switches y los hosts para utilizar tramas gigantes. Consulte la documentación de su sistema operativo y de switches para obtener información sobre cómo habilitar tramas gigantes en los hosts y en los switches. Para habilitar tramas gigantes en la cabina, complete los pasos en el paso 3.
+
+
+
+.Acerca de esta tarea
+Mientras planifica las redes iSCSI, recuerde que https://configmax.vmware.com/home["Máximos de configuración de VMware"^] la guía indica que el número máximo de rutas de almacenamiento iSCSI admitidas es 8. Debe tener en cuenta este requisito para evitar configurar demasiadas rutas.
+
+De manera predeterminada, el iniciador de software VMware iSCSI crea una sola sesión por destino iSCSI cuando no utiliza el enlace de puerto iSCSI.
+
+
+NOTE: El enlace del puerto iSCSI de VMware es una función que obliga a todos los puertos de VMkernel vinculados a iniciar sesión en todos los puertos de destino a los que se puede acceder en los segmentos de red configurados. Está destinado al uso con cabinas que presenten una sola dirección de red para el destino iSCSI. NetApp recomienda no utilizar el enlace de puerto iSCSI. Para obtener más información, consulte http://kb.vmware.com/["Base de conocimientos de VMware"] Para obtener el artículo sobre consideraciones para usar el enlace de puerto iSCSI de software en ESX/ESXi. Si el host ESXi está conectado al almacenamiento de otro proveedor, NetApp recomienda utilizar puertos vmkernel iSCSI separados para evitar cualquier conflicto con la vinculación de puertos.
+
+Para aplicar las prácticas recomendadas, NO debe utilizar la vinculación de puertos en las cabinas de almacenamiento E-Series.
+
+Para garantizar una buena configuración multivía, utilice varios segmentos de red para la red iSCSI. Coloque al menos un puerto en el lado del host y al menos un puerto de cada controladora de la cabina en un segmento de red, y un grupo idéntico de puertos en el lado del host y de la cabina en otro segmento de red. Siempre que sea posible, utilice varios switches Ethernet para obtener redundancia adicional.
+
+.Pasos
+Consulte la documentación de su proveedor de switches.
+
+
+NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para sobrecarga de IP. Consulte la documentación de su switch para obtener más información.
+
+
+
+== Paso 3: Configuración de redes en la cabina: ISCSI, VMware
+
+Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
+
+.Lo que necesitará
+* La dirección IP o el nombre de dominio de una de las controladoras de la cabina de almacenamiento.
+* La contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio están configurados para el acceso de seguridad adecuado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.
+
+
+.Acerca de esta tarea
+En esta tarea, se describe cómo acceder a la configuración del puerto iSCSI desde la página hardware. También puede acceder a la configuración desde MENU:System[Ajustes > Configurar puertos iSCSI].
+
+
+NOTE: Para obtener información adicional sobre cómo configurar las redes en la cabina en la configuración de VMware, consulte el siguiente informe técnico: https://www.netapp.com/us/media/tr-4789.pdf["Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x."].
+
+.Pasos
+. Desde el explorador, introduzca la siguiente URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` es la dirección de una de las controladoras de la cabina de almacenamiento.
+
++
+La primera vez que se abre SANtricity System Manager en una cabina sin configurar, aparece el aviso Set Administrator Password. La gestión del acceso basada en roles configura cuatro roles locales: Administración, soporte, seguridad y supervisión. Los últimos tres roles tienen contraseñas aleatorias que no se pueden descifrar. Una vez que configura una contraseña para el rol de administración, puede cambiar todas las contraseñas con las credenciales de administración. Consulte la ayuda en línea de SANtricity System Manager si desea más información acerca de los cuatro roles de usuario local.
+
+. Introduzca la contraseña del administrador del sistema para la función admin en los campos Set Administrator Password y Confirm Password y, a continuación, haga clic en *Set Password*.
++
+El asistente de configuración se inicia si no hay pools, grupos de volúmenes, cargas de trabajo ni notificaciones configurados.
+
+. Cierre el asistente de configuración.
++
+Más adelante se utilizará el asistente para completar las tareas de configuración adicionales.
+
+. Seleccione *hardware*.
+. Si el gráfico muestra las unidades, haga clic en *Mostrar parte posterior de la bandeja*.
++
+El gráfico cambia y muestra las controladoras en lugar de las unidades.
+
+. Haga clic en la controladora con los puertos iSCSI que desea configurar.
++
+Aparece el menú contextual de la controladora.
+
+. Seleccione *Configurar puertos iSCSI*.
++
+Se abre el cuadro de diálogo Configurar puertos iSCSI.
+
+. En la lista desplegable, seleccione el puerto que desea configurar y, a continuación, haga clic en *Siguiente*.
+. Seleccione los valores del puerto de configuración y, a continuación, haga clic en *Siguiente*.
++
+Para ver todas las configuraciones de puerto, haga clic en el enlace *Mostrar más opciones de puerto* situado a la derecha del cuadro de diálogo.
+
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Velocidad de puerto ethernet configurada
+ a| 
+Seleccione la velocidad deseada. Las opciones que aparecen en la lista desplegable dependen de la velocidad máxima que pueda soportar la red (por ejemplo, 10 Gbps).
+
+
+NOTE: Las tarjetas de interfaz del host iSCSI de 25 GB opcionales disponibles en las controladoras no negocian automáticamente las velocidades. Debe configurar la velocidad de cada puerto en 10 GB o 25 GB. Todos los puertos deben tener la misma velocidad.
+
+
+
+ a| 
+Habilite IPv4/Habilitar IPv6
+ a| 
+Seleccione una o ambas opciones para habilitar la compatibilidad con las redes IPv4 e IPv6.
+
+
+
+ a| 
+Puerto de escucha TCP (disponible haciendo clic en *Mostrar más opciones de puerto*).
+ a| 
+De ser necesario, introduzca un nuevo número de puerto.
+
+El puerto de escucha es el número de puerto TCP que la controladora utiliza para escuchar inicios de sesión iSCSI de iniciadores iSCSI del host. El puerto de escucha predeterminado es 3260. Debe introducir 3260 o un valor entre 49 49152 y 65 65535.
+
+
+
+ a| 
+Tamaño de MTU (disponible haciendo clic en *Mostrar más opciones de puerto*).
+ a| 
+De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU).
+
+El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 9000.
+
+
+
+ a| 
+Habilite las respuestas PING de ICMP PING
+ a| 
+Seleccione esta opción para habilitar el protocolo de mensajes de control de Internet (ICMP). Los sistemas operativos de equipos en red usan ese protocolo para enviar mensajes. Esos mensajes ICMP determinan si es posible acceder a un host y cuánto tiempo debe transcurrir para enviar y recibir los paquetes de ese host.
+
+|===
++
+Si seleccionó *Activar IPv4*, se abre un cuadro de diálogo para seleccionar la configuración IPv4 después de hacer clic en *Siguiente*. Si seleccionó *Activar IPv6*, se abre un cuadro de diálogo para seleccionar la configuración de IPv6 después de hacer clic en *Siguiente*. Si seleccionó ambas opciones, primero se abre el cuadro de diálogo de configuración IPv4 y después de hacer clic en *Siguiente*, se abre el cuadro de diálogo de configuración de IPv6.
+
+. Configure los valores para IPv4 o IPv6 de forma automática o manual. Para ver todas las opciones de configuración de puertos, haga clic en el enlace *Mostrar más valores* situado a la derecha del cuadro de diálogo.
++
+|===
+| Opción de configuración de puertos | Descripción 
+
+
+ a| 
+Obtener configuración automáticamente
+ a| 
+Seleccione esta opción para obtener automáticamente la configuración.
+
+
+
+ a| 
+Especificar manualmente la configuración estática
+ a| 
+Seleccione esta opción e introduzca una dirección estática en los campos. En el caso de IPv4, incluya la máscara de subred y la puerta de enlace. En el caso de IPv6, incluya la dirección IP enrutable y la dirección IP del enrutador.
+
+|===
+. Haga clic en *Finalizar*.
+. Cierre System Manager.
+
+
+
+
+== Paso 4: Configurar las redes en el lado del host--iSCSI
+
+La configuración de redes iSCSI en el lado del host permite que el iniciador de VMware iSCSI establezca una sesión con la cabina.
+
+.Acerca de esta tarea
+En este método exprés para configurar redes iSCSI en el lado del host, se permite que el host ESXi transporte el tráfico iSCSI mediante cuatro rutas redundantes al almacenamiento.
+
+Después de completar esta tarea, el host está configurado con un único vSwitch que contiene ambos puertos de VMkernel y ambas vmnic.
+
+Para obtener más información sobre la configuración de redes iSCSI para VMware, consulte https://docs.vmware.com/en/VMware-vSphere/index.html["Documentación de VMware vSphere"^] Para la versión de vSphere.
+
+.Pasos
+. Configure los switches que se utilizarán para transportar tráfico de almacenamiento iSCSI.
+. Activar el control de flujo de hardware de envío y recepción *fin a fin*.
+. Desactivar el control de flujo de prioridad.
+. Complete la configuración de iSCSI del lado de la cabina.
+. Utilice dos puertos NIC para el tráfico iSCSI.
+. Use el cliente vSphere o el cliente web vSphere para realizar la configuración del lado del host.
++
+Las interfaces varían en funcionalidad y el flujo de trabajo exacto variará.
+
+
+
+
+
+== Paso 5: Verificar las conexiones de red IP--iSCSI, VMware
+
+Para verificar las conexiones de red del Protocolo de Internet (IP), utilice las pruebas ping para asegurarse de que el host y la matriz pueden comunicarse.
+
+.Pasos
+. En el host, ejecute uno de los siguientes comandos, en función de si se habilitan las tramas gigantes:
++
+** Si las tramas gigantes no están habilitadas, ejecute este comando:
++
+[listing]
+----
+vmkping <iSCSI_target_IP_address\>
+----
+** Si se habilitan las tramas gigantes, ejecute el comando ping con un tamaño de carga útil de 8,972 bytes. Los encabezados combinados IP e ICMP son 28 bytes, que cuando se agregan a la carga útil, equivalen a 9,000 bytes. El modificador -s establece el `packet size` bit. El modificador -d establece el bit DF (no fragment) en el paquete IPv4. Estas opciones permiten que se transmitan correctamente las tramas gigantes de 9,000 bytes entre el iniciador iSCSI y el destino.
++
+[listing]
+----
+vmkping -s 8972 -d <iSCSI_target_IP_address\>
+----
++
+En este ejemplo, la dirección IP de destino iSCSI es `192.0.2.8`.
+
++
+[listing]
+----
+vmkping -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Número a `vmkping` Comando desde cada dirección de iniciador de host (la dirección IP del puerto Ethernet de host que se utiliza para iSCSI) a cada puerto iSCSI de la controladora. Ejecute esta acción desde cada servidor host en la configuración, cambiando las direcciones IP según sea necesario.
++
+
+NOTE: Si el comando falla con el mensaje `sendto() failed (Message too long)`, Verifique el tamaño de MTU (compatibilidad con tramas gigantes) para las interfaces Ethernet en el servidor host, la controladora de almacenamiento y los puertos del switch.
+
+. Vuelva al procedimiento de configuración iSCSI para finalizar la detección de destino.
+
+
+
+
+== Paso 6: Registre su configuración
+
+Puede generar e imprimir un PDF de esta página y utilizar la hoja de datos siguiente para registrar la información de configuración de almacenamiento específica del protocolo. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
+
+
+
+=== Configuración recomendada
+
+Las configuraciones recomendadas constan de dos puertos de iniciador y cuatro puertos de destino con una o varias VLAN.
+
+image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+
+
+
+=== IQN objetivo
+
+|===
+| Número de llamada | Conexión de puerto de destino | IQN 
+
+
+ a| 
+2
+ a| 
+Puerto de destino
+ a| 
+
+|===
+
+
+=== Asignando el nombre de host
+
+|===
+| Número de llamada | Información del host | Nombre y tipo 
+
+
+ a| 
+1
+ a| 
+Asignando el nombre de host
+ a| 
+
+
+
+ a| 
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

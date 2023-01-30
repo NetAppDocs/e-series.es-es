@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-enable-security-for-a-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible habilitar Drive Security para un pool o grupo de volúmenes con el fin de evitar el acceso no autorizado a los datos en las unidades contenidas en un pool o un grupo de volúmenes. 
+---
+= Habilite la seguridad para un pool o un grupo de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible habilitar Drive Security para un pool o grupo de volúmenes con el fin de evitar el acceso no autorizado a los datos en las unidades contenidas en un pool o un grupo de volúmenes.
+
+El acceso de lectura y escritura para las unidades solo está disponible a través de una controladora que está configurada con una clave de seguridad.
+
+.Antes de empezar
+* Se debe habilitar la función Drive Security.
+* Debe crearse una clave de seguridad.
+* El pool o el grupo de volúmenes deben estar en el estado óptima.
+* Todas las unidades del pool o grupo de volúmenes deben ser unidades compatibles con la función de seguridad.
+
+
+.Acerca de esta tarea
+Si desea usar Drive Security, seleccione un pool o un grupo de volúmenes compatibles con la función de seguridad. Un pool o un grupo de volúmenes pueden contener tanto una unidad compatible con la función de seguridad como una que no lo sea, pero todas las unidades deben ser compatibles con la función de seguridad para usar la funcionalidad de cifrado.
+
+Después de habilitar la seguridad, solo es posible deshabilitarla si se elimina el pool o el grupo de volúmenes y, a continuación, se borran las unidades.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con el pool o el grupo de volúmenes.
+. Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+. Seleccione el pool o el grupo de volúmenes en donde desea habilitar la seguridad y, a continuación, haga clic en menu:more[Habilitar seguridad].
++
+Se muestra el cuadro de diálogo Confirmar Habilitar seguridad.
+
+. Confirme que desea habilitar la seguridad para el pool o el grupo de volúmenes seleccionados y, a continuación, haga clic en *Activar*.
+

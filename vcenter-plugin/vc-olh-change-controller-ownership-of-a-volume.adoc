@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Cambie la propiedad de la controladora preferida de un volumen, para que las operaciones de I/o de las aplicaciones host se redirijan por la ruta nueva. 
+---
+= Cambiar propiedad de la controladora de un volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible cambiar la propiedad de la controladora preferida de un volumen, para que las operaciones de I/o de las aplicaciones host se redirijan por la ruta nueva.
+
+.Antes de empezar
+Si no se utiliza un controlador multivía, se deben cerrar todas las aplicaciones host que actualmente utilizan el volumen. Esta acción previene errores de las aplicaciones cuando se realizan cambios de ruta de I/O.
+
+.Acerca de esta tarea
+Es posible cambiar la propiedad de la controladora de uno o más volúmenes en un pool o grupo de volúmenes.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene los volúmenes para los que desea cambiar la propiedad de la controladora.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione cualquier volumen y, a continuación, seleccione MENU:more[Cambiar propiedad].
++
+Se muestra el cuadro de diálogo Cambiar propiedad del volumen. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
+
+. Utilice la lista desplegable *propietario preferido* para cambiar el controlador preferido para cada volumen que desee cambiar y confirme que desea realizar la operación.
+
+
+.Resultados
+* El sistema cambia la propiedad de la controladora del volumen. Las operaciones de I/o del volumen ahora se redirigen por esta ruta de I/O.
+* Es posible que el volumen no utilice la ruta de I/o nueva hasta que se vuelva a configurar el controlador multivía para que reconozca la ruta nueva.
+
+
+Por lo general, esta acción tarda menos de cinco minutos.

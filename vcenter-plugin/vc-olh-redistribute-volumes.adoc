@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-redistribute-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Redistribuya volúmenes para moverlos nuevamente a sus propietarios de controladoras preferidos 
+---
+= Redistribuir volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible redistribuir volúmenes para moverlos nuevamente a sus propietarios de controladoras preferidos. Por lo general, los controladores multivía mueven volúmenes de su propietario de controladora preferido cuando se produce un problema en la ruta de datos entre el host y la cabina de almacenamiento.
+
+.Antes de empezar
+* Los volúmenes que desea redistribuir no están en uso o se producirán errores de I/O.
+* Se ha instalado un controlador multivía en todos los hosts que utilizan los volúmenes. De lo contrario, se producirán errores de I/O. Si se desea redistribuir volúmenes sin un controlador multivía en los hosts, es necesario detener toda la actividad de I/o en los volúmenes mientras se realiza la operación de redistribución para evitar errores en las aplicaciones.
+
+
+.Acerca de esta tarea
+La mayoría de los controladores multivía intentan acceder a cada volumen en una ruta a su propietario de controladora preferido. Sin embargo, si esta ruta preferida no está disponible, el controlador multivía en el host conmuta al nodo de respaldo a una ruta alternativa. Esta conmutación al nodo de respaldo puede provocar que la propiedad del volumen cambie a la controladora alternativa. Después de resolver la condición que provocó la conmutación al nodo de respaldo, es posible que algunos hosts muevan automáticamente la propiedad del volumen nuevamente al propietario de la controladora preferido; sin embargo, en algunos casos es posible que deba redistribuir manualmente los volúmenes.
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene los volúmenes que desea redistribuir.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione MENU:More[redistribuir volúmenes].
++
+Se muestra el cuadro de diálogo redistribuir volúmenes. Todos los volúmenes de la cabina de almacenamiento con un propietario de controladora preferido que no coincida con el propietario actual se mostrarán en este cuadro de diálogo.
+
+. Seleccione el o los volúmenes que desea redistribuir y confirme que desea ejecutar la operación.
+
+
+.Resultado
+El sistema moverá los volúmenes seleccionados a sus propietarios de controladora preferidos o se mostrará el cuadro de diálogo no es necesario redistribuir volúmenes.

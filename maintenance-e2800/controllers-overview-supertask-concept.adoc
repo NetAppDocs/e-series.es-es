@@ -1,0 +1,119 @@
+---
+permalink: maintenance-e2800/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 controller replacement requirements, E2800 replace controller, replacing E2800 controller, add E2800 controller, adding E2800 controller, E2800, E2812 controller shelf, E2824 controller shelf, EF280 shelf, E-Series, eseries 
+summary: Revise los requisitos y consideraciones sobre la sustitución de la controladora E2800. 
+---
+= Requisitos para reemplazar una controladora E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir o añadir una controladora E2800, revise los requisitos y consideraciones.
+
+Cada contenedor de controladora contiene una tarjeta de controladora, una batería y una tarjeta de interfaz del host (HIC) opcional. Es posible añadir una segunda controladora a una configuración simple o reemplazar una controladora con errores.
+
+Estos procedimientos se aplican a las bandejas de transmisión IOM12 e IOM12B.
+
+
+NOTE: Los módulos IOM12B sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12B.
+
+
+NOTE: Estos procedimientos se aplican a intercambios o sustituciones de IOM en caliente similares a los de las bandejas. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).
+
+
+
+== Requisitos para agregar una segunda controladora
+
+Es posible añadir un segundo contenedor de controladora a la versión simple de las siguientes bandejas de controladoras:
+
+* Bandeja de controladoras E2812
+* Bandeja de controladoras E2824
+* Cabina flash EF280
+
+
+Las figuras muestran una bandeja de controladoras de ejemplo antes de añadir una segunda controladora (un contenedor de controladora y una controladora vacía) y después de añadir una segunda controladora (dos contenedores de controladora).
+
+image::../media/28_dwg_2800_controller_simplex.gif[controlador 28 dwg 2800 simplex]
+
+image::../media/28_dwg_2800_controller_duplex.gif[dúplex de controlador 28 dwg 2800]
+
+
+NOTE: Las figuras muestran contenedores de controladoras de ejemplo; los puertos de host de los contenedores de las controladoras pueden ser diferentes.
+
+Antes de añadir una segunda controladora, debe tener:
+
+* Un contenedor de controladora nuevo con el mismo número de pieza que el contenedor de controladora instalado actualmente.
+* Una nueva HIC que es idéntica a la HIC en el contenedor de controladora instalado actualmente (solo es necesario si el contenedor de controladora instalado actualmente incluye una tarjeta de interfaz del host).
+* Todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los nuevos puertos de controladora.
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] o la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
+
+* Controlador multivía instalado en el host para poder usar ambas controladoras. Consulte la link:../config-linux/index.html["Configuración exprés de Linux"], link:../config-windows/index.html["Configuración exprés de Windows"], o. link:../config-vmware/index.html["Configuración exprés de VMware"] si desea obtener instrucciones.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un destornillador Phillips número 1.
+* Etiquetas para identificar los cables nuevos.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
+
++
+** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+
+
+
+
+
+
+== Requisitos para sustituir controladora
+
+Cuando reemplaza un compartimento de controladoras con errores, debe quitar la batería y la HIC, si hay alguna instalada, del compartimento de controladoras original y instalarlas en el compartimento de controladoras de reemplazo.
+
+Puede determinar si tiene un contenedor de controladora con errores de dos maneras:
+
+* Recovery Guru en System Manager de SANtricity le dirige reemplazar el compartimento de controladoras.
+* El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
+
+
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+
+*(1)* _LED de atención_
+
+
+NOTE: En la figura, se muestra un contenedor de controladora de ejemplo; los puertos de host en el contenedor de controladora pueden ser diferentes.
+
+Antes de sustituir una controladora, debe tener:
+
+* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
+
++
+** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+
+
+
+
+
+
+=== Requisitos de configuración doble
+
+Si la bandeja de controladoras tiene dos controladoras (configuración doble), es posible reemplazar un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, siempre que se cumplan las siguientes condiciones:
+
+* El segundo compartimento de controladoras de la bandeja tiene el estado óptimo.
+* El campo *Aceptar para eliminar* del área Detalles de Recovery Guru en el Administrador del sistema de SANtricity muestra *Sí*, lo que indica que es seguro quitar este componente.
+
+
+
+
+=== Requisitos de configuración simple
+
+Si solo tiene un contenedor de controladora (configuración simple), no se podrá acceder a los datos en la cabina de almacenamiento hasta que se sustituya el contenedor de controladora. Debe detener las operaciones de I/o del host y apagar la cabina de almacenamiento.

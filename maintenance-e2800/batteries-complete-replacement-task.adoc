@@ -1,0 +1,159 @@
+---
+permalink: maintenance-e2800/batteries-complete-replacement-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Realice una sustitución de la batería. 
+---
+= Completar el reemplazo de la batería E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los pasos para completar el reemplazo de la batería dependen de si tiene una configuración doble (dos controladoras) o una configuración simple (una controladora).
+
+* Para configuraciones dobles, consulte <<Colocar una controladora en línea (doble)>>.
+* Para configuraciones simples, consulte <<Controladora alimentación (simple)>>.
+
+
+
+
+== Colocar una controladora en línea (doble)
+
+Coloque la controladora en línea para confirmar que la cabina de almacenamiento funciona correctamente. A continuación, se pueden recoger datos de soporte y reanudar las operaciones.
+
+
+NOTE: Realice esta tarea solo si la cabina de almacenamiento tiene dos controladoras.
+
+.Pasos
+. Cuando se arranque la controladora, compruebe los LED de la controladora y la pantalla de siete segmentos.
++
+
+NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
+
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *OL*, *_blank_* para indicar que el controlador está sin conexión.
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _LED de atención (ámbar)_
+
++
+*(2)* _pantalla de siete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Utilice System Manager de SANtricity para conectar la controladora.
++
+** Desde SANtricity System Manager:
++
+... Seleccione *hardware*.
+... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja*.
+... Seleccione la controladora que desea colocar en línea.
+... Seleccione *colocar en línea* en el menú contextual y confirme que desea realizar la operación.
++
+El sistema coloca la controladora en línea.
+
+
+
+** Como alternativa, puede volver a conectar la controladora usando los siguientes comandos de la CLI:
++
+*Para el controlador A:* `set controller [a] availability=online;`
+
++
+*Para el controlador B:* `set controller [b] availability=online;`
+
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están conectados correctamente y compruebe que la batería y el compartimento de controladoras estén instalados correctamente. Si es necesario, retire y vuelva a instalar el compartimento de la controladora y la batería.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Si es necesario, recoja datos de soporte para la cabina de almacenamiento mediante System Manager de SANtricity.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se ha completado el reemplazo de la batería. Es posible reanudar las operaciones normales.
+
+
+
+== Controladora alimentación (simple)
+
+Encienda la bandeja de controladoras para confirmar que funciona correctamente. A continuación, se pueden recoger datos de soporte y reanudar las operaciones.
+
+
+NOTE: Realice esta tarea solo si la cabina de almacenamiento tiene una controladora.
+
+.Pasos
+. Encienda los dos switches de alimentación que se encuentran en la parte posterior de la bandeja de controladoras.
++
+** No apague los interruptores de alimentación durante el proceso de encendido, que normalmente tarda 90 segundos o menos en completarse.
+** Los ventiladores de cada bandeja son muy altos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Cuando se arranca la controladora, compruebe los LED de la controladora y la pantalla de siete segmentos.
++
+** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *SD*, *_blank_* para indicar que el controlador está realizando el procesamiento de comienzo del día (SOD). Una vez que se inició correctamente una controladora, su pantalla de siete segmentos debe mostrar el ID de soporte.
+** El LED de atención ámbar del controlador se enciende y se apaga, a menos que se produzca un error.
+** Se encienden los indicadores LED verdes de Host Link.
++
+
+NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maint e2800]
+
++
+*(1)* _LED de atención (ámbar)_
+
++
+*(2)* _pantalla de siete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Confirmar que el estado de la controladora es óptimo y comprobar los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están conectados correctamente y compruebe que la batería y el compartimento de controladoras estén instalados correctamente. Si es necesario, retire y vuelva a instalar el compartimento de la controladora y la batería.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Si es necesario, recoja datos de soporte para la cabina de almacenamiento mediante System Manager de SANtricity.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se ha completado el reemplazo de la batería. Es posible reanudar las operaciones normales.

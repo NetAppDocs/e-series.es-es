@@ -1,0 +1,147 @@
+---
+permalink: web-services-proxy/install-wsp-task.html 
+sidebar: sidebar 
+keywords: installation, download, install proxy, 
+summary: La instalación implica descargar el archivo y, a continuación, instalar el paquete proxy en un servidor Linux o Windows. 
+---
+= Instale o actualice el archivo proxy de servicios web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La instalación implica descargar el archivo y, a continuación, instalar el paquete proxy en un servidor Linux o Windows. También puede actualizar el proxy utilizando estas instrucciones.
+
+
+
+== Descargue los archivos del proxy de servicios web
+
+Podrás descargar el archivo de instalación y el archivo Léame de la página de descarga de software del sitio de soporte de NetApp.
+
+El paquete de descarga incluye el proxy de servicios web y la interfaz de Unified Manager.
+
+.Pasos
+. Vaya a. https://mysupport.netapp.com/site/downloads["Soporte de NetApp: Descargas"^].
+. Seleccione *E-Series SANtricity Web Services Proxy*.
+. Siga las instrucciones para descargar el archivo. Asegúrese de seleccionar el paquete de descarga correcto para su servidor (por ejemplo, EXE para Windows; BIN o RPM para Linux).
+. Descargue el archivo de instalación en el servidor donde desea instalar el proxy y Unified Manager.
+
+
+
+
+== Instale en servidores Windows o Linux
+
+Puede instalar Web Services Proxy y Unified Manager mediante uno de tres modos (gráfica, consola o silenciosa) o utilizando un archivo RPM (sólo Linux).
+
+.Antes de empezar
+* link:install-reqs-task.html["Revise los requisitos de la instalación"].
+* Asegúrese de haber descargado el archivo de instalación correcto (EXE para Windows; BIN para Linux) en el servidor en el que desea instalar el proxy y Unified Manager.
+
+
+
+
+=== Instalación en modo gráfico
+
+Puede ejecutar la instalación en modo gráfico para Windows o Linux. En el modo gráfico, las instrucciones aparecen en una interfaz de estilo Windows.
+
+.Pasos
+. Acceda a la carpeta en la que descargó el archivo de instalación.
+. Inicie la instalación de Windows o Linux de la siguiente manera:
++
+** Windows -- haga doble clic en el archivo de instalación:
++
+`santricity_webservices-windows_x64-nn.nn.nn.nnnn.exe`
+
+** Linux -- ejecute el siguiente comando:
+`santricity_webservices-linux_x64-nn.nn.nn.nnnn.bin`
++
+En los nombres de archivo anteriores, `nn.nn.nn.nnnn` representa el número de versión.
+
+
+
++
+Se inicia el proceso de instalación y se muestra la pantalla de bienvenida de NetApp SANtricity Web Services Proxy + Unified Manager.
+
+. Siga las instrucciones que aparecen en pantalla.
++
+Durante la instalación, se le pedirá que habilite varias funciones e introduzca algunos parámetros de configuración. Si es necesario, puede cambiar cualquiera de estas selecciones posteriormente en los archivos de configuración.
+
++
+
+NOTE: Durante una actualización, no se le solicitan los parámetros de configuración.
+
+. Cuando aparezca el mensaje servidor web iniciado, haga clic en *Aceptar* para completar la instalación.
++
+Aparece el cuadro de diálogo instalar completo.
+
+. Haga clic en las casillas de verificación si desea iniciar Unified Manager o la documentación de API interactiva y, a continuación, haga clic en *hecho*.
+
+
+
+
+=== Instale en modo de consola
+
+Puede ejecutar la instalación en modo de consola para Windows o Linux. En el modo Consola, las indicaciones aparecen en la ventana de terminal.
+
+.Pasos
+. Ejecute el siguiente comando: `<install filename> -i console`
++
+En el comando anterior, `<install filename>` representa el nombre del archivo de instalación del proxy que ha descargado (por ejemplo: `santricity_webservices-windows_x64-nn.nn.nn.nnnn.exe`).
+
++
+
+NOTE: Para cancelar la instalación en cualquier momento durante el proceso de instalación, escriba `QUIT` en el símbolo del sistema.
+
++
+Se inicia el proceso de instalación y aparece el mensaje iniciando el instalador -- Introducción .
+
+. Siga las instrucciones que aparecen en pantalla.
++
+Durante la instalación, se le pedirá que habilite varias funciones e introduzca algunos parámetros de configuración. Si es necesario, puede cambiar cualquiera de estas selecciones posteriormente en los archivos de configuración.
+
++
+
+NOTE: Durante una actualización, no se le solicitan los parámetros de configuración.
+
+. Una vez finalizada la instalación, pulse *Intro* para salir del instalador.
+
+
+
+
+=== Instalación en modo silencioso
+
+Puede ejecutar la instalación en modo silencioso para Windows o Linux. En el modo silencioso, no aparecen mensajes de retorno ni secuencias de comandos en la ventana de terminal.
+
+.Pasos
+. Ejecute el siguiente comando: `<install filename> -i silent`
++
+En el comando anterior, `<install filename>` representa el nombre del archivo de instalación del proxy que ha descargado (por ejemplo: `santricity_webservices-windows_x64-nn.nn.nn.nnnn.exe`).
+
+. Pulse *Intro*.
++
+El proceso de instalación puede tardar varios minutos en completarse. Después de una instalación correcta, aparece un símbolo del sistema en la ventana de terminal.
+
+
+
+
+
+=== RPM Command install (instalación DE comando RPM) (sólo Linux)
+
+En el caso de los sistemas Linux que son compatibles con el sistema de gestión de paquetes RPM, puede instalar el proxy de servicios web mediante un archivo RPM opcional.
+
+.Pasos
+. Descargue el archivo RPM en el servidor en el que desea instalar el proxy y Unified Manager.
+. Abra una ventana de terminal.
+. Introduzca el siguiente comando:
++
+`rpm -u santricity_webservices-nn.nn.nn.nnnn-n.x86_64.rpm`
+
++
+
+NOTE: En el comando anterior, `nn.nn.nn.nnnn` representa el número de versión.
+
++
+El proceso de instalación puede tardar varios minutos en completarse. Después de una instalación correcta, aparece un símbolo del sistema en la ventana de terminal.
+
+

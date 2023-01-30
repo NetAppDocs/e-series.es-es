@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-data-assurance.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La garantía de datos (DA) implementa el estándar de información de protección (PI) T10, con el cual se comprueban y corrigen los errores que se pueden producir durante la transferencia de datos a través de la ruta de I/o con el fin de aumentar la integridad de los datos.' 
+---
+= ¿Qué es la garantía de datos?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La garantía de datos (DA) implementa el estándar de información de protección (PI) T10, con el cual se comprueban y corrigen los errores que se pueden producir durante la transferencia de datos a través de la ruta de I/o con el fin de aumentar la integridad de los datos.
+
+El uso típico de la función Garantía de datos es revisar la porción de la ruta de I/o entre las controladoras y las unidades. Las funcionalidades DE DA se presentan a nivel del pool y grupo de volúmenes.
+
+Si esta función está habilitada, la cabina de almacenamiento añade códigos de comprobación de errores (también conocidos como comprobaciones de redundancia cíclicas o CRC) a cada bloque de datos del volumen. Una vez movido un bloque de datos, la cabina de almacenamiento utiliza estos códigos de CRC para determinar si se produjeron errores durante la transmisión. Los datos posiblemente dañados no se escriben en el disco ni se vuelven a transferir al host. Si desea utilizar la función DA, seleccione un pool o grupo de volúmenes compatible con DA al crear un volumen nuevo (busque *Sí* junto a *DA* en la tabla de candidatos de pools y grupos de volúmenes).
+
+Asegúrese de asignar estos volúmenes con la función DA habilitada a un host que utilice una interfaz de I/o compatible con DA. Las interfaces de I/o compatibles con DA son Fibre Channel, SAS, iSCSI over TCP/IP, NVMe/FC, NVMe/IB, NVME/roce e Iser over InfiniBand (extensiones iSCSI para RDMA/IB). SRP over InfiniBand no es compatible con DA.

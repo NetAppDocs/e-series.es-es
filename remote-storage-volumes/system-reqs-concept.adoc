@@ -1,0 +1,118 @@
+---
+permalink: remote-storage-volumes/system-reqs-concept.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes requirements, RTV requirements, RTV restrictions, remote volumes, remote storage E-Series 
+summary: El sistema debe cumplir con los requisitos de compatibilidad para volúmenes de almacenamiento remoto. 
+---
+= Requisitos y restricciones para el almacenamiento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de configurar la función volúmenes de almacenamiento remoto, revise los siguientes requisitos y restricciones.
+
+
+
+== Requisitos de hardware
+
+
+
+=== Protocolos compatibles
+
+En el lanzamiento inicial de la función volúmenes de almacenamiento remoto, la compatibilidad solo está disponible para los protocolos iSCSI y IPv4.
+
+Consulte la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] Para obtener información actualizada sobre soporte y configuración entre el host y la cabina E-Series (destino) utilizada para la función volúmenes de almacenamiento remoto.
+
+
+
+=== Requisitos del sistema de almacenamiento
+
+El sistema de almacenamiento E-Series debe incluir:
+
+* Dos controladoras (modo doble)
+* Conexiones iSCSI para las dos controladoras E-Series para comunicarse con el sistema de almacenamiento remoto a través de una o varias conexiones iSCSI
+* SANtricity OS 11.71 o superior
+* Función de almacenamiento remoto habilitada en el ID de submodelo (SMID)
+
+
+El sistema remoto puede ser un sistema de almacenamiento E-Series o un sistema de otro proveedor. Debe incluir interfaces compatibles con iSCSI.
+
+
+
+== Requisitos del volumen
+
+Los volúmenes utilizados para las importaciones deben cumplir los requisitos de tamaño, estado y otros criterios.
+
+
+
+=== Volumen de almacenamiento remoto
+
+El volumen de origen de una importación se denomina "volumen de almacenamiento remoto". Este volumen debe cumplir con los siguientes criterios:
+
+* No puede ser parte de otra importación
+* Debe tener el estado en línea
+
+
+Después de comenzar la importación, el firmware de la controladora crea un volumen de almacenamiento remoto en segundo plano. Debido a ese proceso en segundo plano, el volumen de almacenamiento remoto no puede gestionarse en System Manager y solo se puede utilizar para la operación de importación.
+
+Después de crearse, el volumen de almacenamiento remoto se trata como cualquier otro volumen estándar en el sistema E-Series, con las siguientes excepciones:
+
+* Se pueden utilizar como proxies para el dispositivo de almacenamiento remoto.
+* No se pueden usar como candidatos para otras copias de volumen o copias de Snapshot.
+* No se puede cambiar la configuración de Garantía de datos mientras la importación está en curso.
+* No puede asignarse a ningún host, ya que están reservados estrictamente para la operación de importación.
+
+
+Cada volumen de almacenamiento remoto se asocia con un solo objeto de almacenamiento remoto; sin embargo, un objeto de almacenamiento remoto se puede asociar con varios volúmenes de almacenamiento remotos. El volumen de almacenamiento remoto se identifica de forma única mediante una combinación de lo siguiente:
+
+* Identificador de objeto de almacenamiento remoto
+* Número LUN del dispositivo de almacenamiento remoto
+
+
+
+
+=== Candidatos de volumen objetivo
+
+El volumen de destino es el volumen de destino en el sistema E-Series local.
+
+El volumen de destino debe cumplir con los siguientes criterios:
+
+* Debe ser un volumen RAID/DDP.
+* Debe tener una capacidad igual o mayor que el volumen de almacenamiento remoto.
+* Debe tener un tamaño de bloque que sea igual al volumen de almacenamiento remoto.
+* Debe tener un estado válido (óptimo).
+* No puede tener ninguna de las siguientes relaciones: Copia de volumen, copias Snapshot, mirroring asíncrono o síncrono.
+* No se pueden realizar operaciones de reconfiguración: Expansión de volumen dinámica, expansión de capacidad dinámica, tamaño de segmentos dinámico, migración RAID dinámica, reducción de capacidad dinámica, O desfragmentación.
+* No se puede asignar a un host antes de que se inicie la importación (sin embargo, puede asignarse una vez que se inicia la importación).
+* No se puede activar la función de lectura en caché (FRC) de Flash.
+
+
+System Manager comprueba automáticamente estos requisitos como parte del asistente Import Remote Storage. Para la selección del volumen de destino, solo se muestran los volúmenes que cumplen todos los requisitos.
+
+
+
+== Restricciones
+
+La función de almacenamiento remoto tiene las siguientes restricciones:
+
+* Debe deshabilitarse la función de mirroring.
+* El volumen de destino del sistema E-Series no debe tener snapshots.
+* El volumen de destino del sistema E-Series no debe asignarse a ningún host antes de que se inicie la importación.
+* El volumen de destino del sistema E-Series debe tener deshabilitado el aprovisionamiento de recursos.
+* No se admiten asignaciones directas del volumen de almacenamiento remoto a un host o varios hosts.
+* No se admite el proxy de servicios web.
+* No se admiten los secretos CHAP de iSCSI.
+* SMcli no es compatible.
+* No se admite el almacén de datos de VMware.
+* Solo se puede actualizar un sistema de almacenamiento de la pareja de relación/importación a la vez cuando existe una pareja de importación.
+
+
+
+
+== Preparación para las importaciones de producción
+
+Debe realizar una prueba o una importación de "ejecución en seco" antes de importar la producción para verificar la configuración correcta del almacenamiento y del tejido.
+
+Muchas variables pueden afectar a la operación de importación y al tiempo de finalización. Para garantizar que una importación de producción tenga éxito y obtener una estimación de la duración, puede utilizar estas importaciones de prueba para asegurarse de que todas las conexiones están funcionando como se espera y la operación de importación se está completando en un período de tiempo adecuado. A continuación, puede realizar ajustes para lograr los resultados deseados antes de iniciar la importación de producción.

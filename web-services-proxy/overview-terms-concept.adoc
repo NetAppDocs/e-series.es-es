@@ -1,0 +1,88 @@
+---
+permalink: web-services-proxy/overview-terms-concept.html 
+sidebar: sidebar 
+keywords: Web Services terms, WSP concepts 
+summary: Obtenga más información acerca de Web Services API 
+---
+= Términos y conceptos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los siguientes términos se utilizan en el proxy de servicios web.
+
+|===
+| Duración | Definición 
+
+
+ a| 
+API
+ a| 
+Una interfaz de programación de aplicaciones (API) es un conjunto de protocolos y métodos que permiten a los desarrolladores comunicarse con los dispositivos. La API de servicios web se utiliza para comunicarse con los sistemas de almacenamiento E-Series.
+
+
+
+ a| 
+ASUP
+ a| 
+La función AutoSupport (ASUP) recoge datos en un bundle de soporte al cliente y envía automáticamente el archivo de mensaje al soporte técnico para la solución de problemas remota y el análisis de problemas.
+
+
+
+ a| 
+Extremo
+ a| 
+Los extremos son funciones que están disponibles en la API. Un extremo incluye un verbo HTTP, más la ruta de URI. En Web Services, los extremos pueden ejecutar tareas como detectar sistemas de almacenamiento y crear volúmenes.
+
+
+
+ a| 
+HTTP Verbo
+ a| 
+Un verbo HTTP es una acción correspondiente para un punto final, como la recuperación y la creación de datos. En Servicios Web, los verbos HTTP incluyen POST, GET y DELETE.
+
+
+
+ a| 
+JSON
+ a| 
+La notación de objetos JavaScript (JSON) es un formato de datos estructurado muy similar a XML, que utiliza un formato mínimo de lectura. Los datos en los servicios web están codificados a través de JSON.
+
+
+
+ a| 
+REST/RESTful
+ a| 
+La transferencia de estado representacional (REST) es una especificación suelta que define un estilo arquitectónico para una API. Dado que la mayoría de las API DE DESCANSO no cumplen plenamente la especificación, se las describe como «MUY COMPLETAS» o «similar AL TÉRMINO». En general, una API "MUY COMPLETA" es independiente de los lenguajes de programación y tiene las siguientes características:
+
+* Basado en HTTP, que sigue la semántica general del protocolo
+* Productor y consumidor de datos estructurados (JSON, XML, etc.)
+* Orientado a objetos (a diferencia de orientado a la operación)
+
+
+Servicios web es una API RESTful que proporciona acceso a prácticamente todas las funcionalidades de gestión de SANtricity.
+
+
+
+ a| 
+sistema de almacenamiento
+ a| 
+Un sistema de almacenamiento es una cabina E-Series que incluye bandejas, controladoras, unidades, software y firmware.
+
+
+
+ a| 
+API Symbol
+ a| 
+Symbol es una API heredada para gestionar los sistemas de almacenamiento E-Series. La implementación subyacente de la API de servicios web utiliza Symbol.
+
+
+
+ a| 
+Servicios Web
+ a| 
+Web Services es una API que NetApp ha sido diseñada para que los desarrolladores gestionen los sistemas de almacenamiento E-Series. Existen dos implementaciones de Web Services: Integradas en el controlador y un proxy independiente que se puede instalar en Linux o Windows.
+
+|===

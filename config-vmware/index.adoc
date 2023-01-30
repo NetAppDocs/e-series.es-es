@@ -1,0 +1,45 @@
+---
+permalink: config-vmware/index.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilice la configuración exprés para un host VMware con un sistema E-Series. 
+---
+= Información general sobre la configuración exprés de VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El método exprés de VMware para instalar la cabina de almacenamiento y acceder a System Manager de SANtricity es adecuado para configurar un host de VMware independiente en un sistema de almacenamiento E-Series. Está diseñado para poner en funcionamiento el sistema de almacenamiento con la mayor rapidez posible y sin apenas tomar decisiones.
+
+
+
+== Descripción general del procedimiento
+
+El método Express incluye los siguientes pasos, que también se describen en el link:understand-vmware-workflow-concept.html["Flujo de trabajo de VMware"].
+
+. Configure uno de los siguientes entornos de comunicación:
++
+** link:nmve-fc-perform-specific-task.html["NVMe over Fibre Channel"]
+** link:fc-perform-specific-task.html["Fibre Channel"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Crear volúmenes lógicos en la cabina de almacenamiento.
+. Hacer que los volúmenes estén disponibles para el host de datos.
+
+
+
+
+== Obtenga más información
+
+* Ayuda en línea: Describe cómo usar System Manager de SANtricity para completar tareas de configuración y gestión del almacenamiento. Está disponible en el producto.
+* https://kb.netapp.com/["Base de conocimientos de NetApp"^] (Una base de datos de artículos) -- ofrece información sobre solución de problemas, preguntas más frecuentes e instrucciones para una amplia gama de productos y tecnologías de NetApp.
+* http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] -- le permite buscar configuraciones de productos y componentes de NetApp que cumplan con los estándares y requisitos especificados por NetApp.
+* https://www.netapp.com/us/media/tr-4789.pdf["Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.X."^] -- proporciona detalles técnicos sobre la integración de iSCSI con VMware.
+* https://configmax.vmware.com/home["Máximos de configuración de VMware"^] -- describe cómo configurar el almacenamiento virtual y físico para permanecer dentro de los máximos permitidos que ESX/ESXi admite.
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-9AEE5F4D-0CB8-4355-BF89-BB61C5F30C70.html["Requisitos y limitaciones del almacenamiento NVMe de VMware"^].
+* https://docs.vmware.com/en/VMware-vSphere/index.html["Documentación de VMware vSphere"^] -- proporciona documentación de ESXi vCenter Server.
+

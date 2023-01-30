@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-settings-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La función Importar configuración es una operación en lote que permite replicar la configuración en una sola cabina de almacenamiento (el origen) en varias cabinas (los objetivos).' 
+---
+= Información general sobre la configuración de importación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La función Importar configuración es una operación en lote que permite replicar la configuración en una sola cabina de almacenamiento (el origen) en varias cabinas (los destinos) del complemento de almacenamiento para vCenter.
+
+
+
+== Configuración disponible para la importación
+
+Las siguientes configuraciones pueden importarse de una cabina a otra:
+
+* *Alertas* -- métodos de alerta para enviar eventos importantes a los administradores mediante correo electrónico, un servidor syslog o un servidor SNMP.
+* *AutoSupport*: Función que supervisa el estado de una matriz de almacenamiento y envía mensajes automáticos al soporte técnico.
+* *Servicios de directorio* -- método de autenticación de usuario que se administra a través de un servidor LDAP (protocolo ligero de acceso a directorios) y un servicio de directorio, como Active Directory de Microsoft.
+* *Ajustes del sistema* -- configuraciones relacionadas con lo siguiente:
++
+** Configuración de escaneo de medios para un volumen
+** Configuración de SSD
+** Equilibrio de carga automático (no incluye la generación de informes de conectividad de host)
+
+
+* *Configuración de almacenamiento* -- configuraciones relacionadas con lo siguiente:
++
+** Volúmenes (solo volúmenes gruesos y que no pertenecen al repositorio)
+** Grupos de volúmenes y pools
+** Asignaciones de unidad de repuesto
+
+
+
+
+
+
+== Flujo de trabajo de configuración
+
+Para importar la configuración, siga este flujo de trabajo:
+
+. En una cabina de almacenamiento que se usará como origen, configure los ajustes mediante System Manager.
+. En las cabinas de almacenamiento que se usarán como objetivo, realice una copia de seguridad de la configuración mediante System Manager.
+. Desde la interfaz del plugin, vaya a la página *Administrar* e importe la configuración.
+. En la página Operaciones, revise los resultados de la operación Importar configuración.
+
+
+
+
+== Requisitos para replicar configuraciones de almacenamiento
+
+Antes de importar una configuración de almacenamiento desde una cabina de almacenamiento a otra, revise los requisitos y las directrices.
+
+
+
+=== Bandejas
+
+* Las bandejas donde residen las controladoras deben ser idénticas en las cabinas de origen y objetivo.
+* Los ID de bandeja deben ser idénticos en las cabinas de origen y objetivo.
+* Las bandejas de expansión deben llenarse en las mismas ranuras con los mismos tipos de unidad (si la unidad se usó en la configuración, la ubicación de las unidades sin usar no importa).
+
+
+
+
+=== Controladoras
+
+* El tipo de controladora puede ser diferente para las cabinas de origen y objetivo, pero el tipo de compartimento RBOD debe ser idéntico.
+* Las HIC, incluidas las capacidades DE GARANTÍA de DATOS del host, deben ser idénticas para las cabinas de origen y objetivo.
+* No se admite la importación de una configuración doble a una simple; sí se admite la configuración simple a doble.
+* La configuración de unidades FDE no está incluida en el proceso de importación.
+
+
+
+
+=== Estado
+
+* Las cabinas objetivo deben tener el estado óptimo.
+* La cabina de origen no necesita tener el estado óptimo.
+
+
+
+
+=== Reducida
+
+* La capacidad de una unidad puede variar entre las cabinas de origen y las objetivo, siempre y cuando la capacidad de volumen en la cabina objetivo sea mayor que en la de origen. (Una cabina objetivo puede tener unidades más nuevas y con mayor capacidad que la operación de replicación quizás no configure por completo en volúmenes).
+* Un volumen de pool de discos de 64 TB o mayor en la cabina de origen impide el proceso de importación en las cabinas objetivo.
+

@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-status.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Consulte el estado del sistema desde el complemento de almacenamiento para vCenter o desde vSphere Client 
+---
+= Ver estado
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede ver el estado del sistema desde el complemento de almacenamiento para vCenter o desde vSphere Client.
+
+. Abra el plugin desde vSphere Client.
+. Vea el estado de los siguientes paneles:
++
+** *Estado de la matriz de almacenamiento* -- vaya al panel *gestionar todo*. Para cada cabina detectada, la fila proporciona una columna Estado.
+** *Operaciones en curso* -- haga clic en *Operaciones* en el panel lateral para ver todas las tareas de larga ejecución, como importar configuraciones. También se pueden ver las operaciones de ejecución prolongada en la lista desplegable de aprovisionamiento. Para cada operación enumerada en el cuadro de diálogo Operations, se muestran un porcentaje de finalización y el tiempo restante estimado para completar la operación. En algunos casos, es posible detener una operación o colocarla en una prioridad superior o inferior. Si lo desea, use los enlaces de la columna acciones para detener o cambiar la prioridad de una operación.
+
+
+
+
+
+CAUTION: Lea todo el texto de advertencia proporcionado en los cuadros de diálogo, en particular cuando detiene una operación.
+
+Las operaciones que podrían aparecer para el plugin se enumeran en la siguiente tabla. También es posible que se muestren operaciones adicionales en la interfaz de System Manager.
+
+|===
+| Funcionamiento | Posible estado de la operación | Acciones que se pueden realizar 
+
+
+| Volume create (solo volúmenes de pool estáticos de más de 64 TIB) | En curso | ninguno 
+
+
+| Volume delete (solo volúmenes de pool estáticos de más de 64 TIB) | En curso | ninguno 
+
+
+| Añadir capacidad a un pool o grupo de volúmenes | En curso | ninguno 
+
+
+| Cambiar el nivel de RAID de un volumen | En curso | ninguno 
+
+
+| Reducir la capacidad de un pool | En curso | ninguno 
+
+
+| Comprobar el tiempo restante en una operación de formato de disponibilidad instantánea (IAF) para los volúmenes del pool | En curso | ninguno 
+
+
+| Comprobar la redundancia de datos de un grupo de volúmenes | En curso | ninguno 
+
+
+| Inicializar un volumen | En curso | ninguno 
+
+
+| Aumente la capacidad de un volumen | En curso | ninguno 
+
+
+| Cambiar el tamaño de los segmentos de un volumen | En curso | ninguno 
+|===

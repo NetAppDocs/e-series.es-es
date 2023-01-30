@@ -1,0 +1,108 @@
+---
+permalink: config-vmware/overview-concept.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Revise los requisitos para usar el método exprés para configurar una cabina E-Series y un host de VMware. 
+---
+= Supuestos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El método exprés de VMware se basa en las siguientes suposiciones:
+
+|===
+| Componente | Supuestos 
+
+
+ a| 
+Hardware subyacente
+ a| 
+* Utilizó las instrucciones de instalación y configuración incluidas con las bandejas de controladoras para instalar el hardware.
+* Hay cables conectados entre las bandejas de unidades opcionales y las controladoras.
+* Ha aplicado alimentación al sistema de almacenamiento.
+* Ha instalado el resto del hardware (por ejemplo, estación de administración, switches) y ha realizado las conexiones necesarias.
+
+
+
+
+ a| 
+Host
+ a| 
+* Realizó una conexión entre el sistema de almacenamiento y el host de datos.
+* Instaló el sistema operativo host.
+* No utiliza VMware como invitado virtualizado.
+* No está configurando el host de datos (con I/o) para que arranque desde SAN.
+
+
+
+
+ a| 
+Estación de gestión de almacenamiento
+ a| 
+* Está utilizando una red de gestión de 1 Gbps o más rápida.
+* Utiliza una estación independiente para la gestión en lugar del host de datos (con I/o).
+* Se utiliza la gestión fuera de banda, en la cual una estación de administración del almacenamiento envía comandos al sistema de almacenamiento a través de las conexiones Ethernet a la controladora.
+* Adjuntó la estación de gestión a la misma subred que los puertos de administración del almacenamiento.
+
+
+
+
+ a| 
+Direccionamiento IP
+ a| 
+* Instaló y configuró un servidor DHCP.
+* * Aún no* ha realizado una conexión Ethernet entre la estación de administración y el sistema de almacenamiento.
+
+
+
+
+ a| 
+Aprovisionamiento de almacenamiento
+ a| 
+* No se utilizarán volúmenes compartidos.
+* Se crearán pools en lugar de grupos de volúmenes.
+
+
+
+
+ a| 
+Protocolo: FC
+ a| 
+* Ha activado todas las conexiones FC del lado del host y la división en zonas de switches.
+* Utiliza switches y HBA de FC compatibles con NetApp.
+* Utiliza versiones de firmware y controlador FC HBA tal como se indica en la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+
+ a| 
+Protocolo: NVMe over Fibre Channel
+ a| 
+* Ha activado todas las conexiones FC del lado del host y la división en zonas de switches.
+* Utiliza switches y HBA de FC compatibles con NetApp.
+* Utiliza versiones de firmware y controlador FC HBA tal como se indica en la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+
+ a| 
+Protocolo: ISCSI
+ a| 
+* Tiene switches Ethernet capaces de transportar tráfico iSCSI.
+* Configuró los switches Ethernet de acuerdo con las recomendaciones del proveedor para iSCSI.
+
+
+
+
+ a| 
+Protocolo: SAS
+ a| 
+* Utiliza HBA SAS compatibles con NetApp.
+* Utiliza versiones de controlador y firmware SAS HBA tal como se indica en la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+|===
+Si estas suposiciones no son correctas para la instalación o si desea obtener información de fondo conceptual, consulte el siguiente informe técnico: https://www.netapp.com/us/media/tr-4789.pdf["Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.X."^]

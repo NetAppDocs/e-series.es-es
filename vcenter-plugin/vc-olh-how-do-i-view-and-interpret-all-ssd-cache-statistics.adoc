@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-view-and-interpret-all-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible visualizar estadísticas nominales y detalladas para la caché SSD. 
+---
+= ¿Cómo se visualizan y se interpretan todas las estadísticas de caché SSD?
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible visualizar estadísticas nominales y detalladas para la caché SSD.
+
+Las estadísticas nominales son un subconjunto de las estadísticas detalladas. Las estadísticas detalladas se pueden visualizar solo cuando se exportan todas las estadísticas de SSD a un archivo .csv. Al revisar e interpretar las estadísticas, tenga en cuenta que algunas interpretaciones provienen del análisis de una combinación de estadísticas.
+
+
+
+=== Estadísticas nominales
+
+Para ver las estadísticas de la caché SSD, vaya a la página *Administrar*. Seleccione MENU:Provisioning[Configure Pools & Volume Groups]. Seleccione la caché SSD sobre la cual desea ver estadísticas y, a continuación, seleccione MENU:más[Ver estadísticas]. Las estadísticas nominales se muestran en el cuadro de diálogo Ver estadísticas de la caché SSD.
+
+
+NOTE: Esta función no está disponible en los sistemas de almacenamiento EF600 o EF300.
+
+En la lista, se incluyen estadísticas nominales, que son un subconjunto de las estadísticas detalladas.
+
+
+
+=== Estadística detallada
+
+Las estadísticas detalladas consisten en las estadísticas normales más las estadísticas adicionales. Estas estadísticas adicionales se guardan junto con las estadísticas nominales; pero, a diferencia de las estadísticas nominales, no se muestran en el cuadro de diálogo Ver estadísticas de la caché SSD. Es posible ver las estadísticas detalladas solo después de exportar las estadísticas a un archivo .csv.
+
+Las estadísticas detalladas se enumeran después de las estadísticas nominales.

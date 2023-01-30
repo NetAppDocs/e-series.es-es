@@ -1,0 +1,21 @@
+---
+permalink: config-linux/sas-setup-multipath-conf-file-concept.html 
+sidebar: sidebar 
+keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilice el archivo multipath.conf, que es el archivo de configuración del daemon multipath, multipathd. 
+---
+= Configure el archivo multipath.conf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El archivo multipath.conf es el archivo de configuración del daemon multipath, multipathd.
+
+El archivo multipath.conf anula la tabla de configuración integrada para multipathd.
+
+
+NOTE: En el caso del sistema operativo SANtricity 8.30 y versiones posteriores, NetApp recomienda usar la configuración predeterminada, según se proporcionó.
+
+No se requieren cambios en /etc/multipath.conf.

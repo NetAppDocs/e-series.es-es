@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Cuando dos o más hosts requieren acceso de I/o a los mismos volúmenes, es posible crear un clúster de hosts. 
+---
+= Cree un clúster de hosts
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando dos o más hosts requieren acceso de I/o a los mismos volúmenes, es posible crear un clúster de hosts.
+
+.Acerca de esta tarea
+Tenga en cuenta estas directrices al crear un clúster de hosts:
+
+* Esta operación no comienza a menos que haya dos o más hosts disponibles para crear el clúster.
+* Los hosts de los clústeres de hosts pueden tener sistemas operativos diferentes (heterogéneos).
+* Los hosts NVMe en clústeres de hosts no se pueden combinar con hosts que no son NVMe.
+* Para crear un volumen que tenga habilitada la función Garantía de datos (DA), la conexión de host que se planea usar debe admitir DA.
++
+Si alguna de las conexiones de host de las controladoras de la cabina de almacenamiento no admite DA, los hosts asociados no podrán acceder a los datos de los volúmenes con la función DA habilitada.
+
+* Esta operación no funciona si el nombre que eligió ya está en uso.
+* La longitud del nombre no puede ser mayor de 30 caracteres.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
+. Seleccione MENU:Provisioning[Configure hosts].
++
+Se abre la página Configurar hosts.
+
+. Seleccione MENU:Create[Host cluster].
++
+Se muestra el cuadro de diálogo Crear clúster de hosts.
+
+. Seleccione la configuración del clúster de hosts que corresponda.
++
+|===
+| Ajuste | Descripción 
+
+
+| Nombre | Escriba un nombre para el clúster de hosts nuevo. 
+
+
+| Seleccione los hosts para compartir acceso al volumen | Seleccione dos o más hosts de la lista desplegable. Solo se muestran en la lista los hosts que todavía no forman parte del clúster de hosts. 
+|===
+. Haga clic en *Crear*.
++
+Si los hosts seleccionados están conectados a los tipos de interfaz que tienen distintas funcionalidades de Data Assurance (DA), se muestra un cuadro de diálogo con el mensaje de que DA no estará disponible en el clúster de hosts. Esta falta de disponibilidad evita que los volúmenes con la función DA habilitada se añadan al clúster de hosts. Seleccione *Sí* para continuar o *no* para cancelar.
+
++
+DA mejora la integridad de los datos en todo el sistema de almacenamiento. DA permite a la cabina de almacenamiento comprobar si se producen errores cuando se transfieren datos entre hosts y unidades. El uso DE DA en el volumen nuevo garantiza la detección de cualquier error.
+
+
+
+.Resultado
+El nuevo clúster de hosts se muestra en la tabla con los hosts asignados en las filas de abajo.
+
+.Después de terminar
+Se debe asignar un volumen a un clúster de hosts para poder usarlo en operaciones de I/O. Vaya a. link:vc-olh-assign-volumes-to-hosts.html["Asignar volúmenes a hosts"].

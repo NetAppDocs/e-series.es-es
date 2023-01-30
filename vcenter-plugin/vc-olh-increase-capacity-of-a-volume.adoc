@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Cambie el tamaño de un volumen para aumentar su capacidad notificada. 
+---
+= Aumente la capacidad de un volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible cambiar el tamaño de un volumen para aumentar la capacidad notificada.
+
+.Antes de empezar
+Asegúrese de que:
+
+* Existe capacidad libre suficiente disponible en el pool o el grupo de volúmenes asociado.
+* El volumen es óptimo y no está en ningún estado de modificación.
+* No existen unidades de repuesto en uso en el volumen. (Esto se aplica solo a volúmenes que pertenecen a grupos de volúmenes.)
+
+
+.Acerca de esta tarea
+En esta tarea, se describe cómo aumentar la capacidad notificada (a los hosts) de un volumen con la capacidad libre que está disponible en el pool o el grupo de volúmenes. Asegúrese de considerar todos los requisitos de capacidad futuros que puede tener para otros volúmenes en este pool o grupo de volúmenes.
+
+
+NOTE: Solo ciertos sistemas operativos permiten aumentar la capacidad de un volumen. Si aumenta la capacidad de un volumen en un sistema operativo que no lo permite, la capacidad ampliada será inutilizable y no se podrá restaurar la capacidad de volumen original.
+
+.Pasos
+. En la página *gestionar*, seleccione la cabina de almacenamiento que contiene los volúmenes cuyo tamaño desea cambiar.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione el volumen para el que desea aumentar la capacidad y, a continuación, seleccione *aumentar capacidad*.
++
+Se muestra el cuadro de diálogo Confirmar aumento de capacidad.
+
+. Seleccione *Sí* para continuar.
++
+Se muestra el cuadro de diálogo aumentar capacidad notificada. En este cuadro de diálogo, se muestran la capacidad notificada actual y la capacidad libre disponibles en el pool o el grupo de volúmenes asociado.
+
+. Utilice el cuadro *aumentar capacidad notificada agregando...* para añadir capacidad a la capacidad informada disponible actual. Es posible cambiar el valor de capacidad para que se muestre en mebibytes (MIB), gibibytes (GIB) o tebibytes (TIB).
+. Haga clic en *aumentar*.
++
+La capacidad del volumen se aumenta según lo seleccionado. Sea consciente de que esta operación puede ser muy prolongada y que esto podría afectar al rendimiento del sistema.
+
+
+
+.Después de terminar
+Después de expandir la capacidad del volumen, debe aumentar manualmente el tamaño del sistema de archivos para que coincidan. La forma de hacerlo depende del sistema de archivos utilizado. Para obtener detalles, compruebe la documentación del sistema operativo del host.

@@ -1,0 +1,563 @@
+---
+permalink: maintenance-e2800/hpp-change-host-protocol-task.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: 'Cambie el protocolo de puerto de host de Fibre Channel (FC) a iSCSI o de iSCSI a FC.' 
+---
+= Cambiar el protocolo del host para E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si tiene una cabina de almacenamiento E2800 con puertos de host SFP+ (óptico), es posible cambiar el protocolo de puerto de host de Fibre Channel (FC) a iSCSI o de iSCSI a FC.
+
+Es posible cambiar el protocolo utilizado por los puertos de host integrados en la controladora (_puertos de host_), el protocolo que utilizan los puertos de host en la tarjeta de interfaz del host (_HIC Ports_), o el protocolo de todos los puertos de host.
+
+
+
+== Paso 1: Determinar si tiene SFP con doble protocolo
+
+Utilice System Manager de SANtricity para determinar qué tipo de transceptores SFP posee. Como estos SFP se pueden utilizar con protocolos FC e iSCSI, se denominan SFP _dual-protocol_ o _Unified_.
+
+.Pasos
+. En el Administrador del sistema de SANtricity, seleccione *Soporte*.
+. Seleccione el mosaico *Centro de soporte*.
+. En la ficha Recursos de soporte, busque y seleccione el enlace *Perfil de matriz de almacenamiento*.
+. Escriba *SFP* en el cuadro de texto y haga clic en *Buscar*.
+. Para cada SFP incluido en el perfil de matriz de almacenamiento, busque la entrada para *velocidad de datos admitida*.
++
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[sam1130 ss e2800 unified spf maint e2800]
+
+. Consulte la tabla para determinar si puede reutilizar los SFP, como se muestra a continuación:
++
+|===
+| Tasas de datos admitidas | Tipo de SFP | Protocolo compatible 
+
+
+ a| 
+16 Gbps, 10 Gbps, 4 Gbps
+ a| 
+Protocolo dual
+ a| 
+** *FC:* 16 Gbps, 4 Gbps
+** ** ISCSI:**10 Gbps
+
+
+
+
+ a| 
+25 Gbps, 10 Gbps
+ a| 
+25 Gbps. 10 Gbps,
+ a| 
+Solo iSCSI
+
+
+
+ a| 
+32 Gbps, 16 Gbps, 8 Gbps, 4 Gbps
+ a| 
+32 Gbps, 16 Gbps
+ a| 
+Solo FC
+
+|===
++
+** Si dispone de SFP de protocolo dual, puede continuar usándolos después de convertir el protocolo.
++
+
+NOTE: Los SFP de protocolo doble no admiten iSCSI de 1 GB. Si se convierten puertos de host a iSCSI, tenga en cuenta que los SFP de protocolo doble solo admiten un enlace de 10 GB al puerto conectado.
+
+** Si tiene SFP 16 Gbps y está convirtiendo puertos de host en iSCSI, debe quitar los SFP y sustituirlos por SFP con doble protocolo o 10 Gbps después de convertir el protocolo. Según sea necesario, también puede utilizar cobre iSCSI de 10 Gbps utilizando un cable especial Twin-Ax con SFP.
++
+
+NOTE: Los SFP de FC de 8 Gbps NO son compatibles con las controladoras E28xx o E57xx. SOLO se admiten SFP FC de 16 Gbps y 32 Gbps.
+
+** Si tiene SFP 10 Gbps y está convirtiendo puertos de host a FC, debe quitar los SFP de estos puertos y sustituirlos por SFP 16 Gbps con protocolo doble o "SFP" después de convertir el protocolo.
+
+
+
+
+
+
+== Paso 2: Obtenga el paquete de funciones
+
+Para obtener el paquete de funciones, se necesita el número de serie de la bandeja de controladoras, un código de activación de la función y el identificador de habilitación de funciones de la cabina de almacenamiento.
+
+.Pasos
+. Busque el número de serie.
++
+.. En SANtricity System Manager, seleccione MENU:Support[Support Center].
+.. Con la ficha *Recursos de soporte* seleccionada, desplácese a la sección *Ver propiedades* de la matriz de almacenamiento superior.
+.. Localice *número de serie del chasis* y copie este valor en un archivo de texto.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[sam1130 ss e2800 storage array profile sn smid copy maint e2800]
+
+
+
+. Busque el *identificador de submodelo del paquete de funciones*.
++
+.. En la ficha Recursos de soporte, busque y seleccione el enlace *Perfil de matriz de almacenamiento*.
+.. Escriba *Id. De submodelo del paquete de funciones* en el cuadro de texto y haga clic en *Buscar*.
+.. Busque el identificador de submodelo del paquete de funciones para la configuración de inicio.
++
+image::../media/storage_array_profile2_maint-e2800.gif[profile2 maint e2800 de la cabina de almacenamiento]
+
+
+
+. El identificador de submodelo del paquete de funciones es el identificador de submodelo de la controladora correspondiente de la configuración inicial y busque el código de activación de la función para la configuración de finalización deseada en la tabla siguiente. A continuación, copie esa función Activation Code en un archivo de texto.
++
+|===
+3+| Iniciando configuración 3+| Finalización de la configuración .2+| Código de activación de la función 
+
+
+| Identificador del submodelo de la controladora | Puertos de placa base | Puertos HIC | Identificador del submodelo de la controladora | Puertos de placa base | Puertos HIC 
+
+
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+ZGW-4L2-Z36IJ
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+4GZ-NL2-Z4NRP
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+_No HIC o no HIC óptica_
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+1G5-QL2-Z7LFC
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+FG7-AL2-Z82RW
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+5G7-0K2-Z0G8X
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GP-HL2-ZYRKP
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGU-KL2-Z1P7I
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+BGA-8K2-ZQWM5
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+SGH-UK2-ZUCJG
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+1GK-EK2-ZVSW1
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+AGM-XL2-ZW8A
+
+|===
++
+|===
+3+| Iniciando configuración 3+| Finalización de la configuración .2+| Código de activación de la función 
+
+
+| Identificador del submodelo de la controladora | Puertos de placa base | Puertos HIC | Identificador del submodelo de la controladora | Puertos de placa base | Puertos HIC 
+
+
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGC-RK2-ZREUT
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+MGF-BK2-ZSU3Z
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+_No HIC o no HIC óptica_
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+DGT-7M2-ZKBMD
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+GGA-TL2-Z9J50
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+WGC-DL2-ZBZIB
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GM-KM2-ZGWS1
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PG0-4M2-ZHDZ6
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+XGR-NM2-ZJUGR
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+3GE-WL2-ZCHNY
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+FGH-HL2-ZDY3R
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+VGJ-1L2-ZFFEW
+
+|===
++
+
+NOTE: Si el identificador de submodelo de la controladora no aparece, comuníquese con http://mysupport.netapp.com["Soporte de NetApp"^].
+
+. En System Manager, busque Identificador de habilitación de funciones.
++
+.. Vaya a MENU:Settings[System].
+.. Desplácese hacia abajo hasta *Complementos*.
+.. En *Cambiar paquete de funciones*, busque *Identificador de habilitación de funciones*.
+.. Copie y pegue este número de 32 dígitos en un archivo de texto.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[sam1130 ss e2800 change feature pack enable identifier copy maint e2800]
+
+
+
+. Vaya a. http://partnerspfk.netapp.com["Activación de licencias de NetApp: Activación de funciones prémium de matriz de almacenamiento"^], e introduzca la información necesaria para obtener el paquete de funciones.
++
+** Número de serie del chasis
+** Código de activación de la función
+** Identificador de habilitación de la función
++
+
+NOTE: El sitio web de activación de funciones Premium incluye un enlace a «'instrucciones para la activación de funciones Premium». No intente utilizar estas instrucciones para este procedimiento.
+
+
+
+. Elija si desea recibir el archivo de claves del paquete de funciones en un correo electrónico o descargarlo directamente desde el sitio.
+
+
+
+
+== Paso 3: Detener la actividad de I/o del host
+
+Debe detener todas las operaciones de I/o del host antes de convertir el protocolo de los puertos de host. No es posible acceder a los datos en la cabina de almacenamiento hasta que se complete correctamente la conversión.
+
+.Pasos
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. Si la cabina de almacenamiento participa en una relación de mirroring, detenga todas las operaciones de I/o del host en la cabina de almacenamiento secundaria.
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+
++
+|===
+| Llamada | Tipo de puertos de host 
+
+
+ a| 
+*(1)*
+ a| 
+LED de caché activa
+
+|===
+. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+
+
+
+
+== Paso 4: Cambie el paquete de funciones
+
+Cambie el paquete de funciones para convertir el protocolo de host de los puertos de host de la placa base, los puertos HIC IB o ambos tipos de puertos.
+
+.Pasos
+. En SANtricity System Manager, seleccione MENU:Configuración[sistema].
+. En *Complementos*, seleccione *Cambiar paquete de funciones*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[sam1130 ss system change feature pack maint e2800]
+
+. Haga clic en *examinar* y, a continuación, seleccione el paquete de funciones que desee aplicar.
+. Tipo `CHANGE` en el campo.
+. Haga clic en *Cambiar*.
++
+Comienza la migración del paquete de funciones. Las dos controladoras se reinician automáticamente dos veces para permitir que el nuevo paquete de funciones entre en vigencia. La cabina de almacenamiento vuelve a responder cuando se completa el reinicio.
+
+. Confirme que los puertos de host tienen el protocolo esperado.
++
+.. En el Administrador del sistema de SANtricity, seleccione *hardware*.
+.. Haga clic en *Mostrar parte posterior de la bandeja*.
+.. Seleccione el gráfico de la controladora a o de la controladora B.
+.. Seleccione *Ver ajustes* en el menú contextual.
+.. Seleccione la ficha *interfaces de host*.
+.. Haga clic en *Mostrar más valores*.
+.. Revise los detalles mostrados para los puertos de la placa base y los puertos HIC (con el rótulo "lote 1") y confirme que cada tipo de puerto tiene el protocolo que espera.
+
+
+
+
+.El futuro
+Vaya a. link:hpp-complete-protocol-conversion-task.html["Conversión de protocolo de host completa"].

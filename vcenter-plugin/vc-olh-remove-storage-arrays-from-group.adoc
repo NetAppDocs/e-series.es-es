@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Quite una o varias cabinas de almacenamiento gestionadas de un grupo si ya no se van a gestionar desde un grupo de almacenamiento específico. 
+---
+= Quite las cabinas de almacenamiento del grupo
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible quitar una o varias cabinas de almacenamiento gestionadas de un grupo si ya no se van a gestionar desde un grupo de almacenamiento específico.
+
+.Acerca de esta tarea
+Al quitar cabinas de almacenamiento de un grupo, ni ellas ni sus datos se ven afectados de forma alguna. Si System Manager gestiona su cabina de almacenamiento, es posible gestionarla desde un explorador. Si una cabina de almacenamiento se quita por error de un grupo, es posible volver a añadirla.
+
+.Pasos
+. En la página gestionar, seleccione menú:gestionar grupos[Quitar cabinas de almacenamiento del grupo].
+. En el menú desplegable, seleccione el grupo que contiene las cabinas de almacenamiento que desea quitar y luego haga clic en la casilla de comprobación junto a cada cabina de almacenamiento que desea quitar del grupo.
+. Haga clic en *Quitar*.
+

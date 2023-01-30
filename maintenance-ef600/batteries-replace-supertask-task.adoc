@@ -1,0 +1,239 @@
+---
+permalink: maintenance-ef600/batteries-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+summary: Sustituya una batería en una cabina EF300 o EF600. 
+---
+= Sustituya la batería EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede sustituir una batería en un sistema de almacenamiento EF300 o EF600.
+
+.Acerca de esta tarea
+Cada contenedor de controladora incluye una batería que conserva los datos en caché si falla la alimentación de CA. Si Recovery Guru en System Manager de SANtricity informa de un estado error de batería o se requiere reemplazo de batería, debe reemplazar la batería afectada.
+
+.Antes de empezar
+* Verifique que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+* Revise la link:batteries-overview-requirements-concept.html["Requisitos para la sustitución de la batería de EF300 o EF600"].
+
+
+.Lo que necesitará
+* La batería de recambio.
+* Una muñequera ESD u otras precauciones antiestáticas.
+* Un área de trabajo plana y estática libre.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Coloque la controladora en estado sin conexión
+
+Realice backup de los datos y coloque a la controladora afectada en estado sin conexión.
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que hay un problema con una batería y para garantizar que no primero no tenga que resolver otros elementos.
+. En el área Detalles de Recovery Guru, determine qué batería desea reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+.. Seleccione *hardware*.
+.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Seleccione la controladora que desea colocar en estado sin conexión.
+.. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione *conectarse a una conexión de red alternativa* para acceder automáticamente al Administrador del sistema de SANtricity utilizando el otro controlador.
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que se muestra Sí el campo Aceptar para eliminar en el área Detalles, lo que indica que es seguro eliminar este componente.
+
+
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Reemplace la batería que ha fallado por una nueva.
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
++
+image::../media/remove_controller_5.png[retire la controladora 5]
+
+. Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+image::../media/remove_controller_6.png[retire la controladora 6]
+
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+== Paso 3: Retire la batería que ha fallado
+
+Tire de la batería con error para sacarla de la controladora.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador desenroscando el tornillo de mariposa único y levantando la tapa para abrirla.
+. Confirme que el LED verde del interior del controlador está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
+. Localice la pestaña "Press" en el lateral del controlador.
+. Desenganche la batería presionando la lengüeta y apretando la carcasa de la batería.
++
+image::../media/batt_3.png[batt 3]
+
+. Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba y desconecte la batería de la placa.
++
+image::../media/batt_2.png[2]
+
+. Levante la batería del controlador y colóquela sobre una superficie plana y sin estática.
++
+image::../media/batt_4.png[batt 4]
+
+. Siga los procedimientos apropiados para que su ubicación pueda reciclar o eliminar la batería que ha fallado.
++
+
+CAUTION: Para cumplir con las normativas de la Asociación Internacional de Transporte aéreo (IATA), no envíe nunca una batería de litio por aire a menos que esté instalada en la bandeja del controlador.
+
+
+
+
+
+== Paso 4: Instale la batería nueva
+
+Después de quitar la batería con errores del compartimento de controladoras, siga este paso para instalar la batería nueva.
+
+.Pasos
+. Desembale la nueva batería y configúrela en una superficie plana y sin estática.
++
+
+NOTE: Para cumplir con las normativas de seguridad de la IATA, las baterías de reemplazo se envían con un estado de carga (SoC) del 30 por ciento o menos. Cuando vuelva a aplicar la alimentación, tenga en cuenta que el almacenamiento en caché de escritura no se reanudará hasta que se completen la carga de la batería de reemplazo y el ciclo de aprendizaje inicial.
+
+. Inserte la batería en el controlador alineando la carcasa de la batería con los pestillos metálicos del lateral del controlador.
++
+image::../media/batt_5.png[batt 5]
+
++
+La batería hace clic en su sitio.
+
+. Vuelva a enchufar el conector de la batería a la placa.
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de la controladora
+
+Vuelva a instalar la controladora en la bandeja de controladoras.
+
+.Pasos
+. Baje la cubierta del receptáculo del controlador y fije el tornillo de apriete manual.
+. Al apretar las asas de las controladoras, deslice suavemente el compartimento de controladoras hasta llegar a la bandeja de controladoras.
++
+
+NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
+
++
+image::../media/remove_controller_7.png[retire la controladora 7]
+
+
+
+
+
+== Paso 6: Sustitución completa de la batería
+
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Coloque una controladora en línea.
++
+.. En System Manager, desplácese hasta la página hardware.
+.. Seleccione *Mostrar parte posterior del controlador*.
+.. Seleccione la controladora con la batería sustituida.
+.. Seleccione *colocar en línea* en la lista desplegable.
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Haga clic en MENU:Soporte[Centro de actualización] para asegurarse de que la versión más reciente de SANtricity OS esté instalada.
++
+Si es necesario, instale la versión más reciente.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Seleccione MENU:Storage[Volumes]. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione MENU:More[Cambiar propiedad] para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya al menú:más[redistribuir volúmenes].
+.. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras la distribución automática o la distribución manual, debe comprobar Recovery Guru para encontrar problemas de conectividad de host.
+.. Si no hay Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se ha completado el reemplazo de la batería. Es posible reanudar las operaciones normales.

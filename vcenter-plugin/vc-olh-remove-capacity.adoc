@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Es posible quitar unidades para reducir la capacidad de un pool o una caché SSD existente. 
+---
+= Elimine capacidad
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible quitar unidades para reducir la capacidad de un pool o una caché SSD existente.
+
+Una vez eliminadas las unidades, se redistribuirán los datos de cada volumen del pool o de la caché SSD a las unidades restantes. Las unidades eliminadas se mostrarán como sin asignar y su capacidad se volverá parte de la capacidad libre total de la cabina de almacenamiento.
+
+.Acerca de esta tarea
+Siga estas directrices al quitar capacidad:
+
+* No puede quitar la última unidad de una caché SSD sin antes eliminar la caché SSD.
+* No se puede reducir la cantidad de unidades en un pool a menos de 11.
+* Es posible eliminar un máximo de 12 unidades al mismo tiempo. Si necesita quitar más de 12 unidades, repita el procedimiento.
+* No puede quitar unidades si no dispone de capacidad libre suficiente en el pool o la caché SSD para contener los datos cuando esos datos se redistribuyan a las unidades restantes del pool o de la caché SSD.
+
+
+Los siguientes son posibles impactos en el rendimiento:
+
+* Cuando se quitan unidades de un pool o una caché SSD, es posible que se reduzca el rendimiento del volumen.
+* Cuando se quita capacidad de un pool o una caché SSD, no se consume capacidad de conservación. Sin embargo, es posible que la capacidad de conservación se reduzca según la cantidad de unidades que queden en el pool o la caché SSD.
+
+
+Los siguientes son impactos sobre unidades compatibles con la función de seguridad:
+
+* Si se quita la última unidad no compatible con la función de seguridad, el pool solo contendrá unidades compatibles con la función de seguridad. En esta situación, se ofrece la opción de habilitar la seguridad para el pool.
+* Si se quita la última unidad que no es compatible con la función Data Assurance (DA), el pool solo contendrá unidades compatibles con DA.
+* Todos los volúmenes nuevos que se creen en el pool serán compatibles con DA. Si desea que los volúmenes existentes sean compatibles con DA, debe eliminar y volver a crear los volúmenes.
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento.
++
+Seleccione MENU:Provisioning[Configure Pools and Volume Groups].
+
+. Seleccione el pool o la caché SSD y haga clic en menú:más[Quitar capacidad].
++
+Se muestra el cuadro de diálogo Eliminar capacidad.
+
+. Seleccione una o varias unidades de la lista.
++
+A medida que seleccione o anule la selección de unidades en la lista, se actualizará el campo total de capacidad seleccionada. Este campo muestra la capacidad total del pool o de la caché SSD que se obtendrá al quitar las unidades seleccionadas.
+
+. Haga clic en *Quitar* y confirme que desea quitar las unidades.
+
+
+.Resultado
+La capacidad recién reducida del pool o de la caché SSD se reflejará en la vista Pools y grupos de volúmenes.

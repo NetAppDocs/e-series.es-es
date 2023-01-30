@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Un análisis de medios es una operación que se ejecuta en segundo plano, que analiza todos los datos e información de redundancia del volumen. Use esta opción para habilitar o deshabilitar la configuración del análisis de medios para un volumen o varios, o bien para cambiar la duración del análisis. 
+---
+= Cambiar la configuración de análisis de medios para un volumen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un análisis de medios es una operación que se ejecuta en segundo plano, que analiza todos los datos e información de redundancia del volumen. Use esta opción para habilitar o deshabilitar la configuración del análisis de medios para un volumen o varios, o bien para cambiar la duración del análisis.
+
+.Antes de empezar
+Se debe comprender lo siguiente:
+
+* Los análisis de medios se ejecutan continuamente a una tasa constante sobre la base de la capacidad que se analizará y la duración del análisis. Una tarea que se ejecuta en segundo plano de mayor prioridad puede suspender temporalmente los análisis que se ejecutan en segundo plano (por ejemplo, una reconstrucción), pero se reanudan a la misma velocidad constante.
+* Un volumen solo se analiza cuando está habilitada la opción de análisis de medios para la cabina de almacenamiento y para ese volumen. Si también se habilita la verificación de redundancia para ese volumen, la información de redundancia del volumen se verifica para ver si coincide con los datos, siempre y cuando el volumen tenga redundancia. El análisis de medios con verificación de redundancia está habilitado de forma predeterminada para cada volumen cuando se crea.
+* Si se encuentra un error de medio irrecuperable durante el análisis, los datos se repararán usando la información de redundancia, si está disponible.
++
+Por ejemplo, la información de redundancia está disponible en volúmenes RAID 5 óptimos o en volúmenes RAID 6 que son óptimos o que solo tienen una sola unidad con fallos. Si el error irrecuperable no puede repararse mediante el uso de la información de redundancia, el bloque de datos se añade al registro de sectores ilegibles. Tanto los errores de medios que pueden corregirse como los que no pueden corregirse se informan en el registro de eventos.
+
+* Si se encuentra una incoherencia entre los datos y la información de redundancia en la verificación de redundancia, se informa en el registro de eventos.
+
+
+.Acerca de esta tarea
+En los análisis de medios, se detectan y reparan errores de medios en bloques de discos que las aplicaciones leen con poca frecuencia. Esto puede evitar la pérdida de datos en el caso de un fallo de unidad, ya que los datos para unidades con fallo se reconstruyen mediante el uso de la información de redundancia y datos de otras unidades del grupo de volúmenes o pool.
+
+Es posible realizar las siguientes acciones:
+
+* Habilite o deshabilite los análisis de medios en segundo plano para toda la cabina de almacenamiento
+* Cambie la duración del análisis para toda la cabina de almacenamiento
+* Habilite o deshabilite el análisis de medios para un volumen o más
+* Habilite o deshabilite la verificación de redundancia para un volumen o más
+
+
+.Pasos
+. En la página gestionar, seleccione la cabina de almacenamiento que contiene los volúmenes para los que desea cambiar la configuración de análisis de medios.
+. Seleccione MENU:Provisioning[Manage Volumes].
+. Seleccione cualquier volumen y luego seleccione MENU:más[Cambiar configuración de análisis de medios].
++
+Se muestra el cuadro de diálogo Cambiar configuración de escaneo de medios de unidad. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
+
+. Para activar el escaneo de medios, seleccione la casilla de verificación *Escanear medios durante...*. La desactivación de la casilla de comprobación del análisis de medios suspende toda la configuración del análisis de medios.
+. Especifique el número de días durante los cuales desea que se ejecute el análisis de medios.
+. Seleccione la casilla de comprobación *escaneo de medios* para cada volumen donde desea realizar un análisis de medios. El sistema habilita la opción Comprobación de redundancia para cada volumen donde se desea realizar un análisis de medios. Si hay volúmenes individuales para los que no desea realizar una comprobación de redundancia, anule la selección de la casilla de verificación *Comprobación de redundancia*.
+. Haga clic en *Guardar*.
+
+
+.Resultado
+El sistema aplica los cambios de los análisis de medios en segundo plano sobre la base de la selección.

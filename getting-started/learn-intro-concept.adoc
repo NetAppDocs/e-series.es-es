@@ -1,0 +1,14 @@
+---
+permalink: getting-started/learn-intro-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600 
+summary: Obtenga información sobre los sistemas E-Series, que incluyen hardware y software integrados para las necesidades de almacenamiento de datos de su organización. 
+---
+= Obtenga más información sobre los sistemas E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Obtenga información sobre los sistemas E-Series, que incluyen hardware y software integrados para las necesidades de almacenamiento de datos de su organización.

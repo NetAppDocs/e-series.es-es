@@ -1,0 +1,64 @@
+---
+permalink: maintenance-ef600/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+summary: Requisitos y consideraciones para el reemplazo de la batería EF300 o EF600. 
+---
+= Requisitos para la sustitución de la batería de EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir una batería EF300 o EF600, revise los requisitos y consideraciones.
+
+Se incluye una batería con una controladora y conserva los datos almacenados en caché si falla la alimentación de CA.
+
+
+
+== Alertas de Recovery Guru
+
+Si Recovery Guru en SANtricity System Manager informa de uno de los siguientes Estados, debe sustituir la batería afectada:
+
+* Error de batería
+* Se requiere reemplazo de la batería
+
+
+En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que hay un problema con una batería y para garantizar que no primero no tenga que resolver otros elementos.
+
+
+
+== Descripción general del procedimiento
+
+Para proteger los datos, es necesario reemplazar un Lo antes posible. de batería con fallos.
+
+A continuación, se ofrece una descripción general de los pasos para sustituir una batería en las controladoras EF300 o EF600:
+
+. Desconectar la controladora.
+. Quite el compartimento de la controladora.
+. Sustituya la batería.
+. Sustituya el compartimento de la controladora.
+. Coloque la controladora en línea.
+
+
+
+
+== Requisitos
+
+Si planea sustituir una batería, debe tener:
+
+* Una batería de repuesto.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
+
++
+** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+
+
+

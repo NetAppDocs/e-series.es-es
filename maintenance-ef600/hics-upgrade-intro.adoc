@@ -1,0 +1,292 @@
+---
+permalink: maintenance-ef600/hics-upgrade-intro.html 
+sidebar: sidebar 
+keywords: upgrade EF300 HIC, upgrade EF600 HIC, increase host ports, change host protocol 
+summary: 'Es posible actualizar una tarjeta de interfaz del host (HIC) para aumentar la cantidad de puertos de host o cambiar los protocolos de host.' 
+---
+= Actualizar tarjeta de interfaz de host (HIC) EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible actualizar las tarjetas de interfaz del host (HIC) para aumentar la cantidad de puertos de host o cambiar los protocolos de host.
+
+.Acerca de esta tarea
+* Al actualizar HIC, debe apagar la cabina de almacenamiento, actualizar las HIC y volver a aplicar alimentación.
+* Al actualizar las HIC en una controladora EF300 o EF600, repita todos los pasos para quitar la segunda controladora, actualice las HIC de la segunda controladora y vuelva a instalar la segunda controladora antes de volver a aplicar alimentación a la bandeja de controladoras.
+
+
+.Antes de empezar
+* Revisar link:hics-overview-supertask-concept.html["Requisitos para las actualizaciones de EF 300 o EF600 HIC"].
+* Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente. Como ambas controladoras deben tener la misma configuración de HIC cuando se conectan, la alimentación debe estar apagada al instalar HIC.
+
+
+.Lo que necesitará
+* Dos HIC que son compatibles con sus controladoras.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un área de trabajo plana y estática libre.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Un destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladoras EF300 o EF600 si esa HIC se diseñó para otra controladora E-Series. Además, tanto las controladoras como las HIC deben ser idénticas. La presencia de HIC incompatible o con discrepancias hace que las controladoras se bloqueen cuando aplique alimentación.
+
+
+
+== Paso 1: Coloque la bandeja de controladoras en estado sin conexión
+
+Coloque la bandeja de controladoras en estado sin conexión para que pueda actualizar las HIC de forma segura.
+
+.Pasos
+. En la página Inicio de SANtricity System Manager, asegúrese de que la cabina de almacenamiento tenga el estado Optimal.
++
+Si el estado no es óptimo, use Recovery Guru o póngase en contacto con el soporte técnico para resolver el problema. No continúe con este procedimiento.
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. Apague la bandeja de controladoras.
++
+.. Etiquete y desconecte ambos cables de alimentación de la bandeja de controladoras.
+.. Espere a que se apagen todos los LED de la bandeja de controladoras.
+
+
+
+
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Quite el contenedor de la controladora para que pueda actualizar la nueva HIC.
+
+.Pasos
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Si los puertos HIC utilizan transceptores SFP+, quite ellos.
++
+Según el tipo de HIC a la que se esté actualizando, es posible que pueda reutilizar estos SFP.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
++
+image::../media/remove_controller_5.png[retire la controladora 5]
+
+. Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+image::../media/remove_controller_6.png[retire la controladora 6]
+
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+== Paso 3: Quite la HIC
+
+Quite la HIC original de modo que pueda reemplazarla por una actualizada.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador desenroscando el tornillo de mariposa único y levantando la tapa para abrirla.
+. Confirme que el LED verde del interior del controlador está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
+. Con un destornillador Phillips, quite los dos tornillos que conectan la placa frontal de la HIC al compartimento de la controladora.
++
+image::../media/hic_2.png[hic 2]
+
++
+
+NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente.
+
+. Quite la placa frontal de HIC.
+. Con los dedos o un destornillador Phillips, afloje el tornillo de ajuste manual único que fija la HIC a la tarjeta controladora.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: La HIC viene con tres ubicaciones de tornillo en la parte superior, pero se fija con una sola.
+
++
+
+NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente.
+
+. Separe con cuidado la HIC de la tarjeta controladora levantando la tarjeta hacia arriba y hacia fuera de la controladora.
++
+
+CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
++
+image::../media/hic_4.png[hic 4]
+
++
+
+NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente.
+
+. Coloque la HIC en una superficie plana y sin estática.
+
+
+
+
+== Paso 4: Actualice la HIC
+
+Después de quitar la HIC antigua, debe instalar la nueva.
+
+
+CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladoras EF300 o EF600 si esa HIC se diseñó para otra controladora E-Series. Además, tanto las controladoras como las HIC deben ser idénticas. La presencia de HIC incompatible o con discrepancias hace que las controladoras se bloqueen cuando aplique alimentación.
+
+.Pasos
+. Desembale la nueva HIC y la nueva placa frontal de HIC.
+. Alinee el tornillo de mariposa único de la HIC con los orificios correspondientes de la controladora y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
++
+Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
++
+image::../media/hic_7.png[hic 7]
+
++
+
+NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente.
+
+. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
++
+
+CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y el tornillo de mariposa.
+
+. Apriete a mano el tornillo de mariposa HIC.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: La imagen anterior es un ejemplo; el aspecto de la HIC puede ser diferente.
+
++
+
+NOTE: No utilice un destornillador, o puede apretar los tornillos en exceso.
+
+. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó de la HIC original con los tres tornillos.
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de la controladora
+
+Después de actualizar HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
+
+.Pasos
+. Baje la cubierta del receptáculo del controlador y fije el tornillo de apriete manual.
+. Al apretar las asas de las controladoras, deslice suavemente el compartimento de controladoras hasta llegar a la bandeja de controladoras.
++
+
+NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
+
++
+image::../media/remove_controller_7.png[retire la controladora 7]
+
+. Si se lo ha quitado, instale SFP en la nueva HIC y vuelva a conectar todos los cables. Si está usando más de un protocolo de host, asegúrese de instalar los SFP en los puertos de host correctos.
++
+Si está usando más de un protocolo de host, asegúrese de instalar los SFP en los puertos de host correctos.
+
+
+
+
+
+== Paso 6: Complete la actualización de HIC
+
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Coloque una controladora en línea.
++
+.. Enchufe los cables de alimentación.
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión de SANtricity OS.
++
+Si es necesario, instale la versión más reciente.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Seleccione MENU:Storage[Volumes]. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione MENU:More[Cambiar propiedad] para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya al menú:más[redistribuir volúmenes].
+.. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras la distribución automática o la distribución manual, debe comprobar Recovery Guru para encontrar problemas de conectividad de host.
+.. Si no hay Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se completó el proceso de actualización de una tarjeta de interfaz del host en la cabina de almacenamiento. Es posible reanudar las operaciones normales.

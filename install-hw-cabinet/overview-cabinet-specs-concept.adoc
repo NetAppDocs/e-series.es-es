@@ -1,0 +1,450 @@
+---
+permalink: install-hw-cabinet/overview-cabinet-specs-concept.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet specs, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: Revise la descripción general y las especificaciones de la instalación del armario. 
+---
+= Especificaciones del armario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los armarios 40U modelo 3040 tienen estas características estándar:
+
+* Una puerta trasera que se puede bloquear y bloquear
+* Carriles de soporte estándar de la Asociación de Industria Electrónica (EIA) que proporcionan orificios de montaje para la instalación de dispositivos en un estándar de 48.3 cm (19 pulg.) armario ancho
+* Cuatro ruedas giratorias y cuatro patas de nivelación ajustables que se encuentran debajo del armario para mover el armario y, a continuación, nivelar el armario en su ubicación final
+* Un pie de estabilidad que estabiliza el armario después de instalarlo en su ubicación permanente
+* Acceda a las aberturas de los cables de interfaz
+* Dos unidades de distribución de alimentación de CA (PDU) que proporcionan una conexión de alimentación integrada y capacidad de gestión de energía
+
+
+Las figuras siguientes muestran una vista frontal (izquierda) y una vista trasera (derecha) del armario.
+
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[armario de 83000 07 dwg 3040 con anotaciones]
+
+|===
+
+
+ a| 
+1.
+ a| 
+Cubierta de ventilación
+
+
+
+ a| 
+2.
+ a| 
+Aberturas de acceso al cable de interfaz
+
+
+
+ a| 
+3.
+ a| 
+Placa trasera
+
+
+
+ a| 
+4.
+ a| 
+Rieles de soporte EIA
+
+
+
+ a| 
+5.
+ a| 
+Rieles de soporte vertical
+
+
+
+ a| 
+6.
+ a| 
+Raíles de montaje del armario
+
+
+
+ a| 
+7.
+ a| 
+Pie de estabilidad
+
+
+
+ a| 
+8.
+ a| 
+Patas de nivelación ajustables
+
+
+
+ a| 
+9.
+ a| 
+Unidad de distribución de alimentación (uno de dos)
+
+
+
+ a| 
+10.
+ a| 
+Cajas de entrada de alimentación de CA
+
+
+
+ a| 
+11.
+ a| 
+Parte delantera del armario
+
+
+
+ a| 
+12.
+ a| 
+Parte trasera del armario
+
+|===
+
+CAUTION: *Riesgo de lesiones corporales* -- Si la mitad inferior del armario está vacía, no instale componentes en la mitad superior del armario. Si la mitad superior del armario es demasiado pesada para la mitad inferior, el armario podría caerse y causar lesiones corporales. Instale siempre un componente en la posición más baja disponible en el armario.
+
+
+CAUTION: *Riesgo de lesiones corporales* -- sólo mueva un gabinete poblado con una carretilla elevadora o ayuda adecuada de otras personas. Empuje siempre el armario desde la parte delantera para evitar que se caiga. Un armario completamente cargado puede pesar más de 909 kg (2000 lb). El armario es difícil de mover, incluso en una superficie plana. Si debe mover el armario a lo largo de una superficie inclinada, retire los componentes de la mitad superior del armario y asegúrese de que dispone de la ayuda adecuada.
+
+
+NOTE: No es posible instalar bandejas de controladoras E2860 o E5760 ni una bandeja de unidades DE460C en un armario 40U 3040.
+
+
+NOTE: Si un armario de 3040 está completamente cargado con bandejas DE6600, pesa más de 1250.1 kg (2756 lb).
+
+
+
+== Requisitos de potencia y disipación de calor
+
+El cuadro incluye las siguientes especificaciones para la disipación de calor y la potencia.
+
+
+
+=== Potencia nominal
+
+El armario de 3040 unidades de 40 unidades tiene una capacidad nominal de 200 VCA a 240 VCA a 50 Hz a 60 Hz y funciona a ±10% de ese rango.
+
+
+
+=== Unidades de distribución de energía (PDU)
+
+El armario incluye dos unidades de distribución de alimentación de CA (PDU) idénticas, con cada PDU que proporciona hasta 72A de energía utilizable. Las PDU se montan verticalmente en la parte posterior del gabinete, y cada PDU incluye seis bancos de energía 12A. Cada banco de energía contiene cuatro tomas de corriente IEC 60320-C19 y un disyuntor de 15 a. Cada PDU tiene un total de 24 tomas y 6 disyuntores.
+
+Cada una de las dos PDU tiene tres cajas de entrada de energía, que se encuentran en la parte inferior del gabinete. Cada caja de entrada de alimentación proporciona alimentación a ocho de las tomas de corriente, como se indica a continuación:
+
+* La caja de entrada de alimentación 1, que tiene el cable de alimentación C1, suministra alimentación a las ocho tomas inferiores
+* La caja de entrada de alimentación 2, que tiene el cable de alimentación C2, suministra alimentación a las ocho tomas centrales
+* La caja de entrada de alimentación 3, que tiene el cable de alimentación C3, suministra alimentación a las ocho tomas superiores
+
+
+Las cajas de entrada de alimentación están etiquetadas como C1, C2 y C3, donde los cables de alimentación se conectan a los módulos.
+
+
+
+=== Cálculos de potencia y de calor para el armario
+
+|===
+| Componente | KVA | Vatios | BTU/HR 
+
+
+ a| 
+PDU del armario (PDU 72A)
+ a| 
+14.4
+ a| 
+14400
+ a| 
+49176
+
+
+
+ a| 
+PDU del armario/12A banco (PDU 72A)
+ a| 
+2.40*
+ a| 
+2400*
+ a| 
+8196*
+
+
+
+ a| 
+Soporte de unidades de controladora E2612
+ a| 
+0.437
+ a| 
+433
+ a| 
+1476
+
+
+
+ a| 
+Soporte de unidades de controladora E2624
+ a| 
+0.487
+ a| 
+482
+ a| 
+1644
+
+
+
+ a| 
+Soporte de unidades de controladora E2660
+ a| 
+1.128
+ a| 
+1117
+ a| 
+3810
+
+
+
+ a| 
+Soporte de unidad de controladora E2712
+ a| 
+0.516
+ a| 
+511
+ a| 
+1744
+
+
+
+ a| 
+Soporte de controladora E2724
+ a| 
+0.561
+ a| 
+555
+ a| 
+1894
+
+
+
+ a| 
+Soporte de unidades de controladora E2760
+ a| 
+1.205
+ a| 
+1193
+ a| 
+4072
+
+
+
+ a| 
+Soporte de unidades de controladora E5412
+ a| 
+0.558
+ a| 
+552
+ a| 
+1883
+
+
+
+ a| 
+Soporte de unidades de controladora E5424 y la cabina Flash EF540
+ a| 
+0.607
+ a| 
+601
+ a| 
+2051
+
+
+
+ a| 
+Soporte de controladora-unidad E5460
+ a| 
+1.254
+ a| 
+1242
+ a| 
+4237
+
+
+
+ a| 
+Soporte de unidades de controladora E5512
+ a| 
+0.587
+ a| 
+581
+ a| 
+1982
+
+
+
+ a| 
+El soporte de unidades de controladora E5524 y la cabina flash EF550
+ a| 
+0.637
+ a| 
+630
+ a| 
+2150
+
+
+
+ a| 
+Soporte de unidades de controladora E5560
+ a| 
+1.285
+ a| 
+1272
+ a| 
+4342
+
+
+
+ a| 
+Soporte de unidades de controladora E5612
+ a| 
+0.625
+ a| 
+619
+ a| 
+2111
+
+
+
+ a| 
+El soporte de unidades de controladora E5624 y la cabina EF560
+ a| 
+0.675
+ a| 
+668
+ a| 
+2279
+
+
+
+ a| 
+Soporte de unidades de controladora E5660
+ a| 
+1.325
+ a| 
+1312
+ a| 
+4477
+
+
+
+ a| 
+Soporte de unidades DE1600
+ a| 
+0.325
+ a| 
+322
+ a| 
+1099
+
+
+
+ a| 
+Soporte de unidades DE5600
+ a| 
+0.375
+ a| 
+371
+ a| 
+1267
+
+
+
+ a| 
+Soporte de unidades DE6600
+ a| 
+0.1.011
+ a| 
+1001
+ a| 
+3415
+
+|===
+
+
+== Número máximo de bandejas
+
+El número máximo de bandejas que se pueden instalar en un armario de 3040 40U depende de la altura de cada bandeja en unidades de rack (U).
+
+
+
+=== Alturas de bandeja en unidades de bastidor (U)
+
+Cada unidad de rack es de 4.45 cm (1.75 pulgadas). Por ejemplo, puede instalar hasta diez bandejas 4U, hasta veinte bandejas 2U o una combinación de bandejas 2U y 4U, hasta 40U.
+
+|===
+| Soporte | Unidades de rack (U) 
+
+
+ a| 
+Soporte de unidades de controladora E2x12 o E2x24
+ a| 
+2 U
+
+
+
+ a| 
+Soporte de unidades de controladora E2x60
+ a| 
+4 U
+
+
+
+ a| 
+Soporte de unidades de controladora E5x12 o E5x24
+ a| 
+2 U
+
+
+
+ a| 
+Soporte de unidades de controladora E5x60
+ a| 
+4 U
+
+
+
+ a| 
+Cabina flash EF5x0
+ a| 
+2 U
+
+
+
+ a| 
+Soporte de unidades DE1600
+ a| 
+2 U
+
+
+
+ a| 
+Soporte de unidades DE5600
+ a| 
+2 U
+
+
+
+ a| 
+Soporte de unidades DE6600
+ a| 
+4 U
+
+|===

@@ -1,0 +1,54 @@
+---
+permalink: cloud-connector/index.html 
+sidebar: sidebar 
+keywords: Cloud Connector 
+summary: Conector Cloud de SANtricity 
+---
+= Descripción general del conector SANtricity® Cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El conector cloud SANtricity es una aplicación Linux basada en host que le permite realizar backup y recuperación de datos completos basados en archivos y bloques en cuentas de presentación de datos de E-Series (por ejemplo, Amazon simple Storage Service y StorageGRID de NetApp) y dispositivo AltaVault de NetApp.
+
+Disponible para su instalación en plataformas RedHat y SUSE Linux, el conector SANtricity Cloud es una solución empaquetada (archivo .bin). Después de instalar SANtricity Cloud Connector, puede configurar la aplicación para realizar trabajos de backup y restauración para volúmenes E-Series en un dispositivo AltaVault o en sus cuentas de Amazon S3 o StorageGRID existentes. Todos los trabajos realizados mediante el conector cloud de SANtricity utilizan API basadas en REST.
+
+
+NOTE: La herramienta SANtricity Cloud Connector quedó obsoleta y ya no está disponible para su descarga.
+
+
+
+== Consideraciones
+
+Cuando utilice estos procedimientos, tenga en cuenta que:
+
+* Las tareas de configuración y backup/restauración descritas en estos procedimientos se aplican a la versión de la interfaz gráfica de usuario del conector cloud de SANtricity.
+* Los flujos de trabajo de la API DE REST para la aplicación SANtricity Cloud Connector no se describen en estos procedimientos. Para desarrolladores con experiencia, hay puntos finales disponibles para cada operación de SANtricity Cloud Connector en la documentación de API. Para acceder a la documentación de la API, vaya a. ``http://<hostname.domain>:<port>/docs`` mediante un navegador.
+
+
+
+
+== Tipos de backups
+
+El conector en cloud de SANtricity proporciona dos tipos de backups: Backups basados en imágenes y basados en archivos.
+
+* *Copia de seguridad basada en imágenes*
++
+Un backup basado en imágenes lee los bloques de datos sin formato de un volumen Snapshot y los realiza un backup a un archivo conocido como imagen. Se realiza un backup de todos los bloques de datos del volumen Snapshot, incluidos los bloques vacíos, los bloques ocupados por archivos eliminados, los bloques asociados con la partición y los metadatos del sistema de archivos. Los backups de imágenes tienen la ventaja de almacenar toda la información en el volumen Snapshot, independientemente del esquema de partición o del sistema de archivos que contenga.
+
++
+La imagen no se almacena en el destino de copia de seguridad como un único archivo, sino que se divide en una serie de fragmentos de datos, que tienen un tamaño de 64 MB. Los fragmentos de datos permiten que SANtricity Cloud Connector utilice varias conexiones con el destino de backup y, de este modo, mejora el rendimiento del proceso de backup.
+
++
+Para los backups de StorageGRID y Amazon Web Services (S3), cada fragmento de datos utiliza una clave de cifrado independiente para cifrar el fragmento. La clave es un hash SHA256 que consiste en la combinación de una frase de acceso proporcionada por el usuario y el hash SHA256 de los datos del usuario. Para backups en AltaVault, el conector cloud de SANtricity no cifra los fragmentos de datos mientras AltaVault realiza esta operación.
+
+* *Copia de seguridad basada en archivos*
++
+Un backup basado en archivos lee los archivos contenidos con una partición de sistema de ficheros y los realiza una copia de seguridad en una serie de fragmentos de datos de 64 MB de tamaño. Un backup basado en archivos no realiza un backup de los archivos eliminados ni de los metadatos de particiones y sistemas de archivos. Al igual que sucede con los backups basados en imágenes, los fragmentos de datos permiten que SANtricity Cloud Connector utilice varias conexiones con el destino de backup, lo que mejora el rendimiento del proceso de backup.
+
++
+Para los backups de StorageGRID y Amazon Web Services, cada fragmento de datos utiliza una clave de cifrado independiente para cifrar el fragmento. La clave es un hash SHA256 que consiste en la combinación de frase de contraseña proporcionada por el usuario y el hash SHA256 de los datos del usuario. Para los backups en AltaVault, los fragmentos de datos no están cifrados por SANtricity Cloud Connector porque AltaVault realiza esta operación.
+
+

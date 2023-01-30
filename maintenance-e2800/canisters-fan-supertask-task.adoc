@@ -1,0 +1,149 @@
+---
+permalink: maintenance-e2800/canisters-fan-supertask-task.html 
+sidebar: sidebar 
+keywords: E2800 replace 60-drive fan canister, replacing E2800 fan canister, E2800 replace fan, E2800, E-Series, eseries 
+summary: Sustituya un contenedor de ventiladores en una bandeja de controladoras o una bandeja de unidades de 60 unidades. 
+---
+= Reemplazar contenedor de ventilador E2800 (60 unidades)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible sustituir un contenedor de ventilador en una cabina E2800 por una bandeja de 60 unidades, que incluye los siguientes tipos de bandeja:
+
+* Bandeja de controladoras E2860
+* Bandeja de unidades DE460C
+
+
+.Acerca de esta tarea
+Cada bandeja de controladoras o bandeja de unidades de 60 unidades incluye dos contenedores de ventilador. Si un compartimento de ventiladores falla, debe reemplazarlo Lo antes posible. para garantizar que la bandeja tenga la refrigeración adecuada.
+
+
+CAUTION: *Posible daño en el equipo* -- Si realiza este procedimiento con la alimentación encendida, debe terminarlo en un plazo de 30 minutos para evitar la posibilidad de sobrecalentamiento del equipo.
+
+.Antes de empezar
+* Revise los requisitos del contenedor de ventilador en link:canisters-overview-supertask-concept.html["Requisitos para la sustitución del compartimento"].
+* Revise los detalles en Recovery Guru para confirmar que hay un problema con el contenedor de ventilador y seleccione *Volver a comprobar* en Recovery Guru para asegurarse de que no se deba tratar primero ningún otro elemento.
+* Compruebe que el LED de atención ámbar del compartimento de ventiladores esté encendido, lo que indica que el ventilador tiene una falla. Póngase en contacto con el soporte técnico para obtener ayuda si los dos compartimentos de ventiladores de la bandeja tienen encendidos los LED de atención ámbar.
+
+
+.Lo que necesitará
+* Un contenedor de ventilador (ventilador) de repuesto que es compatible con su bandeja de controladoras o modelo de bandeja de unidades.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+
+
+
+
+== Paso 1: Preparar la sustitución del contenedor de ventilador
+
+Prepare para sustituir un contenedor de ventilador en una bandeja de controladoras de 60 unidades o una bandeja de unidades. Para ello, recoja datos de soporte sobre la cabina de almacenamiento y localice el componente con error.
+
+.Pasos
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. En SANtricity System Manager, determine qué contenedor de ventilador tiene errores.
++
+.. Seleccione *hardware*.
+.. Mire el ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icono a la derecha de las listas desplegables *Bandeja* para determinar qué bandeja tiene el compartimento de ventiladores con errores.
++
+Si un componente falla, este icono está en rojo.
+
+.. Cuando encuentre la bandeja con un icono rojo, seleccione *Mostrar parte posterior de la bandeja*.
+.. Seleccione el compartimento de ventiladores o el icono de ventilador rojo.
+.. En la ficha *ventiladores*, observe los Estados de los contenedores de ventilador para determinar qué contenedor de ventilador se debe sustituir.
++
+Es necesario sustituir un componente con un estado *fallido*.
+
++
+
+NOTE: Si el segundo compartimento de ventiladores de la bandeja no tiene el estado *óptimo*, no intente intercambiar en caliente el compartimento de ventiladores con errores. En su lugar, póngase en contacto con el soporte técnico para obtener ayuda.
+
+
+
++
+También se puede encontrar información sobre el contenedor de ventilador con errores en el área Detalles de Recovery Guru, o bien se puede revisar el registro de eventos en Soporte y filtrar por tipo de componente.
+
+. En la parte posterior de la cabina de almacenamiento, observe los LED de atención para localizar el contenedor de ventilador que debe quitar.
++
+Debe sustituir el contenedor de ventilador que tiene encendido el LED de atención.
+
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e2800.gif[28 dwg e2860 de460c un único contenedor de ventilador con llamada led maint e2800]
+
++
+*(1)* _LED de atención_. Si este LED se muestra como *ámbar fijo*, el ventilador tiene un fallo.
+
+
+
+
+
+== Paso 2: Quite el contenedor de ventilador con errores e instale uno nuevo
+
+Quite un contenedor de ventilador con errores para que pueda reemplazarlo por un nuevo.
+
+
+CAUTION: Si no apaga la alimentación de la cabina de almacenamiento, asegúrese de quitar y sustituir el contenedor de ventilador en un plazo de 30 minutos para evitar que se sobrecaliente el sistema.
+
+.Pasos
+. Desembale el nuevo contenedor de ventilador y colóquelo en una superficie nivelada cerca de la bandeja.
++
+Guarde todo el material de embalaje para utilizarlo cuando devuelva el ventilador defectuoso.
+
+. Pulse la pestaña naranja para liberar el asa del contenedor de ventilador.
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[28 dwg e2860 de460c un único contenedor de ventilador con pestaña naranja llamada maint e2800]
+
++
+*(1)* _TAB que presiona para liberar el asa_ del contenedor de ventilador
+
+. Use el asa del contenedor de ventilador para sacar el contenedor de ventilador de la bandeja.
++
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[asa del contenedor de ventilador de460c de 28 dwg e2860 con llamada maint e2800]
+
++
+*(1)* _handle para sacar el contenedor del ventilador_
+
+. Deslice completamente el compartimento de ventiladores de repuesto hacia la bandeja y mueva el asa del contenedor de ventilador hasta que encaje con la lengüeta naranja.
+
+
+
+
+== Paso 3: Sustitución completa del contenedor de ventilador
+
+Confirme que el contenedor de ventilador nuevo funciona correctamente, recopile datos de soporte y reanude las operaciones normales.
+
+.Pasos
+. Compruebe el LED de atención ámbar del nuevo contenedor de ventilador.
++
+
+NOTE: Después de sustituir el compartimento de ventiladores, el LED de atención se mantiene encendido (en ámbar fijo) mientras el firmware comprueba que el contenedor de ventilador se haya instalado correctamente. El LED se apaga una vez completado este proceso.
+
+. En Recovery Guru en SANtricity System Manager, seleccione *Volver a comprobar* para verificar que se haya resuelto el problema.
+. Si todavía se notifica un contenedor de ventilador con errores, repita los pasos del <<Paso 2: Quite el contenedor de ventilador con errores e instale uno nuevo>>. Si el problema persiste, póngase en contacto con el soporte técnico.
+. Retire la protección antiestática.
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Devuelva la pieza que ha fallado a NetApp, como se describe en las instrucciones de RMA que se suministran con el kit.
+
+
+.El futuro
+Se completó la sustitución del contenedor de ventilador. Es posible reanudar las operaciones normales.

@@ -1,0 +1,55 @@
+---
+permalink: config-linux/iscsi-verify-ip-network-connections-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Compruebe las conexiones de red del Protocolo de Internet \(IP\) mediante las pruebas ping para asegurarse de que el host y la matriz pueden comunicarse.' 
+---
+= Compruebe las conexiones de red IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para verificar las conexiones de red del Protocolo de Internet (IP), utilice las pruebas ping para asegurarse de que el host y la matriz pueden comunicarse.
+
+.Pasos
+. En el host, ejecute uno de los siguientes comandos, en función de si se habilitan las tramas gigantes:
++
+** Si las tramas gigantes no están habilitadas, ejecute este comando:
++
+[listing]
+----
+ping -I <hostIP\> <targetIP\>
+----
+** Si se habilitan las tramas gigantes, ejecute el comando ping con un tamaño de carga útil de 8,972 bytes. Los encabezados combinados IP e ICMP son 28 bytes, que cuando se agregan a la carga útil, equivalen a 9,000 bytes. El modificador -s establece el `packet size` bit. El modificador -d establece la opción debug. Estas opciones permiten que se transmitan correctamente las tramas gigantes de 9,000 bytes entre el iniciador iSCSI y el destino.
++
+[listing]
+----
+ping -I <hostIP\> -s 8972 -d <targetIP\>
+----
++
+En este ejemplo, la dirección IP de destino iSCSI es `192.0.2.8`.
+
++
+[listing]
+----
+#ping -I 192.0.2.100 -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Número a `ping` Comando desde cada dirección de iniciador de host (la dirección IP del puerto Ethernet de host que se utiliza para iSCSI) a cada puerto iSCSI de la controladora. Ejecute esta acción desde cada servidor host en la configuración, cambiando las direcciones IP según sea necesario.
++
+
+NOTE: Si falla el comando (por ejemplo, devuelve `Packet needs to be fragmented but DF set`), verifique el tamaño de MTU (compatibilidad con tramas gigantes) para las interfaces Ethernet en el servidor host, la controladora de almacenamiento y los puertos del switch.
+
+

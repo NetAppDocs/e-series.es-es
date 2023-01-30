@@ -1,0 +1,520 @@
+---
+permalink: maintenance-e2800/controllers-simplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
+summary: Es posible sustituir un contenedor de controladora con errores en una configuración simple. 
+---
+= Sustituya la controladora en la configuración simple de E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible sustituir un contenedor de controladora con error en una configuración simple (controladora única), en las siguientes bandejas de controladoras:
+
+* Bandeja de controladoras E2812
+* Bandeja de controladoras E2824
+
+
+.Acerca de esta tarea
+El contenedor de controladora contiene una tarjeta de controladora, una batería y una tarjeta de interfaz del host (HIC) opcional. Cuando reemplaza un compartimento de controladoras con errores, debe quitar la batería y la HIC, si hay alguna instalada, del compartimento de controladoras original y instalarlas en el compartimento de controladoras de reemplazo.
+
+.Lo que necesitará
+* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
+
+
+== Paso 1: Preparar la sustitución de la controladora (simple)
+
+Para preparar el reemplazo de un contenedor de controladora, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. Luego, es posible detener las operaciones de I/o del host y apagar la bandeja de controladoras.
+
+.Pasos
+. Si es posible, anote en qué versión del software de sistema operativo SANtricity está instalada actualmente en la controladora. Abra SANtricity System Manager y seleccione MENU:Soporte[Centro de actualización > Ver inventario de software y firmware].
+. Si la función Drive Security está habilitada, asegúrese de que existe una clave guardada y de que conoce la frase de contraseña necesaria para instalarla.
++
+
+CAUTION: *Posible pérdida de acceso a los datos*: Si todas las unidades de la cabina de almacenamiento tienen la seguridad habilitada, la nueva controladora no podrá acceder a la cabina de almacenamiento hasta que desbloquee las unidades seguras mediante Enterprise Management Window de SANtricity Storage Manager.
+
++
+Para guardar la llave (puede que no sea posible, según el estado del controlador):
+
++
+.. En SANtricity System Manager, seleccione MENU:Configuración[sistema].
+.. En *Gestión de claves de seguridad de la unidad*, seleccione *clave de copia de seguridad*.
+.. En los campos *define a pass phrase/Re-enter pass phrase*, introduzca y confirme una frase de contraseña para esta copia de backup.
+.. Haga clic en *copia de seguridad*.
+.. Registre la información clave en una ubicación segura y, a continuación, haga clic en *Cerrar*.
+
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, es posible utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. Seleccione menú:Soporte[Centro de soporte > Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, puede perder datos.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
+. Apague ambos switches de alimentación de la bandeja de controladoras.
+. Espere a que se apagen todos los LED de la bandeja de controladoras.
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que el campo *Aceptar para eliminar* en el área Detalles muestra *Sí*, lo que indica que es seguro eliminar este componente.
++
+No se podrá acceder a los datos en la cabina de almacenamiento hasta que se sustituya el compartimento de controladoras.
+
+
+
+
+
+== Paso 2: Quitar la controladora con errores (simple)
+
+Sustituya el compartimento con errores por uno nuevo.
+
+
+
+=== Paso 2a: Quitar el contenedor de controladora (simple)
+
+Quite un contenedor de controladora.
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete cada cable conectado al compartimento de controladoras.
+. Desconecte todos los cables del compartimento de controladoras.
++
+
+CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
+
+. Si los puertos HIC del contenedor de controladoras utilizan transceptores SFP+, quite los SFP.
++
+Como debe quitar la HIC del compartimento de controladoras con errores, debe quitar todos los SFP de los puertos HIC. Sin embargo, puede dejar cualquier SFP instalado en los puertos de host de la placa base. Cuando esté listo para cablear la nueva controladora, solo tiene que mover esos SFP al nuevo compartimento de controladoras. Este método es especialmente útil si se dispone de más de un tipo de SFP.
+
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que este LED se apague antes de quitar el compartimento de controladoras.
+
++
+
+NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+
++
+*(1)* _Cache Active LED_
+
+. Apriete el pestillo de la palanca de leva hasta que se suelte y, a continuación, abra la palanca de leva a la derecha para liberar el contenedor del controlador del plano medio.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retire el contenedor de la controladora simplex maint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
+. Con dos manos y el asa de leva, deslice el recipiente del controlador para sacarlo del estante.
++
+
+CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
+
++
+Al retirar el cartucho del controlador, una solapa se balancea en su lugar para bloquear el compartimento vacío, lo que ayuda a mantener el flujo de aire y la refrigeración.
+
+. Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia arriba.
+. Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
+
+
+
+
+=== Paso 2b: Retirar la batería (simple)
+
+Después de quitar el compartimento de controladoras de la bandeja de controladoras, quite la batería.
+
+.Pasos
+. Retire la cubierta del contenedor del controlador presionando el botón hacia abajo y deslizando la cubierta hacia fuera.
+. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+
++
+*(1)* _Internal Cache Active_
+
++
+*(2)* _Battery_
+
+. Localice el pestillo de liberación azul de la batería.
+. Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retire la batería principal e2800]
+
++
+*(1)* _pestillo de liberación de la batería_
+
++
+*(2)* _Battery_
+
+. Levante la batería y sáquela del compartimento de la controladora.
+
+
+
+
+=== Paso 2c: Quitar la tarjeta de interfaz del host (simple)
+
+Si el contenedor de controladora incluye una tarjeta de interfaz del host (HIC), quite la HIC del contenedor de controladora original para poder reutilizarla en el nuevo contenedor de controladora.
+
+.Pasos
+. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC al compartimento de controladoras.
++
+Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+
+. Quite la placa frontal de HIC.
+. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
+. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
++
+
+CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+
++
+*(1)* _Tarjeta de interfaz del host_
+
++
+*(2)* _thumbtornillos_
+
+. Coloque la HIC en una superficie sin estática.
+
+
+
+
+== Paso 3: Instale una controladora nueva (simple)
+
+Instale un compartimento de controladoras nuevo para sustituir el que presenta errores.
+
+
+
+=== Paso 3a: Instalación de la batería (simple)
+
+Instale la batería en el compartimento de controladoras de reemplazo. Puede instalar la batería que quitó del compartimento de controladoras original o instalar una batería nueva que haya pedido.
+
+.Pasos
+. Desembale el contenedor del controlador de repuesto y configúrelo en una superficie plana y sin estática de modo que la cubierta extraíble quede orientada hacia arriba.
++
+Guarde los materiales de empaque que se deben usar para enviar el compartimento de controladoras con errores.
+
+. Presione el botón de cubierta y deslice la cubierta hacia fuera.
+. Oriente el compartimento de la controladora de manera que la ranura de la batería esté orientada hacia usted.
+. Inserte la batería en el compartimento del controlador ligeramente hacia abajo.
++
+Debe insertar la brida metálica en la parte frontal de la batería en la ranura de la parte inferior del compartimento del controlador y deslizar la parte superior de la batería por debajo del pasador de alineación pequeño en el lado izquierdo del contenedor.
+
+. Mueva el pestillo de la batería hacia arriba para fijar la batería.
++
+Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insertar la batería de matiint e2800]
+
++
+*(1)* _pestillo de liberación de la batería_
+
++
+*(2)* _Battery_
+
+. Gire el compartimento de controladoras para confirmar que la batería se ha instalado correctamente.
++
+
+CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal de la batería debe estar completamente insertada en la ranura del contenedor del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la brida metálica podría entrar en contacto con la placa del controlador, causando daños al controlador cuando se aplica alimentación.
+
++
+** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
+** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador:
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+
+
+=== Paso 3b: Instale la tarjeta de interfaz del host (simple)
+
+Si quitó una tarjeta de interfaz del host (HIC) del contenedor de controladora original, instale esa HIC en el nuevo contenedor de controladora.
+
+.Pasos
+. Con un destornillador Phillips del número 1, quite los cuatro tornillos que fijan la placa frontal vacía al compartimento de la controladora de repuesto y quite la placa frontal.
+. Alinee los tres tornillos de ajuste manual de la HIC con los orificios correspondientes de la controladora y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
++
+Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
+
+. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
++
+
+CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+
++
+*(1)* _Tarjeta de interfaz del host_
+
++
+*(2)* _thumbtornillos_
+
+. Apriete a mano los tornillos de mariposa HIC.
++
+No utilice un destornillador, o puede apretar los tornillos en exceso.
+
+. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó del compartimento de controladoras original al nuevo compartimento de controladoras con cuatro tornillos.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+
+
+
+
+
+=== Paso 3c: Instale el contenedor de controladora nuevo (simple)
+
+Después de instalar la batería y la HIC, si se instaló inicialmente uno, puede instalar el compartimento de controladoras nuevo en la bandeja de controladoras.
+
+.Pasos
+. Vuelva a instalar la cubierta en el contenedor del controlador deslizando la cubierta de atrás hacia delante hasta que el botón haga clic.
+. Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
+. Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retire el contenedor de la controladora simplex maint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _Cam handle_
+
+. Mueva la palanca de leva hacia la izquierda para bloquear el contenedor del controlador en su lugar.
+. Instale los SFP desde la controladora original en los puertos de host de la controladora nueva y vuelva a conectar todos los cables.
++
+Si está usando más de un protocolo de host, asegúrese de instalar los SFP en los puertos de host correctos.
+
+. Determine cómo se asignará una dirección IP a la controladora de reemplazo, según se haya conectado el puerto Ethernet 1 (con la etiqueta P1) a una red con un servidor DHCP y si todas las unidades están protegidas.
++
+|===
+| ¿Utiliza el servidor DHCP? | ¿Todas las unidades están protegidas? | Pasos 
+
+
+ a| 
+Sí
+ a| 
+No
+ a| 
+La nueva controladora obtiene su dirección IP del servidor DHCP. Este valor puede ser diferente de la dirección IP de la controladora original. Busque la dirección MAC en la etiqueta situada en la parte posterior de la controladora de reemplazo y comuníquese con el administrador de red con esta información para obtener la dirección IP que asignó el servidor DHCP.
+
+
+
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+La nueva controladora obtiene su dirección IP del servidor DHCP. Este valor puede ser diferente de la dirección IP de la controladora original. Busque la dirección MAC en la etiqueta situada en la parte posterior de la controladora de reemplazo y comuníquese con el administrador de red con esta información para obtener la dirección IP que asignó el servidor DHCP. Luego puede desbloquear las unidades mediante la interfaz de línea de comandos.
+
+
+
+ a| 
+No
+ a| 
+No
+ a| 
+La nueva controladora adopta la dirección IP de la controladora que quitó.
+
+
+
+ a| 
+No
+ a| 
+Sí
+ a| 
+Debe configurar manualmente la dirección IP de la nueva controladora. (Es posible reutilizar la dirección IP de la controladora antigua o usar una dirección IP nueva). Cuando la controladora tiene una dirección IP, es posible desbloquear las unidades mediante la interfaz de línea de comandos. Una vez desbloqueadas las unidades, la nueva controladora volverá a usar automáticamente la dirección IP de la controladora original.
+
+|===
+
+
+
+
+== Paso 4: Sustitución completa de la controladora (simple)
+
+Encienda la bandeja de controladoras, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Encienda los dos switches de alimentación que se encuentran en la parte posterior de la bandeja de controladoras.
++
+** No apague los interruptores de alimentación durante el proceso de encendido, que normalmente tarda 90 segundos o menos en completarse.
+** Los ventiladores de cada bandeja son muy altos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Cuando se arranca la controladora, compruebe los LED de la controladora y la pantalla de siete segmentos.
++
+** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *SD*, *_blank_* para indicar que el controlador está realizando el procesamiento de comienzo del día (SOD). Una vez que se inició correctamente una controladora, su pantalla de siete segmentos debe mostrar el ID de soporte.
+** El LED de atención ámbar del controlador se enciende y se apaga, a menos que se produzca un error.
+** Se encienden los indicadores LED verdes de Host Link.
++
+
+NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maint e2800]
+
++
+*(1)* _LED de atención (ámbar)_
+
++
+*(2)* _pantalla de siete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Si alguno de los LED de atención de la bandeja de controladoras permanece encendido, compruebe que el compartimento de controladoras se haya instalado correctamente y que todos los cables estén conectados correctamente. Si es necesario, vuelva a instalar el contenedor de la controladora.
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Si la cabina de almacenamiento tiene unidades seguras, importe la clave de seguridad de la unidad; de lo contrario, vaya al paso siguiente. Siga el procedimiento adecuado a continuación para una cabina de almacenamiento con todas las unidades seguras o un conjunto de unidades seguras o no seguras.
++
+
+NOTE: _Unsable_ son unidades sin asignar, unidades de repuesto globales o unidades que forman parte de un grupo de volúmenes o un pool que no están protegidas por la función Drive Security. _Secure Drives_ son unidades asignadas que forman parte de un grupo de volúmenes o pool de discos protegido mediante Drive Security.
+
++
+** *Sólo unidades seguras (no unidades no seguras)*:
++
+... Acceda a la interfaz de línea de comandos (CLI) de la cabina de almacenamiento.
+... Introduzca el siguiente comando para importar la clave de seguridad:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+donde:
+
++
+**** `C:/file.slk` representa la ubicación del directorio y el nombre de la clave de seguridad de la unidad
+**** `passPhrase` Es la frase de contraseña necesaria para desbloquear el archivo una vez que se importó la clave de seguridad, se reinicia la controladora y la nueva controladora adopta la configuración guardada de la cabina de almacenamiento.
+
+
+... Vaya al siguiente paso para confirmar que el estado de la nueva controladora es óptimo.
+
+
+** *Mezcla de unidades seguras y no seguras*:
++
+... Recoja el bundle de soporte y abra el perfil de la cabina de almacenamiento.
+... Busque y registre todas las ubicaciones de las unidades no seguras que se encuentran en el paquete de soporte.
+... Apague el sistema.
+... Quite las unidades no seguras.
+... Sustituya la controladora.
+... Encienda el sistema y espere a que la pantalla de siete segmentos muestre el número de bandeja.
+... En SANtricity System Manager, seleccione MENU:Configuración[sistema].
+... En la sección Gestión de claves de seguridad, seleccione *Crear/Cambiar clave* para crear una nueva clave de seguridad.
+... Seleccione *Desbloquear unidades seguras* para importar la clave de seguridad que guardó.
+... Ejecute el `set allDrives nativeState` Comando de la CLI.
++
+La controladora se reiniciará automáticamente.
+
+... Espere a que el controlador se inicie y a que la pantalla de siete segmentos muestre el número de bandeja o un L5 parpadeante.
+... Apague el sistema.
+... Vuelva a instalar las unidades no seguras.
+... Restablece la controladora mediante System Manager de SANtricity.
+... Encienda el sistema y espere a que la pantalla de siete segmentos muestre el número de bandeja.
+... Vaya al siguiente paso para confirmar que el estado de la nueva controladora es óptimo.
+
+
+
+
+. En SANtricity System Manager, confirme que el estado de la nueva controladora es óptimo.
++
+.. Seleccione *hardware*.
+.. Para la bandeja del controlador, seleccione *Mostrar parte posterior de la bandeja*.
+.. Seleccione el compartimento de controladoras que reemplazó.
+.. Seleccione *Ver configuración*.
+.. Confirme que el estado * del controlador es óptimo.
+.. Si el estado no es óptimo, resalte el controlador y seleccione *colocar en línea*.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione menú:Soporte[Centro de soporte > *Diagnóstico].
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se completó el reemplazo de una controladora. Es posible reanudar las operaciones normales.
