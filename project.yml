@@ -34,7 +34,7 @@ sidebar:
         url: "/getting-started/learn-software-concept.html"
       - title: Vídeos de E-Series
         url: "/getting-started/learn-video-concept.html"
-    - title: Póngase en marcha con E-Series
+    - title: Inicio rápido
       url: "/getting-started/getup-run-concept.html"
   - title: Instale el hardware
     entries:

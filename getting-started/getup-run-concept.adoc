@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
 summary: Para empezar a trabajar con sistemas E-Series, instala componentes de hardware, configura sistemas host y configura almacenamiento. 
 ---
-= Póngase en marcha con E-Series
+= Inicio rápido de E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,70 +13,61 @@ summary: Para empezar a trabajar con sistemas E-Series, instala componentes de h
 [role="lead"]
 Para empezar a trabajar con sistemas E-Series, instala componentes de hardware, configura sistemas host y configura almacenamiento.
 
-La implementación de la cabina de almacenamiento implica el siguiente flujo de trabajo:
-
-image::../media/doccenterworkflow.gif[flujo de trabajo doccentroc]
-
-
-
-== Paso 1: Instale el hardware
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Instale el hardware
+[role="quick-margin-para"]
 Para instalar el hardware E-Series, acceda a las instrucciones de instalación y configuración correspondientes al tipo de cabina de almacenamiento y bandeja:
 
+[role="quick-margin-list"]
 * link:../install-hw-ef600/index.html["Serie EF600 o EF300 con bandeja de 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Serie E2800/EF280 o E5700/EF570 con bandejas de 12 o 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Serie E2800 o E5700 con bandeja de 60 unidades"^]
 
 
-
-
-== Paso 2: Configure el armario
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Configure el armario
+[role="quick-margin-para"]
 Si va a configurar un nuevo armario para la cabina de almacenamiento, debe mover el armario a su ubicación permanente, instalar el hardware y conectarlo a una fuente de alimentación. Para configurar el armario, acceda a las siguientes instrucciones:
 
+[role="quick-margin-list"]
 * link:../install-hw-cabinet/index.html["Instale armarios 40U 3040"^]
 
 
-
-
-== Paso 3: Instalar los rieles
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Instale los rieles
+[role="quick-margin-para"]
 Cuando se suministran, cada bandeja incluye hardware para montaje en rack. Para obtener instrucciones detalladas sobre la instalación de los rieles, seleccione sus tipos de rieles:
 
+[role="quick-margin-list"]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalar rieles de soporte ajustables"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Instale un compartimento 2U en un rack de cuatro parantes"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Instale la bandeja DE224C en un rack de dos parantes"^]
 * http://docs.netapp.com/platstor/topic/com.netapp.doc.hw-rail-superrail/home.html["Instalar SuperRail en un rack de cuatro puestos (bandejas DE224C/DE460C)"^]
 
 
-
-
-== Paso 4: Conectar los cables
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"] Conectar los cables
+[role="quick-margin-para"]
 Las instrucciones de instalación y configuración (paso 1) incluyen instrucciones para conectar cables. Sin embargo, si necesita listas de cables y transceptores compatibles, prácticas recomendadas para cableado e información detallada sobre los puertos de host para la controladora, acceda a las siguientes instrucciones:
 
+[role="quick-margin-list"]
 * link:../install-hw-cabling/index.html["Conecte el cable del hardware de E-Series"]
 
 
-
-
-== Paso 5: Configure los hosts
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"] Configurar hosts
+[role="quick-margin-para"]
 Para que el almacenamiento esté disponible para un host, seleccione una guía para el tipo de sistema operativo del host:
 
+[role="quick-margin-list"]
 * link:../config-linux/index.html["Configuración exprés de Linux"]
 * link:../config-vmware/index.html["Configuración exprés de VMware"]
 * link:../config-windows/index.html["Configuración exprés de Windows"]
 
 
-
-
-== Paso 6: Configure el almacenamiento
-
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Configurar el almacenamiento
+[role="quick-margin-para"]
 Para configurar el almacenamiento, puede acceder a la interfaz web, System Manager, apuntando al explorador a la dirección IP de la controladora. Un asistente de configuración le ayuda a comenzar con la configuración del sistema. Como alternativa, también puede usar la interfaz de línea de comandos (CLI).
 
+[role="quick-margin-para"]
 Seleccione la interfaz que desea utilizar:
 
+[role="quick-margin-list"]
 * https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda del administrador del sistema de SANtricity para 11.7x"]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda de administrador del sistema de SANtricity para 11.6x"]
 
