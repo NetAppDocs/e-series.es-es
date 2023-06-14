@@ -8867,4 +8867,7 @@
   <block id="4d34b8dd475537b31eded726b5f109a4" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Configurar hosts</block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Seis</block>
   <block id="8cb633130263590fcb215001ddbab715" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Configurar el almacenamiento</block>
+  <block id="17fbe20fbbd5b537dbcef5b0ec0d1dea" category="section-title">Nuevas funciones en la versión 11,75</block>
+  <block id="a4b7d4d589fe2fdcc52596432d9392ed" category="paragraph">Permita actualizaciones a 11,80.x</block>
+  <block id="7c2f19d039e9dc3e3394a748e8ac016e" category="paragraph">Los sistemas deben ejecutar 11.70.5 para actualizarse a la versión 11,80.x o una versión posterior. FIPS 140-3 ahora es compatible con ciertas unidades para SAS y SSD basadas en NVMe. Las unidades SSD de nivel FIPS 140-3 pueden coexistir con unidades SSD de nivel FIPS 140-2, siempre y cuando las unidades estén basadas en NVMe o en todas las basadas en SAS. Cuando se usa una combinación de estos niveles en grupos de volúmenes y pools de discos, tenga en cuenta que el grupo o el pool funcionarán con el nivel de seguridad más bajo (140-2).</block>
 </blocks>

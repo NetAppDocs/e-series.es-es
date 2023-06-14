@@ -16,6 +16,21 @@ En las tablas siguientes se describen las nuevas funciones del sistema operativo
 
 
 
+== Nuevas funciones en la versión 11,75
+
+[cols="35,65"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Permita actualizaciones a 11,80.x
+ a| 
+Los sistemas deben ejecutar 11.70.5 para actualizarse a la versión 11,80.x o una versión posterior. FIPS 140-3 ahora es compatible con ciertas unidades para SAS y SSD basadas en NVMe. Las unidades SSD de nivel FIPS 140-3 pueden coexistir con unidades SSD de nivel FIPS 140-2, siempre y cuando las unidades estén basadas en NVMe o en todas las basadas en SAS. Cuando se usa una combinación de estos niveles en grupos de volúmenes y pools de discos, tenga en cuenta que el grupo o el pool funcionarán con el nivel de seguridad más bajo (140-2).
+
+|===
+
+
 == Nuevas funciones en la versión 11.74
 
 [cols="35h,~"]
