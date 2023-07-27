@@ -14,9 +14,9 @@ summary: Instale E2800 o E5700 en un rack de dos parantes o un armario del siste
 Aprenda a instalar E5724, EF570, EF280, E2812, E2824, Sistema de almacenamiento DE212C o DE224C en un rack de dos puestos o un armario rack de sistema de NetApp.
 
 .Antes de empezar
-Antes de instalar el hardware, asegúrese de hacer lo siguiente:
+Asegúrese de hacer lo siguiente:
 
-* Registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
 * Prepare un área de trabajo plana y sin estática.
 * Obtenga una muñequera ESD y tome precauciones antiestáticas.
 

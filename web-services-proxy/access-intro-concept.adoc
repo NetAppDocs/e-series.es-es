@@ -27,6 +27,7 @@ El control de acceso basado en roles (RBAC) asocia usuarios predefinidos con rol
 
 En la siguiente tabla se describe cada rol.
 
+[cols="35h,~"]
 |===
 | Función | Descripción 
 
@@ -62,6 +63,7 @@ Las cuentas de usuario predeterminadas se definen en el archivo users.properties
 
 En la siguiente tabla, se enumeran los inicios de sesión de usuario disponibles para el proxy de servicios web.
 
+[cols="35h,~"]
 |===
 | Inicio de sesión de usuario predefinido | Descripción 
 

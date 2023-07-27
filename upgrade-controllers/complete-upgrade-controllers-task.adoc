@@ -47,6 +47,8 @@ En primer lugar, debe crear una clave de seguridad interna y, luego, importar la
 
 .. Cree una clave de seguridad interna
 .. Swap de controladora con gestión de claves interna y una o más unidades protegidas
+.. Ejecute el comando SMclient, `set allDrives nativeState`.
+.. Espere que se reinicien ambas controladoras.
 
 
 
@@ -77,6 +79,8 @@ Primero debe desbloquear las unidades seguras mediante el procedimiento interno 
 
 .. Swap de controladora con gestión de claves interna y una o más unidades protegidas
 .. Cree una clave de seguridad externa
+.. Ejecute el comando SMclient, `set allDrives nativeState`.
+.. Espere que se reinicien ambas controladoras.
 
 
 

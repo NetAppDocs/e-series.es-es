@@ -25,15 +25,16 @@ Cuando se reemplaza un contenedor de controladoras con errores, es necesario qui
 ** El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
 
 
+* Asegúrese de tener lo siguiente:
++
+** Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Un destornillador Phillips número 1
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un área de trabajo plana y estática libre.
-* Un destornillador Phillips número 1
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

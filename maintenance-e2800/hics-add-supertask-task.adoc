@@ -20,19 +20,20 @@ Durante este procedimiento, debe apagar la cabina de almacenamiento, instalar la
 .Antes de empezar
 * Revisar link:hics-overview-supertask-concept.html["Requisitos para reemplazar E2800 HIC"].
 * Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, esto se debe a que ambas controladoras deben tener la misma configuración de HIC cuando están encendidas.)
-
-
-.Lo que necesitará
-* Una o dos HIC, según si hay una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un destornillador Phillips número 1.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Cualquier hardware de host necesario instalado para los puertos de host nuevos, como los switches o los adaptadores de bus de host (HBA).
-* Todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los puertos de host nuevos.
+* Asegúrese de tener lo siguiente:
++
+** Una o dos HIC, según si hay una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un destornillador Phillips número 1.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Cualquier hardware de host necesario instalado para los puertos de host nuevos, como los switches o los adaptadores de bus de host (HBA).
+** Todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los puertos de host nuevos.
 +
 Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] y la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"^].
 
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
 
 
 

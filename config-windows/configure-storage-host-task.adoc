@@ -15,8 +15,11 @@ Dado que un nuevo LUN está sin conexión y no tiene ninguna partición ni siste
 
 Es posible inicializar el disco como un disco básico con una tabla de particiones GPT o MBR. Normalmente, el LUN se formatea con un sistema de archivos como New Technology File System (NTFS).
 
-.Lo que necesitará
-Una LUN detectada por el host.
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
+* Una LUN detectada por el host.
+
 
 .Pasos
 . Desde un símbolo del sistema de Windows, introduzca el `diskpart` contexto.

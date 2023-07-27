@@ -17,7 +17,9 @@ Es posible añadir un segundo compartimento de controladoras en la cabina E2800.
 .Acerca de esta tarea
 En esta tarea, se describe cómo añadir un segundo contenedor de controladora a la versión simple de una bandeja de controladoras E2812, una bandeja de controladoras E2824 o una cabina flash EF280. Este procedimiento también se denomina conversión simple a doble cara, que es un procedimiento en línea. Puede acceder a los datos de la cabina de almacenamiento mientras realiza este procedimiento.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un contenedor de controladora nuevo con el mismo número de pieza que el contenedor de controladora instalado actualmente. (Consulte el paso 1 para verificar el número de pieza.)
 * Una nueva HIC que es idéntica a la HIC en el contenedor de controladora instalado actualmente (solo es necesario si el contenedor de controladora instalado actualmente incluye una tarjeta de interfaz del host).
 * Una muñequera ESD o tome otras precauciones antiestáticas.

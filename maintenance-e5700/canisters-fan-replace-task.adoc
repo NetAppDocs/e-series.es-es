@@ -28,12 +28,13 @@ CAUTION: *Posible daño en el equipo* -- Si realiza este procedimiento con la al
 * Revisar link:canisters-overview-supertask-concept.html["Requisitos para reemplazar el compartimento de E5700"].
 * Revise los detalles en Recovery Guru para confirmar que hay un problema con una batería y para asegurarse de que no sea necesario tratar primero otros elementos.
 * Compruebe que el LED de atención ámbar del compartimento de ventiladores esté encendido, lo que indica que el ventilador tiene una falla. Póngase en contacto con el soporte técnico para obtener ayuda si los dos compartimentos de ventiladores de la bandeja tienen encendidos los LED de atención ámbar.
+* Asegúrese de tener lo siguiente:
++
+** Un contenedor de ventilador (ventilador) de repuesto que es compatible con su bandeja de controladoras o modelo de bandeja de unidades.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Un contenedor de ventilador (ventilador) de repuesto que es compatible con su bandeja de controladoras o modelo de bandeja de unidades.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

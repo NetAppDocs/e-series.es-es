@@ -20,13 +20,14 @@ Cada contenedor de controladora E5700 incluye una batería que conserva los dato
 .Antes de empezar
 * Verifique que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
 * Revisar link:batteries-intro-concept.html["Requisitos para reemplazar la batería de E5700"].
+* Asegúrese de tener lo siguiente:
++
+** Una batería de repuesto.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Una batería de repuesto.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

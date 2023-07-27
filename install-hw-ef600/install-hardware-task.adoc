@@ -14,9 +14,9 @@ summary: Instale el EF300 o EF600 en un rack de dos parantes o un armario del si
 Puede instalar un sistema de almacenamiento EF300 o EF600 en un rack de dos parantes o en un armario del sistema de NetApp.
 
 .Antes de empezar
-Antes de instalar un sistema de almacenamiento EF300 o EF600, asegúrese de lo siguiente:
+Asegúrese de hacer lo siguiente:
 
-* Registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
 * Prepare un área de trabajo plana y sin estática.
 * Tome precauciones antiestáticas.
 

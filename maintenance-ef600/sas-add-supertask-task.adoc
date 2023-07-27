@@ -20,18 +20,20 @@ Cuando añada una tarjeta de expansión SAS, debe apagar la cabina de almacenami
 .Antes de empezar
 * Revisar link:sas-overview-supertask-concept.html["Requisitos para la sustitución de tarjetas de expansión SAS EF300 y EF600"].
 * Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente.
-
-
++
 
 CAUTION: Este procedimiento debe realizarse con ambos contenedores de la controladora. Las configuraciones de la controladora HIC deben coincidir exactamente.
 
-.Lo que necesitará
-* Una tarjeta de ampliación SAS que es compatible con la controladora.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un área de trabajo plana y estática libre.
-* Un destornillador Phillips número 1.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+* Asegúrese de tener lo siguiente:
++
+** Una tarjeta de ampliación SAS que es compatible con la controladora.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Un destornillador Phillips número 1.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
 
 
 

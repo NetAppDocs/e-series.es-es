@@ -24,7 +24,9 @@ Cada contenedor de controladora contiene una tarjeta de controladora, una bater�
 
 NOTE: Esta tarea solo es para cabinas de almacenamiento con dos controladoras (configuración doble).
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir. (Consulte el paso 1 para verificar el número de pieza.)
 * Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 * Destornillador Phillips número 1.

@@ -21,14 +21,15 @@ Cuando sustituye una HIC, puede colocar la controladora en estado sin conexión,
 * Revisar link:hics-overview-supertask-concept.html["Requisitos para reemplazar E2800 HIC"].
 * Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, esto se debe a que ambas controladoras deben tener la misma configuración de HIC cuando están encendidas.)
 * Asegúrese de que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+* Asegúrese de tener lo siguiente:
++
+** Una o dos HIC, según si hay una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras. Si existen dos controladoras, cada controladora debe tener HIC idénticas.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un destornillador Phillips número 1.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Una o dos HIC, según si hay una o dos controladoras en la cabina de almacenamiento. Las HIC deben ser compatibles con las controladoras. Si existen dos controladoras, cada controladora debe tener HIC idénticas.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un destornillador Phillips número 1.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

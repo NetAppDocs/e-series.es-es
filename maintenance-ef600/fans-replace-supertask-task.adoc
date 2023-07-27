@@ -17,7 +17,9 @@ Es posible sustituir un ventilador de una cabina EF300 o EF600.
 .Acerca de esta tarea
 Cada bandeja de controladoras EF300 y EF600 o bandeja de unidades incluye cinco ventiladores. Si se produce un error en un ventilador, debe reemplazarlo Lo antes posible. para garantizar que la bandeja tenga la refrigeración adecuada.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un ventilador de repuesto.
 * Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 * Un área de trabajo plana y estática libre.

@@ -14,7 +14,9 @@ summary: 'Si la controladora incluye una conexión para NVMe over roce \(RDMA ov
 [role="lead"]
 Si la controladora incluye una conexión para NVMe over roce (RDMA over Converged Ethernet), es posible configurar las opciones del puerto NVMe desde la página hardware o la página sistema en SANtricity System Manager.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un puerto de host NVMe over roce en la controladora; de lo contrario, los ajustes de NVMe over roce no estarán disponibles en System Manager.
 * La dirección IP de la conexión de host.
 

@@ -21,6 +21,7 @@ Puede instalar y configurar el proxy de servicios web en un sistema host Windows
 
 La instalación de proxy incluye los siguientes requisitos.
 
+[cols="35h,~"]
 |===
 | Requisito | Descripción 
 

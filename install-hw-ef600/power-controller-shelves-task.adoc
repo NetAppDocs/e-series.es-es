@@ -14,7 +14,7 @@ summary: Conecte los cables de alimentación y encienda las bandejas de unidades
 Aprenda a conectar los cables de alimentación y a encender las bandejas de unidades.
 
 .Antes de empezar
-Antes de encender las bandejas de controladoras, asegúrese de hacer lo siguiente:
+Asegúrese de hacer lo siguiente:
 
 * Instale el hardware.
 * Tome precauciones antiestáticas.

@@ -13,7 +13,7 @@ summary: Si la configuración utiliza el protocolo SRP over InfiniBand, siga los
 [role="lead"]
 Si la configuración utiliza el protocolo SRP over InfiniBand, siga los pasos de esta sección.
 
-.Lo que necesitará
+.Antes de empezar
 Para conectar el host Linux a la cabina de almacenamiento, debe habilitar la pila de controladores InfiniBand con las opciones correspondientes. Los ajustes específicos pueden variar entre las distribuciones de Linux. Compruebe la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener instrucciones específicas y ajustes adicionales recomendados específicos de su solución.
 
 .Pasos

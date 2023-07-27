@@ -19,7 +19,9 @@ Para el protocolo Fibre Channel, se configuran los switches y se determinan los 
 
 Configurar (dividir en zonas) los switches de Fibre Channel (FC) permite que los hosts se conecten a la cabina de almacenamiento y limita el número de rutas. Debe dividir los switches de mediante la interfaz de gestión de los switches de en zonas.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Credenciales de administrador para los switches.
 * El WWPN de cada puerto de iniciador de host y de cada puerto de destino de la controladora conectado al switch. (Use la utilidad HBA para la detección.)
 

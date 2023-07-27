@@ -13,7 +13,9 @@ summary: Una nueva LUN no tiene ninguna partición ni sistema de archivos cuando
 [role="lead"]
 Una nueva LUN no tiene ninguna partición ni sistema de archivos cuando el host Linux lo detecta por primera vez. Debe formatear la LUN para poder utilizarla. De manera opcional, puede crear un sistema de archivos en la LUN.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un LUN que detecta el host.
 * Una lista de discos disponibles. (Para ver discos disponibles, ejecute el `ls` en la carpeta /dev/mapper.)
 

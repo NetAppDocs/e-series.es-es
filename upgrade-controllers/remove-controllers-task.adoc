@@ -19,7 +19,9 @@ Después de preparar la actualización, puede extraer las controladoras y, si es
 
 Quite el compartimento de controladoras para que pueda actualizarlo con uno nuevo. Debe desconectar todos los cables y quitar todos los transceptores SFP. Así, puede sacar el compartimento de controladoras de la bandeja de controladoras.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Una muñequera ESD o tome otras precauciones antiestáticas.
 * Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
 

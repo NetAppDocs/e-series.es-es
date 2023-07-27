@@ -20,7 +20,9 @@ Para el protocolo iSCSI, es posible configurar los switches y la red en el lado 
 
 Los switches se configuran según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Dos redes separadas para una mayor disponibilidad. Asegúrese de aislar el tráfico de iSCSI para separar los segmentos de red.
 * Activación del control de flujo de hardware de envío y recepción *fin a fin*.
 * Control de flujo de prioridad desactivado.
@@ -39,7 +41,9 @@ Consulte la documentación de su proveedor de switches.
 
 Es posible configurar la red iSCSI de varias maneras, según los requisitos de almacenamiento de datos. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Activación del control de flujo de hardware de envío y recepción *fin a fin*.
 * Control de flujo de prioridad desactivado.
 * Si corresponde, tramas gigantes habilitadas
@@ -72,7 +76,9 @@ NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para s
 
 Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * La dirección IP o el nombre de dominio de una de las controladoras de la cabina de almacenamiento.
 * La contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio están configurados para el acceso de seguridad adecuado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.
 

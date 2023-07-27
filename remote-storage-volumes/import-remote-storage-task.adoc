@@ -13,7 +13,7 @@ summary: La importación del dispositivo de almacenamiento remoto se realiza med
 [role="lead"]
 Para iniciar la importación de almacenamiento desde un sistema remoto a un sistema de almacenamiento E-Series local, utilice el asistente Importar almacenamiento remoto en la interfaz de usuario de SANtricity System Manager.
 
-.Lo que necesitará
+.Lo que necesitarás
 * El sistema de almacenamiento E-Series debe estar configurado para comunicarse con el sistema de almacenamiento remoto. Consulte link:setup-remote-volumes-concept.html["Configure el hardware"].
 * Para el sistema de almacenamiento remoto, recopile la siguiente información:
 +

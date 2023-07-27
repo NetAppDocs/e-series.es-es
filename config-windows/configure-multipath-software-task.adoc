@@ -13,8 +13,11 @@ summary: Instale el paquete DSM, que contiene software de acceso múltiple para 
 [role="lead"]
 Para proporcionar una ruta redundante a la cabina de almacenamiento, puede instalar el paquete de Windows DSM de SANtricity y utilizar el paquete de multivía para Windows.
 
-.Lo que necesitará
-Los privilegios de administrador o superusuario correctos.
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
+* Los privilegios de administrador o superusuario correctos.
+
 
 .Acerca de esta tarea
 El software multivía proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. Antes de que pueda utilizar el multipathing, debe instalar el paquete SANtricity Windows DSM. Este paquete contiene el software multivía para Windows.

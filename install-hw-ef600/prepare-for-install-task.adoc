@@ -21,7 +21,7 @@ Si está realizando el cableado del EF300 para la expansión SAS, revise la sigu
 
 
 .Pasos
-. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
 . Asegúrese de que los siguientes elementos están en la caja que ha recibido.
 +
 |===
@@ -125,11 +125,10 @@ image:../media/management_station_inst-hw-ef600_g60b3.png[""]
  a| 
 Un navegador compatible para el software de gestión:
 
-** Google Chrome (versión 78 y posteriores)
-** Microsoft Internet Explorer (versión 11 y posterior)
-** Microsoft Edge (88 y posteriores)
-** Mozilla Firefox (versión 70 y posteriores)
-** Safari (versión 12 y posteriores)
+** Google Chrome (versión 89 y posteriores)
+** Microsoft Edge (90 y posteriores)
+** Mozilla Firefox (versión 80 y posteriores)
+** Safari (versión 14 y posteriores)
 
 
 |===

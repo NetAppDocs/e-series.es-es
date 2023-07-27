@@ -14,7 +14,9 @@ summary: Configure las redes iSCSI en el lado de la cabina.
 [role="lead"]
 Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * La dirección IP o el nombre de dominio de una de las controladoras de la cabina de almacenamiento.
 * Una contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio configurado para el acceso de seguridad apropiado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.
 

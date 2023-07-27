@@ -16,7 +16,9 @@ Para configurar la cabina de almacenamiento, se puede utilizar el asistente de c
 
 System Manager de SANtricity es una interfaz web integrada en cada controladora. Para acceder a la interfaz de usuario, debe apuntar un explorador a la dirección IP del controlador. Un asistente de configuración le ayuda a comenzar con la configuración del sistema.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Gestión fuera de banda.
 * Una estación de gestión para acceder a System Manager de SANtricity que incluye uno de los siguientes navegadores:
 +
@@ -27,35 +29,28 @@ System Manager de SANtricity es una interfaz web integrada en cada controladora.
  a| 
 Google Chrome
  a| 
-79
-
-
-
- a| 
-Internet Explorer de Microsoft
- a| 
-11
+89
 
 
 
  a| 
 Microsoft Edge
  a| 
-79
+90
 
 
 
  a| 
 Mozilla Firefox
  a| 
-70
+80
 
 
 
  a| 
 Safari
  a| 
-12
+14
 
 |===
 

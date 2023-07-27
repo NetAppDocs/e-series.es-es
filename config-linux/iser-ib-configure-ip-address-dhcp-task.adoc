@@ -13,8 +13,9 @@ summary: 'Utilice el Protocolo de configuración dinámica de host \(DHCP\) para
 [role="lead"]
 Para configurar las comunicaciones entre la estación de gestión y la cabina de almacenamiento, utilice el protocolo de configuración dinámica de hosts (DHCP) para proporcionar direcciones IP.
 
-.Lo que necesitará
-Un servidor DHCP instalado y configurado en la misma subred que los puertos de administración del almacenamiento.
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+* Un servidor DHCP instalado y configurado en la misma subred que los puertos de gestión de almacenamiento.
 
 .Acerca de esta tarea
 Cada cabina de almacenamiento tiene una controladora (simple) o dos controladoras (doble) y cada controladora tiene dos puertos de gestión de almacenamiento. Cada puerto de gestión se asignará una dirección IP.

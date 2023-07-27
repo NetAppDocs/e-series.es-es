@@ -13,8 +13,11 @@ summary: Antes de usar el volumen, debe verificar que el host puede escribir dat
 [role="lead"]
 Antes de usar el volumen, debe verificar que el host puede escribir datos en el volumen y leerlos nuevamente.
 
-.Lo que necesitará
-Un volumen inicializado que está formateado con un sistema de archivos.
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
+* Un volumen inicializado que está formateado con un sistema de archivos.
+
 
 .Pasos
 . En el host, copie uno o más archivos en el punto de montaje del disco.

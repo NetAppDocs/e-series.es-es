@@ -29,11 +29,12 @@ Mientras realiza esta tarea, el otro contenedor de alimentación proporciona ali
 * Revise los requisitos del contenedor de alimentación en link:canisters-overview-supertask-concept.html["Requisitos para la sustitución del compartimento"].
 * Revise los detalles en Recovery Guru para confirmar que hay un problema con el contenedor de alimentación y seleccione *Volver a comprobar* en Recovery Guru para asegurarse de que no deba solucionar primero ningún otro elemento.
 * Compruebe que el LED de alerta ámbar del contenedor de alimentación esté encendido, lo que indica que el contenedor tiene un fallo. Póngase en contacto con el soporte técnico para obtener ayuda si los dos compartimentos de alimentación de la bandeja tienen encendidos los LED de atención ámbar.
+* Asegúrese de tener lo siguiente:
++
+** Un contenedor de alimentación de repuesto que es compatible con la bandeja de controladoras o el modelo de bandeja de unidades.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 
 
-.Lo que necesitará
-* Un contenedor de alimentación de repuesto que es compatible con la bandeja de controladoras o el modelo de bandeja de unidades.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 
 
 

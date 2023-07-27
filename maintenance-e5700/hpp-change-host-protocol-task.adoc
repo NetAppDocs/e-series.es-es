@@ -112,6 +112,10 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e5700.
 .. Seleccione el mosaico *Centro de soporte*.
 .. En la ficha Recursos de soporte, busque y seleccione el enlace *Perfil de matriz de almacenamiento*.
 .. Escriba *Id. De submodelo del paquete de funciones* en el cuadro de texto y haga clic en *Buscar*.
++
+
+NOTE: “Submodelo” también puede ser escrito como “sub-modelo”.
+
 .. Busque el identificador de submodelo del paquete de funciones para la configuración de inicio.
 +
 image::../media/storage_array_profile2_maint-e5700.gif[profile2 maint e5700 de la cabina de almacenamiento]

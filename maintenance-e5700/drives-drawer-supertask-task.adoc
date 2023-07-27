@@ -32,15 +32,18 @@ Los pasos para reemplazar un cajón de unidades con error en una bandeja de cont
 
 CAUTION: *Posible pérdida de acceso a los datos* -- Si un volumen ya está en estado degradado y se quitan las unidades del cajón de la unidad, el volumen puede fallar.
 
-.Lo que necesitará
-* Una unidad de reemplazo que admite NetApp para su bandeja de controladoras o bandeja de unidades.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Una linterna.
-* Un marcador permanente para anotar la ubicación exacta de cada unidad mientras se quita la unidad del cajón.
-* Acceso a la interfaz de línea de comandos (CLI) de la cabina de almacenamiento. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
+* Asegúrese de tener lo siguiente:
 +
-** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
-** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+** Una unidad de reemplazo que admite NetApp para su bandeja de controladoras o bandeja de unidades.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Una linterna.
+** Un marcador permanente para anotar la ubicación exacta de cada unidad mientras se quita la unidad del cajón.
+** Acceso a la interfaz de línea de comandos (CLI) de la cabina de almacenamiento. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
++
+*** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+*** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
+
+
 
 
 
@@ -195,10 +198,10 @@ La cadena de cables superior está conectada al cajón de mando 1. La cadena de 
 image::../media/trafford_cable_rail_1_maint-e5700.gif[trafford teleférico 1 mint e5700]
 
 +
-*(1)* _conector vertical (conectado a plano medio)_
+*(1)* _Cadena de cable_
 
 +
-*(2)* _cable cadena_
+*(2)* _conector vertical (conectado a plano medio)_
 
 +
 *(3)* _conector horizontal (conectado al cajón)_

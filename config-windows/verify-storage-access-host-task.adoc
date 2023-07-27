@@ -13,7 +13,7 @@ summary: Compruebe que el host puede escribir datos en la LUN y leerlos.
 [role="lead"]
 Antes de usar el volumen, compruebe que el host puede escribir datos en la LUN y leerlos.
 
-.Lo que necesitará
+.Antes de empezar
 Debe haber inicializado la LUN y formateado esta con un sistema de archivos.
 
 .Pasos

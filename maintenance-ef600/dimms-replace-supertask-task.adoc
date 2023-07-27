@@ -20,14 +20,15 @@ Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, 
 .Antes de empezar
 * Revisar link:dimms-overview-supertask-concept.html["Requisitos para sustituir un DIMM EF300 o EF600"].
 * Asegúrese de que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+* Asegúrese de tener lo siguiente:
++
+** Un DIMM de reemplazo.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Un DIMM de reemplazo.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un área de trabajo plana y estática libre.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

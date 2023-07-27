@@ -22,17 +22,18 @@ Cuando sustituye una HIC, la controladora se coloca en estado sin conexión (par
 * Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. La alimentación debe estar apagada al instalar HIC, por lo que no puede acceder a los datos de la cabina de almacenamiento hasta que haya completado correctamente este procedimiento. (En una configuración doble, ambas controladoras deben tener la misma configuración de HIC cuando se conectan).
 * Verifique que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
 * En SANtricity System Manager, verifique los detalles en Recovery Guru para confirmar que tiene una HIC con errores y para garantizar que no deba abordarse ningún otro elemento antes de poder quitar y reemplazar la HIC.
-
-
-.Lo que necesitará
-* Dos HIC que son compatibles con sus controladoras.
+* Asegúrese de tener lo siguiente:
++
+** Dos HIC que son compatibles con sus controladoras.
 +
 Para configuraciones dobles (dos controladoras), las HIC instaladas en los dos contenedores de controladora deben ser idénticas. La presencia de HIC no coincidentes hace que la controladora con la HIC de reemplazo se bloquee cuando lo conecta.
 
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un destornillador Phillips número 1.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un destornillador Phillips número 1.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+
+
 
 
 

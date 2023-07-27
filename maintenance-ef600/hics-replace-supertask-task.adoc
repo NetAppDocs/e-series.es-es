@@ -20,19 +20,21 @@ Cuando reemplace una HIC con errores, debe apagar la cabina de almacenamiento, r
 .Antes de empezar
 * Revisar link:hics-overview-supertask-concept.html["Requisitos para las actualizaciones de EF 300 o EF600 HIC"].
 * Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente. Como ambas controladoras deben tener la misma configuración de HIC cuando se conectan, la alimentación debe estar apagada al instalar HIC.
-
-
-.Lo que necesitará
-* HIC que son compatibles con sus controladoras.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Un área de trabajo plana y estática libre.
-* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
-* Un destornillador Phillips número 1.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
-
-
+* Asegúrese de tener lo siguiente:
++
+** HIC que son compatibles con sus controladoras.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Un destornillador Phillips número 1.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
 
 CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladoras EF300 o EF600 si esa HIC se diseñó para otra controladora E-Series. Además, tanto las controladoras como las HIC deben ser idénticas. La presencia de HIC incompatible o con discrepancias hace que las controladoras se bloqueen cuando aplique alimentación.
+
+
+
+
 
 
 

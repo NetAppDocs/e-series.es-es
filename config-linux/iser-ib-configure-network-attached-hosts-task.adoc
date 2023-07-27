@@ -15,8 +15,11 @@ Si la configuración utiliza el protocolo Iser over InfiniBand, realice los paso
 
 La pila de controladores OFED InfiniBand admite la ejecución simultánea de Iser y SRP en los mismos puertos, por lo que no se requiere ningún hardware adicional.
 
-.Lo que necesitará
-Un OFED recomendado por NetApp instalado en el sistema. Para obtener más información, consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
+* Un OFED recomendado por NetApp instalado en el sistema. Para obtener más información, consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
 
 .Pasos
 . Habilite e inicie servicios iSCSI en los hosts:

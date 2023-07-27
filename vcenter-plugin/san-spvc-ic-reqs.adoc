@@ -50,7 +50,7 @@ El complemento de almacenamiento para vCenter requiere un espacio adecuado para 
 
 * Espacio de instalación necesario: 275 MB
 * Espacio de almacenamiento: 275 MB + 200 MB (registro)
-* Memoria del sistema: 512 MB
+* Memoria del sistema: 1,5 GB
 
 
 

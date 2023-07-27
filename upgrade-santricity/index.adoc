@@ -20,4 +20,4 @@ Estos procedimientos de actualización incluyen instrucciones independientes par
 * Drive: Incluye instrucciones para actualizar el firmware de la unidad.
 
 
-Antes de comenzar la actualización, asegúrese de revisar el link:overview-upgrade-consider-task.html["Consideraciones de renovación"].
+Antes de comenzar la actualización, asegúrese de revisar el  link:overview-upgrade-consider-task.html["Consideraciones de renovación"^].

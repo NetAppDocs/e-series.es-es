@@ -13,7 +13,7 @@ summary: La configuración de un iniciador de NVMe en un entorno InfiniBand incl
 [role="lead"]
 La configuración de un iniciador de NVMe en un entorno InfiniBand incluye la instalación y la configuración de los paquetes infiniband, nvme-cli y rdma, la configuración de direcciones IP del iniciador y la configuración de la capa NVMe-of en el host.
 
-.Lo que necesitará
+.Antes de empezar
 Debe ejecutar el sistema operativo RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 o 15 Service Pack más reciente compatible. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener una lista completa de los requisitos más recientes.
 
 .Pasos
@@ -282,16 +282,17 @@ Como se muestra en el ejemplo siguiente, la dirección IP para `ib1` es `11.11.1
     inet6 fe80::202:c903:31:7851/64 scope link
        valid_lft forever preferred_lft forever
 ----
-. Configure la capa NVMe-of en el host. Cree los siguientes archivos en /etc/modules-load.d/ para cargar el `nvme-rdma` el módulo del kernel y asegúrese de que el módulo del kernel estará siempre encendido, incluso después de un reinicio:
+. Configure la capa NVMe-of en el host. Cree los siguientes archivos en /etc/modules-load.d/ para cargar el `nvme_rdma` el módulo del kernel y asegúrese de que el módulo del kernel estará siempre encendido, incluso después de un reinicio:
 +
 [listing]
 ----
 
-# cat /etc/modules-load.d/nvme-rdma.conf
-  nvme-rdma
+# cat /etc/modules-load.d/nvme_rdma.conf
+  nvme_rdma
 ----
+. Reinicie el host.
 +
-Para comprobar la `nvme-rdma` el módulo del kernel está cargado, ejecute este comando:
+Para comprobar la `nvme_rdma` el módulo del kernel está cargado, ejecute este comando:
 
 +
 [listing]

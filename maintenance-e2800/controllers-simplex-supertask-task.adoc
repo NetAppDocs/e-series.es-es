@@ -21,7 +21,9 @@ Es posible sustituir un contenedor de controladora con error en una configuraci�
 .Acerca de esta tarea
 El contenedor de controladora contiene una tarjeta de controladora, una batería y una tarjeta de interfaz del host (HIC) opcional. Cuando reemplaza un compartimento de controladoras con errores, debe quitar la batería y la HIC, si hay alguna instalada, del compartimento de controladoras original y instalarlas en el compartimento de controladoras de reemplazo.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
 * Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 * Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.

@@ -26,6 +26,9 @@ Las cabinas E-Series están disponibles en los siguientes modelos:
 
 
 
+NOTE: Todos los puertos USB están deshabilitados en E2800, EF280, E5700, EF570, EF600, Y cabinas EF300.
+
+
 
 == Modelos E2800
 
@@ -132,6 +135,9 @@ Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) p
 * Unidades NL-SAS con bandejas de expansión: Cualquier combinación de bandejas DE460C y DE212C no debe superar un total de 240 ranuras de unidades NL-SAS y 4 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten las 8 bandejas DE212C. Por ejemplo, 4 bandejas DE460C, 8 bandejas DE212C, o 2 bandejas DE460C más 2 bandejas DE212.
 * Unidades SSD SAS con bandejas de expansión: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidad SSD SAS y 4 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten 8 bandejas. Por ejemplo, 1 bandeja DE460C más 1 bandeja DE224C más 1 bandeja DE212C, o 4 bandejas DE224C, o 8 bandejas DE212C.
 
+
+
+NOTE: EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
 
 
 
@@ -264,8 +270,11 @@ Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) p
 
 * Unidades SSD de NVMe: Hasta 24 unidades SSD NVMe en la bandeja de controladoras.
 * Unidades NL-SAS con bandejas de expansión: Cualquier combinación de bandejas DE460C y DE212C no debe superar un total de 420 ranuras de unidades NL-SAS y 7 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten las 8 bandejas DE212C. Por ejemplo, 7 bandejas DE460C o 8 bandejas DE212C, o 5 bandejas DE460C más 2 bandejas DE212.
-* Unidades SSD SAS con bandejas de expansión: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidad SSD SAS y 7 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten 8 bandejas. Por ejemplo, 1 bandeja DE460C más 1 bandeja DE224C más 1 bandeja DE212C, o 4 bandejas DE224C, o 8 bandejas DE212C.
+* Unidades SSD SAS con bandejas de ampliación: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidades SSD SAS y 7 bandejas de expansión, a menos que solo se utilicen DE212C bandejas y se permiten 8 DE212C bandejas. Por ejemplo, 1 DE460C bandeja más 1 DE224C bandeja más 1 DE212C bandeja, o 4 DE224C bandejas, o 8 DE212C bandejas
 
+
+
+NOTE: EF600 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
 
 
 

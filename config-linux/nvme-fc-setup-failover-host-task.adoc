@@ -13,7 +13,7 @@ summary: Configure el host para que ejecute la conmutación al nodo de respaldo.
 [role="lead"]
 Para proporcionar una ruta redundante a la cabina de almacenamiento, puede configurar el host para que ejecute una conmutación al nodo de respaldo.
 
-.Lo que necesitará
+.Antes de empezar
 Debe instalar los paquetes necesarios en el sistema.
 
 * En el caso de los hosts Red Hat (RHEL), compruebe que los paquetes se han instalado en ejecución `rpm -q device-mapper-multipath`

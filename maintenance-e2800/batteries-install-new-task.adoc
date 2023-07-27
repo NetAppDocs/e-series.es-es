@@ -13,7 +13,9 @@ summary: Instale una batería nueva.
 [role="lead"]
 Después de quitar la batería que ha fallado, puede instalar la nueva.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * La batería de recambio.
 * Una superficie plana y sin estática.
 

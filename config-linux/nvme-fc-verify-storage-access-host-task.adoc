@@ -13,8 +13,11 @@ summary: Antes de utilizar el espacio de nombres, debe comprobar que el host pue
 [role="lead"]
 Antes de utilizar el espacio de nombres, debe comprobar que el host puede escribir los datos en el espacio de nombres y leerlos.
 
-.Lo que necesitará
-Espacio de nombres inicializado con formato de sistema de archivos.
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
+* Espacio de nombres inicializado con formato de sistema de archivos.
+
 
 .Pasos
 . En el host, copie uno o más archivos en el punto de montaje del disco.

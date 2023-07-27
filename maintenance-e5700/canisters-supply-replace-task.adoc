@@ -27,12 +27,13 @@ Es posible sustituir un suministro de alimentación mientras la cabina de almace
 * Revisar link:canisters-overview-supertask-concept.html["Requisitos para reemplazar el compartimento de E5700"].
 * Revise los detalles en Recovery Guru para confirmar que hay un problema con el suministro de alimentación. Seleccione *Volver a comprobar* en Recovery Guru para asegurarse de que no se deba tratar primero ningún otro elemento.
 * Compruebe que el LED de atención ámbar de la fuente de alimentación está encendido, lo que indica que la fuente de alimentación o el ventilador integrado tienen un fallo. Póngase en contacto con el soporte técnico para obtener ayuda si las dos fuentes de alimentación de la bandeja tienen encendidos los LED de atención ámbar.
+* Asegúrese de tener lo siguiente:
++
+** Un suministro de alimentación de repuesto que se admite para la bandeja de controladoras o el modelo de bandeja de unidades.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
-.Lo que necesitará
-* Un suministro de alimentación de repuesto que se admite para la bandeja de controladoras o el modelo de bandeja de unidades.
-* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
 
 
 

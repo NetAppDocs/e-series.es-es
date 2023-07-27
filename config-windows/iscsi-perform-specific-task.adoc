@@ -20,7 +20,9 @@ Para el protocolo iSCSI, es posible configurar los switches, configurar la red e
 
 Los switches se configuran según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Dos redes separadas para una mayor disponibilidad. Asegúrese de aislar el tráfico de iSCSI para separar los segmentos de red mediante VLAN o dos redes separadas.
 * Activación del control de flujo de hardware de envío y recepción *fin a fin*.
 * Control de flujo de prioridad desactivado.
@@ -41,7 +43,9 @@ Es posible configurar la red iSCSI de varias maneras, según los requisitos de a
 
 Una estrategia eficaz para configurar la red iSCSI con redundancia básica es conectar cada puerto de host y un puerto de cada controladora a fin de separar los switches y particionar cada conjunto de puertos de host y controladora en segmentos de red separados mediante VLAN.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Activación del control de flujo de hardware de envío y recepción *fin a fin*.
 * Control de flujo de prioridad desactivado.
 * Si corresponde, tramas gigantes habilitadas
@@ -62,7 +66,7 @@ NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para s
 
 Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
 
-.Lo que necesitará
+.Antes de empezar
 * La dirección IP o el nombre de dominio de una de las controladoras de la cabina de almacenamiento.
 * Una contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio configurado para el acceso de seguridad apropiado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.
 
@@ -198,7 +202,9 @@ Seleccione esta opción para habilitar el parámetro que determina la prioridad 
 
 Es necesario configurar las redes iSCSI en el lado del host para que el iniciador de iSCSI de Microsoft pueda establecer sesiones con la cabina.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Switches totalmente configurados que se usarán para transportar tráfico de almacenamiento iSCSI.
 * Activación del control de flujo de hardware de envío y recepción *fin a fin*
 * Control de flujo de prioridad desactivado.

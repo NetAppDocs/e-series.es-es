@@ -14,7 +14,7 @@ summary: Instale E2800 o E5700 en un rack de dos parantes o un armario del siste
 Aprenda a instalar un sistema de almacenamiento E2860, E5760 o DE460 en un rack de dos parantes o un armario del sistema de NetApp.
 
 .Antes de empezar
-* Registre su hardware en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
 * Prepare un área de trabajo plana y sin estática.
 * Obtenga una muñequera ESD y tome precauciones antiestáticas.
 

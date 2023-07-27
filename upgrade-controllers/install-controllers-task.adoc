@@ -16,7 +16,9 @@ Después de quitar las controladoras antiguas, se pueden instalar controladoras 
 .Acerca de esta tarea
 Ejecute los siguientes pasos en cada controladora del soporte de la controladora-unidad Si va a actualizar controladoras en un soporte de controladora-unidad dúplex, repita todos los pasos para instalar el segundo compartimento de controladoras.
 
-.Lo que necesitará
+.Antes de empezar
+Asegúrese de tener lo siguiente:
+
 * Una muñequera ESD o tome otras precauciones antiestáticas.
 * Una batería del contenedor de controladora original o una batería nueva que se solicitó.
 * El nuevo compartimento de la controladora.

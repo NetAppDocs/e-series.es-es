@@ -330,10 +330,7 @@ El sistema ejecuta las siguientes acciones:
 
 == Paso 3: Crear un almacén de datos en vSphere Client
 
-Para crear un almacén de datos en vSphere Client, consulte el siguiente tema en el centro de documentación de VMware:
-
-* https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-7EB0CE06-02DD-4B31-85C7-E54993CC06DC.html["Cree un almacén de datos VMFS en vSphere Client"^]
-
+Para crear un almacén de datos en vSphere Client, consulte https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-5AC611E0-7CEB-4604-A03C-F600B1BA2D23.html["Cree un almacén de datos VMFS en vSphere Client"^] Tema del Centro de documentación de VMware.
 
 
 
@@ -370,11 +367,7 @@ En este cuadro de diálogo, se muestran la capacidad notificada actual y la capa
 . Utilice el cuadro *aumentar capacidad notificada agregando...* para añadir capacidad a la capacidad informada disponible actual. Es posible cambiar el valor de capacidad para que se muestre en mebibytes (MIB), gibibytes (GIB) o tebibytes (TIB).
 . Haga clic en *aumentar*.
 . Vea el panel Recent Tasks para conocer el progreso de la operación de aumento de capacidad que se está ejecutando actualmente para el volumen seleccionado. Es posible que esta operación demore y que afecte el rendimiento del sistema.
-. Una vez completada la capacidad de un volumen, debe aumentar manualmente el tamaño de VMFS para que coincida con el del siguiente tema:
-+
-** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^]
-
-
+. Una vez que se complete la capacidad del volumen, debe aumentar manualmente el tamaño de VMFS para que coincida como se describe en la https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D57FEF5D-75F1-433D-B337-E760732282FC.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^] Tema del Centro de documentación de VMware.
 
 
 
@@ -382,9 +375,8 @@ En este cuadro de diálogo, se muestran la capacidad notificada actual y la capa
 === Aumente la capacidad del almacén de datos existente añadiendo volúmenes
 
 . Es posible aumentar la capacidad de un almacén de datos mediante la adición de volúmenes. Siga los pasos de <<Paso 1: Crear volúmenes>>.
-. A continuación, asigne los volúmenes al host deseado para aumentar la capacidad del almacén de datos. Consulte el siguiente tema:
+. A continuación, asigne los volúmenes al host deseado para aumentar la capacidad del almacén de datos.
 +
-** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^]
-
+Consulte https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Aumente la capacidad de los almacenes de datos VMFS en vSphere Client"^] Tema en el centro de documentación de VMware para obtener más información.
 
 
