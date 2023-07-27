@@ -47,7 +47,7 @@ Cuando se suministran, cada bandeja incluye hardware para montaje en rack. Para 
 Las instrucciones de instalación y configuración (paso 1) incluyen instrucciones para conectar cables. Sin embargo, si necesita listas de cables y transceptores compatibles, prácticas recomendadas para cableado e información detallada sobre los puertos de host para la controladora, acceda a las siguientes instrucciones:
 
 [role="quick-margin-list"]
-* link:../install-hw-cabling/index.html["Conecte el cable del hardware de E-Series"]
+* link:../install-hw-cabling/index.html["Conecte el cable del hardware de E-Series"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"] Configurar hosts
@@ -55,9 +55,9 @@ Las instrucciones de instalación y configuración (paso 1) incluyen instruccion
 Para que el almacenamiento esté disponible para un host, seleccione una guía para el tipo de sistema operativo del host:
 
 [role="quick-margin-list"]
-* link:../config-linux/index.html["Configuración exprés de Linux"]
-* link:../config-vmware/index.html["Configuración exprés de VMware"]
-* link:../config-windows/index.html["Configuración exprés de Windows"]
+* link:../config-linux/index.html["Configuración exprés de Linux"^]
+* link:../config-vmware/index.html["Configuración exprés de VMware"^]
+* link:../config-windows/index.html["Configuración exprés de Windows"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Configurar el almacenamiento
@@ -68,6 +68,7 @@ Para configurar el almacenamiento, puede acceder a la interfaz web, System Manag
 Seleccione la interfaz que desea utilizar:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda del administrador del sistema de SANtricity para 11.7x"]
-* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda de administrador del sistema de SANtricity para 11.6x"]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,7x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda en línea de SANtricity System Manager para 11,6x"^]
 
