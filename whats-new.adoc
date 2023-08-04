@@ -63,12 +63,31 @@ Gestión de servidores de claves externos: Tamaño de clave de certificado
  a| 
 El nuevo tamaño de clave de certificado predeterminado es de 3072 bits (desde 2048). Se admiten tamaños de llave de hasta 4096 bits. Debe cambiarse un bit de NVSRAM para que admita los tamaños de claves no predeterminados.
 
+Los valores de selección de tamaño de clave son los siguientes:
+
+* EL VALOR PREDETERMINADO ES DE 15 0
+* LONGITUD 2048 = 1
+* LONGITUD 3072 = 2
+* LONGITUD 4096 = 3
+
+
+Para cambiar el tamaño de clave a 4096 mediante SMcli:
+
+`set controller[b] globalnvsrambyte[0xc0]=3;`
+`set controller[a] globalnvsrambyte[0xc0]=3;`
+
+Interrogue el tamaño de la clave:
+
+`show allcontrollers globalnvsrambyte[0xc0];`
+
 
 
  a| 
-Compatibilidad con pools de discos dinámicos más grandes utilizando unidades con tamaños de bloque de 512b KB
+Mejoras del pool de discos
  a| 
-Los clientes que utilicen el tipo de versión de pool de la versión 1 pueden ahora tener un pool de discos de tamaño máximo de 48 TB. La versión anterior admite un tamaño de pool de discos de hasta 24 TB. Si se van a convertir los pools de discos existentes al tamaño mayor, primero deben eliminarse todos los volúmenes. La operación de degradación está restringida cuando existe un pool de discos versión 1.
+Los pools de discos creados con controladoras que ejecutan 11,80 o superior serán pools _Version 1_ en vez de pools _Version 0_. La operación de degradación está restringida cuando existe un pool de discos _Versión 1_.
+
+La versión de un pool de discos se puede identificar en el perfil de la cabina de almacenamiento.
 
 
 
