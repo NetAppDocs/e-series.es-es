@@ -12,3 +12,23 @@ summary: Estas instrucciones describen cómo instalar y configurar el nuevo sist
 
 [role="lead"]
 Estas instrucciones describen cómo instalar y configurar el nuevo sistema de almacenamiento y proporcionan enlaces a contenido adicional.
+
+Puede elegir uno de los siguientes formatos para guiarle en la instalación y configuración del nuevo sistema de almacenamiento.
+
+* *PDF*
++
+Este es un PDF imprimible de instrucciones paso a paso con enlaces en directo a contenido adicional.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Póster PDF de E2860, E5760 y DE460C"^]
+
+
+* *Instrucciones en línea*
++
+Estas son las instrucciones de configuración descritas en este sitio.
+
++
+** xref:e2860-e5760-prepare-task.adoc[Prepare la instalación de E2860, E5760 y DE460C]
+
+
+

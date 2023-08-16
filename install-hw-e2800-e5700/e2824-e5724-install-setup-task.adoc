@@ -12,3 +12,23 @@ summary: Estas instrucciones describen cómo instalar y configurar el nuevo sist
 
 [role="lead"]
 Estas instrucciones describen cómo instalar y configurar el nuevo sistema de almacenamiento y proporcionan enlaces a contenido adicional.
+
+Puede elegir uno de los siguientes formatos para guiarle en la instalación y configuración del nuevo sistema de almacenamiento.
+
+* *PDF*
++
+Este es un PDF imprimible de instrucciones paso a paso con enlaces en directo a contenido adicional.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["E5724, EF570, EF280, E2824, E2812 Y Póster PDF de DE212C y DE224C"^]
+
+
+* *Instrucciones en línea*
++
+Estas son las instrucciones de configuración descritas en este sitio. Comience con uno de los siguientes temas.
+
++
+** xref:e2824-e5724-prepare-task.adoc[Prepare para instalar E5724, EF570, EF280, E2812, E2824, DE212C y DE224C]
+
+
+

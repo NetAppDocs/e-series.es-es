@@ -8860,4 +8860,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Mejoras del pool de discos</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">Los pools de discos creados con controladoras que ejecutan 11,80 o superior serán pools _Version 1_ en vez de pools _Version 0_. La operación de degradación está restringida cuando existe un pool de discos _Versión 1_.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La versión de un pool de discos se puede identificar en el perfil de la cabina de almacenamiento.</block>
+  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Este es un PDF imprimible de instrucciones paso a paso con enlaces en directo a contenido adicional.</block>
+  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Estas son las instrucciones de configuración descritas en este sitio.</block>
 </blocks>
