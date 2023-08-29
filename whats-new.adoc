@@ -94,7 +94,9 @@ La versión de un pool de discos se puede identificar en el perfil de la cabina 
  a| 
 System Manager y Unified Manager no se iniciarán a menos que se cumplan los requisitos mínimos del explorador
  a| 
-Se requiere una versión mínima del explorador para que se inicie System Manager o Unified Manager. Las siguientes son las versiones mínimas admitidas:
+Se requiere una versión mínima del explorador para que se inicie System Manager o Unified Manager.
+
+Las siguientes son las versiones mínimas admitidas:
 
 * Firefox Versión mínima 80
 * Chrome versión mínima 89
@@ -136,5 +138,101 @@ Ahora se admiten las configuraciones de controladoras EF300 y EF600 sin unidades
 Puertos USB desactivados para todas las plataformas
  a| 
 Los puertos USB ahora están deshabilitados en todas las plataformas.
+
+
+
+ a| 
+Se aumentó el máximo de la caché de lectura SSD
+ a| 
+Se aumentó el máximo de la caché de lectura SSD de 5TB a 8TB.
+
+
+
+ a| 
+Asigne una caché de lectura all-flash a un único volumen en configuraciones dobles
+ a| 
+Ahora toda la caché de lectura SSD se puede asignar al mismo volumen en sistemas dobles cada vez que un solo volumen usa toda la caché SSD.
+
+
+
+ a| 
+El número de serie de la unidad se añadió a la tabla resumida de la unidad del perfil de la cabina de almacenamiento
+ a| 
+Se añadió el número de serie de la unidad a la tabla de resumen de la unidad en el perfil Cabina de almacenamiento.
+
+
+
+ a| 
+Se añadieron dom0-misc-logs a Daily ASUP
+ a| 
+Los registros dom0-misc de las controladoras A y B se han añadido a los ASUPs diarios.
+
+
+
+ a| 
+El puerto 443 ahora se utiliza de forma predeterminada para la aplicación que se comunica con los servicios web incorporados
+ a| 
+El puerto 443 se utiliza ahora por defecto cuando se comunica con el servidor web incorporado. La  `-useLegacyTransferPort` El comando CLI se ha agregado para aquellos que en su lugar desean utilizar el puerto de transferencia 8443 heredado. Para obtener más información sobre el nuevo comando -useLegacyTransferPort CLI, consulte la https://docs.netapp.com/us-en/e-series-cli/whats-new.html["Novedades de la CLI de SANtricity"].
+
+
+
+ a| 
+Funcionalidad de análisis del progreso de la paridad del volumen
+ a| 
+Los siguientes comandos de CLI se implementaron para admitir las operaciones de análisis de paridad de volúmenes basadas en trabajos:
+
+* Inicie la comprobación de paridad del volumen
+* Guarde los errores del trabajo de comprobación de paridad de volúmenes
+* Detenga la comprobación del trabajo de paridad del volumen
+* Muestra los trabajos o el trabajo de comprobación de paridad de volúmenes
+
+
+Para obtener más información sobre los comandos de la CLI de análisis de paridad de volúmenes basados en trabajos, consulte la https://docs.netapp.com/us-en/e-series-cli/whats-new.html["Novedades de la CLI de SANtricity"].
+
+
+
+ a| 
+Compatibilidad de MFA para Unified Manager
+ a| 
+Ahora se admite la autenticación multifactor (MFA) con Unified Manager.
+
+
+
+ a| 
+Icono de alternancia para la vista frontal posterior del hardware
+ a| 
+En la vista Hardware de System Manager/Unified Manager, ahora están disponibles las dos pestañas siguientes para controlar la vista frontal y trasera:
+
+* Pestaña Unidades
+* Pestaña Controladores y componentes
+
+
+
+
+ a| 
+Complemento de vCenter Storage
+ a| 
+El complemento para vCenter Storage se actualizó para ser compatible con la versión E-Series 11,80.
+
+
+
+ a| 
+Proxy de servicios web 6,0
+ a| 
+Web Services Proxy se actualizó a la versión 6,0 para ser compatible con la versión 11,80 de E-Series.
+
+
+
+ a| 
+Se ha quitado el indicador de creación de casos ASUP para eventos de temperatura nominal y máxima de E-Series
+ a| 
+El indicador de creación de casos ahora está desactivado para los eventos de temperatura nominal y máxima superada que no requieren ninguna acción.
+
+
+
+ a| 
+Indicador de creación de casos prioritarios activado para el evento de MEL 0x1209
+ a| 
+Ahora se ha creado un indicador de creación de caso para el `MEL_EV_DEGRADE_CHANNEL 0x1209` Evento MEL.
 
 |===

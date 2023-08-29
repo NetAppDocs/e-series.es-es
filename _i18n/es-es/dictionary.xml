@@ -8796,7 +8796,6 @@
   <block id="3c65e3636111523111e45a49a80face3" category="paragraph">Gestión de servidores de claves externos: Tamaño de clave de certificado</block>
   <block id="406774a2d5f641d5566318ef7eb88033" category="paragraph">El nuevo tamaño de clave de certificado predeterminado es de 3072 bits (desde 2048). Se admiten tamaños de llave de hasta 4096 bits. Debe cambiarse un bit de NVSRAM para que admita los tamaños de claves no predeterminados.</block>
   <block id="9a1c6a24950fba4eade84dc9952a77dd" category="paragraph">System Manager y Unified Manager no se iniciarán a menos que se cumplan los requisitos mínimos del explorador</block>
-  <block id="09a616fc9241625ec6003f2da3c0cff9" category="paragraph">Se requiere una versión mínima del explorador para que se inicie System Manager o Unified Manager. Las siguientes son las versiones mínimas admitidas:</block>
   <block id="6cdb1f943282038a6441359c5c88f812" category="list-text">Firefox Versión mínima 80</block>
   <block id="773389fc57f11b52dbe4c622adc51a3b" category="list-text">Chrome versión mínima 89</block>
   <block id="2ac44b1b15c0ea01cbb812f5c6cf9b1e" category="list-text">Edge versión mínima 90</block>
@@ -8862,4 +8861,38 @@
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La versión de un pool de discos se puede identificar en el perfil de la cabina de almacenamiento.</block>
   <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Este es un PDF imprimible de instrucciones paso a paso con enlaces en directo a contenido adicional.</block>
   <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Estas son las instrucciones de configuración descritas en este sitio.</block>
+  <block id="746ff5a72ad1791e39c47dc0abcdffe3" category="paragraph">Se requiere una versión mínima del explorador para que se inicie System Manager o Unified Manager.</block>
+  <block id="488c35a42ee48966247c5cc643d96708" category="paragraph">Las siguientes son las versiones mínimas admitidas:</block>
+  <block id="5f7273b60d2186e7b7a65eb2cee83294" category="paragraph">Se aumentó el máximo de la caché de lectura SSD</block>
+  <block id="b88a2dc6fb8e71c6877b713109600d31" category="paragraph">Se aumentó el máximo de la caché de lectura SSD de 5TB a 8TB.</block>
+  <block id="0fcc90fc3cc76dc629299a26e9902d23" category="paragraph">Asigne una caché de lectura all-flash a un único volumen en configuraciones dobles</block>
+  <block id="6d78f845696ad97b7b7e169fc5375d79" category="paragraph">Ahora toda la caché de lectura SSD se puede asignar al mismo volumen en sistemas dobles cada vez que un solo volumen usa toda la caché SSD.</block>
+  <block id="d11eb1a833f3aa6a6f8e288a6f2ed677" category="paragraph">El número de serie de la unidad se añadió a la tabla resumida de la unidad del perfil de la cabina de almacenamiento</block>
+  <block id="b84b5ed2d3f0ce14a401d770d1134670" category="paragraph">Se añadió el número de serie de la unidad a la tabla de resumen de la unidad en el perfil Cabina de almacenamiento.</block>
+  <block id="d6038dc26b052a3a064752f0146b5f9b" category="paragraph">Se añadieron dom0-misc-logs a Daily ASUP</block>
+  <block id="85417dc8935dcc8606a9ce644880ed8f" category="paragraph">Los registros dom0-misc de las controladoras A y B se han añadido a los ASUPs diarios.</block>
+  <block id="afc03e3c62dfaee81d570aea0bd2b630" category="paragraph">El puerto 443 ahora se utiliza de forma predeterminada para la aplicación que se comunica con los servicios web incorporados</block>
+  <block id="eacd3a01aace39f1f6e66917c8940ef1" category="inline-link">Novedades de la CLI de SANtricity</block>
+  <block id="83b8b5d49e97331a225fa2dbbd1a62e3" category="paragraph">El puerto 443 se utiliza ahora por defecto cuando se comunica con el servidor web incorporado. La <block ref="ab1f19425d80842e646857a8f89eeecb" prefix=" " category="inline-code"></block> El comando CLI se ha agregado para aquellos que en su lugar desean utilizar el puerto de transferencia 8443 heredado. Para obtener más información sobre el nuevo comando -useLegacyTransferPort CLI, consulte la<block ref="3f687888503820df36991007e34e41c4" category="inline-link-rx"></block>.</block>
+  <block id="52d0d651e479545a9dfd4a2149790d3a" category="paragraph">Funcionalidad de análisis del progreso de la paridad del volumen</block>
+  <block id="bc35f25d66e2f2680880d507f3957650" category="paragraph">Los siguientes comandos de CLI se implementaron para admitir las operaciones de análisis de paridad de volúmenes basadas en trabajos:</block>
+  <block id="327134a83c506a23113bb7582b9047e6" category="list-text">Inicie la comprobación de paridad del volumen</block>
+  <block id="c53504f672ba9ced05d212f101968d7b" category="list-text">Guarde los errores del trabajo de comprobación de paridad de volúmenes</block>
+  <block id="3fc6c33101584c7bde9838ff559f7748" category="list-text">Detenga la comprobación del trabajo de paridad del volumen</block>
+  <block id="0cb9ae9fc51fc2b828c3c3435509b033" category="list-text">Muestra los trabajos o el trabajo de comprobación de paridad de volúmenes</block>
+  <block id="fc414e3a242c3a9cb3274ecb244ff804" category="paragraph">Para obtener más información sobre los comandos de la CLI de análisis de paridad de volúmenes basados en trabajos, consulte la<block ref="3f687888503820df36991007e34e41c4" category="inline-link-rx"></block>.</block>
+  <block id="af9f4d4514238eb39039de48310827c0" category="paragraph">Compatibilidad de MFA para Unified Manager</block>
+  <block id="a0471e6b01957f4852bf9d902116f837" category="paragraph">Ahora se admite la autenticación multifactor (MFA) con Unified Manager.</block>
+  <block id="ec68da29293899e68bdbfb3726ee4772" category="paragraph">Icono de alternancia para la vista frontal posterior del hardware</block>
+  <block id="7dec11df2782d6016c4dda7dc026b74c" category="paragraph">En la vista Hardware de System Manager/Unified Manager, ahora están disponibles las dos pestañas siguientes para controlar la vista frontal y trasera:</block>
+  <block id="f43358a4d6ad58adb39ef28c39d4476d" category="list-text">Pestaña Unidades</block>
+  <block id="be11932b8d4098dedf49767b73baa0ec" category="list-text">Pestaña Controladores y componentes</block>
+  <block id="85873696abedac8fb70b86eef30b99fe" category="paragraph">Complemento de vCenter Storage</block>
+  <block id="a0ed2d9ab2c9fcb9427af6913c300885" category="paragraph">El complemento para vCenter Storage se actualizó para ser compatible con la versión E-Series 11,80.</block>
+  <block id="3bffe499935be0a3f4ea37f8ab57bb72" category="paragraph">Proxy de servicios web 6,0</block>
+  <block id="632af5f75596f275f6e09a1a48a3c8ff" category="paragraph">Web Services Proxy se actualizó a la versión 6,0 para ser compatible con la versión 11,80 de E-Series.</block>
+  <block id="c7e5752f01cddef599a3ea12895dd067" category="paragraph">Se ha quitado el indicador de creación de casos ASUP para eventos de temperatura nominal y máxima de E-Series</block>
+  <block id="d7ffc2406b2b1f56267e389dcea17d16" category="paragraph">El indicador de creación de casos ahora está desactivado para los eventos de temperatura nominal y máxima superada que no requieren ninguna acción.</block>
+  <block id="746cf185d12f5492055c99b5dda9119d" category="paragraph">Indicador de creación de casos prioritarios activado para el evento de MEL 0x1209</block>
+  <block id="09c222edb73c49afd2e9ec9f75a2cd53" category="paragraph">Ahora se ha creado un indicador de creación de caso para el<block ref="768a075a6d4dc734e5397ee50957d8d8" prefix=" " category="inline-code"></block> Evento MEL.</block>
 </blocks>
