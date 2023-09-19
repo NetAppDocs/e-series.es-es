@@ -26,7 +26,7 @@ Las cabinas E-Series están disponibles en los siguientes modelos:
 
 
 
-NOTE: Todos los puertos USB están deshabilitados en E2800, EF280, E5700, EF570, EF600, Y cabinas EF300.
+NOTE: Para SANtricity OS 11,80GA y posterior, todos los puertos USB están deshabilitados en E2800, EF280, E5700, EF570, EF600, y cabinas EF300.
 
 
 
@@ -137,7 +137,7 @@ Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) p
 
 
 
-NOTE: EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
+NOTE: Para el sistema operativo SANtricity 11,80GA y posteriores, EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
 
 
 
@@ -274,7 +274,7 @@ Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) p
 
 
 
-NOTE: EF600 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
+NOTE: Para el sistema operativo SANtricity 11,80GA y posteriores, EF600 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
 
 
 
