@@ -70,6 +70,4 @@ E2760 Y E5660
 DE460C
 
 |===
-Para obtener información sobre otras opciones de cableado, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Guía de cableado de hardware E-Series"^] para sistemas más antiguos.
-
 Para obtener información sobre el cableado para admitir funciones de mirroring, consulte https://www.netapp.com/us/media/tr-4656.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].
