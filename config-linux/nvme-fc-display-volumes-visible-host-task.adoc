@@ -1,7 +1,7 @@
 ---
 permalink: config-linux/nvme-fc-display-volumes-visible-host-task.html 
 sidebar: sidebar 
-keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: La herramienta SMdevices, que forma parte del paquete nvme-cli, permite ver los volúmenes visibles actualmente en el host. Esta herramienta es una alternativa al comando nvme list. 
 ---
 = Mostrar los volúmenes visibles para el host

@@ -20,8 +20,6 @@ Para gestionar el almacenamiento con el complemento de almacenamiento para vCent
 .Acerca de esta tarea
 Al crear un host, se deben definir los parámetros de host para proporcionar conexión a la cabina de almacenamiento y acceso de I/o a los volúmenes.
 
-Puede permitir que el agente de contexto de host (HCA) detecte automáticamente los hosts y, a continuación, verificar que la información sea correcta seleccionando *Ver/editar configuración* en la página Configurar hosts. Sin embargo, HCA no está disponible en todos los sistemas operativos compatibles y debe crear el host manualmente.
-
 Al crear un host, tenga en cuenta las siguientes directrices:
 
 * Se deben definir los puertos identificadores de host que están asociados con el host.

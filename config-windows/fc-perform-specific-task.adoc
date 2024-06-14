@@ -51,7 +51,6 @@ Revise estas directrices para las utilidades de HBA:
 ** Consola QConverge de QLogic para HBA de QLogic
 
 
-* Los puertos de I/o del host pueden registrarse automáticamente si se ha instalado el agente de contexto de host.
 
 
 .Pasos

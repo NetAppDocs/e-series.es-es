@@ -20,5 +20,3 @@ Cuando cuente con esta información, seleccione los identificadores de puerto de
 
 
 CAUTION: Asegúrese de seleccionar los identificadores de puerto de host adecuados para el host que va a crear. Si asocia los identificadores de puerto de host incorrectos, es posible que se provoque un acceso no intencional de otro host a estos datos.
-
-Si va a crear hosts automáticamente con el agente de contexto de host (HCA) instalado en cada host, el HCA debe asociar automáticamente los identificadores de puerto de host con cada host y configurarlos adecuadamente.

@@ -432,7 +432,24 @@ CAUTION: *Posible pérdida de acceso a datos* -- Si el controlador que acaba de 
 
 
 
-. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
+. Cuando la controladora vuelva a estar en línea, compruebe si se notificó una discrepancia NVSRAM en Recovery Guru.
++
+.. Si se informa de una discrepancia de NVSRAM, actualice NVSRAM con el siguiente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+La `-k` el parámetro se requiere si la cabina no es https segura.
+
+
+
++
+
+NOTE: Si no se puede completar el comando SMcli, póngase en contacto con https://www.netapp.com/company/contact-us/support/["Asistencia técnica de NetApp"^] o inicie sesión en https://mysupport.netapp.com["Sitio de soporte de NetApp"^] para crear un caso.
+
+. Confirme que el estado del sistema es óptimo y compruebe los LED de atención de la bandeja de controladoras.
 +
 Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
 
@@ -446,7 +463,7 @@ NOTE: Si no puede resolver el problema, póngase en contacto con el soporte téc
 .. Seleccione MENU:More[redistribuir volúmenes].
 
 
-. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión del software de sistema operativo SANtricity (firmware de la controladora).
+. Haga clic en menu:Hardware[Soporte > Centro de actualización] para asegurarse de que las versiones de firmware y NVSRAM del sistema estén en los niveles deseados.
 +
 Si es necesario, instale la versión más reciente.
 

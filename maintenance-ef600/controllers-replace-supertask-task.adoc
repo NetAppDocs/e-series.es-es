@@ -23,6 +23,20 @@ Cuando se reemplaza un contenedor de controladoras con errores, es necesario qui
 +
 ** Recovery Guru en System Manager de SANtricity le dirige reemplazar el compartimento de controladoras.
 ** El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
++
+[]
+====
+
+NOTE: El LED de atención ámbar del controlador se apagará siempre que se produzcan las siguientes condiciones de sustitución:
+
+*** Error de fuente de alimentación alternativa
+*** Error en la ruta de la unidad alternativa
+*** El cajón está abierto o ausente
+*** El ventilador presenta errores o está ausente
+*** Falta el suministro de alimentación
+
+
+====
 
 
 * Asegúrese de tener lo siguiente:
@@ -129,7 +143,6 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 +
 Como debe quitar la HIC del compartimento de controladoras con errores, debe quitar todos los SFP de los puertos HIC. Cuando vuelva a conectar los cables, puede mover esos SFP al nuevo compartimento de controladoras.
 
-. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
 image::../media/remove_controller_5.png[retire la controladora 5]
@@ -454,7 +467,24 @@ Cuando se restablece la comunicación con otra controladora:
 ** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
 
 
-. Cuando la controladora vuelva a estar en línea, confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
+. Cuando la controladora vuelva a estar en línea, compruebe si se notificó una discrepancia NVSRAM en Recovery Guru.
++
+.. Si se informa de una discrepancia de NVSRAM, actualice NVSRAM con el siguiente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+La `-k` el parámetro se requiere si la cabina no es https segura.
+
+
+
++
+
+NOTE: Si no se puede completar el comando SMcli, póngase en contacto con https://www.netapp.com/company/contact-us/support/["Asistencia técnica de NetApp"^] o inicie sesión en https://mysupport.netapp.com["Sitio de soporte de NetApp"^] para crear un caso.
+
+. Confirme que el estado del sistema es óptimo y compruebe los LED de atención de la bandeja de controladoras.
 +
 Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
 
@@ -462,7 +492,7 @@ Si el estado no es óptimo o si alguno de los LED de atención está encendido, 
 
 NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
 
-. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión de SANtricity OS.
+. Haga clic en menu:Hardware[Soporte > Centro de actualización] para asegurarse de que las versiones de firmware y NVSRAM del sistema estén en los niveles deseados.
 +
 Si es necesario, instale la versión más reciente.
 

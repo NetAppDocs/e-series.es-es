@@ -182,44 +182,9 @@ Compatible con la función de seguridad
 
 == Paso 2: Cree acceso a host y asigne volúmenes
 
-Es posible crear un host de manera automática o manual:
-
-* *Automático* -- la creación automática de host para hosts basados en SCSI (no NVMe-of) es iniciada por el agente de contexto de host (HCA). HCA es una utilidad que puede instalar en cada host conectado a la cabina de almacenamiento. Cada host que posee HCA instalado inserta su información de configuración en la cabina de almacenamiento a través de la ruta de I/O. Según la información del host, las controladoras crean automáticamente el host y los puertos de host asociados para establecer el tipo de host. Si es necesario, puede realizar cualquier cambio adicional en la configuración del host. Después de que HCA realiza la detección automática, el host se configura automáticamente con los siguientes atributos:
-+
-** El nombre de host derivado del nombre de sistema del host.
-** Los puertos identificadores del host que están asociados con el host.
-** El tipo de sistema operativo del host.
-
-
-
-
-
-NOTE: Es posible acceder al software del agente de contexto de host para Linux y Windows desde https://mysupport.netapp.com/site/downloads["Soporte de NetApp: Descargas"^].
-
-
-NOTE: Los hosts se crean como hosts independientes; HCA no los crea ni los añade automáticamente a clústeres de hosts.
+Un host se puede crear manualmente:
 
 * *Manual* – durante la creación manual de host, puede asociar los identificadores de puerto de host seleccionándolos de una lista o introduciéndolos manualmente. Después de crear un host, puede asignar volúmenes a él o añadirlo a un clúster de hosts si el objetivo es compartir el acceso a los volúmenes.
-
-
-
-
-=== Use HCA para detectar automáticamente el host
-
-Puede dejar que el agente de contexto de host (HCA) detecte automáticamente los hosts y, luego, verificar que la información sea correcta.
-
-.Pasos
-. En la página gestionar, seleccione la cabina de almacenamiento con la conexión del host.
-. Seleccione MENU:Provisioning[Configure hosts].
-+
-Se abre la página Configurar hosts.
-
-. Seleccione MENU:Storage[hosts].
-+
-En la tabla, se indican los hosts que se crearon automáticamente.
-
-. Verifique que la información provista por HCA sea correcta (nombre, tipo de host, identificadores de puertos de host).
-. Si necesita cambiar alguna información, seleccione el host y, a continuación, haga clic en *Ver/editar configuración*.
 
 
 

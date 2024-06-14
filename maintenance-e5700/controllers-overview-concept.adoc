@@ -26,6 +26,19 @@ Puede determinar si tiene un contenedor de controladora con errores de dos maner
 
 * Recovery Guru en System Manager de SANtricity le dirige reemplazar el compartimento de controladoras.
 * El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
++
+[]
+====
+
+NOTE: El LED de atención ámbar del controlador se apagará siempre que se produzcan las siguientes condiciones de sustitución:
+
+** Error en la ruta de la unidad alternativa
+** El cajón está abierto o ausente
+** El ventilador presenta errores o está ausente
+** Falta el suministro de alimentación
+
+
+====
 
 
 image::../media/e5700_attention_led_callout.png[llamada del led de atención de e5700]

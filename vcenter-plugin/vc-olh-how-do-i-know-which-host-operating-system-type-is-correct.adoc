@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html 
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
-summary: 'El campo Tipo de sistema operativo de host contiene el sistema operativo del host. Es posible seleccionar el tipo de host recomendado en la lista desplegable, o bien permitir que el agente de contexto de host (HCA) configure el host y el tipo de sistema operativo de host adecuado.' 
+summary: El campo Tipo de sistema operativo de host contiene el sistema operativo del host. Puede seleccionar el tipo de host recomendado en la lista desplegable. 
 ---
 = ¿Cómo saber cuál es el tipo de sistema operativo de host correcto?
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'El campo Tipo de sistema operativo de host contiene el sistema operati
 
 
 [role="lead"]
-El campo Tipo de sistema operativo de host contiene el sistema operativo del host. Es posible seleccionar el tipo de host recomendado en la lista desplegable, o bien permitir que el agente de contexto de host (HCA) configure el host y el tipo de sistema operativo de host adecuado.
+El campo Tipo de sistema operativo de host contiene el sistema operativo del host. Puede seleccionar el tipo de host recomendado en la lista desplegable.
 
 Los tipos de hosts que aparecen en la lista desplegable dependen del modelo de cabina de almacenamiento y la versión del firmware. Las versiones más recientes muestran primero las opciones más comunes, que son las más probables ser apropiadas. La aparición en esta lista no implica que la opción esté totalmente admitida.
 
@@ -65,7 +65,3 @@ En la lista pueden aparecer algunos de los siguientes tipos de hosts:
 
 | Ventana en clúster (obsoleto) | Si el tipo de sistema operativo del host está establecido en este valor, utilice la opción Windows (almacenado en clúster o no en clúster). 
 |===
-Después de instalar el HCA y de conectar el almacenamiento al host, el HCA envía la topología del host a la controladoras de almacenamiento a través de la ruta de I/O. Según la topología del host, las controladoras de almacenamiento definen automáticamente el host y los puertos de host asociados para luego establecer el tipo de host.
-
-
-NOTE: Si el HCA no selecciona el tipo de host recomendado, debe configurar manualmente el tipo de host.

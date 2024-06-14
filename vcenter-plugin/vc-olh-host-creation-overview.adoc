@@ -18,21 +18,9 @@ Para gestionar el almacenamiento con el complemento de almacenamiento para vCent
 
 
 
-== Creación de hosts automática versus manual
+== Creación manual de hosts
 
-La creación de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. Un host se puede crear de manera automática o manual.
-
-* *Automático* -- la creación automática de host para hosts basados en SCSI (no NVMe-of) es iniciada por el agente de contexto de host (HCA). HCA es una utilidad que puede instalar en cada host conectado a la cabina de almacenamiento. Cada host que posee HCA instalado inserta su información de configuración en la cabina de almacenamiento a través de la ruta de I/O. Según la información del host, las controladoras crean automáticamente el host y los puertos de host asociados para establecer el tipo de host. Si es necesario, puede realizar cualquier cambio adicional en la configuración del host. Después de que HCA realiza la detección automática, el host se configura automáticamente con los siguientes atributos:
-+
-** El nombre de host derivado del nombre de sistema del host.
-** Los puertos identificadores del host que están asociados con el host.
-** El tipo de sistema operativo del host.
-
-
-
-
-
-NOTE: Los hosts se crean como hosts independientes; HCA no los crea ni los añade automáticamente a clústeres de hosts.
+La creación de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. Un host se puede crear manualmente.
 
 * *Manual* -- durante la creación manual de host, usted asocia identificadores de puerto de host seleccionándolos de una lista o introduciéndolos manualmente. Después de crear un host, puede asignar volúmenes a él o añadirlo a un clúster de hosts si el objetivo es compartir el acceso a los volúmenes.
 

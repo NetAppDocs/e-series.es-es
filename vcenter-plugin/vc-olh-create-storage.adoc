@@ -341,8 +341,8 @@ En el último paso, debe revisar un resumen de los volúmenes que pretende crear
 .Después de terminar
 * En vSphere Client, cree almacenes de datos para los volúmenes.
 * Realice cualquier modificación necesaria del sistema operativo en el host de la aplicación para que las aplicaciones puedan usar el volumen.
-* Ejecute cualquiera de los basados en host `hot_add` utilidad o utilidad específica del sistema operativo (disponible de otro proveedor) y, a continuación, ejecute la `SMdevices` utilidad para correlacionar los nombres de los volúmenes con los nombres de las cabinas de almacenamiento del host.
+* Ejecute la utilidad específica del sistema operativo (disponible de un proveedor de terceros) y, a continuación, ejecute el comando SMcli `-identifyDevices` para correlacionar los nombres de los volúmenes con los nombres de las cabinas de almacenamiento host.
 +
-La `hot_add` utilidad y la `SMdevices` la utilidad se incluye como parte de la `SMutils` paquete. La `SMutils` el paquete es una recogida de utilidades para verificar lo que el host puede ver en la cabina de almacenamiento. Se incluye como parte de la instalación del software SANtricity.
+La interfaz SMcli se incluye en el sistema operativo SANtricity y se puede descargar a través de SANtricity System Manager. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^].
 
 

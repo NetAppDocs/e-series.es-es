@@ -133,7 +133,7 @@ Es posible usar cualquiera de las siguientes opciones para usar los puertos iSCS
 . Edite la partición de host para añadir los ID de puerto de host iSCSI y eliminar los ID de puerto de host FC.
 . Después de reiniciar los hosts iSCSI, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos a disposición del sistema operativo.
 +
-** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible usar el comando SMcli `-identifyDevices` para mostrar los nombres de dispositivos aplicables para los volúmenes. La interfaz SMcli se incluye en el sistema operativo SANtricity y se puede descargar a través de SANtricity System Manager. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^].
 ** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
 
 
@@ -170,7 +170,7 @@ Es posible usar cualquiera de las siguientes opciones para usar los puertos FC n
 . Edite la partición de host para añadir los ID de puerto de host FC y eliminar los ID de puerto de host iSCSI.
 . Después del reinicio de los hosts FC nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
 +
-** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible usar el comando SMcli `-identifyDevices` para mostrar los nombres de dispositivos aplicables para los volúmenes. La interfaz SMcli se incluye en el sistema operativo SANtricity y se puede descargar a través de SANtricity System Manager. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^].
 ** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
 
 
@@ -207,7 +207,7 @@ Es posible usar cualquiera de las siguientes opciones para usar los puertos FC n
 . Edite la partición de host para añadir los ID de puerto de host FC y eliminar los ID de puerto de host iSCSI.
 . Después del reinicio de los hosts FC nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
 +
-** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible usar el comando SMcli `-identifyDevices` para mostrar los nombres de dispositivos aplicables para los volúmenes. La interfaz SMcli se incluye en el sistema operativo SANtricity y se puede descargar a través de SANtricity System Manager. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^].
 ** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
 
 
@@ -243,7 +243,7 @@ Es posible usar cualquiera de las siguientes opciones para usar los puertos iSCS
 . Edite la partición de host para añadir los ID de puerto de host iSCSI y eliminar los ID de puerto de host FC.
 . Después de reiniciar los hosts iSCSI nuevos, use los procedimientos aplicables en los hosts para registrar los volúmenes y ponerlos disponibles para el sistema operativo.
 +
-** Según el sistema operativo, se incluyen dos utilidades con el software de administración del almacenamiento (hot_add y SMdevices). Estas utilidades ayudan a registrar los volúmenes con los hosts y también muestran los nombres de dispositivo correspondientes a los volúmenes.
+** Es posible usar el comando SMcli `-identifyDevices` para mostrar los nombres de dispositivos aplicables para los volúmenes. La interfaz SMcli se incluye en el sistema operativo SANtricity y se puede descargar a través de SANtricity System Manager. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^].
 ** Es posible que deba utilizar herramientas y opciones específicas proporcionadas con el sistema operativo para poner los volúmenes a disposición (es decir, asignar letras de unidad, crear puntos de montaje, etc.). Consulte la documentación del sistema operativo host para obtener detalles.
 
 

@@ -506,6 +506,23 @@ La controladora se reiniciará automáticamente.
 .. Si el estado no es óptimo, resalte el controlador y seleccione *colocar en línea*.
 
 
+. Cuando la controladora vuelva a estar en línea, compruebe si se notificó una discrepancia NVSRAM en Recovery Guru.
++
+.. Si se informa de una discrepancia de NVSRAM, actualice NVSRAM con el siguiente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+La `-k` el parámetro se requiere si la cabina no es https segura.
+
+
+
++
+
+NOTE: Si no se puede completar el comando SMcli, póngase en contacto con https://www.netapp.com/company/contact-us/support/["Asistencia técnica de NetApp"^] o inicie sesión en https://mysupport.netapp.com["Sitio de soporte de NetApp"^] para crear un caso.
+
 . Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
 +
 .. Seleccione menú:Soporte[Centro de soporte > *Diagnóstico].

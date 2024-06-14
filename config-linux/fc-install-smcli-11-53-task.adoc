@@ -17,7 +17,10 @@ Si utiliza el software SANtricity 11.53 o una versión anterior, puede instalar 
 Storage Manager de SANtricity incluye la interfaz de línea de comandos (CLI) para realizar tareas de gestión adicionales y también el agente de contexto de host para insertar la información de configuración del host en las controladoras de la cabina de almacenamiento a través de la ruta de I/O.
 
 
-NOTE: Si utiliza el software SANtricity 11.60 y una versión posterior, no es necesario que siga estos pasos. La CLI segura de SANtricity (SMcli) se incluye en el sistema operativo SANtricity y puede descargarse mediante System Manager de SANtricity. Para obtener más información sobre cómo descargar la SMcli a través de SANtricity System Manager, consulte el tema _Download command line interface (CLI)_ en la ayuda en línea de SANtricity System Manager.
+NOTE: Si utiliza el software SANtricity 11.60 y una versión posterior, no es necesario que siga estos pasos. La CLI segura de SANtricity (SMcli) se incluye en el sistema operativo SANtricity y puede descargarse mediante System Manager de SANtricity. Para obtener más información sobre cómo descargar la interfaz SMcli mediante SANtricity System Manager, consulte la link:https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Descargue el tema de la CLI en la ayuda en línea de comandos de SANtricity System Manager"^]
+
+
+NOTE: A partir de la versión 11.80.1 del software SANtricity, el agente de contexto de host ya no es compatible.
 
 .Antes de empezar
 Asegúrese de tener lo siguiente:

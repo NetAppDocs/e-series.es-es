@@ -145,6 +145,10 @@ Puerto de gestión P1 de la controladora E5700
 
 |===
 . Abra un explorador y utilice la dirección IP predeterminada (169.254.128.101) para establecer una conexión con la controladora. La controladora envía de nuevo un certificado autofirmado. El explorador le informa de que la conexión no es segura.
++
+
+NOTE: Para las plataformas que ejecutan SANtricity 11,60 y posterior, la máscara de subred predeterminada es 255.255.0.0.
+
 . Siga las instrucciones del navegador para continuar e iniciar SANtricity System Manager.
 +
 

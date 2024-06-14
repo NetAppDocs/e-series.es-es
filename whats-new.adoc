@@ -16,6 +16,56 @@ En la siguiente tabla, se describen las nuevas funciones del sistema operativo S
 
 
 
+== Nuevas funciones en la versión 11.80.1
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+`-identifyDevices` parámetro
+ a| 
+Un nuevo `-identifyDevices` El parámetro ahora está disponible en SMcli. Este nuevo parámetro permite buscar todos los dispositivos de bloque nativos de SCSI asociados con sus cabinas de almacenamiento. Para obtener más información, consulte el enlace: Parámetros de línea de comandos de https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices[Downloadable SMcli^].
+
+
+
+ a| 
+Estadísticas del kernel Ethernet
+ a| 
+Ahora hay una nueva opción Estadísticas de kernel de Ethernet disponible en la página Ver paquetes de estadísticas de iSCSI de System Manager. Esta nueva opción le permite ver las estadísticas de los controladores de núcleo de plataforma del dispositivo iSCSI. Para obtener más información, consulte el enlace: Paquetes de estadísticas de iSCSI de https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html[View^].
+
+
+
+ a| 
+Filtrado mejorado para unidades sin asignar y con la función de seguridad habilitada en System Manager
+ a| 
+System Manager ahora filtra las unidades con la función de seguridad habilitada y sin asignar al seleccionar unidades manuales. Como tal, el número de selección de unidades de System Manager ahora coincide con la lista de candidatos de selección de unidades automática que se encuentran en la interfaz de línea de comandos y la API de REST. Ahora se aplica un icono único y texto situado al ratón a unidades sin asignar y con la función de seguridad habilitada dentro de System Manager.
+
+
+
+ a| 
+Se ha añadido la capacidad de bloquear direcciones IP a través del extremo de la API de REST
+ a| 
+Ahora los usuarios pueden bloquear direcciones IP específicas a través del punto final de configuración (`/devmgr/v2/settings`). Una vez configuradas a través del extremo de Configuración, solo las direcciones IP especificadas a través de una lista blanca se pueden comunicar con el dispositivo de almacenamiento. Esta nueva función admite listas de direcciones IPv4 y IPv6.
+
+
+
+ a| 
+Complemento de vCenter Storage
+ a| 
+El complemento para vCenter Storage se actualizó para ser compatible con la versión E-Series 11.80.1.
+
+
+
+ a| 
+Proxy de servicios web
+ a| 
+Web Services Proxy se actualizó a la versión 6,1 para ser compatible con la versión 11.80.1 de E-Series.
+
+|===
+
+
 == Nuevas funciones en la versión 11,80
 
 [cols="35h,~"]

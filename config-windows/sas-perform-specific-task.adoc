@@ -23,7 +23,6 @@ Busque las direcciones SAS mediante la utilidad HBA y, a continuación, utilice 
 Consulte las directrices para las utilidades de HBA:
 
 * La mayoría de los proveedores de HBA ofrecen una utilidad de HBA. Según el sistema operativo y la CPU host, utilice la utilidad LSI-sas2flash (6G) o sas3flash (12G).
-* Los puertos de I/o del host pueden registrarse automáticamente si se ha instalado el agente de contexto de host.
 
 
 .Pasos
