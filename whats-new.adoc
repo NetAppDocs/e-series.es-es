@@ -38,13 +38,6 @@ Ahora hay una nueva opción Estadísticas de kernel de Ethernet disponible en la
 
 
  a| 
-Filtrado mejorado para unidades sin asignar y con la función de seguridad habilitada en System Manager
- a| 
-System Manager ahora filtra las unidades con la función de seguridad habilitada y sin asignar al seleccionar unidades manuales. Como tal, el número de selección de unidades de System Manager ahora coincide con la lista de candidatos de selección de unidades automática que se encuentran en la interfaz de línea de comandos y la API de REST. Ahora se aplica un icono único y texto situado al ratón a unidades sin asignar y con la función de seguridad habilitada dentro de System Manager.
-
-
-
- a| 
 Se ha añadido la capacidad de bloquear direcciones IP a través del extremo de la API de REST
  a| 
 Ahora los usuarios pueden bloquear direcciones IP específicas a través del punto final de configuración (`/devmgr/v2/settings`). Una vez configuradas a través del extremo de Configuración, solo las direcciones IP especificadas a través de una lista blanca se pueden comunicar con el dispositivo de almacenamiento. Esta nueva función admite listas de direcciones IPv4 y IPv6.
