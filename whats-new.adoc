@@ -16,6 +16,21 @@ En la siguiente tabla, se describen las nuevas funciones del sistema operativo S
 
 
 
+== Nuevas características en la versión 11.80.1R1
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Se aumentó el tamaño de clave de los nuevos certificados de gestión autofirmados y firmados por CA.
+ a| 
+La longitud del tamaño de clave de certificado de gestión para el certificado autofirmado de las aplicaciones SANtricity System Manager y Unified Manager se modificó de 2048 a 3072 bits. El cambio se aplica a los certificados autofirmados y firmados por CA recién generados desde las aplicaciones de SANtricity. La longitud de clave es fija y no se ve afectada por las definiciones de tamaño de clave predeterminadas en NVSRAM.
+
+|===
+
+
 == Nuevas funciones en la versión 11.80.1
 
 [cols="35h,~"]
