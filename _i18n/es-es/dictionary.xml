@@ -5175,7 +5175,6 @@
   <block id="f2a12ad5f52528054619d431dc7c3054" category="paragraph">E2760 Y E5660</block>
   <block id="15ced0ef88b79c27417b95cc4a6474e1" category="inline-link">Guía de cableado de hardware E-Series</block>
   <block id="5c8edef9c398c6792341850977901070" category="inline-link">Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha</block>
-  <block id="9696fa6d39ba9aab453fe1ba80da0669" category="paragraph">Para obtener información sobre el cableado para admitir funciones de mirroring, consulte<block ref="ecbdbcda2695048a35af4e9c40e978db" category="inline-link-rx"></block>.</block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="summary">Problemas conocidos</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Notas de la versión</block>
   <block id="88de36217b31f769736a9509849f9ae2" category="paragraph">Las notas de la versión están disponibles fuera de este sitio. Se le pedirá que inicie sesión con sus credenciales del sitio de soporte de NetApp.</block>
@@ -8106,7 +8105,6 @@
   <block id="c68a106f59b3a963f6045af07b07b0c6" category="section-title">Paso 3: Configuración de redes en la cabina: ISCSI, VMware</block>
   <block id="7da05d75fd1c28b0ff4d04d30f85aa5b" category="list-text">La contraseña de la interfaz gráfica de usuario de System Manager, o RBAC o LDAP y un servicio de directorio están configurados para el acceso de seguridad adecuado a la cabina de almacenamiento. Consulte la ayuda en línea de System Manager de SANtricity para obtener más información acerca de Access Management.</block>
   <block id="d112a4595d7d618458e0e407fe3798c1" category="inline-link">Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x.</block>
-  <block id="afc25a4106d05ed660ffe38cacd9e41e" category="admonition">Para obtener información adicional sobre cómo configurar las redes en la cabina en la configuración de VMware, consulte el siguiente informe técnico:<block ref="2b0010fda48675021938d8a7e0b75245" category="inline-link-rx"></block>.</block>
   <block id="7bed2562bdc586ec3d67d6662e168cc9" category="paragraph"><block ref="75421680cf281bbdcd7897f4506943b8" prefix="" category="inline-code"></block> es la dirección de una de las controladoras de la cabina de almacenamiento.</block>
   <block id="07400b5d0c1cefb8324f4f04590f28e5" category="paragraph">La configuración de redes iSCSI en el lado del host permite que el iniciador de VMware iSCSI establezca una sesión con la cabina.</block>
   <block id="f5462cfa22506eb86e8f76429c946a72" category="paragraph">En este método exprés para configurar redes iSCSI en el lado del host, se permite que el host ESXi transporte el tráfico iSCSI mediante cuatro rutas redundantes al almacenamiento.</block>
@@ -8142,7 +8140,6 @@
   <block id="e8900bb7defbf0f78a89e691cbc538a2" category="paragraph">El método exprés de VMware se basa en las siguientes suposiciones:</block>
   <block id="ecd504285de8fe1f6f2b5cd34da3b24d" category="list-text">No utiliza VMware como invitado virtualizado.</block>
   <block id="8bdb84c095cd42085dcbf03a378418f7" category="inline-link">Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.X.</block>
-  <block id="ec54e109d36fc34cc1f95037261f7c35" category="paragraph">Si estas suposiciones no son correctas para la instalación o si desea obtener información de fondo conceptual, consulte el siguiente informe técnico:<block ref="97a9530bee58cb7f1763d204f6462208" category="inline-link-rx"></block></block>
   <block id="f5f8e7008656ffec252c4e530c9ff205" category="summary">Para el protocolo NVMe over Fibre Channel, se configuran los switches y se determinan los identificadores de puerto de host.</block>
   <block id="13b5a4ce04bdd18c6dbe66e0aff43c56" category="doc">Realice tareas específicas de NVMe over FC</block>
   <block id="cf8e74e7bc142ae49e8ffacaa17daf8f" category="paragraph">Para el protocolo NVMe over Fibre Channel, se deben configurar los switches y determinar los identificadores de puerto de host.</block>
@@ -8163,7 +8160,6 @@
   <block id="2773cb6f26fa9eec34b39f8d5f8cbbe0" category="list-text"><block ref="2773cb6f26fa9eec34b39f8d5f8cbbe0" category="inline-link-macro-rx"></block></block>
   <block id="d1a3b3306889b878e71ae42b7b83d579" category="inline-link-macro">Fibre Channel</block>
   <block id="60cb650fd20fd4d3b19ab89ad3569e5e" category="list-text"><block ref="60cb650fd20fd4d3b19ab89ad3569e5e" category="inline-link-macro-rx"></block></block>
-  <block id="c2b7fa28fa5830785c2ed3fa9e67be04" category="list-text"><block ref="bb9afc94d0b3b2b5568ddea4b546dd05" category="inline-link-rx"></block> -- proporciona detalles técnicos sobre la integración de iSCSI con VMware.</block>
   <block id="5ec68760b690fe27d275d8ef065433df" category="list-text"><block ref="3efd8448d2410829795078709782a7da" category="inline-link-rx"></block> -- describe cómo configurar el almacenamiento virtual y físico para permanecer dentro de los máximos permitidos que ESX/ESXi admite.</block>
   <block id="094bf2c199fb9ef7ac29e64a12fd7cad" category="inline-link">Requisitos y limitaciones del almacenamiento NVMe de VMware</block>
   <block id="8f853bc18ffad192705726f50eff4144" category="list-text"><block ref="6e8a1449bb92590a7f42c1a30534b1da" category="inline-link-rx"></block>.</block>
@@ -8888,7 +8884,6 @@
   <block id="e536634a787591dd23dbc618cd207ba6" category="paragraph">Proxy de servicios web</block>
   <block id="b2fe36d045fcd0262e37faca678d17c8" category="paragraph">Web Services Proxy se actualizó a la versión 6,1 para ser compatible con la versión 11.80.1 de E-Series.</block>
   <block id="c89b00da7202a9a153f3761208e9c04b" category="inline-link">TR-4789:Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x</block>
-  <block id="d449697e3f0e2e82550c5b9a353fbb21" category="paragraph">Para aplicar las prácticas recomendadas, NO debe utilizar la vinculación de puertos en las cabinas de almacenamiento E-Series. Consulte<block ref="b18137069ebac12afacac28918c3703b" category="inline-link-rx"></block> si quiere más información.</block>
   <block id="d94b2476c52b9269fb71e09f2c273b3f" category="paragraph">*Ejemplo:*<block ref="55629997c44d8d81fce2f6296c8a341d" prefix=" " category="inline-code"></block></block>
   <block id="ecac0776d163be45b9926de55b835ec4" category="paragraph">*Ejemplo:*<block ref="2c35a6e97cb5b6b552dd737031188e4c" prefix=" " category="inline-code"></block></block>
   <block id="8afb7a80484f4a0c97a4ca2b1dd4f7a9" category="paragraph">*Ejemplo A:*<block ref="5f6fe0e54ad0da0581f1c921b9d0d2ce" prefix=" " category="inline-code"></block></block>
@@ -8908,4 +8903,9 @@
   <block id="28af2c239fc893bd1a2013f2e8b4b941" category="section-title">Nuevas características en la versión 11.80.1R1</block>
   <block id="5769aac2d83733db3bf7507b56dd86e9" category="paragraph">Se aumentó el tamaño de clave de los nuevos certificados de gestión autofirmados y firmados por CA.</block>
   <block id="8545f755b4f7a99afe330df57699f365" category="paragraph">La longitud del tamaño de clave de certificado de gestión para el certificado autofirmado de las aplicaciones SANtricity System Manager y Unified Manager se modificó de 2048 a 3072 bits. El cambio se aplica a los certificados autofirmados y firmados por CA recién generados desde las aplicaciones de SANtricity. La longitud de clave es fija y no se ve afectada por las definiciones de tamaño de clave predeterminadas en NVSRAM.</block>
+  <block id="eb72855c2604e5d3f7f36945024d001c" category="list-text"><block ref="b742d0734e0a1b1acd85c7093d734f44" category="inline-link-rx"></block> -- Proporciona detalles técnicos sobre la integración iSCSI con VMware.</block>
+  <block id="721f229c077c5af73351dcbd1a2235d2" category="paragraph">Para aplicar las prácticas recomendadas, NO debe utilizar la vinculación de puertos en las cabinas de almacenamiento E-Series. Consulte<block ref="4d4a4533fd2b79dc8951aa3f53f56e3f" category="inline-link-rx"></block> para obtener más información.</block>
+  <block id="5821a61234ba1fdfba2e6ba9b392cafa" category="admonition">Para obtener información adicional sobre cómo configurar la red en la cabina de almacenamiento en la configuración de VMware, consulte el siguiente informe técnico:<block ref="4c256e5f3e11bff89d951ec9e05da858" category="inline-link-rx"></block>.</block>
+  <block id="f7a1f25c147fdef63a935b6fc10cf5a0" category="paragraph">Si estas suposiciones no son correctas para la instalación o si desea obtener más información conceptual, consulte el siguiente informe técnico:<block ref="691af5827a322478f9c39bcb9ec0d331" category="inline-link-rx"></block></block>
+  <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Para obtener información sobre el cableado para admitir las funciones de duplicación, consulte la<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
 </blocks>
