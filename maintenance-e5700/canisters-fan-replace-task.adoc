@@ -60,7 +60,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 . En SANtricity System Manager, determine qué contenedor de ventilador tiene errores.
 +
 .. Seleccione *hardware*.
-.. Mire el ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Icono a la derecha de las listas desplegables *Bandeja* para determinar qué bandeja tiene el compartimento de ventiladores con errores.
+.. Observe el icono de ventiladorimage:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Icono de ventilador"], situado a la derecha de las listas desplegables *Bandeja*, para determinar qué bandeja tiene el compartimento de ventilador con errores.
 +
 Si un componente falla, este icono está en rojo.
 
@@ -84,7 +84,7 @@ También se puede encontrar información sobre el contenedor de ventilador con e
 Debe sustituir el contenedor de ventilador que tiene encendido el LED de atención.
 
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[28 dwg e2860 de460c un único contenedor de ventilador con llamada principal en e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[LED de atención]
 
 +
 *(1)* _LED de atención_. Si este LED se muestra como *ámbar fijo*, el ventilador tiene un fallo.
@@ -107,14 +107,14 @@ Guarde todo el material de embalaje para utilizarlo cuando devuelva el ventilado
 
 . Pulse la pestaña naranja para liberar el asa del contenedor de ventilador.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[28 dwg e2860 de460c un único contenedor de ventilador con lengüeta naranja llamada principal e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[Presione la pestaña naranja para liberar la manija del compartimento de ventilador]
 
 +
 *(1)* _TAB que presiona para liberar la manija del contenedor de ventilador._
 
 . Use el asa del contenedor de ventilador para sacar el contenedor de ventilador de la bandeja.
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[28 dwg e2860 de460c asa del contenedor de ventilador con llamada principal e5700]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[Use la manija para sacar el compartimento de ventilador]
 
 +
 *(1)* _handle para sacar el contenedor del ventilador._

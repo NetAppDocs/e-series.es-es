@@ -36,7 +36,7 @@ Siga estas reglas para evitar dañar las unidades de la cabina de almacenamiento
 ** Nunca fuerce una unidad hasta que entre en una estantería y utilice una presión suave y firme para acoplar completamente el pestillo de la unidad.
 ** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
 ** No golpee las unidades contra otras superficies.
-** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 30 segundos para que la unidad reduzca su velocidad de giro.
+** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 60 segundos para que la unidad reduzca su velocidad de giro.
 ** Utilice siempre paquetes aprobados cuando los lleve.
 
 
@@ -52,10 +52,10 @@ Los campos magnéticos pueden destruir todos los datos de la unidad y causar da�
 
 Las bandejas estándar de 24 unidades requieren la asombrosa cantidad de unidades. La siguiente figura muestra el número de las unidades en cada bandeja (se ha extraído el panel frontal de la bandeja).
 
-image::../media/ef600_drives_numbered.png[número de unidades ef600]
+image::../media/ef600_drives_numbered.png[Numeración de unidades en una bandeja de 24 unidades]
 
 Cuando se insertan menos de 24 unidades en una controladora EF300 o EF600, debe alternar entre las dos mitades de la controladora. Empezando por el extremo izquierdo y después moviéndose a la extrema derecha, coloque las unidades de una en una.
 
 La siguiente figura muestra cómo escalonar las unidades entre las dos mitades.
 
-image::../media/ef600_drives_staggering.png[el sistema e600 proporciona la asombrosa cifra]
+image::../media/ef600_drives_staggering.png[Asombrosa unidad en una bandeja de 24 unidades]

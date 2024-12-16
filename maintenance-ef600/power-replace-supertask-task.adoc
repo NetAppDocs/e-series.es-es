@@ -47,7 +47,7 @@ Guarde todos los materiales de embalaje para utilizarlos cuando devuelva la fuen
 
 . Localice la pestaña situada a la derecha de la fuente de alimentación y presiónela hacia la unidad de fuente de alimentación.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Pulse la pestaña situada junto a la fuente de alimentación]
 
 . Localice el mango en la parte frontal de la fuente de alimentación.
 . Utilice el asa para sacar la fuente de alimentación directamente del sistema.
@@ -56,7 +56,7 @@ image::../media/psup_2.png[psup 2]
 CAUTION: Al extraer una fuente de alimentación, utilice siempre dos manos para soportar su peso.
 
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Deslice la fuente de alimentación hacia afuera]
 
 
 
@@ -76,7 +76,7 @@ Las fuentes de alimentación están codificadas y sólo se pueden instalar de un
 CAUTION: No ejerza demasiada fuerza al deslizar la fuente de alimentación en el sistema, ya que puede dañar el conector.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Instale la fuente de alimentación en el controlador]
 
 . Confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.
 +

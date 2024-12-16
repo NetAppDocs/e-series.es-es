@@ -11,7 +11,7 @@ summary: Redistribuya volúmenes para moverlos nuevamente a sus propietarios de 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

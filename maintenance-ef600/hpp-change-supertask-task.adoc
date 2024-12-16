@@ -27,7 +27,7 @@ Para obtener la clave de paquete de funciones, se necesita el número de serie d
 .. Con la ficha *Recursos de soporte* seleccionada, desplácese a la sección *Ver propiedades* de la matriz de almacenamiento superior.
 .. Localice *número de serie del chasis* y copie este valor en un archivo de texto.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[sam1130 ss e2800 storage array profile sn smid copy maint ef600]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[Número de serie del chasis]
 
 
 
@@ -39,7 +39,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 .. Escriba *Id. De submodelo del paquete de funciones* en el cuadro de texto y haga clic en *Buscar*.
 .. Busque el identificador de submodelo del paquete de funciones para la configuración de inicio.
 +
-image::../media/storage_array_profile2_maint-ef600.gif[profile2 maint ef600 de la cabina de almacenamiento]
+image::../media/storage_array_profile2_maint-ef600.gif[Perfil de la cabina de almacenamiento]
 
 
 
@@ -596,7 +596,7 @@ NOTE: Si el identificador de submodelo de la controladora no es el, comuníquese
 .. En *Cambiar paquete de funciones*, busque *Identificador de habilitación de funciones*.
 .. Copie y pegue este número de 32 dígitos en un archivo de texto.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[sam1130 ss e2800 change feature pack enable identifier copy maint ef600]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[Cambiar paquete de funciones]
 
 
 
@@ -652,7 +652,7 @@ Cambie el paquete de funciones para convertir el protocolo de host de los puerto
 . En SANtricity System Manager, seleccione MENU:Configuración[sistema].
 . En *Complementos*, seleccione *Cambiar paquete de funciones*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[sam1130 ss system change feature pack maint ef600]
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[Cambie el paquete de funciones]
 
 . Haga clic en *examinar* y, a continuación, seleccione el paquete de funciones que desee aplicar.
 . Escriba *CHANGE* en el campo.

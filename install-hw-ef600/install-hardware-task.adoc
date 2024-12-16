@@ -43,7 +43,7 @@ Si se incluyeron instrucciones con el hardware para montaje en rack, consulte el
 
 
  a| 
-image:../media/install_rails_inst-hw-ef600.png[""]
+image:../media/install_rails_inst-hw-ef600.png["Instale los rieles"]
 
 |===
 . Instale la bandeja.
@@ -63,7 +63,7 @@ CAUTION: Al instalar la estantería, utilice un elevador de equipo con dos perso
 
 
  a| 
-image:../media/install_ef600.png[""]
+image:../media/install_ef600.png["Instale el estante en el gabinete con dos personas"]
 
 |===
 . Asegure la bandeja.
@@ -77,7 +77,7 @@ Para obtener más información, consulte link:../rackmount-hardware.html["Hardwa
 
 
  a| 
-image:../media/secure_shelf_inst-hw-ef600.png[""]
+image:../media/secure_shelf_inst-hw-ef600.png["Fije la bandeja"]
 
 |===
 . Instale la placa frontal.
@@ -92,7 +92,7 @@ image:../media/secure_shelf_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/install_faceplate_2_0_inst-hw-ef600.png[""]
+image:../media/install_faceplate_2_0_inst-hw-ef600.png["Instale la placa frontal"]
 
 |===
 

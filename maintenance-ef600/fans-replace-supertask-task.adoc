@@ -90,7 +90,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 . Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
-image::../media/remove_controller_5.png[retire la controladora 5]
+image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
@@ -98,7 +98,7 @@ image::../media/remove_controller_5.png[retire la controladora 5]
 CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
 
 +
-image::../media/remove_controller_6.png[retire la controladora 6]
+image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso del controlador cuando retire]
 
 . Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
 
@@ -117,7 +117,7 @@ Si este LED verde está encendido, el controlador sigue utilizando la batería. 
 
 . Levante con cuidado el ventilador averiado del controlador.
 +
-image::../media/fan_2.png[ventilador 2]
+image::../media/fan_2.png[Retire el ventilador]
 
 
 
@@ -130,10 +130,10 @@ Instale un ventilador nuevo para sustituir el que ha fallado.
 .Pasos
 . Deslice completamente el ventilador de repuesto en la bandeja.
 +
-image::../media/fan_3.png[ventilador 3]
+image::../media/fan_3.png[Instale el ventilador en el controlador]
 
 +
-image::../media/fan_3_a.png[ventilador 3 a]
+image::../media/fan_3_a.png[Instale el ventilador en el controlador]
 
 
 
@@ -151,7 +151,7 @@ Después de instalar el ventilador nuevo, vuelva a instalar el compartimento de 
 NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
 
 +
-image::../media/remove_controller_7.png[retire la controladora 7]
+image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 
 

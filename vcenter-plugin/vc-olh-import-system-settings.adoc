@@ -11,7 +11,7 @@ summary: Importe la configuración del sistema desde una cabina de almacenamient
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

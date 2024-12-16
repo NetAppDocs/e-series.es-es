@@ -69,7 +69,7 @@ Guarde todos los materiales de embalaje.
 
 . Pulse el botón de liberación de la unidad con error.
 +
-image::../media/drw_drive_latch_maint-e2800.gif[pestillo de la unidad drw maint e2800]
+image::../media/drw_drive_latch_maint-e2800.gif[Pulse el botón de liberación para quitar la unidad con error]
 
 +
 ** Para las unidades de las bandejas de controladoras E2812 o DE212C, el botón de liberación se encuentra a la izquierda de la unidad.
@@ -77,13 +77,13 @@ image::../media/drw_drive_latch_maint-e2800.gif[pestillo de la unidad drw maint 
 
 
 . Abra la palanca de leva y deslice ligeramente hacia fuera la unidad.
-. Espere 30 segundos.
+. Espere 60 segundos.
 . Con ambas manos, retire la unidad de la bandeja.
 . Coloque la unidad sobre una superficie antiestática y amortiguada lejos de los campos magnéticos.
-. Espere 30 segundos hasta que el software reconozca que la unidad se ha quitado.
+. Espere 60 segundos hasta que el software reconozca que la unidad se ha quitado.
 +
 
-NOTE: Si quita accidentalmente una unidad activa, espere al menos 30 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
+NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
 
 
 
@@ -119,7 +119,7 @@ Complete la sustitución de la unidad para confirmar que la unidad nueva funcion
 . Compruebe el LED de encendido y el LED de atención de la unidad que ha sustituido. (Cuando inserte una unidad por primera vez, es posible que el LED de atención esté encendido. Sin embargo, el LED debería apagarse en un minuto.)
 +
 ** El LED de alimentación está encendido o parpadeando y el LED de atención está apagado: Indica que la unidad nueva funciona correctamente.
-** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 30 segundos y vuelva a instalarla.
+** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 60 segundos y vuelva a instalarla.
 ** El LED de atención está encendido: Indica que la unidad nueva puede tener defectos. Sustitúyalo por otra unidad nueva.
 
 

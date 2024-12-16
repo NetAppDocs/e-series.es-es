@@ -67,7 +67,7 @@ n.a.
 
 En una topología de conexión directa, uno o más hosts están conectados directamente al subsistema. En la versión 11.50 de SANtricity OS, admitimos una única conexión desde cada host a una controladora del subsistema, como se muestra a continuación. En esta configuración, un puerto HCA (adaptador de canal de host) de cada host debe estar en la misma subred que el puerto de la controladora E-Series al que está conectado, pero en una subred diferente del otro puerto HCA.
 
-image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+image::../media/nvmeof_direct_connect.gif[Ejemplo de conexión directa de NVMe over InfiniBand]
 
 
 

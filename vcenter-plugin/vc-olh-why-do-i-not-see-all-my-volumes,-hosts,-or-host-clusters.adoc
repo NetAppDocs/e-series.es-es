@@ -10,7 +10,7 @@ summary: 'Los volúmenes Snapshot que incluyen un volumen base con la función D
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

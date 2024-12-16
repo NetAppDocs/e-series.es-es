@@ -11,7 +11,7 @@ summary: Un análisis de medios es una operación que se ejecuta en segundo plan
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

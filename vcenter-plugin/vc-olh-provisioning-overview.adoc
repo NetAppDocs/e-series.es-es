@@ -10,7 +10,7 @@ summary: Se pueden crear contenedores de datos, denominados volúmenes, para que
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

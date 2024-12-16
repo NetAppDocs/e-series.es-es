@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e4000/replace-controller-requirements-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Requisitos para reemplazar una controladora E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de sustituir o añadir una controladora E4000, revise los requisitos y consideraciones.
+
+Cada contenedor de controladora contiene una tarjeta de la controladora y una batería. Es posible añadir una segunda controladora a una configuración simple o reemplazar una controladora con errores.
+
+
+
+== Requisitos para agregar una segunda controladora
+
+Es posible añadir un segundo compartimento de controladoras a la versión simple de la bandeja de controladoras E4000. Antes de añadir una segunda controladora, debe tener:
+
+* Un contenedor de controladora nuevo con el mismo número de pieza que el contenedor de controladora instalado actualmente.
++
+
+NOTE: Esto no es aplicable a un dispositivo StorageGRID.
+
+* Todos los cables, transceptores, switches y adaptadores de bus de host (HBA) necesarios para conectar los nuevos puertos de controladora.
++
+Para obtener información acerca del hardware compatible, consulte https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"] o la http://hwu.netapp.com/home.aspx["Hardware Universe de NetApp"].
+
+* Controlador multivía instalado en el host para poder usar ambas controladoras. Consulte el https://docs.netapp.com/us-en/e-series/config-linux/index.html["Configuración exprés de Linux"] https://docs.netapp.com/us-en/e-series/config-windows/index.html["Configuración exprés de Windows"] , o https://docs.netapp.com/us-en/e-series/config-vmware/index.html["Configuración exprés de VMware"] para obtener instrucciones.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Un destornillador Phillips número 1.
+* Etiquetas para identificar los cables nuevos.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora).
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Para SANtricity System Manager (versión 11,60 y posteriores), puede descargar el paquete de la CLI (archivo zip) en System Manager. Para ello, vaya a *Configuración > Sistema > Complementos > Interfaz de línea de comandos* en System Manager. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+
+
+
+
+
+== Requisitos para sustituir controladora
+
+Cuando se sustituye un compartimento de controladoras con errores, debe quitar la batería, la HIC y los DIMM del compartimento de controladora original e instalarlos en el compartimento de controladora de reemplazo.
+
+Puede determinar si tiene un contenedor de controladora con errores de dos maneras:
+
+* Recovery Guru en System Manager de SANtricity le dirige reemplazar el compartimento de controladoras.
+* El LED de alerta ámbar del compartimento de controladoras está encendido, lo que indica que la controladora tiene un fallo.
+
+
+Antes de sustituir una controladora, debe tener:
+
+* Un compartimento de controladoras de reemplazo con el mismo número de pieza que el compartimento de controladoras que se desea sustituir.
+* Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+* Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+* Destornillador Phillips número 1.
+* Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora).
++
+De manera opcional, puede usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Para SANtricity System Manager (versión 11,60 y posteriores), puede descargar el paquete de la CLI (archivo zip) en System Manager. Para ello, vaya a *Configuración > Sistema > Complementos > Interfaz de línea de comandos* en System Manager. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
+
+
+
+
+
+=== Requisitos de configuración doble
+
+Si la bandeja de controladoras tiene dos controladoras (configuración doble), es posible reemplazar un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, siempre que se cumplan las siguientes condiciones:
+
+* El segundo compartimento de controladoras de la bandeja tiene el estado óptimo.
+* El campo *Aceptar para eliminar* del área Detalles de Recovery Guru en el Administrador del sistema de SANtricity muestra *Sí*, lo que indica que es seguro quitar este componente.
+
+
+
+
+=== Requisitos de configuración simple
+
+Si solo tiene un contenedor de controladora (configuración simple), no se podrá acceder a los datos en la cabina de almacenamiento hasta que se sustituya el contenedor de controladora. Debe detener las operaciones de I/o del host y apagar la cabina de almacenamiento.

@@ -53,12 +53,12 @@ Si utiliza tramas gigantes dentro DE LA SAN IP por motivos de rendimiento, aseg�
 
 
 .Acerca de esta tarea
-Mientras planifica las redes iSCSI, recuerde que https://configmax.vmware.com/home["Máximos de configuración de VMware"^] la guía indica que el número máximo de rutas de almacenamiento iSCSI admitidas es 8. Debe tener en cuenta este requisito para evitar configurar demasiadas rutas.
+Al planificar la red iSCSI, recuerde que https://configmax.broadcom.com/home["Máximos de configuración de VMware"^] la guía indica que el número máximo de rutas de almacenamiento iSCSI compatibles es 8 GbE. Debe tener en cuenta este requisito para evitar configurar demasiadas rutas.
 
 De manera predeterminada, el iniciador de software VMware iSCSI crea una sola sesión por destino iSCSI cuando no utiliza el enlace de puerto iSCSI.
 
 
-NOTE: El enlace del puerto iSCSI de VMware es una función que obliga a todos los puertos de VMkernel vinculados a iniciar sesión en todos los puertos de destino a los que se puede acceder en los segmentos de red configurados. Está destinado al uso con cabinas que presenten una sola dirección de red para el destino iSCSI. NetApp recomienda no utilizar el enlace de puerto iSCSI. Para obtener más información, consulte http://kb.vmware.com/["Base de conocimientos de VMware"] Para obtener el artículo sobre consideraciones para usar el enlace de puerto iSCSI de software en ESX/ESXi. Si el host ESXi está conectado al almacenamiento de otro proveedor, NetApp recomienda utilizar puertos vmkernel iSCSI separados para evitar cualquier conflicto con la vinculación de puertos.
+NOTE: El enlace del puerto iSCSI de VMware es una función que obliga a todos los puertos de VMkernel vinculados a iniciar sesión en todos los puertos de destino a los que se puede acceder en los segmentos de red configurados. Está destinado al uso con cabinas que presenten una sola dirección de red para el destino iSCSI. NetApp recomienda no utilizar el enlace de puerto iSCSI. Para obtener información adicional, consulte el https://support.broadcom.com/["Base de conocimientos de VMware"] para el artículo sobre consideraciones para utilizar el enlace de puerto iSCSI de software en ESX/ESXi. Si el host ESXi está conectado al almacenamiento de otro proveedor, NetApp recomienda utilizar puertos vmkernel iSCSI separados para evitar cualquier conflicto con la vinculación de puertos.
 
 Para aplicar las prácticas recomendadas, NO debe utilizar la vinculación de puertos en las cabinas de almacenamiento E-Series. Consulte https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x"^] para obtener más información.
 
@@ -280,7 +280,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la hoja de datos sigu
 
 Las configuraciones recomendadas constan de dos puertos de iniciador y cuatro puertos de destino con una o varias VLAN.
 
-image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+image::../media/50001_01_conf-vmw.gif[Identificador de puerto iSCSI]
 
 
 

@@ -10,7 +10,7 @@ summary: 'La garantía de datos (DA) implementa el estándar de información de 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

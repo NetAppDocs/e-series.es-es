@@ -29,7 +29,7 @@ Las patas de nivelación están situadas cerca de cada esquina inferior del arma
 La siguiente figura proporciona una vista de cerca de la base de estabilidad y de los pies de nivelación.
 
 +
-image::../media/83000_08.gif[83000 08]
+image::../media/83000_08.gif[Patas de nivelación y estabilidad]
 
 +
 |===
@@ -83,7 +83,7 @@ Después de volver a instalar las bandejas, instale las bobinas de cable y las b
 .Paso
 . Instale los carretes de cable y los tirantes a lo largo de ambos lados de las salidas de distribución de alimentación vertical.
 +
-image::../media/83003_01_dwg_3040_cable_spools.gif[carretes de cable 83003 01 dwg 3040]
+image::../media/83003_01_dwg_3040_cable_spools.gif[Envoltura de amarre y corredera de cable]
 
 +
 |===
@@ -123,7 +123,6 @@ Es necesario cubrir los espacios vacíos para mantener el flujo de aire correcto
 
 == Paso 5: Instale rieles de montaje adicionales
 
-[role="lead"]
 Si va a instalar soportes de controladoras-unidades o soportes de unidades que se enviaron por separado (no están instalados ya en el armario), puede que deba instalar rieles de montaje adicionales en el armario.
 
 .Pasos
@@ -140,7 +139,7 @@ Si va a instalar soportes de controladoras-unidades o soportes de unidades que s
 
 . Utilice los marcadores de medición de los soportes verticales delanteros derecho e izquierdo para fijar los raíles de montaje a la misma posición en cada lado del armario.
 +
-image::../media/92042_06.gif[92042 06]
+image::../media/92042_06.gif[Montaje en carril]
 
 +
 |===
@@ -248,7 +247,7 @@ NOTE: Debe conectar cada PDU a una fuente de alimentación independiente fuera d
 
 . Gire los 12 disyuntores a su posición on (arriba).
 +
-image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 dwt 3040 gabinete pdu]
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[Disyuntores y tomas de corriente]
 
 +
 |===
@@ -277,9 +276,9 @@ Cajas de entrada de alimentación
 . Encienda todas las bandejas de unidades del armario.
 +
 
-NOTE: Espere 30 segundos después de encender las bandejas de unidades antes de encender la alimentación a los soportes de controladoras-unidades.
+NOTE: Espere 60 segundos después de encender las bandejas de unidades antes de encender la alimentación a los soportes de controladoras-unidades.
 
-. Espere 30 segundos después de encender las bandejas de unidades y, a continuación, encienda todos los soportes de controladoras-unidades del armario.
+. Espere 60 segundos después de encender las bandejas de unidades y, a continuación, encienda todos los soportes de controladoras-unidades del armario.
 
 
 .Resultado

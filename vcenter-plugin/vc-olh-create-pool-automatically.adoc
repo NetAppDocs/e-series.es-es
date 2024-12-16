@@ -11,7 +11,7 @@ summary: Es posible crear pools automáticamente cuando el sistema detecta al me
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

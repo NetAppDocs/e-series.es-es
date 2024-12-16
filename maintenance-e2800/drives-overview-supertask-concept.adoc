@@ -27,11 +27,11 @@ Las figuras muestran la forma en que las unidades están numeradas en cada tipo 
 
 *Numeración de unidades en una bandeja de controladores E2812 o en una bandeja de unidades DE212C:*
 
-image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 dwg e2812 de212c numeración de unidades]
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[Numeración de unidades para bandeja de 12 unidades]
 
 *Numeración de unidades en una bandeja de controladoras E2824, una cabina flash EF280 o una bandeja de unidades DE224C:*
 
-image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 dwg e2824 de224c con número de unidades maint e2800]
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[Numeración de unidades para bandeja de 24 unidades]
 
 
 NOTE: La cabina de almacenamiento E2812, E2824, EF280 puede incluir una o más soportes de unidades de expansión heredados SAS-2, incluidos el soporte de 12 unidades DE1600, el soporte DE5600 24 unidades o el soporte de 60 unidades DE6600 Para obtener instrucciones para reemplazar una unidad en uno de estos soportes de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Reemplazar una unidad en soportes E2660, E2760, E5460, E5560 o E5660"^] y.. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Reemplazar una unidad en soportes de 12 o 24 unidades E2600, E2700, E5400, E5500 y E5600"^].
@@ -42,11 +42,11 @@ NOTE: La cabina de almacenamiento E2812, E2824, EF280 puede incluir una o más s
 
 La bandeja de controladoras E2860 y la bandeja de unidades DE460C constan de cinco cajones de unidades que contienen cada uno 12 ranuras de unidad. El cajón de unidades 1 está en la parte superior y el cajón de unidades 5 está en la parte inferior.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c delante sin anotaciones maint e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[60 cajones de unidades]
 
 Para un cajón de bandeja de controladoras E2860 y un cajón de bandejas de unidades DE460C, las unidades están numeradas de 0 a 11 en cada cajón de unidades de la bandeja.
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cajón dwg trafford con hdd callouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Números de ranura de unidad]
 
 
 NOTE: La cabina de almacenamiento E2860 puede incluir una o varias bandejas de unidades de expansión heredadas SAS-2, incluidas la bandeja de 12 unidades DE1600, la bandeja DE5600 24 unidades o la bandeja DE6600 60 unidades Para obtener instrucciones para reemplazar una unidad en uno de estos soportes de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Reemplazar una unidad en soportes E2660, E2760, E5460, E5560 o E5660"^] y.. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Reemplazar una unidad en soportes de 12 o 24 unidades E2600, E2700, E5400, E5500 y E5600"^].
@@ -57,11 +57,11 @@ NOTE: La cabina de almacenamiento E2860 puede incluir una o varias bandejas de u
 
 Es posible reemplazar un cajón de unidades en una bandeja de controladoras E2860 y una bandeja de unidades DE460C. Cada una de estas bandejas de 60 unidades tiene cinco cajones de unidades.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c delante sin anotaciones maint e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[cajón de 60 unidades]
 
 Cada uno de los cinco cajones puede alojar hasta 12 unidades.
 
-image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif["Cajón con unidades instaladas"]
 
 
 
@@ -91,7 +91,7 @@ Si no hay una correa de mano disponible, toque una superficie sin pintar en el c
 ** Nunca fuerce una unidad hasta que entre en una estantería y utilice una presión suave y firme para acoplar completamente el pestillo de la unidad.
 ** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
 ** No golpee las unidades contra otras superficies.
-** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 30 segundos para que la unidad reduzca su velocidad de giro.
+** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 60 segundos para que la unidad reduzca su velocidad de giro.
 ** Utilice siempre paquetes aprobados cuando los lleve.
 
 

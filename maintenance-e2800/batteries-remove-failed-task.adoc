@@ -20,7 +20,7 @@ Después de quitar el compartimento de controladoras de la bandeja de controlado
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED de caché interna activa]
 
 +
 *(1)* _Internal Cache Active_
@@ -31,7 +31,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Localice el pestillo de liberación azul de la batería.
 . Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retire la batería principal e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retire la batería del controlador]
 
 +
 *(1)* _pestillo de liberación de la batería_

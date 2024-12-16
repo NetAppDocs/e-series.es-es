@@ -11,7 +11,7 @@ summary: Si va a actualizar las controladoras E2800 y E5700 y la función Drive 
 
 
 [role="lead"]
-Si actualiza controladoras E2800 y E5700, la función Drive Security de estas controladoras bloqueará las unidades en parte, externamente o internamente. Si la función Drive Security está habilitada, es necesario desbloquear manualmente estas unidades.
+La función Drive Security de estas controladoras bloqueará las unidades de forma parcial, externa o interna. Si la función Drive Security está habilitada, es necesario desbloquear manualmente estas unidades.
 
 Siga el procedimiento adecuado para:
 

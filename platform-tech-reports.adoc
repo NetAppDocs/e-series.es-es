@@ -6,7 +6,12 @@ summary: Informes técnicos de E-Series
 ---
 = Consulte los informes técnicos de la plataforma
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Consulte los siguientes enlaces para acceder a informes técnicos relacionados con las plataformas E-Series. Los vínculos lo llevan a otro sitio de documentación.
 
 
 
@@ -28,8 +33,8 @@ summary: Informes técnicos de E-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"] |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Descripción general de las funciones de las cabinas E4000*"^] |  
 
 
-| Describe las funciones de hardware y software de la cabina all-flash EF600 y las nuevas funciones de SO SANtricity. |  |  
+| Describe las funciones de hardware y software de la cabina all-flash EF600 y las nuevas funciones de SO SANtricity. | Describe las funciones de hardware y software de la cabina híbrida E4000 y las funciones más recientes del sistema operativo SANtricity. |  
 |===

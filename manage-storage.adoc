@@ -6,6 +6,8 @@ summary: Gestionar el almacenamiento
 ---
 = Gestionar el almacenamiento
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

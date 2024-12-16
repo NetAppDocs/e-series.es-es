@@ -11,7 +11,7 @@ summary: Utilice la opción consolidar capacidad libre para consolidar las exten
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

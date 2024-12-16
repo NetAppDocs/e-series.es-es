@@ -37,7 +37,7 @@ El plugin requiere que se haya implementado un dispositivo VMware vCenter Server
 
 Consulte la siguiente figura para obtener más información sobre la comunicación en el entorno vCenter.
 
-image:../media/vcenter_communication2.png[""]
+image:../media/vcenter_communication2.png["Entorno de comunicación del vCenter"]
 
 
 

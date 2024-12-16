@@ -204,7 +204,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que este LED se apague antes de quitar el compartimento de controladoras.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED activo de caché en el controlador E2800]
 
 +
 *(1)* _Cache Active LED_
@@ -214,7 +214,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador d
 La siguiente figura es un ejemplo de bandeja de controladoras E2812, bandeja de controladoras E2824 o una cabina flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -226,7 +226,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La siguiente figura es un ejemplo de una bandeja de controladoras E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -263,7 +263,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED activo de caché interna]
 
 +
 *(1)* _Internal Cache Active LED_
@@ -282,7 +282,7 @@ Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de l
 CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Vuelva a instalar HIC en la tarjeta del controlador]
 
 +
 *(1)* _Tarjeta de interfaz del host_
@@ -296,7 +296,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 . Con un destornillador Phillips del número 1, conecte la nueva placa frontal de la HIC al compartimento de la controladora con los cuatro tornillos que quitó anteriormente.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Vuelva a instalar la placa frontal en el controlador]
 
 
 
@@ -313,7 +313,7 @@ Después de instalar la HIC, vuelva a instalar el compartimento de controladoras
 La siguiente figura es un ejemplo de una bandeja de controladoras E2824 o una cabina flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Vuelva a instalar el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -325,7 +325,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La siguiente figura es un ejemplo de una bandeja de controladoras E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif['Vuelva a instalar el compartimento de controladoras']
 
 +
 *(1)* _Controller canister_
@@ -369,7 +369,7 @@ Cuando se restablece la comunicación con otra controladora:
 +
 ** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *OL*, *_blank_* para indicar que el controlador está sin conexión.
 ** El LED de atención ámbar permanece encendido.
-** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Los LED Host Link pueden estar encendidos, parpadeando o apagados, según la interfaz del host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["Indicadores LED de la controladora E2800"]
 +
 *(1)* _LED de atención (ámbar)_
 
@@ -463,7 +463,7 @@ NOTE: Realice esta tarea solo si la cabina de almacenamiento tiene una controlad
 NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maint e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[Indicadores LED de la controladora E2800]
 
 +
 *(1)* _LED de atención (ámbar)_

@@ -10,7 +10,7 @@ summary: Consulte el estado del sistema desde el complemento de almacenamiento p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

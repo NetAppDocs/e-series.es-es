@@ -11,7 +11,7 @@ summary: Es posible comprobar la redundancia de un volumen en un pool o grupo de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

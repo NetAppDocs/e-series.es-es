@@ -10,7 +10,7 @@ summary: 'Ver información resumida de un certificado, incluida la organización
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,148 @@
+---
+permalink: install-hw-e4000/prepare-installation.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Preparación de la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe preparar su sitio para que cumpla con las especificaciones del sistema de almacenamiento de la serie E4000.
+
+.Pasos
+. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
+. Asegúrese de que los siguientes elementos están en la caja que recibió:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+Bandeja con unidades instaladas (cubierta protectora empaquetada por separado)::
++
+--
+image:../media/trafford_overview.png["Bandeja con unidades instaladas"]
+
+--
+Hardware para montaje en rack::
++
+--
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware para montaje en rack"]
+
+--
+Cables Ethernet para la conexión de gestión (si se solicitan)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cables Ethernet para conexión de gestión"]
+
+--
+Cables de I/O para cablear hosts de datos::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cables de I/O para cablear hosts de datos"]
+
+--
+Cables de alimentación::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cables de alimentación"]
+
+--
+Cables SAS::
++
+--
+image:../media/sas_cable.png["Cables SAS"]
+
+--
+
+
+--
+.E4060
+--
+Hardware para estante, bisel y montaje en rack::
++
+--
+image:../media/trafford_overview.png["Hardware para estante, bisel y montaje en rack"]
+
+--
+Cuatro asas de bandeja x4:: image:../media/handles_counted.png["Cuatro asas de bandeja"]
+Cables Ethernet para la conexión de gestión (si se solicitan)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cables Ethernet para conexión de gestión"]
+
+--
+Cables de I/O para cablear hosts de datos::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cables de I/O para cablear hosts de datos"]
+
+--
+Cables de alimentación::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cables de alimentación"]
+
+--
+Cables SAS::
++
+--
+image:../media/sas_cable.png["Cables SAS"]
+
+--
+
+
+--
+====
+. Obtenga los elementos adicionales necesarios para la instalación:
++
+** Un destornillador n.o 2 de philips
+** Una linterna
+** Una correa ESD
+** Un armario o rack se adapta a estantes de los siguientes tamaños:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+*Profundidad*: 21,1. In (53,59 cm)
+
+*Ancho*: 17,64 in (44,8)
+
+*Altura*: 3,4 in (8,64 cm)
+
+* Peso máximo*: 29.6 kg (65.25 lb)
+
+--
+.E4060
+--
+*Profundidad*: 36,3 in (92,2 cm)
+
+*Ancho*: 17,64 in (44,8 cm)
+
+*Altura*: 7,0 in (17,78 cm)
+
+* Peso máximo*: 114.91 kg (253.33 lb)
+
+--
+====
+** Una ubicación que proporciona la tensión correcta de la alimentación de CA:
++
+*** E4012: De 120 a 240 voltios de CA
+*** E4060: 240 voltios CA
+
+
+** Un navegador compatible para el software de gestión:
++
+*** Google Chrome (versión 89 y posteriores)
+*** Microsoft Edge (versión 90 y posteriores)
+*** Mozilla Firefox (versión 80 y posteriores)
+*** Safari (versión 14 y posteriores)
+
+
+
+
+

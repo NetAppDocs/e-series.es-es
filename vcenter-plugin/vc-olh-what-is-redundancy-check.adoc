@@ -10,7 +10,7 @@ summary: Una comprobación de redundancia determina si los datos de un volumen e
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

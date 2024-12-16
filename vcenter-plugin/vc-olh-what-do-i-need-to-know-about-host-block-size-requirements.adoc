@@ -10,7 +10,7 @@ summary: 'Para los sistemas EF300 y EF600, es posible configurar un volumen para
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

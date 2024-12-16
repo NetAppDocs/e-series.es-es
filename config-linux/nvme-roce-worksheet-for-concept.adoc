@@ -19,7 +19,7 @@ Es posible generar e imprimir un PDF de esta página y utilizar la siguiente hoj
 
 En una topología de conexión directa, uno o más hosts están conectados directamente al subsistema. En la versión 11.50 de SANtricity OS, admitimos una única conexión desde cada host a una controladora del subsistema, como se muestra a continuación. En esta configuración, un puerto HCA (adaptador de canal de host) de cada host debe estar en la misma subred que el puerto de la controladora E-Series al que está conectado, pero en una subred diferente del otro puerto HCA.
 
-image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+image::../media/nvmeof_direct_connect.gif[Ejemplo de conexión directa de NVME over RoCE]
 
 Una configuración de ejemplo que satisface los requisitos consta de cuatro subredes de red como se indica a continuación:
 
@@ -35,7 +35,7 @@ Una configuración de ejemplo que satisface los requisitos consta de cuatro subr
 
 En una topología de estructura, se utilizan uno o varios switches. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] si desea obtener una lista de switches compatibles.
 
-image::../media/nvmeof_switch_connect.gif[nvmeof switch connect]
+image::../media/nvmeof_switch_connect.gif[Ejemplo de conexión de switch NVMe over RoCE]
 
 
 

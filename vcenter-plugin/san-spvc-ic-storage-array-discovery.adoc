@@ -10,7 +10,7 @@ summary: Utilice la interfaz del complemento para vCenter para detectar las dire
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

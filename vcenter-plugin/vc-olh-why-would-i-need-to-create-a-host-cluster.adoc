@@ -10,7 +10,7 @@ summary: Debe crear un clúster de hosts si desea que dos o más hosts compartan
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

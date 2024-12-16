@@ -32,7 +32,7 @@ El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una t
 
 
  a| 
-image:../media/2U_DirectTopology.png[""]
+image:../media/2U_DirectTopology.png["Cableado de topología de conexión directa"]
  a| 
 . Conecte cada adaptador de host directamente a los puertos de host de las controladoras.
 
@@ -48,7 +48,7 @@ El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una t
 
 
  a| 
-image:../media/2U_FabricTopology.png[""]
+image:../media/2U_FabricTopology.png["Cableado de topología estructural"]
  a| 
 . Conecte cada adaptador de host directamente al conmutador.
 . Conecte cada switch directamente a los puertos de host de las controladoras.
@@ -79,7 +79,7 @@ Aprenda a configurar los puertos de gestión con un servidor DHCP.
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cableado Ethernet"]
  a| 
 Cables Ethernet (si se solicitan)
 
@@ -92,11 +92,11 @@ Las siguientes figuras muestran ejemplos de la ubicación del puerto de gestión
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["Puerto de gestión de E2800 GbE"]
 
 Puerto de gestión P1 de la controladora E2800
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["Puerto de gestión de E5700 GbE"]
 
 Puerto de gestión P1 de la controladora E5700
 
@@ -108,7 +108,6 @@ Puerto de gestión P1 de la controladora E5700
 
 === Opción 2: Dirección IP estática
 
-[role="lead"]
 Aprenda a configurar los puertos de gestión de forma manual. Para ello, introduzca la dirección IP y la máscara de subred.
 
 .Antes de empezar
@@ -123,7 +122,7 @@ Aprenda a configurar los puertos de gestión de forma manual. Para ello, introdu
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cable Ethernet"]
  a| 
 Cables Ethernet (si se solicitan)
 
@@ -136,11 +135,11 @@ Las siguientes figuras muestran ejemplos de la ubicación del puerto de gestión
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["Puerto de gestión de E2800 GbE"]
 
 Puerto de gestión P1 de la controladora E2800
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["Puerto de gestión de E5700 GbE"]
 
 Puerto de gestión P1 de la controladora E5700
 
@@ -200,7 +199,7 @@ Después de instalar el hardware, use el software SANtricity para configurar y g
 
 
  a| 
-image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png[""]
+image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png["Acceda a System Manager para configurar los puertos de gestión"]
  a| 
 Para acceder a System Manager, utilice las mismas direcciones IP que se usaron para configurar los puertos de gestión.
 

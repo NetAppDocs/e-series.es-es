@@ -19,5 +19,5 @@ De forma predeterminada, un host ESXi ejecuta automáticamente una nueva detecci
 . Cree uno o varios volúmenes y asígnelos al host ESXi.
 . Si se usa una instancia de vCenter Server, añada el host al inventario del servidor.
 . Utilice vSphere Client o vSphere Web Client para la conexión directa a vCenter Server o al host ESXi.
-. Para obtener instrucciones sobre cómo realizar una nueva detección del almacenamiento en un host ESXi, busque el https://kb.vmware.com/s/["Base de conocimientos de VMware"^] artículo sobre este tema.
+. Para obtener instrucciones sobre cómo realizar un análisis del almacenamiento en un host ESXi, busque https://support.broadcom.com/["Base de conocimientos de VMware"^] el artículo sobre este tema.
 

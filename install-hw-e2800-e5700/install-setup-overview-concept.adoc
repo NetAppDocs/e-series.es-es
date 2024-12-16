@@ -13,4 +13,4 @@ summary: Revise el proceso de instalación y configuración de E2800 y E5700.
 [role="lead"]
 Antes de instalar y configurar el nuevo sistema de almacenamiento, familiarícese con el proceso de instalación:
 
-image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[flujo de trabajo isi de ef600 v 2 inst hw e2800 e5700]
+image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[Flujo de trabajo del proceso de instalación E2800 y E5700]

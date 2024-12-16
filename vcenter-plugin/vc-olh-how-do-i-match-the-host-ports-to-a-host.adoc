@@ -10,7 +10,7 @@ summary: 'Si se crea manualmente un host, en primer lugar debe usarse la utilida
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

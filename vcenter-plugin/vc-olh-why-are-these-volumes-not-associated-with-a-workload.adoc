@@ -10,7 +10,7 @@ summary: 'Los volúmenes no se asocian a una carga de trabajo si se los creó me
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

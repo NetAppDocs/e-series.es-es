@@ -6,7 +6,12 @@ summary: Informes técnicos de E-Series
 ---
 = Consulte los informes técnicos de seguridad
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Consulte los siguientes enlaces para acceder a informes técnicos de seguridad relacionados con el hardware E-Series y el software SANtricity. Los vínculos lo llevan a otro sitio de documentación.
 
 
 

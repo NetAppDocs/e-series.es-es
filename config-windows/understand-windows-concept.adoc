@@ -13,4 +13,4 @@ summary: Use el flujo de trabajo de configuración exprés de Windows.
 [role="lead"]
 Este flujo de trabajo lo guía mediante el método exprés para configurar la cabina de almacenamiento y System Manager de SANtricity para que el almacenamiento esté disponible para un host de Windows.
 
-image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[las ventanas 1130 flw sys mgr guían todos los protocolos]
+image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[Flujo de trabajo de la guía exprés de Windows]

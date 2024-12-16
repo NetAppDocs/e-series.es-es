@@ -11,7 +11,7 @@ summary: Puede actualizar una o varias cabinas de almacenamiento con el software
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -23,7 +23,7 @@ Los armarios 40U modelo 3040 tienen estas características estándar:
 
 Las figuras siguientes muestran una vista frontal (izquierda) y una vista trasera (derecha) del armario.
 
-image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[armario de 83000 07 dwg 3040 con anotaciones]
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[descripción general del armario 3040]
 
 |===
 

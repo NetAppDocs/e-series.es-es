@@ -14,6 +14,9 @@ summary: Conecte su sistema de almacenamiento a una red Ethernet para obtener ge
 Es posible conectar el sistema de almacenamiento a una red Ethernet para la gestión de cabinas de almacenamiento fuera de banda. Se deben usar cables Ethernet para todas las conexiones de gestión de cabinas de almacenamiento.
 
 
+NOTE: EF300, EF600 y E4000 tienen solo un puerto de gestión ethernet fuera de banda.
+
+
 
 == Topología directa
 
@@ -22,7 +25,7 @@ Una topología directa conecta su controladora directamente a una red Ethernet.
 Debe conectar el puerto de gestión 1 de cada controladora para la gestión fuera de banda y dejar el puerto 2 disponible para que el soporte técnico pueda acceder a la cabina de almacenamiento.
 
 .Conexiones directas de gestión del almacenamiento
-image::../media/74167.gif[74167]
+image::../media/74167.gif[Conexiones directas de gestión del almacenamiento]
 
 
 
@@ -33,4 +36,4 @@ Una topología de estructura utiliza un switch para conectar la controladora a u
 Debe conectar el puerto de gestión 1 de cada controladora para la gestión fuera de banda y dejar el puerto 2 disponible para que el soporte técnico pueda acceder a la cabina de almacenamiento.
 
 .Conexiones de gestión del almacenamiento estructural
-image::../media/74110.gif[74110]
+image::../media/74110.gif[Conexiones de gestión del almacenamiento estructural]

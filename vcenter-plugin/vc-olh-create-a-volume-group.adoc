@@ -11,7 +11,7 @@ summary: Es posible crear un grupo de volúmenes para uno o varios volúmenes a 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

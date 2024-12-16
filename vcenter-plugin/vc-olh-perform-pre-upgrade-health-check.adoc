@@ -11,7 +11,7 @@ summary: Una comprobación del estado se ejecuta como parte del proceso de actua
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

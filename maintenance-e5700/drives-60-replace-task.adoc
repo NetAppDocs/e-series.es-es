@@ -57,7 +57,7 @@ Por ejemplo, no intente sustituir una unidad de disco duro (HDD) por un disco de
 El LED de atención del cajón de la unidad (ámbar) parpadea para que se pueda abrir el cajón de la unidad correcto para identificar qué unidad desea reemplazar.
 
 +
-image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[2860 dwg se dirigió a la atención en la margita de cajón e5700]
+image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[LED de atención]
 
 +
 *(1)* _LED de atención_
@@ -66,7 +66,7 @@ image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[2860 dwg se dirigió
 .. Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga.
 .. Mire la parte superior del cajón de unidades para encontrar el LED de atención delante de cada unidad.
 +
-image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[2860 dwg ámbar en la mant. de unidad e5700]
+image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[LED de atención en el cajón de la unidad]
 
 +
 *(1)* _la luz LED de atención se enciende para la unidad en la parte superior derecha_
@@ -75,7 +75,7 @@ image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[2860 dwg ámbar en la ma
 Los LED de atención del cajón de la unidad están en el lado izquierdo de la parte frontal de cada unidad, con un icono de atención en el asa de la unidad justo detrás del LED.
 
 +
-image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[28 dwg e2860 de460c número de unidades con led de atención en e5700]
+image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED de atención en el cajón de la unidad]
 
 +
 *(1)* _icono de atención_
@@ -105,22 +105,22 @@ Guarde todos los materiales de embalaje para la próxima vez que tenga que devol
 La palanca de leva de los muelles de accionamiento se abre parcialmente y el accionamiento se libera del cajón.
 
 +
-image::../media/trafford_drive_rel_button_maint-e5700.gif[trafford drive rel button maint e5700]
+image::../media/trafford_drive_rel_button_maint-e5700.gif[Suelte el pestillo naranja para quitar la unidad]
 
 +
 *(1)* _pestillo de liberación naranja_
 
 . Abra la palanca de leva y levante ligeramente la transmisión.
-. Espere 30 segundos.
+. Espere 60 segundos.
 . Utilice el asa de leva para levantar la unidad de la bandeja.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6600 instale o retire la mant. de unidad e5700]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[Utilice la palanca de leva para quitar la unidad]
 
 . Coloque la unidad sobre una superficie antiestática y amortiguada lejos de los campos magnéticos.
-. Espere 30 segundos hasta que el software reconozca que la unidad se ha quitado.
+. Espere 60 segundos hasta que el software reconozca que la unidad se ha quitado.
 +
 
-NOTE: Si quita accidentalmente una unidad activa, espere al menos 30 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
+NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
 
 
 
@@ -137,7 +137,7 @@ CAUTION: *Posible pérdida de acceso a datos* -- al empujar el cajón de la unid
 . Levante la palanca de leva de la nueva transmisión hasta la posición vertical.
 . Alinee los dos botones elevados de cada lado del portador de unidades con el espacio correspondiente del canal de la unidad en el cajón de la unidad.
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[28 dwg e2860 de460c unidad cru mant e5700]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[El botón elevado del portador de unidades debe coincidir con el canal de la unidad en el cajón de unidades]
 
 +
 *(1)* botón levantado en el lado derecho del portador de la unidad_
@@ -163,7 +163,7 @@ Confirme que la unidad nueva funciona correctamente.
 . Compruebe el LED de encendido y el LED de atención de la unidad que ha sustituido. (Cuando inserte una unidad por primera vez, es posible que el LED de atención esté encendido. Sin embargo, el LED debería apagarse en un minuto.)
 +
 ** El LED de alimentación está encendido o parpadeando y el LED de atención está apagado: Indica que la unidad nueva funciona correctamente.
-** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 30 segundos y vuelva a instalarla.
+** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 60 segundos y vuelva a instalarla.
 ** El LED de atención está encendido: Indica que la unidad nueva puede tener defectos. Sustitúyalo por otra unidad nueva.
 
 

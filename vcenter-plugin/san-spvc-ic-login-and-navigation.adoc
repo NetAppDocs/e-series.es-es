@@ -10,7 +10,7 @@ summary: Inicie sesión y navegue por el complemento para vCenter.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

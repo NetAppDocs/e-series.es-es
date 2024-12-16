@@ -10,7 +10,7 @@ summary: La función Importar configuración es una operación en lote que carga
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

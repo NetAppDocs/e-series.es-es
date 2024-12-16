@@ -126,7 +126,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que este LED se apague antes de quitar el compartimento de controladoras.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib ha w cache de callouts maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED activo de caché en el controlador E5700]
 
 +
 *(1)* _Cache Active LED_
@@ -136,7 +136,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib ha w 
 La siguiente figura muestra un ejemplo de una bandeja de controladoras E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -148,7 +148,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 En la siguiente figura, se muestra un ejemplo de bandeja de controladoras E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -185,7 +185,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 caché interna activa led maint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED de caché interna activa]
 
 +
 *(1)* _Internal Cache Active LED_
@@ -204,7 +204,7 @@ Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de l
 CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 tornillos digitales hic. mint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Instale HIC en la tarjeta de la controladora]
 
 +
 *(1)* _Tarjeta de interfaz del host_
@@ -218,7 +218,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 . Con un destornillador Phillips del número 1, conecte la nueva placa frontal de la HIC al compartimento de la controladora con los cuatro tornillos que quitó anteriormente.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic tornillos face2800 maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale la placa frontal en el controlador]
 
 
 
@@ -235,7 +235,7 @@ Después de instalar la HIC, vuelva a instalar el compartimento de controladoras
 La siguiente figura muestra un ejemplo de una bandeja de controladoras E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Instale el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -247,7 +247,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 En la siguiente figura, se muestra un ejemplo de bandeja de controladoras E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Instale el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -285,7 +285,7 @@ Cuando se restablece la comunicación con otra controladora:
 +
 ** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *OL*, *_blank_* para indicar que el controlador está sin conexión.
 ** El LED de atención ámbar permanece encendido.
-** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Los LED Host Link pueden estar encendidos, parpadeando o apagados, según la interfaz del host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["Indicadores LED de la controladora E5700"]
 +
 *(1)* _Host Link LED_
 

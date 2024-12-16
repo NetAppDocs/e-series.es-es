@@ -10,7 +10,7 @@ summary: El aprovisionamiento de recursos es una función disponible en las cabi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

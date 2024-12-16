@@ -230,9 +230,6 @@ Estos protocolos incluyen, entre otros, QoS, uso compartido de archivos e impres
 . Mantenga los valores predeterminados de las casillas de verificación restantes y, a continuación, seleccione *Aceptar*.
 . Seleccione *Aceptar* de nuevo al volver al cuadro de diálogo *conectar a destino*.
 . Repita este procedimiento para cada puerto de iniciador y sesión (ruta lógica) a la cabina de almacenamiento que desee establecer.
-+
-image::../media/82012_00.gif[82012 00]
-
 
 
 
@@ -293,7 +290,7 @@ Puede generar e imprimir un PDF de esta página y, a continuación, utilizar la 
 
 Las configuraciones recomendadas constan de dos puertos de iniciador y cuatro puertos de destino con una o varias VLAN.
 
-image::../media/50001_01_conf-win.gif[50001 01 conf win]
+image::../media/50001_01_conf-win.gif[Identificadores de puertos iSCSI]
 
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/overview-requirements-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade compatibility, upgrade SAS shelf, upgrade SAS shelves, upgrade SAS enclosures, SAS-2 to SAS-3 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade compatibility, upgrade SAS shelf, upgrade SAS shelves, upgrade SAS enclosures, SAS-2 to SAS-3 
 summary: Revise los requisitos para actualizar y sustituir las controladoras E-Series. 
 ---
 = Consideraciones de renovación
@@ -14,6 +14,9 @@ summary: Revise los requisitos para actualizar y sustituir las controladoras E-S
 Antes de actualizar controladoras, revise las siguientes consideraciones.
 
 
+NOTE: Consulte la página https://docs.netapp.com/us-en/e-series/getting-started/learn-hardware-concept.html#e2800-models["Información general del hardware de E-Series"] para obtener información específica sobre las configuraciones compatibles para cada controladora E-Series.
+
+
 
 == Requisitos de hardware y firmware
 
@@ -23,15 +26,11 @@ En el caso de los soportes de unidades de controladora doble, se reemplazan amba
 
 * *Bandejas y estantes*
 +
-Las cabinas de almacenamiento con una bandeja de controladoras E2800 o E5700 por lo general se gestionan con la interfaz de usuario de SANtricity System Manager. También es posible usar la interfaz de SANtricity Storage Manager para gestionar las bandejas de controladoras E2800 o E5700. Todos los demás soportes de controladoras a los que se hace referencia en este procedimiento utilizan SANtricity Storage Manager.
+Las cabinas de almacenamiento con una bandeja de controladora E-Series suelen gestionarse con la interfaz de usuario de SANtricity System Manager.
 
 * *Baterías del controlador*
 +
 Se envía un nuevo controlador sin la batería instalada. Cuando sea posible, debe quitar la batería de la controladora antigua y luego instalarla en la controladora nueva. Sin embargo, para algunas actualizaciones de controladoras, la batería de la controladora antigua no es compatible con la nueva controladora. En esos casos, debe solicitar una batería junto con el nuevo controlador y disponer de esa batería antes de comenzar estas tareas.
-
-* *Identificación del proveedor*
-+
-Algunas actualizaciones de controladoras dan como resultado el ID de proveedor en los datos de consulta SCSI cambiar de `LSI` para `NETAPP`. Cuando el ID de proveedor cambia de `LSI` para `NETAPP`, Se requieren pasos adicionales en los sistemas operativos Windows, VMware y AIX para recuperar dispositivos. Los pasos para estos sistemas operativos se incluyen en este procedimiento de actualización.
 
 * *Mirroring sincrónico y duplicación asíncrona*
 +
@@ -40,100 +39,184 @@ Si la cabina de almacenamiento participa en el mirroring síncrono, solo se admi
 +
 Para el mirroring asíncrono, la cabina de almacenamiento local y la cabina de almacenamiento remota pueden ejecutar diferentes versiones de firmware. La versión de firmware mínima admitida es la versión 7.84 del firmware de SANtricity.
 
+
+
+
+NOTE: Para las controladoras E4000, el mirroring solo se admite en las conexiones Fibre Channel.
+
 * *Límites de objetos de almacenamiento*
 +
-Si cambia las controladoras de los modelos 5x00 a los modelos 2x00, la nueva configuración de la cabina de almacenamiento admitirá una cantidad menor de algunos objetos de almacenamiento (por ejemplo, volúmenes) en el software de administración del almacenamiento que la configuración anterior. Debe asegurarse de que la configuración anterior no supere los límites del objeto de almacenamiento. Consulte http://hwu.netapp.com/home.aspx["Hardware Universe"^] si quiere más información.
+Si cambia las controladoras de los modelos de gama media a básica (por ejemplo, los modelos 5x00 a los modelos 2x00), la configuración de la cabina de almacenamiento nueva admitirá un número menor de algunos objetos de almacenamiento (por ejemplo, volúmenes) en el software de gestión del almacenamiento respecto a la configuración anterior. Debe asegurarse de que la configuración anterior no supere los límites del objeto de almacenamiento.
+
++
+Consulte http://hwu.netapp.com/home.aspx["Hardware Universe"^] para obtener más información.
+
+* *Actualiza a modelos más nuevos*
++
+Si va a sustituir las controladoras para actualizar a un nuevo modelo, tenga en cuenta que la cabina de almacenamiento actual puede tener funciones excepcionales instaladas que el nuevo modelo no puede admitir.
+
++
+Al actualizar la controladora E-Series, debe deshabilitar las funciones prémium que se usan en la cabina de almacenamiento que no sean compatibles con las nuevas controladoras.
 
 
-
-
-
-== Actualice a modelos nuevos
-
-Si va a sustituir las controladoras para actualizar a un nuevo modelo, tenga en cuenta que la cabina de almacenamiento actual puede tener funciones excepcionales instaladas que el nuevo modelo no puede admitir. Por ejemplo, las controladoras E2700 no admiten la función prémium Snapshot heredada.
-
-Si se reemplazan controladoras E2600 con controladoras E2700 y la cabina de almacenamiento utiliza la función Snapshot heredada, es necesario deshabilitar esa función y eliminar o convertir todos los volúmenes (es decir, Snapshot, repositorios) asociados con esa función antes de reemplazar las controladoras. Es posible convertir las copias Snapshot heredadas a la función Snapshot actualizada. Antes de actualizar un soporte de controladora-unidad, debe deshabilitar todas las funciones premium que se utilizan en la cabina de almacenamiento que no son compatibles con las nuevas controladoras.
 
 
 
 == Actualizar la compatibilidad
 
-[role="lead"]
 Revise las rutas de actualización admitidas para cada modelo de la cabina de almacenamiento.
 
+[role="tabbed-block"]
+====
+.Compatibilidad con la actualización de la controladora E4000
+--
+[cols="h,d,d,d"]
+|===
+| Ruta de actualización | Batería | Compatibilidad con funciones | Bandejas SAS-3 
 
 
-=== De E2x00 a E2x00
+| De E2800 a E4000  a| 
+Solicite una batería nueva.
+ a| 
+* E4000 no admite ARVM iSCSI
+* El puerto de la placa base E4000 es solo iSCSI y no se puede cambiar a FC
+* E4000 solo puede admitir unidades de 300 TB
+* E4000 solo puede admitir volúmenes de 512 TB
+* E4000 no es compatible con configuraciones SAS
+* E4000 no es compatible con los volúmenes de almacenamiento remoto
 
-* *Batería*: Reutilice la batería antigua.
-* *ID de proveedor*: Se requieren pasos adicionales.
-* *Compatibilidad con funciones*: Las instantáneas heredadas no son compatibles con el E2700.
-* *Bandejas SAS-2*: Las controladoras E2800 no deben colocarse en bandejas SAS-2.
+ a| 
+Las controladoras E4000 deben utilizar bandejas SAS-3.
 
 
 
-
-=== De E2x00 a E5x00
-
-* *Batería*: Solicite una batería nueva.
-* *ID de proveedor*: Se requieren pasos adicionales cuando se actualiza de E2600 a E5500 o E5600, o cuando se actualiza de E2700 a E5400.
-* *Compatibilidad con funciones*:
+| De E5700 a E4000  a| 
+Solicite una batería nueva.
+ a| 
+* E4000 no admite ARVM iSCSI
+* El puerto de la placa base E4000 es solo iSCSI y no se puede cambiar a FC
+* E4000 solo puede admitir unidades de 300 TB
 +
-** Los sistemas E5500 o E5600 no admiten las copias Snapshot heredadas.
-** No se admite el mirroring de volúmenes remotos heredados (RVM) en el E5500 o E5600 con HIC iSCSI.
-** No se admite la garantía de datos en el E5500 o E5600 con HIC iSCSI.
-** Las controladoras E5700 no deben colocarse en bandejas SAS-2.
+** E5700 puede admitir hasta 480 unidades
 
 
-* *Bandejas SAS-3*: Las controladoras E5400, E5500 y E5600 no deben colocarse en las bandejas SAS-3.
-
-
-
-
-=== De E5x00 a E2x00
-
-* *Batería*: Solicite una batería nueva.
-* *ID de proveedor*: Se requieren pasos adicionales cuando se actualiza de E5500 o E5600 a E2600, o cuando se actualiza de E5400 a E2700.
-* *Compatibilidad con funciones*: Las instantáneas heredadas no son compatibles con el E2700.
-* *Bandejas SAS-3*: Las controladoras E5400, E5500 y E5600 no deben colocarse en las bandejas SAS-3.
-
-
-
-
-=== Desde E5x00 hasta E5x00
-
-* *Batería*: Reutilice la batería antigua.
-* *ID de proveedor*: Pasos adicionales necesarios para actualizar de E5400 a E5500 o E5600.
-* *Compatibilidad con funciones*:
+* E4000 solo puede admitir volúmenes de 512 TB
 +
-** Los sistemas E5500 o E5600 no admiten las copias Snapshot heredadas.
-** No se admite el mirroring de volúmenes remotos heredados (RVM) en el E5400 o E5500 con HIC iSCSI.
-** No se admite la garantía de datos en el E5400 o E5500 con HIC iSCSI.
-** Las controladoras E5700 no deben colocarse en bandejas SAS-2.
+** E5700 puede admitir hasta 2048 volúmenes
 
 
-* *Bandejas SAS-3*: Las controladoras E5400, E5500 y E5600 no deben colocarse en las bandejas SAS-3.
+* La compatibilidad con la tarjeta de interfaz del host InfiniBand no está disponible
+* E4000 no es compatible con configuraciones SAS
+
+ a| 
+Las controladoras E4000 deben utilizar bandejas SAS-3.
+
+|===
+--
+.Compatibilidad de actualización de las controladoras EF600 y EF300
+--
+[cols="h,d,d,d"]
+|===
+| Ruta de actualización | Batería | Compatibilidad con funciones | Bandejas SAS-3 
+
+
+| De EF600 a EF600 con una tarjeta de interfaz del host diferente  a| 
+Vuelva a utilizar la batería antigua.
+ a| 
+* No se admite volúmenes con thin provisioning
+* No admite mirroring síncrono
+
+| Las controladoras EF600 deben utilizar bandejas SAS-3. 
+
+
+| De EF300 a EF600  a| 
+Vuelva a utilizar la batería antigua.
+ a| 
+* No se admite volúmenes con thin provisioning
+* No admite mirroring síncrono
+
+ a| 
+Las controladoras EF600 deben utilizar bandejas SAS-3.
+
+|===
+--
+.Compatibilidad con la actualización de controladoras heredadas
+--
+[cols="h,d,d,d,d"]
+|===
+| Ruta de actualización | Batería | ID de proveedor | Compatibilidad con funciones | Bandejas SAS-3 
+
+
+| De E2x00 a E2x00  a| 
+Vuelva a utilizar la batería antigua.
+ a| 
+Se requieren pasos adicionales.
+ a| 
+E2700 no admite las copias Snapshot heredadas.
+ a| 
+Las controladoras E2800 no deben colocarse en las bandejas SAS-2.
 
 
 
+| De E2x00 a E5x00  a| 
+Solicite una batería nueva.
+ a| 
+Se requieren pasos adicionales al actualizar de E2600 a E5500 o E5600, o al actualizar de E2700 a E5400.
+ a| 
+* Los sistemas E5500 o E5600 no admiten las copias Snapshot heredadas.
+* No se admite el mirroring de volúmenes remotos heredados (RVM) en el E5500 o E5600 con HIC iSCSI.
+* No se admite la garantía de datos en el E5500 o E5600 con HIC iSCSI.
+* Las controladoras E5700 no deben colocarse en bandejas SAS-2.
 
-=== De EF5x0 a EF5x0
-
-* *Batería*: Reutilice la batería antigua.
-* *ID de proveedor*: Pasos adicionales necesarios para actualizar de EF540 a EF550 o EF560.
-* *Compatibilidad con funciones*:
-+
-** Sin snapshots heredadas para EF550/EF560.
-** Sin garantía de datos para EF550/EF560 con iSCSI.
-** Las controladoras EF570 no deben colocarse en las bandejas SAS-3.
-
-
-* *Bandejas SAS-3*: Las controladoras EF540, EF550 y EF560 no deben colocarse en las bandejas SAS-3.
-
+ a| 
+Las controladoras E5400, E5500 y E5600 no deben colocarse en bandejas SAS-3.
 
 
 
-=== Compartimentos SAS
+| De E5x00 a E2x00  a| 
+Solicite una batería nueva.
+ a| 
+Se requieren pasos adicionales al actualizar de E5500 o E5600 a E2600, o al actualizar de E5400 a E2700.
+ a| 
+E2700 no admite las copias Snapshot heredadas.
+ a| 
+Las controladoras 5400, E5500 y E5600 no deben colocarse en bandejas SAS-3.
+
+
+
+| Desde E5x00 hasta E5x00  a| 
+Vuelva a utilizar la batería antigua.
+ a| 
+Se requieren pasos adicionales al actualizar de E5400 a E5500 o E5600.
+ a| 
+* Los sistemas E5500 o E5600 no admiten las copias Snapshot heredadas.
+* No se admite el mirroring de volúmenes remotos heredados (RVM) en el E5400 o E5500 con HIC iSCSI.
+* No se admite la garantía de datos en el E5400 o E5500 con HIC iSCSI.
+* Las controladoras E5700 no deben colocarse en bandejas SAS-2.
+
+ a| 
+Las controladoras E5400, E5500 y E5600 no deben colocarse en bandejas SAS-3.
+
+
+
+| De EF5x0 a EF5x0  a| 
+Vuelva a utilizar la batería antigua.
+ a| 
+Se requieren pasos adicionales al actualizar de EF540 a EF550 o EF560.
+ a| 
+* Sin snapshots heredadas para EF550/EF560.
+* Sin garantía de datos para EF550/EF560 con iSCSI.
+* Las controladoras EF570 no deben colocarse en las bandejas SAS-3.
+
+ a| 
+Las controladoras EF540, EF550 y EF560 no deben colocarse en bandejas SAS-3.
+
+|===
+--
+====
+
+
+== Compartimentos SAS
 
 E5700 admite compartimentos DE5600 y DE6600 SAS-2 mediante actualización Head. Cuando se instala una controladora E5700 en compartimentos SAS-2, se deshabilita la compatibilidad con los puertos de host base.
 
@@ -152,15 +235,23 @@ Las bandejas SAS-2 incluyen los siguientes modelos:
  a| 
 Las bandejas SAS-3 incluyen los siguientes modelos:
 
+* Bandejas de controladoras E4000
+* Bandejas de controladoras EF600 ^1^
+* Bandejas de controladoras EF300 ^1^
 * Bandejas de controladoras E2800
 * Bandejas de controladoras E5700
 * Bandejas de unidades DE212C, DE224C y DE460C
 
 
 |===
+Notas:
+
+. Las controladoras EF600 y EF300 solo pueden usar bandejas SAS-3 como ampliación.
 
 
-=== Protección de la inversión entre SAS-2 y SAS-3
+
+
+== Protección de la inversión entre SAS-2 y SAS-3
 
 Puede volver a configurar el sistema SAS-2 para utilizarlo detrás de una nueva bandeja de controladoras SAS-3 (E57XX/EF570/E28XX).
 

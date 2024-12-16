@@ -15,7 +15,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de 
 
 La ilustración muestra un host conectado a una cabina de almacenamiento E-Series en dos zonas. Una zona se indica mediante la línea azul; la otra se indica mediante la línea roja. Cualquier puerto tiene dos rutas al almacenamiento (de una a cada controladora).
 
-image::../media/port_identifiers_host_and_target_conf-lin.gif[los identificadores de puerto host y conf lin de destino]
+image::../media/port_identifiers_host_and_target_conf-lin.gif[Configuración de red FC]
 
 
 

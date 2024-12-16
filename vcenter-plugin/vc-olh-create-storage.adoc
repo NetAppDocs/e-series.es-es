@@ -11,7 +11,7 @@ summary: Para crear almacenamiento, primero debe crear una carga de trabajo para
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

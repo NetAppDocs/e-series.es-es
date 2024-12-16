@@ -17,5 +17,5 @@ Las versiones 6._x_ y 7 _x_ de ESXi admiten las versiones 5 y 6 de VMFS.
 
 .Pasos
 . Asegúrese de que los volúmenes asignados al host ESXi se hayan detectado correctamente.
-. Para obtener instrucciones sobre la creación de almacenes de datos VMFS o el uso de volúmenes como RDM en vSphere Client o vSphere Web Client, consulte la https://www.vmware.com/support/pubs/["Sitio web de documentación de VMware"^].
+. Para obtener instrucciones sobre la creación de almacenes de datos VMFS o el uso de volúmenes como RDM con vSphere Client o vSphere Web Client, consulte el https://docs.vmware.com/index.html["Sitio web de documentación de VMware"^].
 

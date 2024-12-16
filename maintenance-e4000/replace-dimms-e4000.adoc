@@ -1,0 +1,356 @@
+---
+permalink: maintenance-e4000/replace-dimms-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sustituya los DIMM en E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede sustituir un DIMM en el E4000 si hay una discrepancia de memoria presente o si tiene un DIMM con errores.
+
+.Antes de empezar
+* Asegúrese de que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+* Asegúrese de tener lo siguiente:
++
+** Un DIMM de reemplazo.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora).
+
+
+
+
+
+
+== Paso 1: Determine si necesita sustituir un DIMM
+
+Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
+
+.Pasos
+. Acceda al perfil de la cabina de almacenamiento de la controladora. Desde el Administrador del sistema de SANtricity, vaya a *Soporte* › *Centro de soporte*. En la página Recursos de soporte, seleccione *Perfil de matriz de almacenamiento*.
+. Desplácese hacia abajo o utilice el campo Buscar para localizar la información *módulo de caché de datos*.
+. Si aparece uno de los siguientes valores, tenga en cuenta la ubicación del módulo DIMM y continúe con los procedimientos restantes en esta sección para sustituir los módulos DIMM de su controladora:
++
+.. Un DIMM con errores o un DIMM que informa *módulo de caché de datos* como no óptimo.
+.. Un módulo DIMM con una capacidad de *módulo de caché de datos* no coincidente.
+
+
+
+
+
+
+== Paso 2: Prepárese para reemplazar un DIMM
+
+Prepare para sustituir un DIMM; para ello, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. A continuación, es posible detener las operaciones de I/O del host y colocarla en un estado sin conexión o apagada.
+
+[role="tabbed-block"]
+====
+.Apague la bandeja de controladoras (simple)
+--
+En una configuración simple, apague la bandeja de controladoras para quitar y sustituir con seguridad los DIMM.
+
+.Pasos
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, es posible utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+.. Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+.. Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+.. Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: * Posible pérdida de datos*--Si continúa este procedimiento mientras se producen operaciones de E/S, podría perder datos.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
+. Apague ambos switches de alimentación de la bandeja de controladoras.
+. Espere a que se apagen todos los LED de la bandeja de controladoras.
+
+
+--
+.Colocar una controladora en estado sin conexión (doble)
+--
+En una configuración doble, coloque la controladora en estado sin conexión para poder quitar y sustituir con seguridad los DIMM.
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que existe un problema con una memoria que no coincide y para garantizar que primero no se deban tratar otros elementos.
+. En el área Detalles de Recovery Guru, determine qué DIMM desea reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta Descargas de su navegador con el nombre, *ConfigurationData- <arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+.. Seleccione *hardware*.
+.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Seleccione la controladora que desea colocar en estado sin conexión.
+.. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione *conectarse a una conexión de red alternativa* para acceder automáticamente al Administrador del sistema de SANtricity utilizando el otro controlador.
+
+
+
+. Espere a que SANtricity System Manager actualice el estado de la controladora a sin conexión.
++
+
+NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que se muestra Sí el campo Aceptar para eliminar en el área Detalles, lo que indica que es seguro eliminar este componente.
+
+
+--
+====
+
+
+== Paso 3: Quite el contenedor de controladora
+
+Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Afloje la correa de gancho y bucle que une los cables al dispositivo de gestión de cables y, a continuación, desenchufe los cables del sistema y los SFP (si es necesario) del compartimento del controlador, realizando un seguimiento de dónde se conectaron los cables.
++
+Deje los cables en el dispositivo de administración de cables de manera que cuando vuelva a instalar el dispositivo de administración de cables, los cables estén organizados.
+
+. Quite y aparte los dispositivos de gestión de cables de los lados izquierdo y derecho del compartimento de controladoras.
+. Apriete el pestillo de la manija de leva hasta que se suelte, abra por completo la manija de leva para liberar el compartimento de controladoras del plano medio y luego, con dos manos, saque el compartimento de controladoras del chasis.
+. Voltee el compartimento de controladoras y colóquelo en una superficie plana y estable.
+. Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cubierta del compartimento de controladoras.]
+
+
+
+
+
+== Paso 4: Reemplace los DIMM
+
+Localice el DIMM dentro de la controladora, quítelo y sustitúyalo.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Localice los DIMM en el compartimento de controladoras.
+. Anote la orientación y la ubicación del módulo DIMM en el zócalo para poder insertar el módulo DIMM de repuesto en la orientación correcta.
+. Extraiga el DIMM de su ranura empujando lentamente las dos lengüetas expulsoras del DIMM a ambos lados del DIMM y, a continuación, extraiga el DIMM de la ranura.
++
+El módulo DIMM girará un poco hacia arriba.
+
+. Gire el módulo DIMM hasta el tope y, a continuación, deslice el módulo DIMM para extraerlo del socket.
++
+
+NOTE: Sujete con cuidado el módulo DIMM por los bordes para evitar la presión sobre los componentes de la placa de circuitos DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Quite LOS DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Un icono]
+| Lengüetas del expulsor de DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[Dos iconos]
+| DIMM 
+|===
+. Retire el módulo DIMM de repuesto de la bolsa de transporte antiestática, sujete el módulo DIMM por las esquinas y alinéelo con la ranura.
++
+La muesca entre las patillas del DIMM debe alinearse con la lengüeta del zócalo.
+
+. Inserte el módulo DIMM directamente en la ranura.
++
+El módulo DIMM encaja firmemente en la ranura, pero debe entrar fácilmente. Si no es así, realinee el DIMM con la ranura y vuelva a insertarlo.
+
++
+
+NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado de forma uniforme y completamente insertado en la ranura.
+
+. Empuje con cuidado, pero firmemente, en el borde superior del DIMM hasta que las lengüetas expulsoras encajen en su lugar sobre las muescas de los extremos del DIMM.
+. Vuelva a instalar la cubierta del compartimento del controlador.
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de controladoras
+
+Vuelva a instalar el compartimento de controladoras en el chasis.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
+. Vuelva a colocar el compartimento de controladoras y alinee el extremo con la apertura del chasis.
+. Empuje suavemente el compartimento de controladoras a la mitad en el sistema. Alinee el extremo del compartimento de controladoras con la apertura del chasis y empuje suavemente el compartimento de controladoras a la mitad en el sistema.
++
+
+NOTE: No inserte por completo el compartimento de controladoras en el chasis hasta que se lo indique.
+
+. Recuperar el sistema, según sea necesario.
++
+Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
+
+. Complete la reinstalación del compartimento de controladoras:
++
+.. Con el mango de leva en la posición abierta, empuje firmemente el contenedor del controlador hasta que se encuentre con el plano medio y quede completamente asentado, y luego cierre el mango de leva a la posición de bloqueo.
++
+
+NOTE: No ejerza demasiada fuerza al deslizar el compartimento del controlador en el chasis para evitar dañar los conectores.
+
++
+La controladora comienza a arrancar tan pronto como se encuentra en el chasis.
+
+.. Si aún no lo ha hecho, vuelva a instalar el dispositivo de administración de cables.
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
+
+
+
+
+
+
+== Paso 6: Complete el reemplazo de DIMM
+
+[role="tabbed-block"]
+====
+.Controladora alimentación (simple)
+--
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado sea óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras. NOTA: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+--
+.Colocar una controladora en línea (doble)
+--
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Coloque una controladora en línea.
++
+.. En System Manager, desplácese hasta la página hardware.
+.. Seleccione *Controladores y componentes*.
+.. Seleccione la controladora con los DIMM sustituidos.
+.. Seleccione *colocar en línea* en la lista desplegable.
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado sea óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras. NOTA: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si no hay ninguna instancia de Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+--
+====

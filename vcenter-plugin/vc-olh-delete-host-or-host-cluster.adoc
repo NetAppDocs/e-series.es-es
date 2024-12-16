@@ -11,7 +11,7 @@ summary: Es posible quitar un host o un clúster de hosts para que los volúmene
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

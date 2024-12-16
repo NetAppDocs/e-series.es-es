@@ -11,7 +11,7 @@ summary: Importe la configuración de los servicios de directorio desde una cabi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

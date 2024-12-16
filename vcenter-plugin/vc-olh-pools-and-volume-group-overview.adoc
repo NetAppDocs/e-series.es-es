@@ -10,7 +10,7 @@ summary: 'Para aprovisionar almacenamiento, es posible crear un pool o un grupo 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

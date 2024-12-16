@@ -10,7 +10,7 @@ summary: Para gestionar una sola cabina, use la opción Iniciar para abrir Syste
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -31,6 +31,6 @@ Muchos de los armarios se almacenan con bandejas de unidades. Esta situación re
 . Retire los dispositivos de la parte superior del armario para asegurarse de que el armario se transporta de forma segura hasta su ubicación final. Esto es especialmente importante si alguna rampa tiene una inclinación o una disminución mayor que 10 grados.
 . Mueva el armario a su ubicación permanente con el método correcto que se muestra en la siguiente figura. Asegúrese de presionar la parte delantera del armario, no la parte trasera.
 +
-image::../media/83004_01.gif[83004 01]
+image::../media/83004_01.gif[Advertencia de movimiento del armario]
 
 

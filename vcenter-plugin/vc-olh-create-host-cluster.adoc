@@ -11,7 +11,7 @@ summary: Cuando dos o más hosts requieren acceso de I/o a los mismos volúmenes
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

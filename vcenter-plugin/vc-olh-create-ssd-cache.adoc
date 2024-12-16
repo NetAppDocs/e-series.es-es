@@ -11,7 +11,7 @@ summary: 'Para acelerar de manera dinámica el rendimiento del sistema, se puede
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

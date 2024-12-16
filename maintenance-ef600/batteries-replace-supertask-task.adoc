@@ -94,7 +94,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 . Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
-image::../media/remove_controller_5.png[retire la controladora 5]
+image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
@@ -102,7 +102,7 @@ image::../media/remove_controller_5.png[retire la controladora 5]
 CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
 
 +
-image::../media/remove_controller_6.png[retire la controladora 6]
+image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso del controlador cuando retire]
 
 . Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
 
@@ -122,15 +122,15 @@ Si este LED verde está encendido, el controlador sigue utilizando la batería. 
 . Localice la pestaña "Press" en el lateral del controlador.
 . Desenganche la batería presionando la lengüeta y apretando la carcasa de la batería.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png[Presione la pestaña para desbloquear la batería]
 
 . Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba y desconecte la batería de la placa.
 +
-image::../media/batt_2.png[2]
+image::../media/batt_2.png[Retire el conector del alojamiento del cableado de la batería]
 
 . Levante la batería del controlador y colóquela sobre una superficie plana y sin estática.
 +
-image::../media/batt_4.png[batt 4]
+image::../media/batt_4.png[Levante la batería del controlador]
 
 . Siga los procedimientos apropiados para que su ubicación pueda reciclar o eliminar la batería que ha fallado.
 +
@@ -153,7 +153,7 @@ NOTE: Para cumplir con las normativas de seguridad de la IATA, las baterías de 
 
 . Inserte la batería en el controlador alineando la carcasa de la batería con los pestillos metálicos del lateral del controlador.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Inserte la batería]
 
 +
 La batería hace clic en su sitio.
@@ -175,7 +175,7 @@ Vuelva a instalar la controladora en la bandeja de controladoras.
 NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
 
 +
-image::../media/remove_controller_7.png[retire la controladora 7]
+image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 
 

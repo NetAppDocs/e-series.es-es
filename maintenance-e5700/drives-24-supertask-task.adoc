@@ -70,20 +70,20 @@ Guarde todos los materiales de embalaje.
 
 . Pulse el botón de liberación de la unidad con error.
 +
-image::../media/drw_drive_latch_maint-e5700.gif[mant. mant. unidad drw e5700]
+image::../media/drw_drive_latch_maint-e5700.gif[Pulse el botón de liberación para quitar la unidad con error]
 
 +
 ** Para las unidades de las bandejas de controladoras E5724 o las bandejas de unidades DE224C, el botón de versión se encuentra en la parte superior de la unidad. La palanca de leva de los resortes de accionamiento se abre parcialmente y la transmisión se libera del plano medio.
 
 
 . Abra la palanca de leva y deslice ligeramente hacia fuera la unidad.
-. Espere 30 segundos.
+. Espere 60 segundos.
 . Con ambas manos, retire la unidad de la bandeja.
 . Coloque la unidad sobre una superficie antiestática y amortiguada lejos de los campos magnéticos.
-. Espere 30 segundos hasta que el software reconozca que la unidad se ha quitado.
+. Espere 60 segundos hasta que el software reconozca que la unidad se ha quitado.
 +
 
-NOTE: Si quita accidentalmente una unidad activa, espere al menos 30 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
+NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
 
 
 
@@ -119,7 +119,7 @@ Cuando se inserta una unidad por primera vez, es posible que el LED de atención
 
 +
 ** El LED de alimentación está encendido o parpadeando y el LED de atención está apagado: Indica que la unidad nueva funciona correctamente.
-** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 30 segundos y vuelva a instalarla.
+** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 60 segundos y vuelva a instalarla.
 ** El LED de atención está encendido: Indica que la unidad nueva puede tener defectos. Sustitúyalo por otra unidad nueva.
 
 

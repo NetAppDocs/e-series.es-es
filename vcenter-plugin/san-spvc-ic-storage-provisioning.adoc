@@ -11,7 +11,7 @@ summary: Utilice el complemento para vCenter para crear vol√∫menes, asignar vol√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

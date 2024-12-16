@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/install-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
 summary: Después de quitar las controladoras antiguas, se pueden instalar controladoras nuevas en el soporte de la controladora-unidad 
 ---
 = Instale nuevas controladoras
@@ -34,35 +34,20 @@ Instale la batería que quitó del compartimento de controladoras original o una
 . Desembale el nuevo contenedor del controlador y configúrelo en una superficie plana y sin estática de modo que la cubierta extraíble quede orientada hacia arriba.
 . Presione el botón de cubierta y deslice la cubierta hacia fuera.
 . Oriente el compartimento de la controladora de manera que la ranura de la batería esté orientada hacia usted.
-. Según el modelo de controladora, realice una de las siguientes acciones:
-+
-** Para modelos de controladora E2600 o E2700:
-+
-... Inserte la tarjeta de circuitos de la batería deslizándola hacia la parte delantera del nuevo receptáculo del controlador.
-... Apriete el tornillo de apriete manual para fijar la placa de circuito de la batería en la nueva tarjeta del contenedor de la controladora.
-... Vuelva a instalar la cubierta superior en el nuevo contenedor del controlador deslizándola hacia delante hasta que las cubiertas del pestillo superior hagan clic.
-+
-Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
-
-
-
-** Para otros modelos de controladora:
-+
-... Inserte la batería en el nuevo compartimento de controladoras.
+. Inserte la batería en el nuevo compartimento de controladoras.
 +
 Deslice la batería en el recipiente, asegurándose de que permanece por debajo de los remaches de la pared del nuevo recipiente.
 
-... Manteniendo el mango de bloqueo en un ángulo de 45 grados, alinee los conectores de la parte inferior de la batería con los conectores del contenedor.
-... Empuje la batería hasta que la oiga un clic y mueva el asa de bloqueo hacia arriba para fijar la batería de la controladora al compartimento de la controladora.
++
+.. Manteniendo el mango de bloqueo en un ángulo de 45 grados, alinee los conectores de la parte inferior de la batería con los conectores del contenedor.
+.. Empuje la batería hasta que la oiga un clic y mueva el asa de bloqueo hacia arriba para fijar la batería de la controladora al compartimento de la controladora.
 +
 
 TIP: Para asegurarse de que la batería del controlador está correctamente colocada en una bandeja de la unidad de controladora E5XX, es posible que tenga que desdeslizarla e insertarla de nuevo. Es seguro cuando se oye que hace clic en su sitio y cuando el mango de bloqueo no se mueve hacia fuera de su posición vertical cuando se mueve.
 
-... Vuelva a instalar la cubierta superior en el nuevo contenedor del controlador deslizándola hacia delante hasta que las cubiertas del pestillo superior hagan clic.
+.. Vuelva a instalar la cubierta superior en el nuevo contenedor del controlador deslizándola hacia delante hasta que las cubiertas del pestillo superior hagan clic.
 +
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
-
-
 
 
 
@@ -76,7 +61,7 @@ Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se enga
 Instale el compartimento de controladoras nuevo en la bandeja de controladoras.
 
 .Pasos
-. Deslice todo el nuevo contenedor de controladora por el soporte de la controladora-unidad Gire las palancas de liberación hacia el centro del compartimento del controlador para bloquearlo en su lugar.
+. Deslice todo el nuevo contenedor de controladora por el soporte de la controladora-unidad Gire las asas de desbloqueo hacia el centro del compartimento de controladoras para bloquearlas en su lugar.
 . Si el contenedor de controladora nuevo tiene una HIC Fibre Channel o una HIC InfiniBand, instale los transceptores SFP+ (Fibre Channel) o transceptor QSFP+ (InfiniBand) en el contenedor de la controladora y vuelva a conectar los cables del host.
 +
 Según las HIC involucradas en la actualización, es posible que pueda reutilizar el transceptor SFP+ o transceptores QSFP+ que se quitaron del compartimento de controladora antiguo.
@@ -85,11 +70,7 @@ Según las HIC involucradas en la actualización, es posible que pueda reutiliza
 +
 Si la configuración de cableado de unidades es la misma que la de las controladoras anteriores, utilice las etiquetas conectadas a los cables para reconectar correctamente los cables.
 
-+
-
-NOTE: Si actualiza a controladoras E2700 de un modelo anterior, la configuración del cableado de unidades puede ser diferente de la configuración utilizada para las controladoras anteriores.
-
 
 
 .El futuro
-Si va a actualizar controladoras E2800 y E5700 y tiene la función Drive Security habilitada, vaya a. link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. De lo contrario, vaya a. link:complete-upgrade-controllers-task.html["Complete la actualización de la controladora"].
+Si la función Drive Security está habilitada, vaya a link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. De lo contrario, vaya a link:complete-upgrade-controllers-task.html["Complete la actualización de la controladora"].

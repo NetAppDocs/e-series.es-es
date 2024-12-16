@@ -36,7 +36,7 @@ Debe insertar la brida metálica en la parte frontal de la batería en la ranura
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insertar la batería de matiint e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[E2800 Inserte la batería]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -54,10 +54,10 @@ CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal d
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Inserte correctamente la brida de la batería"]
 
 +
-** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+** *Incorrecto* -- La brida metálica de la batería no se inserta en la ranura del controlador: + image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Inserción incorrecta de la brida de la batería"]
 
 
 . Vaya a. link:batteries-reinstall-controller-canister-task.html["Vuelva a instalar el compartimento de controladoras E2800"].

@@ -10,7 +10,7 @@ summary: Las características de volumen de la carga de trabajo específica de l
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Para gestionar el almacenamiento con el complemento de almacenamiento p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

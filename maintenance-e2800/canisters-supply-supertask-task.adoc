@@ -61,7 +61,7 @@ Esta información se puede encontrar en el área Detalles de Recovery Guru, o bi
 
 +
 .. Seleccione *hardware*.
-.. Mira la potencia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Iconos a la derecha de las listas desplegables *Shelf* para determinar qué estante tiene la fuente de alimentación fallida.
+.. Observe los iconos de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["'Icono de ventilador'"]situados a la derecha de las listas desplegables de *Bandeja* para determinar qué bandeja tiene el suministro de alimentación fallido.
 +
 Si un componente ha fallado, estos iconos o ambos son de color rojo.
 
@@ -82,7 +82,7 @@ CAUTION: Si el segundo contenedor de alimentación de la bandeja no tiene el est
 Debe sustituir la fuente de alimentación que tenga encendido el LED de atención.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[28 dwg 913w fuente de alimentación vista posterior maint e2800]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[Indicadores LED del sistema de alimentación]
 
 +
 ** LED de alimentación: Si está *verde fijo*, la fuente de alimentación funciona correctamente. Si está *Off*, la fuente de alimentación ha fallado, el interruptor de CA está apagado, el cable de alimentación de CA no está instalado correctamente o la tensión de entrada del cable de alimentación de CA no está dentro del margen (hay un problema en el extremo de la fuente del cable de alimentación de CA).
@@ -111,7 +111,7 @@ Guarde todos los materiales de embalaje para utilizarlos cuando devuelva la fuen
 
 . Apriete el pestillo del mango de la leva de la fuente de alimentación y, a continuación, abra el asa de la leva para liberar completamente la fuente de alimentación del plano medio.
 +
-image::../media/drw_2600_psu_maint-e2800.gif[drw 2600 psu maint e2800]
+image::../media/drw_2600_psu_maint-e2800.gif[Tire de la palanca de leva para liberar la fuente de alimentación del plano medio]
 
 . Utilice el asa de leva para extraer la fuente de alimentación del sistema.
 +

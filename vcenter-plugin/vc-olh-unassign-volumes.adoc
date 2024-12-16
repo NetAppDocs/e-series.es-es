@@ -11,7 +11,7 @@ summary: Si ya no necesita acceso de I/o a un volumen, es posible anular la asig
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

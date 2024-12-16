@@ -36,9 +36,9 @@ Es posible añadir un segundo contenedor de controladora a la versión simple de
 
 Las figuras muestran una bandeja de controladoras de ejemplo antes de añadir una segunda controladora (un contenedor de controladora y una controladora vacía) y después de añadir una segunda controladora (dos contenedores de controladora).
 
-image::../media/28_dwg_2800_controller_simplex.gif[controlador 28 dwg 2800 simplex]
+image::../media/28_dwg_2800_controller_simplex.gif[Configuración simple con E2800 GbE]
 
-image::../media/28_dwg_2800_controller_duplex.gif[dúplex de controlador 28 dwg 2800]
+image::../media/28_dwg_2800_controller_duplex.gif[Configuración dúplex E2800]
 
 
 NOTE: Las figuras muestran contenedores de controladoras de ejemplo; los puertos de host de los contenedores de las controladoras pueden ser diferentes.
@@ -91,7 +91,7 @@ NOTE: El LED de atención ámbar del controlador se apagará siempre que se prod
 ====
 
 
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[E2800 LED de atención]
 
 *(1)* _LED de atención_
 

@@ -36,7 +36,7 @@ Es posible sustituir un suministro de alimentación en las siguientes bandejas:
 
 En la siguiente figura, se muestra un ejemplo de bandeja de controladoras E5724 con dos fuentes de alimentación (contenedores de alimentación/ventilador). Las bandejas de unidades DE224C son idénticas, pero incluyen módulos de I/o (IOM) en lugar de contenedores de controladoras.
 
-image::../media/e5700_power_supply_callout.png[número de fuente de alimentación de e5700]
+image::../media/e5700_power_supply_callout.png[Fuente de alimentación del controlador E5700]
 
 *(1)* _Bandeja de controladoras con dos fuentes de alimentación (contenedores de alimentación/ventilador) debajo de los contenedores del controlador._
 
@@ -82,11 +82,11 @@ Los temas _sustituir compartimento de alimentación_ no describen cómo reemplaz
 
 En la siguiente figura, se muestra la parte posterior de una bandeja de unidades DE460C con los dos contenedores de alimentación:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c trasero sin anotaciones a la altura de e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C con dos compartimentos de alimentación]
 
 En la siguiente figura se muestra un contenedor de alimentación:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[28 dwg e2860 de460c psu base e5700]
+image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Contenedor de alimentación]
 
 
 
@@ -130,11 +130,11 @@ Los temas _Replace fan canister_ no describen cómo reemplazar un contenedor de 
 
 En la siguiente figura se muestra un contenedor de ventilador:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[28 dwg e2860 de460c un único contenedor de ventilador sin anotaciones que marta e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[Contenedor de ventilador]
 
 En la siguiente figura, se muestra la parte posterior de una bandeja DE460C con dos contenedores de ventilador:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c trasero sin anotaciones a la altura de e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C con dos compartimentos de ventilador]
 
 
 CAUTION: *Posible daño en el equipo* -- Si sustituye un contenedor de ventilador con la alimentación encendida, debe completar el procedimiento de sustitución en un plazo de 30 minutos para evitar la posibilidad de sobrecalentamiento del equipo.

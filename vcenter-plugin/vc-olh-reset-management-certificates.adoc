@@ -10,7 +10,7 @@ summary: Revierte el certificado de gestión a su estado autofirmado original de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

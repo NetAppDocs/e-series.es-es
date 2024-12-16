@@ -10,7 +10,7 @@ summary: 'La capacidad de conservación es la cantidad de capacidad (cantidad de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: Cambie el tamaño de un volumen para aumentar su capacidad notificada.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

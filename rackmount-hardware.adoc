@@ -6,6 +6,8 @@ summary: Monte en rack la tornillería.
 ---
 = Hardware para montaje en rack
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

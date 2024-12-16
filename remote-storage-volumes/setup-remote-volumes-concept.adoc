@@ -44,7 +44,7 @@ Como parte del proceso de configuración, las cabinas de almacenamiento y el hos
 
 Los diagramas siguientes proporcionan ejemplos de cómo conectar los sistemas de manera que realicen operaciones de volumen de almacenamiento remoto a través de una conexión iSCSI.
 
-image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+image:../media/remote_target_volumes_iscsi_use_case_1.png["Cableado de almacenamiento iSCSI"] image:../media/remote_target_volumes_iscsi_use_case_2.png["Cableado de almacenamiento iSCSI"]
 
 
 

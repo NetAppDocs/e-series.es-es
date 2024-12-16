@@ -67,7 +67,7 @@ n.a.
 
 Las configuraciones recomendadas constan de dos puertos de host (iniciador) y cuatro puertos de destino.
 
-image::../media/port_identifiers_ib_iser.gif[identificadores de puerto ib iser]
+image::../media/port_identifiers_ib_iser.gif[Configuración de red de iSER over IB]
 
 
 

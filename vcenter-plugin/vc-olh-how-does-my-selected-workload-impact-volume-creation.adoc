@@ -10,7 +10,7 @@ summary: Durante la creación del volumen, se le solicita información sobre el 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

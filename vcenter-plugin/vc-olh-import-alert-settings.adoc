@@ -11,7 +11,7 @@ summary: Importe la configuración de alerta de una cabina de almacenamiento en 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

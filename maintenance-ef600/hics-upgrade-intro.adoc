@@ -114,7 +114,7 @@ Según el tipo de HIC a la que se esté actualizando, es posible que pueda reuti
 . Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
-image::../media/remove_controller_5.png[retire la controladora 5]
+image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
@@ -122,7 +122,7 @@ image::../media/remove_controller_5.png[retire la controladora 5]
 CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
 
 +
-image::../media/remove_controller_6.png[retire la controladora 6]
+image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso del controlador cuando retire]
 
 . Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
 
@@ -141,7 +141,7 @@ Si este LED verde está encendido, el controlador sigue utilizando la batería. 
 
 . Con un destornillador Phillips, quite los dos tornillos que conectan la placa frontal de la HIC al compartimento de la controladora.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Retire la placa frontal de la HIC]
 
 +
 
@@ -150,7 +150,7 @@ NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente
 . Quite la placa frontal de HIC.
 . Con los dedos o un destornillador Phillips, afloje el tornillo de ajuste manual único que fija la HIC a la tarjeta controladora.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Afloje los tornillos de mariposa de la HIC]
 
 +
 
@@ -166,7 +166,7 @@ NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente
 CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Quite HIC de la tarjeta de la controladora]
 
 +
 
@@ -191,7 +191,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Instale el HIC]
 
 +
 
@@ -204,7 +204,7 @@ CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el 
 
 . Apriete a mano el tornillo de mariposa HIC.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Afloje los tornillos de mariposa de la HIC]
 
 +
 
@@ -231,7 +231,7 @@ Después de actualizar HIC, vuelva a instalar el compartimento de controladoras 
 NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
 
 +
-image::../media/remove_controller_7.png[retire la controladora 7]
+image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 . Si se lo ha quitado, instale SFP en la nueva HIC y vuelva a conectar todos los cables. Si está usando más de un protocolo de host, asegúrese de instalar los SFP en los puertos de host correctos.
 +

@@ -10,7 +10,7 @@ summary: Para maximizar el rendimiento de un grupo de volúmenes, se debe selecc
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: Instale o actualice el complemento de almacenamiento de SANtricity para
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

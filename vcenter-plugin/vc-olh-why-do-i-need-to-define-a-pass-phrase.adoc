@@ -10,7 +10,7 @@ summary: La frase de contraseña se utiliza para cifrar y descifrar el archivo d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Utilice la función Añadir/detectar para encontrar y añadir las cabin
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

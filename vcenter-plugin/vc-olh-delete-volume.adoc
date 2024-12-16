@@ -11,7 +11,7 @@ summary: Elimine uno o más volúmenes para aumentar la capacidad libre de un po
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

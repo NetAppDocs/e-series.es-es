@@ -10,7 +10,7 @@ summary: La seguridad FDE/FIPS hace referencia a unidades compatibles con la fun
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

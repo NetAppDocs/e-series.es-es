@@ -10,7 +10,7 @@ summary: El campo Tipo de sistema operativo de host contiene el sistema operativ
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

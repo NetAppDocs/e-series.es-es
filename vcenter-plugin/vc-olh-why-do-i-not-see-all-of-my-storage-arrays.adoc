@@ -10,7 +10,7 @@ summary: Durante la operación Importar configuración, es posible que algunas c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

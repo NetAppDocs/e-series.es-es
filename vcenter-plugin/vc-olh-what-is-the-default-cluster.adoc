@@ -10,7 +10,7 @@ summary: El clúster predeterminado es una entidad definida por el sistema que p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

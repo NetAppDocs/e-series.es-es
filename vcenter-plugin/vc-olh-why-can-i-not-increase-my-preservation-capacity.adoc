@@ -10,7 +10,7 @@ summary: Si se crearon volúmenes en toda la capacidad utilizable disponible, es
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

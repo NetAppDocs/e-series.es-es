@@ -21,14 +21,14 @@ Aprenda a preparar la instalación de su E5724, EF570, EF280, E2824, Sistema de 
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Bandeja con unidades instaladas y panel frontal"]
  a| 
 Bandeja con unidades instaladas (cubierta protectora empaquetada por separado)
 
 
 
  a| 
-image:../media/superrails_inst-hw-e2800-e5700.png[""]
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware para montaje en rack"]
  a| 
 Hardware para montaje en rack
 
@@ -42,7 +42,7 @@ En la siguiente tabla se identifican los tipos de cables que pueden recibir. Si 
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cables Ethernet"]
  a| 
 Cables Ethernet
 
@@ -53,7 +53,7 @@ Conexión de gestión
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cables I/O."]
  a| 
 Cables I/O.
 
@@ -64,7 +64,7 @@ Cableado de los hosts de datos
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cables de alimentación"]
  a| 
 Cables de alimentación
 
@@ -75,7 +75,7 @@ Encienda el sistema de almacenamiento
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cables SAS"]
  a| 
 Los cables SAS solo se incluyen con las bandejas de unidades
  a| 
@@ -88,28 +88,28 @@ Cables SAS
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Destornillador Phillips número 2"]
  a| 
 Destornillador Phillips número 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Linterna"]
  a| 
 Linterna
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["Correa ESD"]
  a| 
 Correa ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png["Rack 2U"]
  a| 
 Espacio en rack 2U: Un espacio estándar de 19 pulgadas (48.30 cm) en rack para colocar estanterías 2U de las siguientes dimensiones.
 
@@ -126,7 +126,7 @@ Espacio en rack 2U: Un espacio estándar de 19 pulgadas (48.30 cm) en rack para 
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Estación de gestión con explorador compatible para software de gestión"]
  a| 
 Un navegador compatible para el software de gestión:
 

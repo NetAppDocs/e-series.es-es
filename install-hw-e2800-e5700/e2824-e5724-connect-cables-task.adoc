@@ -39,14 +39,14 @@ Para los ejemplos mostrados, necesita los siguientes cables:
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cable SAS"]
  a| 
 *Cables SAS*
 
 |===
 +
 .Ejemplo A: Bandeja de controladoras E5700 con tres bandejas de discos DE212C/DE224 en una configuración SAS estándar.
-image:../media/example_a_28_57.png[""]
+image:../media/example_a_28_57.png["Controlador E5700 en una configuración SAS"]
 
 +
 .. Conecte la controladora A al IOM A de la primera bandeja de unidades.
@@ -59,7 +59,7 @@ image:../media/example_a_28_57.png[""]
 
 +
 .Ejemplo B: Una bandeja de controladoras E5700 con una bandeja de discos DE212C/DE224 en una configuración SAS estándar.
-image:../media/example_b_57_28.png[""]
+image:../media/example_b_57_28.png["Controlador E5700 en una configuración SAS"]
 
 +
 .. Conecte el cable de la controladora A al IOM A.
@@ -75,7 +75,7 @@ Necesita los siguientes cables:
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Cables de alimentación"]
  a| 
 *Cables de alimentación*
 
@@ -99,7 +99,7 @@ Durante el arranque, la pantalla de siete segmentos muestra la secuencia de repe
 
 
  a| 
-*Ejemplo: Las conexiones de alimentación se encuentran en la parte posterior del estante.*image:../media/trafford_power.png[""]
+*Ejemplo: Las conexiones de alimentación están en la parte trasera del estante.* image:../media/trafford_power.png["Conexiones de alimentación de la bandeja"]
 
 |===
 

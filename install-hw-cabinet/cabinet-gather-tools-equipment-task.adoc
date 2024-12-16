@@ -21,20 +21,20 @@ Antes de instalar el armario 40U 3040, asegúrese de que necesita herramientas y
 
 
  a| 
-image:../media/83009_02.gif[""]
+image:../media/83009_02.gif["Llave de 3/4 pulg. Y llave Allen"]
  a| 
 *3/4 pulg. Llave* (suministrada en la caja de despacho) -- para levantar y bajar las patas de nivelación debajo del armario.
 
 *1/4 pulg. Llave Allen* -- para levantar y bajar el pie de estabilidad en la parte delantera del armario.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Incluido con el armario"]
 
 
 
  a| 
 * NEMA L6-30*
 
-image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
+image:../media/73121_01_dwg_nema_l6_30_power_cord.gif["Cable NEMA L6-30"]
  a| 
 *Cables de alimentación de CA* -- para conectar el armario a fuentes de alimentación externas (enchufes de pared).
 
@@ -45,19 +45,19 @@ image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
 
 NOTE: Cada PDU debe estar conectada a una fuente de alimentación independiente.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Incluido con el armario"]
 
 
 
  a| 
 **IEC-60309**
 
-image:../media/73122_01_dwg_iec_60309_power_cord.gif[""]
+image:../media/73122_01_dwg_iec_60309_power_cord.gif["Cable IEC-60309"]
 
 
 
  a| 
-image:../media/78038_21.png[""]
+image:../media/78038_21.png["Incluido con el armario"]
  a| 
 **Cables SAS** (opcional) – se incluyen dos cables con cada bandeja de unidades, mientras que los cables del lado del host deben adquirirse por separado.
 
@@ -69,11 +69,11 @@ Consulte la guía de instalación del soporte de controladora-unidad correspondi
 
 
  a| 
-image:../media/77038_06.gif[""]
+image:../media/77038_06.gif["SAS y cables de comunicación"]
  a| 
 **Instalación de bobinas de cable** – instalación a lo largo de ambos lados de las tomas de distribución de alimentación vertical para acomodar el exceso de longitud de cable y disposición de cable. Se incluyen dos bobinas de cable con cada bandeja de controladora-unidad Las bobinas de cable también se envían con bandejas de unidades independientes.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Carretes de montaje para cables"]
 
 
 

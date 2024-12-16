@@ -2,7 +2,7 @@
 permalink: config-linux/iser-ib-express-setup-task.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: Es posible utilizar el protocolo iSER over Infiniband con un host Linux en un sistema E-Series. 
 ---
 = Configuración exprés de Iser over InfiniBand
 :allow-uri-read: 
@@ -10,3 +10,5 @@ summary:
 :imagesdir: ../media/
 
 
+[role="lead"]
+Es posible utilizar el protocolo iSER over Infiniband con un host Linux en un sistema E-Series.

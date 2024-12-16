@@ -129,3 +129,16 @@ El punto final */certificates/reload* normalmente devuelve una respuesta http 20
 Mediante el uso de una sesión de exploración incognito o en privado, puede abrir una conexión al servidor sin utilizar los datos guardados de sesiones de exploración anteriores.
 
 
+
+
+
+== Función de bloqueo de inicio de sesión
+
+Se puede configurar solo mediante la API de REST, puede limitar el número de intentos de inicio de sesión para los servicios web incrustados y proxy. Según la configuración, la función de bloqueo se activará una vez que se supere el número de intentos de inicio de sesión de los servicios web.
+
+.Pasos
+. Inicie sesión en la link:install-login-task.html["Documentación de API interactiva"].
+. Vaya al menú desplegable de la parte superior derecha y seleccione *v2*.
+. Haga clic en el punto final *GET:/settings/lockout* para recuperar la configuración de bloqueo.
+. Haga clic en el punto final *POST:/settings/lockout* y luego haga clic en *Pruébelo* para configurar la configuración de bloqueo.
+

@@ -19,7 +19,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de 
 
 En una topología de conexión directa, uno o varios hosts están conectados directamente a la controladora.
 
-image::../media/nvme_fc_direct_topology.png[topología directa de nvme fc]
+image::../media/nvme_fc_direct_topology.png[Ejemplo de topología de conexión directa]
 
 * Host 1 Puerto HBA 1 y puerto de host de controladora A 1
 * Host 1 Puerto HBA 2 y puerto de host de controladora B 1
@@ -37,7 +37,7 @@ image::../media/nvme_fc_direct_topology.png[topología directa de nvme fc]
 
 En una topología de estructura, se utilizan uno o varios switches. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] si desea obtener una lista de switches compatibles.
 
-image::../media/nvme_fc_fabric_topology.png[topología de la estructura nvme fc]
+image::../media/nvme_fc_fabric_topology.png[Ejemplo de topología de conexión de switch]
 
 
 

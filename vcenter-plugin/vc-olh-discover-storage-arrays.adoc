@@ -10,7 +10,7 @@ summary: Para mostrar y gestionar recursos de almacenamiento en el complemento d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

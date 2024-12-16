@@ -11,7 +11,7 @@ summary: Es posible quitar unidades para reducir la capacidad de un pool o una c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

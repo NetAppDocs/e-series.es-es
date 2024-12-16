@@ -10,7 +10,7 @@ summary: Es posible gestionar las actualizaciones de NVSRAM y de software SANtri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

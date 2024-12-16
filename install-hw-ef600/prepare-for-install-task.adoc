@@ -28,14 +28,14 @@ Si está realizando el cableado del EF300 para la expansión SAS, revise la sigu
 
 
  a| 
-image:../media/ef600_w_faceplate.png[""]
+image:../media/ef600_w_faceplate.png["Bandeja con unidades instaladas y panel frontal"]
  a| 
 Bandeja con unidades instaladas (bisel y tapas de cierre que se agrupan por separado)
 
 
 
  a| 
-image:../media/superrails_inst-hw-ef600.png[""]
+image:../media/superrails_inst-hw-ef600.png["Hardware para montaje en rack"]
  a| 
 Hardware para montaje en rack
 
@@ -49,7 +49,7 @@ En la siguiente tabla se identifican los tipos de cables que pueden recibir. Si 
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["Cable ethernet RJ-45"]
  a| 
 Cables Ethernet RJ-45 (si se solicita)
  a| 
@@ -58,7 +58,7 @@ Conexión de gestión
 
 
  a| 
-image:../media/cable_io_inst-hw-ef600.png[""]
+image:../media/cable_io_inst-hw-ef600.png["Cable de E/S."]
  a| 
 Cables de I/o (si se solicitan)
  a| 
@@ -67,7 +67,7 @@ Cableado de los hosts de datos
 
 
  a| 
-image:../media/cable_power_inst-hw-ef600.png[""]
+image:../media/cable_power_inst-hw-ef600.png["Cables de alimentación"]
  a| 
 Cables de alimentación (si se solicitan)
  a| 
@@ -80,28 +80,28 @@ Encienda el sistema de almacenamiento
 
 
  a| 
-image:../media/screwdriver_inst-hw-ef600.png[""]
+image:../media/screwdriver_inst-hw-ef600.png["Destornillador Phillips número 2"]
  a| 
 Destornillador Phillips número 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-ef600.png[""]
+image:../media/flashlight_inst-hw-ef600.png["Linterna"]
  a| 
 Linterna
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-ef600.png[""]
+image:../media/wrist_strap_inst-hw-ef600.png["Correa ESD"]
  a| 
 Correa ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-ef600.png[""]
+image:../media/2u_rackspace_inst-hw-ef600.png["Rack 2U"]
  a| 
 Espacio en rack 2U: Un espacio estándar de 19 pulgadas (48.30 cm) en rack para colocar estanterías 2U de las siguientes dimensiones.
 
@@ -121,7 +121,7 @@ NOTE: El uso de armarios de terceros puede provocar que los cables de alimentaci
 
 
  a| 
-image:../media/management_station_inst-hw-ef600_g60b3.png[""]
+image:../media/management_station_inst-hw-ef600_g60b3.png["Estación de gestión con explorador compatible para software de gestión"]
  a| 
 Un navegador compatible para el software de gestión:
 

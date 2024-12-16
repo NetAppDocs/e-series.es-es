@@ -27,6 +27,9 @@ Use el siguiente flujo de trabajo:
 
 
 
+NOTE: Los volúmenes de almacenamiento remoto de SANtricity no son compatibles actualmente con los sistemas E4000.
+
+
 
 == Obtenga más información
 

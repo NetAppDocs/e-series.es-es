@@ -89,7 +89,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Si el comando se realiza correctamente, no es necesario detener la actividad de I/o del host. Todas las unidades del cajón están en pools o grupos de volúmenes con protección contra pérdida de cajón. Vaya a. <<Paso 2: Quitar las cadenas para cables>>.
 +
 
-CAUTION: *Posible daño a las unidades* -- espere 30 segundos después de que el comando finalice antes de abrir el cajón de la unidad. Esperar 30 segundos permite reducir la velocidad de giro de las unidades para evitar posibles daños en el hardware.
+CAUTION: *Posible daño a las unidades* -- espere 60 segundos después de que el comando finalice antes de abrir el cajón de la unidad. Esperar 60 segundos permite reducir la velocidad de giro de las unidades para evitar posibles daños en el hardware.
 
 ** Si se muestra una advertencia que indica que este comando no pudo completarse, debe detener la actividad de I/o del host antes de quitar el cajón. Se muestra la advertencia debido a que una o varias unidades del cajón afectado están en pools o grupos de volúmenes sin protección contra pérdida de cajón. Para evitar la pérdida de datos, debe completar los siguientes pasos para detener la actividad de I/o del host y apagar la bandeja de unidades y la bandeja de controladoras.
 
@@ -115,7 +115,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib ha w cache de callouts maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED activo de caché en el controlador E5700]
 
 +
 *(1)* _Cache Active LED_
@@ -174,7 +174,7 @@ CAUTION: *Posible daño de hardware* -- Si la bandeja de la unidad está encendi
 La figura muestra el asa del contenedor de ventilador extendido y liberado de la pestaña naranja de la izquierda.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[28 dwg e2860 de460c asa del contenedor de ventilador con llamada principal e5700]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[Color naranja para liberar el asa del compartimento de ventilador]
 
 +
 *(1)* _manivela del contenedor de ventilador_
@@ -195,7 +195,7 @@ CAUTION: *Posible daño en el equipo debido al sobrecalentamiento* -- Si la band
 La cadena de cables superior está conectada al cajón de mando 1. La cadena de cables inferior está conectada al cajón de mando 5. Se proporcionan las anotaciones para el cajón de la unidad 1.
 
 +
-image::../media/trafford_cable_rail_1_maint-e5700.gif[trafford teleférico 1 mint e5700]
+image::../media/trafford_cable_rail_1_maint-e5700.gif[Cadena de cables y conectores para el cajón de transmisión]
 
 +
 *(1)* _Cadena de cable_
@@ -213,7 +213,7 @@ image::../media/trafford_cable_rail_1_maint-e5700.gif[trafford teleférico 1 min
 +
 .. Con una linterna, localice el anillo naranja en el extremo de la cadena de cables que está conectada al riel guía vertical de la carcasa.
 +
-image::../media/trafford_cable_rail_3_maint-e5700.gif[carril de cable trafford 3 mant e5700]
+image::../media/trafford_cable_rail_3_maint-e5700.gif[Anillo naranja para el riel vertical y la cadena de cables para el cajón de la unidad]
 
 +
 *(1)* _anillo naranja en la guía vertical rail_
@@ -232,7 +232,7 @@ image::../media/trafford_cable_rail_3_maint-e5700.gif[carril de cable trafford 3
 La figura muestra el conector horizontal de la derecha y la cadena del cable desconectada y parcialmente retirada del lado izquierdo.
 
 +
-image::../media/trafford_cable_rail_2_maint-e5700.gif[carril de cable trafford 2 mant e5700]
+image::../media/trafford_cable_rail_2_maint-e5700.gif[Anillo naranja para el riel horizontal y la cadena de cables para el cajón de la unidad]
 
 +
 *(1)* _anillo naranja en el riel guía horizontal_
@@ -309,7 +309,7 @@ CAUTION: *Posible pérdida de acceso a los datos* -- los campos magnéticos pued
 . Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga. No quite completamente el cajón de unidades de la bandeja de unidades.
 . Si ya se han creado y asignado volúmenes, use un marcador permanente para indicar la ubicación exacta de cada unidad. Por ejemplo, utilizando el siguiente dibujo como referencia, escriba el número de ranura adecuado en la parte superior de cada unidad.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[cajón dwg trafford con hdd callouts maint e5700]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[Números de ranura de unidad]
 
 +
 
@@ -321,7 +321,7 @@ CAUTION: *Posible pérdida de acceso a datos* -- Asegúrese de registrar la ubic
 .. Levante la manija de la unidad hasta la posición vertical.
 .. Utilice el asa para levantar la unidad del cajón de la unidad.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6600 instale o retire la mant. de unidad e5700]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[Utilice las asas de leva para quitar la unidad]
 
 .. Coloque la unidad sobre una superficie plana y sin estática y lejos de los dispositivos magnéticos.
 
@@ -330,7 +330,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6
 +
 .. Coloque la palanca de liberación de plástico en cada lado del cajón de la unidad.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[92 pht de6600 palanca de liberación del cajón de accionamiento mant e5700]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[Suelte la palanca para extraer el cajón]
 
 +
 *(1)* _palanca de liberación del cajón de la unidad_
@@ -355,7 +355,7 @@ Instale un cajón de unidades nuevo para reemplazar el con errores.
 El conjunto del vaso con cierre de bloqueo es una función de seguridad que evita que pueda abrir más de un cajón de accionamiento a la vez.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e5700.gif[92 pht de6600 bloqueo del detalle del vaso mant e5700]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e5700.gif[Vaso de bloqueo y guía del cajón]
 
 +
 *(1)* _Lock-Out Tumbler_
@@ -416,7 +416,7 @@ CAUTION: *Riesgo de avería del equipo* -- Asegúrese de deslizar el conector en
 La figura muestra los rieles guía horizontal y vertical para el segundo cajón de unidades del compartimento.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e5700.gif[2860 dwg ambos carriles guía marinen e5700]
+image::../media/2860_dwg_both_guide_rails_maint-e5700.gif[Rieles guía horizontales y verticales]
 
 +
 *(1)* _Guía horizontal rail_
@@ -481,7 +481,7 @@ CAUTION: *Posible pérdida de acceso a datos* -- debe instalar cada unidad en su
 .. Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga. No quite completamente el cajón de unidades de la bandeja de unidades.
 .. Determine qué unidad se debe instalar en cada ranura mediante las notas que hizo al quitar las unidades.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[cajón dwg trafford con hdd callouts maint e5700]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[Números de ranura de unidad]
 
 .. Levante la palanca de la unidad hasta la posición vertical.
 .. Alinee los dos botones levantados de cada lado de la unidad con las muescas del cajón.
@@ -489,14 +489,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[cajón dw
 La figura muestra la vista del lado derecho de una unidad, donde se muestra la ubicación de los botones levantados.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[28 dwg e2860 de460c unidad cru mant e5700]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[El botón elevado del portador de unidades debe coincidir con el canal de la unidad en el cajón de unidades]
 
 +
 *(1)* botón levantado en el lado derecho de la unidad_
 
 .. Baje la unidad en línea recta hacia abajo, asegurándose de que la unidad está presionada completamente hacia abajo en el compartimiento y luego gire el asa de la unidad hacia abajo hasta que la unidad encaje en su lugar.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6600 instale o retire la mant. de unidad e5700]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[Utilice el asa para bajar la unidad al cajón]
 
 .. Repita estos pasos para instalar todas las unidades.
 

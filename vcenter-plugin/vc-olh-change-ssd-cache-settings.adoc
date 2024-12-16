@@ -11,7 +11,7 @@ summary: Edite el nombre de la cach√© SSD y visualice el estado, la capacidad m√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

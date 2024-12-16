@@ -18,7 +18,7 @@ Vuelva a instalar el compartimento de controladoras en la bandeja de controlador
 . Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
 . Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retire la bandeja de alimentación del controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[reinstalación del controlador de unidades 24]
 
 +
 *(1)* _Controller canister_
@@ -27,7 +27,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _Cam handle_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 añade el contenedor de controladora a maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[reinstalación del controlador de unidades 60]
 
 +
 *(1)* _Controller canister_

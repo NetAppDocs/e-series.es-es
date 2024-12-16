@@ -10,7 +10,7 @@ summary: Los volúmenes de esta carga de trabajo no están asociados a una carga
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

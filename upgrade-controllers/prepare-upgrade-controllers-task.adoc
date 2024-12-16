@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Se prepara para actualizar las controladoras. Para ello, se guarda la clave de seguridad de la unidad, se recogen datos de soporte y se desconecta la controladora. 
 ---
 = Prepare la actualización de las controladoras
@@ -94,10 +94,9 @@ Necesita este número de serie para realizar los pasos de link:complete-upgrade-
 
 . Recopile datos de soporte sobre la cabina de almacenamiento mediante la interfaz gráfica de usuario o la CLI:
 +
-** Use System Manager o Array Management Window en Storage Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
+** Use System Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
 +
 *** En System Manager, seleccione menu:Support[Centro de soporte > pestaña Diagnóstico]. A continuación, seleccione *recopilar datos de soporte* y haga clic en *recopilar*.
-*** En la barra de herramientas de Array Management Window, seleccione MENU:Monitor[Estado > recoger datos de soporte manualmente]. A continuación, introduzca un nombre y especifique una ubicación en el sistema donde se desea almacenar el paquete de soporte.
 +
 El archivo se guarda en la carpeta de descargas del explorador con el nombre `support-data.7z`.
 
@@ -133,7 +132,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 +
 Se muestra el cuadro de diálogo Cambiar configuración de caché. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
 
-.. Seleccione la ficha *básico* y cambie la configuración para el almacenamiento en caché de lectura y escritura.
+.. Seleccione la pestaña *Básico* y desactive la configuración para el almacenamiento en caché de lectura y el almacenamiento en caché de escritura.
 .. Haga clic en *Guardar*.
 .. Espere cinco minutos para permitir que los datos de la memoria caché se vacíen en el disco.
 

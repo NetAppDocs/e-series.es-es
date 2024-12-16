@@ -11,7 +11,7 @@ summary: Quite uno o varios grupos de cabinas de almacenamiento que ya no sean n
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

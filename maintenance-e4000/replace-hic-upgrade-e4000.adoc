@@ -1,0 +1,228 @@
+---
+permalink: maintenance-e4000/replace-hic-upgrade-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Actualice HIC en E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible actualizar las tarjetas de interfaz del host (HIC) para aumentar la cantidad de puertos de host o cambiar los protocolos de host.
+
+.Acerca de esta tarea
+* Al actualizar HIC, debe apagar la cabina de almacenamiento, actualizar las HIC y volver a aplicar alimentación.
+* Cuando actualice HIC en una controladora E4000, repita todos los pasos para eliminar la segunda controladora, actualizar las HIC de la segunda controladora y volver a instalar la segunda controladora antes de volver a aplicar alimentación a la bandeja de controladoras.
+
+
+.Antes de empezar
+* Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente. Como ambas controladoras deben tener la misma configuración de HIC cuando se conectan, la alimentación debe estar apagada al cambiar la configuración de HIC. La presencia de HIC no coincidentes hace que la controladora con la HIC de reemplazo se bloquee cuando lo conecta.
+* Asegúrese de tener lo siguiente:
++
+** Dos HIC que son compatibles con sus controladoras.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Un destornillador Phillips número 1.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+
+CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladora E4000 si esa HIC estaba diseñada para otra controladora E-Series. Además, tanto las controladoras como las HIC deben ser idénticas. La presencia de HIC incompatible o con discrepancias hace que las controladoras se bloqueen cuando aplique alimentación.
+
+
+
+
+
+
+
+== Paso 1: Coloque la bandeja de controladoras en estado sin conexión
+
+Coloque la bandeja de controladoras en estado sin conexión para que pueda actualizar las HIC de forma segura.
+
+.Pasos
+. En la página Inicio de SANtricity System Manager, asegúrese de que la cabina de almacenamiento tenga el estado Optimal.
++
+Si el estado no es óptimo, use Recovery Guru o póngase en contacto con el soporte técnico para resolver el problema. No continúe con este procedimiento.
+
+. Haga clic en *Soporte > Centro de actualización* para asegurarse de que está instalada la última versión de SANtricity OS.
++
+Si es necesario, instale la versión más reciente.
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Selecciona *Soporte > Centro de soporte > Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. Apague la bandeja de controladoras.
++
+.. Etiquete y desconecte ambos cables de alimentación de la bandeja de controladoras.
+.. Espere a que se apagen todos los LED de la bandeja de controladoras.
+
+
+
+
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Afloje la correa de gancho y bucle que une los cables al dispositivo de gestión de cables y, a continuación, desenchufe los cables del sistema y los SFP (si es necesario) del compartimento del controlador, realizando un seguimiento de dónde se conectaron los cables.
++
+Deje los cables en el dispositivo de administración de cables de manera que cuando vuelva a instalar el dispositivo de administración de cables, los cables estén organizados.
+
+. Quite y aparte los dispositivos de gestión de cables de los lados izquierdo y derecho del compartimento de controladoras.
+. Apriete el pestillo de la manija de leva hasta que se suelte, abra por completo la manija de leva para liberar el compartimento de controladoras del plano medio y luego, con dos manos, saque el compartimento de controladoras del chasis.
+. Voltee el compartimento de controladoras y colóquelo en una superficie plana y estable.
+. Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cubierta del compartimento de controladoras.]
+
+
+
+
+
+== Paso 3: Actualice la HIC
+
+Quite y sustituya la HIC.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Retire la HIC:
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Quite HIC del módulo de controladora.]
+
++
+.. Retire la placa frontal de la HIC aflojando todos los tornillos y deslizándola directamente hacia fuera del módulo del controlador.
+.. Afloje los tornillos de apriete manual de la HIC y levante la HIC en línea recta.
+
+
+. Vuelva a instalar la HIC:
++
+.. Alinee la toma de la toma HIC de repuesto con la toma de la placa base y, a continuación, coloque suavemente la tarjeta en el zócalo.
+.. Apriete los tres tornillos de apriete manual de la HIC.
+.. Vuelva a instalar la placa frontal de la HIC.
+
+
+. Vuelva a instalar la cubierta del módulo del controlador y bloquéela en su lugar.
+
+
+
+
+== Paso 4: Vuelva a instalar el compartimento de la controladora
+
+Vuelva a instalar el compartimento de controladoras en el chasis.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
+. Vuelva a colocar el compartimento de controladoras y alinee el extremo con la apertura del chasis.
+. Alinee el extremo del compartimento de controladoras con la apertura del chasis y empuje suavemente el compartimento de controladoras a la mitad en el sistema.
++
+
+NOTE: No inserte por completo el compartimento de controladoras en el chasis hasta que se lo indique.
+
+. Recuperar el sistema, según sea necesario.
++
+Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
+
+. Complete la reinstalación del compartimento de controladoras:
++
+.. Con el mango de leva en la posición abierta, empuje firmemente el contenedor del controlador hasta que se encuentre con el plano medio y quede completamente asentado, y luego cierre el mango de leva a la posición de bloqueo.
++
+
+NOTE: No ejerza demasiada fuerza al deslizar el compartimento del controlador en el chasis para evitar dañar los conectores.
+
+.. Si aún no lo ha hecho, vuelva a instalar el dispositivo de administración de cables.
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
+
+
+. Repita <<step2_remove_controller_canister,Paso 2: Quite el contenedor de la controladora>> <<step3_upgrade_hic,Paso 3: Actualice la HIC>>, y <<step4_reinstall_controller,Paso 4: Vuelva a instalar el compartimento de la controladora>> para el segundo controlador.
+
+
+
+
+== Paso 5: Complete la actualización de HIC
+
+Coloque ambas controladoras en línea, recoja datos de soporte y reanude las operaciones.
+
+.Pasos
+. Coloque las controladoras en línea.
++
+.. Enchufe los cables de alimentación.
+
+
+. Cuando las controladoras arranquen, compruebe los LED de la controladora.
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando las controladoras vuelvan a estar en línea, confirme que su estado sea óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado No es óptimo o alguno de los LED de atención está encendido, confirme que todos los cables estén correctamente colocados y que los compartimentos de controladoras estén instalados correctamente. Si es necesario, quite y vuelva a instalar los compartimentos de controladoras.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras la distribución automática o la distribución manual, debe comprobar Recovery Guru para encontrar problemas de conectividad de host.
+.. Si no hay Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Selecciona *Soporte > Centro de soporte > Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+.El futuro
+Se completó el proceso de actualización de una tarjeta de interfaz del host en la cabina de almacenamiento. Es posible reanudar las operaciones normales.

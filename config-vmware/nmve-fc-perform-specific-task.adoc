@@ -98,7 +98,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de 
 
 La ilustración muestra un host conectado a una cabina de almacenamiento E-Series en dos zonas. Una zona se indica mediante la línea azul; la otra se indica mediante la línea roja. Cada zona contiene un puerto iniciador y todos los puertos de destino.
 
-image::../media/port_identifiers_host_and_target_conf-vmw.gif[los identificadores de puerto host y target conf vmw]
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificadores de puerto NVMe over Fibre Channel»]
 
 
 

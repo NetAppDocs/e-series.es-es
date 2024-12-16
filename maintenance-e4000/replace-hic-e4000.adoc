@@ -1,0 +1,385 @@
+---
+permalink: maintenance-e4000/replace-hic-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Reemplace HIC en E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) con errores en una cabina E4000.
+
+.Acerca de esta tarea
+Cuando se sustituye una HIC con errores, debe apagar la cabina de almacenamiento (simple) o colocar la controladora afectada en estado sin conexión (dúplex), sustituir la HIC y volver a aplicar alimentación (simple) o colocar la controladora en línea (doble).
+
+.Antes de empezar
+* Si tiene una configuración simple, programe una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente.
+* Asegúrese de tener lo siguiente:
++
+** Las HIC son compatibles con sus controladoras.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+** Un destornillador Phillips número 1.
+** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
++
+
+CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en un contenedor de controladora E4000 si esa HIC estaba diseñada para otra controladora E-Series. Además, ambas controladoras y ambas HIC deben ser idénticas en una configuración doble. La presencia de HIC incompatible o con discrepancias hace que las controladoras se bloqueen cuando aplique alimentación.
+
+
+
+
+
+
+
+== Paso 1: Prepárese para reemplazar HIC
+
+Apague la bandeja de controladoras (simple) o coloque la controladora afectada en estado sin conexión (doble) para poder sustituir con seguridad las HIC.
+
+[role="tabbed-block"]
+====
+.Apague la bandeja de controladoras (simple)
+--
+.Pasos
+. Si es posible, anote en qué versión del software de sistema operativo SANtricity está instalada actualmente en la controladora. Abra el Administrador del sistema de SANtricity y seleccione *Soporte › Centro de actualización › Ver inventario de software y firmware*.
+. Si la función Drive Security está habilitada, asegúrese de que existe una clave guardada y de que conoce la frase de contraseña necesaria para instalarla.
++
+
+CAUTION: * Posible pérdida de acceso a los datos* — Si todas las unidades de la cabina de almacenamiento tienen la seguridad habilitada, el nuevo controlador no podrá acceder a la cabina de almacenamiento hasta que desbloquee las unidades seguras utilizando la ventana de gestión empresarial en SANtricity Storage Manager.
+
++
+Para guardar la llave (puede que no sea posible, según el estado del controlador):
+
++
+.. Desde el Administrador del sistema de SANtricity, selecciona *Configuración › Sistema*.
+.. En *Gestión de claves de seguridad*, seleccione *clave de copia de seguridad*.
+.. En los campos *define a pass phrase/Re-enter pass phrase*, introduzca y confirme una frase de contraseña para esta copia de backup.
+.. Haga clic en *copia de seguridad*.
+.. Registre la información clave en una ubicación segura y, a continuación, haga clic en *Cerrar*.
+
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... *Seleccione Soporte › Centro de Soporte › Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, es posible utilizar el archivo guardado para solucionar el problema. El sistema guardará los datos de inventario, Estados y rendimiento acerca de la cabina de almacenamiento en un único archivo.
+
++
+.. *Seleccione Soporte › Centro de Soporte › Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Asegúrese de que no se producen operaciones de I/o entre la cabina de almacenamiento y todos los hosts conectados. Por ejemplo, puede realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonte todos los sistemas de archivos asociados con volúmenes en la cabina.
++
+
+NOTE: Los pasos exactos para detener las operaciones de I/o del host dependen del sistema operativo del host y de la configuración, que están más allá del alcance de estas instrucciones. Si no está seguro de cómo detener las operaciones de I/o del host en el entorno, considere apagar el host.
+
++
+
+CAUTION: * Posible pérdida de datos* — Si continúa este procedimiento mientras se producen operaciones de E/S, puede perder datos.
+
+
+
+. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
+. Apague ambos switches de alimentación de la bandeja de controladoras.
+. Espere a que se apagen todos los LED de la bandeja de controladoras.
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que el campo *Aceptar para eliminar* en el área Detalles muestra *Sí*, lo que indica que es seguro eliminar este componente. No se podrá acceder a los datos en la cabina de almacenamiento hasta que se sustituya el compartimento de controladoras.
+
+
+--
+.Colocar una controladora en estado sin conexión (doble)
+--
+.Pasos
+. Desembale el nuevo contenedor del controlador y configúrelo en una superficie plana y sin estática.
++
+Guarde los materiales de empaque que se deben usar para enviar el compartimento de controladoras con errores.
+
+. Localice las etiquetas de dirección MAC y número de pieza de FRU en la parte posterior del compartimento de controladoras.
+. En SANtricity System Manager, busque el número de pieza de repuesto del compartimento de controladoras que desea sustituir.
++
+Cuando una controladora tiene un error y se debe sustituir, el número de pieza de repuesto se muestra en el área Detalles de Recovery Guru. Si necesita encontrar este número manualmente, siga estos pasos:
+
++
+.. Seleccione *hardware*.
+.. Localice la bandeja de controladoras, que se marca con el icono de la controladora.
+.. Haga clic en el icono de la controladora.
+.. Seleccione el controlador y haga clic en *Siguiente*.
+.. En la pestaña *base*, anote el *número de pieza de repuesto* del controlador.
+
+
+. Confirmar que el número de pieza de repuesto de la controladora con errores es el mismo que el número de pieza de FRU de la controladora de reemplazo.
++
+
+CAUTION: * Posible pérdida de acceso a los datos* — Si los dos números de pieza no son los mismos, no intente este procedimiento. La presencia de controladoras discrepancias provocará que la nueva controladora se bloquee al colocarla en línea.
+
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** También puede hacer un backup de la base de datos de configuración con el siguiente comando CLI:
++
+[listing]
+----
+save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";
+----
+
+
+. Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
++
+** Desde SANtricity System Manager:
++
+... Seleccione *hardware*.
+... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+... Seleccione la controladora que desea colocar en estado sin conexión.
+... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
++
+
+NOTE: Si accede a System Manager de SANtricity con la controladora que intenta desconectar, se muestra un mensaje de SANtricity System Manager no disponible. Seleccione Conectarse a una conexión de red alternativa para acceder automáticamente a SANtricity System Manager usando la otra controladora.
+
+
+
+** Como alternativa, puede desconectar las controladoras utilizando los siguientes comandos de la CLI:
++
+*Para el controlador A*: `set controller [a] availability=offline`
+
++
+*Para el controlador B*: `set controller [b] availability=offline`
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Seleccione *Volver a comprobar* en Recovery Guru y confirme que el campo *Aceptar para eliminar* en el área Detalles muestra *Sí*, lo que indica que es seguro eliminar este componente.
+
+
+--
+====
+
+
+== Paso 2: Quite el contenedor de la controladora
+
+Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Afloje la correa de gancho y bucle que une los cables al dispositivo de gestión de cables y, a continuación, desenchufe los cables del sistema y los SFP (si es necesario) del compartimento del controlador, realizando un seguimiento de dónde se conectaron los cables.
++
+Deje los cables en el dispositivo de administración de cables de manera que cuando vuelva a instalar el dispositivo de administración de cables, los cables estén organizados.
+
+. Quite y aparte los dispositivos de gestión de cables de los lados izquierdo y derecho del compartimento de controladoras.
+. Apriete el pestillo de la manija de leva hasta que se suelte, abra por completo la manija de leva para liberar el compartimento de controladoras del plano medio y luego, con dos manos, saque el compartimento de controladoras del chasis.
+. Voltee el compartimento de controladoras y colóquelo en una superficie plana y estable.
+. Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cubierta del compartimento de controladoras.]
+
+
+
+
+
+== Paso 3: Reemplace la HIC
+
+Sustituya la HIC.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Retire la HIC:
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retire la HIC y la placa frontal.]
+
++
+.. Retire la placa frontal de la HIC deslizándola directamente hacia fuera del módulo del controlador.
+.. Afloje los tornillos de apriete manual de la HIC y levántela hacia arriba.
+
+
+. Vuelva a instalar la HIC:
++
+.. Alinee la toma de la toma HIC de repuesto con la toma de la placa base y, a continuación, coloque suavemente la tarjeta en el zócalo.
+.. Apriete los tres tornillos de apriete manual de la HIC.
+.. Vuelva a instalar la placa frontal de la HIC.
+
+
+. Vuelva a instalar la cubierta del módulo del controlador y bloquéela en su lugar.
+
+
+
+
+== Paso 4: Vuelva a instalar el compartimento de la controladora
+
+Vuelva a instalar el compartimento de controladoras en el chasis.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
+. Vuelva a colocar el compartimento de controladoras y alinee el extremo con la apertura del chasis.
+. Empuje suavemente el compartimento de controladoras a la mitad en el sistema. Alinee el extremo del compartimento de controladoras con la apertura del chasis y empuje suavemente el compartimento de controladoras a la mitad en el sistema.
++
+
+NOTE: No inserte por completo el compartimento de controladoras en el chasis hasta que se lo indique.
+
+. Recuperar el sistema, según sea necesario.
++
+Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
+
+. Complete la reinstalación del compartimento de controladoras:
++
+.. Con el mango de leva en la posición abierta, empuje firmemente el contenedor del controlador hasta que se encuentre con el plano medio y quede completamente asentado, y luego cierre el mango de leva a la posición de bloqueo.
++
+
+NOTE: No ejerza demasiada fuerza al deslizar el compartimento del controlador en el chasis para evitar dañar los conectores.
+
++
+Si tiene una configuración doble, la controladora comenzará a arrancar en cuanto se coloque en el chasis.
+
+.. Si aún no lo ha hecho, vuelva a instalar el dispositivo de administración de cables.
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
+
+
+
+
+
+
+== Paso 5: Reemplazo de una HIC completa
+
+Encienda la controladora (simple) o coloque la controladora en línea (dúplex), recoja datos de soporte y reanude las operaciones.
+
+[role="tabbed-block"]
+====
+.Controladora alimentación (simple)
+--
+.Pasos
+. Encienda los dos switches de alimentación que se encuentran en la parte posterior de la bandeja de controladoras.
++
+** No apague los interruptores de alimentación durante el proceso de encendido, que normalmente tarda 90 segundos o menos en completarse.
+** Los ventiladores de cada bandeja son muy altos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Cuando la controladora vuelva a estar en línea, compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están conectados correctamente y compruebe que la batería y el compartimento de controladoras estén instalados correctamente. Si es necesario, retire y vuelva a instalar el compartimento de la controladora y la batería.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico. Si es necesario, recoja datos de soporte para la cabina de almacenamiento mediante System Manager de SANtricity.
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione Recoger datos de soporte.
+.. Haga clic en Recoger.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+--
+.Colocar una controladora en línea (doble)
+--
+.Pasos
+. Utilice System Manager de SANtricity para conectar la controladora.
++
+** Desde SANtricity System Manager:
++
+... Seleccione *hardware*.
+... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja*.
+... Seleccione la controladora que desea colocar en línea.
+... Seleccione *colocar en línea* en el menú contextual y confirme que desea realizar la operación.
++
+El sistema coloca la controladora en línea.
+
+
+
+** Como alternativa, puede volver a conectar la controladora usando los siguientes comandos de la CLI:
++
+*Para el controlador A* `set controller [a] availability=online`: ;
+
++
+*Para el controlador B* `set controller [b] availability=online`: ;
+
+
+
+. Cuando la controladora vuelva a estar en línea, compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están conectados correctamente y compruebe que la batería y el compartimento de controladoras estén instalados correctamente. Si es necesario, retire y vuelva a instalar el compartimento de la controladora y la batería.
+
++
+
+NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico. Si es necesario, recoja datos de soporte para la cabina de almacenamiento mediante System Manager de SANtricity.
+
+. Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
++
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
+.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 5.
+.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras distribución automática o distribución manual, debe comprobar Recovery Guru para los problemas de conectividad de host.
+.. Si no existe Recovery Guru presente o si después de seguir los pasos de Recovery Guru, los volúmenes siguen sin devolverse a sus propietarios preferidos, póngase en contacto con el servicio de soporte.
+
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione Recoger datos de soporte.
+.. Haga clic en Recoger.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+--
+====
+.El futuro
+Se ha completado la sustitución de la tarjeta de interfaz del host. Es posible reanudar las operaciones normales.

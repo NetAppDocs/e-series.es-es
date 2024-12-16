@@ -11,7 +11,7 @@ summary: Puede optar por activar el archivo de software en un momento más conve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

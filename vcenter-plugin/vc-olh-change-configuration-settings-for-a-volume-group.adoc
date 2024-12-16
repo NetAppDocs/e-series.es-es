@@ -11,7 +11,7 @@ summary: Edite la configuración de un grupo de volúmenes, incluidos su nombre 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,49 @@
+---
+permalink: install-hw-e4000/index.html 
+sidebar: sidebar 
+keywords:  
+summary: Siga estos pasos para instalar y configurar el sistema de almacenamiento E4000. 
+---
+= Instalar y configurar sistemas E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estos pasos para instalar y configurar el sistema de almacenamiento E4000.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Prepare la instalación
+[role="quick-margin-para"]
+Debe preparar su sitio para que cumpla con las especificaciones del sistema de almacenamiento de la serie E4000.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/prepare-installation.html["Preparación de la instalación"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instale la tornillería
+[role="quick-margin-para"]
+Aprenda a instalar un sistema de almacenamiento E4012, E4060, DE212C o DE460C en un rack o armario del sistema NetApp.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/install-hardware-12.html["Instale la tornillería E4012"^]
+* link:../install-hw-e4000/install-hardware-60.html["Instale la tornillería E4060"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Conectar las bandejas de hardware
+[role="quick-margin-para"]
+Descubra cómo conectar los cables de alimentación y encender las bandejas de unidades para un sistema de almacenamiento E4000.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/connect-cables-12.html["Cable de hardware E4012"^]
+* link:../install-hw-e4000/connect-cables-60.html["Cable de hardware E4060"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Cuatro"] Complete la configuración del sistema de almacenamiento
+[role="quick-margin-para"]
+Aprenda a conectar las controladoras a la red y a completar la instalación y la configuración del sistema de almacenamiento.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/complete-setup-12.html["Complete la configuración de E4012"^]
+* link:../install-hw-e4000/complete-setup-60.html["Complete la configuración de E4060"^]
+

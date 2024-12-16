@@ -96,7 +96,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Si el comando se realiza correctamente, no es necesario detener la actividad de I/o del host. Todas las unidades del cajón están en pools o grupos de volúmenes con protección contra pérdida de cajón. Vaya a. <<Paso 2: Quitar las cadenas para cables>>.
 +
 
-CAUTION: *Posible daño a las unidades* -- espere 30 segundos después de que el comando finalice antes de abrir el cajón de la unidad. Esperar 30 segundos permite reducir la velocidad de giro de las unidades para evitar posibles daños en el hardware.
+CAUTION: *Posible daño a las unidades* -- espere 60 segundos después de que el comando finalice antes de abrir el cajón de la unidad. Esperar 60 segundos permite reducir la velocidad de giro de las unidades para evitar posibles daños en el hardware.
 
 ** Si se muestra una advertencia que indica que este comando no pudo completarse, debe detener la actividad de I/o del host antes de quitar el cajón. Se muestra la advertencia debido a que una o varias unidades del cajón afectado están en pools o grupos de volúmenes sin protección contra pérdida de cajón. Para evitar la pérdida de datos, debe completar los siguientes pasos para detener la actividad de I/o del host y apagar la bandeja de unidades y la bandeja de controladoras.
 
@@ -122,7 +122,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED activo de caché en el controlador E2800]
 
 +
 *(1)* _Cache Active LED_
@@ -177,7 +177,7 @@ CAUTION: *Posible daño de hardware* -- Si la bandeja de la unidad está encendi
 La figura muestra el asa del contenedor de ventilador extendido y liberado de la pestaña naranja de la izquierda.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[asa del contenedor de ventilador de460c de 28 dwg e2860 con llamada maint e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Asa del contenedor de ventilador]
 
 +
 *(1)* _manivela del contenedor de ventilador_
@@ -198,7 +198,7 @@ CAUTION: *Posible daño en el equipo debido al sobrecalentamiento* -- Si la band
 La cadena de cables superior está conectada al cajón de mando 1. La cadena de cables inferior está conectada al cajón de mando 5. Se proporcionan las anotaciones para el cajón de la unidad 1.
 
 +
-image::../media/trafford_cable_rail_1_maint-e2800.gif[trafford teleférico 1 maint e2800]
+image::../media/trafford_cable_rail_1_maint-e2800.gif[Cadena de cables y conectores para el cajón de transmisión]
 
 +
 *(1)* _cable cadena_
@@ -216,7 +216,7 @@ image::../media/trafford_cable_rail_1_maint-e2800.gif[trafford teleférico 1 mai
 +
 .. Con una linterna, localice el anillo naranja en el extremo de la cadena de cables que está conectada al riel guía vertical de la carcasa.
 +
-image::../media/trafford_cable_rail_3_maint-e2800.gif[trafford cable rail 3 maint e2800]
+image::../media/trafford_cable_rail_3_maint-e2800.gif[Anillo naranja para el riel vertical y la cadena de cables para el cajón de la unidad]
 
 +
 *(1)* _anillo naranja en la guía vertical rail_
@@ -235,7 +235,7 @@ image::../media/trafford_cable_rail_3_maint-e2800.gif[trafford cable rail 3 main
 La figura muestra el conector horizontal de la derecha y la cadena del cable desconectada y parcialmente retirada del lado izquierdo.
 
 +
-image::../media/trafford_cable_rail_2_maint-e2800.gif[trafford cable rail 2 maint e2800]
+image::../media/trafford_cable_rail_2_maint-e2800.gif[Anillo naranja para el riel horizontal y la cadena de cables para el cajón de la unidad]
 
 +
 *(1)* _anillo naranja en el riel guía horizontal_
@@ -312,7 +312,7 @@ CAUTION: *Posible pérdida de acceso a los datos* -- los campos magnéticos pued
 . Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga. No quite completamente el cajón de unidades de la bandeja de unidades.
 . Si ya se han creado y asignado volúmenes, use un marcador permanente para indicar la ubicación exacta de cada unidad. Por ejemplo, utilizando el siguiente dibujo como referencia, escriba el número de ranura adecuado en la parte superior de cada unidad.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cajón dwg trafford con hdd callouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Números de ranura de unidad]
 
 +
 
@@ -324,7 +324,7 @@ CAUTION: **Posible pérdida de acceso a datos** -- Asegúrese de registrar la ub
 .. Levante la manija de la unidad hasta la posición vertical.
 .. Utilice el asa para levantar la unidad del cajón de la unidad.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 instalar o quitar la unidad principal e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilice el asa de leva para levantar la transmisión del cajón]
 
 .. Coloque la unidad sobre una superficie plana y sin estática y lejos de los dispositivos magnéticos.
 
@@ -333,7 +333,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6
 +
 .. Coloque la palanca de liberación de plástico en cada lado del cajón de la unidad.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[92 pht de6600 palanca de liberación del cajón de la unidad maint e2800]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Suelte la palanca para extraer el cajón]
 
 +
 *(1)* _palanca de liberación del cajón de la unidad_
@@ -357,7 +357,7 @@ Instale un cajón de unidades nuevo para reemplazar el con errores.
 El conjunto del vaso con cierre de bloqueo es una función de seguridad que evita que pueda abrir más de un cajón de accionamiento a la vez.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[92 pht de6600 cierra el detalle del vaso maint e2800]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[Vaso de bloqueo y guía del cajón]
 
 +
 *(1)* _Lock-Out Tumbler_
@@ -419,7 +419,7 @@ CAUTION: *Riesgo de avería del equipo* -- Asegúrese de deslizar el conector en
 La figura muestra los rieles guía horizontal y vertical para el segundo cajón de unidades del compartimento.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[2860 dwg ambos carriles guía maint e2800]
+image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[Guías horizontales y verificadas]
 
 +
 *(1)* _Guía horizontal rail_
@@ -491,7 +491,7 @@ CAUTION: *Posible pérdida de acceso a datos* -- debe instalar cada unidad en su
 .. Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga. No quite completamente el cajón de unidades de la bandeja de unidades.
 .. Determine qué unidad se debe instalar en cada ranura mediante las notas que hizo al quitar las unidades.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cajón dwg trafford con hdd callouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Números de ranura de unidad]
 
 .. Levante la palanca de la unidad hasta la posición vertical.
 .. Alinee los dos botones levantados de cada lado de la unidad con las muescas del cajón.
@@ -499,14 +499,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cajón dw
 La figura muestra la vista del lado derecho de una unidad, donde se muestra la ubicación de los botones levantados.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c drive cru maint e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[El botón elevado del portador de unidades debe coincidir con el canal de la unidad en el cajón de unidades]
 
 +
 *(1)* botón levantado en el lado derecho de la unidad_
 
 .. Baje la unidad en línea recta hacia abajo, asegurándose de que la unidad está presionada completamente hacia abajo en el compartimiento y luego gire el asa de la unidad hacia abajo hasta que la unidad encaje en su lugar.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 instalar o quitar la unidad principal e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilice el asa para bajar la unidad al cajón]
 
 .. Repita estos pasos para instalar todas las unidades.
 

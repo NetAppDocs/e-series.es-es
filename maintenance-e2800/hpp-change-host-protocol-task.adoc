@@ -29,7 +29,7 @@ Utilice System Manager de SANtricity para determinar qué tipo de transceptores 
 . Escriba *SFP* en el cuadro de texto y haga clic en *Buscar*.
 . Para cada SFP incluido en el perfil de matriz de almacenamiento, busque la entrada para *velocidad de datos admitida*.
 +
-image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[sam1130 ss e2800 unified spf maint e2800]
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[Velocidad de datos admitida]
 
 . Consulte la tabla para determinar si puede reutilizar los SFP, como se muestra a continuación:
 +
@@ -94,7 +94,7 @@ Para obtener el paquete de funciones, se necesita el número de serie de la band
 .. Con la ficha *Recursos de soporte* seleccionada, desplácese a la sección *Ver propiedades* de la matriz de almacenamiento superior.
 .. Localice *número de serie del chasis* y copie este valor en un archivo de texto.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[sam1130 ss e2800 storage array profile sn smid copy maint e2800]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[Número de serie del chasis]
 
 
 
@@ -108,7 +108,7 @@ NOTE: “Submodelo” también puede ser escrito como “sub-modelo”.
 
 .. Busque el identificador de submodelo del paquete de funciones para la configuración de inicio.
 +
-image::../media/storage_array_profile2_maint-e2800.gif[profile2 maint e2800 de la cabina de almacenamiento]
+image::../media/storage_array_profile2_maint-e2800.gif[ID de submodelo de paquete de fuentes]
 
 
 
@@ -472,7 +472,7 @@ NOTE: Si el identificador de submodelo de la controladora no aparece, comuníque
 .. En *Cambiar paquete de funciones*, busque *Identificador de habilitación de funciones*.
 .. Copie y pegue este número de 32 dígitos en un archivo de texto.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[sam1130 ss e2800 change feature pack enable identifier copy maint e2800]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif['Identificador de habilitación de funciones']
 
 
 
@@ -515,7 +515,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 . Si la cabina de almacenamiento participa en una relación de mirroring, detenga todas las operaciones de I/o del host en la cabina de almacenamiento secundaria.
 . Espere a que se escriban en las unidades todos los datos de la memoria caché.
 +
-El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif["LED activo de caché en el controlador E2800"]
 
 +
 |===
@@ -542,7 +542,7 @@ Cambie el paquete de funciones para convertir el protocolo de host de los puerto
 . En SANtricity System Manager, seleccione MENU:Configuración[sistema].
 . En *Complementos*, seleccione *Cambiar paquete de funciones*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[sam1130 ss system change feature pack maint e2800]
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[Cambie el paquete de funciones]
 
 . Haga clic en *examinar* y, a continuación, seleccione el paquete de funciones que desee aplicar.
 . Tipo `CHANGE` en el campo.

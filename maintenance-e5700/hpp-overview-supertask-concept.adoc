@@ -22,7 +22,7 @@ NOTE: Solo los puertos de la base óptica de una controladora E5700 pueden conve
 
 En la siguiente figura, se muestra E5700 con sus puertos de host de placa base SFP+ (ópticos) *(1)* y los dos puertos HIC IB *(2)* opcionales.
 
-image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 con 2 puertos 100g edr infiniband con anotaciones]
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host y puertos HIC en la controladora E5700]
 
 
 

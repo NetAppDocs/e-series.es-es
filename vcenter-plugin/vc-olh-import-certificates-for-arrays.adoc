@@ -11,7 +11,7 @@ summary: Importar certificados para las cabinas de almacenamiento de modo que pu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

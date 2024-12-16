@@ -10,7 +10,7 @@ summary: 'La gestión de certificados permite crear solicitudes de firma de cert
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

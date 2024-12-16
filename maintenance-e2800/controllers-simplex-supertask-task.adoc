@@ -151,14 +151,14 @@ El LED verde de caché activa de la parte posterior de la controladora está enc
 NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controlador dwg 2800 atn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[E2800 LED de caché activa]
 
 +
 *(1)* _Cache Active LED_
 
 . Apriete el pestillo de la palanca de leva hasta que se suelte y, a continuación, abra la palanca de leva a la derecha para liberar el contenedor del controlador del plano medio.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retire el contenedor de la controladora simplex maint e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -191,7 +191,7 @@ Después de quitar el compartimento de controladoras de la bandeja de controlado
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 caché interna activa led maint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED de caché interna activa]
 
 +
 *(1)* _Internal Cache Active_
@@ -202,7 +202,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Localice el pestillo de liberación azul de la batería.
 . Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retire la batería principal e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Quite la batería del compartimento de controladoras]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -225,7 +225,7 @@ Si el contenedor de controladora incluye una tarjeta de interfaz del host (HIC),
 Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Quite la placa frontal del compartimento de controladoras]
 
 . Quite la placa frontal de HIC.
 . Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
@@ -235,7 +235,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 h
 CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Quite HIC de la tarjeta de la controladora]
 
 +
 *(1)* _Tarjeta de interfaz del host_
@@ -274,7 +274,7 @@ Debe insertar la brida metálica en la parte frontal de la batería en la ranura
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insertar la batería de matiint e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif['Vuelva a instalar la batería en el compartimento de controladora']
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -290,11 +290,11 @@ CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal d
 +
 ** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Corrija la brida metálica"]
 
 ** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Brida metálica incorrecta"]
 
 
 
@@ -318,7 +318,7 @@ Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de l
 CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 tornillos de mano hic. maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Vuelva a instalar HIC en la controladora]
 
 +
 *(1)* _Tarjeta de interfaz del host_
@@ -332,7 +332,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 . Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó del compartimento de controladoras original al nuevo compartimento de controladoras con cuatro tornillos.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic tornillos face2800 maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Vuelva a instalar la placa frontal en el controlador]
 
 
 
@@ -347,7 +347,7 @@ Después de instalar la batería y la HIC, si se instaló inicialmente uno, pued
 . Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
 . Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retire el contenedor de la controladora simplex maint e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Vuelva a instalar el contenedor de controladoras en la bandeja de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -426,7 +426,7 @@ Encienda la bandeja de controladoras, recoja datos de soporte y reanude operacio
 NOTE: La figura muestra un contenedor de controladora de ejemplo. La controladora puede tener un número diferente y otro tipo de puertos de host.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maint e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[E2800 LED de la controladora]
 
 +
 *(1)* _LED de atención (ámbar)_

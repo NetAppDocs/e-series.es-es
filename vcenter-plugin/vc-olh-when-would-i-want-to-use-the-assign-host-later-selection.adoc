@@ -10,7 +10,7 @@ summary: Si desea acelerar el proceso para crear volúmenes, puede omitir el pas
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

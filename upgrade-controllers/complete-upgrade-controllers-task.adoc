@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
 summary: Para completar la actualización de la controladora, encienda la bandeja de controladoras y valide la versión de software de la controladora. A continuación, se pueden recoger datos de soporte y reanudar las operaciones. 
 ---
 = Complete la actualización de la controladora
@@ -88,7 +88,7 @@ Primero debe desbloquear las unidades seguras mediante el procedimiento interno 
  a| 
 Todas las unidades seguras, gestión de claves externa, no se cambió temporalmente a gestión de claves interna para el procedimiento de reemplazo de la controladora
  a| 
-La controladora se puede intercambiar con la gestión de claves externas y todas las unidades se protegen
+Cambio de controladora con gestión de claves externas y todas las unidades protegidas. Consulte https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Gestión de claves externas"^] para obtener instrucciones detalladas.
 
 |===
 
@@ -102,10 +102,10 @@ Puede utilizar los LED y el software de administración del almacenamiento para 
 .Pasos
 . Observe los LED de la controladora A para asegurarse de que arranca correctamente.
 +
-Los LED de acción de servicio requerida de Host Link se vuelven verdes durante el reinicio. La pantalla de siete segmentos muestra la secuencia OS+ SD+ en blanco para indicar que el controlador está realizando el procesamiento de comienzo del día (SOD).
+Los LED de acción de servicio requerida de Host Link se vuelven verdes durante el reinicio.
 
 +
-Una vez que la controladora finaliza correctamente el reinicio, la pantalla de siete segmentos muestra el ID de soporte que coincide con la visualización de siete segmentos de la segunda controladora. De este modo, es posible detectar el compartimento de controladoras nuevo mediante el software de administración del almacenamiento.
+Una vez que la controladora completa correctamente el reinicio, es posible detectar el nuevo compartimento de controladora mediante el software de administración del almacenamiento.
 
 . Si alguno de los LED de acción de servicio requerida de la bandeja de la controladora-unidad es _on_, o si el LED de acción de servicio requerida de la controladora es _on_:
 +
@@ -124,12 +124,6 @@ Una vez que la controladora finaliza correctamente el reinicio, la pantalla de s
 Debe asegurarse de que las nuevas controladoras se ejecuten con el nivel de sistema operativo (firmware de la controladora) correcto y NVSRAM.
 
 .Pasos
-. Debe realizar una de las siguientes acciones:
-+
-** Si va a actualizar a controladoras que no son compatibles con SANtricity 11.30 y el firmware de la controladora 8.30, asegúrese de que la versión que se ejecuta en las nuevas controladoras coincida con la versión que se ejecutaba por última vez en las controladoras originales. Normalmente, esta será la versión más reciente que admitan las controladoras antiguas. Si es necesario, instale la versión adecuada en las nuevas controladoras.
-** Si va a actualizar a controladoras que ejecutan SANtricity 11.30 y el firmware de la controladora 8.30, descargue e instale la última NVSRAM después de encender las controladoras nuevas.
-
-
 . Si la actualización de la controladora implica un cambio de protocolo (por ejemplo, Fibre Channel a iSCSI) y hay hosts definidos para la cabina de almacenamiento, asocie los nuevos puertos de host con los hosts:
 +
 .. En System Manager, seleccione MENU:Storage[hosts].
@@ -156,7 +150,7 @@ Para obtener información acerca del hardware compatible, consulte https://mysup
 +
 Se muestra el cuadro de diálogo Cambiar configuración de caché. Todos los volúmenes en la cabina de almacenamiento aparecen en este cuadro de diálogo.
 
-.. Seleccione la ficha *básico* y cambie la configuración para el almacenamiento en caché de lectura y escritura.
+.. Seleccione la pestaña *Básico* y habilite la configuración para el almacenamiento en caché de lectura y el almacenamiento en caché de escritura.
 .. Haga clic en *Guardar*.
 
 
@@ -168,10 +162,9 @@ Se muestra el cuadro de diálogo Cambiar configuración de caché. Todos los vol
 
 . Recopile datos de soporte sobre la cabina de almacenamiento mediante la interfaz gráfica de usuario o la CLI:
 +
-** Use System Manager o Array Management Window de Storage Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
+** Use System Manager para recoger y guardar un bundle de soporte de la cabina de almacenamiento.
 +
 *** En System Manager, seleccione menu:Support[Centro de soporte > pestaña Diagnóstico]. A continuación, seleccione *recopilar datos de soporte* y haga clic en *recopilar*.
-*** En la barra de herramientas de Array Management Window, seleccione MENU:Monitor[Estado > recoger datos de soporte manualmente]. A continuación, introduzca un nombre y especifique una ubicación en el sistema donde se desea almacenar el paquete de soporte.
 +
 El archivo se guarda en la carpeta de descargas del explorador con el nombre `support-data.7z`.
 
@@ -205,4 +198,4 @@ NOTE: La recopilación de datos de soporte puede afectar temporalmente el rendim
 
 
 .El futuro
-Si la actualización de la controladora produce un cambio de ID de proveedor de LSI a NETAPP, vaya a. link:remount-volumes-lsi-task.html["Vuelva a montar volúmenes después de cambiar el proveedor de LSI a NETAPP"]; de lo contrario, la actualización de la controladora se completa y puede reanudar las operaciones normales.
+La actualización de la controladora está completa y es posible reanudar las operaciones normales.

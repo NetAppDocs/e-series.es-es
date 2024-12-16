@@ -27,14 +27,14 @@ Lea todas las instrucciones antes de continuar con los pasos a continuación.
 . Extraiga el contenido del hardware y, a continuación, realice el inventario del hardware contenido contra el recibo del embalaje.
 . Instale los rieles.
 +
-Si se incluyeron instrucciones con el hardware para montaje en rack, consulte ellas para obtener información detallada sobre cómo instalar los rieles. Para obtener instrucciones adicionales para el montaje en rack, consulte link:../rackmount-hardware.html["Hardware para montaje en rack"].
+Si se incluyeron instrucciones con el hardware para montaje en rack, consulte ellas para obtener información detallada sobre cómo instalar los rieles. Para obtener instrucciones adicionales sobre el montaje en bastidor, consulte link:../rackmount-hardware.html["Hardware para montaje en rack"^].
 
 +
 
 NOTE: Instale la tornillería desde la parte inferior del bastidor o armario hasta la parte superior para evitar que el equipo se caiga.
 
 +
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Instale los rieles"]
 
 . Instale la bandeja.
 +
@@ -43,7 +43,7 @@ CAUTION: Cuando se carga completamente con unidades, cada bandeja pesa aproximad
 
 +
 .. Empezando por la bandeja que desea en la parte inferior del armario, coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
-.. Apoye la estantería desde la parte inferior y deslícela en el armario.image:../media/4_person_lift_source.png[""]
+.. Apoye el estante desde la parte inferior, deslícelo en el armario. image:../media/4_person_lift_source.png["Se requieren cuatro personas para levantar el estante en el gabinete"]
 
 
 . Asegure la bandeja.
@@ -56,7 +56,7 @@ Asegure la bandeja al rack según lo indicado en el link:../rackmount-hardware.h
 
 
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Fije los soportes a la parte trasera de la bandeja"]
 
 . Instale el bisel o las tapas de cierre.
 +
@@ -69,4 +69,4 @@ image:../media/trafford_secure.png[""]
 
 
 
-image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Instale la placa frontal"]

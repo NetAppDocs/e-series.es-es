@@ -22,7 +22,7 @@ NOTE: Solo las HIC FC de 16 GB/10 GB iSCSI y los puertos base ópticos de una co
 
 La siguiente figura muestra la parte posterior de una controladora E2800 con dos puertos de host de placa base SFP+ (óptica) *(1)* y cuatro puertos HIC SFP+ (óptica) *(2)*.
 
-image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base óptica quad sfp hic]
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[Host y puertos HIC en una controladora E2800.]
 
 
 NOTE: También hay disponible una HIC de dos puertos.
@@ -275,7 +275,7 @@ Antes y después de la conversión, la duplicación se producirá en el puerto F
 Cuando aplique el paquete de funciones, el soporte de duplicación pasará del puerto de host de la placa base con el número más alto (con la etiqueta *1* en la figura) al puerto HIC con el número más alto (con la etiqueta *2* en la figura).
 
 +
-image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc a fc]
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[Puertos de una controladora E2800»]
 
 +
 |===

@@ -10,7 +10,7 @@ summary: Cambie el nombre de la cabina de almacenamiento que se muestra en la p√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

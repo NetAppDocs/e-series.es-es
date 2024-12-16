@@ -145,7 +145,7 @@ Como debe quitar la HIC del compartimento de controladoras con errores, debe qui
 
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
-image::../media/remove_controller_5.png[retire la controladora 5]
+image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
@@ -153,7 +153,7 @@ image::../media/remove_controller_5.png[retire la controladora 5]
 CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
 
 +
-image::../media/remove_controller_6.png[retire la controladora 6]
+image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso del controlador cuando retire]
 
 . Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
 
@@ -169,10 +169,10 @@ Quite la batería del compartimento de controladoras con errores para que pueda 
 . Localice la pestaña "Press" en el lateral del controlador.
 . Desenganche la batería presionando la lengüeta y apretando la carcasa de la batería.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png[Presione la pestaña para desbloquear la batería]
 
-. Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba y desconecte la batería de la placa.image:../media/batt_2.png[""]
-. Levante la batería del controlador y colóquela sobre una superficie plana y sin estática.image:../media/batt_4.png[""]
+. Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba, desconectando la batería de la placa.image:../media/batt_2.png["Retire el conector del alojamiento del cableado de la batería"]
+. Saque la batería del controlador y colóquela sobre una superficie plana y libre de estática.image:../media/batt_4.png["Levante la batería del controlador"]
 
 
 
@@ -184,7 +184,7 @@ Si el contenedor de controladoras incluye una HIC, es necesario quitar la HIC de
 .Pasos
 . Con un destornillador Phillips, quite los dos tornillos que conectan la placa frontal de la HIC al compartimento de la controladora.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Retire la placa frontal de la HIC]
 
 +
 
@@ -193,7 +193,7 @@ NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente
 . Quite la placa frontal de HIC.
 . Con los dedos o un destornillador Phillips, afloje el tornillo de ajuste manual único que fija la HIC a la tarjeta controladora.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Afloje los tornillos de mariposa de la HIC]
 
 +
 
@@ -205,7 +205,7 @@ NOTE: La HIC viene con tres ubicaciones de tornillo en la parte superior pero es
 CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Quite HIC de la tarjeta de la controladora]
 
 . Coloque la HIC en una superficie plana y sin estática.
 
@@ -225,12 +225,12 @@ Retire la fuente de alimentación para que pueda instalarla en la nueva controla
 
 . Localice la pestaña situada a la derecha de la fuente de alimentación y presiónela hacia la unidad de fuente de alimentación.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Pulse la pestaña situada junto a la fuente de alimentación]
 
 . Localice el mango en la parte frontal de la fuente de alimentación.
 . Utilice el asa para sacar la fuente de alimentación directamente del sistema.
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Deslice la fuente de alimentación hacia afuera]
 
 +
 
@@ -257,10 +257,10 @@ NOTE: Una muesca en la parte inferior del DIMM ayuda a alinear el DIMM durante l
 NOTE: Sujete con cuidado el módulo DIMM por los bordes para evitar la presión sobre los componentes de la placa de circuitos DIMM.
 
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Presione la lengüeta del expulsor hacia abajo en la ranura DIMM]
 
 +
-image::../media/dimim_3.png[dimi 3]
+image::../media/dimim_3.png[Retire la DIMM]
 
 
 
@@ -273,7 +273,7 @@ Extraiga los ventiladores para que pueda instalarlos en la nueva controladora.
 .Pasos
 . Levante suavemente el ventilador del controlador.
 +
-image::../media/fan_2.png[ventilador 2]
+image::../media/fan_2.png[Retire el ventilador]
 
 . Repita el proceso hasta que se hayan quitado todos los ventiladores.
 
@@ -301,7 +301,7 @@ Instale la batería en el compartimento de controladoras de reemplazo.
 
 . Inserte la batería en el controlador alineando la carcasa de la batería con los pestillos metálicos del lateral del controlador.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Instale la batería]
 
 +
 La batería hace clic en su sitio.
@@ -322,7 +322,7 @@ Si quitó una HIC del contenedor de controladora original, debe instalar esa HIC
 Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Instale el HIC]
 
 +
 
@@ -338,7 +338,7 @@ CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el 
 No utilice un destornillador, o bien podría apretar el tornillo en exceso.
 
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Apriete a mano los tornillos de mariposa HIC en la controladora]
 
 +
 
@@ -363,7 +363,7 @@ Las fuentes de alimentación están codificadas y sólo se pueden instalar de un
 CAUTION: No ejerza demasiada fuerza al deslizar la fuente de alimentación en el sistema, ya que puede dañar el conector.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Instale la fuente de alimentación en el controlador]
 
 
 
@@ -380,7 +380,7 @@ La muesca entre las patillas del DIMM debe alinearse con la lengüeta del zócal
 
 . Inserte el módulo DIMM directamente en la ranura.
 +
-image::../media/dimm_4.png[dimm 4]
+image::../media/dimm_4.png[Instale DIMM en la ranura de la controladora]
 
 +
 El módulo DIMM encaja firmemente en la ranura, pero debe entrar fácilmente. Si no es así, realinee el DIMM con la ranura y vuelva a insertarlo.
@@ -395,7 +395,7 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 NOTE: Los DIMM se ajustan firmemente. Es posible que tenga que presionar suavemente un lado a la vez y fijarlo con cada pestaña individualmente.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Presione los pestillos hacia arriba en la ranura DIMM para asegurarlos]
 
 
 
@@ -408,10 +408,10 @@ Instale los ventiladores en el compartimento de controladoras de reemplazo.
 .Pasos
 . Deslice el ventilador por completo en el controlador de recambio.
 +
-image::../media/fan_3.png[ventilador 3]
+image::../media/fan_3.png[Instale el ventilador en el controlador]
 
 +
-image::../media/fan_3_a.png[ventilador 3 a]
+image::../media/fan_3_a.png[Instale el ventilador en el controlador]
 
 . Repita el proceso hasta que todos los ventiladores estén instalados.
 
@@ -430,7 +430,7 @@ Por último, instale el compartimento de controladoras nuevo en la bandeja de co
 NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
 
 +
-image::../media/remove_controller_7.png[retire la controladora 7]
+image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 . Instale los SFP desde la controladora original en los puertos de host de la nueva controladora, si se instalaron en la controladora original y vuelva a conectar todos los cables.
 +

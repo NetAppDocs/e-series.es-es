@@ -127,7 +127,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 La siguiente figura muestra un ejemplo de una bandeja de controladoras E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -139,7 +139,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 En la siguiente figura, se muestra un ejemplo de bandeja de controladoras E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -172,7 +172,7 @@ Después de quitar el compartimento de controladoras de la bandeja de controlado
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 caché interna activa led maint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED de caché interna activa]
 
 +
 *(1)* _Internal Cache Active LED_
@@ -183,7 +183,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 . Localice el pestillo de liberación azul de la batería.
 . Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 retire la número de batería de e5700]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Retire la batería]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -221,7 +221,7 @@ Debe insertar la brida metálica en la parte frontal de la batería en la ranura
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 insertar la batería más en e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Instale la batería]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -237,11 +237,11 @@ CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal d
 +
 ** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Corrija la brida de la batería"]
 
 ** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Brida de batería incorrecta"]
 
 
 
@@ -258,7 +258,7 @@ Después de instalar la batería nueva, vuelva a instalar el compartimento de co
 . Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
 . Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Vuelva a instalar el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -267,7 +267,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _Cam handle_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Vuelva a instalar el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -300,7 +300,7 @@ Cuando se restablece la comunicación con otra controladora:
 +
 ** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *OL*, *_blank_* para indicar que el controlador está sin conexión.
 ** El LED de atención ámbar permanece encendido.
-** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Los LED Host Link pueden estar encendidos, parpadeando o apagados, según la interfaz del host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["E5700 LED de la controladora"]
 +
 *(1)* _Host Link LEDs_
 

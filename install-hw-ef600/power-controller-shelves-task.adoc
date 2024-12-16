@@ -27,7 +27,7 @@ Asegúrese de hacer lo siguiente:
 
 
  a| 
-image:../media/power_cable_inst-hw-ef600.png[""]
+image:../media/power_cable_inst-hw-ef600.png["Cables de alimentación"]
  a| 
 *Cables de alimentación*
 
@@ -37,7 +37,7 @@ image:../media/power_cable_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/cabling_power.png[""]
+image:../media/cabling_power.png["Cableado de alimentación EF600/EF300"]
 
 |===
 . Conecte los dos cables de alimentación, uno de cada controladora, a dos unidades de distribución de alimentación (PDU) separadas en el armario o rack.

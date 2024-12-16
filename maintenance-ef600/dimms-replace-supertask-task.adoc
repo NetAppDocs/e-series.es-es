@@ -111,7 +111,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 . Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
-image::../media/remove_controller_5.png[retire la controladora 5]
+image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
@@ -119,7 +119,7 @@ image::../media/remove_controller_5.png[retire la controladora 5]
 CAUTION: Utilice siempre dos manos para admitir el peso de un compartimento de controladoras.
 
 +
-image::../media/remove_controller_6.png[retire la controladora 6]
+image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso del controlador cuando retire]
 
 . Coloque el contenedor del controlador sobre una superficie plana y libre de estática.
 
@@ -144,10 +144,10 @@ NOTE: Una muesca en la parte inferior del DIMM ayuda a alinear el DIMM durante l
 
 . Empuje lentamente las dos lengüetas expulsoras del DIMM a ambos lados del módulo DIMM para expulsar el módulo DIMM de su ranura y, a continuación, deslícelo fuera de la ranura.
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Presione la lengüeta del expulsor hacia abajo en la ranura DIMM]
 
 +
-image::../media/dimim_3.png[dimi 3]
+image::../media/dimim_3.png[Retire la DIMM]
 
 +
 
@@ -183,7 +183,7 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 NOTE: Los DIMM se ajustan firmemente. Es posible que tenga que presionar suavemente un lado a la vez y fijarlo con cada pestaña individualmente.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Inserte DIMM en la ranura y fíjelos con pestañas]
 
 
 
@@ -201,7 +201,7 @@ Después de instalar los DIMM nuevos, vuelva a instalar el compartimento de cont
 NOTE: El controlador hace un clic audible cuando está instalado correctamente en el estante.
 
 +
-image::../media/remove_controller_7.png[retire la controladora 7]
+image::../media/remove_controller_7.png[Instale DIMM en la ranura de la controladora]
 
 . Vuelva a conectar todos los cables.
 

@@ -11,7 +11,7 @@ summary: Cambie la propiedad de la controladora preferida de un volumen, para qu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

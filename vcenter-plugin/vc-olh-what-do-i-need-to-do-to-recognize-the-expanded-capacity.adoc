@@ -10,7 +10,7 @@ summary: Si se aumenta la capacidad de un volumen, es posible que el host no rec
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

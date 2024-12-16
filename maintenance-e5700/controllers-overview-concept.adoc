@@ -41,7 +41,7 @@ NOTE: El LED de atención ámbar del controlador se apagará siempre que se prod
 ====
 
 
-image::../media/e5700_attention_led_callout.png[llamada del led de atención de e5700]
+image::../media/e5700_attention_led_callout.png[E5700 LED de alerta del controlador]
 
 *(1)* _LED de atención_
 

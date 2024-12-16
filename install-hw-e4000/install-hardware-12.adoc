@@ -1,0 +1,70 @@
+---
+permalink: install-hw-e4000/install-hardware-12.html 
+sidebar: sidebar 
+keywords:  
+summary: Aprenda a instalar un sistema de almacenamiento E4012, DE212C o DE224C en un rack de dos parantes o un armario del sistema de NetApp. 
+---
+= Instalación del hardware (E4012)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Descubra cómo instalar un sistema de almacenamiento E4012 o DE212C en un rack de dos parantes o un armario para sistemas NetApp.
+
+.Antes de empezar
+Asegúrese de hacer lo siguiente:
+
+* Registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
+* Prepare un área de trabajo plana y sin estática.
+* Obtenga una muñequera ESD y tome precauciones antiestáticas.
+
+
+.Pasos
+. Extraiga el contenido del hardware y, a continuación, realice el inventario del hardware contenido contra el recibo del embalaje.
+. Instale los rieles.
++
+Si se incluyeron instrucciones con el hardware para montaje en rack, consulte ellas para obtener información detallada sobre cómo instalar los rieles. Para obtener instrucciones adicionales para el montaje en rack, consulte link:../rackmount-hardware.html["Hardware para montaje en rack"].
+
++
+
+NOTE: Instale la tornillería desde la parte inferior del bastidor o armario hasta la parte superior para evitar que el equipo se caiga.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png["Instale los rieles"]
+
+. Instale la bandeja.
++
+
+CAUTION: Cuando está completamente cargada con unidades, cada bandeja pesa 65,25 lb (29,6 kg). Se necesitan dos personas o un elevador mecánico para mover el estante de forma segura.
+
++
+.. Empezando por la bandeja que desea en la parte inferior del armario, coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
+.. Apoye el estante desde la parte inferior, deslícelo en el armario. image:../media/4_person_lift_source.png["Ascensor para cuatro personas"]
+
+
+. Asegure la bandeja.
++
+Asegure la bandeja al rack según lo indicado en el link:../rackmount-hardware.html["Hardware para montaje en rack"].
+
++
+.. Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados para fijarlo a la parte frontal del armario.
+.. Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte para fijar la parte posterior del armario.
+
+
++
+image:../media/trafford_secure.png["Fije la bandeja al rack"]
+
+. Instale el bisel o las tapas de cierre.
++
+.. Coloque el bisel frontal en la parte delantera de la bandeja del controlador de forma que los orificios de cada extremo se alineen con los cierres de la bandeja del controlador.
+.. Encaje la cubierta protectora en su lugar.
+.. Si tiene estantes de accionamiento opcionales, coloque la tapa del extremo izquierdo delante de la bandeja de accionamiento de manera que los orificios de la tapa del extremo se alineen con los cierres del lado izquierdo de la bandeja.
+.. Encaje la tapa del extremo en su sitio.
+.. Repita los pasos anteriores para la tapa del extremo derecho.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Instale la placa frontal"]

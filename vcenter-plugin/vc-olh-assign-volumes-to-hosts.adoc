@@ -11,7 +11,7 @@ summary: Se debe asignar un volumen a un host o un clúster de hosts para poder 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

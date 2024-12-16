@@ -10,7 +10,7 @@ summary: Las unidades SSD tendrán una mayor vida útil y mejor rendimiento de e
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

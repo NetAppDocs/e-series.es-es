@@ -1,19 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.73 
+keywords: whats new, new features, SANtricity 11.90 
 summary: Nuevas funciones del sistema operativo SANtricity. 
 ---
 = Novedades en SANtricity OS
 :allow-uri-read: 
 :experimental: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
-En la siguiente tabla, se describen las nuevas funciones del sistema operativo SANtricity 11,8 para la gestión integrada de las controladoras EF300, EF600, E2800/EF280 y E5700/EF570.
+En la siguiente tabla se describen las nuevas funciones de las versiones más recientes del sistema operativo SANtricity para la gestión integrada de las controladoras E4000, EF300, EF600, E2800/EF280 y E5700/EF570.
 
+
+
+== Nuevas funciones en la versión 11,90
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Nuevo modelo del sistema de almacenamiento: E4000
+ a| 
+Esta versión presenta el sistema de almacenamiento de bajo coste E4000. El E4000 admite unidades 12 y 60 y una tarjeta de interfaz del host única (HIC) por controladora. Para la versión inicial, las tarjetas de interfaz del host admitidas incluyen iSCSI y Fibre Channel. Los sistemas de almacenamiento E4000 y otros sistemas de almacenamiento E-Series se pueden ver y gestionar en Unified Manager.
+
+
+
+ a| 
+Mayor capacidad con pools de discos dinámicos
+ a| 
+La capacidad de los pools de discos dinámicos (DDP) se aumentó a 12 PB cada vez que la capacidad de cada una de las unidades individuales del pool es superior a 23 TB. Si el tamaño de la capacidad de la unidad individual es inferior a 23 TB, la capacidad de DDP es de 6 PB.
+
+
+
+ a| 
+Se aumentó la configuración de análisis de medios predeterminada
+ a| 
+La tasa de análisis de medios predeterminada se aumentó a 120 días.
+
+
+
+ a| 
+Ahora se acepta la clave privada para la gestión de claves externa
+ a| 
+El archivo de solicitud de firma de certificación (CSR) generado externamente mediante parejas de claves públicas y privadas ahora puede importarse mediante System Manager.
+
+
+
+ a| 
+La función de bloqueo de inicio de sesión ahora está disponible para los servicios web
+ a| 
+Se puede configurar solo mediante la API de REST, ahora hay una nueva opción de bloqueo de inicio de sesión disponible para los servicios web integrados y proxy.
+
+|===
 
 
 == Nuevas características en la versión 11.80.1R1

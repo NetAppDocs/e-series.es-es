@@ -13,7 +13,7 @@ summary: Utilice esta hoja de trabajo para registrar la información de configur
 [role="lead"]
 Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de datos para registrar la información de configuración del almacenamiento SRP over InfiniBand. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
 
-image::../media/port_identifiers_ib_srp.gif[identificadores de puerto ib srp]
+image::../media/port_identifiers_ib_srp.gif[Identificadores de puerto SRB over IB]
 
 
 

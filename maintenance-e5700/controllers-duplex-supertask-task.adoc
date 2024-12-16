@@ -51,7 +51,7 @@ NOTE: Las controladoras de repuesto incluyen 16 GB de memoria preinstalada. Si e
 
 . Localice las etiquetas de dirección MAC y número de pieza de FRU en la parte posterior del compartimento de controladoras.
 +
-image::../media/e5700_mac_address_and_fru_part_number.png[dirección mac y número de pieza de la unidad reemplazable del sector de e5700]
+image::../media/e5700_mac_address_and_fru_part_number.png[DIRECCIÓN MAC y número de referencia FRU en la controladora E5700]
 
 +
 *(1)* _Dirección MAC:_ la dirección MAC del puerto de administración 1 ("'P1'"). Si utilizó DHCP para obtener la dirección IP de la controladora original, necesita esta dirección para conectarse a la nueva controladora.
@@ -65,7 +65,7 @@ Cuando una controladora tiene un error y se debe sustituir, el número de pieza 
 
 +
 .. Seleccione *hardware*.
-.. Localice la bandeja de controladoras, que se Marca con el icono de la controladora image:../media/sam1130_ss_hardware_controller_icon_maint-e5700.gif[""].
+.. Localice la bandeja de controladoras, que se marca con el icono de controladora image:../media/sam1130_ss_hardware_controller_icon_maint-e5700.gif["Icono de controlador"].
 .. Haga clic en el icono de la controladora.
 .. Seleccione el controlador y haga clic en *Siguiente*.
 .. En la pestaña *base*, anote el *número de pieza de repuesto* del controlador.
@@ -165,7 +165,7 @@ Como debe quitar la HIC del compartimento de controladoras con errores, debe qui
 La siguiente figura muestra un ejemplo de una bandeja de controladoras E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -177,7 +177,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 En la siguiente figura, se muestra un ejemplo de bandeja de controladoras E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Quite el contenedor de la controladora]
 
 +
 *(1)* _Controller canister_
@@ -210,7 +210,7 @@ Extraiga la batería para poder instalar la nueva controladora.
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 caché interna activa led maint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED de caché interna activa]
 
 +
 *(1)* _Internal Cache Active LED_
@@ -221,7 +221,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 . Localice el pestillo de liberación azul de la batería.
 . Para quitar el pestillo de liberación de la batería, empuje el pestillo de liberación hacia abajo y hacia fuera del compartimento de la controladora.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 retire la número de batería de e5700]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Retire la batería]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -244,7 +244,7 @@ Si el contenedor de controladora incluye una tarjeta de interfaz del host (HIC),
 Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic tornillos face2800 maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Retire la placa frontal del controlador]
 
 . Quite la placa frontal de HIC.
 . Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
@@ -254,7 +254,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 h
 NOTE: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 tornillos digitales hic. mint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Retire la HIC de la tarjeta de la controladora]
 
 +
 *(1)* _Tarjeta de interfaz del host (HIC)_
@@ -284,7 +284,7 @@ Debe insertar la brida metálica en la parte frontal de la batería en la ranura
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 insertar la batería más en e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Vuelva a instalar la batería]
 
 +
 *(1)* _pestillo de liberación de la batería_
@@ -300,11 +300,11 @@ CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal d
 +
 ** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Corrija la brida metálica"]
 
 ** *Incorrecto* -- la brida metálica de la batería no está insertada en la ranura del controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Brida metálica incorrecta"]
 
 
 
@@ -328,7 +328,7 @@ Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de l
 CAUTION: *Posible daño en el equipo* -- tenga mucho cuidado de no pellizcar el conector de la cinta de oro para los LED del controlador entre la HIC y los tornillos de mariposa.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 tornillos digitales hic. mint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif['Volver a instalar HIC en la tarjeta del controlador]
 
 +
 *(1)* _Tarjeta de interfaz del host (HIC)_
@@ -342,7 +342,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 . Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó del compartimento de controladoras original al nuevo compartimento de controladoras con cuatro tornillos.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic tornillos face2800 maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Vuelva a instalar la placa frontal]
 
 
 
@@ -357,7 +357,7 @@ Después de instalar la batería y la tarjeta de interfaz del host (HIC), si se 
 . Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
 . Con el asa de leva en la posición abierta, deslice completamente el contenedor del controlador en la bandeja del controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retire la mant. del contenedor de la controladora e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Instale el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -366,7 +366,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _Cam handle_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 añada la mant del contenedor de controladora e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Instale el compartimento de controladoras]
 
 +
 *(1)* _Controller canister_
@@ -400,7 +400,7 @@ Cuando se restablece la comunicación con otra controladora:
 +
 ** La pantalla de siete segmentos muestra la secuencia de repetición *OS*, *OL*, *_blank_* para indicar que el controlador está sin conexión.
 ** El LED de atención ámbar permanece encendido.
-** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Los LED Host Link pueden estar encendidos, parpadeando o apagados, según la interfaz del host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["Indicadores LED de la controladora E5700"]
 +
 *(1)* _Host Link LEDs_
 
