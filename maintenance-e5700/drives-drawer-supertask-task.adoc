@@ -76,14 +76,14 @@ donde:
 ** `array_password` es la contraseña de la cabina de almacenamiento. Se debe escribir el valor de array_password entre comillas dobles ("").
 ** `[trayID]` es el identificador de la bandeja de unidades que contiene el cajón de unidades que se desea reemplazar. Los valores de ID de bandeja de unidades abarcan de 0 a 99. Debe escribir el valor entre sí `trayID` entre corchetes.
 ** `[drawerID]` es el identificador del cajón de la unidad que se desea reemplazar. Los valores de ID de cajón abarcan de 1 (cajón superior) a 5 (cajón inferior). Debe escribir el valor entre sí `drawerID` entre corchetes. Este comando garantiza quitar el cajón más alto de la bandeja de unidades 10:
-
-
 +
 [listing]
 ----
 SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
+
+
 . Determine si necesita detener la actividad de I/o del host, de la siguiente manera:
 +
 ** Si el comando se realiza correctamente, no es necesario detener la actividad de I/o del host. Todas las unidades del cajón están en pools o grupos de volúmenes con protección contra pérdida de cajón. Vaya a. <<Paso 2: Quitar las cadenas para cables>>.

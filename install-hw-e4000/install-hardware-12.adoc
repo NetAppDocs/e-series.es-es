@@ -51,10 +51,10 @@ Asegure la bandeja al rack según lo indicado en el link:../rackmount-hardware.h
 +
 .. Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados para fijarlo a la parte frontal del armario.
 .. Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte para fijar la parte posterior del armario.
-
-
 +
 image:../media/trafford_secure.png["Fije la bandeja al rack"]
+
+
 
 . Instale el bisel o las tapas de cierre.
 +

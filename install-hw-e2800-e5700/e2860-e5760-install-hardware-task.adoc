@@ -48,10 +48,10 @@ CAUTION: Un estante vacío pesa aproximadamente 60 kg (132 lb). Se requiere un e
 +
 .. Si se levanta el estante a mano, fije las cuatro asas de elevación. Empuje cada asa hasta que encaje en su sitio.
 .. Apoye la estantería desde la parte inferior y deslícela en el armario. Si se utilizan las asas de elevación, retírelas de una serie a la vez que las bandejas se deslizan en el armario. Para quitar las asas, tire hacia atrás del pestillo de liberación, empuje hacia abajo y tire hacia fuera de la bandeja.
-
-
 +
 image:../media/4_person_lift_source.png["Se requieren cuatro personas para levantar el estante en el gabinete"]
+
+
 
 . Asegure la bandeja.
 +

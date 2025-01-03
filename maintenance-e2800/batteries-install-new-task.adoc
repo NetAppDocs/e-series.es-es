@@ -51,12 +51,9 @@ CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal d
 
 +
 ** *Correcto* -- la brida metálica de la batería está completamente insertada en la ranura del controlador:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Inserte correctamente la brida de la batería"]
 
-+
 ** *Incorrecto* -- La brida metálica de la batería no se inserta en la ranura del controlador: + image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Inserción incorrecta de la brida de la batería"]
 
 

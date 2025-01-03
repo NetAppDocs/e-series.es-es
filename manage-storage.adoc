@@ -15,15 +15,15 @@ Use los siguientes enlaces para acceder a documentación que describe cómo conf
 
 
 
-== Ayuda en línea para System Manager 11.7
+== Ayuda en línea para System Manager
 
-Acceda a https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda en línea de SANtricity System Manager 11.7"^], donde puede encontrar información acerca de cómo planificar, configurar, administrar y solucionar problemas en la matriz de almacenamiento.
+Acceda a la https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["La ayuda en línea de SANtricity System Manager"^], donde se proporciona información sobre la forma de planificar, configurar, gestionar y solucionar problemas en la cabina de almacenamiento.
 
 
 
-== Ayuda en línea para Unified Manager 5
+== Ayuda en línea para Unified Manager
 
-Acceda a https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Ayuda en línea de SANtricity Unified Manager 5"^], donde puede aprender a ejecutar comandos de administración de almacenamiento en varias matrices de almacenamiento en red.
+Acceda a https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Ayuda en línea de Unified Manager de SANtricity"^], donde puede aprender a ejecutar comandos de gestión de almacenamiento en varias cabinas de almacenamiento de red.
 
 
 

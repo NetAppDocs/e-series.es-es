@@ -21,7 +21,7 @@ Consulte los siguientes enlaces para acceder a informes técnicos relacionados c
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Descripción general de las funciones de las matrices E2800*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Visión general de las cabinas E5700++*"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Descripción general de las funciones de las cabinas EF300++*"] 
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Descripción general de las funciones de las matrices E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Visión general de las cabinas E5700++*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Descripción general de las funciones de las cabinas EF300++*"^] 
 
 
 | Describe las funciones de hardware y software de la cabina híbrida E2800 y las funciones más recientes del sistema operativo SANtricity. | Describe la información del producto E5700, incluidas las nuevas funciones de hardware y software, incluidas la versión más reciente de SANtricity. | Describe las funciones de hardware y software de la cabina all-flash EF300 y las nuevas funciones del SO SANtricity. 
@@ -33,7 +33,7 @@ Consulte los siguientes enlaces para acceder a informes técnicos relacionados c
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Descripción general de las funciones de las cabinas E4000*"^] |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"^] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Descripción general de las funciones de las cabinas E4000*"^] |  
 
 
 | Describe las funciones de hardware y software de la cabina all-flash EF600 y las nuevas funciones de SO SANtricity. | Describe las funciones de hardware y software de la cabina híbrida E4000 y las funciones más recientes del sistema operativo SANtricity. |  
