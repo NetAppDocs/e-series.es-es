@@ -186,7 +186,10 @@ Asegúrese de tener lo siguiente:
 CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
 
 . Si los puertos de host en el contenedor de controladora utilizan transceptores SFP+, déjelo instalados.
-. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
+. Confirmar que los LED de caché activa de la parte posterior de la controladora y la placa frontal de la controladora están apagados.
++
+Si alguno de los LED está encendido, el controlador todavía está utilizando la energía de la batería. Todos los LED deben estar apagados antes de continuar con este procedimiento.
+
 . Apriete el pestillo del asa de leva hasta que se suelte, abra el asa de leva por completo para liberar el compartimento de controladoras del plano medio y luego, con dos manos, tire del compartimento de controladoras hasta la mitad del chasis.
 
 
