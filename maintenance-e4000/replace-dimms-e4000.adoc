@@ -176,6 +176,7 @@ Deje los cables en el dispositivo de administración de cables de manera que cua
 
 . Quite y aparte los dispositivos de gestión de cables de los lados izquierdo y derecho del compartimento de controladoras.
 . Apriete el pestillo de la manija de leva hasta que se suelte, abra por completo la manija de leva para liberar el compartimento de controladoras del plano medio y luego, con dos manos, saque el compartimento de controladoras del chasis.
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Voltee el compartimento de controladoras y colóquelo en una superficie plana y estable.
 . Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
 +

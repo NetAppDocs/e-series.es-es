@@ -108,11 +108,11 @@ Quite el compartimento de controladoras con errores para poder sustituir los DIM
 
 CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pellizque los cables.
 
-. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Apriete las asas de cada lado de la controladora y tire hacia atrás hasta que se suelte de la bandeja.
 +
 image::../media/remove_controller_5.png[Apriete las asas para extraer el controlador]
 
+. Confirme que el LED Cache Active de la parte posterior de la controladora está apagado.
 . Con dos manos y las asas, deslice el compartimento de controladoras para sacarlo de la bandeja. Cuando la parte frontal del controlador esté libre del gabinete, utilice dos manos para extraerlo por completo.
 +
 
