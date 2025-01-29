@@ -9466,4 +9466,7 @@
   <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Si alguno de los LED está encendido, el controlador todavía está utilizando la energía de la batería. Todos los LED deben estar apagados antes de continuar con este procedimiento.</block>
   <block id="5509a7e2ae2dbdec2ed18ae433b4cec6" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Complete la configuración del sistema de almacenamiento</block>
   <block id="492fcae0b90e6f4d11439a1f70e422cf" category="admonition">Si utiliza los dedos para aflojar el tornillo de mariposa, es posible que tenga que presionar la lengüeta de liberación de la batería y girar la batería hacia arriba para un mejor acceso.</block>
+  <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nuevas características en la versión 11.80.1R3</block>
+  <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.</block>
+  <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nuevas características en la versión 11.80.1R2</block>
 </blocks>

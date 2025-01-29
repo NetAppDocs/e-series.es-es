@@ -59,6 +59,18 @@ Se puede configurar solo mediante la API de REST, ahora hay una nueva opción de
 |===
 
 
+== Nuevas características en la versión 11.80.1R3
+
+Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.
+
+
+
+== Nuevas características en la versión 11.80.1R2
+
+Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.
+
+
+
 == Nuevas características en la versión 11.80.1R1
 
 [cols="35h,~"]
