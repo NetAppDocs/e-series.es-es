@@ -54,7 +54,7 @@ image::../media/60_cabling.png[Una bandeja de controladoras y bandejas de 60 uni
 
 == Cableado EF300 y EF600
 
-La siguiente información se aplica al cableado de una bandeja de controladoras EF300 o EF600 a una bandeja de unidades DE212C, DE224C o DE460.
+La siguiente información se aplica al cableado de una bandeja de controladoras EF300, EF600, EF300C o EF600C a una bandeja de unidades DE212C, DE224C o DE460.
 
 .Antes de empezar
 Antes de cablear un EF300 o EF600, asegúrese de que el firmware se actualiza a la versión más reciente. Para actualizar el firmware, siga las instrucciones de link:../upgrade-santricity/index.html["Actualizar el sistema operativo SANtricity"^].

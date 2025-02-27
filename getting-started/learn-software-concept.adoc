@@ -94,7 +94,7 @@ Ver datos de diagnóstico, gestionar actualizaciones y configurar AutoSupport, q
 
 == Unified Manager de SANtricity
 
-Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E4000, E2800, EF280, EF300, E5700, EF570 y EF600. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.
+Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C y EF600C. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.
 
 Unified Manager se encuentra instalado en un servidor de gestión junto con el proxy de servicios web. Para acceder a Unified Manager, se abre un explorador e introduce la URL que indica el servidor donde está instalado el proxy de servicios web.
 

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-change-supertask-task.html 
 sidebar: sidebar 
-keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Cambie el protocolo del puerto de host para una cabina EF300 o EF600. 
 ---
 = Cambiar el protocolo del host para un EF300 o EF600
@@ -12,7 +12,7 @@ summary: Cambie el protocolo del puerto de host para una cabina EF300 o EF600.
 
 
 [role="lead"]
-Siga este procedimiento para cambiar el protocolo de puerto de host en una cabina EF300 o EF600. Este procedimiento se aplica únicamente a tarjetas de interfaz del host (HIC) mediante InfiniBand (IB) o Fibre Channel (FC).
+Siga este procedimiento para cambiar el protocolo de puerto de host en una cabina EF300, EF600, EF300C o EF600C. Este procedimiento se aplica únicamente a tarjetas de interfaz del host (HIC) mediante InfiniBand (IB) o Fibre Channel (FC).
 
 
 

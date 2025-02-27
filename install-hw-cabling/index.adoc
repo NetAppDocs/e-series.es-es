@@ -28,7 +28,7 @@ La información de cableado se aplica a los siguientes modelos de hardware.
 
 
  a| 
-EF300, EF600
+EF300 DE FEBRERO DE EF600, EF300C EF600C
  a| 
 DE212C, DE224C Y DE460
 

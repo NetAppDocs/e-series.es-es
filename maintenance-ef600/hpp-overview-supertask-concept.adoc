@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: convert EF300 host protocol, convert EF600 host protocol, 
+keywords: convert host protocol, EF600, EF300, EF600C, EF300C 
 summary: Revise los requisitos y consideraciones antes de convertir el protocolo de host de EF300 o EF600. 
 ---
 = Requisitos para la conversión del protocolo de host de EF300 o EF600
@@ -11,7 +11,7 @@ summary: Revise los requisitos y consideraciones antes de convertir el protocolo
 
 
 [role="lead"]
-Antes de convertir el protocolo de host para una cabina EF300 o EF600, revise los siguientes requisitos.
+Antes de convertir el protocolo de host para una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.
 
 * Ha programado una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
 * Debe detener las operaciones de I/o del host cuando se realiza la conversión. No podrá acceder a los datos en la cabina de almacenamiento hasta después de completar correctamente la conversión.

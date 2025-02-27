@@ -12,7 +12,7 @@ summary: 'Reemplace una tarjeta de interfaz del host (HIC) EF300 o EF600 con fal
 
 
 [role="lead"]
-Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) con fallos en una cabina EF300 o EF600.
+Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) con errores en una cabina EF300, EF600, EF300C o EF600C.
 
 .Acerca de esta tarea
 Cuando reemplace una HIC con errores, debe apagar la cabina de almacenamiento, reemplazar la HIC y volver a aplicar la alimentación.

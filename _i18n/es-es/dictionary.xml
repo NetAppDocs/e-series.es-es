@@ -5011,7 +5011,6 @@
   <block id="aafac493f2e35b6f1c326279401ced51" category="paragraph">Puede cablear la bandeja de controladoras a una o varias bandejas de 60 unidades.</block>
   <block id="9829150d11210fb5e6fc62e793db934e" category="section-title">Una bandeja de controladoras y bandejas de 60 unidades</block>
   <block id="add241dc5ececee27088b6736250072e" category="section-title">Cableado EF300 y EF600</block>
-  <block id="aa7f7f642f0f31272aec24455af2999f" category="paragraph">La siguiente información se aplica al cableado de una bandeja de controladoras EF300 o EF600 a una bandeja de unidades DE212C, DE224C o DE460.</block>
   <block id="e20bd51b5e818feb7ae7162ff2a5040b" category="paragraph">Antes de cablear un EF300 o EF600, asegúrese de que el firmware se actualiza a la versión más reciente. Para actualizar el firmware, siga las instrucciones de <block ref="2834c74834ca1d1cb0e165f8c6e2c750" category="inline-link-macro-rx"></block>.</block>
   <block id="646da5b8c293dda8c2cd73d4034cef46" category="summary">El cableado de las bandejas E-Series requiere varios componentes.</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="doc">Requisitos</block>
@@ -5031,7 +5030,6 @@
   <block id="1458d41ed1532a66aec83e0f005887a5" category="paragraph">La información de cableado se aplica a los siguientes modelos de hardware.</block>
   <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">*Bandeja del controlador*</block>
   <block id="0980e5858005022a7297657f3c4b364f" category="cell">*Bandeja de unidades*</block>
-  <block id="f212760efdd1ee6ecc6a822f380627cd" category="paragraph">EF300, EF600</block>
   <block id="a49b136089a95385ac24b13d585982b3" category="paragraph">DE212C, DE224C Y DE460</block>
   <block id="e2601a92435cce9fb17f276fae4332e9" category="paragraph">DE212C Y DE224C</block>
   <block id="56d5920f093315d1b4acca4634ea813e" category="paragraph">DE460C</block>
@@ -5114,9 +5112,6 @@
   <block id="3aa8db601a262e6c7ce55106cbfb88cf" category="paragraph">Se utiliza en el proxy de servicios web para indicar que no se puede acceder al sistema de almacenamiento solicitado en ese momento. Por lo tanto, Web Services no puede satisfacer la solicitud.</block>
   <block id="858d9ef3cff533a963578b1a8a8d4a62" category="paragraph">429 demasiadas solicitudes</block>
   <block id="036fbcb66eb52eb94ad85dbcb48f8fce" category="paragraph">Indica que se ha superado el límite de solicitudes y que se debe volver a intentar más tarde.</block>
-  <block id="fc53c036602508ed6c2afc18e2fbdf51" category="section-title">Scripts de ejemplo</block>
-  <block id="2fd0d86a248b2472ae69f3f3c21669c9" category="inline-link">Ejemplos de WebServices de NetApp</block>
-  <block id="c44a76942b050cc49aec1fa7f5570bec" category="paragraph">GitHub contiene un repositorio de la colección y la organización de scripts de muestra que ilustra el uso de la API de servicios web de SANtricity de NetApp. Para acceder al repositorio, consulte<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="d089d7360171df47a61294d7dd6b9558" category="summary">Es posible configurar AutoSupport (ASUP), que recoge datos y luego envía automáticamente esos datos al soporte técnico para la solución de problemas y el análisis de problemas remotos.</block>
   <block id="b7e05aa841a4bdf0b23f6affffb12e93" category="doc">Gestione AutoSupport mediante Web Services Proxy</block>
   <block id="3ba5dce919f7c1fe288f34fd84ac765d" category="section-title">Información general de AutoSupport (ASUP)</block>
@@ -5614,7 +5609,6 @@
   <block id="cc4bf58dba772738539b000ef7815fde" category="list-text"><block ref="a5854a34a0c5ab2777626906b175ead4" category="inline-link-macro-rx"></block>.</block>
   <block id="edb3c50e1624e1c64455cc9c6b567531" category="inline-link">Sitio de documentación del software SANtricity</block>
   <block id="7e90e7aafc41dd2ae860ea7d075f0a24" category="list-text">Unified Manager: La instalación del proxy incluye Unified Manager de SANtricity, una interfaz web que proporciona acceso de configuración a los nuevos sistemas de almacenamiento E-Series y EF-Series. Para obtener más información, consulte la ayuda en línea de Unified Manager, que está disponible en su interfaz de usuario o en<block ref="173d089ddf996dbd066dc04ffeb10dca" category="inline-link-rx"></block>.</block>
-  <block id="6dcc47dbb36dc1602e64f7f0d0883dc8" category="list-text">Repositorio de GitHub: GitHub contiene un repositorio de la colección y organización de scripts de muestra que ilustra el uso de la API de servicios web de SANtricity de NetApp. Para acceder al repositorio, consulte<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="32eac081ab8132e42611dc0066282fe9" category="list-text">Transferencia de estado representacional (REST): Servicios web es una API RESTful que proporciona acceso a prácticamente todas las funcionalidades de gestión de SANtricity, por lo que debería estar familiarizado con los conceptos DE REST. Para obtener más información, consulte<block ref="f6676be33ff47b799bb2e0366943e72b" category="inline-link-rx"></block>.</block>
   <block id="e26cd645db0153fb417155d12d6936cc" category="list-text">Notación de objetos JavaScript (JSON) -- debido a que los datos dentro de los servicios web están codificados a través de JSON, debe estar familiarizado con los conceptos de programación JSON. Para obtener más información, consulte<block ref="4d69e99d61c7a555a660d740c47af7e5" category="inline-link-rx"></block>.</block>
   <block id="b4d9762119f27bd1dcd758640742c56a" category="summary">Es posible modificar la configuración del proxy de servicios web para cumplir con los requisitos operativos y de rendimiento únicos del entorno.</block>
@@ -5701,7 +5695,6 @@
   <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Suministros de alimentación</block>
   <block id="fc94ac1d2bdfb27ac4210c2680f2d5fe" category="summary">Revise los requisitos y consideraciones antes de convertir el protocolo de host de EF300 o EF600.</block>
   <block id="c901677705b5230445795815d2367528" category="doc">Requisitos para la conversión del protocolo de host de EF300 o EF600</block>
-  <block id="9d528dc333e33dbe25bda7c346243c3b" category="paragraph">Antes de convertir el protocolo de host para una cabina EF300 o EF600, revise los siguientes requisitos.</block>
   <block id="12b88a904502434a63f50fce060243e4" category="list-text">Ha programado una ventana de mantenimiento de tiempo de inactividad para este procedimiento.</block>
   <block id="03e368a22e511c58d3a3dad40e86377f" category="list-text">Debe detener las operaciones de I/o del host cuando se realiza la conversión. No podrá acceder a los datos en la cabina de almacenamiento hasta después de completar correctamente la conversión.</block>
   <block id="75e7f67348e4a26031725587e6fbd19c" category="list-text">Se está utilizando gestión fuera de banda. (No puede utilizar la administración en banda para completar este procedimiento.)</block>
@@ -5712,12 +5705,10 @@
   <block id="4604f841b0b16d3013cac1e2078e5b1b" category="doc">Ventiladores</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Revise los requisitos y consideraciones antes de sustituir los ventiladores EF300 o EF600.</block>
   <block id="ccccec3135cfde6cfdbeb41f2c09065e" category="doc">Requisitos para la sustitución de ventiladores de EF300 o EF600</block>
-  <block id="81e19282d1e4ebf8f62639f9c89c358d" category="paragraph">Antes de sustituir un ventilador con fallo en una cabina EF300 o EF600, revise los siguientes requisitos.</block>
   <block id="1f0e561212d6f8a00a46e7e96276d4cc" category="list-text">Tiene un ventilador de sustitución que es compatible con su bandeja de controladoras o modelo de bandeja de unidades.</block>
   <block id="f0df890160164bf2b2f1dc2577fa1273" category="admonition">Si Recovery Guru indica que no está correcto quitar el ventilador, póngase en contacto con el soporte técnico.</block>
   <block id="fd293cf77acfdd97249a46e8f0f881ef" category="summary">Sustituya una unidad en una cabina EF600.</block>
   <block id="c2d869aaa5bfd00a5deb58e0c2033910" category="doc">Sustituya la unidad en una cabina EF600</block>
-  <block id="248c1549e6f83551c44f661321efdd2d" category="paragraph">Es posible sustituir una unidad en una cabina EF600.</block>
   <block id="04038f6a7d65b1376ed1393539f5bee8" category="inline-link-macro">Requisitos para la sustitución de unidades EF300 o EF600</block>
   <block id="090c16503867f8c38598a1963600e1f8" category="list-text">Revisar <block ref="a3053473be5cf3d84a95cd722c986422" category="inline-link-macro-rx"></block>.</block>
   <block id="dae7eb6a1bbe1d05dc0d753ea30b3327" category="list-text">Una superficie de trabajo plana y sin estática.</block>
@@ -5729,8 +5720,6 @@
   <block id="35f7bce5970c1e898bd1906cd36d2cb4" category="paragraph">Instale una unidad nueva para reemplazar la que presenta errores. Debe instalar la unidad Lo antes posible. de reemplazo después de quitar la unidad con error.</block>
   <block id="1eca441f881a292b05722ddcd5c7605a" category="summary">Sustituya una unidad en una matriz EF300.</block>
   <block id="1b311fbfc664dabdc89169b6d43903d6" category="doc">Sustituya la unidad en una matriz EF300</block>
-  <block id="59958ca616aba014e914263121b83c15" category="paragraph">Puede reemplazar una unidad en una matriz EF300.</block>
-  <block id="61bc4bd99c5e65055b2b91cdea8b08ea" category="paragraph">El EF300 admite la expansión SAS con bandejas de 24 y 60 unidades. El procedimiento que siga depende de si tiene una bandeja de 24 o 60 unidades:</block>
   <block id="2ca85a3dda1d5669703da1eb7e07b7c2" category="list-text"><block ref="9a51b9a38de70279b358d3c9ff153239" category="inline-xref-macro-rx"></block></block>
   <block id="8073ddd7ebb4e905ea4015f335f42663" category="list-text"><block ref="f8c16ddb5f1fc7bc0310ed900e3efbe6" category="inline-xref-macro-rx"></block></block>
   <block id="d8e732631daed1812191326c689a203e" category="section-title">Sustitución de unidad en una bandeja EF300 (24 unidades)</block>
@@ -5755,7 +5744,6 @@
   <block id="e00394e86e0897378bd874e271fcd82c" category="doc">Tarjetas de expansión SAS</block>
   <block id="3445e7362b27e4ba74cabda5b497847f" category="summary">Revise los requisitos y consideraciones antes de sustituir una tarjeta EF 300 o EF600 HIC.</block>
   <block id="1c86ab1787822f5d802a7e5fe80c780f" category="doc">Requisitos para las actualizaciones de EF 300 o EF600 HIC</block>
-  <block id="bce135c4d36e87cac4fa46df29044acd" category="paragraph">Antes de actualizar o sustituir una tarjeta de interfaz de host (HIC) en una cabina EF300 o EF600, revise los siguientes requisitos.</block>
   <block id="7ff977d3382830f3eff92120544b15ab" category="list-text">Ha programado una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente. Como ambas controladoras deben tener la misma configuración de HIC cuando se conectan, la alimentación debe estar apagada al cambiar la configuración de HIC. La presencia de HIC no coincidentes hace que la controladora con la HIC de reemplazo se bloquee cuando lo conecta.</block>
   <block id="1a268c928a90e5edb6e5a5d9cd175266" category="inline-xref-macro">Cambiar el protocolo del host para un EF300 o EF600</block>
   <block id="d2ab7f2f0a5b33496f422f7f99f93b07" category="list-text">Algunos reemplazos o actualizaciones de HIC pueden requerir la conversión de protocolo de puerto de host. Siga las instrucciones de <block ref="efdbcf8658d5853e5683d8aef1bb4491" category="inline-xref-macro-rx"></block> para este requisito.</block>
@@ -5764,7 +5752,6 @@
   <block id="8684e4791c6325ef4823a50280210f99" category="doc">Actualizar tarjeta de interfaz de host (HIC) EF300 o EF600</block>
   <block id="bc039edb7d55e1907c81473c3517e560" category="paragraph">Es posible actualizar las tarjetas de interfaz del host (HIC) para aumentar la cantidad de puertos de host o cambiar los protocolos de host.</block>
   <block id="bb0ded29eb0a4b47fbd60d4574760d4d" category="list-text">Al actualizar HIC, debe apagar la cabina de almacenamiento, actualizar las HIC y volver a aplicar alimentación.</block>
-  <block id="a7b18eda0422ef0dfb82b129d03ac773" category="list-text">Al actualizar las HIC en una controladora EF300 o EF600, repita todos los pasos para quitar la segunda controladora, actualice las HIC de la segunda controladora y vuelva a instalar la segunda controladora antes de volver a aplicar alimentación a la bandeja de controladoras.</block>
   <block id="b41453ef0eae35f2df2004c1773786fb" category="list-text">Revisar <block ref="23b7aefccff24bae71374f469da3fa9d" category="inline-link-macro-rx"></block>.</block>
   <block id="a02dc1b9d7142c3522def499f6dfc937" category="list-text">Programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No es posible acceder a los datos en la cabina de almacenamiento hasta que este procedimiento se complete correctamente. Como ambas controladoras deben tener la misma configuración de HIC cuando se conectan, la alimentación debe estar apagada al instalar HIC.</block>
   <block id="3cd14da862e2beaeca26bd8ada919919" category="list-text">Dos HIC que son compatibles con sus controladoras.</block>
@@ -5813,7 +5800,6 @@
   <block id="f15676779c0881e1d4a27ae74206fdc4" category="list-text">Si no hay Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.</block>
   <block id="0c72a6417d4140802a553e2534452e92" category="summary">Sustituya un ventilador en un sistema EF300 o EF600.</block>
   <block id="08975a768d5ba6909e25278ac5469941" category="doc">Sustituya un ventilador EF300 o EF600</block>
-  <block id="b7ad64ed9554dc2f60ac2823757adebd" category="paragraph">Es posible sustituir un ventilador de una cabina EF300 o EF600.</block>
   <block id="0d72942e30e9c18f566da0461c8288db" category="paragraph">Cada bandeja de controladoras EF300 y EF600 o bandeja de unidades incluye cinco ventiladores. Si se produce un error en un ventilador, debe reemplazarlo Lo antes posible. para garantizar que la bandeja tenga la refrigeración adecuada.</block>
   <block id="35ad30a0d0cb54f752269652fd523cf3" category="list-text">Un ventilador de repuesto.</block>
   <block id="3561aed7d51ffd3f85bdf2b7412b2568" category="paragraph">Coloque el compartimento de controladoras en estado sin conexión para que pueda sustituir el ventilador con errores de forma segura.</block>
@@ -5835,7 +5821,6 @@
   <block id="2f61253e0a7cff41599e7256b9331fb4" category="list-text">Seleccione *colocar en línea* en la lista desplegable.</block>
   <block id="d6475123c80be4addf74127c7fdabcec" category="paragraph">Se ha completado el reemplazo del ventilador. Es posible reanudar las operaciones normales.</block>
   <block id="73e73c660285cf0012c92dc423418372" category="summary">Cambie el protocolo del puerto de host para una cabina EF300 o EF600.</block>
-  <block id="3143078d1b5def855687d8b871a96006" category="paragraph">Siga este procedimiento para cambiar el protocolo de puerto de host en una cabina EF300 o EF600. Este procedimiento se aplica únicamente a tarjetas de interfaz del host (HIC) mediante InfiniBand (IB) o Fibre Channel (FC).</block>
   <block id="4ad13ed0f8c6dc3b675c1012c53f09d8" category="section-title">Paso 1: Obtenga la clave del paquete de funciones</block>
   <block id="95e811ea8d7fc10ecb21e53428c11d23" category="paragraph">Para obtener la clave de paquete de funciones, se necesita el número de serie de la bandeja de controladoras, un código de activación de la función y el identificador de habilitación de la función para la cabina de almacenamiento.</block>
   <block id="5428f81758f3c18e0ddcb44c431243af" category="list-text">En el Administrador del sistema de SANtricity, seleccione *Soporte*.</block>
@@ -5925,7 +5910,6 @@
   <block id="7083b5ec901975e74c8e7b0adaaa01af" category="list-text">Escriba *CHANGE* en el campo.</block>
   <block id="e9e795fffc66424c5fceeda72cc6702b" category="summary">Sustituya una sola controladora en una bandeja de controladoras EF300 o EF600.</block>
   <block id="317ae44d33c81077bc69598e4bf59e9f" category="doc">Sustituya las controladoras EF300 o EF600</block>
-  <block id="2188af472c4062f3129d65412671fd19" category="paragraph">Puede sustituir una sola controladora en la bandeja de controladoras EF300 o EF600.</block>
   <block id="1b6ca6cd4db8e59c76840995016904f5" category="paragraph">Cuando se reemplaza un contenedor de controladoras con errores, es necesario quitar la batería, el suministro de alimentación, los DIMM, los ventiladores y la tarjeta de interfaz del host (HIC) del compartimento de controladoras original y, a continuación, instalarlas en el compartimento de controladoras de reemplazo.</block>
   <block id="3d1512805f23039d65a3a0867cf2b647" category="inline-link-macro">Requisitos para la sustitución de la controladora EF300 o EF600</block>
   <block id="5e28583a8af8a4bc782f82438b0b0a20" category="list-text">Revisar <block ref="e99335e3a347f599f32fcd88a9e4a4a4" category="inline-link-macro-rx"></block>.</block>
@@ -6005,7 +5989,6 @@
   <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">Puede convertir el protocolo de un host a otro protocolo para que sea compatible y convertir el protocolo de las conexiones host en un protocolo diferente para que se ajuste a las necesidades de su infraestructura.</block>
   <block id="8af1af6830937a72d5cd88e0d6c25265" category="summary">Añada una tarjeta de ampliación SAS a las controladoras EF300 para permitir la ampliación de la bandeja de unidades.</block>
   <block id="cf505540e6b324232d096ecbbeb36457" category="doc">Añada una tarjeta de ampliación SAS a EF300 y EF600</block>
-  <block id="a06914d93f698c6a8bb3f09a21efd671" category="paragraph">Es posible añadir una tarjeta de expansión SAS a una controladora EF300 o EF600 para permitir la ampliación del soporte de unidades.</block>
   <block id="76b6d67ba2d43b0e0d5354712cf5475c" category="paragraph">Cuando añada una tarjeta de expansión SAS, debe apagar la cabina de almacenamiento, instalar la nueva tarjeta de expansión SAS y volver a aplicar la alimentación.</block>
   <block id="b18049a57fbb2ec5fd47fae049bd965b" category="inline-link-macro">Requisitos para la sustitución de tarjetas de expansión SAS EF300 y EF600</block>
   <block id="8cce61d9b8e3a90145210a9516fd4eb4" category="list-text">Revisar <block ref="171e03e043e11d80ccbb4c5420424ae5" category="inline-link-macro-rx"></block>.</block>
@@ -6034,7 +6017,6 @@
   <block id="4ec1b0ed9e4f78833f020b2b7ed423ce" category="doc">DIMM</block>
   <block id="4649f22302dc58915bd0c297f379d683" category="summary">Sustituya un DIMM en una cabina EF300 o EF600.</block>
   <block id="fc66672be674c1a0d3c77416bba78aaf" category="doc">Sustituya los módulos DIMM en EF300 o EF600</block>
-  <block id="3b00e6dae1c985bb3451ba742a69d556" category="paragraph">Es posible sustituir un DIMM en una cabina EF300 o EF600.</block>
   <block id="e8bc418a1334db89f56000cf271db6e1" category="paragraph">Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, colocar la controladora en estado sin conexión, quitar la controladora, quitar los DIMM e instalar los nuevos DIMM en la controladora. Luego puede volver a conectar la controladora y verificar que la cabina de almacenamiento funcione correctamente.</block>
   <block id="4732b406385a15d1aed763a9717a6553" category="inline-link-macro">Requisitos para sustituir un DIMM EF300 o EF600</block>
   <block id="41be7544de3e0a025756e0b0464afdc9" category="list-text">Revisar <block ref="13c2dbe2bfcf1cade167bfec3b040713" category="inline-link-macro-rx"></block>.</block>
@@ -6066,20 +6048,17 @@
   <block id="74adca4d72e5e007d2c87aa7750faf32" category="paragraph">Se ha completado el reemplazo de DIMM. Es posible reanudar las operaciones normales.</block>
   <block id="571b1ead863e404cb63de04e9e14c21d" category="summary">Requisitos y consideraciones para el reemplazo de la batería EF300 o EF600.</block>
   <block id="9edad8491a8585b842f4ac6201b8d622" category="doc">Requisitos para la sustitución de la batería de EF300 o EF600</block>
-  <block id="33f5fc7c0c7f3df402c75b558ca4f2b8" category="paragraph">Antes de sustituir una batería EF300 o EF600, revise los requisitos y consideraciones.</block>
   <block id="0e11944ef8baa0cd23d9027846dfb479" category="paragraph">Se incluye una batería con una controladora y conserva los datos almacenados en caché si falla la alimentación de CA.</block>
   <block id="e71146224fd64a6c76e83e431678c8ba" category="paragraph">A continuación, se ofrece una descripción general de los pasos para sustituir una batería en las controladoras EF300 o EF600:</block>
   <block id="9cfc11d4ef06463002ddc3a0df54fee8" category="list-text">Desconectar la controladora.</block>
   <block id="d8fdffd0fad371d1972462ffa48981cd" category="paragraph">Si planea sustituir una batería, debe tener:</block>
   <block id="2e2090d7bf10ea829ed979fce6127fca" category="summary">Revise los requisitos y consideraciones antes de sustituir una fuente de alimentación EF300 o EF600.</block>
   <block id="b4bdfc68a2be9043c46c8629fec0e8fe" category="doc">Requisitos para la sustitución de la fuente de alimentación EF300 o EF600</block>
-  <block id="d2f1edd900d2d5c61c52c428e56d8c4b" category="paragraph">Antes de sustituir un suministro de alimentación en una cabina EF300 o EF600, revise los siguientes requisitos.</block>
   <block id="92a8e5a68dee2a2df8de1337cfd37b9c" category="list-text">Debe contar con un suministro de alimentación de sustitución que sea compatible con la bandeja de controladoras o el modelo de bandeja de unidades.</block>
   <block id="f2c505979298b93cfd8e71dc78ddd1b0" category="admonition">No mezcle las PSU de diferentes tipos de tensión. Sustituya siempre como por ejemplo.</block>
   <block id="041df313fbdbf7db4e8d5e9c87ebdf66" category="list-text">Debe tener una muñequera ESD o ha tomado otras precauciones antiestáticas.</block>
   <block id="cf161815430bebc8ee6771d30a156397" category="summary">Sustituya una batería en una cabina EF300 o EF600.</block>
   <block id="39ada1b1281d103dd18b2f68149694a0" category="doc">Sustituya la batería EF300 o EF600</block>
-  <block id="e00dafa45847ab907f34044e9b23920f" category="paragraph">Puede sustituir una batería en un sistema de almacenamiento EF300 o EF600.</block>
   <block id="2571fd5711bd2998477e5873a52d475c" category="list-text">Revise la <block ref="ed1f9654fc9810726f2ffd62a386295a" category="inline-link-macro-rx"></block>.</block>
   <block id="d77975dd32d53783f37a0e7ba5c662bd" category="list-text">Una muñequera ESD u otras precauciones antiestáticas.</block>
   <block id="5fe93120de4e7963e6486732f3e58e9c" category="paragraph">Realice backup de los datos y coloque a la controladora afectada en estado sin conexión.</block>
@@ -6098,7 +6077,6 @@
   <block id="3aea2395eb1945801b3ad83556c9d15a" category="list-text">Haga clic en MENU:Soporte[Centro de actualización] para asegurarse de que la versión más reciente de SANtricity OS esté instalada.</block>
   <block id="8530051dab9b284655e9ee0a33594d15" category="summary">Sustituya las fuentes de alimentación cuando fallen en la controladora EF300 o EF600.</block>
   <block id="da0fe5b0a30a5d2ccf0e0f907ffc5a0a" category="doc">Sustituya una fuente de alimentación EF300 o EF600</block>
-  <block id="bf0f0f2eda9ccf4d28bab16ee4feba30" category="paragraph">Puede sustituir una fuente de alimentación si falla en la controladora EF300 o EF600.</block>
   <block id="539a53ce95a48163a8ce44101d02382c" category="paragraph">Si falla un suministro de alimentación, debe reemplazarlo Lo antes posible. para que la bandeja de controladoras tenga una fuente de alimentación redundante.</block>
   <block id="e90d7aeee831e4a2cfd7fbc26b8159ad" category="list-text">Compruebe que el LED de atención ámbar de la fuente de alimentación está encendido, lo que indica que la fuente de alimentación o el ventilador integrado tienen un fallo.</block>
   <block id="002a36010db095bc8f2c5bf6720a3b88" category="list-text">Un suministro de alimentación de reemplazo que se admite para la bandeja de controladoras.</block>
@@ -6108,7 +6086,6 @@
   <block id="b15fcbb0e2b660f1f1850816bf57f89b" category="list-text">Confirme que su estado es óptimo y compruebe los LED de atención de la bandeja de controladoras.</block>
   <block id="f6dc5868c20eb29c31ee714e66081346" category="list-text">En Administrador del sistema de SANtricity, haga clic en menú:Soporte[Centro de actualización] para asegurarse de que esté instalada la versión más reciente del sistema operativo SANtricity.</block>
   <block id="4a3c8c03cdcb016f4690174be36a72be" category="summary">Revise los requisitos y consideraciones antes de sustituir una tarjeta de expansión EF300 SAS.</block>
-  <block id="9f5dcc5008bfb9c123def7609109a915" category="paragraph">Si planea añadir una tarjeta de expansión SAS a un EF300 o EF600, revise los siguientes requisitos.</block>
   <block id="c5e4de94858244e1042696464bdaa282" category="inline-link-macro">Instalar y configurar sistemas de almacenamiento EF300 y EF600</block>
   <block id="3d52e0419c7f8a010e6fc5f98c25da0f" category="list-text">Debe seguir el <block ref="333b8feab226020b2ee6e03f5e462ace" category="inline-link-macro-rx"></block> para configurar la controladora.</block>
   <block id="ae1aaca96a065fbfcfe3174c8cf8c2dd" category="list-text">Debe actualizar el firmware a la versión más reciente. Para actualizar el firmware, siga las instrucciones de <block ref="bf6a098eae1df274d91ef498db89d4bb" category="inline-link-macro-rx"></block>.</block>
@@ -6116,7 +6093,6 @@
   <block id="e4005cc04ad30971023ff0ce6398ae8e" category="list-text">Las controladoras EF300 pueden tener una tarjeta de expansión SAS instalada en el puerto 1 para permitir la ampliación de la bandeja de unidades.</block>
   <block id="08c0021d60441f8c3dd78eeb49362807" category="summary">Mantener el hardware de EF300 y EF600</block>
   <block id="3b22a7c15f94b211436d1caea39710ca" category="doc">Mantenimiento de hardware EF300 y EF600</block>
-  <block id="042bdb0acc6382a72eab016fef01741f" category="paragraph">Para los sistemas de almacenamiento EF300 y EF600, puede realizar los procedimientos de mantenimiento de los siguientes componentes.</block>
   <block id="a6173100761f25e711157a7e4aa07d21" category="paragraph">Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones de System Manager de SANtricity.</block>
   <block id="a371cfb6b719fc75b3bfb1eb906d8ada" category="paragraph">Debe sustituir un DIMM (módulo de memoria en línea dual) cuando haya una falta de coincidencia en la memoria o tenga un DIMM fallido.</block>
   <block id="77bfec755a5e57d7ef372575d496401b" category="paragraph">Una unidad es un dispositivo que proporciona medios de almacenamiento físico para datos.</block>
@@ -6124,7 +6100,6 @@
   <block id="620e2edf2db0c3c3cad57aeb246c6bfe" category="section-title">Fuentes de alimentación</block>
   <block id="0473e45a7d7f9557ae9f5ca07ab2315a" category="summary">Reemplace una tarjeta de interfaz del host (HIC) EF300 o EF600 con fallos.</block>
   <block id="821d24c9ba446ee4c7b02961af65c2df" category="doc">Reemplace la tarjeta de interfaz del host (HIC) con fallos en EF300 o EF600</block>
-  <block id="1d26fe6e02d3739f6d0eb3a75694ed4e" category="paragraph">Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) con fallos en una cabina EF300 o EF600.</block>
   <block id="862acd5892fdfacc876441454483bc88" category="paragraph">Cuando reemplace una HIC con errores, debe apagar la cabina de almacenamiento, reemplazar la HIC y volver a aplicar la alimentación.</block>
   <block id="a3910b9f5e509531bb5260b4c20c05a2" category="list-text">HIC que son compatibles con sus controladoras.</block>
   <block id="641da5252bd37830e3c9e814b73958c5" category="section-title">Paso 1: Coloque la controladora en estado sin conexión</block>
@@ -6149,12 +6124,10 @@
   <block id="2cd2251585c7977d833c133e2d86f6ab" category="list-text"><block ref="2cd2251585c7977d833c133e2d86f6ab" category="inline-link-macro-rx"></block></block>
   <block id="df2839c02c12ce7fb5ee89d23d2cc262" category="paragraph">La configuración específica puede variar. Compruebe la<block ref="ae69c67e09c854d61b64be1ef166878d" category="inline-link-rx"></block> para obtener instrucciones específicas y ajustes adicionales recomendados para su solución.</block>
   <block id="5e1f9a9f3fe7461846141cef4f73476d" category="summary">Requisitos y consideraciones para la sustitución de la controladora EF300 o EF600</block>
-  <block id="c50f07ebaae0c1c05f1a49284f9e77c9" category="paragraph">Antes de sustituir una controladora EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.</block>
   <block id="bfb064f41224e7af37470eb32a8ab384" category="section-title">Requisitos de sustitución de controladoras</block>
   <block id="c983c5653c1e6540544cc1b919b655a9" category="section-title">Sustitución mientras está encendido</block>
   <block id="208dc6eb3d237f863dd634effc5f6751" category="paragraph">Es posible sustituir un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, si se cumplen las siguientes condiciones:</block>
   <block id="9fc2bc5f7d7e9f2a3f0e92f0c5b35a3a" category="summary">Revise los requisitos y consideraciones antes de sustituir unidades en EF300 o EF600.</block>
-  <block id="02551e5490f3f4380082de0056ba7479" category="paragraph">Antes de sustituir una unidad en una cabina EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.</block>
   <block id="b7f04984f163dce73778dbbca2a8c990" category="admonition">Tenga en cuenta que las unidades de la cabina de almacenamiento son frágiles; la gestión inadecuada de unidades es una causa principal de fallo de unidad.</block>
   <block id="c4a87fb79210c9a2631561ef1487b358" category="section-title">Requisitos de sustitución de unidades</block>
   <block id="968b9a541474437880dfcc7916e416e4" category="list-text">Abra la bolsa ESD a mano o corte la parte superior con unas tijeras. No inserte una herramienta o cuchilla metálicas en la bolsa ESD.</block>
@@ -6166,8 +6139,6 @@
   <block id="038d1aa9b29ca0e8ff6cb31c36fea4fb" category="paragraph">La siguiente figura muestra cómo escalonar las unidades entre las dos mitades.</block>
   <block id="9ec28cb381dd9edd5e1a4ad5641fba96" category="summary">Debe instalarse una tarjeta de interfaz del host \(HIC\) en un contenedor de controladora. La controladora EF600 incluye puertos de host en la HIC opcional. Los puertos de host que están incorporados en HIC se denominan puertos de HIC.</block>
   <block id="b1a61a0b6874805bc03293f8b7b15c87" category="summary">Revise los requisitos y consideraciones antes de sustituir los DIMM de EF300 o EF600.</block>
-  <block id="b41535bd642ffdba4076bba7b4364713" category="paragraph">Antes de sustituir un DIMM en una cabina de almacenamiento EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.</block>
-  <block id="e63ed0f2769c54f901255268d095c0e5" category="paragraph">Debe sustituir un DIMM cuando haya un error de coincidencia en la memoria o si tiene un DIMM fallido. Asegúrese de verificar la configuración de las controladoras EF300 o EF600 para asegurarse de reemplazar el tamaño de DIMM correcto.</block>
   <block id="8a9e4c00db6a24a4fb43dc345c83d072" category="admonition">Tenga en cuenta que los DIMM de la cabina de almacenamiento son frágiles; un manejo incorrecto puede ocasionar daños.</block>
   <block id="3a53668c4902beecdd7f5dafc89b8449" category="paragraph">Siga estas reglas para evitar dañar los DIMM de la cabina de almacenamiento:</block>
   <block id="7ef5d75a53c621bc3a647dc5bf5fa954" category="list-text">Mantenga el DIMM en la bolsa ESD hasta que esté listo para instalarlo.</block>
@@ -7256,7 +7227,6 @@
   <block id="33d6fe66d2b404f7c25080e8098edd9c" category="list-text">Unidades de 3.5 y 2.5 pulgadas (NL-SAS, SAS y SSD)</block>
   <block id="3fcdd0c9c8fbc91f7bb9df81e95c618f" category="paragraph">*NE224:*</block>
   <block id="73fe55efcdaa2ad95e010a4bac9165df" category="list-text">Unidades SSD NVMe de 2.5"</block>
-  <block id="ee42e406b098eeee6019f729810f7302" category="list-text">Controladoras EF300 y EF600</block>
   <block id="ba09ee47d11962c1ccd13d7e1f10e6c5" category="summary">Versiones anteriores de la documentación</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="doc">Versiones anteriores</block>
   <block id="8616fc8e60c2615a2af5c34293f128b4" category="paragraph">Visite los siguientes enlaces para acceder a la documentación de versiones anteriores del hardware E-Series y del software SANtricity. Los vínculos lo llevan a otro sitio de documentación.</block>
@@ -7580,7 +7550,6 @@
   <block id="3dd30548fc50aa7cfb82ce1d68c7c342" category="inline-link-macro">Mantenimiento de hardware de EF600</block>
   <block id="4966f1118cf315109cd0bde55b35c2c2" category="paragraph">Si está cableando el EF300 para la expansión SAS, consulte <block ref="e1bbeb059c02a804db29dd1e8449b843" category="inline-link-macro-rx"></block> Para la instalación de la tarjeta de expansión SAS y el <block ref="a48890f0b8f43b924432692645604270" category="inline-link-macro-rx"></block> Para cableado de ampliación SAS.</block>
   <block id="0a5007e0321faf4985d50a7bb7ba0e2e" category="summary">Para instalar un EF300 o EF600, cree una cuenta y registre su hardware.</block>
-  <block id="d63189d25566dd6ce02071e79b58fa61" category="paragraph">Descubra cómo preparar la instalación de su sistema de almacenamiento de las series EF300 o EF600.</block>
   <block id="d835a4a9669f275077940ef187446bc5" category="paragraph">Si está realizando el cableado del EF300 para la expansión SAS, revise la siguiente información:</block>
   <block id="ae4728ced8957babaccab930d6730f18" category="inline-link-macro">Añada tarjetas de expansión SAS</block>
   <block id="ed340a74210414952184f18bdea46abb" category="list-text"><block ref="59592944f1499a5ed0c513d73204b10a" category="inline-link-macro-rx"></block> Para la instalación de la tarjeta de expansión SAS.</block>
@@ -7592,7 +7561,6 @@
   <block id="4f932971601de202f386b0d927af3527" category="paragraph">Cables de alimentación (si se solicitan)</block>
   <block id="900e4c394955e0720a8b42172aa18c8f" category="admonition">El uso de armarios de terceros puede provocar que los cables de alimentación restrinjan el acceso a la controladora.</block>
   <block id="602581c7f4fef4e0ffc7c312b3efa341" category="summary">Instale el EF300 o EF600 en un rack de dos parantes o un armario del sistema de NetApp.</block>
-  <block id="d751bcfe66df83ffc12435f4dd821d73" category="paragraph">Puede instalar un sistema de almacenamiento EF300 o EF600 en un rack de dos parantes o en un armario del sistema de NetApp.</block>
   <block id="9ad20405ed7442681aff80b87cb2dba2" category="list-text">Desembale el hardware.</block>
   <block id="ddaca6e351d1a3c9ab3d82db4c028ff5" category="list-text">Extraiga el contenido e haga un inventario del hardware incluido contra el recibo del embalaje.</block>
   <block id="c1d9815f031db025e85f80c9eb6b6bf1" category="list-text">Antes de continuar, lea todas las instrucciones.</block>
@@ -7752,7 +7720,6 @@
   <block id="2773cb6f26fa9eec34b39f8d5f8cbbe0" category="list-text"><block ref="2773cb6f26fa9eec34b39f8d5f8cbbe0" category="inline-link-macro-rx"></block></block>
   <block id="d1a3b3306889b878e71ae42b7b83d579" category="inline-link-macro">Fibre Channel</block>
   <block id="60cb650fd20fd4d3b19ab89ad3569e5e" category="list-text"><block ref="60cb650fd20fd4d3b19ab89ad3569e5e" category="inline-link-macro-rx"></block></block>
-  <block id="5ec68760b690fe27d275d8ef065433df" category="list-text"><block ref="3efd8448d2410829795078709782a7da" category="inline-link-rx"></block> -- describe cómo configurar el almacenamiento virtual y físico para permanecer dentro de los máximos permitidos que ESX/ESXi admite.</block>
   <block id="094bf2c199fb9ef7ac29e64a12fd7cad" category="inline-link">Requisitos y limitaciones del almacenamiento NVMe de VMware</block>
   <block id="8f853bc18ffad192705726f50eff4144" category="list-text"><block ref="6e8a1449bb92590a7f42c1a30534b1da" category="inline-link-rx"></block>.</block>
   <block id="9779d294487414d92ca919d114654e00" category="list-text"><block ref="29363e1f838b703a5f0d926c5c21352a" category="inline-link-rx"></block> -- proporciona documentación de ESXi vCenter Server.</block>
@@ -8483,7 +8450,6 @@
   <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Para obtener información sobre el cableado para admitir las funciones de duplicación, consulte la<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
   <block id="3885d6d9f5a5030ec46ec3ce038af96c" category="inline-link">Base de conocimientos de NetApp</block>
   <block id="780fe86b24958c45b0b8792fad1e9b3c" category="admonition">Si necesita información sobre cómo reemplazar una bandeja de expansión E-Series DE460c, consulte<block ref="b46c4d97d6f1694e2cd029493cdb5475" category="inline-link-rx"></block> el .</block>
-  <block id="2db2ab880afe48bd41e6405e510d18a3" category="paragraph">Este procedimiento se aplica a la adición en caliente de una bandeja de unidades DE212C, DE224C o DE460C a una bandeja de controladoras E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 o E4000.</block>
   <block id="cefb29f3645d6d69acdc85d8770aa08a" category="inline-xref">Paso 2: Instale la bandeja de unidades y aplique energía.</block>
   <block id="346a8c796c407b91a19c527df6110dbf" category="list-text">Si tiene IOM conectados al hardware, lleve a cabo los siguientes pasos. De lo contrario, vaya a. <block ref="ced5ba5343128d91ca8bbc4aaf5b23cf" category="inline-xref-macro-rx"></block></block>
   <block id="88c9d5369051df6e8e46d78e3d1f7a01" category="image-alt">Icono de IOM (ESM)</block>
@@ -8528,7 +8494,6 @@
   <block id="2163e0da7fb01e2bb8b011e0bbb5bb9a" category="paragraph">Consulte los siguientes enlaces para acceder a informes técnicos relacionados con el hardware E-Series y el software SANtricity. Los vínculos lo llevan a otro sitio de documentación.</block>
   <block id="231fee8476ab72cb095e76bba043405b" category="inline-link-macro">Serie E4000 con bandeja de 12 o 60 unidades</block>
   <block id="e7898b0cd5dffab6be90aba697d20fbc" category="list-text"><block ref="e7898b0cd5dffab6be90aba697d20fbc" category="inline-link-macro-rx"></block></block>
-  <block id="b1a34a1559f9d1375a007a5b84964084" category="list-text">* Tipos de controladores * - todos los modelos E4000, E2800, EF280, EF300, E5700, EF570 y EF600.</block>
   <block id="ac04abe31dcd141500e5d9732b2ac56b" category="list-text">Serie E4000: Híbrido de gama básica</block>
   <block id="d8b8562346c10d2efbbb129845379264" category="list-text">Tamaños de rack</block>
   <block id="1c2bd945de8ed1b6e853b76b3def6a6d" category="image-alt">E2800 2U</block>
@@ -8538,7 +8503,6 @@
   <block id="db1f17f8825c1b566a696300d91ea1b0" category="paragraph"><block ref="db1f17f8825c1b566a696300d91ea1b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa3181e7a7fa68b8f072afb1fee51cc" category="inline-image-macro">EF300 2U</block>
   <block id="ca3611d1131613ffa7a890d7f6e42416" category="paragraph"><block ref="ca3611d1131613ffa7a890d7f6e42416" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5f324d184d0af564d12941f12dcae69f" category="list-text">Unidades y HIC</block>
   <block id="9f3c652bfc849caad5b2686a7b942865" category="image-alt">E5700 2U</block>
   <block id="87d79e15bbf55dbb02286cca22f13ff0" category="image-alt">E5700 4U</block>
   <block id="3a0386059e2d44c807d709da53f78d9a" category="inline-image-macro">EF570 2U</block>
@@ -8575,7 +8539,6 @@
   <block id="de8011abde4e4344c82af51912b3ce19" category="paragraph"><block ref="2bce2265bb1e82bb0d0858adf2dafedf" category="inline-image-macro-rx" type="image"></block> *Configuración del sistema*</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="inline-image-macro">Soporte técnico</block>
   <block id="9dcfdd4141be874fb7eb13880a5fd525" category="paragraph"><block ref="1cb7eabea009b4b9cfe98093989eadbf" category="inline-image-macro-rx" type="image"></block> *Soporte*</block>
-  <block id="0c7e65219517f5881dd4fc4cbac2dbf6" category="paragraph">Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E4000, E2800, EF280, EF300, E5700, EF570 y EF600. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.</block>
   <block id="7ac1c3c4fd9181221a17809a9e2420ed" category="paragraph"><block ref="fa1a238df1b067ec5821498fc2b49a78" category="inline-image-macro-rx" type="image"></block> * Descubra las cabinas de almacenamiento*</block>
   <block id="9506f0fd0f7f1b07960b15b4c9e68d1a" category="inline-image-macro">Iniciar</block>
   <block id="dd5912f8cf835c33b2a3b61d5e141ff0" category="paragraph"><block ref="59d02cad0b7ca821298861a148459521" category="inline-image-macro-rx" type="image"></block> *Lanzamiento*</block>
@@ -9334,7 +9297,6 @@
   <block id="43407d291e0a258a2c0f50fea060ead5" category="image-alt">Quite la unidad de la bandeja</block>
   <block id="5790149daceb0d5059957b49f27f38bc" category="image-alt">Perfil de la cabina de almacenamiento</block>
   <block id="6eb64fbdee0c658692fc6db01e28a15a" category="image-alt">Cambiar paquete de funciones</block>
-  <block id="c26d5c551bc45d9cf360b6ebab870ac2" category="paragraph">Es posible que deba realizar procedimientos de mantenimiento en el hardware. En esta sección se incluyen los procedimientos específicos para el mantenimiento de los componentes del sistema EF300 o EF600.</block>
   <block id="d1ff77c85f0bb81f5e031dab7a099ac2" category="paragraph">En los procedimientos de esta sección se asume que el sistema EF300 o EF600 ya se ha puesto en marcha en el entorno E-Series.</block>
   <block id="4228df1f41617005f9a6966cc97e2b6d" category="paragraph"><block ref="4228df1f41617005f9a6966cc97e2b6d" category="inline-link-rx"></block></block>
   <block id="2758f7dbcf963c3ec6e9b39bf3319e8f" category="paragraph"><block ref="2758f7dbcf963c3ec6e9b39bf3319e8f" category="inline-link-rx"></block></block>
@@ -9469,4 +9431,51 @@
   <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nuevas características en la versión 11.80.1R3</block>
   <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.</block>
   <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nuevas características en la versión 11.80.1R2</block>
+  <block id="166d62a1d721192a2058e6d8b4d89c04" category="paragraph">Este procedimiento se aplica a la adición en caliente de una bandeja de unidades DE212C, DE224C o DE460C a una bandeja de controladoras E2800, E5700B, EF570, EF300, E2800B, EF280, E5700, EF600, EF300C, EF600C o E4000.</block>
+  <block id="8a7e170acd5f2688800925b2b4a8d261" category="list-text"><block ref="537606410175a12a150f722cd71e55fb" category="inline-link-rx"></block> -- describe cómo configurar el almacenamiento físico y virtual para mantenerse dentro de los máximos permitidos que admite ESX/ESXi.</block>
+  <block id="d088dea69b1345c1729f1c0d46d8053d" category="list-text">*Tipos de controladores* - todos los modelos E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300, EF600C y EF300C.</block>
+  <block id="4720d0b863e013bea6899b10e0989bda" category="list-text">Serie EF600C: All-flash de rango medio, todo NVMe</block>
+  <block id="b9f7cef2dc8f05405c94daa2cb4fa6ae" category="list-text">Serie EF300C: All-flash de rango medio, todo NVMe</block>
+  <block id="5ca6952c7c9ae5d4b8be61e6386f0222" category="open-title">Modelos de EF300C</block>
+  <block id="595f8cc3ac0c1f12a0f83c3b1dad7c19" category="list-text">Admite unidades SSD NVMe de 30TB TB y 60TB TB de capacidad</block>
+  <block id="f8a3ff8be0bd051ecc8c3ec31daa0195" category="admonition">Para el sistema operativo SANtricity 11,80GA y posteriores, EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema. *</block>
+  <block id="14a2fa7582e1084e3800dde50d8cde03" category="open-title">Modelos de EF600C</block>
+  <block id="0db8edfb04068c99ae28246efebb6d4d" category="list-text">12gb SAS</block>
+  <block id="689052b8726f00a4623e9ada4d36af90" category="list-text">EF300, EF600 Controladoras EF300C y EF600C</block>
+  <block id="16736d8feb91d19d335e7acdefc20ef7" category="paragraph">Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C y EF600C. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.</block>
+  <block id="0fabf178487912291e67bdafbadfe77d" category="paragraph">La siguiente información se aplica al cableado de una bandeja de controladoras EF300, EF600, EF300C o EF600C a una bandeja de unidades DE212C, DE224C o DE460.</block>
+  <block id="f1c197c528faee0553e4d6ce534048a7" category="paragraph">EF300 DE FEBRERO DE EF600, EF300C EF600C</block>
+  <block id="57274295d5ba7bc8f4d4ebba2d325b92" category="doc">Instale y configure los sistemas de almacenamiento EF300, EF600, EF300C y EF600C</block>
+  <block id="915fd81c3f189c50233446daf085a8f7" category="paragraph">Puede instalar un sistema de almacenamiento EF300, EF600, EF300C o EF600C en un rack de dos puestos o un armario de sistema NetApp.</block>
+  <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Aprenda a prepararse para la instalación de su sistema de almacenamiento serie EF300, EF600, EF300C o EF600C.</block>
+  <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Antes de sustituir una batería EF300, EF600, EF300C o EF600C, revise los requisitos y consideraciones.</block>
+  <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">Se puede reemplazar una batería en un sistema de almacenamiento EF300, EF600, EF300C o EF600C.</block>
+  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones de System Manager. En esta sección se describe cómo reemplazar una sola controladora o ambas controladoras en una bandeja de controladoras EF300, EF600, EF300C o EF600C.</block>
+  <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Antes de sustituir un EF300, EF600. Revise los requisitos y consideraciones de la controladora EF300C o EF600C.</block>
+  <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Es posible sustituir una sola controladora en la bandeja de controladoras EF300, EF600, EF300C o EF600C.</block>
+  <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Antes de reemplazar un DIMM en una cabina de almacenamiento EF300, EF600, EF600C o EF300C, revise los requisitos y las consideraciones.</block>
+  <block id="4c9ef3b0d9ab6aa77110cf9315115626" category="paragraph">Debe sustituir un DIMM cuando haya un error de coincidencia en la memoria o si tiene un DIMM fallido. Asegúrese de verificar la configuración de la controladora EF300, EF600, EF300C o EF600C para garantizar que se reemplace el tamaño de DIMM correcto.</block>
+  <block id="c7834d39f5a9eddcdd20194da1039c37" category="paragraph">Puede reemplazar un DIMM en una cabina EF300, EF600, EF300C o EF600C.</block>
+  <block id="49d1f2fe6e0ad23ead3ed2632a9f74a7" category="paragraph">Antes de reemplazar una unidad en una cabina EF300, EF600, EF300C o EF600C, revise los requisitos y las consideraciones.</block>
+  <block id="fce247b37d4a827b7ed5a9564626b863" category="paragraph">Es posible sustituir una unidad en una cabina EF300 o EF300C.</block>
+  <block id="c2554b135d504cffd8df4d719c7ebb57" category="paragraph">El sistema EF300 y EF300C admite la expansión SAS con bandejas de 24 y 60 unidades. El procedimiento que siga depende de si tiene una bandeja de 24 o 60 unidades:</block>
+  <block id="857d3299fb961938b057413c5d00a579" category="paragraph">Es posible sustituir una unidad en una cabina EF600 o EF600C.</block>
+  <block id="a802c9dd2801c3a0ba58f7be36493829" category="paragraph">Antes de reemplazar un ventilador con fallo en una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.</block>
+  <block id="7ecbec8e887541f42291f1c5ee0927e8" category="paragraph">Puede sustituir un ventilador en una cabina EF300, EF600, EF300C o EF600C.</block>
+  <block id="a318e7b9e1756aadd7beb97eea16e82e" category="paragraph">Antes de actualizar o reemplazar una tarjeta de interfaz del host (HIC) en una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.</block>
+  <block id="9c440a2b6a047a7287398066cdcd91a2" category="paragraph">Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) con errores en una cabina EF300, EF600, EF300C o EF600C.</block>
+  <block id="8a72a6ac569b2623ae7ef2e6169d9622" category="list-text">Cuando se actualizan HIC en una controladora EF300, EF600, EF300C o EF600C, repita todos los pasos para eliminar la segunda controladora, actualizar las HIC de la segunda controladora y volver a instalar la segunda controladora antes de volver a aplicar alimentación a la bandeja de controladoras.</block>
+  <block id="df4b87988905a767129e6eea7d20dfb4" category="paragraph">Siga este procedimiento para cambiar el protocolo de puerto de host en una cabina EF300, EF600, EF300C o EF600C. Este procedimiento se aplica únicamente a tarjetas de interfaz del host (HIC) mediante InfiniBand (IB) o Fibre Channel (FC).</block>
+  <block id="6105255a43d604b71a2db2ed1e1078e5" category="paragraph">Antes de convertir el protocolo de host para una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.</block>
+  <block id="ddfc2f522bfc9f9d65e985188108c273" category="paragraph">Es posible que deba realizar procedimientos de mantenimiento en el hardware. En esta sección se incluyen los procedimientos específicos para el mantenimiento de los componentes del sistema EF300, EF600, EF300C o EF600C.</block>
+  <block id="fcde763d3b5acba51777c9f806555e8a" category="paragraph">Para los sistemas de almacenamiento EF300, EF600, EF300C y EF600C, se pueden realizar procedimientos de mantenimiento en los siguientes componentes.</block>
+  <block id="202d35201cc74c9968e9a40c7cc30171" category="paragraph">Antes de reemplazar un suministro de alimentación en una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.</block>
+  <block id="5f8f97ec195542ed337bbddedab32598" category="paragraph">Es posible reemplazar un suministro de alimentación cuando se produce un fallo en la controladora EF300, EF600, EF300C o EF600C.</block>
+  <block id="64c37d5d57b631b9fb2968c7586932f3" category="paragraph">Se puede añadir una tarjeta de ampliación SAS a una controladora EF300, EF600, EF300C y EF600C para permitir la ampliación del soporte de unidades.</block>
+  <block id="0e7081ec1cfc70b91c941e13e9fa52c5" category="paragraph">Si tiene previsto agregar una tarjeta de ampliación SAS a EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.</block>
+  <block id="0b2035b979e0933fbb24230f41a4faa9" category="section-title">Nuevas funciones en la versión 11.90.1</block>
+  <block id="efe2c9d7be92af10ac48d790dd8ccfed" category="paragraph">Nuevos modelos del sistema de almacenamiento: EF300C y EF600C</block>
+  <block id="7c4ed7bb875e7af6303e23e1e7df86c3" category="paragraph">Esta versión presenta los sistemas de almacenamiento NVMe all-flash EF300C y EF600C. Todas las versiones EF300C y EF600C son versiones flash de alta capacidad de los sistemas de almacenamiento EF300 y EF600 actuales. Las unidades SSD NVMe de alta capacidad de tamaños de 30TB TB y 60TB TB son compatibles con EF300C y EF600C.</block>
+  <block id="c4c050a1cbe127eb24c705844a070872" category="paragraph">Soporte para interfaces de SAS de 12Gb Gb en EF4000</block>
+  <block id="e8b3561f4b15fa164cdd5717ae511188" category="paragraph">La controladora E4000 ahora admite tarjetas de interfaz del host SAS de 12Gb Gb.</block>
 </blocks>

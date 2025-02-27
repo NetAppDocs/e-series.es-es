@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, fan fail 
+keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Sustituya un ventilador en un sistema EF300 o EF600. 
 ---
 = Sustituya un ventilador EF300 o EF600
@@ -12,7 +12,7 @@ summary: Sustituya un ventilador en un sistema EF300 o EF600.
 
 
 [role="lead"]
-Es posible sustituir un ventilador de una cabina EF300 o EF600.
+Puede sustituir un ventilador en una cabina EF300, EF600, EF300C o EF600C.
 
 .Acerca de esta tarea
 Cada bandeja de controladoras EF300 y EF600 o bandeja de unidades incluye cinco ventiladores. Si se produce un error en un ventilador, debe reemplazarlo Lo antes posible. para garantizar que la bandeja tenga la refrigeración adecuada.

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-overview-requirements-replacing2-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, 
+keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Revise los requisitos y consideraciones antes de sustituir los ventiladores EF300 o EF600. 
 ---
 = Requisitos para la sustitución de ventiladores de EF300 o EF600
@@ -11,7 +11,7 @@ summary: Revise los requisitos y consideraciones antes de sustituir los ventilad
 
 
 [role="lead"]
-Antes de sustituir un ventilador con fallo en una cabina EF300 o EF600, revise los siguientes requisitos.
+Antes de reemplazar un ventilador con fallo en una cabina EF300, EF600, EF300C o EF600C, revise los siguientes requisitos.
 
 * Tiene un ventilador de sustitución que es compatible con su bandeja de controladoras o modelo de bandeja de unidades.
 * Tiene una muñequera ESD o ha tomado otras precauciones antiestáticas.

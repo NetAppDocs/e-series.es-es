@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF300-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 drive, replace EF600 drive, drive failure 
+keywords: EF300, EF300C, replace drive, drive failure 
 summary: Sustituya una unidad en una matriz EF300. 
 ---
 = Sustituya la unidad en una matriz EF300
@@ -11,9 +11,9 @@ summary: Sustituya una unidad en una matriz EF300.
 
 
 [role="lead"]
-Puede reemplazar una unidad en una matriz EF300.
+Es posible sustituir una unidad en una cabina EF300 o EF300C.
 
-El EF300 admite la expansión SAS con bandejas de 24 y 60 unidades. El procedimiento que siga depende de si tiene una bandeja de 24 o 60 unidades:
+El sistema EF300 y EF300C admite la expansión SAS con bandejas de 24 y 60 unidades. El procedimiento que siga depende de si tiene una bandeja de 24 o 60 unidades:
 
 * <<Sustitución de unidad en una bandeja EF300 (24 unidades)>>
 * <<Sustitución de unidad en una bandeja EF300 (60 unidades)>>

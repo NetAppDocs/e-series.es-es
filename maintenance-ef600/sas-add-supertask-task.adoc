@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/sas-add-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300C, EF600C, EF300, EF600 
 summary: Añada una tarjeta de ampliación SAS a las controladoras EF300 para permitir la ampliación de la bandeja de unidades. 
 ---
 = Añada una tarjeta de ampliación SAS a EF300 y EF600
@@ -12,7 +12,7 @@ summary: Añada una tarjeta de ampliación SAS a las controladoras EF300 para pe
 
 
 [role="lead"]
-Es posible añadir una tarjeta de expansión SAS a una controladora EF300 o EF600 para permitir la ampliación del soporte de unidades.
+Se puede añadir una tarjeta de ampliación SAS a una controladora EF300, EF600, EF300C y EF600C para permitir la ampliación del soporte de unidades.
 
 .Acerca de esta tarea
 Cuando añada una tarjeta de expansión SAS, debe apagar la cabina de almacenamiento, instalar la nueva tarjeta de expansión SAS y volver a aplicar la alimentación.

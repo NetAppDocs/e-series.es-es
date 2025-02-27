@@ -1,10 +1,10 @@
 ---
 permalink: install-hw-ef600/index.html 
 sidebar: sidebar 
-keywords: EF300, EF600, installation 
+keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Instale y configure las cabinas EF300 y EF600. 
 ---
-= Instalar y configurar sistemas de almacenamiento EF300 y EF600
+= Instale y configure los sistemas de almacenamiento EF300, EF600, EF300C y EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

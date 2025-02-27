@@ -24,6 +24,8 @@ Las cabinas E-Series están disponibles en los siguientes modelos:
 * Serie E5700: Híbrido de gama media
 * Serie EF570: All-flash de rango medio
 * Serie EF600: All-flash de rango medio, todo NVMe
+* Serie EF600C: All-flash de rango medio, todo NVMe
+* Serie EF300C: All-flash de rango medio, todo NVMe
 
 
 
@@ -113,7 +115,7 @@ Tamaños de rack::
 image:../media/ef570_front.gif["EF300 2U"]
 
 --
-Unidades y HIC::
+Unidades::
 +
 --
 Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) por controladora:
@@ -125,6 +127,48 @@ Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) p
 
 
 NOTE: Para el sistema operativo SANtricity 11,80GA y posteriores, EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
+
+--
+Interfaces::
++
+--
+Disponible con las siguientes interfaces:
+
+* ISCSI de 25 GB
+* 32 GB NVMe/Fibre Channel
+* 32 GB SCSI/Fibre Channel
+* Iser/IB de 100 GB
+* SRP / IB de 100 GB
+* 100 GB NVMe/IB
+* NVMe/roce de 100 GB
+
+
+--
+
+
+--
+.Modelos de EF300C
+--
+Tamaños de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
+
+image:../media/ef570_front.gif["EF300 2U"]
+
+--
+Unidades::
++
+--
+* Admite unidades SSD NVMe de 30TB TB y 60TB TB de capacidad
+* Unidades SSD de NVMe: Hasta 24 unidades SSD NVMe en la bandeja de controladoras.
+* Unidades NL-SAS con bandejas de expansión: Cualquier combinación de bandejas DE460C y DE212C no debe superar un total de 240 ranuras de unidades NL-SAS y 4 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten las 8 bandejas DE212C. Por ejemplo, 4 bandejas DE460C, 8 bandejas DE212C, o 2 bandejas DE460C más 2 bandejas DE212.
+* Unidades SSD SAS con bandejas de expansión: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidad SSD SAS y 4 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten 8 bandejas. Por ejemplo, 1 bandeja DE460C más 1 bandeja DE224C más 1 bandeja DE212C, o 4 bandejas DE224C, o 8 bandejas DE212C.
++
+
+NOTE: Para el sistema operativo SANtricity 11,80GA y posteriores, EF300 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema. *
+
+
 
 --
 Interfaces::
@@ -236,11 +280,57 @@ Tamaños de rack::
 image:../media/ef570_front.gif["EF600 2U"]
 
 --
-Unidades y HIC::
+Unidades::
 +
 --
 Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) por controladora:
 
+* Unidades SSD de NVMe: Hasta 24 unidades SSD NVMe en la bandeja de controladoras.
+* Unidades NL-SAS con bandejas de expansión: Cualquier combinación de bandejas DE460C y DE212C no debe superar un total de 420 ranuras de unidades NL-SAS y 7 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten las 8 bandejas DE212C. Por ejemplo, 7 bandejas DE460C o 8 bandejas DE212C, o 5 bandejas DE460C más 2 bandejas DE212.
+* Unidades SSD SAS con bandejas de ampliación: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidades SSD SAS y 7 bandejas de expansión, a menos que solo se utilicen DE212C bandejas y se permiten 8 DE212C bandejas. Por ejemplo, 1 DE460C bandeja más 1 DE224C bandeja más 1 DE212C bandeja, o 4 DE224C bandejas, o 8 DE212C bandejas
+
+
+
+NOTE: Para el sistema operativo SANtricity 11,80GA y posteriores, EF600 admite configuraciones de bandeja de expansión sin unidades en el soporte base Cuando se utiliza esta configuración, asegúrese de que las unidades estén llenas dentro de la bandeja de expansión y conectadas correctamente a la bandeja base antes de encender el sistema.
+
+--
+Interfaces::
++
+--
+Disponible con las siguientes interfaces:
+
+* ISCSI de 25 GB
+* 32 GB NVMe/Fibre Channel
+* 32 GB SCSI/Fibre Channel
+* Iser/IB de 100 GB
+* SRP / IB de 100 GB
+* 100 GB NVMe/IB
+* NVMe/roce de 100 GB
+* Iser / IB de 200 GB
+* 200 GB NVMe/IB
+* NVMe/roce de 200 GB
+
+
+--
+
+
+--
+.Modelos de EF600C
+--
+Tamaños de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
+
+image:../media/ef570_front.gif["EF600 2U"]
+
+--
+Unidades::
++
+--
+Admite las siguientes unidades con una sola tarjeta de interfaz del host (HIC) por controladora:
+
+* Admite unidades SSD NVMe de 30TB TB y 60TB TB de capacidad
 * Unidades SSD de NVMe: Hasta 24 unidades SSD NVMe en la bandeja de controladoras.
 * Unidades NL-SAS con bandejas de expansión: Cualquier combinación de bandejas DE460C y DE212C no debe superar un total de 420 ranuras de unidades NL-SAS y 7 bandejas de expansión a menos que solo se utilicen bandejas DE212C, se permiten las 8 bandejas DE212C. Por ejemplo, 7 bandejas DE460C o 8 bandejas DE212C, o 5 bandejas DE460C más 2 bandejas DE212.
 * Unidades SSD SAS con bandejas de ampliación: Cualquier combinación de bandejas DE212C, DE224C y DE460C no debe superar un total de 96 ranuras de unidades SSD SAS y 7 bandejas de expansión, a menos que solo se utilicen DE212C bandejas y se permiten 8 DE212C bandejas. Por ejemplo, 1 DE460C bandeja más 1 DE224C bandeja más 1 DE212C bandeja, o 4 DE224C bandejas, o 8 DE212C bandejas
@@ -306,6 +396,7 @@ Disponible con las siguientes interfaces:
 * 1 GB o 10GBASE-T iSCSI
 * ISCSI de 1GB, 10Gb o 25GB Gb
 * 8GB GbE, 16GB GbE o 32GB Gb FC
+* 12gb SAS
 
 
 --

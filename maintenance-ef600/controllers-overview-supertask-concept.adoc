@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 controller, replace EF600 controller, 
+keywords: replace controller, EF300, EF600, EF300C, EF600C 
 summary: Requisitos y consideraciones para la sustitución de la controladora EF300 o EF600 
 ---
 = Requisitos para la sustitución de la controladora EF300 o EF600
@@ -11,7 +11,7 @@ summary: Requisitos y consideraciones para la sustitución de la controladora EF
 
 
 [role="lead"]
-Antes de sustituir una controladora EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.
+Antes de sustituir un EF300, EF600. Revise los requisitos y consideraciones de la controladora EF300C o EF600C.
 
 Una controladora consta de una placa, un firmware y un software. Controla las unidades e implementa las funciones de System Manager de SANtricity.
 

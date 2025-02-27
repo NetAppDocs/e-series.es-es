@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, 
+keywords: EF300, EF600, replace DIMM, EF300C, EF600C 
 summary: Revise los requisitos y consideraciones antes de sustituir los DIMM de EF300 o EF600. 
 ---
 = Requisitos para sustituir un DIMM EF300 o EF600
@@ -11,9 +11,9 @@ summary: Revise los requisitos y consideraciones antes de sustituir los DIMM de 
 
 
 [role="lead"]
-Antes de sustituir un DIMM en una cabina de almacenamiento EF300 o EF600, revise los requisitos y las consideraciones que hay que tener en cuenta.
+Antes de reemplazar un DIMM en una cabina de almacenamiento EF300, EF600, EF600C o EF300C, revise los requisitos y las consideraciones.
 
-Debe sustituir un DIMM cuando haya un error de coincidencia en la memoria o si tiene un DIMM fallido. Asegúrese de verificar la configuración de las controladoras EF300 o EF600 para asegurarse de reemplazar el tamaño de DIMM correcto.
+Debe sustituir un DIMM cuando haya un error de coincidencia en la memoria o si tiene un DIMM fallido. Asegúrese de verificar la configuración de la controladora EF300, EF600, EF300C o EF600C para garantizar que se reemplace el tamaño de DIMM correcto.
 
 
 CAUTION: Tenga en cuenta que los DIMM de la cabina de almacenamiento son frágiles; un manejo incorrecto puede ocasionar daños.

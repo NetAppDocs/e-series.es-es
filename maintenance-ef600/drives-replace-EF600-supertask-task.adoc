@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF600-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, drive failure 
+keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Sustituya una unidad en una cabina EF600. 
 ---
 = Sustituya la unidad en una cabina EF600
@@ -11,7 +11,7 @@ summary: Sustituya una unidad en una cabina EF600.
 
 
 [role="lead"]
-Es posible sustituir una unidad en una cabina EF600.
+Es posible sustituir una unidad en una cabina EF600 o EF600C.
 
 .Acerca de esta tarea
 Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina de almacenamiento y puede notificar un error de unidad inminente o un fallo de unidad real. Cuando se produce un fallo en una unidad, el LED de atención ámbar se enciende. Es posible intercambiar en caliente una unidad con error mientras la cabina de almacenamiento recibe I/O.
