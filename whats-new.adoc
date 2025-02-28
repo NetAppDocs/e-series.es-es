@@ -12,8 +12,30 @@ summary: Nuevas funciones del sistema operativo SANtricity.
 
 
 [role="lead"]
-En la siguiente tabla se describen las nuevas funciones de las versiones más recientes del sistema operativo SANtricity para la gestión integrada de las controladoras E4000, EF300, EF600, E2800/EF280 y E5700/EF570.
+En la siguiente tabla, se describen las nuevas funciones de las versiones más recientes del sistema operativo SANtricity para la gestión integrada de las controladoras E4000, EF300/EF300C, EF600/EF600C, E2800/EF280 y E5700/EF570.
 
+
+
+== Nuevas características en la versión 11.90R1
+
+[cols="35h,~"]
+|===
+| Nueva función | Descripción 
+
+
+ a| 
+Nuevos modelos del sistema de almacenamiento: EF300C y EF600C
+ a| 
+Esta versión presenta los sistemas de almacenamiento NVMe all-flash EF300C y EF600C. EF300C y EF600C son versiones flash de alta capacidad de los sistemas de almacenamiento EF300 y EF600 actuales. Las unidades SSD NVMe de alta capacidad de tamaños de 30TB TB o 60TB TB son compatibles con EF300C y EF600C. EF300C/EF600C es compatible para uso exclusivo de pools de discos dinámicos sin compatibilidad con RAID heredado.
+
+
+
+ a| 
+Compatibilidad con interfaces SAS de 12Gb Gb en controladoras E4000
+ a| 
+La controladora E4000 ahora admite tarjetas de interfaz del host SAS de 12Gb Gb.
+
+|===
 
 
 == Nuevas funciones en la versión 11.90.1

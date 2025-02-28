@@ -249,7 +249,10 @@ NOTE: Si utiliza los dedos para aflojar el tornillo de mariposa, es posible que 
 . Vuelva a instalar la HIC:
 +
 .. Alinee la toma de la toma HIC de repuesto con la toma de la placa base y, a continuación, coloque suavemente la tarjeta en el zócalo.
-.. Apriete los tres tornillos de apriete manual de la HIC.
+.. Apriete a mano los tres tornillos de apriete manual de la HIC.
++
+No utilice un destornillador, o puede apretar los tornillos en exceso.
+
 .. Vuelva a instalar la placa frontal de la HIC.
 
 

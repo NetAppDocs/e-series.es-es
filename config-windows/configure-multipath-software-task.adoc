@@ -28,4 +28,14 @@ En las instalaciones de Windows se utiliza el controlador nativo del módulo esp
 . Descargue el paquete *SANtricity Windows DSM* desde https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["Página del software SANtricity OS"^]. Seleccione su versión de software, acepte el contrato de licencia y seleccione *SANtricity Windows DSM* en Descargas adicionales.
 . Ejecute el programa de instalación de *SANtricity Windows DSM*. Haga doble clic en el paquete de instalación que desea ejecutar.
 . Utilice el asistente de instalación para instalar el paquete en la estación de administración.
+. Si es necesario, ejecute `mpclaim` el comando para comprobar la instalación del paquete DSM.
++
+[source, cli]
+----
+C:\Users\Administrator>mpclaim -s -d
+----
++
+
+NOTE: La función MPIO debe instalarse en el servidor de Windows para ejecutar `mpclaim` el comando.
+
 

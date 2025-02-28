@@ -58,6 +58,14 @@ Si va a sustituir las controladoras para actualizar a un nuevo modelo, tenga en 
 +
 Al actualizar la controladora E-Series, debe deshabilitar las funciones prémium que se usan en la cabina de almacenamiento que no sean compatibles con las nuevas controladoras.
 
+* *Gestión en banda utilizando el volumen de acceso*
++
+** E4000 no admite la gestión en banda mediante el volumen de acceso.
++
+Antes de actualizar a controladoras E4000, anule la asignación de los volúmenes de acceso de todos los hosts y clústeres de hosts definidos.
+
+
+
 
 
 
@@ -84,6 +92,7 @@ Solicite una batería nueva.
 * E4000 solo puede admitir volúmenes de 512 TB
 * E4000 no es compatible con configuraciones SAS
 * E4000 no es compatible con los volúmenes de almacenamiento remoto
+* E4000 no admite la gestión en banda mediante el volumen de acceso.
 
  a| 
 Las controladoras E4000 deben utilizar bandejas SAS-3.
@@ -107,6 +116,8 @@ Solicite una batería nueva.
 
 * La compatibilidad con la tarjeta de interfaz del host InfiniBand no está disponible
 * E4000 no es compatible con configuraciones SAS
+* E4000 no es compatible con los volúmenes de almacenamiento remoto
+* E4000 no admite la gestión en banda mediante el volumen de acceso.
 
  a| 
 Las controladoras E4000 deben utilizar bandejas SAS-3.

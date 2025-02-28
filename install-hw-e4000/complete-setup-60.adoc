@@ -19,6 +19,9 @@ Aprenda a conectar las controladoras a la red y a completar la instalación y la
 
 Conecte los cables del sistema según la topología de red.
 
+
+NOTE: Se pueden usar los puertos de host en la parte inferior izquierda (e1a, e1b, e1c y e1d) y en el lado superior derecho (e0a y e0b) de la controladora para el cableado del host de datos.
+
 [role="tabbed-block"]
 ====
 .Opción 1: Topología de conexión directa
@@ -27,8 +30,11 @@ El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una t
 
 image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 Topología directa, width=1000px"]
 
-. Conecte cada adaptador de host directamente a los puertos de host e0a y e0b de las controladoras.
+. Conecte cada puerto de host de HBA a los puertos de host de las controladoras (e1a, e1b, e1c y e1d o e0a y e0b).
 
+
+
+NOTE: Para obtener ejemplos de diagramas de cableado adicionales, consulte https://docs.netapp.com/us-en/e-series/install-hw-cabling/host-cable-task.html#cabling-for-a-direct-attached-topology["Cableado de host"^].
 
 --
 .Opción 2: Topología de estructura
@@ -38,7 +44,7 @@ El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una t
 image:../media/drw_e4060_fabric_topology_ieops-2049.svg["E4060 Topología de la estructura, width=1000px"]
 
 . Conecte cada adaptador de host directamente al conmutador.
-. Conecte cada switch directamente a los puertos de host e0a y e0b de las controladoras.
+. Conecte cada switch directamente a los puertos de host de las controladoras (e1a, e1b, e1c y e1d o e0a y e0b).
 
 
 --

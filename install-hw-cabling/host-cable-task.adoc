@@ -19,15 +19,22 @@ Es posible conectar un host directamente a una controladora (topología de conex
 
 Una topología de conexión directa conecta los adaptadores de host directamente a las controladoras del sistema de almacenamiento.
 
-La figura siguiente muestra un ejemplo de conexión. Para garantizar el máximo rendimiento, se deben usar todos los puertos de adaptador de host disponibles.
+Para garantizar el máximo rendimiento, se deben usar todos los puertos de adaptador de host disponibles.
 
-.Dos hosts y dos controladoras
-image::../media/topology_host_direct_generic_web_low.png[Dos hosts y dos controladoras de cableado]
+.Un host con dos HBA
+La siguiente figura muestra un ejemplo de un host con dos HBA instalados.
 
-*(1)* _Conecte cada puerto adaptador de host directamente a los puertos de host de las controladoras._
+image::../media/1host_2hbas_ieops-2145.svg[Un host/dos HBA y dos controladoras de cableado]
 
+.Un host con dos HBA (cableado alternativo)
+La siguiente figura muestra un ejemplo de un host con dos HBA instalados.
 
-NOTE: Para E4000, conéctese a los puertos de host e0a y e0b.
+image::../media/1host_2hbas_alternate_wkflw_ieops-2147.svg[Un host/dos HBA y dos controladoras de cableado (cableado alternativo)]
+
+.Dos hosts con dos HBA por host
+En la siguiente figura, se muestra un ejemplo de dos hosts cada uno con dos HBA instalados.
+
+image::../media/2hosts_4hbas_ieops-2146.svg[Dos cables de host/cuatro HBA y dos controladoras]
 
 
 
@@ -43,6 +50,3 @@ image::../media/topology_host_fabric_generic.png[Dos hosts y dos switches]
 *(1)* _Conecte cada adaptador de host directamente al conmutador._
 
 *(2)* _Conecte cada switch directamente a los puertos de host de los controladores. Para ayudar a garantizar el máximo rendimiento, se deben utilizar todos los puertos de adaptador de host disponibles._
-
-
-NOTE: Para E4000, conéctese a los puertos de host e0a y e0b.
