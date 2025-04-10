@@ -390,12 +390,17 @@ Vuelva a establecer la conexión con la bandeja de controladoras, recoger datos 
 .Encienda la bandeja de controladoras (simple)
 --
 .Pasos
-. Instale el controlador de repuesto en el aparato.
+. Instale la controladora de reemplazo en la bandeja.
 +
+.. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
 .. Dé la vuelta al controlador de modo que la cubierta extraíble quede orientada hacia abajo.
-.. Con el mango de la leva en la posición abierta, deslice el controlador completamente en el aparato.
-.. Mueva la palanca de leva hacia la izquierda para bloquear el controlador en su sitio.
+.. Con el mango de leva en la posición abierta, deslice el controlador completamente en el estante.
 .. Sustituya los cables.
++
+
+NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
+
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
 .. Encienda la bandeja de controladoras.
 .. Espere a que se reinicie la controladora E4000.
 .. Determinar cómo se asignará una dirección IP a la controladora de reemplazo.
@@ -490,12 +495,18 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 .Colocar una controladora en línea (doble)
 --
 .Pasos
-. Instale el controlador de repuesto en el aparato.
+. Instale la controladora de reemplazo en la bandeja.
 +
+.. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+.. Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
 .. Dé la vuelta al controlador de modo que la cubierta extraíble quede orientada hacia abajo.
-.. Con el mango de la leva en la posición abierta, deslice el controlador completamente en el aparato.
-.. Mueva la palanca de leva hacia la izquierda para bloquear el controlador en su sitio.
+.. Con el mango de leva en la posición abierta, deslice el controlador completamente en el estante.
 .. Sustituya los cables.
++
+
+NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
+
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
 .. Si la controladora original utilizó DHCP para la dirección IP, busque la dirección MAC en la etiqueta ubicada en la parte posterior de la controladora de reemplazo. Solicite al administrador de red que asocie la red DNS y la dirección IP de la controladora que quitó con la dirección MAC de la controladora de reemplazo.
 +
 

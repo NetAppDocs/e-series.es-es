@@ -242,6 +242,7 @@ Al retirar el controlador en blanco, una solapa se balancea en su lugar para blo
 
 Instale un segundo contenedor de controladora para cambiar una configuración simple a una configuración doble.
 
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
 . Gire el contenedor del controlador de manera que la cubierta extraíble quede orientada hacia abajo.
 . Alinee el extremo del módulo del controlador con la abertura del chasis y, a continuación, empuje suavemente el módulo del controlador hasta la mitad del sistema.
 . Con la palanca de leva en la posición abierta, empuje firmemente el módulo del controlador hasta que se ajuste al plano medio y esté completamente asentado y, a continuación, cierre la palanca de leva a la posición de bloqueo.

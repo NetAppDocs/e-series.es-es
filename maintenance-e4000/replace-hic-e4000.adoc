@@ -268,30 +268,14 @@ Vuelva a instalar el compartimento de controladoras en el chasis.
 .Pasos
 . Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
 . Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
-. Vuelva a colocar el compartimento de controladoras y alinee el extremo con la apertura del chasis.
-. Empuje suavemente el compartimento de controladoras a la mitad en el sistema. Alinee el extremo del compartimento de controladoras con la apertura del chasis y empuje suavemente el compartimento de controladoras a la mitad en el sistema.
+. Dé la vuelta al controlador de modo que la cubierta extraíble quede orientada hacia abajo.
+. Con el mango de leva en la posición abierta, deslice el controlador completamente en el estante.
+. Sustituya los cables.
 +
 
-NOTE: No inserte por completo el compartimento de controladoras en el chasis hasta que se lo indique.
+NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
 
-. Recuperar el sistema, según sea necesario.
-+
-Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a instalarlos si está utilizando cables de fibra óptica.
-
-. Complete la reinstalación del compartimento de controladoras:
-+
-.. Con el mango de leva en la posición abierta, empuje firmemente el contenedor del controlador hasta que se encuentre con el plano medio y quede completamente asentado, y luego cierre el mango de leva a la posición de bloqueo.
-+
-
-NOTE: No ejerza demasiada fuerza al deslizar el compartimento del controlador en el chasis para evitar dañar los conectores.
-
-+
-Si tiene una configuración doble, la controladora comenzará a arrancar en cuanto se coloque en el chasis.
-
-.. Si aún no lo ha hecho, vuelva a instalar el dispositivo de administración de cables.
-.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
-
-
+. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
 
 
 
