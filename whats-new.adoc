@@ -16,6 +16,12 @@ En la siguiente tabla, se describen las nuevas funciones de las versiones más r
 
 
 
+== Nuevas características en la versión 11.90R2
+
+Esta versión contiene solo cambios menores y no nuevas características. Para obtener más información sobre los cambios en esta versión, consulte la https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Notas de la versión de E-Series 11,90"^].
+
+
+
 == Nuevas características en la versión 11.90R1
 
 [cols="35h,~"]
