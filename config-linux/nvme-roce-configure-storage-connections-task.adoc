@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over RoCE, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Si la controladora incluye una conexión para NVMe over roce \(RDMA over Converged Ethernet\), es posible configurar las opciones del puerto NVMe desde la página hardware o la página sistema en SANtricity System Manager.' 
 ---
-= Configurar las conexiones NVMe over roce de la cabina de almacenamiento
+= Configure las conexiones NVMe over RoCE de la cabina de almacenamiento en E-Series: Linux
 :allow-uri-read: 
 :experimental: 
 :icons: font

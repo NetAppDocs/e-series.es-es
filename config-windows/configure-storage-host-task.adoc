@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: LUNs, configure LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configurar el almacenamiento en el host para el método exprés de Windows. 
 ---
-= Configurar el almacenamiento en el host
+= Configure el almacenamiento en el host en E-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

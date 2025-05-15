@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 fan, repair E5700 fan, replace E5700 fan, failed E5700 fan 
 summary: Sustituya un ventilador E5700. 
 ---
-= Reemplazar un contenedor de ventilador E5700 (60 unidades)
+= Sustituya el compartimento de ventilador: E5700 (60 unidades).
 :allow-uri-read: 
 :experimental: 
 :icons: font

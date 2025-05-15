@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conecte un host directamente a una controladora o utilice switches. 
 ---
-= Información general sobre el cableado
+= Cableado del sistema de almacenamiento (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

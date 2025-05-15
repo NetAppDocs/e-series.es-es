@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Para RHEL 7 y SLES 12, crea un sistema de archivos en el espacio de nombres y monta el sistema de archivos. 
 ---
-= Crear sistemas de archivos (RHEL 7 y SLES 12)
+= Crear sistemas de archivos en E-Series - Linux RHEL 7 y SLES 12 (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

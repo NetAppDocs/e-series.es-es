@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrading E2800 HIC, upgrade E2800 HIC, upgrade host interface card, E2800, E-Series, eseries 
 summary: 'Actualice una tarjeta de interfaz del host (HIC) en una cabina E2800.' 
 ---
-= Actualizar tarjeta de interfaz del host E2800 (HIC)
+= Actualice la tarjeta de interfaz del host (HIC) - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

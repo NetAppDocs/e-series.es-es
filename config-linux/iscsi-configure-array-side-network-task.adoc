@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure las redes iSCSI en el lado de la cabina. 
 ---
-= Configurar las redes del lado de la cabina
+= Configuración de redes en la cabina en E-Series - Linux (iSCSI)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Cambie el tamaño de un volumen para aumentar su capacidad notificada. 
 ---
-= Aumente la capacidad de un volumen
+= Aumente la capacidad de un volumen en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define host Linux, configure host linux, express linux configuration, linux host, 
 summary: Con SANtricity System Manager, se definen los hosts que envían datos a la cabina de almacenamiento. La definición de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. 
 ---
-= Defina un host
+= Crear un host usando SANtricity System Manager - Linux (NVMe over FC)
 :allow-uri-read: 
 :experimental: 
 :icons: font

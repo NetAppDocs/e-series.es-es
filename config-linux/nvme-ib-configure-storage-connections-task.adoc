@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Si la controladora incluye un puerto NVMe over InfiniBand, puede configurar la dirección IP de cada puerto mediante System Manager de SANtricity. 
 ---
-= Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento
+= Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento en E-Series (Linux)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

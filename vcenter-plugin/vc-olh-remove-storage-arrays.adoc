@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Quite una o varias cabinas de almacenamiento si ya no desea gestionarlas desde el complemento de almacenamiento de para vCenter. 
 ---
-= Quite las cabinas de almacenamiento
+= Quite las cabinas de almacenamiento del complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

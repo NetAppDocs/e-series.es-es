@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-launch-system-manager.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Para gestionar una sola cabina, use la opción Iniciar para abrir System Manager en una nueva ventana del explorador. 
 ---
-= Inicie System Manager
+= Inicie System Manager desde el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

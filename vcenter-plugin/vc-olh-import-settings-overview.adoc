@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-settings-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'La función Importar configuración es una operación en lote que permite replicar la configuración en una sola cabina de almacenamiento (el origen) en varias cabinas (los objetivos).' 
 ---
-= Información general sobre la configuración de importación
+= Obtenga información sobre la función Importar configuración en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

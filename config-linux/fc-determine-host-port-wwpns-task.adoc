@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host wwpn, HBA utility, express linux configuration, software configuration, linux host, 
 summary: Debe instalar una utilidad HBA FC para que pueda ver el nombre de puerto WWPN\ de cada puerto de host. Además, puede usar la utilidad HBA para cambiar cualquier configuración recomendada en la columna Notas de la herramienta de matriz de interoperabilidad de NetApp para la configuración admitida. 
 ---
-= Determinar los WWPN de host y realizar la configuración recomendada
+= Determinar nombres de puertos a nivel mundial de host (WWPN) en E-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

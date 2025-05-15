@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in API, log in Unified Manager 
 summary: Acceda e inicie sesión en Web Services API y Unified Manager. 
 ---
-= Inicie sesión en API y Unified Manager
+= Inicie sesión en la API del proxy de servicios web de SANtricity y Unified Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

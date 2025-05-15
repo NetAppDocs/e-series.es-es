@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
 summary: Los sistemas E-Series están disponibles en diferentes tamaños de bandeja. 
 ---
-= Tipos de bandeja E-Series
+= Obtenga más información sobre los tipos de bandejas E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

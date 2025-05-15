@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
 summary: Obtenga más información acerca de los términos utilizados en E-Series. 
 ---
-= Terminología de E-Series
+= Obtenga más información sobre la terminología E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

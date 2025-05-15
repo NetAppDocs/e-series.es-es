@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation process overview 
 summary: Revise el proceso de instalación y configuración de E2800 y E5700. 
 ---
-= Descripción general
+= Obtenga información sobre la instalación del sistema de almacenamiento: E2800 y E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

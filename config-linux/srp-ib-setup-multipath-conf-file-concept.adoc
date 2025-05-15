@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath.conf, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Use el archivo multipath.conf es el archivo de configuración del daemon multipath, multipathd. 
 ---
-= Configure el archivo multipath.conf
+= Configurar el archivo multipath.conf en E-Series - Linux (SRP over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

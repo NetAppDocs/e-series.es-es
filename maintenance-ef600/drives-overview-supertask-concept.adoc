@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF600C, EF300C, replace drive, 
 summary: Revise los requisitos y consideraciones antes de sustituir unidades en EF300 o EF600. 
 ---
-= Requisitos para la sustitución de unidades EF300 o EF600
+= Requisitos para sustituir la unidad: EF300 o EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-directory-services-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importe la configuración de los servicios de directorio desde una cabina de almacenamiento a otras cabinas de almacenamiento. 
 ---
-= Importe la configuración de servicios de directorio
+= Importe la configuración de los servicios de directorio en el plugin de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

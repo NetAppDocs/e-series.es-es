@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Quite una o varias cabinas de almacenamiento gestionadas de un grupo si ya no se van a gestionar desde un grupo de almacenamiento específico. 
 ---
-= Quite las cabinas de almacenamiento del grupo
+= Quite las cabinas de almacenamiento de un grupo del complemento de almacenamiento SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

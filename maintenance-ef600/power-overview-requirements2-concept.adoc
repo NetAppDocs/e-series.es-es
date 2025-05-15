@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, replace EF600 power supply, 
 summary: Revise los requisitos y consideraciones antes de sustituir una fuente de alimentación EF300 o EF600. 
 ---
-= Requisitos para la sustitución de la fuente de alimentación EF300 o EF600
+= Requisitos para sustituir la fuente de alimentación - EF300 o EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

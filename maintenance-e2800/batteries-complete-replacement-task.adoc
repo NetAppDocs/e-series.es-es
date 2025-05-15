@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Realice una sustitución de la batería. 
 ---
-= Completar el reemplazo de la batería E2800
+= Sustitución completa de la batería - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

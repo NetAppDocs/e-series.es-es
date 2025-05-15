@@ -4,7 +4,7 @@ permalink: vcenter-plugin/san-spvc-ic-user-access.html
 keywords: user access vCenter plugin, user roles vCenter plugin, privileges vCenter plugin, access permissions vCenter plugin 
 summary: Configure los permisos de acceso para Storage Plugin para vCenter de. 
 ---
-= Configure los permisos de acceso al complemento
+= Configure el complemento de almacenamiento SANtricity para los permisos de acceso a vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

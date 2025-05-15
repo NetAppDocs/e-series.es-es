@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
 summary: Es posible configurar el sondeo automático para todas las estadísticas de disco y volumen en sistemas de almacenamiento detectados. 
 ---
-= Administrar el sondeo automático para las estadísticas del proxy de servicios web
+= Permite gestionar el sondeo automático de estadísticas de proxy de servicios web de SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

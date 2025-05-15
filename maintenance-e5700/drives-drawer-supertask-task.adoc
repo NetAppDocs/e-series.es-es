@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive drawer, DE460C drive shelf, replace E5700 drive drawer, failed E5700 drive drawer 
 summary: Sustituya el cajón de una unidad en un E5700. 
 ---
-= Reemplazar cajón de unidad E5700 (60 unidades)
+= Sustituir el cajón de unidades: E5700 (60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

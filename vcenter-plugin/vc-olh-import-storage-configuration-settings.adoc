@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-storage-configuration-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importe la configuración de almacenamiento de una cabina de almacenamiento en otras cabinas de almacenamiento. 
 ---
-= Importe los ajustes de configuración de almacenamiento
+= Importe los ajustes de configuración de almacenamiento en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

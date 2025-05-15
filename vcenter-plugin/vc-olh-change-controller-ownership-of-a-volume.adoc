@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Cambie la propiedad de la controladora preferida de un volumen, para que las operaciones de I/o de las aplicaciones host se redirijan por la ruta nueva. 
 ---
-= Cambiar propiedad de la controladora de un volumen
+= Cambie la propiedad de la controladora de un volumen en el complemento de almacenamiento SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

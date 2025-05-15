@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure el host para que ejecute la conmutación al nodo de respaldo. 
 ---
-= Configure la conmutación al nodo de respaldo en el host
+= Configuración de la conmutación por error en el host en E-Series - Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

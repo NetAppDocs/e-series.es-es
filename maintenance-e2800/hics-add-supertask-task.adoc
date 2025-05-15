@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: adding E2800 HIC, add E2800 HIC, add host interface card, E2800, E-Series, eseries 
 summary: 'Añada una tarjeta de interfaz del host (HIC) a una cabina E2800.' 
 ---
-= Añadir tarjeta de interfaz del host E2800 (HIC)
+= Añadir tarjeta de interfaz del host: E2800 (HIC)
 :allow-uri-read: 
 :experimental: 
 :icons: font

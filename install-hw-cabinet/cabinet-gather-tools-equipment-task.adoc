@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
 summary: Antes de instalar el armario de 3040 40U, recopile las herramientas y el equipo que requieren. 
 ---
-= Reúna las herramientas y el equipo necesarios
+= Recopilar las herramientas y el equipo necesarios para armario de 3040 40U V (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

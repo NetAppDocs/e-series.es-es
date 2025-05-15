@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300, EF300C, EF600, EF600C 
 summary: Revise los requisitos y consideraciones antes de sustituir una tarjeta de expansión EF300 SAS. 
 ---
-= Requisitos para la sustitución de tarjetas de expansión SAS EF300 y EF600
+= Requisitos para reemplazar la tarjeta de expansión SAS - EF300 y EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

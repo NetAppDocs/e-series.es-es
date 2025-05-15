@@ -4,7 +4,7 @@ permalink: vcenter-plugin/san-spvc-ic-storage-array-discovery.html
 keywords: discover arrays vCenter plugin, discover storage resources Plugin for vCenter, resolve certificates vCenter plugin 
 summary: Utilice la interfaz del complemento para vCenter para detectar las direcciones IP de las cabinas en su red. 
 ---
-= Detectar cabinas de almacenamiento en el plugin
+= Detecte las cabinas de almacenamiento en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

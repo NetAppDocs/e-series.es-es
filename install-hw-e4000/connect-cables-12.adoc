@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000, connect power cables 
 summary: Conecte los cables de alimentación y encienda las bandejas de unidades. 
 ---
-= Conectar los cables (E4012)
+= Conecte los cables de alimentación - E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

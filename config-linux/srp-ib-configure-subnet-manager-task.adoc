@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: El uso de un switch InfiniBand para ejecutar el administrador de subredes puede provocar una pérdida de ruta inesperada durante las cargas altas. Para evitar pérdidas de rutas, configure el administrador de subredes en uno o más de sus hosts usando opensm. 
 ---
-= Configure el gestor de subredes
+= Configurar gestor de subred en E-Series - Linux (SRP over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

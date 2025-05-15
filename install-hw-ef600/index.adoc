@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Instale y configure las cabinas EF300 y EF600. 
 ---
-= Instale y configure los sistemas de almacenamiento EF300, EF600, EF300C y EF600C
+= Instalación y configuración - EF300, EF600, EF300C y EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
 summary: La importación del dispositivo de almacenamiento remoto se realiza mediante el asistente Importar almacenamiento remoto en SANtricity System Manager. La función Importar almacenamiento remoto permite mover los datos desde un dispositivo de almacenamiento remoto a la cabina E-Series local. 
 ---
-= Importe el almacenamiento remoto
+= Importe el almacenamiento remoto para volúmenes de almacenamiento remoto de SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

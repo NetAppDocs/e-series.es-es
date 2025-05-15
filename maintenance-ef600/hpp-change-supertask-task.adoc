@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Cambie el protocolo del puerto de host para una cabina EF300 o EF600. 
 ---
-= Cambiar el protocolo del host para un EF300 o EF600
+= Cambie el protocolo de host: EF300 y EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure Linux host, express linux configuration, linux host, 
 summary: La configuración de un iniciador de NVMe en un entorno InfiniBand incluye la instalación y la configuración de los paquetes infiniband, nvme-cli y rdma, la configuración de direcciones IP del iniciador y la configuración de la capa NVMe-of en el host. 
 ---
-= Configure NVMe over InfiniBand en el lado del host
+= Configure el iniciador de NVMe a través de InfiniBand en el host en E-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

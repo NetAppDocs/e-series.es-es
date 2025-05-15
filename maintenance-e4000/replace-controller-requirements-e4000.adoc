@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Requisitos para reemplazar una controladora E4000
+= Requisitos para sustituir el controlador - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive, replace E5700 drive, failed E5700 drive 
 summary: Revise los requisitos de la unidad E5700. 
 ---
-= Requisitos para reemplazar una unidad E5700
+= Requisitos para sustituir la unidad - E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

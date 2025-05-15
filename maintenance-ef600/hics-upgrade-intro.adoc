@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF300C, EF600C, upgrade HIC, upgrade HIC, increase host ports, change host protocol 
 summary: 'Es posible actualizar una tarjeta de interfaz del host (HIC) para aumentar la cantidad de puertos de host o cambiar los protocolos de host.' 
 ---
-= Actualizar tarjeta de interfaz de host (HIC) EF300 o EF600
+= Actualice la tarjeta de interfaz del host (HIC): EF300 y EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

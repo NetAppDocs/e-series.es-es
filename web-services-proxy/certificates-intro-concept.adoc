@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Certificates Web Services Proxy, WSP certificates, 
 summary: Gestione certificados mediante los archivos de configuración del proxy de servicios web, mediante comandos API o mediante la interfaz de Unified Manager. 
 ---
-= Gestione la seguridad y los certificados en el proxy de servicios web
+= Gestione la seguridad y los certificados en el proxy de servicios web de SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
 summary: Conecte los cables de las controladoras a la red para completar la configuración y la instalación del sistema de almacenamiento. 
 ---
-= Completar la instalación y la configuración del sistema de almacenamiento
+= Instalación y configuración completas del sistema de almacenamiento: E5724, EF570, EF280, E2812, E2824, DE212C y DE224C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

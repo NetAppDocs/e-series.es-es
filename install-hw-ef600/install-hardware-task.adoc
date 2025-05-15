@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation, 
 summary: Instale el EF300 o EF600 en un rack de dos parantes o un armario del sistema de NetApp. 
 ---
-= Instale el hardware
+= Instale la tornillería EF300, EF600, EF300C y EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-capacity.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Es posible quitar unidades para reducir la capacidad de un pool o una caché SSD existente. 
 ---
-= Elimine capacidad
+= Reduzca la capacidad de un pool o caché SSD existente en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

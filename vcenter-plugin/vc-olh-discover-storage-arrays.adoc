@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Para mostrar y gestionar recursos de almacenamiento en el complemento de almacenamiento para vCenter, debe detectar las direcciones IP de las cabinas en su red. 
 ---
-= Detectar las cabinas de almacenamiento
+= Detecte las cabinas de almacenamiento en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

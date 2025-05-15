@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Puede crear una partición en el dispositivo multivía, opcionalmente crear un sistema de archivos en el espacio de nombres y montar la partición. 
 ---
-= Crear sistemas de archivos (RHEL 7 y SLES 12)
+= Crear sistemas de archivos en E-Series - Linux RHEL 7 y SLES 12 (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

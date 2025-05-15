@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Después de asignar volúmenes al host, es posible volver a analizar para que el host detecte y configure los volúmenes para el acceso multivía. 
 ---
-= Detectar el almacenamiento en el host
+= Detecte el almacenamiento en el host en E-Series, VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

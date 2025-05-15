@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-turn-on-locator-lights.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Se pueden localizar las unidades para identificar físicamente todas las unidades que conforman una caché SSD, un pool o un grupo de volúmenes seleccionado. En cada unidad, se enciende un indicador LED en la caché SSD, el pool o el grupo de volúmenes seleccionado. 
 ---
-= Encender las luces de localización
+= Encienda las luces indicadoras LED en una unidad en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

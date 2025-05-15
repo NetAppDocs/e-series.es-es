@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volumes virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Puede configurar la E/S dirigida al destino del dispositivo en función de su versión de Linux. DM-MP gestiona las rutas físicas subyacentes a estos destinos virtuales. 
 ---
-= Acceda a volúmenes NVMe para destinos de dispositivos virtuales
+= Acceda a volúmenes NVMe para destinos de dispositivos virtuales en E-Series - Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-pools-and-volume-group-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Para aprovisionar almacenamiento, es posible crear un pool o un grupo de volúmenes que contendrá las unidades de disco duro (HDD) o los discos de estado sólido (SSD) que se desean usar en la cabina de almacenamiento.' 
 ---
-= Información general sobre los pools y el grupo de volúmenes
+= Obtenga información sobre los pools de almacenamiento y los grupos de volúmenes en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

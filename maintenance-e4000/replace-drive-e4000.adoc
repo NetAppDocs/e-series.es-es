@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Antes de reemplazar una unidad de E4000, revise los requisitos y consideraciones. 
 ---
-= Sustituya la descripción general de la unidad E4000
+= Requisitos para sustituir la unidad - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: rackmount-hardware.html
 keywords: rackmount, rack-mount, install in rack, rails 
 summary: Monte en rack la tornillería. 
 ---
-= Hardware para montaje en rack
+= Hardware de montaje en rack (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

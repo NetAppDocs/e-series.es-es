@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Aprenda a conectar las controladoras a la red y a completar la instalación y la configuración del sistema de almacenamiento. 
 ---
-= Configuración completa del sistema de almacenamiento (E4060)
+= Configuración completa del sistema de almacenamiento - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

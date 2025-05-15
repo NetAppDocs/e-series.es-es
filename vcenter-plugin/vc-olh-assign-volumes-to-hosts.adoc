@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-assign-volumes-to-hosts.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Se debe asignar un volumen a un host o un clúster de hosts para poder usarlo con operaciones de I/O. 
 ---
-= Asignar volúmenes a hosts
+= Asigne volúmenes a los hosts en el plugin de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

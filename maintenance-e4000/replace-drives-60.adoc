@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000 
 summary: Sustituya una unidad en una controladora E2800 con una bandeja de 60 unidades. 
 ---
-= Reemplazar unidad en E4000 (bandeja de 60 unidades)
+= Sustituya la unidad: E4000 (bandeja de 60 unidades)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

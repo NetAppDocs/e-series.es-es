@@ -4,7 +4,7 @@ summary: Es posible modificar la configuración de la caché de lectura y la cac
 permalink: vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html 
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 ---
-= Cambiar la configuración de caché de un volumen
+= Cambie la configuración de caché de un volumen en el complemento de almacenamiento SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, assign volume, assign namespace, 
 summary: 'Se debe asignar un volumen \(espacio de nombres\) a un host o clúster de hosts para que se pueda utilizar en operaciones de I/O. Esta asignación otorga a un host o un clúster de hosts acceso a uno o varios espacios de nombres en una cabina de almacenamiento.' 
 ---
-= Asigne un volumen
+= Asignar un volumen mediante SANtricity System Manager - Linux (FC over NVMe)
 :allow-uri-read: 
 :experimental: 
 :icons: font

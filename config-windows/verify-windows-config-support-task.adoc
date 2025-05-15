@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Compruebe que la configuración de Windows es compatible. 
 ---
-= Compruebe que la configuración de Windows es compatible
+= Compruebe la compatibilidad con la configuración de Windows en E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

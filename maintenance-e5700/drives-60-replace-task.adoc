@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 60-drive, replace E5700 60-drive, failed E5700 60-drive 
 summary: Sustituya una unidad en una bandeja de 60 unidades E5700. 
 ---
-= Reemplazar unidad en E5700 (bandeja de 60 unidades)
+= Sustituya la unidad: E5700 (bandeja de 60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale y configure la cabina E2800 o E5700. 
 ---
-= Instalar y configurar sistemas de almacenamiento E2800 y E5700
+= Instalación y configuración: Sistemas de almacenamiento E2800 y E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

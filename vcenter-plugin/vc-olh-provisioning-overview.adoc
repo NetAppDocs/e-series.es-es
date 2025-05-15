@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-provisioning-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Se pueden crear contenedores de datos, denominados volúmenes, para que el host pueda acceder al almacenamiento de la cabina. 
 ---
-= Información general de aprovisionamiento
+= Obtenga más información sobre el aprovisionamiento de almacenamiento en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure el software multivía para que proporcione una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. 
 ---
-= Configure el software de multivía
+= Configuración de software multivía en E-Series - Linux (SRP over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

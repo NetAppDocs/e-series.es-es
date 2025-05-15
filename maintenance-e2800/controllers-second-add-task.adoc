@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add E2800 controller, adding E2800 controller, simplex to duplex, convert to duplex, E2800, E-Series, eseries 
 summary: Añada una segunda controladora a una bandeja de controladoras que solo tenga un contenedor de controladora o añada un segundo contenedor de controladora a la versión simple. 
 ---
-= Añada un segundo contenedor de controladora en E2800
+= Añada el segundo compartimento de controladoras: E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

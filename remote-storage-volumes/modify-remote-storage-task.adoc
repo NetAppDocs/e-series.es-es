@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
 summary: Es posible modificar la configuración de conexión de cualquier importación de almacenamiento remoto configurada mediante la opción Ver/editar configuración en la pantalla almacenamiento remoto de SANtricity System Manager. 
 ---
-= Modifique la configuración de conexión de almacenamiento remoto
+= Modificar la configuración de conexión de almacenamiento remoto para volúmenes de almacenamiento remoto de SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

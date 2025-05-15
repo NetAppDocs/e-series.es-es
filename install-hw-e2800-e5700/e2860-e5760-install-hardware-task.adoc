@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale E2800 o E5700 en un rack de dos parantes o un armario del sistema de NetApp. 
 ---
-= Instale el hardware
+= Instale la tornillería - E2860, E5760 y DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

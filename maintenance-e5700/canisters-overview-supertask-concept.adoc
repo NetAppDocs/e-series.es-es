@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 canister, E5700 power supply, repair E5700 power supply, replace E5700 power supply, failed E5700 power supply 
 summary: Revise los tipos y requisitos del compartimento E5700. 
 ---
-= Requisitos para reemplazar el compartimento de E5700
+= Requisitos para sustituir el contenedor - E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

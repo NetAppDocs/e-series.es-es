@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Es posible usar el almacenamiento asignado a un host ESXi como almacén de datos Virtual Machine File System \(VMFS\) o una asignación de dispositivo sin formato \(RDM\). No se admiten RDM en el protocolo NVMe over Fibre Channel.' 
 ---
-= Configurar el almacenamiento en el host
+= Configuración del almacenamiento en el host en E-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

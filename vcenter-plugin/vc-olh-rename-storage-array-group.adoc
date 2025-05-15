@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-rename-storage-array-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Cambie el nombre de un grupo de cabinas de almacenamiento si el nombre actual ya no es significativo o no corresponde. 
 ---
-= Cambiar el nombre de un grupo de cabinas de almacenamiento
+= Cambie el nombre de un grupo de cabinas de almacenamiento en el complemento de almacenamiento SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

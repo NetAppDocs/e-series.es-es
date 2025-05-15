@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Añada una bandeja de unidades nueva mientras sigue aplicándose la alimentación a los otros componentes. 
 ---
-= Función de adición de una bandeja de unidades en caliente
+= Añadir en caliente una bandeja de unidades: Módulos IOM12 o IOM12B - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

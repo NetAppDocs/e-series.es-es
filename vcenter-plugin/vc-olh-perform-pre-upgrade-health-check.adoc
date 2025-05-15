@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Una comprobación del estado se ejecuta como parte del proceso de actualización, pero también es posible ejecutarla por separado, antes de comenzar. 
 ---
-= Realice la comprobación del estado previa a la actualización
+= Realice la comprobación del estado previa a la actualización en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

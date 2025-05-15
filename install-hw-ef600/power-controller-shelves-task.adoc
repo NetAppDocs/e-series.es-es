@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, power on, power cables 
 summary: Conecte los cables de alimentación y encienda las bandejas de unidades. 
 ---
-= Enciende las bandejas de controladoras
+= Encienda las bandejas de controladoras: EF300, EF600, EF300C y EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

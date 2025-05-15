@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilice la configuración exprés para un host Linux con un sistema E-Series. 
 ---
-= Información general sobre la configuración exprés de Linux
+= Obtenga información sobre la configuración exprés de Linux para E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

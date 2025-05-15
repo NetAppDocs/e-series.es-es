@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-add-capacity-to-a-pool-or-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Añada unidades para expandir la capacidad de un pool o un grupo de volúmenes existente. 
 ---
-= Añadir capacidad a un pool o grupo de volúmenes
+= Añada capacidad a un pool o grupo de volúmenes en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

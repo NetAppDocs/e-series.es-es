@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-upgrade-santricity-os.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Puede actualizar una o varias cabinas de almacenamiento con el software más reciente y NVSRAM para asegurarse de contar con las funciones y correcciones de errores más recientes. 
 ---
-= Actualice el sistema operativo SANtricity
+= Actualice el software SANtricity y NVSRAM mediante el complemento de almacenamiento para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

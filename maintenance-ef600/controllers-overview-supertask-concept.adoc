@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, EF300, EF600, EF300C, EF600C 
 summary: Requisitos y consideraciones para la sustitución de la controladora EF300 o EF600 
 ---
-= Requisitos para la sustitución de la controladora EF300 o EF600
+= Requisitos para sustituir el controlador: EF300 o EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

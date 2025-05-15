@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network connection, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Si la configuración utiliza el protocolo Iser over InfiniBand, realice los pasos de esta sección. 
 ---
-= Configurar las conexiones de red
+= Configurar las conexiones de red mediante SANtricity System Manager - Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

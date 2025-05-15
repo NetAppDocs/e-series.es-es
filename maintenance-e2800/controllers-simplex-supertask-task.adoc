@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
 summary: Es posible sustituir un contenedor de controladora con errores en una configuración simple. 
 ---
-= Sustituya la controladora en la configuración simple de E2800
+= Reemplace una controladora en configuración simple: E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

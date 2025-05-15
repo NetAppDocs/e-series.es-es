@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: Conecte los cables de alimentación y encienda las bandejas de unidades. 
 ---
-= Conecte el cable de las bandejas
+= Conecte los cables de alimentación: E2860, E5760 y DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya la controladora en E4000
+= Sustituya el controlador - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

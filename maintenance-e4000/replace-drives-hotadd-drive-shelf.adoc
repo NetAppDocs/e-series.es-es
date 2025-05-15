@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Sustituya una unidad en un E4000 con una bandeja de 12 o 24 unidades. 
 ---
-= Función de adición de una bandeja de unidades en caliente
+= Añadir en caliente una bandeja de unidades: Módulos IOM12 o IOM12B - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

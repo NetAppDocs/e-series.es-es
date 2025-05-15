@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Aprenda a instalar un sistema de almacenamiento E4012, DE212C o DE224C en un rack de dos parantes o un armario del sistema de NetApp. 
 ---
-= Instalación del hardware (E4012)
+= Instale la tornillería - E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

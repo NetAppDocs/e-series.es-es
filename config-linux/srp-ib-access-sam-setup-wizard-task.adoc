@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: El asistente de configuración de SANtricity System Manager se utiliza para configurar la cabina de almacenamiento. 
 ---
-= Acceda a SANtricity System Manager y utilice el asistente de configuración
+= Configurar el almacenamiento con SANtricity System Manager - Linux (SRP over InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

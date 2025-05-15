@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Antes de realizar definiciones de cada host en SANtricity System Manager, es necesario detectar los puertos de la controladora de destino del host y, a continuación, establecer conexiones NVMe. 
 ---
-= Detectar y conectarse al almacenamiento desde el host
+= Detectar y conectarse al almacenamiento desde el host en E-Series - Linux (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

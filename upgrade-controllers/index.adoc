@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
 summary: Información general sobre la actualización de una cabina E-Series mediante el reemplazo de controladoras. 
 ---
-= Información general sobre la actualización de las controladoras
+= Obtenga información sobre la actualización de controladoras E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

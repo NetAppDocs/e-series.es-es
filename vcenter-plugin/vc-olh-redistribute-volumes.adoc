@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-redistribute-volumes.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Redistribuya volúmenes para moverlos nuevamente a sus propietarios de controladoras preferidos 
 ---
-= Redistribuir volúmenes
+= Redistribuir volúmenes en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

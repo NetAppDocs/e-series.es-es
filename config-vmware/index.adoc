@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilice la configuración exprés para un host VMware con un sistema E-Series. 
 ---
-= Información general sobre la configuración exprés de VMware
+= Configuración exprés de VMware en la E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Después de instalar una batería nueva, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras. 
 ---
-= Vuelva a instalar el compartimento de controladoras E2800
+= Vuelva a instalar el compartimento de controladoras - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

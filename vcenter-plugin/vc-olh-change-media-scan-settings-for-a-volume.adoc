@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Un análisis de medios es una operación que se ejecuta en segundo plano, que analiza todos los datos e información de redundancia del volumen. Use esta opción para habilitar o deshabilitar la configuración del análisis de medios para un volumen o varios, o bien para cambiar la duración del análisis. 
 ---
-= Cambiar la configuración de análisis de medios para un volumen
+= Cambie la configuración de análisis de medios para un volumen en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

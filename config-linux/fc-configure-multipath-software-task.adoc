@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath software for Linux, express linux configuration, software configuration, linux host, 
 summary: Configure el software multivía, que proporciona una ruta redundante a la cabina de almacenamiento en caso de que se interrumpa una de las rutas físicas. 
 ---
-= Configure el software de multivía
+= Configuración de software multivía en E-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

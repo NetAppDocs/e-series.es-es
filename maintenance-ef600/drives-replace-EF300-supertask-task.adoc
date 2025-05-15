@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF300C, replace drive, drive failure 
 summary: Sustituya una unidad en una matriz EF300. 
 ---
-= Sustituya la unidad en una matriz EF300
+= Sustituya la unidad - EF300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

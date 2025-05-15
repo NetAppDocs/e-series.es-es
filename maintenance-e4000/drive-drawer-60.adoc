@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
 summary: Sustituya un cajón de unidades en una bandeja de controladoras E2860 o una bandeja de unidades DE460C. 
 ---
-= Reemplazar cajón de unidades en E4000 (bandeja de 60 unidades)
+= Sustituir el cajón de unidades: E4000 (bandeja de 60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

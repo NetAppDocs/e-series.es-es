@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, replace DIMM 
 summary: Sustituya un DIMM en una cabina EF300 o EF600. 
 ---
-= Sustituya los módulos DIMM en EF300 o EF600
+= Sustituya los DIMM - EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-check-volume-redundancy.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Es posible comprobar la redundancia de un volumen en un pool o grupo de volúmenes para determinar si los datos de ese volumen son consistentes. Los datos de redundancia se utilizan para reconstruir información rápidamente en una unidad de reemplazo si falla una de las unidades de un pool o grupo de volúmenes. 
 ---
-= Compruebe la redundancia de un volumen
+= Compruebe la redundancia de un volumen en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

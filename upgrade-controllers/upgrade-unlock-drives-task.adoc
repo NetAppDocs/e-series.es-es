@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, unlock drives, key management, Drive Security, 
 summary: Si va a actualizar las controladoras E2800 y E5700 y la función Drive Security está habilitada, debe desbloquear manualmente las unidades. 
 ---
-= Desbloquear unidades
+= Desbloquee las unidades E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

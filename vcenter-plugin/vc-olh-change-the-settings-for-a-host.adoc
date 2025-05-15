@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-the-settings-for-a-host.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Es posible modificar el nombre, el tipo de sistema operativo del host y los clústeres de hosts asociados de un host o clúster de hosts. 
 ---
-= Cambiar la configuración de un host
+= Cambie la configuración de un host en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

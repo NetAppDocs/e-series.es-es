@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-a-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Es posible crear un grupo de volúmenes para uno o varios volúmenes a los que el host puede acceder. 
 ---
-= Cree un grupo de volúmenes
+= Cree un grupo de volúmenes en el complemento de almacenamiento de SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 
