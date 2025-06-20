@@ -692,7 +692,6 @@
   <block id="c92ae1b66e0ea48f905922b70c51fcc0" category="summary">Sustituya una unidad en una controladora E2800 con una bandeja de 60 unidades.</block>
   <block id="609be9ba4308b107932857f7cf158595" category="paragraph">Es posible sustituir una unidad en un E2800 con una bandeja de 60 unidades.</block>
   <block id="620f2aecd1b13cc9e4943a2b50b4a8b6" category="paragraph">Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina de almacenamiento y puede notificar un error de unidad inminente o un fallo de unidad real. Cuando se produce un fallo en una unidad, el LED de atención ámbar se enciende. Es posible cambiar en caliente una unidad con error mientras la cabina de almacenamiento recibe operaciones de I/O.</block>
-  <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Este procedimiento se aplica a las bandejas de discos DCM y DCM2.</block>
   <block id="ee7607d86da8b65c01da2ac652fe4964" category="list-text">Si es necesario, use System Manager de SANtricity para localizar la unidad dentro de la cabina de almacenamiento.</block>
   <block id="b6a12ef99e8b336ab9462d700e1e8a99" category="list-text">Si la bandeja tiene un panel frontal, retírelo para poder ver los LED.</block>
   <block id="b5524c42961e4cb39436d596734756bc" category="list-text">En el menú contextual de la unidad, seleccione *encender luz de localización*.</block>
@@ -1151,9 +1150,6 @@
   <block id="d60c0bc605d3ea38eff56a862b5a189c" category="paragraph">Debido a la complejidad de este procedimiento, se recomienda lo siguiente:</block>
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Lea todos los pasos antes de comenzar el procedimiento.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Compruebe que la función de adición de una bandeja de unidades en caliente es el procedimiento necesario.</block>
-  <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.</block>
-  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">Los módulos IOM12B sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12B.</block>
-  <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Si va a cablear una bandeja de controladoras anterior a DE212C, DE224C o DE460, consulte<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block>.</block>
   <block id="160e453c42b3cffabeeb1eac7a869cc4" category="admonition">Para mantener la integridad del sistema, debe seguir el procedimiento exactamente en el orden que se presenta.</block>
@@ -1356,8 +1352,6 @@
   <block id="643cf53889a851d94f18e68d68887ef7" category="summary">Revise los requisitos y consideraciones sobre la sustitución de la controladora E2800.</block>
   <block id="441651ab40068dac3a602bac4db9c3cc" category="paragraph">Antes de sustituir o añadir una controladora E2800, revise los requisitos y consideraciones.</block>
   <block id="2d33b45e8b3a1d29678e5d1898be8872" category="paragraph">Cada contenedor de controladora contiene una tarjeta de controladora, una batería y una tarjeta de interfaz del host (HIC) opcional. Es posible añadir una segunda controladora a una configuración simple o reemplazar una controladora con errores.</block>
-  <block id="d8877bd06791feeb2257a189554b10c0" category="paragraph">Estos procedimientos se aplican a las bandejas de transmisión IOM12 e IOM12B.</block>
-  <block id="9d5445db77f905ba92077d0b48806948" category="admonition">Estos procedimientos se aplican a intercambios o sustituciones de IOM en caliente similares a los de las bandejas. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).</block>
   <block id="e0b4ad5fea96a69e322520c639ff0241" category="section-title">Requisitos para agregar una segunda controladora</block>
   <block id="b5c3b2977348508969f89a874a523c3c" category="paragraph">Es posible añadir un segundo contenedor de controladora a la versión simple de las siguientes bandejas de controladoras:</block>
   <block id="3a2fa91ff19a804d73a517b7fdbc6350" category="paragraph">Las figuras muestran una bandeja de controladoras de ejemplo antes de añadir una segunda controladora (un contenedor de controladora y una controladora vacía) y después de añadir una segunda controladora (dos contenedores de controladora).</block>
@@ -1607,7 +1601,6 @@
   <block id="6a0161351db47e6d63e91b32b2e8ab51" category="list-text">Funcionalidad DULBE</block>
   <block id="ffc30c728a6450937e83a23599bebc79" category="list-text">Para continuar, haga clic en *Sí*; de lo contrario, haga clic en *Cancelar*.</block>
   <block id="1ebf6a70e49c8f31eba20a498fa7f64a" category="paragraph">Después de añadir las unidades sin asignar a un pool o grupo de volúmenes, se redistribuyen los datos de cada volumen del pool o del grupo de volúmenes para incluir las unidades adicionales.</block>
-  <block id="4618a10c402a86f34f74700b56034c0f" category="summary">Mantenga la protección contra pérdida de bandeja y cajón para un pool o un grupo de volúmenes</block>
   <block id="8a3f4e59944403d76cf4ffb618284325" category="doc">¿Cómo se mantiene la protección contra pérdida de bandeja y cajón?</block>
   <block id="5f18e254e37bfef58483cda02161565b" category="paragraph">Para mantener la protección contra pérdida de bandeja y cajón para un pool o un grupo de volúmenes, use los criterios especificados en la siguiente tabla.</block>
   <block id="a0db49ba470c1c9ae2128c3470339153" category="cell">Nivel</block>
@@ -2036,7 +2029,6 @@
   <block id="ca4b42c6b7d1d9efed2572a062e91d87" category="list-text">En la página *gestionar*, seleccione la cabina de almacenamiento que contiene los volúmenes que desea eliminar.</block>
   <block id="67a6bd24eb45d2be8649bd7d83b910b5" category="paragraph">Se muestra el cuadro de diálogo Eliminar volúmenes.</block>
   <block id="d3e8b862fb8a94efba8bc0a2ec5a88a8" category="list-text">Seleccione uno o varios volúmenes para eliminar y confirme que desea realizar la operación.</block>
-  <block id="e995e7f7f68380b2da6f062d6f736236" category="summary">Para los sistemas EF300 y EF600, es posible configurar un volumen para que admita un tamaño de bloque de 512 bytes o 4 KiB (también llamado "tamaño de sector"). Debe configurar el valor correcto durante la creación del volumen.</block>
   <block id="fb5754cb7d8aec1ca725e7242d365730" category="doc">¿Qué debo saber acerca de los requisitos de tamaño de bloque del host?</block>
   <block id="e5e425d8ab1cbef0e34a067f0d88d470" category="paragraph">Para los sistemas EF300 y EF600, es posible configurar un volumen para que admita un tamaño de bloque de 512 bytes o 4 KiB (también llamado "tamaño de sector"). Debe configurar el valor correcto durante la creación del volumen. Si es posible, el sistema sugiere el valor predeterminado adecuado.</block>
   <block id="f4aa667b118a0a334c4fa467de995fc8" category="paragraph">Antes de configurar el tamaño de bloque de volumen, lea las siguientes limitaciones y directrices.</block>
@@ -2114,7 +2106,6 @@
   <block id="583002275364e2d5cd679b8ab0e8a306" category="list-text">Haga clic en *Anular asignación*.</block>
   <block id="52f259bc8461a1d15d56c746c9fca128" category="list-text">Los volúmenes para los cuales se anuló la asignación están disponibles para una nueva asignación.</block>
   <block id="c8af8348f354e4b1195adfd82ab9ec68" category="list-text">El sistema operativo del host sigue reconociendo el volumen hasta que se configuran los cambios en el host.</block>
-  <block id="968c500c45a669526a5ae69ef252eb12" category="summary">Debe crear un clúster de hosts si desea que dos o más hosts compartan el acceso al mismo conjunto de volúmenes.</block>
   <block id="36ba1dd2062be041e65d76f318fc9563" category="doc">¿Por qué debería crear un clúster de hosts?</block>
   <block id="605c94544e16797cd75e903049c8c75f" category="paragraph">Debe crear un clúster de hosts si desea que dos o más hosts compartan el acceso al mismo conjunto de volúmenes. Por lo general, los hosts individuales tienen instalado software de clustering a fin de coordinar el acceso a los volúmenes.</block>
   <block id="96f66bb77f7837273f050f33eb0d49c1" category="summary">Importe una configuración AutoSupport desde una cabina de almacenamiento a otras cabinas de almacenamiento.</block>
@@ -2415,8 +2406,6 @@
   <block id="961886d373243f3f3f779b008441b5d2" category="cell">Admite versiones de Mac OS que usan un controlador ATTO Technology, Inc. Y multipathing.</block>
   <block id="d93a7355c7e5ae529cbbd1c7386ef236" category="cell">Windows (ATTO)</block>
   <block id="1cef5a0ae504a39c3c685c81bb227bcc" category="cell">Admite sistemas operativos Windows que usan un controlador ATTO Technology, Inc. Y multiruta.</block>
-  <block id="fae9863ad38cf7cb4abba55837a6958e" category="cell">FlexArray (ALUA)</block>
-  <block id="80a4b6a6aea0733712df8ece7feeb565" category="cell">Admite un sistema FlexArray de NetApp mediante ALUA para accesos múltiples.</block>
   <block id="448462a9364fed0f780b5871c1332348" category="cell">SVC DE IBM</block>
   <block id="ba5b374a9253be7b2e7ff414763a91ee" category="cell">Es compatible con la configuración de la controladora de volúmenes SAN de IBM.</block>
   <block id="fb83a625e5852c1ba47fe358f2d50ffc" category="cell">Predeterminado de fábrica</block>
@@ -2527,7 +2516,6 @@
   <block id="7410ba837adb8d3cd0338bce62e7429c" category="list-text">Escriba reset en el campo y haga clic en *Restablecer*.</block>
   <block id="b76721519a51191c06049d01b9160a4f" category="paragraph">Una vez que se actualiza el explorador, es posible que el explorador bloquee el acceso al sitio de destino e informe de que el sitio utiliza HTTP estricto Transport Security. Esta condición surge cuando se cambia a certificados autofirmados. Para borrar la condición que bloquea el acceso al destino, debe borrar los datos de navegación del explorador.</block>
   <block id="0d976dc17b4640ed74e2e82306ff7154" category="paragraph">El sistema se revierte al uso del certificado autofirmado del servidor. Como resultado, el sistema solicita a los usuarios que acepten manualmente el certificado autofirmado para sus sesiones.</block>
-  <block id="490911223ced9bd35d325330312a99b5" category="summary">La frase de contraseña se utiliza para cifrar y descifrar el archivo de claves de seguridad almacenado en el cliente de gestión local.</block>
   <block id="7e2fd80391cbb19f61be6028669d1143" category="doc">¿Por qué debo definir una frase de contraseña?</block>
   <block id="2f42cd01026066a070aa52e53e4d963f" category="paragraph">La frase de contraseña se utiliza para cifrar y descifrar el archivo de claves de seguridad almacenado en el cliente de gestión local. Sin la frase de contraseña, la clave de seguridad no se puede descifrar y utilizar para desbloquear datos de una unidad con la función de seguridad habilitada, si se la reinstala en otra cabina de almacenamiento.</block>
   <block id="1fd32bb6436c4347926019cf455ad129" category="summary">Cambie el nombre de la cabina de almacenamiento que se muestra en la página gestionar.</block>
@@ -2686,7 +2674,6 @@
   <block id="0f1deb7a98bac1bd4bb0844a2c753c54" category="list-text">El sistema cambia la propiedad de la controladora del volumen. Las operaciones de I/o del volumen ahora se redirigen por esta ruta de I/O.</block>
   <block id="6cdb4b818516ee964bc4dde248985c1b" category="list-text">Es posible que el volumen no utilice la ruta de I/o nueva hasta que se vuelva a configurar el controlador multivía para que reconozca la ruta nueva.</block>
   <block id="0409e6ed26fafb8606937f0f0dfc3026" category="paragraph">Por lo general, esta acción tarda menos de cinco minutos.</block>
-  <block id="4599f147525488978c059ab5443c5a94" category="summary">Los volúmenes de esta carga de trabajo no están asociados a una carga de trabajo específica de la aplicación, por lo que no es posible eliminar la carga de trabajo.</block>
   <block id="cc41a400b6ddab31b3cc4c347ea5b96a" category="doc">¿Por qué no se puede eliminar la carga de trabajo seleccionada?</block>
   <block id="3bfd2179043341e09a4fc1cfd720d6ff" category="paragraph">Esta carga de trabajo consta de un grupo de volúmenes que se creó mediante la interfaz de línea de comandos (CLI) o se migró (se importó/exportó) de una cabina de almacenamiento diferente. Como resultado, los volúmenes de esta carga de trabajo no están asociados a una carga de trabajo específica de la aplicación, por lo que no es posible eliminar la carga de trabajo.</block>
   <block id="1632d99c178834af8258cd047e5edd2e" category="summary">Inicialice manualmente un volumen para recuperar el sistema de ciertas condiciones de fallo.</block>
@@ -2910,7 +2897,6 @@
   <block id="9c83e144e5481ac6766f4055e566594d" category="section-title">Obtenga más información</block>
   <block id="4666fc2f640685636f115f8b2b6b8ce0" category="inline-link">Documentación de VMware vSphere</block>
   <block id="d661d851e10e229850fc94389c5d8c8b" category="paragraph">Para obtener más información sobre la gestión de almacenes de datos en vSphere Client, consulte<block ref="d42b9bf91b20b4925869e8fc095cb798" category="inline-link-rx"></block>.</block>
-  <block id="a755886af9ddc52625c98ff0c2403d42" category="summary">Las controladoras y unidades con seguridad habilitada comparten una clave de seguridad dentro de una cabina de almacenamiento.</block>
   <block id="2a0d49e5c65d1c328eea1427c45f821e" category="doc">¿Qué debo saber antes de crear una clave de seguridad?</block>
   <block id="eb8e4643855758b3255653b9508bfb4a" category="paragraph">Las controladoras y unidades con seguridad habilitada comparten una clave de seguridad dentro de una cabina de almacenamiento. Si se quita una unidad con la función de seguridad habilitada de la cabina de almacenamiento, la clave de seguridad protege los datos de un acceso no autorizado.</block>
   <block id="41f869dddf7c6279ec6063ce284c3e8e" category="paragraph">Puede crear y gestionar claves de seguridad mediante uno de los siguientes métodos:</block>
@@ -3344,7 +3330,6 @@
   <block id="1a7d965d58ed6454e8d24b40c08b6a54" category="list-text">La cabina de origen no necesita tener el estado óptimo.</block>
   <block id="8c4aa541ee911e8d80451ef8cc304806" category="section-title">Reducida</block>
   <block id="05b001e38e62fa7f77ccbc1eb21cec1f" category="list-text">La capacidad de una unidad puede variar entre las cabinas de origen y las objetivo, siempre y cuando la capacidad de volumen en la cabina objetivo sea mayor que en la de origen. (Una cabina objetivo puede tener unidades más nuevas y con mayor capacidad que la operación de replicación quizás no configure por completo en volúmenes).</block>
-  <block id="c7f22d49f002f26198a719f2496c2e98" category="summary">La función Importar configuración es una operación en lote que carga las configuraciones desde una cabina de almacenamiento a varias cabinas de almacenamiento. La configuración que se importe durante esta operación dependerá de cómo esté configurada la cabina de almacenamiento de origen en System Manager.</block>
   <block id="6aa467b445a7d222ea7a821c8df54a08" category="doc">¿Qué configuración se importa?</block>
   <block id="5a336d7c8bb4d9fb626af7c0fffe68af" category="paragraph">La función Importar configuración es una operación en lote que carga las configuraciones desde una cabina de almacenamiento a varias cabinas de almacenamiento.</block>
   <block id="5f54df5b09ce6e5e7ccff3fed9aea673" category="paragraph">La configuración que se importe durante esta operación dependerá de cómo esté configurada la cabina de almacenamiento de origen en System Manager. Las siguientes configuraciones pueden importarse a varias cabinas:</block>
@@ -3360,7 +3345,6 @@
   <block id="71396049ff539200dbba1007ca0cbc94" category="paragraph">La capacidad de conservación es la cantidad de capacidad (número de unidades) reservada en un pool para dar soporte a fallos de unidad potenciales. Cuando se crea un pool, el sistema reserva automáticamente una cantidad predeterminada de capacidad de conservación según el número de unidades del pool. Si creó volúmenes en toda la capacidad utilizable disponible, no puede aumentar la capacidad de conservación sin agregar capacidad al pool, ya sea sumando unidades o eliminando volúmenes.</block>
   <block id="fbd4c513da5cb1e1fe2c4db1adda28c8" category="paragraph">Es posible cambiar la capacidad de conservación de los pools y los grupos de volúmenes. Seleccione el pool que desea editar. Haga clic en *Ver/editar configuración* y, a continuación, seleccione la ficha *Configuración*.</block>
   <block id="5f1d6366c7ffd99ff1b7c5f05e692914" category="admonition">La capacidad de conservación se especifica como el número de unidades, a pesar de que la capacidad de conservación real se distribuya en las unidades del pool.</block>
-  <block id="27ff4e5987307be95b847357578a7d2c" category="summary">Una comprobación de redundancia determina si los datos de un volumen en un pool o grupo de volúmenes son consistentes.</block>
   <block id="dbdb64210af00cba98b2ae65e68fc433" category="doc">¿Qué es una comprobación de redundancia?</block>
   <block id="527686381caf5b91f8b2570f0b90f7e1" category="paragraph">Una comprobación de redundancia determina si los datos de un volumen en un pool o grupo de volúmenes son consistentes. Los datos de redundancia se utilizan para reconstruir información rápidamente en una unidad de reemplazo si falla una de las unidades de un pool o grupo de volúmenes.</block>
   <block id="072001db08ae65e793389aff41f4b0bf" category="list-text">Escanea los bloques de datos en un volumen RAID 3, un volumen RAID 5 o un volumen RAID 6 y, a continuación, comprueba la información de redundancia de cada bloque. (RAID 3 solo puede asignarse a grupos de volúmenes con interfaz de línea de comandos.)</block>
@@ -3432,7 +3416,6 @@
   <block id="35bc59ae8725a73f71e22d5b7e2eda45" category="paragraph">Si desea importar certificados de confianza, es necesario importar los certificados para las controladoras de las cabinas de almacenamiento mediante System Manager.</block>
   <block id="2f3bb55cd5666e46843ed94b99f1cc9c" category="list-text">Seleccione menú:Importar[certificados] para importar un certificado de CA o menú:Importar[certificados de la cabina de almacenamiento autofirmados] para importar un certificado autofirmado.</block>
   <block id="3ebb85ccf545d068b56aa6242e5d9739" category="list-text">En el cuadro de diálogo, seleccione el certificado y, a continuación, haga clic en *Importar*.</block>
-  <block id="e28ca758b5b6384ff2daa36accced63c" category="summary">Durante la creación del volumen, se le solicita información sobre el uso de una carga de trabajo.</block>
   <block id="b5a3b95a88ff3f89275ca18c4736d4b8" category="doc">¿Cómo afecta la creación de volúmenes la carga de trabajo seleccionada?</block>
   <block id="0c6710fd70e8f6dfb7dc7c5ef665fd39" category="paragraph">Durante la creación del volumen, se le solicita información sobre el uso de una carga de trabajo. El sistema utiliza esta información para crear una configuración de volumen óptima para el usuario, que se puede editar en caso de ser necesario. De manera opcional, es posible omitir este paso en la secuencia de creación de volúmenes.</block>
   <block id="a9b6571e3fb4b307db1e9aeb13903f33" category="list-text">Aplicaciones de videovigilancia</block>
@@ -3469,7 +3452,6 @@
   <block id="8a91e43fda1d8250acb98c353120a706" category="list-text">*Clúster de host* -- puede asignar un volumen a un clúster de hosts. Todos los hosts del clúster de hosts pueden acceder al volumen.</block>
   <block id="d0b9f0380ee2928d1b52d88ef2843238" category="list-text">*Host dentro de un cluster host* -- puede asignar un volumen a un host individual que forma parte de un cluster de host. Aunque el host forma parte de un clúster de hosts, solo el host individual puede acceder al volumen y no ningún otro host del clúster de hosts.</block>
   <block id="bf719a79e9b7ab0d58a63705ff721b92" category="paragraph">Cuando se crean volúmenes, se asignan automáticamente números de unidad lógica (LUN). Los LUN actúan como dirección entre el host y la controladora durante las operaciones de I/O. Es posible cambiar el LUN después de crear un volumen.</block>
-  <block id="8289ad2daf4149715a39ad8d6af619b8" category="summary">Los volúmenes Snapshot que incluyen un volumen base con la función DA habilitada no son aptos para asignarse a un host que no es compatible con la función Data Assurance (DA).</block>
   <block id="a75d3526ba8cd40a248e9da80d0ba8d2" category="doc">¿Por qué no se muestran todos los volúmenes, los hosts o los clústeres de hosts?</block>
   <block id="f956e41235aa6de0ef7cf1901fa9a994" category="paragraph">Los volúmenes Snapshot que incluyen un volumen base con la función DA habilitada no son aptos para asignarse a un host que no es compatible con la función Data Assurance (DA). Debe deshabilitar DA en el volumen base para poder asignar un volumen Snapshot a un host que no es compatible con DA.</block>
   <block id="92fc66f9534d94b4859793638454d6ee" category="paragraph">Tenga en cuenta las siguientes directrices para el host al cual planea asignar el volumen Snapshot:</block>
@@ -5155,7 +5137,6 @@
   <block id="69388a3aa77fde6c6db723db24c07886" category="paragraph">En el caso de los sistemas Linux que son compatibles con el sistema de gestión de paquetes RPM, puede instalar el proxy de servicios web mediante un archivo RPM opcional.</block>
   <block id="44fdd30cd930ac3164eb732ccfc71839" category="list-text">Descargue el archivo RPM en el servidor en el que desea instalar el proxy y Unified Manager.</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">Introduzca el siguiente comando:</block>
-  <block id="832e1d3c786f0b6f9f452d072f2d4b27" category="paragraph"><block ref="354464ae661582f620680bd9feceacaa" prefix="" category="inline-code"></block></block>
   <block id="e90cc19871614d9efbaffbaffd7e2d47" category="admonition">En el comando anterior,<block ref="699ac6f9ea1aed3b414789e971975c3a" prefix=" " category="inline-code"></block> representa el número de versión.</block>
   <block id="d8fa9dcb72070f1d463b3bee9fbca968" category="summary">Compatibilidad y restricciones para WSP.</block>
   <block id="e855d2295b2f9443bac3be188bebdbd4" category="doc">Compatibilidad y restricciones</block>
@@ -6258,7 +6239,6 @@
   <block id="a921339b8d3161b37da9323732b510ad" category="paragraph">*(1)* _handle para sacar el contenedor del ventilador._</block>
   <block id="2a6f6b0e35b2bf4af51a4b0bfe47141a" category="summary">Sustituya una unidad en una bandeja de 60 unidades E5700.</block>
   <block id="ff4525471962c2f80f88cc7bda612cda" category="paragraph">Es posible sustituir una unidad en una bandeja de 60 unidades.</block>
-  <block id="6dc10b003bcb8e0cbbcf076e7dbcdf2f" category="paragraph">Esta tarea se aplica a las bandejas de unidades DCM y DCM2.</block>
   <block id="76b188eaa0ef9d72b9512f3fe3343776" category="paragraph">Prepare la sustitución de una unidad en una bandeja de 60 unidades. Para ello, compruebe Recovery Guru en SANtricity System Manager y complete los pasos necesarios. A continuación, puede localizar el componente con errores.</block>
   <block id="150b51c80911b05cf37338f77f925655" category="summary">Añada una HIC en E5700.</block>
   <block id="353e171319921f7e6a7b6eba566d008d" category="paragraph">Puede añadir una tarjeta de interfaz del host (HIC) a contenedores de la controladora E5700 con puertos de host de la placa base. Esta adición aumenta el número de puertos de host en la cabina de almacenamiento y proporciona protocolos de host adicionales.</block>
@@ -8054,7 +8034,6 @@
   <block id="ce3948f2b44ee14a18d362f994260727" category="sidebar">Configurar hosts</block>
   <block id="f0ba1c2df528f80a7b9482044ac9d46b" category="sidebar">Configure los pools y los grupos de volúmenes</block>
   <block id="37f5864db129acc269bc46cb006e8605" category="sidebar">Quitar el plugin</block>
-  <block id="483a5da192f46e3cfe8391d3ef234fc4" category="sidebar">Preguntas frecuentes</block>
   <block id="979ea2ad56e327e601f7f385d923a6f7" category="sidebar">Soluciones heredadas</block>
   <block id="fa3d170e011f9d178479859be77bf32e" category="sidebar">Conector de cloud</block>
   <block id="acd35904a6ced15ec9eaaacc8f6dbe00" category="sidebar">Configure Cloud Connector por primera vez</block>
@@ -8481,9 +8460,7 @@
   <block id="5835021a0e70e0a13bc60ddff4162aca" category="paragraph"><block ref="5835021a0e70e0a13bc60ddff4162aca" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17360156c8ceaa57309077e605e88697" category="image-alt">Flujo de trabajo del proceso de instalación E2800 y E5700</block>
   <block id="9388df48e85777aba8981c9e79739824" category="inline-image-macro">E4012 Topología directa, width=1000px</block>
-  <block id="9dcbe6d474a3385e1258eeebe1d96cfa" category="paragraph"><block ref="9dcbe6d474a3385e1258eeebe1d96cfa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5115f367ddc4b23f2a5a9dce410d220" category="inline-image-macro">E4012 Topología de la estructura, width=1000px</block>
-  <block id="fe5422a7f743c4750aa826cb030729eb" category="paragraph"><block ref="fe5422a7f743c4750aa826cb030729eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f998d3759a46f941c16045d05799b20" category="inline-image-macro">Puerto de gestión de la controladora E4000</block>
   <block id="419c5b2edef00ba85d62682d5ff0138c" category="paragraph"><block ref="419c5b2edef00ba85d62682d5ff0138c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f530fae0a98563bf22e6ee7a23163588" category="list-text">Siga las instrucciones del navegador para continuar e iniciar SANtricity System Manager. Si no puede establecer una conexión, compruebe que no esté recibiendo la configuración de red de un servidor DHCP.</block>
@@ -8491,9 +8468,7 @@
   <block id="05f07938d9743df4b9673ac6e16d5eaf" category="list-text">Inicie sesión con la contraseña que ha configurado anteriormente. Se mostrará el asistente Configure Network Settings.</block>
   <block id="61c8d556c74bbd20f07d7c1565d11a11" category="list-text">En la configuración de red más simple, conecte la controladora a un explorador web y utilice el administrador del sistema de SANtricity para gestionar una sola cabina de almacenamiento serie E4000. Para acceder a System Manager, utilice las mismas direcciones IP que se usaron para configurar los puertos de gestión.</block>
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 Topología directa, width=1000px</block>
-  <block id="98e6536dfa926f6bd4a1900657c27282" category="paragraph"><block ref="98e6536dfa926f6bd4a1900657c27282" category="inline-image-macro-rx" type="image"></block></block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">E4060 Topología de la estructura, width=1000px</block>
-  <block id="72c6889744a45c86c32b640c76b2138a" category="paragraph"><block ref="72c6889744a45c86c32b640c76b2138a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2bd875f2f303555807a3b13a6b64bb" category="paragraph"><block ref="ab2bd875f2f303555807a3b13a6b64bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff2e827a53ef25671ffc7469bb5208a2" category="list-title">Ejemplo A: Una bandeja de controladoras E4000 con tres bandejas de discos DE212C/DE224C en una configuración SAS estándar.</block>
   <block id="ecf826f3b05c4b630ca5e118d6536932" category="list-title">Ejemplo B: Una bandeja de controladoras E4000 con una bandeja de discos DE212C/DE224C en una configuración SAS estándar.</block>
@@ -9711,4 +9686,22 @@
   <block id="ed389a9acb72de33be78325f147d7d8c" category="doc">Obtenga más información sobre SANtricity Web Services y Unified Manager</block>
   <block id="f14a1a04aab620524ee87bd0fd002ab1" category="doc">Obtenga información sobre la terminología de proxy de servicios web de SANtricity</block>
   <block id="abf831fd1f3fab9981530f2ea36177b2" category="doc">Permite gestionar el sondeo automático de estadísticas de proxy de servicios web de SANtricity</block>
+  <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.</block>
+  <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">Los módulos IOM12C solo son compatibles con SANtricity OS 11.90R3 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12C.</block>
+  <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12C por otro módulo IOM12C. (Su bandeja puede tener dos módulos IOM12 o dos IOM12C).</block>
+  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">Los módulos IOM12C sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12C.</block>
+  <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="142dc71d06d08da442f6fe84d80e526d" category="paragraph"><block ref="142dc71d06d08da442f6fe84d80e526d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dea137ce87e98617e1e7f9c6f97eeeff" category="admonition">Estos procedimientos se aplican a intercambios o sustituciones de IOM en caliente similares a los de las bandejas. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12C por otro módulo IOM12C. (Su bandeja puede tener dos módulos IOM12 o dos IOM12C).</block>
+  <block id="88db80c02306ca8e9bac2283b0d2f6bf" category="paragraph">Este procedimiento se aplica a los estantes de unidades DCM, DCM2 y DCM3.</block>
+  <block id="b2d2940e83701ff478975b36d255b487" category="paragraph">Esta tarea se aplica a los estantes de unidades DCM, DCM2 y DCM3.</block>
+  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Estas preguntas frecuentes pueden ser de ayuda si solo está buscando una respuesta rápida a una pregunta.</block>
+  <block id="a318c851f3d3c0a7eeb1313f1422c3b3" category="doc">Preguntas frecuentes sobre el complemento de almacenamiento SANtricity para vCenter</block>
+  <block id="33f3664698fdab78efe7579f9849af32" category="paragraph"><block ref="b6ee0733cf8f7004d998d8fc49cc2022" prefix="" category="inline-code"></block></block>
+  <block id="a10a0fef1a8b50d16443976fedae1e16" category="section-title">Nuevas características en la versión 11.90R3</block>
+  <block id="c78544d43a065eb825edb9e16bf0e9ad" category="paragraph">Compatibilidad del sistema operativo SANtricity con IOM12C y DCM3</block>
+  <block id="94d90ce4793f949687897ec062d97b9c" category="paragraph">La compatibilidad con los módulos SAS-3 IOM12C y DCM3 ya está disponible para el firmware del controlador 11.90R3 o posterior. Los módulos IOM12C y DCM3 sustituyen a los módulos IOM12B y DCM2.</block>
+  <block id="3a2a69a35a4560167d4c0478029a3f70" category="sidebar">Preguntas frecuentes sobre el complemento de almacenamiento para vCenter</block>
 </blocks>

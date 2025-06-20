@@ -23,10 +23,10 @@ Debido a la complejidad de este procedimiento, se recomienda lo siguiente:
 .Acerca de esta tarea
 Este procedimiento se aplica a la adición en caliente de una bandeja de unidades DE212C, DE224C o DE460C a una bandeja de controladoras E4000.
 
-Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.
+Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.
 
 
-NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).
+NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12C por otro módulo IOM12C. (Su bandeja puede tener dos módulos IOM12 o dos IOM12C).
 
 
 NOTE: Para mantener la integridad del sistema, debe seguir el procedimiento exactamente en el orden que se presenta.

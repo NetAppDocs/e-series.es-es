@@ -16,7 +16,7 @@ Es posible sustituir una unidad en un E4000 con una bandeja de 60 unidades.
 .Acerca de esta tarea
 Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina de almacenamiento y puede notificar un error de unidad inminente o un fallo de unidad real. Cuando se produce un fallo en una unidad, el LED de atención ámbar se enciende. Es posible cambiar en caliente una unidad con error mientras la cabina de almacenamiento recibe operaciones de I/O.
 
-Este procedimiento se aplica a las bandejas de discos DCM y DCM2.
+Este procedimiento se aplica a los estantes de unidades DCM, DCM2 y DCM3.
 
 .Antes de empezar
 * Revise los requisitos de manipulación de unidades.

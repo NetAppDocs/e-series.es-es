@@ -45,7 +45,7 @@ Una topología de switch utiliza switches para conectar hosts a las controladora
 La figura siguiente muestra un ejemplo de conexión. En el caso de los switches que proporcionan funcionalidad de aprovisionamiento, debe aislar cada iniciador y cada pareja de objetivos.
 
 .Dos hosts y dos switches
-image::../media/topology_host_fabric_generic.png[Dos hosts y dos switches]
+image::../media/topology_host_fabric_generic_ieops-2152.svg[Dos hosts y dos switches]
 
 *(1)* _Conecte cada adaptador de host directamente al conmutador._
 

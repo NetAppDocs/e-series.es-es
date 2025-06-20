@@ -13,13 +13,13 @@ summary: 'Conecte cada controladora de la bandeja de controladoras a un módulo 
 [role="lead"]
 Debe conectar cada controladora de la bandeja de controladoras a un módulo de I/o (IOM) de una bandeja de unidades.
 
-Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.
+Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.
 
 
-NOTE: Los módulos IOM12B sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12B.
+NOTE: Los módulos IOM12C sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12C.
 
 
-NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12B por otro módulo IOM12B. (Su bandeja puede tener dos módulos IOM12 o dos IOM12B).
+NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de IOM en caliente. Esto significa que sólo puede sustituir un módulo IOM12 por otro módulo IOM12 o sustituir un módulo IOM12C por otro módulo IOM12C. (Su bandeja puede tener dos módulos IOM12 o dos IOM12C).
 
 Si va a cablear una bandeja de controladoras anterior a DE212C, DE224C o DE460, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente"^].
 

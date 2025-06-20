@@ -28,7 +28,7 @@ NOTE: Se pueden usar los puertos de host en la parte inferior izquierda (e1a, e1
 --
 El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una topología de conexión directa.
 
-image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 Topología directa, width=1000px"]
+image:../media/drw_labeled_e4060_direct_topology_ieops-2158.svg["E4060 Topología directa, width=1000px"]
 
 . Conecte cada puerto de host de HBA a los puertos de host de las controladoras (e1a, e1b, e1c y e1d o e0a y e0b).
 
@@ -41,7 +41,7 @@ NOTE: Para obtener ejemplos de diagramas de cableado adicionales, consulte https
 --
 El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una topología de estructura.
 
-image:../media/drw_e4060_fabric_topology_ieops-2049.svg["E4060 Topología de la estructura, width=1000px"]
+image:../media/drw_e4060_fabric_topology_ieops-2159.svg["E4060 Topología de la estructura, width=1000px"]
 
 . Conecte cada adaptador de host directamente al conmutador.
 . Conecte cada switch directamente a los puertos de host de las controladoras (e1a, e1b, e1c y e1d o e0a y e0b).

@@ -135,7 +135,7 @@ En el caso de los sistemas Linux que son compatibles con el sistema de gestión 
 . Abra una ventana de terminal.
 . Introduzca el siguiente comando:
 +
-`rpm -u santricity_webservices-nn.nn.nn.nnnn-n.x86_64.rpm`
+`rpm -U santricity_webservices-nn.nn.nn.nnnn-n.x86_64.rpm`
 
 +
 

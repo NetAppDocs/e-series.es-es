@@ -18,7 +18,7 @@ Aprenda a conectar los cables de alimentación y a encender las bandejas de unid
 * Tome precauciones antiestáticas.
 
 
-Este procedimiento se aplica a las bandejas de mando IOM12 e IOM12B.
+Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.
 
 .Pasos
 . Conecte el cable de las bandejas.
