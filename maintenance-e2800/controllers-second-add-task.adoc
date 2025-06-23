@@ -218,7 +218,7 @@ El archivo se guarda en la carpeta Descargas del explorador con el nombre *lates
 ** Cuando se actualiza NVSRAM de controladora, toda la configuración personalizada aplicada a la NVSRAM existente se pierde durante el proceso de activación. Se debe volver a aplicar la configuración personalizada a la NVSRAM una vez que finaliza el proceso de activación.
 
 
-. Cambie la configuración de la cabina de almacenamiento a doble con comandos de la CLI. Para usar la CLI, puede abrir un símbolo del sistema si ha descargado el paquete de CLI o puede abrir Enterprise Management Window (EMW) si tiene instalado Storage Manager.
+. Cambie la configuración de la cabina de almacenamiento a doble con comandos de la CLI. Para utilizar la CLI, abra un símbolo del sistema si descargó el paquete CLI o puede abrir la Ventana de administración empresarial (EMW) si tiene instalado el Administrador de almacenamiento.
 +
 ** Desde un símbolo del sistema:
 +

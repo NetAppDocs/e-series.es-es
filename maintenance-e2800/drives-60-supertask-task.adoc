@@ -40,7 +40,6 @@ CAUTION: *Posible pérdida de acceso a los datos* -- Si un volumen ya está en e
 ** Acceso a la interfaz de línea de comandos (CLI) de la cabina de almacenamiento. Si no tiene acceso a la CLI, puede realizar una de las siguientes acciones:
 +
 *** *Para SANtricity System Manager (versión 11.60 y posteriores)* -- Descargue el paquete CLI (archivo zip) desde System Manager. Vaya a MENU:Settings[System > Add-ons > Command Line Interface]. Luego, puede emitir comandos de la CLI a partir de una solicitud del sistema operativo, como dos C: Prompt.
-*** *Para SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga las instrucciones de la guía exprés para descargar e instalar el software. Puede ejecutar los comandos de la CLI en EMW seleccionando MENU:Tools[Execute Script].
 
 
 

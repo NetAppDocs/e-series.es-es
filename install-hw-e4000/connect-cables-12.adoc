@@ -23,10 +23,14 @@ Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.
 .Pasos
 . Conecte el cable de las bandejas.
 +
-Conecte los cables del sistema según su configuración. Si necesita más opciones de cableado que los ejemplos mostrados, consulte link:../install-hw-cabling/index.html["Cableado"].
+Conecte los cables del sistema según su configuración.
 
 +
-Para los ejemplos mostrados, necesita los siguientes cables:
+
+NOTE: Si necesita más opciones de cableado que los ejemplos proporcionados a continuación, consulte link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Cableado"^] .
+
++
+Necesita los siguientes cables:
 
 +
 |===
@@ -39,19 +43,22 @@ image:../media/sas_cable.png["Cable SAS"]
 
 |===
 +
-.Ejemplo A: Una bandeja de controladoras E4000 con tres bandejas de discos DE212C/DE224C en una configuración SAS estándar.
-.. Conecte la controladora A al IOM A de la primera bandeja de unidades.
-.. Conecte el cable IOM A de la primera bandeja de unidades al IOM A de la segunda bandeja de unidades.
-.. Cablee IOM A de la segunda bandeja de unidades con el IOM A de la tercera bandeja de unidades.
-.. Conecte la controladora B al IOM B de la tercera bandeja de unidades.
-.. Cablee el IOM B de la segunda bandeja de unidades con el IOM B de la tercera bandeja de unidades.
-.. Conecte el cable IOM B de la primera bandeja de unidades al IOM B de la segunda bandeja de unidades.
-
-
+.. *Ejemplo A: Un estante de controlador E4000 con tres estantes de discos DE212C/DE224C en una configuración SAS estándar*
 +
-.Ejemplo B: Una bandeja de controladoras E4000 con una bandeja de discos DE212C/DE224C en una configuración SAS estándar.
-.. Conecte el cable de la controladora A al IOM A.
-.. Conecte el cable de la controladora B al IOM B.
+... Conecte la controladora A al IOM A de la primera bandeja de unidades.
+... Conecte el cable IOM A de la primera bandeja de unidades al IOM A de la segunda bandeja de unidades.
+... Cablee IOM A de la segunda bandeja de unidades con el IOM A de la tercera bandeja de unidades.
+... Conecte la controladora B al IOM B de la tercera bandeja de unidades.
+... Cablee el IOM B de la segunda bandeja de unidades con el IOM B de la tercera bandeja de unidades.
+... Conecte el cable IOM B de la primera bandeja de unidades al IOM B de la segunda bandeja de unidades.
+
+
+.. *Ejemplo B: Un estante de controlador E4000 con un estante de disco DE212C/DE224C en una configuración SAS estándar*
++
+... Conecte el cable de la controladora A al IOM A.
+... Conecte el cable de la controladora B al IOM B.
+
+
 
 
 . Encienda las bandejas de unidades.

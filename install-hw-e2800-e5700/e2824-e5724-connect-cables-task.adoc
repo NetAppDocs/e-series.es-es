@@ -29,10 +29,14 @@ NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de I
 .Pasos
 . Conecte el cable de las bandejas.
 +
-Conecte los cables del sistema según su configuración. Si necesita más opciones de cableado que los ejemplos mostrados, consulte link:../install-hw-cabling/index.html["Cableado"].
+Conecte los cables del sistema según su configuración.
 
 +
-Para los ejemplos mostrados, necesita los siguientes cables:
+
+NOTE: Si necesita más opciones de cableado que los ejemplos proporcionados a continuación, consulte link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Cableado"^] .
+
++
+Necesita los siguientes cables:
 
 +
 |===
@@ -45,25 +49,22 @@ image:../media/sas_cable.png["Cable SAS"]
 
 |===
 +
-.Ejemplo A: Bandeja de controladoras E5700 con tres bandejas de discos DE212C/DE224 en una configuración SAS estándar.
-image:../media/example_a_28_57.png["Controlador E5700 en una configuración SAS"]
-
+.. *Ejemplo A: Estante de controlador con tres estantes de discos DE212C/DE224 en una configuración SAS estándar*
 +
-.. Conecte la controladora A al IOM A de la primera bandeja de unidades.
-.. Conecte el cable IOM A de la primera bandeja de unidades al IOM A de la segunda bandeja de unidades.
-.. Cablee IOM A de la segunda bandeja de unidades con el IOM A de la tercera bandeja de unidades.
-.. Conecte la controladora B al IOM B de la tercera bandeja de unidades.
-.. Cablee el IOM B de la segunda bandeja de unidades con el IOM B de la tercera bandeja de unidades.
-.. Conecte el cable IOM B de la primera bandeja de unidades al IOM B de la segunda bandeja de unidades.
+... Conecte la controladora A al IOM A de la primera bandeja de unidades.
+... Conecte el cable IOM A de la primera bandeja de unidades al IOM A de la segunda bandeja de unidades.
+... Cablee IOM A de la segunda bandeja de unidades con el IOM A de la tercera bandeja de unidades.
+... Conecte la controladora B al IOM B de la tercera bandeja de unidades.
+... Cablee el IOM B de la segunda bandeja de unidades con el IOM B de la tercera bandeja de unidades.
+... Conecte el cable IOM B de la primera bandeja de unidades al IOM B de la segunda bandeja de unidades.
 
 
+.. *Ejemplo B: Estante de controlador con un estante de disco DE212C/DE224 en una configuración SAS estándar*
 +
-.Ejemplo B: Una bandeja de controladoras E5700 con una bandeja de discos DE212C/DE224 en una configuración SAS estándar.
-image:../media/example_b_57_28.png["Controlador E5700 en una configuración SAS"]
+... Conecte el cable de la controladora A al IOM A.
+... Conecte el cable de la controladora B al IOM B.
 
-+
-.. Conecte el cable de la controladora A al IOM A.
-.. Conecte el cable de la controladora B al IOM B.
+
 
 
 . Encienda las bandejas de unidades.
