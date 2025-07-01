@@ -63,8 +63,7 @@ dracut --force --add multipath
 Por ejemplo, para grub lo es `/boot/grub/menu.lst` y para la gruña2 lo es `/boot/grub2/menu.cfg`.
 
 . Utilice la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Crear hosts manualmente"] procedimiento en la ayuda en línea para comprobar si los hosts están definidos. Compruebe que cada configuración del tipo de host se basa en la información de kernel recogida en <<step4,paso 4>>.
-
-
++
 
 NOTE: La función Automatic Load Balancing está deshabilitada para todos los volúmenes asignados a hosts que ejecutan kernel 3.9 o versiones anteriores.
 
