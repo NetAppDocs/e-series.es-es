@@ -79,7 +79,7 @@ Seleccione una o ambas opciones para habilitar la compatibilidad con las redes I
  a| 
 Tamaño de MTU (disponible haciendo clic en *Mostrar más opciones de puerto*).
  a| 
-De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU). El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 4200.
+De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU). El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 9000.
 
 |===
 +
