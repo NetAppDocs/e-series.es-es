@@ -9433,7 +9433,6 @@
   <block id="c2d05de1ae701bdce72c2faac49ce98c" category="doc">Instalación y configuración completas del sistema de almacenamiento: EF300, EF600, EF300C y EF600C</block>
   <block id="650137d2f2842f6b60e056b9c55a250f" category="doc">Instalación y configuración - EF300, EF600, EF300C y EF600C</block>
   <block id="85c56bf21f1f6bc6a3b828568c9beb6b" category="doc">Instale la tornillería EF300, EF600, EF300C y EF600C</block>
-  <block id="6169a90642f45b855b0d1918df24f1db" category="doc">Obtenga más información sobre la optimización del sistema de almacenamiento: EF300, EF600, EF300C y EF600C</block>
   <block id="8b8cb36a048e7bee1a4b2b80d86a5118" category="doc">Encienda las bandejas de controladoras: EF300, EF600, EF300C y EF600C</block>
   <block id="56ce28c073fbbac13d9108d1544bd58e" category="doc">Prepárese para instalar - EF300, EF600, EF300C y EF600C</block>
   <block id="87d6ab4989c0d8d9248aa48458ea993a" category="doc">Notas de la versión de E-Series</block>
@@ -9668,4 +9667,5 @@
   <block id="cab141641940a0cb3eca1b1695f92d4b" category="list-text">*Ejemplo B: Un estante de controlador E4060 con un estante de disco DE460C en una configuración SAS estándar*</block>
   <block id="47e9a132733409a780b8b25a91969da6" category="list-text">Cambie la configuración de la cabina de almacenamiento a doble con comandos de la CLI. Para utilizar la CLI, abra un símbolo del sistema si descargó el paquete CLI o puede abrir la Ventana de administración empresarial (EMW) si tiene instalado el Administrador de almacenamiento.</block>
   <block id="2db2ecd53dfa16abedb03a761e1763e8" category="paragraph">De ser necesario, introduzca un nuevo tamaño en bytes para la unidad de transmisión máxima (MTU). El tamaño de MTU predeterminado es de 1500 bytes por trama. Debe introducir un valor entre 1500 y 9000.</block>
+  <block id="6d169c67d74922fc178491e0bef73793" category="doc">Obtenga más información sobre la instalación del sistema de almacenamiento: EF300, EF600, EF300C y EF600C</block>
 </blocks>
