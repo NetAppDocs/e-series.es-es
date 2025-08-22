@@ -24,13 +24,13 @@ Debe instalar los paquetes necesarios en el sistema.
 NOTE: Consulte la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] Para garantizar que se haya instalado cualquier actualización necesaria, ya que es posible que la función multivía no funcione correctamente con las versiones GA de SLES o RHEL.
 
 .Acerca de esta tarea
-RHEL 7 y SLES 12 utilizan Device Mapper Multipath (DMMP) para un acceso multivía para NVMe over roce. RHEL 8, RHEL 9 y SLES 15 utilizan una conmutación por error nativa de NVMe integrada. En función del sistema operativo que esté ejecutando, se requiere alguna configuración adicional de multivía para que funcione correctamente.
+SLES 12 utiliza Device Mapper Multipath (DMMP) para la multivía de NVMe sobre RoCE. RHEL 8, RHEL 9 y SLES 15 utilizan Native NVMe Failover integrado. Dependiendo del sistema operativo que esté utilizando, será necesario realizar alguna configuración adicional de multivía para que funcione correctamente.
 
 
 
-== Habilite Device Mapper Multipath (DMMP) para RHEL 7 o SLES 12
+== Activar Device Mapper Multivía (DMMP) para SLES 12
 
-De manera predeterminada, DM-MP está deshabilitado en RHEL y SLES. Complete los siguientes pasos para activar los componentes DM-MP en el host.
+Por defecto, DM-MP está desactivado en SLES. Complete los siguientes pasos para habilitar los componentes DM-MP en el host.
 
 .Pasos
 . Añada la entrada del dispositivo NVMe E-Series a la sección Devices de `/etc/multipath.conf` archivo, como se muestra en el siguiente ejemplo:

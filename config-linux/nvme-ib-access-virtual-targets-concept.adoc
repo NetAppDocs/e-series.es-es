@@ -13,7 +13,7 @@ summary: 'Configure la E/S dirigida al destino del dispositivo en función de su
 [role="lead"]
 Puede configurar la E/S dirigida al destino del dispositivo en función del SO (y del método de acceso múltiple de extensión) que esté utilizando.
 
-Para RHEL 7 y SLES 12, el host Linux dirige la I/o a los destinos de dispositivos virtuales. DM-MP gestiona las rutas físicas subyacentes a estos destinos virtuales.
+En SLES 12, el host Linux dirige la E/S a los destinos de los dispositivos virtuales. DM-MP gestiona las rutas físicas subyacentes a estos objetivos virtuales.
 
 
 
