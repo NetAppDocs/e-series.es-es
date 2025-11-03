@@ -412,6 +412,28 @@ Cuando se restablece la comunicación con otra controladora:
 
 
 
+. Utilice System Manager de SANtricity para conectar la controladora.
++
+** Desde SANtricity System Manager:
++
+... Seleccione *hardware*.
+... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja*.
+... Seleccione la controladora que desea colocar en línea.
+... Seleccione *colocar en línea* en el menú contextual y confirme que desea realizar la operación.
++
+El sistema coloca la controladora en línea.
+
+
+
+** Como alternativa, puede conectar las controladoras utilizando los siguientes comandos de CLI:
++
+*Para el controlador A:* `set controller [a] availability=online;`
+
++
+*Para el controlador B:* `set controller [b] availability=online;`
+
+
+
 . Compruebe los códigos de la pantalla de siete segmentos de la controladora cuando vuelva a estar online. Si la pantalla muestra una de las siguientes secuencias de repetición, extraiga inmediatamente el controlador.
 +
 ** *OE*, *L0*, *_blank_* (controladores que no coinciden)
