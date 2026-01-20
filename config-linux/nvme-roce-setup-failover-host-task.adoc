@@ -24,7 +24,7 @@ Debe instalar los paquetes necesarios en el sistema.
 NOTE: Consulte la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] Para garantizar que se haya instalado cualquier actualización necesaria, ya que es posible que la función multivía no funcione correctamente con las versiones GA de SLES o RHEL.
 
 .Acerca de esta tarea
-SLES 12 utiliza Device Mapper Multipath (DMMP) para la multivía de NVMe sobre RoCE. RHEL 8, RHEL 9 y SLES 15 utilizan Native NVMe Failover integrado. Dependiendo del sistema operativo que esté utilizando, será necesario realizar alguna configuración adicional de multivía para que funcione correctamente.
+SLES 12 utiliza Device Mapper Multipath (DMMP) para rutas múltiples para NVMe sobre RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 y SLES 16 utilizan una conmutación por error NVMe nativa integrada. Dependiendo del sistema operativo que esté ejecutando, se requiere alguna configuración adicional de multipath para que funcione correctamente.
 
 
 
@@ -106,4 +106,4 @@ La función multivía nativa de NVMe está deshabilitada de manera predeterminad
 
 
 
-NOTE: Para RHEL 9 y SLES 15, la función multivía nativa de NVMe está habilitada de forma predeterminada y no se requiere ninguna configuración adicional.
+NOTE: Para SLES 15, SLES 16, RHEL 9 y RHEL 10, la multirruta NVMe nativa está habilitada de manera predeterminada y no se requiere ninguna configuración adicional.

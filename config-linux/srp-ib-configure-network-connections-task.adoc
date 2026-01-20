@@ -81,9 +81,6 @@ systemctl start rdma
 
 . Active el daemon de SRP.
 +
-*SLES 12 o superior*
-
-+
 ** Para habilitar el daemon de SRP para que se inicie en el arranque:
 +
 [listing]
