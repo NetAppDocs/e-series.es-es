@@ -122,7 +122,7 @@ Si este LED verde está encendido, el controlador sigue utilizando la batería. 
 . Localice la pestaña "Press" en el lateral del controlador.
 . Desenganche la batería presionando la lengüeta y apretando la carcasa de la batería.
 +
-image::../media/batt_3.png[Presione la pestaña para desbloquear la batería]
+image::../media/batt_3.png[Presiona tab para desenganchar la batería]
 
 . Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba y desconecte la batería de la placa.
 +

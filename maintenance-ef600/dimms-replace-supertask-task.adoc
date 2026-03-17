@@ -76,7 +76,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 . Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
 .. Seleccione la controladora que desea colocar en estado sin conexión.
 .. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.

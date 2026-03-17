@@ -79,20 +79,8 @@ Consulte los siguientes enlaces para acceder a informes técnicos de soluciones 
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: Sistemas HPC de gama básica con E-Series de NetApp e IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Implementación de IBM Spectrum Scale con almacenamiento E-Series de NetApp*"^] | https://www.netapp.com/pdf.html?item=/media/19407-tr-4856-deploy.pdf["*TR-4856: Alta disponibilidad de BeeGFS con E-Series mediante Red Hat Enterprise Linux Server*"^] 
-
-
-| Describe la arquitectura de referencia para sistemas de informática de alto rendimiento de gama básica basados en sistemas de almacenamiento E-Series de NetApp y IBM Spectrum Scale. | Describe el proceso de implementación de una solución de sistema de archivos en paralelo completa basada en la pila de software Spectrum Scale de IBM. | Describe las configuraciones necesarias para implementar una alta disponibilidad en una arquitectura BeeGFS respaldada por el sistema E-Series de NetApp y usar RedHat Enterprise Linux para servicios de almacenamiento, metadatos y gestión BeeGFS. 
+| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: Sistemas HPC de gama básica con E-Series de NetApp e IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Implementación de IBM Spectrum Scale con almacenamiento E-Series de NetApp*"^] |  
 
 
 |  |  |  
-
-
-|  |  |  
-
-
-| https://www.netapp.com/pdf.html?item=/media/19431-tr-4862.pdf["*TR-4862: Alta disponibilidad de BeeGFS con E-Series mediante SUSE Linux Enterprise Server*"^] |  |  
-
-
-| Describe las configuraciones necesarias para implementar una alta disponibilidad en una arquitectura BeeGFS respaldada por el sistema E-Series de NetApp y el uso de SUSE Linux Enterprise Server para servicios de gestión, metadatos y almacenamiento de BeeGFS. |  |  
 |===

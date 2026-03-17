@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Enchufa el cable de alimentación en ambos controladores.
++
+Los controladores comienzan a arrancar.
+
+. Revisa los LED de los controladores para asegurarte de que se ha restablecido la comunicación entre los controladores:
++
+** El LED de atención permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando los controladores vuelvan a estar en línea:
++
+.. Confirma que su estado es Óptimo.
+.. Confirma que el LED de atención de cada controlador está apagado.
++
+Si el estado no es Óptimo o si alguno de los LEDs de Atención está encendido, confirma que todos los cables están correctamente conectados.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://www.netapp.com/company/contact-us/support/["Soporte de NetApp"^]. Si es necesario, recopila datos de soporte para tu sistema de almacenamiento usando SANtricity System Manager.
+
+
+
+

@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de que te prepares para instalar tu sistema de almacenamiento EF50 o EF80, instala el hardware de montaje en rack en un gabinete o rack de telecomunicaciones y luego instala y asegura tu sistema de almacenamiento. 
+---
+= Instala el hardware - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de que te prepares para instalar tu sistema de almacenamiento EF50 o EF80, instala el hardware de montaje en rack en un gabinete o rack de telecomunicaciones y luego instala y asegura tu sistema de almacenamiento.
+
+Si tu sistema de almacenamiento venía en un armario, puedes omitir este procedimiento e ir a link:install-cable.html["Cablea el hardware"].
+
+.Antes de empezar
+* Prepare un área de trabajo plana y sin estática.
+* Obtenga una muñequera ESD y tome precauciones antiestáticas.
+* Asegúrate de tener las instrucciones de instalación incluidas con el hardware de montaje en rack. Si no, mira link:../rackmount-hardware.html["Hardware para montaje en rack"^].
+* Ten en cuenta las precauciones de elevación asociadas al peso de tu sistema de almacenamiento. Consulta link:install-prepare.html#step-2-understand-the-lifting-precautions["Entiende las precauciones de elevación"^].
+* Entiende que el flujo de aire que atraviesa el sistema de almacenamiento entra por la parte delantera, donde están instaladas las unidades, y sale por la parte trasera, donde se encuentran los puertos.
+
+
+.Pasos
+. Instala el hardware de montaje en rack para tu sistema de almacenamiento usando las instrucciones incluidas con el hardware de montaje en rack.
++
+
+CAUTION: Instala los herrajes de montaje en rack en el espacio más bajo disponible del armario o rack para evitar que el sistema de almacenamiento se vuelque cuando esté instalado.
+
+. Instala y asegura tu sistema de almacenamiento en el armario o rack de telecomunicaciones:
++
+.. Coloca el sistema de almacenamiento sobre los raíles y luego, sujetando el sistema de almacenamiento por la parte inferior, deslízalo hasta su lugar.
+.. Asegura el sistema de almacenamiento al armario o al rack de telecomunicaciones usando los tornillos de montaje incluidos.
+
+
+. Coloca el frontal en la parte delantera del sistema de almacenamiento.
++
+.. Coloca el frontal delante del sistema de almacenamiento para que los orificios de cada extremo se alineen con los sujetadores del sistema de almacenamiento.
+.. Encaje la cubierta protectora en su lugar.
+
+
+
+
+.El futuro
+Después de instalar el hardware para tu sistema de almacenamiento, link:install-cable.html["cablea el hardware"].

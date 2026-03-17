@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Programa una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No puedes acceder a los datos en el sistema de almacenamiento hasta que completes con éxito este procedimiento. Como ambos controladores deben tener la misma configuración de módulo de E/S cuando están encendidos, la alimentación debe estar apagada cuando actualices los módulos de E/S.
+. Asegúrese de tener lo siguiente:
++
+** Los nuevos módulos de E/S a los que te estás actualizando.
++
+Asegúrate de que los módulos de E/S a los que vas a actualizar sean compatibles con tu sistema de almacenamiento, que tienes el mismo tipo y número de módulos de E/S para cada controlador y que entiendes la prioridad de la ranura (el nuevo módulo de E/S debe instalarse en la misma ranura en cada controlador).
+
++
+
+CAUTION: *Posible pérdida de acceso a los datos* -- La presencia de módulos de I/O incompatibles o no coincidentes hace que los controladores se bloqueen al aplicar alimentación.
+
++
+Si lo necesitas, puedes confirmar los módulos de E/S compatibles y la prioridad de las ranuras de tu sistema de almacenamiento en https://hwu.netapp.com["Hardware Universe de NetApp"^].
+
+** Cables para conectar los nuevos módulos de E/S a tu red.
+** Una pulsera ESD o que hayas tomado otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin electricidad estática.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para los controladores.
++
+Para abrir la interfaz de System Manager, apunta el navegador al nombre de dominio o dirección IP del controlador de destino.
+
+
+
+. Haz una copia de seguridad de la base de datos de configuración del sistema de almacenamiento usando SANtricity System Manager:
++
+Si se produce un problema al retirar una controladora, puedes usar el archivo guardado para restaurar tu configuración. El sistema guarda el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y conjuntos de discos de la controladora dañada.
+
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de configuración*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

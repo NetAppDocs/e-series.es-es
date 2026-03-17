@@ -1,0 +1,406 @@
+= Paso 1: quitar el controlador
+:allow-uri-read: 
+
+
+.Acerca de esta tarea
+* Instala el controlador de sustitución dentro de los 60 minutos después de quitar el controlador averiado para mantener una refrigeración adecuada del sistema de almacenamiento.
++
+
+CAUTION: Para evitar el sobrecalentamiento, no dejes el compartimento del controlador vacío durante más de 60 minutos.
+
+* Debes poner el controlador dañado en modo offline antes de desenchufar cualquiera de sus cables.
+* Puedes encender los LED de localización (azules) del sistema de almacenamiento (en la parte frontal del sistema de almacenamiento y en ambos controladores) para ayudarte a localizar físicamente el sistema de almacenamiento afectado. Usando SANtricity System Manager, selecciona *Hardware* > *Controllers and components*, selecciona la pestaña *Controller shelf* y, en el menú contextual, selecciona *Turn on locator light*.
+
+
+
+
+== Paso 1: quitar el controlador
+
+Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables del controlador dañado y luego retira el controlador dañado del chasis.
+
+.Pasos
+. En el controlador dañado, asegúrate de que el LED NV Caching Active (verde) esté apagado.
++
+Cuando el LED NV Caching Active (verde) está apagado, cualquier dato en la memoria caché ya se ha escrito en las unidades y es seguro quitar el controlador dañado.
+
++
+
+NOTE: Si el LED NV Caching Active (verde) está encendido, los datos almacenados en caché se están escribiendo en las unidades. Debes esperar a que el proceso termine y el LED NV Caching Active se apague. Sin embargo, si el LED permanece encendido durante más de cinco minutos, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de seguir con este procedimiento.
+
++
+El LED NV Caching Active (verde) está ubicado junto al icono NV en el controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Ubicación del LED de estado NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Icono NV y LED NV Caching Active en el controlador
+
+|===
+
+
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiqueta cada cable que esté conectado al controlador deteriorado.
+. Desconecta el cable de alimentación de la fuente de alimentación en el controlador deteriorado.
++
+
+NOTE: La fuente de alimentación (PSU) no tiene un interruptor de encendido.
+
+. Desconecta todos los cables del controlador deteriorado.
+. Quita el controlador dañado:
++
+La siguiente ilustración muestra el funcionamiento de las asas del controlador (desde el lado izquierdo del controlador) cuando se extrae un controlador
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operación del asa del controlador para quitar un controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+En ambos extremos del controlador, empuja las lengüetas de bloqueo verticales hacia afuera para liberar las asas a su posición horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+** Tira de las asas hacia ti para separar el controlador del plano medio.
++
+Al tirar, las asas se extienden hacia fuera del controlador y entonces sientes cierta resistencia, sigue tirando.
+
+** Desliza el controlador fuera del chasis mientras sostienes la parte inferior del controlador y colócalo sobre una superficie de trabajo plana y libre de electricidad estática.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Si es necesario, gira las asas hacia arriba (junto a las lengüetas) para apartarlas.
+
+|===
+. Abre la tapa del controlador girando el tornillo de mariposa en sentido antihorario para aflojarlo y luego abre la tapa.
+
+
+
+
+== Paso 2: mueve la fuente de alimentación
+
+Mueve la fuente de alimentación (PSU) al controlador de reemplazo.
+
+.Pasos
+. Quita la fuente de alimentación del controlador deteriorado:
++
+Asegúrate de que el asa izquierda del controlador esté en posición vertical para que puedas acceder a la PSU.
+
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Reemplazar la fuente de alimentación de CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Gira el asa de la fuente de alimentación hacia arriba, hasta su posición horizontal, y luego agárrala.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Con el pulgar, presiona la lengüeta de bloqueo naranja para liberar la PSU del controlador.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Saca la fuente de alimentación del controlador mientras usas la otra mano para sostener su peso.
+
+
+CAUTION: La fuente de alimentación es corta. Utiliza siempre las dos manos para sujetarla cuando la retires del controlador para que no se suelte repentinamente del controlador y te lesiones.
+
+|===
+. Inserta la fuente de alimentación en el controlador de repuesto:
++
+.. Usando ambas manos, sostiene y alinea los bordes de la fuente de alimentación con la abertura del controlador.
+.. Desliza suavemente la fuente de alimentación en el controlador hasta que la lengüeta de bloqueo naranja haga clic en su lugar.
++
+La PSU debe encajar correctamente con el conector interno y el mecanismo de bloqueo. Repite este paso si sientes que la PSU no está bien asentada.
+
++
+
+NOTE: Para evitar dañar el conector interno, no uses demasiada fuerza al deslizar la fuente de alimentación en el controlador.
+
+.. Gira la empuñadura hacia abajo, así no estorba en las operaciones normales.
+
+
+
+
+
+
+== Paso 3: mueve los ventiladores
+
+Mueve los ventiladores al controlador de reemplazo.
+
+.Pasos
+. Retira uno de los ventiladores del controlador deteriorado:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Reemplazo del ventilador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+| Sujeta ambos lados del ventilador en los puntos de contacto azules. 
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+| Tira del ventilador hacia arriba y sácalo de su alojamiento. 
+|===
+. Inserta el ventilador en el controlador de repuesto alineándolo dentro de las guías y luego empuja hacia abajo hasta que el conector del ventilador quede totalmente asentado en el zócalo.
+. Repite estos pasos para los ventiladores restantes.
+
+
+
+
+== Paso 4: mover la batería NV
+
+Mueve la batería NV al controlador de reemplazo.
+
+.Pasos
+. Quita la batería NV del controlador deteriorado:
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Reemplaza la batería NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Levanta la batería NV y sáquela de su compartimento.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Quita el mazo de cables de su soporte.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+.. Empuja y mantén presionada la lengüeta del conector.
+.. Tira del conector hacia arriba y sácalo de la toma.
++
+Mientras tiras hacia arriba, mueve suavemente el conector de un extremo a otro (a lo largo) para soltarlo.
+
+
+
+|===
+. Instala la batería NV en el controlador de repuesto:
++
+.. Conecta el conector de cableado en su toma.
+.. Lleva el cableado por el lateral de la fuente de alimentación, dentro de su soporte y luego por el canal que está delante del compartimento de la batería NV.
+.. Coloca la batería NV en el compartimento.
++
+La batería NV debe quedar al ras en su compartimento.
+
+
+
+
+
+
+
+== Paso 5: mueve los módulos DIMM del sistema
+
+Mueve los módulos DIMM al controlador de reemplazo.
+
+Si tienes DIMM blanks, no necesitas moverlos, el controlador de reemplazo debería venir con ellos instalados.
+
+.Pasos
+. Quita uno de los módulos DIMM del controlador dañado:
++
+image::../media/drw_g_dimm_ieops-1873.svg[Reemplazo de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Numeración y posiciones de las ranuras DIMM.
+
+
+NOTE: Dependiendo de tu modelo de sistema de almacenamiento, tendrás dos o cuatro DIMM.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 1]
+ a| 
+** Ten en cuenta la orientación del DIMM en el zócalo para que puedas insertar el DIMM en el controlador de repuesto en la orientación correcta.
+** Expulsa el DIMM separando lentamente las dos lengüetas eyectoras DIMM en ambos extremos de la ranura DIMM.
+
+
+
+IMPORTANT: Sujeta con cuidado el DIMM por las esquinas o los bordes para evitar presionar los componentes de la placa de circuito del DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Levanta el DIMM y sácalo de la ranura.
+
+Las lengüetas eyectoras permanecen en posición abierta.
+
+|===
+. Instala el módulo DIMM en el controlador de repuesto:
++
+.. Asegúrate de que las lengüetas eyectoras DIMM del conector están en posición abierta.
+.. Sujeta el DIMM por las esquinas e insértalo bien en la ranura.
++
+La muesca en la parte inferior del DIMM, entre las patillas, debe alinearse con la pestaña de la ranura.
+
++
+Cuando se inserta correctamente, el DIMM entra fácilmente pero queda bien ajustado en la ranura. Si no, vuelve a insertar el DIMM.
+
+.. Comprueba visualmente el módulo DIMM para asegurarte de que está alineado de manera uniforme y completamente insertado en la ranura.
+.. Empuja hacia abajo con cuidado, pero con firmeza, el borde superior del DIMM hasta que las lengüetas eyectoras encajen en su sitio sobre las muescas en ambos extremos del DIMM.
+
+
+. Repite estos pasos para los DIMM restantes.
+
+
+
+
+== Paso 6: mueve los módulos de E/S
+
+Mueve los módulos de E/S y cualquier módulo de supresión de E/S al controlador de sustitución.
+
+.Pasos
+. Retira uno de los módulos de E/S del controlador deteriorado:
++
+Asegúrate de llevar un registro de en qué ranura estaba el módulo de E/S.
+
++
+Si vas a extraer el módulo de E/S de la ranura 4, asegúrate de que el asa derecha del controlador esté en posición vertical para que puedas acceder al módulo de E/S.
+
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Quitar módulo de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Gira el tornillo de mariposa del módulo de E/S en sentido antihorario para aflojar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Saca el módulo de E/S del controlador usando la lengüeta de la etiqueta del puerto a la izquierda y el tornillo de mariposa a la derecha.
+
+|===
+. Instala el módulo de E/S en el controlador de sustitución:
++
+.. Alinea el módulo de E/S con los bordes de la ranura.
+.. Empuja suavemente el módulo de E/S hasta el fondo de la ranura, asegurándote de asentar correctamente el módulo en el conector.
++
+Puedes usar la lengüeta de la izquierda y el tornillo de mariposa de la derecha para introducir el módulo de E/S.
+
+.. Gira el tornillo en el sentido de las agujas del reloj para apretarlo.
+
+
+. Repite estos pasos para mover los módulos de E/S restantes y cualquier módulo de supresión de E/S al controlador de sustitución.
+
+
+
+
+== Paso 7: instala el controlador
+
+Instala el controlador de repuesto en el chasis, vuelve a conectar su cable de alimentación y todos sus cables.
+
+.Acerca de esta tarea
+La siguiente ilustración muestra el funcionamiento de las asas del controlador (desde el lado izquierdo de un controlador) al reinstalar el controlador y puede usarse como referencia para los pasos de reinstalación del controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operación del asa del controlador para instalar un controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Si giraste las asas del controlador hacia arriba (junto a las lengüetas) para apartarlas mientras hacías el mantenimiento del controlador, gíralas hacia abajo hasta la posición horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Empuja las asas para volver a insertar el controlador en el chasis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Gira las asas hasta la posición vertical y bloquéalas en su sitio con las lengüetas de bloqueo.
+
+|===
+.Pasos
+. Cierra la tapa del controlador y gira el tornillo de mariposa en el sentido de las agujas del reloj hasta que quede apretado.
+. Inserta el controlador en el chasis:
++
+.. Alinea la parte trasera del controlador con la abertura del chasis y empuja suavemente pero con firmeza las asas hasta que el controlador toque el plano medio y quede completamente asentado.
++
+
+NOTE: No uses demasiada fuerza al deslizar el controlador en el chasis; podría dañar los conectores.
+
+.. Gira las asas del mando hacia arriba y bloquéalas en su sitio con las lengüetas.
+
+
+. Vuelve a conectar el cable de alimentación a la fuente de alimentación y asegúralo con el retén del cable de alimentación.
++
+Una vez que se restablezca la alimentación a la fuente de alimentación, el LED de estado debería estar verde.
+
+. Vuelve a conectar todos los cables al controlador.
++
+
+NOTE: La reconexión de los cables debe realizarse antes de poner el controlador en línea. Esto es especialmente importante para las conexiones de los cables de mirroring, ya que garantizan la redundancia total del sistema y se utilizan para el mirroring de caché y el envío de I/O.
+
+

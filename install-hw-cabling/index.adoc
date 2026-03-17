@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conecte un host directamente a una controladora o utilice switches. 
 ---
-= Cableado del sistema de almacenamiento (E-Series)
+= Cableado de tu sistema de almacenamiento - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,9 @@ La información de cableado está destinada a un instalador de hardware o admini
 == Modelo de hardware aplicable
 
 La información de cableado se aplica a los siguientes modelos de hardware.
+
+
+NOTE: Si no ves el estante de tu controlador (sistema de almacenamiento) en la lista de abajo, consulta link:../getting-started/getup-run-concept.html["Inicio rápido de E-Series"^] y haz clic en el enlace de tu sistema de almacenamiento específico para acceder a la información de cableado.
 
 |===
 | *Bandeja del controlador* | *Bandeja de unidades* 
@@ -51,7 +54,7 @@ DE460C
 
 == Información adicional sobre cableado
 
-Si va a cablear la siguiente configuración, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente."^]
+Si estás cableando para alguna de las siguientes configuraciones, consulta https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente."^]
 
 |===
 | *Bandeja del controlador* | *Bandeja de unidades* 

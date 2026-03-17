@@ -18,6 +18,6 @@ Es posible cambiar el nombre de la cabina de almacenamiento que se muestra en la
 
 .Pasos
 . En la página *gestionar*, seleccione la casilla de comprobación a la izquierda del nombre de la cabina de almacenamiento.
-. Seleccione los tres puntos en el extremo derecho de la fila y, a continuación, seleccione *Cambiar nombre de matriz de almacenamiento* en el menú emergente.
+. Selecciona la elipsis en el extremo derecho de la fila y luego selecciona *Rename storage array* en el menú emergente.
 . Introduzca el nuevo nombre y haga clic en *Guardar*.
 

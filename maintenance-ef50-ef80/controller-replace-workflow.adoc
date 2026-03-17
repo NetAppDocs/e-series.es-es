@@ -1,0 +1,38 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the controller workflow 
+summary: Puedes reemplazar un controlador dañado en tu sistema de almacenamiento EF50 o EF80 cumpliendo los requisitos del sistema de almacenamiento, preparando el sistema, poniendo el controlador dañado fuera de línea, reemplazando el controlador, poniendo el nuevo controlador en línea y completando el proceso de reemplazo. 
+---
+= Flujo de trabajo de reemplazo de controladora - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puedes reemplazar un controlador dañado en tu sistema de almacenamiento EF50 o EF80 cumpliendo los requisitos del sistema de almacenamiento, preparando el sistema, poniendo el controlador dañado fuera de línea, reemplazando el controlador, poniendo el nuevo controlador en línea y completando el proceso de reemplazo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:controller-replace-requirements.html["Revisa los requisitos para reemplazar el controlador"]
+[role="quick-margin-para"]
+Verifica que tu sistema de almacenamiento tenga un controlador con error, revisa el estado de tu sistema de almacenamiento, consigue las herramientas para el procedimiento y ten una estación de gestión y un navegador para acceder a SANtricity System Manager.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]link:controller-replace-prepare.html["Prepara la sustitución del controlador"]
+[role="quick-margin-para"]
+Desempaqueta el controlador de repuesto, toma nota de su dirección MAC, confirma que su número de pieza es correcto y haz una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]link:controller-replace-offline-controller.html["Desconecta el controlador dañado"]
+[role="quick-margin-para"]
+Desconecta el controlador dañado para evitar la pérdida de datos y asegurar la estabilidad del sistema cuando reemplaces el controlador dañado.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]link:controller-replace-move-hardware.html["Sustituye el controlador dañado"]
+[role="quick-margin-para"]
+Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables de la controladora con problemas, retira la controladora, mueve los componentes a la controladora de reemplazo, instala la controladora de reemplazo y vuelve a conectar todos los cables.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:controller-replace-online-controller.html["Poner en línea el controlador de sustitución"]
+[role="quick-margin-para"]
+Confirma la dirección IP del controlador de reemplazo, pon el controlador en línea y confirma que el estado del sistema de almacenamiento es óptimo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:controller-replace-complete-replacement.html["Completa la sustitución del controlador"]
+[role="quick-margin-para"]
+Asegúrate de que tienes instalada la última versión de SANtricity OS, verifica que los volúmenes se devuelvan a sus controladores propietarios, recopila los datos de soporte del sistema y devuelve la parte con error a NetApp.

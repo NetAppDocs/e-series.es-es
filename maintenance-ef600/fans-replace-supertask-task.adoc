@@ -163,7 +163,7 @@ Coloque la controladora en línea, recoja datos de soporte y reanude operaciones
 
 . Coloque una controladora en línea.
 +
-.. En System Manager, desplácese hasta la página hardware.
+.. En System Manager, vaya a la página *Hardware*.
 .. Seleccione *Mostrar parte posterior del controlador*.
 .. Seleccione el controlador con el ventilador sustituido.
 .. Seleccione *colocar en línea* en la lista desplegable.

@@ -1,0 +1,123 @@
+---
+permalink: maintenance-ef50-ef80/power-supply-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace a power supply 
+summary: 'Sustituye una fuente de alimentación (PSU) en tu sistema de almacenamiento EF50 o EF80 cuando falle o se averíe, asegurando que tu sistema siga recibiendo la energía necesaria para un funcionamiento estable.' 
+---
+= Reemplazar una fuente de alimentación - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sustituye una fuente de alimentación (PSU) en tu sistema de almacenamiento EF50 o EF80 cuando falle o se averíe, asegurando que tu sistema siga recibiendo la energía necesaria para un funcionamiento estable.
+
+.Antes de empezar
+* Confirma que hay un problema con la fuente de alimentación revisando los detalles en el Recovery Guru.
+* Comprueba que el LED de Atención (ámbar) de la fuente de alimentación está encendido, lo que indica que la fuente de alimentación o su ventilador integrado tiene un fallo.
+* Soluciona cualquier otro problema del sistema de almacenamiento.
++
+En Recovery Guru selecciona *Recheck* para ver si hay algún otro problema.
+
+* Asegúrese de tener lo siguiente:
++
+** Una fuente de alimentación de repuesto.
++
+
+NOTE: No mezcle las PSU de diferentes tipos de tensión. Sustituya siempre como por ejemplo.
+
+** Una pulsera ESD o que hayas tomado otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin electricidad estática.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para el controlador con problemas.
++
+Para abrir la interfaz de System Manager, dirige el navegador al nombre de dominio o la dirección IP del controlador deteriorado.
+
+
+
+
+
+.Acerca de esta tarea
+* Cuando falle una fuente de alimentación, debes sustituirla lo antes posible para que el sistema de almacenamiento tenga una fuente de alimentación redundante.
+* Sustituye una fuente de alimentación desenchufando el cable de alimentación de la PSU defectuosa, reemplazándola y volviendo a conectar el cable de alimentación.
+* Puedes encender los LED de localización (azules) del sistema de almacenamiento (en la parte frontal del sistema de almacenamiento y en ambos controladores) para ayudarte a localizar físicamente el sistema de almacenamiento afectado. Usando SANtricity System Manager, selecciona *Hardware* > *Controllers and components*, selecciona la pestaña *Controller shelf* y, en el menú contextual, selecciona *Turn on locator light*.
+
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Desconecta el cable de alimentación de la PSU abriendo el retenedor del cable de alimentación y luego desenchufa el cable de alimentación de la PSU.
++
+
+NOTE: La fuente de alimentación (PSU) no tiene interruptor de encendido.
+
+. Quita la fuente de alimentación:
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Reemplazar la fuente de alimentación de CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Gira el asa de la fuente de alimentación hacia arriba, hasta su posición horizontal, y luego agárrala.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Con el pulgar, presiona la lengüeta de bloqueo naranja para liberar la PSU del controlador.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Saca la fuente de alimentación del controlador mientras usas la otra mano para sostener su peso.
+
+
+CAUTION: La fuente de alimentación es corta. Utiliza siempre las dos manos para sujetarla cuando la retires del controlador para que no se suelte repentinamente del controlador y te lesiones.
+
+|===
+. Desempaqueta la fuente de alimentación de repuesto y colócala en una superficie nivelada cerca del sistema de almacenamiento.
++
+Guarde todos los materiales de embalaje para utilizarlos cuando devuelva la fuente de alimentación fallida.
+
+. Instala la fuente de alimentación de repuesto:
++
+.. Usando ambas manos, sostiene y alinea los bordes de la fuente de alimentación con la abertura del controlador.
+.. Empuja suavemente la fuente de alimentación en el controlador hasta que la lengüeta de bloqueo naranja haga clic en su lugar.
++
+Una fuente de alimentación sólo se conectará correctamente con el conector interno y se bloqueará en su lugar de una sola manera.
+
++
+
+NOTE: Para evitar dañar el conector interno, no uses demasiada fuerza al deslizar la fuente de alimentación en el controlador.
+
+.. Gira la empuñadura hacia abajo, así no estorba en las operaciones normales.
+
+
+. Vuelve a conectar el cable de alimentación a la PSU y asegura el cable de alimentación con el retén del cable.
++
+Una vez que se restablezca la alimentación a la PSU, el LED de estado debería estar en verde.
+
+. Confirma que el estado de la fuente de alimentación es óptimo y que los LED de atención del sistema de almacenamiento están apagados.
++
+Si el estado no es óptimo o si alguno de los LEDs de atención está encendido, confirma que el cable de alimentación está correctamente asentado y que la PSU está instalada correctamente. Si es necesario, retira y vuelve a instalar la PSU.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de continuar con este procedimiento.
+
+. Desde SANtricity System Manager, haz clic en *Support > Upgrade Center* para asegurarte de que la última versión de SANtricity OS está instalada.
++
+Si es necesario, instale la versión más reciente.
+
+. Devuelva la pieza que ha fallado a NetApp, como se describe en las instrucciones de RMA que se suministran con el kit.
++
+Contacta al soporte técnico en https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"], 888-463-8277 (North America), 00-800-44-638277 (Europe) o +800-800-80-800 (Asia/Pacific) si necesitas el número RMA o ayuda adicional con el procedimiento de reemplazo.//2025-11-17 ontap-systems-internal/issues/1391
+
+

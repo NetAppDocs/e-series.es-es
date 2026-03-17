@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

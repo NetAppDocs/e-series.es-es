@@ -31,7 +31,7 @@ Debe haber inicializado la LUN y formateado esta con un sistema de archivos.
 ----
 . Para verificar que la multivía funciona, cambie la propiedad del volumen.
 +
-.. Desde la GUI del Administrador del sistema de SANtricity, vaya a *almacenamiento* > *volúmenes* y, a continuación, seleccione *más* > *Cambiar propiedad*.
+.. Desde SANtricity System Manager, ve a *Storage* > *Volumes* y luego selecciona el *ellipsis icon* > *Change volume ownership*.
 .. En el cuadro de diálogo Cambiar propiedad de volumen, utilice el menú desplegable *propietario preferido* para seleccionar la otra controladora para uno de los volúmenes de la lista y, a continuación, confirme la operación.
 .. Compruebe que aún puede acceder a los archivos en la LUN.
 +

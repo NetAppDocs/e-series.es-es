@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conecte las fuentes de alimentación de cada componente a circuitos de alimentación separados. 
 ---
-= Cableado de alimentación del sistema de almacenamiento (E-Series)
+= Cableado eléctrico de tu sistema de almacenamiento - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,9 +24,9 @@ La fuente de alimentación del sistema de almacenamiento debe poder adaptarse a 
 .Paso
 . Conecte un cable de alimentación a cada una de las unidades de fuentes de alimentación del sistema de almacenamiento.
 . Conecte los dos cables de alimentación de cada bandeja a diferentes unidades de distribución de alimentación (PDU) en el armario o rack.
-. Encienda ambos interruptores de alimentación.
+. Enciende ambas fuentes de alimentación.
 +
 
-NOTE: Los sistemas de almacenamiento EF300 y EF600 no tienen switches de alimentación. Se encenderán tan pronto como se conecten los cables.
+NOTE: Dependiendo de tu sistema de almacenamiento, las fuentes de alimentación tienen interruptores de alimentación o no los tienen y debes conectar los cables de alimentación para encenderlas.
 
 

@@ -49,7 +49,7 @@ Se abre el cuadro de diálogo Comprobación del estado previa a la actualizació
 +
 Mientras se lleva a cabo la comprobación del estado, se muestra el progreso en el cuadro de diálogo.
 
-. Una vez finalizada la comprobación del estado, puede hacer clic en los tres puntos (...) a la derecha de cada fila para ver más información y realizar otras tareas.
+. Cuando finalice el chequeo, puedes hacer clic en la elipsis (...) a la derecha de cada fila para ver más información y realizar otras tareas.
 +
 
 NOTE: Si ocurre un error en la comprobación del estado de alguna cabina, puede omitir esa cabina en particular y continuar la actualización de las otras cabinas. Otra opción es detener el proceso por completo y solucionar los problemas de las cabinas que presentaron errores.

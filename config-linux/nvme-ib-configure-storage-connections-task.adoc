@@ -14,7 +14,7 @@ summary: Si la controladora incluye un puerto NVMe over InfiniBand, puede config
 Si la controladora incluye un puerto NVMe over InfiniBand, puede configurar la dirección IP de cada puerto mediante System Manager de SANtricity.
 
 .Pasos
-. En la interfaz de System Manager, seleccione *hardware*.
+. En el panel izquierdo de la interfaz de System Manager, selecciona *Hardware*.
 . Si el gráfico muestra las unidades, haga clic en *Mostrar parte posterior de la bandeja*.
 +
 El gráfico cambia y muestra las controladoras en lugar de las unidades.

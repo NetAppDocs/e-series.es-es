@@ -1,0 +1,294 @@
+---
+permalink: maintenance-ef50-ef80/io-module-upgrade.html 
+sidebar: sidebar 
+keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
+summary: Puedes actualizar los módulos de E/S en tu sistema de almacenamiento EF50 o EF80 para aumentar el número de puertos del host y mejorar la conectividad de red, así como ampliar la capacidad de tu sistema para manejar el tráfico de datos. 
+---
+= Actualiza los módulos de E/S - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puedes actualizar los módulos de E/S en tu sistema de almacenamiento EF50 o EF80 para aumentar el número de puertos del host y mejorar la conectividad de red, así como ampliar la capacidad de tu sistema para manejar el tráfico de datos.
+
+.Acerca de esta tarea
+* El término _módulo de E/S_ se utiliza en lugar de host interface cards (HICs) en este procedimiento.
+* Puedes actualizar los módulos de E/S reemplazando los módulos de E/S existentes o añadiendo módulos de E/S a las ranuras de E/S que no se usan.
++
+Las ranuras de E/S no utilizadas deben tener instalados módulos ciegos para evitar posibles problemas térmicos y para cumplir con EMC.
+
+* Actualiza los módulos de E/S preparándolos, apagando ambos controladores, actualizando los módulos de E/S en ambos controladores, encendiendo ambos controladores, verificando que la actualización fue exitosa y, si es necesario, verificando y cambiando el protocolo del módulo de E/S del host.
++
+No es necesario retirar los controladores del chasis porque se puede acceder a los módulos de I/O con los controladores en su lugar.
+
+* Debes apagar ambos controladores antes de desconectar cualquier cable del módulo de E/S.
+* Puedes encender los LED de localización (azules) del sistema de almacenamiento (en la parte frontal del sistema de almacenamiento y en ambos controladores) para ayudarte a localizar físicamente el sistema de almacenamiento afectado. Usando SANtricity System Manager, selecciona *Hardware* > *Controllers and components*, selecciona la pestaña *Controller shelf* y, en el menú contextual, selecciona *Turn on locator light*.
+
+
+
+
+== Paso 1: prepárate para actualizar los módulos de E/S
+
+Prepárate para actualizar los módulos de E/S programando una ventana de mantenimiento de inactividad, reuniendo las herramientas y el equipo necesarios y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
+
+.Pasos
+. Programa una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No puedes acceder a los datos en el sistema de almacenamiento hasta que completes con éxito este procedimiento. Como ambos controladores deben tener la misma configuración de módulo de E/S cuando están encendidos, la alimentación debe estar apagada cuando actualices los módulos de E/S.
+. Asegúrese de tener lo siguiente:
++
+** Los nuevos módulos de E/S a los que te estás actualizando.
++
+Asegúrate de que los módulos de E/S a los que vas a actualizar sean compatibles con tu sistema de almacenamiento, que tienes el mismo tipo y número de módulos de E/S para cada controlador y que entiendes la prioridad de la ranura (el nuevo módulo de E/S debe instalarse en la misma ranura en cada controlador).
+
++
+
+CAUTION: *Posible pérdida de acceso a los datos* -- La presencia de módulos de I/O incompatibles o no coincidentes hace que los controladores se bloqueen al aplicar alimentación.
+
++
+Si lo necesitas, puedes confirmar los módulos de E/S compatibles y la prioridad de las ranuras de tu sistema de almacenamiento en https://hwu.netapp.com["Hardware Universe de NetApp"^].
+
+** Cables para conectar los nuevos módulos de E/S a tu red.
+** Una pulsera ESD o que hayas tomado otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin electricidad estática.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para los controladores.
++
+Para abrir la interfaz de System Manager, apunta el navegador al nombre de dominio o dirección IP del controlador de destino.
+
+
+
+. Haz una copia de seguridad de la base de datos de configuración del sistema de almacenamiento usando SANtricity System Manager:
++
+Si se produce un problema al retirar una controladora, puedes usar el archivo guardado para restaurar tu configuración. El sistema guarda el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y conjuntos de discos de la controladora dañada.
+
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de configuración*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Paso 2: apaga ambos controladores
+
+Apaga ambos controladores en el sistema de almacenamiento para que puedas actualizar de forma segura los módulos de E/S en ambos controladores.
+
+.Pasos
+. Desde la página de inicio de SANtricity System Manager, asegúrate de que el sistema de almacenamiento tiene el estado Óptimo.
++
+
+NOTE: Si el estado no es óptimo, usa el Recovery Guru o contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^] para resolver el problema.
+
+. Asegúrate de que no se están realizando operaciones de E/S entre el sistema de almacenamiento y todos los hosts conectados.
++
+Por ejemplo, puedes realizar estos pasos:
+
++
+** Detén todos los procesos que involucren los LUN asignados desde el sistema de almacenamiento a los hosts.
+** Asegúrate de que ninguna aplicación esté escribiendo datos en ningún LUN asignado desde el sistema de almacenamiento a los hosts.
+** Desmonta todos los sistemas de archivos asociados con volúmenes en el sistema de almacenamiento.
++
+
+NOTE: Los pasos exactos para detener las operaciones de E/S del host dependen del sistema operativo del host y de la configuración, que quedan fuera del alcance de estas instrucciones. Si no estás seguro de cómo detener las operaciones de E/S del host en tu entorno, considera apagar el host o contacta https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^].
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. En cada controlador, asegúrate de que el LED NV Caching Active (verde) está apagado.
++
+Cuando el LED NV Caching Active (verde) está apagado, cualquier dato en la memoria caché ya se ha escrito en las unidades y es seguro quitar el controlador dañado.
+
++
+
+NOTE: Si el LED NV Caching Active (verde) está encendido, los datos almacenados en caché se están escribiendo en las unidades. Debes esperar a que el proceso termine y el LED NV Caching Active (verde) se apague. Sin embargo, si el LED permanece encendido durante más de cinco minutos, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de seguir con este procedimiento.
+
++
+El LED NV Caching Active (verde) está ubicado junto al icono NV en el controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Ubicación del LED de estado NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Icono NV y LED NV Caching Active en el controlador
+
+|===
+. Confirma que las operaciones en los controladores han finalizado en SANtricity System Manager:
++
+.. Selecciona *Storage* > *Operations in progress* para ver la pantalla Overview.
+.. Espera a que finalicen todas las operaciones y que la pantalla Overview muestre *No operations currently in progress* antes de seguir con el siguiente paso.
+
+
+. Apaga ambos controladores:
++
+.. Etiqueta y luego desenchufa el cable de alimentación de ambos controladores.
+.. Espera a que todos los LED de ambos controladores se apaguen.
+
+
+
+
+
+
+== Paso 3: actualiza los módulos de E/S
+
+Desconecta el cableado de los módulos de E/S que quieras actualizar (a menos que tengas módulos de supresión de E/S), reemplaza los módulos de E/S o los módulos de supresión de E/S por los nuevos módulos de E/S y luego conecta el cableado a los nuevos módulos de E/S.
+
+.Acerca de esta tarea
+Empiezas con un controlador y luego repites los pasos para el otro controlador.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. En uno de los controladores, desconecta el cableado del módulo de E/S que vas a retirar, a menos que sea un módulo ciego de E/S.
++
+Puedes etiquetar los cables para saber de dónde vienen. Sin embargo, dependiendo del tipo de módulo de E/S al que estés actualizando, puede que no recables a los mismos puertos o que no puedas reutilizar los mismos cables.
+
+. Quita el módulo de E/S o el módulo de supresión de E/S de la ranura de destino.
++
+La siguiente ilustración muestra cómo se retira un módulo supresor de E/S.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Quitar un módulo ciego de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Llamada número 1"]
+ a| 
+En el módulo de E/S o el módulo supresor de E/S, gira el tornillo de mariposa en sentido antihorario para aflojar.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Llamada número 2"]
+ a| 
+Saca el módulo de E/S o el módulo ciego de E/S del controlador usando la lengüeta de la izquierda y el tornillo de mariposa.
+
+|===
+. Desempaqueta el nuevo módulo de E/S y colócalo sobre una superficie plana libre de estática cerca del sistema de almacenamiento.
+. Instala el nuevo módulo de E/S:
++
+.. Alinea el módulo de E/S con los bordes de la abertura de la ranura del controlador.
+.. Empuja suavemente el módulo de E/S hasta el fondo de la ranura, asegurándote de asentar correctamente el módulo en el conector.
++
+Puedes usar la lengüeta de la izquierda y el tornillo de mariposa para empujar el módulo de E/S.
+
+.. Gira el tornillo en el sentido de las agujas del reloj para apretarlo.
+
+
+. Conecta el módulo de E/S a la red host.
++
+Puedes usar la sección link:../install-hw-ef50-ef80/install-cable.html["Cablea el hardware"^] del contenido de instalación y configuración del sistema para el cableado de red del host.
+
+. Repite estos pasos para actualizar un módulo de E/S en el otro controlador.
+
+
+
+
+== Paso 4: enciende ambos controladores
+
+Enciende ambos controladores.
+
+.Pasos
+. Enchufa el cable de alimentación en ambos controladores.
++
+Los controladores comienzan a arrancar.
+
+. Revisa los LED de los controladores para asegurarte de que se ha restablecido la comunicación entre los controladores:
++
+** El LED de atención permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando los controladores vuelvan a estar en línea:
++
+.. Confirma que su estado es Óptimo.
+.. Confirma que el LED de atención de cada controlador está apagado.
++
+Si el estado no es Óptimo o si alguno de los LEDs de Atención está encendido, confirma que todos los cables están correctamente conectados.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://www.netapp.com/company/contact-us/support/["Soporte de NetApp"^]. Si es necesario, recopila datos de soporte para tu sistema de almacenamiento usando SANtricity System Manager.
+
+
+
+
+
+
+
+== Paso 5: completa la actualización del módulo de E/S
+
+Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS esté instalada, verifica que todos los volúmenes se hayan devuelto a sus controladores propietarios, recopila datos de soporte para que puedas reanudar las operaciones y, si lo necesitas, verifica y cambia el protocolo del módulo de I/O del host.
+
+.Pasos
+. Asegúrate de que tienes instalada la última versión de SANtricity OS:
++
+.. Selecciona *Support* > *Upgrade Center*.
+.. Si es necesario, instale la versión más reciente.
+
+
+. Verifica que todos los volúmenes se devuelvan a sus controladores propietarios:
++
+.. Selecciona *Storage* > *Volumes*.
+.. Desde la página *Todos los Volúmenes*, verifica que los volúmenes están distribuidos a sus controladores propietarios.
+.. Selecciona *Más* > *Cambiar la propiedad del volumen* para ver los propietarios del volumen.
+
+
+. El siguiente paso depende de si los volúmenes se devuelven a sus controladores propietarios o no:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+Todos los volúmenes son propiedad de sus controladores propietarios
+ a| 
+Ve al paso siguiente.
+
+
+
+ a| 
+Ninguno de los volúmenes se devuelve a sus controladores propietarios
+ a| 
+Selecciona *Storage* > *Volumes* > *More* y en el menú desplegable selecciona *Redistribute volumes* para devolver los volúmenes a sus controladores propietarios.
+
+
+
+ a| 
+Solo algunos de los volúmenes se devuelven a sus controladores propietarios después de la distribución automática o manual
+ a| 
+Revisa el Recovery Guru para ver si hay problemas de conectividad de host.
+
+Si no hay ningún Recovery Guru presente o si después de seguir los pasos del Recovery Guru los volúmenes siguen sin ser devueltos a sus controladores propietarios, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de continuar con este procedimiento.
+
+|===
+. Recopila datos de soporte para tu sistema de almacenamiento:
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Si necesitas verificar y cambiar el protocolo del módulo de E/S del host, usa el procedimiento xref:io-module-change-protocol.html[Cambia el protocolo del módulo de E/S de host para un EF50 o EF80].
+

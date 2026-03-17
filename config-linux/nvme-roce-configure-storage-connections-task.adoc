@@ -28,7 +28,7 @@ Es posible acceder a la configuración de NVMe over roce desde la página *hardw
 NOTE: La configuración y las funciones de NVMe over roce aparecen solamente si la controladora de la cabina de almacenamiento contiene un puerto NVMe over roce.
 
 .Pasos
-. En la interfaz de System Manager, seleccione *hardware*.
+. En el panel izquierdo de la interfaz de System Manager, selecciona *Hardware*.
 . Haga clic en la controladora que tenga el puerto NVMe over roce que desea configurar.
 +
 Aparece el menú contextual de la controladora.

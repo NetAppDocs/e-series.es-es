@@ -69,7 +69,7 @@ NOTE: Si se han producido eventos críticos sin resolver en las dos o tres seman
 
 . Si tiene IOM conectados al hardware, lleve a cabo los siguientes pasos. De lo contrario, vaya a. <<step2_install_drive_shelf,Paso 2: Instale la bandeja de unidades y aplique energía.>>
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Seleccione el icono *IOM (ESM)*.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[Icono de IOM (ESM)]
@@ -192,7 +192,7 @@ image::../media/hot_ef_0.png[Ejemplo de cableado de la bandeja de unidades]
 +
 image::../media/hot_ef_1.png[Ejemplo de cableado de la bandeja de unidades]
 
-. En el Administrador del sistema de SANtricity, haga clic en *hardware*.
+. En SANtricity System Manager, haz clic en menú:Hardware[Controllers and components].
 +
 
 NOTE: En este punto del procedimiento, solo hay una ruta activa a la bandeja de controladoras.
@@ -238,7 +238,7 @@ La bandeja de unidades se conecta a la controladora A, confirme el estado del IO
 +
 image::../media/hot_e4000_cabling_1.png[Cableado de la bandeja de unidades]
 
-. En el Administrador del sistema de SANtricity, haga clic en *hardware*.
+. En SANtricity System Manager, haz clic en menú:Hardware[Controllers and components].
 +
 
 NOTE: En este punto del procedimiento, solo hay una ruta activa a la bandeja de controladoras.
@@ -282,7 +282,7 @@ La función de adición de activos se completa comprobando si hay errores y conf
 .Pasos
 . En el Administrador del sistema de SANtricity, haga clic en *Inicio*.
 . Si el enlace con la etiqueta *recuperar de problemas* aparece en la parte superior central de la página, haga clic en el vínculo y resuelva cualquier problema que se indique en Recovery Guru.
-. En el Administrador del sistema de SANtricity, haga clic en *hardware* y desplácese hacia abajo, según sea necesario, para ver la bandeja de unidades recién añadida.
+. En SANtricity System Manager, haz clic en menu:Hardware[Controllers and components] y desplázate hacia abajo, si es necesario, para ver la nueva estantería de unidades que agregaste.
 . En el caso de las unidades que se hayan instalado previamente en otro sistema de almacenamiento, añada una unidad a la bandeja de unidades recién instalada. Espere a que se reconozca cada unidad antes de insertar la siguiente unidad.
 +
 Cuando el sistema de almacenamiento reconoce una unidad, la representación de la ranura de la unidad en la página *hardware* se muestra como un rectángulo azul.

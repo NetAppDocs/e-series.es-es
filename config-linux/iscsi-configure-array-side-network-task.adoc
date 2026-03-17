@@ -22,7 +22,7 @@ Asegúrese de tener lo siguiente:
 
 
 .Acerca de esta tarea
-En esta tarea, se describe cómo acceder a la configuración del puerto iSCSI desde la página hardware de System Manager. También puede acceder a la configuración desde MENU:System[Ajustes > Configurar puertos iSCSI].
+Esta tarea describe cómo acceder a la configuración de puertos iSCSI desde la página Hardware de System Manager. También puedes acceder a la configuración desde menu:System[Settings > System > Configure iSCSI ports].
 
 .Pasos
 . Desde el explorador, introduzca la siguiente URL: `+https://<DomainNameOrIPAddress>+`
@@ -40,11 +40,7 @@ El asistente de configuración se inicia si no hay pools, grupos de volúmenes, 
 +
 Más adelante se utilizará el asistente para completar las tareas de configuración adicionales.
 
-. Seleccione *hardware*.
-. Si el gráfico muestra las unidades, haga clic en *Mostrar parte posterior de la bandeja*.
-+
-El gráfico cambia y muestra las controladoras en lugar de las unidades.
-
+. En el panel izquierdo, selecciona menú:Hardware[Controllers and components].
 . Haga clic en la controladora con los puertos iSCSI que desea configurar.
 +
 Aparece el menú contextual de la controladora.

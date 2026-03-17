@@ -25,7 +25,7 @@ Utilice System Manager de SANtricity para determinar qué tipo de transceptores 
 .Pasos
 . En el Administrador del sistema de SANtricity, seleccione *Soporte*.
 . Seleccione el mosaico *Centro de soporte*.
-. En la ficha Recursos de soporte, busque y seleccione el enlace *Perfil de matriz de almacenamiento*.
+. En la página de Support Resources, localiza y selecciona el enlace *Storage Array Profile*.
 . Escriba *SFP* en el cuadro de texto y haga clic en *Buscar*.
 . Para cada SFP incluido en el perfil de matriz de almacenamiento, busque la entrada para *velocidad de datos admitida*.
 +

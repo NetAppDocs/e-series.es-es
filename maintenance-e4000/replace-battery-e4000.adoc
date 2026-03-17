@@ -142,7 +142,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre, su
 ** Desde SANtricity System Manager:
 +
 ... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, seleccione *Controller & Components* para mostrar los controladores.
+... Si el gráfico muestra las unidades, selecciona *Controller & Components* para mostrar los controladores
 ... Seleccione la controladora que desea colocar en estado sin conexión.
 ... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -341,8 +341,8 @@ NOTE: Si no puede resolver el problema, póngase en contacto con el soporte téc
 
 . Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
 +
-.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
-.. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 5.
+.. Selecciona *Storage › Volumes*. Desde la página *All Volumes*, verifica que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona *More › Change ownership* para ver los propietarios de los volúmenes
+.. Si todos los volúmenes pertenecen al propietario preferente, continúa con el paso 4.
 .. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
 .. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras distribución automática o distribución manual, debe comprobar Recovery Guru para los problemas de conectividad de host.
 .. Si no existe Recovery Guru presente o si después de seguir los pasos de Recovery Guru, los volúmenes siguen sin devolverse a sus propietarios preferidos, póngase en contacto con el servicio de soporte.

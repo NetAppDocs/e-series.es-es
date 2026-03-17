@@ -24,5 +24,5 @@ Es posible ver información resumida de un certificado, incluida la organizació
 ** *Trusted* -- muestra certificados a los que el plugin puede acceder para matrices de almacenamiento y otros servidores remotos, como un servidor LDAP. Los certificados pueden emitirse mediante una CA o estar autofirmados.
 
 
-. Para ver más información sobre un certificado, seleccione la fila correspondiente, seleccione las tres puntos al final de la fila y haga clic en *Ver* o *Exportar*.
+. Para ver más información sobre un certificado, selecciona su fila, selecciona la elipsis al final de la fila y luego haz clic en *Ver* o *Export*.
 

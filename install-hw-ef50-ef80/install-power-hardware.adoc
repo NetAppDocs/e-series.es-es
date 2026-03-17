@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-power-hardware.html 
+sidebar: sidebar 
+keywords: ef50, ef80, connect power cables 
+summary: Después de cablear las conexiones de red de réplica y host del controlador para tu sistema de almacenamiento EF50 o EF80, enciendes los controladores. 
+---
+= Enciende el hardware - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de cablear la duplicación entre controladores y las conexiones host para tu sistema de almacenamiento EF50 o EF80, enciendes los controladores.
+
+.Antes de empezar
+Tome precauciones antiestáticas.
+
+.Pasos
+. Enchufa un cable de alimentación en cada fuente de alimentación del controlador y luego conéctalos a fuentes de alimentación en circuitos diferentes.
++
+
+NOTE: Si estás usando unidades de distribución de alimentación (PDU) de terceros, no uses tomas de corriente directamente detrás de los controladores porque podrías bloquear el acceso a los controladores.
+
++
+*Cables de alimentación*
+
++
+image:../media/power_cable_inst-hw-ef600.png["Cables de alimentación"]
+
++
+image::../media/drw_psu_layout_1_ieops-1886.svg[diagrama de conexión de alimentación del sistema de almacenamiento]
+
++
+** El sistema comienza a arrancar. El arranque inicial puede tardar hasta ocho minutos.
+** Los LED del chasis del sistema parpadean y los ventiladores se ponen en marcha, lo que indica que los controladores se están encendiendo.
++
+Durante el arranque es normal que los ventiladores sean muy ruidosos.
+
+** La pantalla digital en la parte frontal del chasis del sistema (detrás del frontal) no se ilumina.
+
+
+. Asegura los cables de alimentación usando el dispositivo de sujeción de cada fuente de alimentación.
+
+
+.El futuro
+Después de encender tu sistema de almacenamiento, link:install-complete-setup.html["configuración completa del sistema de almacenamiento"].

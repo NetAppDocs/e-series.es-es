@@ -58,6 +58,15 @@ Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se enga
 
 == Paso 2: Instale el nuevo compartimento de controladoras
 
+[role="tabbed-block"]
+====
+.Modelos de controlador EF280 y EF50
+--
+Para obtener información sobre la instalación de nuevos controladores EF80 y EF50, consulta link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-7-install-the-controller["EF50 y EF80 - Paso 7: instala el controlador"^].
+
+--
+.Otros modelos de controladora E-Series
+--
 Instale el compartimento de controladoras nuevo en la bandeja de controladoras.
 
 .Pasos
@@ -72,5 +81,7 @@ Si la configuración de cableado de unidades es la misma que la de las controlad
 
 
 
+--
+====
 .El futuro
 Si la función Drive Security está habilitada, vaya a link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. De lo contrario, vaya a link:complete-upgrade-controllers-task.html["Complete la actualización de la controladora"].

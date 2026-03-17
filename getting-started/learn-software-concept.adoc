@@ -94,7 +94,7 @@ Ver datos de diagnóstico, gestionar actualizaciones y configurar AutoSupport, q
 
 == Unified Manager de SANtricity
 
-Unified Manager es un software basado en web que se utiliza para gestionar todo el dominio. Desde una vista central puede ver el estado de todas las cabinas E-Series y EF-Series más recientes, como E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C y EF600C. También puede realizar operaciones en lote en cabinas de almacenamiento seleccionadas.
+Unified Manager es un software basado en web que se usa para gestionar todo tu dominio. Desde una vista central, puedes ver el estado de todas las matrices E-Series y EF-Series más recientes, como la EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C y EF600C. También puedes realizar operaciones por lotes en las matrices de almacenamiento seleccionadas.
 
 Unified Manager se encuentra instalado en un servidor de gestión junto con el proxy de servicios web. Para acceder a Unified Manager, se abre un explorador e introduce la URL que indica el servidor donde está instalado el proxy de servicios web.
 
@@ -170,4 +170,4 @@ Web Services incluye documentación de API que permite interactuar directamente 
 
 == Interfaz de línea de comandos (CLI)
 
-La interfaz de línea de comandos (CLI) es una aplicación de software que permite configurar y supervisar cabinas de almacenamiento. La CLI permite ejecutar comandos desde el símbolo del sistema de un sistema operativo, como C: En dos, una ruta de sistema operativo Linux o una ruta de sistema operativo Solaris.
+La interfaz de línea de comandos (CLI) es una aplicación de software que proporciona una forma de configurar y supervisar las matrices de almacenamiento. Usando la CLI, puedes ejecutar comandos desde un indicador del sistema operativo, como el indicador `DOS C:`, una ruta del sistema operativo Linux o una ruta del sistema operativo Solaris.

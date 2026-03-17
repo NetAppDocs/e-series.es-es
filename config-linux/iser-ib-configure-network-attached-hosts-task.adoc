@@ -163,7 +163,7 @@ iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
 ----
 iscsiadm -m session
 ----
-.. Compruebe el estado de la sesión iscsi de la cabina. Desde el Administrador del sistema de SANtricity, vaya a *matriz de almacenamiento* > *Iser* > *Ver/finalizar sesiones*.
+.. Comprueba el estado de la sesión iscsi desde la cabina. Desde SANtricity System Manager, ve a *Settings* > *System* > *View/End iSCSISessions*.
 
 
 

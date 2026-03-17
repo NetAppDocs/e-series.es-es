@@ -1,0 +1,69 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Localiza el DIMM defectuoso.
++
+
+NOTE: Consulta ya sea el https://hwu.netapp.com["Netapp Hardware Universe"] o el mapa FRU en la tapa del controlador para ver las ubicaciones exactas de los DIMM.
+
+. Quita el módulo DIMM defectuoso:
++
+image::../media/drw_g_dimm_ieops-1873.svg[Reemplazo de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Numeración y posiciones de las ranuras DIMM.
+
+
+NOTE: Dependiendo de tu modelo de sistema de almacenamiento, tendrás dos o cuatro DIMM.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+** Ten en cuenta la orientación del DIMM en el zócalo para que puedas insertar el DIMM de repuesto usando la misma orientación.
+** Expulsa el DIMM defectuoso empujando lentamente hacia afuera las dos lengüetas de expulsión en ambos extremos de la ranura del DIMM.
+
+
+
+IMPORTANT: Sujeta con cuidado el DIMM por las esquinas o los bordes para evitar presionar los componentes de la placa de circuito del DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Levanta el DIMM y sácalo de la ranura.
+
+Las lengüetas eyectoras permanecen en posición abierta.
+
+|===
+. Desempaqueta el DIMM de repuesto y colócalo en una superficie plana y libre de estática cerca del sistema de almacenamiento.
++
+Guarda el material de embalaje para usarlo cuando devuelvas el DIMM defectuoso.
+
+. Instala el módulo DIMM de repuesto:
++
+.. Asegúrate de que las lengüetas eyectoras DIMM del conector están en posición abierta.
+.. Sujeta el DIMM por las esquinas e insértalo bien en la ranura.
++
+La muesca en la parte inferior del DIMM, entre las patillas, debe alinearse con la pestaña de la ranura.
+
++
+Cuando se inserta correctamente, el DIMM entra con facilidad pero encaja firmemente en la ranura. Vuelve a insertar el DIMM si sientes que no está insertado correctamente. Nunca fuerces un DIMM en una ranura.
+
+.. Comprueba visualmente el módulo DIMM para asegurarte de que está alineado de manera uniforme y completamente insertado en la ranura.
+.. Empuja hacia abajo con cuidado, pero con firmeza, el borde superior del DIMM hasta que las lengüetas eyectoras encajen en su sitio sobre las muescas en ambos extremos del DIMM.
+
+
+

@@ -1,0 +1,54 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-offline-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, offline the impaired controller 
+summary: Coloca el controlador dañado fuera de línea en tu sistema de almacenamiento EF50 o EF80 para evitar la pérdida de datos y asegurar la estabilidad del sistema cuando reemplaces el controlador. 
+---
+= Desconectar el controlador deteriorado - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Coloca el controlador dañado fuera de línea en tu sistema de almacenamiento EF50 o EF80 para evitar la pérdida de datos y asegurar la estabilidad del sistema cuando reemplaces el controlador.
+
+.Antes
+* Debes haber cumplido los link:controller-replace-requirements.html["requisitos"] para este procedimiento.
+* Debes haber completado el link:controller-replace-prepare.html["preparación"] para este procedimiento.
+
+
+.Acerca de esta tarea
+Siempre que pongas un controlador fuera de línea, necesitas esperar al menos un minuto antes de volver a poner el controlador en línea. Este período de espera permite que el sistema de almacenamiento actualice el estado del controlador y asegure que todos los datos almacenados en caché se escriban en las unidades.
+
+.Pasos
+. Si el controlador dañado aún no está fuera de línea, ponlo fuera de línea usando SANtricity System Manager:
++
+.. Selecciona *Hardware* > *Controladores y componentes* para mostrar los controladores.
+.. Selecciona el controlador que quieres poner fuera de línea para mostrar su menú de contenido.
+.. Selecciona *Colocar fuera de línea* y luego confirma que quieres realizar la operación.
++
+
+NOTE: Si estás accediendo a SANtricity System Manager usando el controlador que intentas poner fuera de línea, se muestra un mensaje de SANtricity System Manager no disponible. Selecciona *Connect to an alternate network connection* para acceder automáticamente a SANtricity System Manager usando el otro controlador.
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Confirma que es seguro retirar el componente defectuoso usando el Recovery Guru:
++
+.. Selecciona *Revisar*.
+.. Confirma que el campo *OK to remove* en el área Detalles muestra *Yes*.
++
+
+CAUTION: Si en el campo *OK to remove* no aparece *Yes*, no sigas con la retirada del componente defectuoso. En su lugar, soluciona el problema usando el Recovery Guru.
+
+
+
+
+
+.El futuro
+Después de poner el controlador dañado fuera de línea, link:controller-replace-move-hardware.html["reemplaza el controlador dañado"].

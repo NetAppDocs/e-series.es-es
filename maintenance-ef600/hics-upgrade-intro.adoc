@@ -85,7 +85,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 +
 El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
-. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. En SANtricity System Manager, selecciona menú:Storage[Operations in Progress]. Espera a que finalicen todas las operaciones antes de continuar con el siguiente paso.
 . Apague la bandeja de controladoras.
 +
 .. Etiquete y desconecte ambos cables de alimentación de la bandeja de controladoras.
@@ -265,7 +265,7 @@ Si el estado no es óptimo o si alguno de los LED de atención está encendido, 
 
 NOTE: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
 
-. Haga clic en MENU:hardware[Soporte > Centro de actualización] para asegurarse de que está instalada la última versión de SANtricity OS.
+. Haga clic en MENU:Soporte[Centro de actualización] para asegurarse de que la versión más reciente de SANtricity OS esté instalada.
 +
 Si es necesario, instale la versión más reciente.
 

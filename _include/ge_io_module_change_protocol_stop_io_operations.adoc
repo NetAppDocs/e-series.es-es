@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Asegúrate de que no se están realizando operaciones de E/S entre el sistema de almacenamiento y todos los hosts conectados. Por ejemplo, puedes realizar estos pasos:
++
+** Detenga todos los procesos que implican las LUN asignadas del almacenamiento a los hosts.
+** Asegúrese de que no hay aplicaciones que escriban datos en ninguna LUN asignada del almacenamiento a los hosts.
+** Desmonta todos los sistemas de archivos asociados con LUNs en el sistema de almacenamiento.
++
+
+NOTE: Los pasos exactos para detener las operaciones de E/S del host dependen del sistema operativo del host y de la configuración, que quedan fuera del alcance de estas instrucciones. Si no estás seguro de cómo detener las operaciones de E/S del host en tu entorno, considera apagar el host o contacta https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^].
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, puede perder datos.
+
+
+
+. En cada controlador, asegúrate de que el LED NV Caching Active (verde) está apagado.
++
+Cuando el LED NV Caching Active (verde) está apagado, cualquier dato en la memoria caché ya se ha escrito en las unidades y es seguro continuar con este procedimiento.
+
++
+
+NOTE: Si el LED NV Caching Active (verde) está encendido, los datos almacenados en caché se están escribiendo en las unidades. Debes esperar a que el proceso termine y el LED NV Caching Active (verde) se apague. Sin embargo, si el LED permanece encendido durante más de cinco minutos, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de seguir con este procedimiento.
+
++
+El LED NV Caching Active (verde) está ubicado junto al icono NV en el controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Ubicación del LED de estado NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Icono NV y LED NV Caching Active en el controlador
+
+|===
+. Confirma que las operaciones en los controladores han finalizado usando SANtricity System Manager:
++
+.. Selecciona *Storage* > *Operations in progress* para ver la pantalla Overview.
+.. Espera a que finalicen todas las operaciones y que la pantalla Overview muestre *No operations currently in progress* antes de seguir con el siguiente paso.
+
+
+. Elimina todos los hosts definidos del sistema de almacenamiento.
++
+Para obtener instrucciones, consulta el https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-host-or-host-cluster.html["Eliminar un host o clúster de host en SANtricity System Manager"^] procedimiento.
+
+

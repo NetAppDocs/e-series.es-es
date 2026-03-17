@@ -26,9 +26,9 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf
   - title: Software SANtricity
     links:
-    - title: System Manager 11,9 de SANtricity
+    - title: SANtricity System Manager 12.0
       url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: Unified Manager 7 de SANtricity
+    - title: SANtricity Unified Manager 8
       url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
     - title: Referencia de interfaz de línea de comandos (CLI)
       url: https://docs.netapp.com/us-en/e-series-cli/index.html
@@ -53,10 +53,10 @@ indexpage:
   - title: Para los ejecutivos de ventas
     links:
     - title: Formación técnica de E-Series/EF-Series (se requiere inicio de sesión)
-      url: https://fieldportal.netapp.com/content/199944
+      url: https://fieldportal.netapp.com/s/article/E-Series-and-EF-Series-SE-Technical-Training
     - title: Descripción general y detalles técnicos de EF300 (se requiere inicio
         de sesión)
-      url: https://fieldportal.netapp.com/content/1417672
+      url: https://fieldportal.netapp.com/s/article/eseries-ef300-se-presentation-1704449366156
     - title: NetApp Fusion (se requiere inicio de sesión)
       url: https://fusion.netapp.com/
   - title: Herramientas y soporte

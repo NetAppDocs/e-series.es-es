@@ -17,6 +17,15 @@ Después de preparar la actualización, puede extraer las controladoras y, si es
 
 == Paso 1: Quitar la controladora
 
+[role="tabbed-block"]
+====
+.Modelos de controlador EF280 y EF50
+--
+Para obtener información sobre cómo quitar controladores de los sistemas de almacenamiento EF280 y EF50, consulta link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 y EF80 - Paso 1: Retira el controlador"^].
+
+--
+.Otros modelos de controladora E-Series
+--
 Quite el compartimento de controladoras para que pueda actualizarlo con uno nuevo. Debe desconectar todos los cables y quitar todos los transceptores SFP. Así, puede sacar el compartimento de controladoras de la bandeja de controladoras.
 
 .Antes de empezar
@@ -63,10 +72,11 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Quite el cont
 
 . Coloque el antiguo contenedor de controladoras en una superficie plana y libre de estática cerca de la bandeja de la unidad de control con las palancas de liberación hacia arriba. Coloque el compartimento de la controladora para poder acceder a la cubierta superior.
 . (Condicional) Si va a actualizar controladoras en un soporte de controladora-unidad doble, repita todos los pasos para quitar el segundo compartimento de controladoras.
+. Si planea utilizar la batería de la controladora antigua en la controladora nueva, vaya a la siguiente parte de la sección; de lo contrario, vaya a. link:install-controllers-task.html["Instale nuevas controladoras"].
 
 
-Si planea utilizar la batería de la controladora antigua en la controladora nueva, vaya a la siguiente parte de la sección; de lo contrario, vaya a. link:install-controllers-task.html["Instale nuevas controladoras"].
-
+--
+====
 
 
 == Paso 2: Extraiga la batería

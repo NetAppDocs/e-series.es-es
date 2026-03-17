@@ -169,10 +169,16 @@ Quite la batería del compartimento de controladoras con errores para que pueda 
 . Localice la pestaña "Press" en el lateral del controlador.
 . Desenganche la batería presionando la lengüeta y apretando la carcasa de la batería.
 +
-image::../media/batt_3.png[Presione la pestaña para desbloquear la batería]
+image::../media/batt_3.png[Presiona tab para desenganchar la batería]
 
-. Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba, desconectando la batería de la placa.image:../media/batt_2.png["Retire el conector del alojamiento del cableado de la batería"]
-. Saque la batería del controlador y colóquela sobre una superficie plana y libre de estática.image:../media/batt_4.png["Levante la batería del controlador"]
+. Apriete suavemente el conector que aloja el cableado de la batería. Tire hacia arriba y desconecte la batería de la placa.
++
+image:../media/batt_2.png["Retire el conector del alojamiento del cableado de la batería"]
+
+. Levante la batería del controlador y colóquela sobre una superficie plana y sin estática.
++
+image:../media/batt_4.png["Levante la batería del controlador"]
+
 
 
 

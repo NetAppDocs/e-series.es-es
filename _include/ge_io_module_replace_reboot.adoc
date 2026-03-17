@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Después de reemplazar un módulo de E/S, tienes que reiniciar el controlador.
+
+.Pasos
+. Reinicia el controlador desde el indicador LOADER:
++
+`bye`
+
++
+
+NOTE: Al reiniciar el controlador dañado también se reinicializan los módulos de I/O y otros componentes.
+
+. Devuelve el controlador dañado a su funcionamiento normal devolviéndole su almacenamiento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaura la devolución automática desde la consola del controlador sano:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Si AutoSupport está activado, restaura la creación automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

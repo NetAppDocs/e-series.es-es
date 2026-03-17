@@ -72,7 +72,7 @@ Si es necesario, debe resolver todos los problemas de certificado antes de conti
 Durante la detección, si alguna cabina de almacenamiento muestra el estado "certificados no confiables", se muestra el cuadro de diálogo resolver certificados autofirmados. Puede resolver certificados que no son de confianza en este cuadro de diálogo, o bien puede importar certificados de CA (consulte link:vc-olh-import-certificates-for-arrays.html["Importar certificados para cabinas"]).
 
 .Pasos
-. Si se abre el cuadro de diálogo resolver certificados autofirmados, revise la información que se muestra para los certificados que no son de confianza. Para obtener más información, también puede hacer clic en los tres puntos del extremo de la tabla y seleccionar *Ver* en el menú emergente.
+. Si se abre el cuadro de diálogo Resolve Self-Signed Certificates, revisa la información mostrada para los certificados no fiables. Para más información, también puedes hacer clic en la elipsis al final de la tabla y seleccionar *View* en el menú emergente.
 . Debe realizar una de las siguientes acciones:
 +
 ** Si confía en las conexiones con las matrices de almacenamiento detectadas, haga clic en *Siguiente* y, a continuación, en *Sí* para confirmar y continuar con la siguiente tarjeta del asistente. Los certificados autofirmados se marcarán como certificados de confianza y las cabinas de almacenamiento se añadirán al plugin.

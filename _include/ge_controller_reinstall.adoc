@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Acerca de esta tarea
+La siguiente ilustración muestra el funcionamiento de las asas del controlador (desde el lado izquierdo de un controlador) al reinstalar el controlador y puede usarse como referencia para los pasos de reinstalación del controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operación del asa del controlador para instalar un controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Si giraste las asas del controlador hacia arriba (junto a las lengüetas) para apartarlas mientras hacías el mantenimiento del controlador, gíralas hacia abajo hasta la posición horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Empuja las asas para volver a insertar el controlador en el chasis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Gira las asas hasta la posición vertical y bloquéalas en su sitio con las lengüetas de bloqueo.
+
+|===
+.Pasos
+. Cierra la tapa del controlador y gira el tornillo de mariposa en el sentido de las agujas del reloj hasta que quede apretado.
+. Inserta el controlador en el chasis:
++
+.. Alinea la parte trasera del controlador con la abertura del chasis y empuja suavemente pero con firmeza las asas hasta que el controlador toque el plano medio y quede completamente asentado.
++
+
+NOTE: No uses demasiada fuerza al deslizar el controlador en el chasis; podría dañar los conectores.
+
+.. Gira las asas del mando hacia arriba y bloquéalas en su sitio con las lengüetas.
+
+
+. Vuelve a conectar el cable de alimentación a la fuente de alimentación y asegúralo con el retén del cable de alimentación.
++
+Una vez que se restablezca la alimentación a la fuente de alimentación, el LED de estado debería estar verde.
+
+. Vuelve a conectar todos los cables al controlador.
++
+
+NOTE: La reconexión de los cables debe realizarse antes de poner el controlador en línea. Esto es especialmente importante para las conexiones de los cables de mirroring, ya que garantizan la redundancia total del sistema y se utilizan para el mirroring de caché y el envío de I/O.
+
+

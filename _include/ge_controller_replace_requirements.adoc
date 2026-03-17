@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+* Verifica que tienes un controlador averiado. Puedes determinarlo de dos formas:
++
+** El Recovery Guru en SANtricity System Manager te indicó que reemplazaras el controlador.
+** El LED ámbar Attention del controlador está encendido, lo que indica que el controlador tiene un fallo.
+
+
+
+
+* Verifica que las siguientes condiciones de tu sistema de almacenamiento sean ciertas para asegurarte de que puedes reemplazar el controlador dañado mientras tu sistema de almacenamiento está encendido y realizando operaciones de E/S de host:
++
+** El segundo controlador del chasis tiene estado óptimo.
+** El campo *OK to remove* en el área Details del Recovery Guru en SANtricity System Manager muestra *Yes*, lo que indica que es seguro quitar el controlador dañado.
+
+
+* Asegúrese de tener lo siguiente:
++
+** Un controlador de repuesto con el mismo número de pieza que el controlador que estás reemplazando.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin estática.
+** Etiquetas para identificar cada cable que vas a desconectar del controlador.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para el controlador.
++
+Puedes abrir la interfaz de SANtricity System Manager dirigiendo el navegador al nombre de dominio o dirección IP del controlador.
+
++
+Opcionalmente, puedes usar la interfaz de línea de comandos (CLI) para realizar algunos de los procedimientos. Descarga el paquete CLI (archivo zip) usando SANtricity System Manager: *Settings* > *System* > *Add-ons* y selecciona *Command Line Interface*. Luego puedes ejecutar comandos CLI desde un indicador del sistema operativo, como el indicador C: de DOS.
+
+
+
+

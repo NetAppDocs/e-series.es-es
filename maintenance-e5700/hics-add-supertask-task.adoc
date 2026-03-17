@@ -108,6 +108,9 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED activo de 
 *(1)* _Cache Active LED_
 
 . En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
++
+Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+
 . Apague la bandeja de controladoras.
 +
 .. Apague ambos switches de alimentación de la bandeja de controladoras.

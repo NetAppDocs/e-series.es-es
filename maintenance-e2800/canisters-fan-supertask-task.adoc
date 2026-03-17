@@ -103,7 +103,7 @@ Guarde todo el material de embalaje para utilizarlo cuando devuelva el ventilado
 
 . Pulse la pestaña naranja para liberar el asa del contenedor de ventilador.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[Lengüeta de liberación del ventilador]
 
 +
 *(1)* _TAB que presiona para liberar el asa_ del contenedor de ventilador

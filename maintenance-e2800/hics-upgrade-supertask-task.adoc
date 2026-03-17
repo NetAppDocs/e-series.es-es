@@ -107,7 +107,10 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de caché ac
 +
 *(1)* _Cache Active LED_
 
-. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
++
+Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+
 . Apague la bandeja de controladoras.
 +
 .. Apague ambos switches de alimentación de la bandeja de controladoras.

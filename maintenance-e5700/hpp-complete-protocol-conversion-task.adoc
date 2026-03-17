@@ -33,6 +33,7 @@ Esta tarea no se aplica si se convierte una nueva cabina de almacenamiento que a
 Debe configurar los switches utilizados para transportar el tráfico iSCSI según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
 
 . En SANtricity System Manager, seleccione MENU:hardware[Configurar puertos iSCSI].
+. Haz clic en el controlador deseado y selecciona *Configurar puertos iSCSI*.
 . Seleccione las opciones de configuración del puerto.
 +
 Puede configurar la red iSCSI de muchas maneras. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
@@ -49,9 +50,6 @@ NOTE: Si necesita instrucciones para añadir hosts o clústeres de hosts, consul
 Se muestra el cuadro de diálogo Configuración de host.
 
 .. Haga clic en la ficha *puertos de host*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Cuadro de diálogo de configuración del host]
-
 .. Haga clic en *Agregar* y utilice el cuadro de diálogo *Agregar puerto de host* para asociar un nuevo identificador de puerto de host al host.
 +
 La longitud del nombre del identificador de puerto de host se determina mediante la tecnología de interfaz del host. Los nombres de identificador de puerto de host de FC deben tener 16 caracteres. Los nombres de identificador de puerto de host iSCSI tienen un máximo de 223 caracteres. El puerto debe ser único. No se permite un número de puerto que ya se haya configurado.
@@ -95,9 +93,6 @@ La división en zonas de los switches permite que los hosts se conecten al almac
 Se muestra el cuadro de diálogo Configuración de host.
 
 .. Haga clic en la ficha *puertos de host*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Cuadro de diálogo de configuración del host]
-
 .. Haga clic en *Agregar* y utilice el cuadro de diálogo *Agregar puerto de host* para asociar un nuevo identificador de puerto de host al host.
 +
 La longitud del nombre del identificador de puerto de host se determina mediante la tecnología de interfaz del host. Los nombres de identificador de puerto de host de FC deben tener 16 caracteres. Los nombres de identificador de puerto de host iSCSI tienen un máximo de 223 caracteres. El puerto debe ser único. No se permite un número de puerto que ya se haya configurado.

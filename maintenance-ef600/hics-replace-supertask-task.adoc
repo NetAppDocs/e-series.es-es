@@ -64,8 +64,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 . Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
 +
-.. Seleccione *hardware*.
-.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Seleccione la controladora que desea colocar en estado sin conexión.
 .. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -228,7 +227,7 @@ Coloque la controladora en línea, recoja datos de soporte y reanude operaciones
 .Pasos
 . Coloque una controladora en línea.
 +
-.. En System Manager, desplácese hasta la página hardware.
+.. En System Manager, vaya a la página *Hardware*.
 .. Seleccione *Mostrar parte posterior del controlador*.
 .. Seleccione la controladora con la tarjeta de interfaz del host reemplazada.
 .. Seleccione *colocar en línea* en la lista desplegable.

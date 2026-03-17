@@ -65,7 +65,7 @@ Si desea importar certificados firmados por CA, cancele el asistente de detecci�
 
 Debe resolver todos los problemas de los certificados antes de continuar con el proceso de detección.
 
-. Si se abre el cuadro de diálogo resolver certificados autofirmados, revise la información que se muestra para los certificados que no son de confianza. Para obtener más información, también puede hacer clic en los tres puntos del extremo de la tabla y seleccionar *Ver* en el menú emergente.
+. Si se abre el cuadro de diálogo Resolve Self-Signed Certificates, revisa la información mostrada para los certificados no fiables. Para más información, también puedes hacer clic en la elipsis al final de la tabla y seleccionar *View* en el menú emergente.
 . Debe realizar una de las siguientes acciones:
 +
 ** Si confía en las conexiones con las matrices de almacenamiento detectadas, haga clic en *Siguiente* y, a continuación, en *Sí* para confirmar y continuar con el siguiente cuadro de diálogo del asistente. Los certificados autofirmados se marcan como de confianza y las cabinas de almacenamiento se añadirán al plugin.

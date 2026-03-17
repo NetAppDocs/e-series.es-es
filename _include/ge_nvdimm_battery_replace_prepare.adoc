@@ -1,0 +1,37 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Confirma que el Recovery Guru en SANtricity System Manager informa un estado de _Battery Failed_ o un estado de _Battery Replacement Required_. Si se informa cualquiera de estos estados, debes reemplazar la batería NV afectada.
+. Soluciona cualquier otro problema del sistema de almacenamiento.
++
+Usando SANtricity System Manager, revisa los detalles en el Recovery Guru para ver si hay algún otro problema.
+
+. Asegúrese de que no existan volúmenes en uso o que exista un controlador multivía instalado en todos los hosts que utilizan estos volúmenes.
+. Asegúrese de tener lo siguiente:
++
+** La batería NV de repuesto.
+** Una pulsera ESD u otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin electricidad estática.
+** Etiquetas para identificar cada cable que está conectado al controlador deteriorado.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para el controlador con problemas.
++
+Para abrir la interfaz de System Manager, dirige el navegador al nombre de dominio o la dirección IP del controlador deteriorado.
+
+
+
+. Haz una copia de seguridad de la base de datos de configuración del sistema de almacenamiento usando SANtricity System Manager:
++
+Si se produce un problema al retirar una controladora, puedes usar el archivo guardado para restaurar tu configuración. El sistema guarda el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y conjuntos de discos de la controladora dañada.
+
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de configuración*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

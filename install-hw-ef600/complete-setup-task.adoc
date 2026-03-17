@@ -137,6 +137,7 @@ En la siguiente figura, se muestra un ejemplo de la ubicación del puerto de ges
 image:../media/ethernet_callout.png["Puertos de gestión de EF600 GbE"]
 
 |===
+. Conecte el controlador B a la red.
 . Abra un explorador y utilice la dirección IP predeterminada (169.254.128.101) para establecer una conexión con la controladora. La controladora envía de nuevo un certificado autofirmado. El explorador le informa de que la conexión no es segura.
 +
 
@@ -164,7 +165,6 @@ NOTE: Si pierde la conexión a la controladora A, puede conectar un cable ethern
 Se mostrará el asistente Configure Network Settings.
 
 . Utilice los ajustes de red proporcionados por el administrador de red en el asistente *Configurar configuración de red* para configurar los ajustes de red del controlador B y, a continuación, seleccione *Finalizar*.
-. Conecte el controlador B a la red.
 . Valide la configuración de red de la controladora B introduciendo la dirección IP configurada de la controladora B en un explorador.
 +
 

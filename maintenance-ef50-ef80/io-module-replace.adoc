@@ -1,0 +1,256 @@
+---
+permalink: maintenance-ef50-ef80/io-module-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80 replace io module, replace hic, replace host interface card 
+summary: Sustituye un módulo de E/S averiado en tu sistema de almacenamiento EF50 o EF80 por el mismo tipo de módulo de E/S para restaurar el sistema de almacenamiento a su estado de funcionamiento óptimo. 
+---
+= Reemplaza un módulo de E/S - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sustituye un módulo de E/S averiado en tu sistema de almacenamiento EF50 o EF80 por el mismo tipo de módulo de E/S para restaurar el sistema de almacenamiento a su estado de funcionamiento óptimo.
+
+.Acerca de esta tarea
+* Sustituye un módulo de E/S preparando, poniendo el controlador averiado fuera de línea, reemplazando el módulo de E/S fallido, volviendo a poner el controlador en línea y devolviendo la pieza fallida a NetApp.
+* El término _módulo de E/S_ se utiliza en lugar de host interface cards (HICs) en este procedimiento.
+* Los LED de fallo del módulo de E/S (para las cuatro ranuras) no funcionan. Permanecen apagados en todo momento, así que no se pueden usar para verificar una condición de fallo.
++
+Los LED de avería están situados en los controladores: los LED de fallo de las ranuras 1 y 2 están situados a la derecha de la ranura 2. Los LED de fallo de las ranuras 3 y 4 están situados a la izquierda de la ranura 4.
+
+* No es necesario retirar el controlador deteriorado del chasis porque los módulos de E/S son accesibles con el controlador en su lugar.
+* Debes poner el controlador deteriorado fuera de línea antes de desenchufar cualquier cable de módulo de E/S.
+* Puedes encender los LED de localización (azules) del sistema de almacenamiento (en la parte frontal del sistema de almacenamiento y en ambos controladores) para ayudarte a localizar físicamente el sistema de almacenamiento afectado. Usando SANtricity System Manager, selecciona *Hardware* > *Controllers and components*, selecciona la pestaña *Controller shelf* y, en el menú contextual, selecciona *Turn on locator light*.
+
+
+
+
+== Paso 1: prepárate para sustituir un módulo de E/S
+
+Prepárate para sustituir un módulo de E/S reuniendo las herramientas y el equipo necesarios y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
+
+.Pasos
+. Asegúrese de tener lo siguiente:
++
+** El módulo de E/S de reemplazo.
++
+Asegúrate de que estás reemplazando el módulo de E/S averiado por el mismo tipo de módulo de E/S. No puedes instalar un tipo diferente de módulo de E/S.
+
++
+Debes tener el mismo tipo y número de módulos de E/S en cada controlador de tu sistema de almacenamiento.
+
++
+
+CAUTION: *Posible pérdida de acceso a los datos* -- La presencia de módulos de I/O incompatibles o no coincidentes hace que los controladores se bloqueen al aplicar alimentación.
+
+** Una pulsera ESD o que hayas tomado otras precauciones antiestáticas.
+** Una superficie de trabajo plana y sin electricidad estática.
+** Etiquetas para identificar cada cable que está conectado al módulo de I/O defectuoso.
+** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para el controlador con problemas.
++
+Para abrir la interfaz de System Manager, dirige el navegador al nombre de dominio o la dirección IP del controlador deteriorado.
+
+
+
+. Haz una copia de seguridad de la base de datos de configuración del sistema de almacenamiento usando SANtricity System Manager:
++
+Si se produce un problema al retirar una controladora, puedes usar el archivo guardado para restaurar tu configuración. El sistema guarda el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y conjuntos de discos de la controladora dañada.
+
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de configuración*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Paso 2: pon el controlador fuera de línea
+
+Coloca el controlador deteriorado fuera de línea para que puedas realizar con seguridad el resto de este procedimiento.
+
+.Acerca de esta tarea
+Siempre que pongas un controlador fuera de línea, necesitas esperar al menos un minuto antes de volver a poner el controlador en línea. Este período de espera permite que el sistema de almacenamiento actualice el estado del controlador y asegure que todos los datos almacenados en caché se escriban en las unidades.
+
+.Pasos
+. Si el controlador dañado aún no está fuera de línea, ponlo fuera de línea usando SANtricity System Manager:
++
+.. Selecciona *Hardware* > *Controladores y componentes* para mostrar los controladores.
+.. Selecciona el controlador que quieres poner fuera de línea para mostrar su menú de contenido.
+.. Selecciona *Colocar fuera de línea* y luego confirma que quieres realizar la operación.
++
+
+NOTE: Si estás accediendo a SANtricity System Manager usando el controlador que intentas poner fuera de línea, se muestra un mensaje de SANtricity System Manager no disponible. Selecciona *Connect to an alternate network connection* para acceder automáticamente a SANtricity System Manager usando el otro controlador.
+
+
+
+. Espere a que System Manager de SANtricity actualice el estado de la controladora a sin conexión.
++
+
+CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el estado.
+
+. Confirma que es seguro retirar el componente defectuoso usando el Recovery Guru:
++
+.. Selecciona *Revisar*.
+.. Confirma que el campo *OK to remove* en el área Detalles muestra *Yes*.
++
+
+CAUTION: Si en el campo *OK to remove* no aparece *Yes*, no sigas con la retirada del componente defectuoso. En su lugar, soluciona el problema usando el Recovery Guru.
+
+
+
+
+
+
+
+== Paso 3: reemplaza el módulo de E/S
+
+Desenchufa el cableado del módulo de E/S averiado, reemplázalo por el módulo de E/S de repuesto y luego conecta el cableado al módulo de E/S de repuesto.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Desconecta el cableado del módulo de E/S averiado.
++
+Asegúrate de etiquetar los cables para que sepas de dónde vinieron.
+
+. Quita el módulo de E/S averiado del controlador:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Quitar módulo de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Gira el tornillo de mariposa del módulo de E/S en sentido antihorario para aflojar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Saca el módulo de E/S del controlador usando la lengüeta de la etiqueta del puerto de la izquierda y el tornillo de mariposa.
+
+|===
+. Desempaqueta el módulo de E/S de repuesto y colócalo sobre una superficie plana libre de estática cerca del sistema de almacenamiento.
++
+Guarda los materiales de embalaje para usarlos cuando devuelvas el módulo de I/O defectuoso.
+
+. Instala el módulo de E/S de repuesto en la ranura de destino:
++
+.. Alinea el módulo de E/S con los bordes de la ranura.
+.. Empuja suavemente el módulo de E/S hasta el fondo de la ranura, asegurándote de asentar correctamente el módulo en el conector.
++
+Puedes usar la lengüeta de la izquierda y el tornillo de mariposa para empujar el módulo de E/S.
+
+.. Gira el tornillo en el sentido de las agujas del reloj para apretarlo.
+
+
+. Conecta el módulo de E/S.
+
+
+
+
+== Paso 4: pon el controlador en línea
+
+Vuelve a poner en línea el controlador deteriorado.
+
+.Pasos
+. Pon el controlador en línea usando SANtricity System Manager:
++
+.. Selecciona *Hardware* > *Controladores y componentes* para mostrar los controladores.
+.. Selecciona el controlador que quieres poner en línea para mostrar su menú contextual.
+.. Selecciona *Poner en línea* y luego confirma que quieres realizar la operación.
++
+El sistema coloca la controladora en línea.
+
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando el controlador vuelva a estar en línea:
++
+.. Confirma que su estado es óptimo.
+.. Confirma que el LED de Atención del controlador está apagado.
++
+Si el estado no es Óptimo o si alguno de los LEDs de Atención está encendido, confirma que todos los cables están correctamente asentados y que el controlador está instalado correctamente. Si es necesario, quita y vuelve a instalar el controlador.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^] antes de continuar con este procedimiento. Si es necesario, recopila datos de soporte para tu sistema de almacenamiento usando SANtricity System Manager.
+
+
+
+
+
+
+
+== Paso 5: completa la sustitución del módulo de E/S
+
+Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS está instalada, verifica que todos los volúmenes se han devuelto a sus controladores propietarios y recopila los datos de soporte para que puedas reanudar las operaciones.
+
+.Pasos
+. Asegúrate de que la última versión de SANtricity OS está instalada en el sistema de almacenamiento:
++
+.. Selecciona *Support* > *Upgrade Center*
+.. Si es necesario, instale la versión más reciente.
+
+
+. Verifica que todos los volúmenes se devuelvan a sus controladores propietarios:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+Recovery Guru está presente e indica que los volúmenes no están en su ruta preferida (no se han devuelto a sus controladores propietarios)
+ a| 
+.. Redistribuye los volúmenes a sus controladores propietarios, seleccionando *Almacenamiento* > *Volúmenes* > *Más* y en el menú desplegable, selecciona *Redistribuir volúmenes*.
+.. Verifica que todos los volúmenes se redistribuyan a sus controladores propietarios comprobando si Recovery Guru está presente y sigue indicando que los volúmenes no están en su ruta preferida.
+
+
+
+NOTE: Si los volúmenes siguen sin devolverse a sus controladores propietarios, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"].
+
+
+
+ a| 
+Recovery Guru no está presente (parece que todos los volúmenes se han devuelto a sus controladores propietarios)
+ a| 
+Verifica que todos los volúmenes se hayan devuelto a sus controladores propietarios seleccionando *Storage* > *Volumes* > *More* y, en el menú desplegable, selecciona *Change volume ownership* para ver los propietarios de los volúmenes.
+
+|===
+. Recopila datos de soporte para tu sistema de almacenamiento:
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+
+
+
+
+== Paso 6: devuelve la pieza defectuosa a NetApp
+
+Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

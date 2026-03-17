@@ -66,6 +66,25 @@ Antes de actualizar a controladoras E4000, anule la asignación de los volúmene
 
 
 
+* *EF50 y EF80 cableado de espejo*
++
+Los sistemas EF80 y EF50 utilizan conexiones externas de alta velocidad 200GbE/100GbE para permitir la comunicación entre controladores de los dos controladores. Cada controlador está equipado con una tarjeta de interfaz dedicada instalada en la ranura 4. Esta tarjeta proporciona dos puertos e incluye dos cables 200GbE de 0,5 m con el sistema.
+
++
+Usa estos cables para conectar los puertos del controlador como se indica a continuación:
+
++
+** Puerto e4a en el controlador A a puerto e4a en el controlador B
+** Puerto e4b en el controlador A a puerto e4b en el controlador B
++
+
+NOTE: Es fundamental conectar los cables exactamente como se describe. Para más información, consulta https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Cablea las conexiones de duplicación entre controladores - EF50 y EF80"].
+
+
+
++
+No utilices ningún otro puerto host (Slot 1, Slot 2 o Slot 3) para la comunicación entre controladores, ya que no es compatible. Un cableado adecuado entre controladores es esencial para el correcto funcionamiento de las cabinas EF50 y EF80.
+
 
 
 
@@ -76,6 +95,60 @@ Revise las rutas de actualización admitidas para cada modelo de la cabina de al
 
 [role="tabbed-block"]
 ====
+.Compatibilidad de actualización de los controladores EF50 y EF80
+--
+[cols="h,d,d,d"]
+|===
+| Ruta de actualización | Batería | Compatibilidad con funciones | Bandejas SAS-3 
+
+
+| De EF300 a EF50 o EF80  a| 
+Solicite una batería nueva.
+ a| 
+* EF50 y EF80 solo admiten configuraciones dúplex
+* EF50 y EF80 admiten tarjetas de interfaz del host Fibre Channel de 64Gb
+* EF80 admite tarjetas de interfaz del host dual-200Gbe NVMe sobre RoCE y NVMe sobre Infiniband
+* EF50 y EF80 admiten hasta 24 unidades NVMe por controladora
+* EF50 y EF80 admiten configuraciones de unidades NVMe TLC y QLC
+* EF50 y EF80 no admiten puertos host de placa base
+* EF50 y EF80 no son compatibles con la duplicación síncrona o asíncrona
+* EF50 y EF80 no admiten Remote Storage Volumes
+* EF50 y EF80 no son compatibles con los volúmenes Thin Provisioned
+* EF50 admite hasta 2 tarjetas de interfaz del host y EF80 admite hasta 3 tarjetas de interfaz del host.
+
+
+
+NOTE: Al actualizar de EF300 a EF50 o EF80, puedes configurar el protocolo del host a través de la interfaz de usuario de SANtricity System Manager. Para más información, consulta https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/io-module-change-protocol.html["Cambiar el protocolo del módulo de I/O del host - EF50 y EF80"].
+ a| 
+* EF50 y EF80 no son compatibles con la expansión SAS.
+
+
+
+
+| De EF600 a EF80  a| 
+Solicite una batería nueva.
+ a| 
+* EF80 solo admite configuraciones dúplex
+* EF80 admite tarjetas de interfaz del host Fibre Channel de 64Gb
+* EF80 admite tarjetas de interfaz del host dual-200Gbe NVMe sobre RoCE y NVMe sobre Infiniband
+* EF80 admite hasta 24 unidades NVMe por controlador
+* EF50 y EF80 admiten configuraciones de unidades NVMe TLC y QLC
+* EF80 no admite puertos host de placa base
+* EF80 no es compatible con la duplicación síncrona ni asíncrona
+* EF80 no admite Remote Storage Volumes
+* EF80 no admite volúmenes Thin Provisioned
+* EF80 admite hasta 3 tarjetas de interfaz del host.
++
+
+NOTE: Al actualizar de EF600 a EF80, puedes configurar el protocolo del host a través de la interfaz de usuario de SANtricity System Manager. Para más información, consulta https://docs.netapp.com/us-en/e-series//maintenance-ef50-ef80/io-module-change-protocol.html["Cambiar el protocolo del módulo de I/O del host - EF50 y EF80"].
+
+
+ a| 
+* EF80 no es compatible con la expansión SAS.
+
+
+|===
+--
 .Compatibilidad con la actualización de la controladora E4000
 --
 [cols="h,d,d,d"]
@@ -191,7 +264,7 @@ Se requieren pasos adicionales al actualizar de E5500 o E5600 a E2600, o al actu
  a| 
 E2700 no admite las copias Snapshot heredadas.
  a| 
-Las controladoras 5400, E5500 y E5600 no deben colocarse en bandejas SAS-3.
+Las controladoras E5400, E5500 y E5600 no deben colocarse en bandejas SAS-3.
 
 
 

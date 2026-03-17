@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Asegúrate de que tienes instalada la última versión de SANtricity OS:
++
+.. Selecciona *Support* > *Upgrade Center*.
+.. Si es necesario, instale la versión más reciente.
+
+
+. Verifica que todos los volúmenes se devuelvan a sus controladores propietarios:
++
+.. Selecciona *Storage* > *Volumes*.
+.. Desde la página *Todos los Volúmenes*, verifica que los volúmenes están distribuidos a sus controladores propietarios.
+.. Selecciona *Más* > *Cambiar la propiedad del volumen* para ver los propietarios del volumen.
+
+
+. El siguiente paso depende de si los volúmenes se devuelven a sus controladores propietarios o no:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+Todos los volúmenes son propiedad de sus controladores propietarios
+ a| 
+Ve al paso siguiente.
+
+
+
+ a| 
+Ninguno de los volúmenes se devuelve a sus controladores propietarios
+ a| 
+Selecciona *Storage* > *Volumes* > *More* y en el menú desplegable selecciona *Redistribute volumes* para devolver los volúmenes a sus controladores propietarios.
+
+
+
+ a| 
+Solo algunos de los volúmenes se devuelven a sus controladores propietarios después de la distribución automática o manual
+ a| 
+Revisa el Recovery Guru para ver si hay problemas de conectividad de host.
+
+Si no hay ningún Recovery Guru presente o si después de seguir los pasos del Recovery Guru los volúmenes siguen sin ser devueltos a sus controladores propietarios, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de continuar con este procedimiento.
+
+|===
+. Recopila datos de soporte para tu sistema de almacenamiento:
++
+.. Seleccione *Soporte* > *Centro de soporte* > *Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Selecciona *Collect*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Si necesitas verificar y cambiar el protocolo del módulo de E/S del host, usa el procedimiento xref:io-module-change-protocol.html[Cambia el protocolo del módulo de E/S de host para un EF50 o EF80].
+

@@ -1,0 +1,34 @@
+---
+permalink: install-hw-ef50-ef80/install-workflow.html 
+sidebar: sidebar 
+keywords:  
+summary: Para instalar y configurar tu sistema de almacenamiento EF50 o EF80, debes preparar tu sitio, instalar y cablear los componentes de hardware, encender el sistema de almacenamiento y completar la configuración del sistema de almacenamiento. 
+---
+= Instala y configura - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para instalar y configurar tu sistema de almacenamiento EF50 o EF80, debes preparar tu sitio, instalar y cablear los componentes de hardware, encender el sistema de almacenamiento y completar la configuración del sistema de almacenamiento.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-prepare.html["Preparación de la instalación"]
+[role="quick-margin-para"]
+Para preparar la instalación, prepara el lugar, entiende las precauciones de elevación de tu sistema de almacenamiento, desempaqueta las cajas y compara el contenido con el albarán, y registra el sistema de almacenamiento para acceder a los beneficios de soporte.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]link:install-hardware.html["Instala el hardware"]
+[role="quick-margin-para"]
+Para instalar el hardware, instala el hardware de montaje en rack en el armario o rack y luego instala y asegura tu sistema de almacenamiento.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]link:install-cable.html["Cablea el hardware"]
+[role="quick-margin-para"]
+Para cablear el hardware, conecta las controladoras entre sí para activar la duplicación entre controladoras, que garantiza la redundancia total del sistema y se utiliza para la duplicación de caché y el envío de E/S, y luego conecta las controladoras a tu red host.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]link:install-power-hardware.html["Enciende el sistema de almacenamiento"]
+[role="quick-margin-para"]
+Para encender tu sistema de almacenamiento, conecta un cable de alimentación a cada fuente de alimentación de los controladores y luego conéctalos a fuentes de alimentación en circuitos diferentes
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:install-complete-setup.html["Completa la configuración del sistema de almacenamiento"]
+[role="quick-margin-para"]
+Para completar la configuración de tu sistema de almacenamiento, conecta y configura los puertos de gestión en los controladores, configura y administra tu sistema de almacenamiento y luego verifica que el protocolo del módulo de E/S del host sea el correcto.

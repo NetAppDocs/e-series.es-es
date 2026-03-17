@@ -55,6 +55,10 @@ Debe estar ejecutando el último sistema operativo compatible con RHEL 8, RHEL 9
 ----
 # yum install NetworkManager-initscripts-updown
 ----
++
+
+NOTE: Los scripts de red no están disponibles para RHEL 10.
+
 . Obtenga el host NQN, que se usarán para configurar el host en una cabina de.
 +
 [listing]

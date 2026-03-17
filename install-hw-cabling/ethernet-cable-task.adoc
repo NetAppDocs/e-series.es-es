@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conecte su sistema de almacenamiento a una red Ethernet para obtener gestión fuera de banda. 
 ---
-= Cableado Ethernet para una estación de gestión (E-Series)
+= Cableado Ethernet para una estación de gestión - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,13 @@ summary: Conecte su sistema de almacenamiento a una red Ethernet para obtener ge
 [role="lead"]
 Es posible conectar el sistema de almacenamiento a una red Ethernet para la gestión de cabinas de almacenamiento fuera de banda. Se deben usar cables Ethernet para todas las conexiones de gestión de cabinas de almacenamiento.
 
+[NOTE]
+====
+Algunos sistemas de almacenamiento solo tienen un puerto de gestión Ethernet fuera de banda en cada controlador.
 
-NOTE: EF300, EF600 y E4000 tienen solo un puerto de gestión ethernet fuera de banda.
+Para ver las instrucciones de cableado específicas para tu sistema de almacenamiento, consulta link:../getting-started/getup-run-concept.html["Inicio rápido de E-Series"^] y haz clic en el enlace de tu sistema de almacenamiento específico.
 
+====
 
 
 == Topología directa

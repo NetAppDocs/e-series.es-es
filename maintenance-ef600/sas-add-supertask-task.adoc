@@ -83,7 +83,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 +
 El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
-. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*. Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
+. En la página de inicio de SANtricity System Manager, selecciona menú:storage[Operations in Progress]. Espera a que finalicen todas las operaciones antes de continuar con el siguiente paso.
 . Apague la bandeja de controladoras.
 +
 .. Etiquete y desconecte ambos cables de alimentación de la bandeja de controladoras.

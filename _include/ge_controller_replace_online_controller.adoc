@@ -1,0 +1,62 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. El siguiente paso depende de si el controlador deteriorado usó DHCP para la dirección IP:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+El controlador deteriorado no usó DHCP para la dirección IP
+ a| 
+El controlador de sustitución adopta la dirección IP del controlador dañado que quitaste.
+
+Ve al paso siguiente.
+
+
+
+ a| 
+El controlador deteriorado usó DHCP para la dirección IP
+ a| 
+Pídele a tu administrador de red que asocie el DNS/red y la dirección IP del controlador dañado con la dirección MAC del controlador de reemplazo.
+
+|===
+. Pon el controlador en línea usando SANtricity System Manager.
++
+.. Selecciona *Hardware* > *Controladores y componentes* para mostrar los controladores.
+.. Selecciona el controlador que reemplazaste para mostrar su menú de contenido.
+.. Selecciona *Poner en línea*.
+
+
+. Cuando se inicie el controlador, revisa los LED del controlador para asegurarte de que la comunicación con el otro controlador se haya restablecido:
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, compruebe si se notificó una discrepancia NVSRAM en Recovery Guru.
++
+Si se informa de un desajuste de NVSRAM, actualiza la NVSRAM usando el siguiente comando SMcli. El parámetro  `-k` es necesario si la matriz no es https segura.
+
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+
+NOTE: Si el comando SMcli no puede completarse, contacta con https://www.netapp.com/company/contact-us/support/["Soporte de NetApp"^] o inicia sesión en https://mysupport.netapp.com["Sitio de soporte de NetApp"^] para crear un caso.
+
+. Confirma que el estado del sistema de almacenamiento es Óptimo y que los LEDs de Atención del controlador están apagados.
++
+Si el estado no es Óptimo o si alguno de los LEDs de Atención está encendido, confirma que todos los cables están correctamente asentados y que el controlador está instalado correctamente. Si es necesario, quita y vuelve a instalar el controlador.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://www.netapp.com/company/contact-us/support/["Soporte de NetApp"^].
+
+

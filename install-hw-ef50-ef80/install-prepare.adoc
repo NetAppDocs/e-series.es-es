@@ -1,0 +1,129 @@
+---
+permalink: install-hw-ef50-ef80/install-prepare.html 
+sidebar: sidebar 
+keywords:  
+summary: Prepárate para instalar tu sistema de almacenamiento EF50 o EF80 preparando el sitio, entendiendo las precauciones de elevación para tu sistema de almacenamiento, desempaquetando las cajas y comparando el contenido con el albarán de embalaje, y registrando el sistema de almacenamiento para acceder a los beneficios de soporte. 
+---
+= Prepárate para instalar - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepárate para instalar tu sistema de almacenamiento EF50 o EF80 preparando el sitio, entendiendo las precauciones de elevación para tu sistema de almacenamiento, desempaquetando las cajas y comparando el contenido con el albarán de embalaje, y registrando el sistema de almacenamiento para acceder a los beneficios de soporte.
+
+
+
+== Paso 1: preparar el sitio
+
+Asegúrate de que el sitio y el armario o rack que planeas usar cumplen con las especificaciones de tu sistema de almacenamiento.
+
+.Pasos
+. Usa https://hwu.netapp.com["Hardware Universe de NetApp"^] para confirmar que tu sitio cumple los requisitos medioambientales y eléctricos de tu sistema de almacenamiento.
+. Asegúrate de tener suficiente espacio en el armario o en el rack para tu sistema de almacenamiento y cualquier switch.
++
+Si lo necesitas, consulta https://hwu.netapp.com["Hardware Universe de NetApp"^] para conocer las dimensiones exactas de tu sistema de almacenamiento.
+
++
+** 2U para un sistema de almacenamiento
+** 1U para la mayoría de los conmutadores
+
+
+. Instala los switches de red necesarios.
+. Asegúrate de que tienes un navegador compatible con el software de gestión:
++
+** Google Chrome (versión 89 y posteriores)
+** Microsoft Edge (versión 90 y posteriores)
+** Mozilla Firefox (versión 80 y posteriores)
+** Safari (versión 14 y posteriores)
+
+
+. Obtén el siguiente equipo y las herramientas necesarias para la instalación:
++
+** Correa de descarga electrostática (ESD)
+** Destornillador Philips #2
+** Linterna
+
+
+
+
+
+
+== Paso 2: entiende las precauciones de elevación
+
+Antes de desempacar las cajas, y luego cuando instales tu sistema de almacenamiento, deberías conocer el peso de tu sistema de almacenamiento para que puedas tomar las precauciones necesarias al levantarlo y moverlo.
+
+Un sistema de almacenamiento EF50 o EF80 puede pesar hasta 61,5 lbs (27,9 kg). Para levantar el sistema de almacenamiento, usa a dos personas o un elevador hidráulico.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[Icono de precaución de peso AFF A20 A30 A50 y C30 y C60]
+
+
+
+== Paso 3: desembala las cajas
+
+Después de asegurarte de que el sitio y el armario o rack que planeas usar cumplen con las especificaciones de tu sistema de almacenamiento, y entiendes las precauciones de levantamiento, desempaca todas las cajas y compara el contenido con los artículos en el albarán.
+
+.Pasos
+. Abre con cuidado todas las cajas y coloca el contenido de manera organizada.
+. Compara el contenido que has desembalado con el albarán de empaque.
++
+Puedes obtener tu albarán escaneando el código QR que está en el lateral de la caja de envío.
+
++
+
+NOTE: Si hay discrepancias, anótalas para tomar medidas más adelante.
+
++
+Los siguientes artículos son algunos de los contenidos que puedes ver en las cajas.
+
++
+Si es necesario, consulta https://hwu.netapp.com/["Hardware Universe de NetApp"^] para ver otros cables compatibles e identificar su uso.
+
++
+[cols="9,9,5"]
+|===
+
+
+| *Hardware* | *Cables* |  
+
+
+ a| 
+** Sistema de almacenamiento con unidades
+** Interruptores
+** Hardware de montaje en rack con instrucciones
+** Frontal
+
+ a| 
+** cables Ethernet de replicación entre controladores
+** Cables Ethernet de gestión (cables RJ-45)
+** Cables de red
+** Cables de alimentación
+
+|  
+|===
+
+
+
+
+== Paso 4: registra tu sistema de almacenamiento
+
+Después de que te hayas asegurado de que tu sitio cumple con las especificaciones de tu sistema de almacenamiento y hayas verificado que tienes todas las piezas que pediste, deberías registrar tu sistema de almacenamiento.
+
+. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
++
+El proceso de registro requiere el número de serie (SN) de cada controlador. Puedes encontrar el número de serie en los siguientes lugares:
+
++
+** En cada controlador
+** En el albarán
+** En tu correo electrónico de confirmación
++
+image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[ejemplo de la etiqueta del número de serie]
+
+
+
+
+
+.El futuro
+Después de preparar la instalación de tu sistema de almacenamiento, link:install-hardware.html["instala el hardware"].

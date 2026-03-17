@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables del controlador dañado y luego retira el controlador dañado del chasis.
+
+.Pasos
+. En el controlador dañado, asegúrate de que el LED NV Caching Active (verde) esté apagado.
++
+Cuando el LED NV Caching Active (verde) está apagado, cualquier dato en la memoria caché ya se ha escrito en las unidades y es seguro quitar el controlador dañado.
+
++
+
+NOTE: Si el LED NV Caching Active (verde) está encendido, los datos almacenados en caché se están escribiendo en las unidades. Debes esperar a que el proceso termine y el LED NV Caching Active se apague. Sin embargo, si el LED permanece encendido durante más de cinco minutos, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de seguir con este procedimiento.
+
++
+El LED NV Caching Active (verde) está ubicado junto al icono NV en el controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Ubicación del LED de estado NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Icono NV y LED NV Caching Active en el controlador
+
+|===
+
+
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiqueta cada cable que esté conectado al controlador deteriorado.
+. Desconecta el cable de alimentación de la fuente de alimentación en el controlador deteriorado.
++
+
+NOTE: La fuente de alimentación (PSU) no tiene un interruptor de encendido.
+
+. Desconecta todos los cables del controlador deteriorado.
+. Quita el controlador dañado:
++
+La siguiente ilustración muestra el funcionamiento de las asas del controlador (desde el lado izquierdo del controlador) cuando se extrae un controlador
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operación del asa del controlador para quitar un controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+En ambos extremos del controlador, empuja las lengüetas de bloqueo verticales hacia afuera para liberar las asas a su posición horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+** Tira de las asas hacia ti para separar el controlador del plano medio.
++
+Al tirar, las asas se extienden hacia fuera del controlador y entonces sientes cierta resistencia, sigue tirando.
+
+** Desliza el controlador fuera del chasis mientras sostienes la parte inferior del controlador y colócalo sobre una superficie de trabajo plana y libre de electricidad estática.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+Si es necesario, gira las asas hacia arriba (junto a las lengüetas) para apartarlas.
+
+|===
+. Abre la tapa del controlador girando el tornillo de mariposa en sentido antihorario para aflojarlo y luego abre la tapa.
+

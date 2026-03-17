@@ -1,0 +1,66 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Desde la página de inicio de SANtricity System Manager, asegúrate de que el sistema de almacenamiento tiene el estado Óptimo.
++
+
+NOTE: Si el estado no es óptimo, usa el Recovery Guru o contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^] para resolver el problema.
+
+. Asegúrate de que no se están realizando operaciones de E/S entre el sistema de almacenamiento y todos los hosts conectados.
++
+Por ejemplo, puedes realizar estos pasos:
+
++
+** Detén todos los procesos que involucren los LUN asignados desde el sistema de almacenamiento a los hosts.
+** Asegúrate de que ninguna aplicación esté escribiendo datos en ningún LUN asignado desde el sistema de almacenamiento a los hosts.
+** Desmonta todos los sistemas de archivos asociados con volúmenes en el sistema de almacenamiento.
++
+
+NOTE: Los pasos exactos para detener las operaciones de E/S del host dependen del sistema operativo del host y de la configuración, que quedan fuera del alcance de estas instrucciones. Si no estás seguro de cómo detener las operaciones de E/S del host en tu entorno, considera apagar el host o contacta https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^].
+
++
+
+CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras se realizan operaciones de E/S, la aplicación host podría perder acceso a los datos porque no se puede acceder al almacenamiento.
+
+
+
+. En cada controlador, asegúrate de que el LED NV Caching Active (verde) está apagado.
++
+Cuando el LED NV Caching Active (verde) está apagado, cualquier dato en la memoria caché ya se ha escrito en las unidades y es seguro quitar el controlador dañado.
+
++
+
+NOTE: Si el LED NV Caching Active (verde) está encendido, los datos almacenados en caché se están escribiendo en las unidades. Debes esperar a que el proceso termine y el LED NV Caching Active (verde) se apague. Sin embargo, si el LED permanece encendido durante más de cinco minutos, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"] antes de seguir con este procedimiento.
+
++
+El LED NV Caching Active (verde) está ubicado junto al icono NV en el controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Ubicación del LED de estado NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Icono NV y LED NV Caching Active en el controlador
+
+|===
+. Confirma que las operaciones en los controladores han finalizado en SANtricity System Manager:
++
+.. Selecciona *Storage* > *Operations in progress* para ver la pantalla Overview.
+.. Espera a que finalicen todas las operaciones y que la pantalla Overview muestre *No operations currently in progress* antes de seguir con el siguiente paso.
+
+
+. Apaga ambos controladores:
++
+.. Etiqueta y luego desenchufa el cable de alimentación de ambos controladores.
+.. Espera a que todos los LED de ambos controladores se apaguen.
+
+
+

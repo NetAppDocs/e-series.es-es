@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Desde SANtricity System Manager, accede al perfil del controlador de almacenamiento para el controlador con problemas:
++
+.. Ve a *Support* > *Support Center*.
+.. En la página Support Resources, selecciona *Storage Array Profile*.
+.. Desplácese hacia abajo o utilice el campo Buscar para localizar la información *módulo de caché de datos*.
+
+
+. Si se muestra alguna de las siguientes condiciones para un DIMM, anota la ubicación del DIMM y continúa con este procedimiento para reemplazar el DIMM.
++
+Si no se da ninguna de estas condiciones, no necesitas reemplazar un DIMM. Sal de este procedimiento.
+
++
+** Un DIMM averiado
+** Un DIMM informa que *Data Cache Module* no está óptimo
+** Un DIMM con una capacidad de *Data Cache Module* que no coincide
+
+
+

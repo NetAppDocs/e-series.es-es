@@ -1,0 +1,163 @@
+---
+permalink: install-hw-ef50-ef80/install-complete-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de encender tu sistema de almacenamiento EF50 o EF80, completas la configuración del sistema conectando y configurando el puerto de administración en cada controlador para la administración fuera de banda del sistema de almacenamiento, configurando tu sistema de almacenamiento y luego verificando que el protocolo del módulo de E/S del host sea el correcto. 
+---
+= Configuración completa del sistema de almacenamiento - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de encender tu sistema de almacenamiento EF50 o EF80, completas la configuración del sistema conectando y configurando el puerto de administración en cada controlador para la administración fuera de banda del sistema de almacenamiento, configurando tu sistema de almacenamiento y luego verificando que el protocolo del módulo de E/S del host sea el correcto.
+
+
+
+== Paso 1: cablea y configura los puertos de gestión
+
+Conecta el puerto de gestión de cada controlador y luego configura los puertos usando un servidor DHCP o una dirección IP estática.
+
+[role="tabbed-block"]
+====
+.Opción 1: Servidor DHCP
+--
+Conecta el cable y luego configura los puertos de gestión usando un servidor DHCP.
+
+.Antes de empezar
+* Obtenga las direcciones IP asignadas para conectarse con el sistema de almacenamiento del administrador de la red.
+* Toma nota de la dirección MAC en el lateral de cada controlador. Usas la dirección MAC para identificar qué dirección IP está asignada a cada controlador.
+* Configure el servidor DHCP para asociar una dirección IP, una máscara de subred y la dirección de puerta de enlace como arrendamiento permanente para cada controladora.
+
+
+.Pasos
+. Usando cables Ethernet, conecta el puerto de gestión de cada controlador a tu red.
++
+*cables RJ-45 1000BASE-T*
+
++
+image::../media/oie_cable_rj45.png[Cables RJ-45]
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["cableado del puerto de gestión de los controladores ef50 y ef80 a la red"]
+
+. Abra un explorador y conéctese al sistema de almacenamiento mediante una de las direcciones IP de controladora que proporcionó el administrador de red.
+
+
+--
+.Opción 2: Dirección IP estática
+--
+Cablea y luego configura los puertos de gestión manualmente ingresando la dirección IP y la máscara de subred.
+
+.Antes de empezar
+* Obtenga del administrador de red la dirección IP, la máscara de subred, la dirección de puerta de enlace y la información del servidor DNS y NTP.
+* Asegúrese de que el portátil que está utilizando no está recibiendo la configuración de red de un servidor DHCP.
+
+
+.Pasos
+. Utilice un cable Ethernet para conectar el puerto de gestión De la controladora A al puerto Ethernet de un portátil.
++
+*cables RJ-45 1000BASE-T*
+
++
+image::../media/oie_cable_rj45.png[Cables RJ-45]
+
++
+image:../media/drw_ef50-ef80_wrench_to_laptop_ieops-2663.svg["cableado del puerto de gestión de los controladores ef50 y ef80"]
+
+. Abre un navegador y usa la dirección IP predeterminada (169.254.128.101) para establecer una conexión con el controlador.
++
+El controlador devuelve un certificado autofirmado. El navegador te informa de que la conexión no es segura.
+
+. Siga las instrucciones del navegador para continuar e iniciar SANtricity System Manager.
++
+Si no puede establecer una conexión, compruebe que no esté recibiendo la configuración de red de un servidor DHCP.
+
+. Defina la contraseña del sistema de almacenamiento para iniciar sesión.
+. Utilice los ajustes de red proporcionados por el administrador de red en el asistente *Configurar configuración de red* para configurar los ajustes de red del controlador A y, a continuación, seleccione *Finalizar*.
++
+
+NOTE: Debido al restablecimiento de la dirección IP, System Manager pierde la conexión con la controladora.
+
+. Desconecta el cable Ethernet de tu ordenador portátil (dejándolo conectado al controlador A) y conéctalo a tu red.
+. Abra un explorador en un equipo conectado a la red e introduzca la dirección IP recientemente configurada de la controladora A.
++
+
+NOTE: Si pierdes la conexión con el controlador A, puedes conectar un cable Ethernet al controlador B para restablecer la conexión con el controlador A a través del controlador B (169.254.128.102).
+
+. Inicia sesión con la contraseña que configuraste antes. Aparece el asistente *Configure Network Settings*.
+. Utilice los ajustes de red proporcionados por el administrador de red en el asistente *Configurar configuración de red* para configurar los ajustes de red del controlador B y, a continuación, seleccione *Finalizar*.
+. Conecte el controlador B a la red.
++
+Ambos puertos de gestión del controlador ahora están conectados a la red:
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["cableado del puerto de gestión de los controladores ef50 y ef80 a la red"]
+
+. Valide la configuración de red de la controladora B introduciendo la dirección IP recientemente configurada de la controladora B en un explorador.
++
+
+NOTE: Si se pierde la conexión con la controladora B, puede utilizar la conexión validada previamente a la controladora A para restablecer la conexión a la controladora B a través de la controladora A.
+
+
+
+--
+====
+
+
+== Paso 2: configura tu sistema de almacenamiento
+
+Usa SANtricity System Manager para configurar y gestionar tu sistema de almacenamiento.
+
+.Antes de empezar
+* Debes haber cableado y configurado tus puertos de gestión a la red.
+* Verifica y registra tu contraseña y las direcciones IP configuradas.
+
+
+.Pasos
+. Accede a SANtricity System Manager usando las direcciones IP configuradas.
+. Usa SANtricity System Manager para gestionar tu sistema de almacenamiento.
++
+Puedes consultar la ayuda en línea incluida con SANtricity System Manager.
+
+
+
+
+
+== Paso 3: verifica que el protocolo del módulo E/S anfitrión es correcto
+
+Tu sistema de almacenamiento se entrega con un protocolo predeterminado en los módulos de E/S del host. Si el protocolo predeterminado no es el que quieres, puedes cambiarlo.
+
+.Pasos
+. Verifica el protocolo predeterminado que se usa en los módulos de E/S de host en tu sistema de almacenamiento usando SANtricity System Manager.
++
+.. Selecciona *Settings* > *System*.
+.. En la sección *Configuración adicional*, haz clic en *Cambiar protocolo de E/S del host* para abrir esa página.
+.. Consulta el protocolo de E/S de host predeterminado que se usa en los módulos de E/S de host de tu sistema de almacenamiento, que aparece en el campo *Host I/O Protocol*.
+
+
+. El siguiente paso depende de si el protocolo por defecto es el que quieres o no:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+El protocolo por defecto es el protocolo que quieres
+ a| 
+No es necesario realizar ninguna acción.
+
+
+
+ a| 
+El protocolo por defecto no es el que quieres
+ a| 
+Necesitas cambiarlo usando el procedimiento link:../maintenance-ef50-ef80/io-module-change-protocol.html["Cambiar el protocolo del host"^].
+
+
+NOTE: Cambiar el protocolo del puerto host implica prepararte para el cambio de protocolo, detener las operaciones de E/S del host, cambiar el protocolo y luego configurar el host para usar el nuevo protocolo.
+
+|===
+

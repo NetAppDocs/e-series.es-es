@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Si no sabes el protocolo en los módulos de E/S de host de tu sistema de almacenamiento, verifícalo usando SANtricity System Manager.
++
+.. Selecciona *Settings* > *System*.
+.. En la sección *Configuración adicional*, selecciona *Cambiar protocolo de E/S del host* para abrir esa página.
+.. Consulta el protocolo predeterminado que aparece en el campo *Host I/O Protocol*.
++
+
+NOTE: Si quieres ver la lista de protocolos disponibles para tus módulos de E/S de host, selecciona el menú desplegable en el campo *Host I/O Protocol*. La lista de protocolos se basa en los módulos de E/S de host que están instalados actualmente.
+
+
+
+. El siguiente paso depende de si el protocolo por defecto es el que quieres o no:
++
+[cols="1,2"]
+|===
+| Si... | Entonces... 
+
+
+ a| 
+El protocolo por defecto es el protocolo que quieres
+ a| 
+No es necesario realizar ninguna acción. Puedes salir de este procedimiento.
+
+
+
+ a| 
+El protocolo por defecto no es el que quieres
+ a| 
+Continúa con este procedimiento para cambiar el protocolo.
+
+|===
+. Programa una ventana de mantenimiento para este procedimiento.
+

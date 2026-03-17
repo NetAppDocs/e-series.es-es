@@ -41,7 +41,7 @@ Se muestran todos los volúmenes sin asignar, pero las funciones para hosts con 
 
 
 .Pasos
-. Seleccione MENU:Storage[hosts].
+. En el panel izquierdo de la interfaz de SANtricity System Manager, selecciona menú:Storage[Hosts].
 . Seleccione el host o clúster de hosts al que desea asignar volúmenes y, a continuación, haga clic en *asignar volúmenes*.
 +
 Se muestra un cuadro de diálogo que enumera todos los volúmenes que pueden asignarse. Puede ordenar cualquiera de las columnas o escribir algo en el cuadro *filtro* para facilitar la búsqueda de volúmenes concretos.

@@ -1,0 +1,75 @@
+---
+permalink: maintenance-ef50-ef80/maintain-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
+summary: Mantén el hardware de tu sistema de almacenamiento EF50 o EF80 para asegurar la fiabilidad a largo plazo y un rendimiento óptimo. Realiza tareas de mantenimiento periódicas, como reemplazar componentes defectuosos, ya que esto ayuda a prevenir el tiempo de inactividad y la pérdida de datos. 
+---
+= Resumen de los procedimientos de mantenimiento - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mantén el hardware de tu sistema de almacenamiento EF50 o EF80 para asegurar la fiabilidad a largo plazo y un rendimiento óptimo. Realiza tareas de mantenimiento periódicas, como reemplazar componentes defectuosos, ya que esto ayuda a prevenir el tiempo de inactividad y la pérdida de datos.
+
+Los procedimientos de mantenimiento suponen que tu sistema de almacenamiento EF50 o EF80 ya está implementado en el entorno SANtricity.
+
+
+
+== Componentes del sistema
+
+Para tu sistema de almacenamiento EF50 o EF80, puedes realizar procedimientos de mantenimiento en los siguientes componentes.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:controller-replace-workflow.html["Controladora"]
+ a| 
+Un controlador consta de una placa, firmware y software. Controla las unidades y ejecuta el software del sistema operativo SANtricity.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Un módulo de memoria dual inline (DIMM) es un tipo de memoria de ordenador. Se instalan para añadir memoria de sistema a una placa base controladora.
+
+
+
+ a| 
+link:drive-replace.html["Unidad"]
+ a| 
+Una unidad es un dispositivo que proporciona el almacenamiento físico necesario para datos.
+
+
+
+ a| 
+link:fan-replace.html["Ventilador"]
+ a| 
+Un ventilador refrigera el controlador y las unidades.
+
+
+
+ a| 
+link:io-module-overview.html["Módulo E/S"]
+ a| 
+El módulo I/O (módulo de entrada/salida) es un componente de hardware que actúa como intermediario entre el controlador y varios dispositivos o sistemas que necesitan intercambiar datos con el controlador.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["Batería NV"]
+ a| 
+La batería de la memoria no volátil (NVMEM) es responsable de suministrar energía a los componentes NVMEM mientras los datos en vuelo se están descargando a la memoria flash después de una pérdida de energía.
+
+
+
+ a| 
+link:power-supply-replace.html["Suministro de alimentación"]
+ a| 
+Una fuente de alimentación proporciona una fuente de energía redundante en un controlador.
+
+|===

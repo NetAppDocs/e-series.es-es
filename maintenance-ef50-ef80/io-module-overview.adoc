@@ -1,0 +1,24 @@
+---
+permalink: maintenance-ef50-ef80/io-module-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
+summary: Los sistemas de almacenamiento EF50 y EF80 ofrecen flexibilidad para actualizar o reemplazar los módulos de E/S y así mejorar la conectividad de red y el rendimiento. 
+---
+= Descripción general del mantenimiento del módulo de E/S - EF50 y EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los sistemas de almacenamiento EF50 y EF80 ofrecen flexibilidad para reemplazar o actualizar los módulos de I/O y así mejorar la conectividad de red y el rendimiento.
+
+* link:io-module-replace.html["Reemplazar un módulo de E/S"]
++
+Cuando un módulo de E/S de tu sistema de almacenamiento falla, puedes reemplazarlo por el mismo tipo de módulo de E/S para devolver el sistema de almacenamiento a su estado óptimo de funcionamiento.
+
+* link:io-module-upgrade.html["Actualizar un módulo de E/S"]
++
+Puedes actualizar los módulos de E/S de tu sistema de almacenamiento para aumentar el número de puertos del host y mejorar la conectividad de red y la capacidad de tu sistema para manejar el tráfico de datos.
+
+

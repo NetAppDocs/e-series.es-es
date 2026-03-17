@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Vuelve a poner en línea el controlador deteriorado.
+
+.Pasos
+. Pon el controlador en línea usando SANtricity System Manager:
++
+.. Selecciona *Hardware* > *Controladores y componentes* para mostrar los controladores.
+.. Selecciona el controlador que quieres poner en línea para mostrar su menú contextual.
+.. Selecciona *Poner en línea* y luego confirma que quieres realizar la operación.
++
+El sistema coloca la controladora en línea.
+
+
+
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando el controlador vuelva a estar en línea:
++
+.. Confirma que su estado es óptimo.
+.. Confirma que el LED de Atención del controlador está apagado.
++
+Si el estado no es Óptimo o si alguno de los LEDs de Atención está encendido, confirma que todos los cables están correctamente asentados y que el controlador está instalado correctamente. Si es necesario, quita y vuelve a instalar el controlador.
+
++
+
+NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^] antes de continuar con este procedimiento. Si es necesario, recopila datos de soporte para tu sistema de almacenamiento usando SANtricity System Manager.
+
+
+
+

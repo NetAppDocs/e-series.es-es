@@ -1,0 +1,203 @@
+= Paso 1: prepárate para sustituir la unidad
+:allow-uri-read: 
+
+
+
+
+== Paso 1: prepárate para sustituir la unidad
+
+Prepárate para la sustitución de la unidad asegurándote de que la unidad ha fallado, confirmando que tienes una unidad de sustitución compatible, asegurándote de que tienes acceso a SANtricity System Manager, tomando precauciones contra descargas electrostáticas y localizando físicamente la unidad con error.
+
+.Pasos
+. Si Recovery Guru en SANtricity System Manager le notificó un _error inminente de unidad_, pero la unidad aún no falló, siga las instrucciones en Recovery Guru para conmutar la unidad.
+. Asegúrate de tener una unidad de reemplazo adecuada para la configuración de tu sistema de almacenamiento.
++
+Si es necesario, puedes usar SANtricity System Manager para confirmar:
+
++
+.. Selecciona *Hardware* > *Drives*.
+.. Selecciona la unidad con error en el gráfico para mostrar su menú contextual y luego selecciona *Ver configuración*.
+.. Confirme que la unidad de sustitución tiene una capacidad igual o mayor que la unidad que desea reemplazar y que tiene las funciones que espera.
++
+Por ejemplo, si vas a sustituir una unidad con capacidad de seguridad, asegúrate de que la unidad de sustitución también sea compatible con seguridad.
+
+
+
+. Asegúrate de que tienes una estación de gestión con un navegador que pueda acceder a SANtricity System Manager para cualquiera de los controladores.
++
+Para abrir la interfaz de System Manager, dirige el navegador a uno de los nombres de dominio o dirección IP del controlador.
+
+. Evita la descarga electrostática (ESD) durante la manipulación e instalación de una unidad:
++
+** Asegúrate de tener una pulsera antidescargas electrostáticas (ESD).
++
+Lleva siempre una muñequera ESD conectada a tierra a una superficie no pintada del chasis de tu sistema de almacenamiento. Si no tienes una muñequera, toca una superficie no pintada del chasis de tu sistema de almacenamiento antes de manipular la unidad.
+
+** Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.
+** Abra la bolsa ESD a mano o corte la parte superior con unas tijeras. No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
+** Asegúrate de tener una superficie de trabajo plana y sin electricidad estática.
+** Conserva la bolsa ESD y cualquier material de embalaje para devolver la unidad con error o usa un embalaje aprobado cuando envíes una unidad.
+** Evite los campos magnéticos. Mantenga las unidades alejadas de los dispositivos magnéticos.
++
+Los campos magnéticos pueden destruir todos los datos de la unidad y causar daños irreparables en los circuitos de la unidad.
+
+
+
+. Evita daños físicos durante la manipulación e instalación de una unidad:
++
+
+CAUTION: Las unidades son frágiles; la manipulación inadecuada de las unidades es una de las principales causas de fallo de unidad.
+
++
+** Utilice siempre dos manos cuando quite, instale o lleve una unidad.
+** Nunca fuerces una unidad para introducirla en el compartimento de la unidad. Usa siempre una presión suave y firme para encajar completamente el pestillo de la unidad.
+** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
+** No golpee las unidades contra otras superficies.
+
+
+. Puedes encender los LED de localización (azules) del sistema de almacenamiento (en la parte frontal del sistema de almacenamiento y en ambos controladores) para ayudarte a localizar físicamente el sistema de almacenamiento afectado. Usando SANtricity System Manager, selecciona *Hardware* > *Controllers and components*, selecciona la pestaña *Controller shelf* y, en el menú contextual, selecciona *Turn on locator light*.
+. Si es necesario, puedes localizar físicamente la unidad con error dentro de tu sistema de almacenamiento haciendo que parpadee su LED de atención (ámbar). Usando SANtricity System Manager, selecciona *Hardware* > *Drives*, selecciona la unidad con error en el gráfico para mostrar su menú contextual y luego selecciona *Turn on locator light*.
++
+
+NOTE: Debes retirar el frontal del sistema de almacenamiento para ver los LED de las unidades.
+
+
+
+
+
+== Paso 2: reemplaza la unidad
+
+Sustituye la unidad con error por una nueva.
+
+
+NOTE: Deberías instalar la unidad de sustitución lo antes posible después de retirar la unidad con error.
+
+.Pasos
+. Si aún no lo has hecho, quita el frontal del sistema de almacenamiento.
+. Quita la unidad con error:
++
+
+NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
+
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Quita la unidad NVMe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Presiona el botón negro de desbloqueo en la cara de la unidad para abrir el mango de la leva.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Gira el mango de la leva hacia abajo para desenganchar la unidad del plano medio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Llamada número 3]
+ a| 
+.. Desliza parcialmente la unidad fuera de la bahía de la unidad usando el mango de leva.
+.. Espera 60 segundos para que la unidad se detenga.
+.. Usando las dos manos, extrae completamente la unidad de la bahía de unidades.
+
+
+|===
+. Coloca la unidad sobre una superficie acolchada antiestática, lejos de campos magnéticos.
+. Espera 60 segundos para que el software del sistema reconozca que se quitó la unidad.
+. Desempaqueta la unidad de sustitución y colócala sobre una superficie plana y libre de electricidad estática cerca del sistema de almacenamiento.
++
+Guarda los materiales de embalaje para usarlos cuando devuelvas la unidad defectuosa.
+
+. Inserta la unidad de sustitución:
++
+.. Abra la palanca de leva.
+.. Con las dos manos, inserta la unidad de sustitución en la bahía de unidad abierta, empujando firmemente hasta que la unidad se detenga.
+.. Cierra la palanca de leva para que la unidad quede completamente asentada en el plano medio y la palanca de leva haga clic en su lugar.
++
+Asegúrate de cerrar el mango de la leva lentamente para que se alinee correctamente con la cara de la unidad.
+
++
+El LED verde de la unidad se ilumina cuando la unidad se inserta correctamente.
+
+
+
+
+
+
+
+== Paso 3: completa la sustitución de la unidad
+
+Confirma que la unidad de sustitución está funcionando correctamente y asegúrate de que la reconstrucción de la unidad haya comenzado.
+
+.Pasos
+. Confirma que la unidad de sustitución está funcionando correctamente comprobando el comportamiento del LED y, si no es así, toma la acción correctiva adecuada.
++
+
+NOTE: Cuando insertas una unidad por primera vez, es posible que su LED de atención esté encendido. Sin embargo, el LED debería apagarse en menos de un minuto si la unidad de reemplazo funciona correctamente.
+
++
+[cols="1,2"]
+|===
+| Si el comportamiento del LED de la unidad de reemplazo muestra... | Entonces... 
+
+
+ a| 
+El LED de encendido está encendido o parpadeando, y el LED de atención está apagado
+ a| 
+La unidad de sustitución está funcionando correctamente.
+
+Ve al paso siguiente.
+
+
+
+ a| 
+El LED de encendido está apagado
+ a| 
+Es posible que la unidad no esté instalada correctamente.
+
+.. Quita la unidad, espera 60 segundos y luego vuelve a instalarla.
+.. Si Recovery Guru en SANtricity System Manager aún muestra un problema, seleccione *Volver a comprobar* para verificar que se haya resuelto el problema.
+
+
+
+
+ a| 
+El LED de atención está encendido
+ a| 
+La nueva unidad podría estar defectuosa.
+
+.. Reemplaza la unidad nueva por otra unidad nueva.
+.. Si Recovery Guru en SANtricity System Manager aún muestra un problema, seleccione *Volver a comprobar* para verificar que se haya resuelto el problema.
+
+
+|===
+. Si el Recovery Guru en SANtricity System Manager indica que la reconstrucción de la unidad no se inició automáticamente, inicia la reconstrucción manualmente cuando te lo indique NetApp Support o el Recovery Guru y usa los siguientes pasos:
++
+
+NOTE: Dependiendo de tu configuración, el controlador podría reconstruir automáticamente los datos en la nueva unidad. Si el sistema de almacenamiento usa unidades de repuesto en caliente, el controlador podría necesitar realizar una reconstrucción completa en la unidad de repuesto en caliente antes de poder copiar los datos a la unidad de reemplazo. Este proceso de reconstrucción aumenta el tiempo que se necesita para completar este procedimiento.
+
++
+.. Selecciona *Hardware* > *Unidad*.
+.. Selecciona la unidad de sustitución en el gráfico para mostrar su menú contextual y luego selecciona *Reconstruct*.
+.. Confirme que desea llevar a cabo esta operación.
++
+Cuando se completa la reconstrucción de la unidad, el grupo de volúmenes tiene el estado óptima.
+
+
+
+. Vuelve a instalar el frontal.
+
+
+
+
+== Paso 4: devuelve la pieza defectuosa a NetApp
+
+Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

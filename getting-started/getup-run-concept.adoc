@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000, EF50, EF80 
 summary: Para empezar a trabajar con sistemas E-Series, instala componentes de hardware, configura sistemas host y configura almacenamiento. 
 ---
 = Inicio rápido de E-Series
@@ -15,9 +15,10 @@ Para empezar a trabajar con sistemas E-Series, instala componentes de hardware, 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Instale el hardware
 [role="quick-margin-para"]
-Para instalar el hardware E-Series, acceda a las instrucciones de instalación y configuración correspondientes al tipo de cabina de almacenamiento y bandeja:
+Para instalar el hardware E-Series, accede a las instrucciones de instalación y configuración de tu matriz de almacenamiento y tipo de shelf (si aplica):
 
 [role="quick-margin-list"]
+* link:../install-hw-ef50-ef80/install-workflow.html["Sistema de almacenamiento EF50 o EF80"^]
 * link:../install-hw-ef600/index.html["Serie EF600 o EF300 con bandeja de 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Serie E2800/EF280 o E5700/EF570 con bandejas de 12 o 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Serie E2800 o E5700 con bandeja de 60 unidades"^]
@@ -69,7 +70,8 @@ Para configurar el almacenamiento, puede acceder a la interfaz web, System Manag
 Seleccione la interfaz que desea utilizar:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,9x"^]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 12.0x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-119/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,9x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-118/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,8x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Ayuda en línea de SANtricity System Manager para 11,7x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ayuda en línea de SANtricity System Manager para 11,6x"^]

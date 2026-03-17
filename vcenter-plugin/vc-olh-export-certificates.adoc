@@ -27,7 +27,7 @@ Para abrir el archivo exportado, debe contar con una aplicación para visualizac
 ** *Trusted* -- muestra certificados a los que el plugin puede acceder para matrices de almacenamiento y otros servidores remotos, como un servidor LDAP. Los certificados pueden emitirse mediante una CA o estar autofirmados.
 
 
-. Seleccione un certificado de la página y, a continuación, haga clic en los tres puntos al final de la fila.
+. Selecciona un certificado de la página y luego haz clic en la elipsis al final de la fila.
 . Haga clic en *Exportar* y guarde el archivo de certificado.
 . Abra el archivo en la aplicación para visualización de certificados.
 
