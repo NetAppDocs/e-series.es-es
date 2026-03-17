@@ -10655,8 +10655,6 @@
   <block id="5de3bf25939bdfa37414108f0d590980" category="section-title">Novedades en la versión 12.0</block>
   <block id="ff0fa97cb252835f443a15ae7e9b46d4" category="admonition">La versión 12.0 de SANtricity OS solo es compatible con los nuevos sistemas de almacenamiento all-flash EF80 y EF50.</block>
   <block id="bf183e9df2b499bf43a8c68e4fec9235" category="paragraph">Nuevos modelos de sistemas de almacenamiento – sistemas de almacenamiento all-flash EF80 y EF50</block>
-  <block id="5c6dee44700e6c5c47a1e1f079ae7fce" category="paragraph">Esta versión presenta los sistemas de almacenamiento all-NVMe-flash EF80 y EF50. Los EF80 y EF50 admiten 24 unidades SSD NVME y una única tarjeta de interfaz del host (HIC) por controlador. Las interfaces del host NVMe over Fabrics compatibles incluyen NVMe over RoCE, NVMe over IB para EF80 y NVMe over FC para EF50. Las interfaces SCSI compatibles incluyen Fibre Channel.</block>
-  <block id="6f8772ffc1694efdc2041680c31dc990" category="paragraph">Las unidades SSD NVMe de gran capacidad de 30TB o 60TB también son compatibles con EF80 y EF30. EF80 y EF30 son compatibles para uso con Dynamic Disk Pool únicamente, sin soporte para RAID heredado.</block>
   <block id="786003cdc863f3aad3e6d8b6bfb3da10" category="paragraph">Nueva interfaz de usuario para SANtricity System Manager</block>
   <block id="22b06c9a9c11b263cfc8b70ea106720b" category="paragraph">Para los nuevos controladores EF80 y EF50, la interfaz de usuario de SANtricity System Manager se ha rediseñado para ofrecer un aspecto y una experiencia más modernos. La nueva interfaz incluye una navegación por el panel izquierdo y una mayor facilidad de uso para agilizar las tareas de administración.</block>
   <block id="33c4e4a69bd4b16424ffdb3de34b0af4" category="paragraph">Subject Alternative Names (SANs) para el certificado de servidor ahora solo permiten letras, dígitos y guiones</block>
@@ -10691,4 +10689,6 @@
   <block id="db77cc51d1e45daf8e890b492be12264" category="sidebar">Sustituir módulo I/O</block>
   <block id="f026d0a834b5192638b18ee631266375" category="sidebar">Actualizar módulo I/O</block>
   <block id="fe377799fa9a443d32452d6d45334541" category="sidebar">Protocolo de host del módulo I/O</block>
+  <block id="7270f12c0a303f4c7f8c806c946d0faf" category="paragraph">Esta versión presenta los sistemas de almacenamiento all-NVMe-flash EF80 y EF50. El EF80 y el EF50 admiten 24 unidades SSD NVME y una tarjeta de duplicación entre controladores por controlador. Las interfaces de host NVMe over Fabrics admitidas incluyen NVMe over RoCE, NVMe over IB, NVMe over FC para EF80 y NVMe over FC para EF50. La interfaz SCSI admitida es Fibre Channel para ambos sistemas. El EF50 admite hasta dos tarjetas de interfaz del host por controlador, mientras que el EF80 admite hasta tres tarjetas de interfaz del host por controlador.</block>
+  <block id="685ec10705743526f323aaeb2e8abdb9" category="paragraph">Las unidades SSD NVMe de gran capacidad de 30TB o 60TB también son compatibles con EF80 y EF50. EF80 y EF50 solo pueden utilizar Dynamic Disk Pool cuando la matriz está equipada con unidades de 30TB o 60TB.</block>
 </blocks>
