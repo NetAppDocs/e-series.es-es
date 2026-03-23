@@ -43,7 +43,7 @@ image:../media/install_rails_inst-hw-e2800-e5700.png["Instale los rieles"]
 . Instale la bandeja.
 +
 
-CAUTION: Un estante vacío pesa 253,33 lb (114,91 kg). Se requiere un elevador mecánico o cuatro personas que utilicen asas de elevación para mover de forma segura una estantería vacía.
+CAUTION: Una estantería vacía pesa aproximadamente 134 lb (61 kg). Se necesita un elevador mecanizado o cuatro personas usando asideros de elevación para mover una estantería vacía de forma segura.
 
 +
 .. Si se levanta el estante a mano, fije las cuatro asas de elevación. Empuje cada asa hasta que encaje en su sitio.
