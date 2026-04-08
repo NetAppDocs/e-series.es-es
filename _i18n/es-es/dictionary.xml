@@ -10640,7 +10640,6 @@
   <block id="0265b5dbf554054dde3a98afc886c622" category="admonition">Al actualizar de EF600 a EF80, puedes configurar el protocolo del host a través de la interfaz de usuario de SANtricity System Manager. Para más información, consulta<block ref="b4bee00978fbe62a1f735b787be3116c" category="inline-link-rx"></block>.</block>
   <block id="353b820726dde980fadda7f3d579a641" category="list-text">EF80 no es compatible con la expansión SAS.</block>
   <block id="dafff188f3a06d1fdaa68a607c17f832" category="inline-link-macro">EF50 y EF80 - Paso 1: Retira el controlador</block>
-  <block id="a5e57f188bcd8ee5650622c76daaf7ef" category="paragraph">Para obtener información sobre cómo quitar controladores de los sistemas de almacenamiento EF280 y EF50, consulta <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
   <block id="d789ee5d8d5244777090beeda7a82875" category="list-text">Cuando finalice el chequeo, puedes hacer clic en la elipsis (...) a la derecha de cada fila para ver más información y realizar otras tareas.</block>
   <block id="ac5947d69f7ee9f8d3f2e9ee0483a85b" category="list-text">Si se abre el cuadro de diálogo Resolve Self-Signed Certificates, revisa la información mostrada para los certificados no fiables. Para más información, también puedes hacer clic en la elipsis al final de la tabla y seleccionar *View* en el menú emergente.</block>
   <block id="f95817b2bc0b41d0e6a92b658b3204e4" category="list-text">Selecciona un certificado de la página y luego haz clic en la elipsis al final de la fila.</block>
@@ -10690,4 +10689,6 @@
   <block id="631e6d7ea44751bbf0471574f75f550e" category="admonition">La versión 12.00 de SANtricity OS solo es compatible con los nuevos sistemas de almacenamiento all-flash EF80 y EF50.</block>
   <block id="dcf1521fe2188852a3d1ae5493b83c24" category="sidebar">SANtricity System Manager 12.00</block>
   <block id="24fe914c4c521099e3e5332138db4935" category="admonition">Una estantería vacía pesa aproximadamente 134 lb (61 kg). Se necesita un elevador mecanizado o cuatro personas usando asideros de elevación para mover una estantería vacía de forma segura.</block>
+  <block id="9e70d8ecbcfbe7711ec544e1649bcd7e" category="open-title">Modelos de controlador EF80 y EF50</block>
+  <block id="982b4a8532b7c0f3dfe46d6bac4642d5" category="paragraph">Para obtener información sobre cómo quitar controladores de los sistemas de almacenamiento EF80 y EF50, consulta <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
 </blocks>
