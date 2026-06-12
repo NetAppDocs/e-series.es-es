@@ -89,3 +89,6 @@ El asistente de configuración se inicia si no hay pools, grupos de volúmenes, 
 Para obtener más información, consulte la ayuda en línea para System Manager de SANtricity.
 
 
+
+.El futuro
+Después de que configures el almacenamiento en SANtricity System Manager, link:nvme-roce-configure-switch-task.html["configurar los conmutadores"].

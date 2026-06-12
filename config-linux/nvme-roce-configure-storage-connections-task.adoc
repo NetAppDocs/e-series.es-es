@@ -125,3 +125,6 @@ NOTE: Esta opción solo está disponible en un entorno iSCSI. No está disponibl
 |===
 . Haga clic en *Finalizar*.
 
+
+.El futuro
+Después de que configures los ajustes del puerto NVMe sobre RoCE, link:nvme-roce-discover-connect-storage-host-task.html["detectar y conectar el almacenamiento en el host"].

@@ -46,7 +46,7 @@ Antes de usar NVMe over roce, consulte https://mysupport.netapp.com/matrix["Herr
 === Restricciones de conmutación
 
 
-CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* debe habilitar el control de flujo para su uso con Global Pause Control en el switch para eliminar el riesgo de pérdida de datos en un entorno NVMe over roce.
+CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* Debes ejecutar NVMe sobre RoCE en un entorno sin pérdidas. Activa el control de flujo de extremo a extremo usando Global Pause Frames o Priority Flow Control (PFC) en tu red para eliminar el riesgo de pérdida de datos. PFC requiere que NVMe sobre RoCE se etiquete como tráfico de prioridad 3 con un valor DSCP de `106`.
 
 
 
@@ -55,3 +55,6 @@ CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* debe habilitar el control de flujo para 
 * No se admiten el mirroring asíncrono y síncrono.
 * No se admite thin provisioning (la creación de volúmenes finos).
 
+
+.El futuro
+Después de que verifiques la compatibilidad de la configuración con Linux y revises las restricciones, link:nvme-roce-configure-ip-address-dhcp-task.html["configurar direcciones IP mediante DHCP"].

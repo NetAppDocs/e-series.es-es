@@ -56,3 +56,6 @@ Después de asignar correctamente uno o varios volúmenes a un host o un clúste
 * El volumen asignado recibe el próximo NSID disponible. El host usa el NSID para acceder al volumen.
 * El nombre del volumen proporcionado por el usuario aparece en los listados de volúmenes asociados al host.
 
+
+.El futuro
+Después de asignar un volumen, link:nvme-roce-display-volumes-visible-host-task.html["mostrar los volúmenes visibles al host"].

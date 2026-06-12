@@ -21,6 +21,6 @@ Si tiene previsto agregar una tarjeta de ampliación SAS a EF300, EF600, EF300C 
 * Tiene un destornillador Phillips del número 1.
 * Tiene etiquetas para identificar cada cable conectado al compartimento de controladoras.
 * Tiene una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
-* Las controladoras EF300 pueden tener una tarjeta de expansión SAS instalada en el puerto 1 para permitir la ampliación de la bandeja de unidades.
+* En el caso de los controladores EF300, la tarjeta de expansión SAS debe instalarse en el puerto 1 para permitir la expansión de las bandejas de unidades.
 * Para cablear la expansión SAS, consulte link:../install-hw-cabling/index.html["Cableado de hardware E-Series"] si desea obtener instrucciones.
 

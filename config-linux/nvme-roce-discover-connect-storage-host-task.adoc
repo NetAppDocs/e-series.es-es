@@ -14,6 +14,12 @@ summary: Antes de realizar definiciones de cada host en SANtricity System Manage
 Antes de realizar definiciones de cada host en SANtricity System Manager, es necesario detectar los puertos de la controladora de destino del host y, a continuación, establecer conexiones NVMe.
 
 .Pasos
+. Comprueba que puedes hacer ping desde el host a cada puerto HIC de la matriz utilizando la tasa de MTU prevista mediante el siguiente comando:
++
+[listing]
+----
+ping -M do -s <size> <IP of array HIC port>
+----
 . Detecte subsistemas disponibles en el destino NVMe-of para todas las rutas usando el siguiente comando:
 +
 [listing]
@@ -59,11 +65,11 @@ rdma_qptype: connected
 rdma_cms:    rdma-cm
 rdma_pkey: 0x0000
 ----
-. Repita el paso 1 para cualquier otra conexión.
+. Repite el paso 2 para cualquier otra conexión.
 . Conéctese al subsistema detectado en la primera ruta con el comando: `nvme connect -t rdma -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
 +
 
-NOTE: El comando indicado anteriormente no continúa durante el reinicio. La `NVMe connect` Será necesario ejecutar el comando después de cada reinicio para volver a establecer las conexiones NVMe.
+NOTE: El comando indicado anteriormente no se mantiene tras el reinicio. El comando  `nvme connect` deberá ejecutarse después de cada reinicio para restablecer las conexiones NVMe.
 
 +
 
@@ -75,7 +81,7 @@ NOTE: Si especifica un número de puerto con este comando, la conexión genera u
 
 +
 
-NOTE: El ajuste de profundidad de cola recomendado es 1024. Anule el ajuste predeterminado de 128 con 1024 mediante la ``-Q 1024``opción de línea de comandos, como se muestra en el siguiente ejemplo.
+NOTE: El valor recomendado para la profundidad de la cola es 1024. Sustituye el valor predeterminado de 128 por 1024 usando la opción de línea de comandos `-Q 1024`, como se muestra en el siguiente ejemplo.
 
 +
 
@@ -84,8 +90,27 @@ NOTE: El tiempo de espera de pérdida de la controladora recomendado en segundos
 +
 [listing]
 ----
-# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
-# nvme connect -t rdma -a 192.168.2.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
+# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-
+08.com.netapp:EF80.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
 ----
-. Repita el paso 3 para conectar el subsistema detectado en la segunda ruta.
+. Repite el paso 4 para conectar el subsistema detectado en la segunda ruta.
+. **Opcional** - configura tu host para que detecte automáticamente los destinos y se conecte a ellos en cada arranque.
++
+.. Agrega los parámetros de descubrimiento de los pasos 2 y 3 a `/etc/nvme/discovery.conf` usando el siguiente procedimiento y formato:
++
+[listing]
+----
+# echo "--transport=rdma --traddr= target_ip_address --trsvcid=4420" | sudo tee -a /etc/nvme/discovery.conf
+----
+.. Activa el servicio nvmf-autoconnect después de rellenar el archivo  `/etc/nvme/discovery.conf` usando el siguiente comando:
++
+[listing]
+----
+sudo systemctl enable nvmf-autoconnect.service
+----
 
+
+
+
+.El futuro
+Una vez que hayas establecido las conexiones, link:nvme-roce-define-host-task.html["define el host"].

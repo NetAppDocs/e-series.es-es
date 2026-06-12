@@ -51,3 +51,6 @@ Si la cabina de almacenamiento no puede obtener direcciones IP asignadas por DHC
 El administrador de red necesita las direcciones MAC para determinar la dirección IP de cada controladora. Necesitará las direcciones IP para conectarse al sistema de almacenamiento a través del explorador.
 
 
+
+.El futuro
+Después de que configures las direcciones IP usando DHCP, link:nvme-roce-access-sam-setup-wizard-task.html["Configura tu almacenamiento usando SANtricity System Manager"].

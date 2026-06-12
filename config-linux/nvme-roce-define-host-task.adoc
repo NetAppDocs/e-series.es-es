@@ -45,10 +45,9 @@ Escriba un nombre para el host nuevo.
  a| 
 Tipo de sistema operativo de host
  a| 
-Seleccione una de las siguientes opciones de la lista desplegable:
+Selecciona la siguiente opción en la lista desplegable:
 
 ** *Linux* para SANtricity 11.60 y posterior
-** *Linux DM-MP (Kernel 3.10 o posterior)* para anterior a SANtricity 11.60
 
 
 
@@ -89,3 +88,6 @@ Se debe añadir un identificador de puerto de host para asociarlo con el host, p
 Una vez que el host se creó correctamente, System Manager de SANtricity crea un nombre predeterminado para cada puerto de host configurado para el host.
 
 El alias predeterminado es ``<Hostname_Port Number>``. Por ejemplo, el alias predeterminado para el primer puerto creado para `host IPT is IPT_1`.
+
+.El futuro
+Una vez creado el host, link:nvme-roce-assign-volume-task.html["asignar un volumen a través de SANtricity System Manager"].

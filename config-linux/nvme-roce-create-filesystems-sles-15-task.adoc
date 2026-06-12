@@ -2,41 +2,21 @@
 permalink: config-linux/nvme-roce-create-filesystems-sles-15-task.html 
 sidebar: sidebar 
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: Para SLES 15, crea un sistema de archivos en el dispositivo nvme nativo y monta el sistema de archivos. 
+summary: Para RHEL 9, RHEL 10, SLES 15 y SLES 16, creas un sistema de archivos en el dispositivo NVMe nativo y montas el sistema de archivos. 
 ---
-= Crear sistemas de archivos en E-Series - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 y SLES 16 (NVMe sobre RoCE)
+= Crear sistemas de archivos en E-Series - Linux (NVMe sobre RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para RHEL 8, RHEL 9, RHEL 10, SLES 15 y SLES 16, crea un sistema de archivos en el dispositivo nvme nativo y monta el sistema de archivos.
+Para RHEL 9, RHEL 10, SLES 15 y SLES 16, creas un sistema de archivos en el dispositivo NVMe nativo y montas el sistema de archivos.
+
+.Antes de empezar
+Asegúrate de haber completado la tarea link:nvme-roce-access-physical-targets-concept.html["acceder a volúmenes NVMe de un destino E-Series desde el host"] para garantizar que los dispositivos NVMe estén correctamente configurados y sean accesibles.
 
 .Pasos
-. Ejecute el `multipath -ll` comando para obtener una lista de dispositivos nvme.
-+
-[listing]
-----
-# multipath -ll
-----
-+
-El resultado de este comando se puede utilizar para buscar los dispositivos asociados `/dev/disk/by-id/nvme-eui.[uuid#]` ubicación. Para el ejemplo siguiente sería `/dev/disc/by-id/nvme-eui.000082dd5c05d39300a0980000a52225`.
-
-+
-[listing]
-----
-eui.000082dd5c05d39300a0980000a52225 [nvme]:nvme0n6 NVMe,NetApp E-Series,08520000
-size=4194304 features='n/a' hwhandler='ANA' wp=rw
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:0:1 nvme0c0n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:1:1 nvme0c1n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=10 status=non-optimized
-| `- 0:2:1 nvme0c2n1 0:0 n/a non-optimized live
-`-+- policy='n/a' prio=10 status=non-optimized
-  `- 0:3:1 nvme0c3n1 0:0 n/a non-optimized live
-----
 . Cree un sistema de archivos en la partición para el dispositivo nvme deseado mediante la ubicación `/dev/disk/by-id/nvme-eui.[id#]`.
 +
 El método para crear un sistema de archivos varía en función del sistema de archivos elegido. Este ejemplo muestra cómo crear un `ext4` sistema de archivos.
@@ -69,3 +49,6 @@ Writing superblocks and filesystem accounting information: done
 # mount /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225 /mnt/ext4
 ----
 
+
+.El futuro
+Una vez creados los sistemas de archivos, link:nvme-roce-worksheet-for-concept.html["Guarda la información de configuración de tu NVMe over RoCE"].
