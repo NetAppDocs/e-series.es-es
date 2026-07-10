@@ -33,6 +33,7 @@ Cuando sustituye una HIC, la controladora se coloca en estado sin conexión (par
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Paso 1: Colocar la controladora en estado sin conexión (dúplex)
 
 Si tiene una configuración doble, debe colocar la controladora afectada en estado sin conexión para poder quitar de forma segura la HIC con errores.
@@ -105,6 +106,7 @@ NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el contenedor de la controladora para poder añadir la nueva HIC.
@@ -165,6 +167,7 @@ Si va a retirar el compartimento de controladoras de una bandeja de controladora
 
 
 
+[[step-3-install-a-hic]]
 == Paso 3: Instale una HIC
 
 Instale una nueva HIC para reemplazar la que presenta errores.
@@ -219,6 +222,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale la pla
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de la controladora
 
 Después de instalar la HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -261,6 +265,7 @@ NOTE: No conecte los cables de datos a los puertos HIC nuevos en este momento.
 
 
 
+[[step-5-place-controller-online-duplex]]
 == Paso 5: Colocar la controladora en línea (dúplex)
 
 Si tiene una configuración doble, coloque la controladora en línea para confirmar que la cabina de almacenamiento funciona correctamente, recoja datos de soporte y reanude operaciones.

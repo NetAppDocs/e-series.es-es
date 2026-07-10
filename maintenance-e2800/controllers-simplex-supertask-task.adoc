@@ -33,6 +33,7 @@ Asegúrese de tener lo siguiente:
 
 
 
+[[step-1-prepare-to-replace-controller-simplex]]
 == Paso 1: Preparar la sustitución de la controladora (simple)
 
 Para preparar el reemplazo de un contenedor de controladora, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. Luego, es posible detener las operaciones de I/o del host y apagar la bandeja de controladoras.
@@ -120,12 +121,14 @@ No se podrá acceder a los datos en la cabina de almacenamiento hasta que se sus
 
 
 
+[[step-2-remove-failed-controller-simplex]]
 == Paso 2: Quitar la controladora con errores (simple)
 
 Sustituya el compartimento con errores por uno nuevo.
 
 
 
+[[step-2a-remove-controller-canister-simplex]]
 === Paso 2a: Quitar el contenedor de controladora (simple)
 
 Quite un contenedor de controladora.
@@ -180,6 +183,7 @@ Al retirar el cartucho del controlador, una solapa se balancea en su lugar para 
 
 
 
+[[step-2b-remove-battery-simplex]]
 === Paso 2b: Retirar la batería (simple)
 
 Después de quitar el compartimento de controladoras de la bandeja de controladoras, quite la batería.
@@ -215,6 +219,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Quite la batería de
 
 
 
+[[step-2c-remove-host-interface-card-simplex]]
 === Paso 2c: Quitar la tarjeta de interfaz del host (simple)
 
 Si el contenedor de controladora incluye una tarjeta de interfaz del host (HIC), quite la HIC del contenedor de controladora original para poder reutilizarla en el nuevo contenedor de controladora.
@@ -248,12 +253,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Quite HIC de la tar
 
 
 
+[[step-3-install-new-controller-simplex]]
 == Paso 3: Instale una controladora nueva (simple)
 
 Instale un compartimento de controladoras nuevo para sustituir el que presenta errores.
 
 
 
+[[step-3a-install-battery-simplex]]
 === Paso 3a: Instalación de la batería (simple)
 
 Instale la batería en el compartimento de controladoras de reemplazo. Puede instalar la batería que quitó del compartimento de controladoras original o instalar una batería nueva que haya pedido.
@@ -302,6 +309,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Brida metáli
 
 
 
+[[step-3b-install-host-interface-card-simplex]]
 === Paso 3b: Instale la tarjeta de interfaz del host (simple)
 
 Si quitó una tarjeta de interfaz del host (HIC) del contenedor de controladora original, instale esa HIC en el nuevo contenedor de controladora.
@@ -338,6 +346,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Vuelva a insta
 
 
 
+[[step-3c-install-new-controller-canister-simplex]]
 === Paso 3c: Instale el contenedor de controladora nuevo (simple)
 
 Después de instalar la batería y la HIC, si se instaló inicialmente uno, puede instalar el compartimento de controladoras nuevo en la bandeja de controladoras.
@@ -405,6 +414,7 @@ Debe configurar manualmente la dirección IP de la nueva controladora. (Es posib
 
 
 
+[[step-4-complete-controller-replacement-simplex]]
 == Paso 4: Sustitución completa de la controladora (simple)
 
 Encienda la bandeja de controladoras, recoja datos de soporte y reanude operaciones.

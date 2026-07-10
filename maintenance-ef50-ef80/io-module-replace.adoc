@@ -27,6 +27,7 @@ Los LED de avería están situados en los controladores: los LED de fallo de las
 
 
 
+[[step-1-prepare-to-replace-an-io-module]]
 == Paso 1: prepárate para sustituir un módulo de E/S
 
 Prepárate para sustituir un módulo de E/S reuniendo las herramientas y el equipo necesarios y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
@@ -71,6 +72,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 
 
+[[step-2-place-the-controller-offline]]
 == Paso 2: pon el controlador fuera de línea
 
 Coloca el controlador deteriorado fuera de línea para que puedas realizar con seguridad el resto de este procedimiento.
@@ -109,6 +111,7 @@ CAUTION: Si en el campo *OK to remove* no aparece *Yes*, no sigas con la retirad
 
 
 
+[[step-3-replace-the-io-module]]
 == Paso 3: reemplaza el módulo de E/S
 
 Desenchufa el cableado del módulo de E/S averiado, reemplázalo por el módulo de E/S de repuesto y luego conecta el cableado al módulo de E/S de repuesto.
@@ -160,6 +163,7 @@ Puedes usar la lengüeta de la izquierda y el tornillo de mariposa para empujar 
 
 
 
+[[step-4-place-the-controller-online]]
 == Paso 4: pon el controlador en línea
 
 Vuelve a poner en línea el controlador deteriorado.
@@ -201,6 +205,7 @@ NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.c
 
 
 
+[[step-5-complete-the-io-module-replacement]]
 == Paso 5: completa la sustitución del módulo de E/S
 
 Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS está instalada, verifica que todos los volúmenes se han devuelto a sus controladores propietarios y recopila los datos de soporte para que puedas reanudar las operaciones.
@@ -251,6 +256,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Paso 6: devuelve la pieza defectuosa a NetApp
 
 Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

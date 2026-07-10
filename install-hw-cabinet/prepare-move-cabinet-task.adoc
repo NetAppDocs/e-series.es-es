@@ -15,6 +15,7 @@ Prepare para mover el gabinete desde su ubicación en su área de recepción est
 
 
 
+[[step-1-estimate-cabinet-weight]]
 == Paso 1: Estimar el peso del gabinete
 
 El armario transporta de forma fiable y segura hasta 909.1 kg (2000 lb) de capacidad. Debe saber el peso aproximado del armario para poder moverlo de forma segura.
@@ -259,6 +260,7 @@ CAUTION: *Posible daño a los componentes de la bandeja* -- no coloque una bande
 
 
 
+[[step-2-acclimate-cabinet]]
 == Paso 2: Armario acclimate
 
 Asegúrese de que el armario y las bandejas están aclimatados al entorno interior antes de retirar los materiales de embalaje.
@@ -274,6 +276,7 @@ CAUTION: *Posible daño a los componentes de la bandeja* -- Si la temperatura ex
 
 
 
+[[step-3-remove-packing-materials]]
 == Paso 3: Retire los materiales de embalaje
 
 Retire los materiales de embalaje sólo después de que el armario se haya aclimatado a la temperatura interior.
@@ -285,6 +288,7 @@ Retire los materiales de embalaje sólo después de que el armario se haya aclim
 
 
 
+[[step-4-check-shipping-contents]]
 == Paso 4: Compruebe el contenido de envío
 
 Compruebe el contenido de envío para asegurarse de que todo el equipo ha llegado a las instalaciones.
@@ -297,6 +301,7 @@ Compruebe el contenido de envío para asegurarse de que todo el equipo ha llegad
 
 
 
+[[step-5-remove-heavy-components-from-cabinet]]
 == Paso 5: Retire los componentes pesados del armario
 
 Retire algunos de los componentes más pesados que se encuentran en la parte superior del armario para garantizar la máxima estabilidad.

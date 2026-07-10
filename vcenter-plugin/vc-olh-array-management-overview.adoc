@@ -18,18 +18,21 @@ Use la función Añadir/detectar para encontrar y añadir las cabinas de almacen
 
 
 
+[[considerations-for-discovering-arrays]]
 == Consideraciones sobre la detección de cabinas
 
 Para mostrar y gestionar los recursos de almacenamiento, debe detectar las cabinas de almacenamiento que desea gestionar en la red de la organización. Puede detectar y añadir una sola cabina o varias.
 
 
 
+[[multiple-storage-arrays]]
 === Varias cabinas de almacenamiento
 
 Si decide detectar varias cabinas de almacenamiento, debe introducir un rango de direcciones IP de red. A continuación, el sistema intentar establecer conexiones individuales con cada dirección IP de ese rango. En el plugin se muestra toda cabina de almacenamiento a la que se pudo acceder correctamente y luego se pueden añadir al dominio de gestión.
 
 
 
+[[single-storage-array]]
 === Cabina de almacenamiento única
 
 Si decide detectar una sola cabina de almacenamiento, debe introducir la dirección IP única para una de las controladoras de la cabina de almacenamiento y, a continuación, añadir esa cabina al dominio de gestión.
@@ -39,12 +42,14 @@ NOTE: El plugin detecta y muestra solamente la dirección IP única o la direcci
 
 
 
+[[user-credentials]]
 === Credenciales de usuario
 
 Debe suministrar la contraseña de administrador para cada cabina de almacenamiento que desee añadir.
 
 
 
+[[certificates]]
 === Certificados
 
 Como parte del proceso de detección, el sistema verifica que las cabinas de almacenamiento detectadas utilicen certificados de un origen de confianza. El sistema utiliza dos tipos de autenticación basada en certificados para todas las conexiones que establece con el explorador:
@@ -55,6 +60,7 @@ Como parte del proceso de detección, el sistema verifica que las cabinas de alm
 
 
 
+[[storage-array-status]]
 == Estado de la cabina de almacenamiento
 
 Al abrir el complemento de almacenamiento para vCenter, se establece la comunicación con cada cabina de almacenamiento y se muestra el estado de cada una.
@@ -87,6 +93,7 @@ En la página *gestionar - todo*, es posible ver el estado de la cabina de almac
 |===
 
 
+[[plugin-interface-compared-to-system-manager]]
 == Comparación de la interfaz de complementos con System Manager
 
 Puede utilizar el complemento de almacenamiento para vCenter para tareas operativas básicas en su cabina de almacenamiento; sin embargo, puede haber horas cuando necesite ejecutar System Manager para realizar tareas que no estén disponibles en el plugin.

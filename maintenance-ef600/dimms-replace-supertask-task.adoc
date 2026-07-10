@@ -33,6 +33,7 @@ Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, 
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Paso 1: Determine si necesita sustituir un DIMM
 
 Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
@@ -50,6 +51,7 @@ Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM
 
 
 
+[[step-2-place-controller-offline]]
 == Paso 2: Coloque la controladora en estado sin conexión
 
 Coloque la controladora en estado sin conexión para que pueda extraer y sustituir los DIMM de forma segura.
@@ -96,6 +98,7 @@ NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
 
 
 
+[[step-3-remove-controller-canister]]
 == Paso 3: Quite el contenedor de controladora
 
 Quite el compartimento de controladoras con errores para poder sustituir los DIMM por otros nuevos.
@@ -126,6 +129,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-4-remove-dimms]]
 == Paso 4: Retire los módulos DIMM
 
 Si hay un error de coincidencia en la memoria, reemplace los DIMM en el controlador.
@@ -160,6 +164,7 @@ El número y la colocación de los DIMM del sistema depende del modelo del siste
 
 
 
+[[step-5-install-new-dimms]]
 == Paso 5: Instale módulos DIMM nuevos
 
 Instale un módulo DIMM nuevo para sustituir el antiguo.
@@ -189,6 +194,7 @@ image::../media/dimm_5.png[Inserte DIMM en la ranura y fíjelos con pestañas]
 
 
 
+[[step-6-reinstall-controller-canister]]
 == Paso 6: Vuelva a instalar el compartimento de la controladora
 
 Después de instalar los DIMM nuevos, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -208,6 +214,7 @@ image::../media/remove_controller_7.png[Instale DIMM en la ranura de la controla
 
 
 
+[[step-7-complete-dimms-replacement]]
 == Paso 7: Sustitución completa de los DIMM
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

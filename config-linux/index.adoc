@@ -15,6 +15,7 @@ El método exprés de Linux para instalar la cabina de almacenamiento y acceder 
 
 
 
+[[procedure-overview]]
 == Descripción general del procedimiento
 
 El método exprés de Linux incluye los siguientes pasos.
@@ -37,6 +38,7 @@ El método exprés de Linux incluye los siguientes pasos.
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * Ayuda en línea: Describe cómo usar System Manager de SANtricity para completar tareas de configuración y gestión del almacenamiento. Está disponible en el producto.

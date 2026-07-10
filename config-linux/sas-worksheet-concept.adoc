@@ -17,6 +17,7 @@ image::../media/sas_topology_diagram_conf-lin.gif[Diagrama: Topología de SAS]
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 |===
@@ -65,12 +66,14 @@ Puerto de host (iniciador) 2 conectado a la controladora B, puerto 1
 |===
 
 
+[[target-identifiers]]
 == Identificadores de destino
 
 Las configuraciones recomendadas constan de dos puertos de destino.
 
 
 
+[[mapping-host]]
 == Host de asignación
 
 |===

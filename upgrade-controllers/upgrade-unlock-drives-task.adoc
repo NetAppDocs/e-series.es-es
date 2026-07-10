@@ -21,6 +21,7 @@ Siga el procedimiento adecuado para:
 
 
 
+[[internal-key-management]]
 == Gestión de claves internas
 
 Siga estos pasos para la gestión de claves internas cuando se bloqueen todas las unidades.
@@ -51,6 +52,7 @@ Las controladoras continuarán con el proceso de sincronización de autocodifica
 
 
 
+[[external-key-management]]
 == Gestión de claves externas
 
 Siga estos pasos para la gestión de claves externas cuando se bloquean todas las unidades.

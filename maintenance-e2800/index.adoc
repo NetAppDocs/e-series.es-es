@@ -17,6 +17,7 @@ En los procedimientos de esta sección se asume que el sistema E2800 ya se ha pu
 
 
 
+[[system-components]]
 == Componentes del sistema
 
 Para el sistema de almacenamiento E2800, es posible realizar procedimientos de mantenimiento en los siguientes componentes.

@@ -18,6 +18,7 @@ La gestión de certificados en el complemento de almacenamiento para vCenter per
 
 
 
+[[what-are-certificates]]
 == ¿Qué son los certificados?
 
 Los certificados son archivos digitales que identifican entidades en línea, como sitios web y servidores, para poder establecer comunicaciones seguras en Internet. Garantizan que solo se transmitan comunicaciones web en formato cifrado, de forma privada y sin alternaciones, entre el servidor especificado y el cliente. Mediante el complemento de almacenamiento para vCenter, puede gestionar los certificados para el explorador en un sistema de gestión host y las controladoras en las cabinas de almacenamiento detectadas.
@@ -31,6 +32,7 @@ NOTE: Si bien los certificados firmados por CA aumentan la protección de seguri
 
 
 
+[[signed-certificates]]
 == Certificados firmados
 
 Un certificado firmado es validado por una entidad de certificación (CA), que es una organización de terceros de confianza. Los certificados firmados incluyen detalles sobre el propietario de la entidad (generalmente, un servidor o sitio web), la fecha de emisión y de vencimiento del certificado, los dominios válidos de la entidad, y una firma digital compuesta por letras y números.
@@ -46,6 +48,7 @@ La CA toma las medidas necesarias para verificar las identidades durante el proc
 
 
 
+[[self-signed-certificates]]
 == Certificados autofirmados
 
 Cada controladora de la cabina de almacenamiento incluye un certificado autofirmado preinstalado. Un certificado autofirmado es similar a un certificado firmado por CA, excepto que es validado por el propietario de la entidad y no por un tercero. Al igual que un certificado firmado por CA, un certificado autofirmado contiene su propia clave privada, y también garantiza que los datos se cifren y se envíen a través de una conexión HTTPS entre un servidor y un cliente.
@@ -54,12 +57,14 @@ Los certificados autofirmados no son “de confianza” por parte de los explora
 
 
 
+[[management-certificate]]
 == Certificado de gestión
 
 Al abrir el plugin, el explorador intenta verificar si el host de gestión es un origen de confianza mediante la comprobación de un certificado digital. Si el explorador no encuentra un certificado firmado por CA, abre un mensaje de advertencia. Desde allí, podrá continuar al sitio web para aceptar el certificado autofirmado en esa sesión. También es posible obtener certificados digitales firmados de una CA para que ya no se vea el mensaje de advertencia.
 
 
 
+[[trusted-certificates]]
 == Certificados de confianza
 
 Durante una sesión del plugin, es posible que vea mensajes de seguridad adicionales al intentar acceder a una controladora que no tiene un certificado firmado por CA. En este caso, puede confiar de forma permanente en el certificado autofirmado o puede importar los certificados firmados por CA de las controladoras para que el plugin pueda autenticar las solicitudes de cliente entrantes procedentes de estas controladoras.

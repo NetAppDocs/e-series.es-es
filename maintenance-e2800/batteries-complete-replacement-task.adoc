@@ -20,6 +20,7 @@ Los pasos para completar el reemplazo de la batería dependen de si tiene una co
 
 
 
+[[place-controller-online-duplex]]
 == Colocar una controladora en línea (doble)
 
 Coloque la controladora en línea para confirmar que la cabina de almacenamiento funciona correctamente. A continuación, se pueden recoger datos de soporte y reanudar las operaciones.
@@ -98,6 +99,7 @@ Se ha completado el reemplazo de la batería. Es posible reanudar las operacione
 
 
 
+[[power-up-controller-simplex]]
 == Controladora alimentación (simple)
 
 Encienda la bandeja de controladoras para confirmar que funciona correctamente. A continuación, se pueden recoger datos de soporte y reanudar las operaciones.

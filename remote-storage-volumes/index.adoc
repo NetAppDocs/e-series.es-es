@@ -15,6 +15,7 @@ Utilice la función volúmenes de almacenamiento remoto de SANtricity® para imp
 
 
 
+[[configuration-overview]]
 == Información general de configuración
 
 La función almacenamiento remoto volúmenes está disponible con SANtricity System Manager en los identificadores de submodelo seleccionados. Para utilizar esta función, debe configurar un sistema de almacenamiento remoto y un sistema de almacenamiento E-Series para que se comuniquen entre sí.
@@ -31,6 +32,7 @@ NOTE: Los volúmenes de almacenamiento remoto de SANtricity no son compatibles a
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * Ayuda en línea, disponible en la interfaz de usuario de System Manager o en la https://docs.netapp.com/us-en/e-series-santricity/index.html["Sitio de documentación del software SANtricity"^].

@@ -26,6 +26,7 @@ Asegúrese de tener lo siguiente:
 
 
 
+[[step-1-install-battery]]
 == Paso 1: Instale la batería
 
 Instale la batería que quitó del compartimento de controladoras original o una batería nueva que haya pedido.
@@ -56,6 +57,7 @@ Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se enga
 
 
 
+[[step-2-install-new-controller-canister]]
 == Paso 2: Instale el nuevo compartimento de controladoras
 
 [role="tabbed-block"]

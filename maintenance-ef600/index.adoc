@@ -17,6 +17,7 @@ En los procedimientos de esta sección se asume que el sistema EF300 o EF600 ya 
 
 
 
+[[system-components]]
 == Componentes del sistema
 
 Para los sistemas de almacenamiento EF300, EF600, EF300C y EF600C, se pueden realizar procedimientos de mantenimiento en los siguientes componentes.

@@ -15,6 +15,7 @@ Antes de instalar y configurar el proxy de servicios web, lea la información ge
 
 
 
+[[web-services]]
 == Servicios Web
 
 Servicios web es una interfaz de programación de aplicaciones (API) que permite configurar, gestionar y supervisar sistemas de almacenamiento E-Series y EF-Series de NetApp. Al emitir solicitudes de API, podrá completar flujos de trabajo como la configuración, el aprovisionamiento y la supervisión del rendimiento de los sistemas de almacenamiento E-Series.
@@ -74,6 +75,7 @@ Gestiona únicamente el controlador en el que está integrado.
 |===
 
 
+[[unified-manager]]
 == Unified Manager
 
 El paquete de instalación proxy incluye Unified Manager, una interfaz web que proporciona acceso a la configuración de los nuevos sistemas de almacenamiento E-Series y EF-Series, como E2800, E5700, EF300 y EF600.

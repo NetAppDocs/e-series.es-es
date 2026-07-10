@@ -18,6 +18,7 @@ NOTE: Consulte la página https://docs.netapp.com/us-en/e-series/getting-started
 
 
 
+[[hardware-and-firmware-requirements]]
 == Requisitos de hardware y firmware
 
 * *Actualizaciones de las controladoras dúplex y símplex*
@@ -89,6 +90,7 @@ No utilices ningún otro puerto host (Slot 1, Slot 2 o Slot 3) para la comunicac
 
 
 
+[[upgrade-compatibility]]
 == Actualizar la compatibilidad
 
 Revise las rutas de actualización admitidas para cada modelo de la cabina de almacenamiento.
@@ -300,6 +302,7 @@ Las controladoras EF540, EF550 y EF560 no deben colocarse en bandejas SAS-3.
 ====
 
 
+[[sas-enclosures]]
 == Compartimentos SAS
 
 E5700 admite compartimentos DE5600 y DE6600 SAS-2 mediante actualización Head. Cuando se instala una controladora E5700 en compartimentos SAS-2, se deshabilita la compatibilidad con los puertos de host base.
@@ -335,6 +338,7 @@ Notas:
 
 
 
+[[sas-2-to-sas-3-investment-protection]]
 == Protección de la inversión entre SAS-2 y SAS-3
 
 Puede volver a configurar el sistema SAS-2 para utilizarlo detrás de una nueva bandeja de controladoras SAS-3 (E57XX/EF570/E28XX).

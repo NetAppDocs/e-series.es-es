@@ -16,6 +16,7 @@ Siga este procedimiento para actualizar el firmware de las unidades, lo que gara
 
 
 
+[[step-1-download-drive-firmware-files]]
 == Paso 1: Descargar los archivos de firmware de la unidad
 
 En este paso, vaya al sitio de soporte de NetApp para descargar los archivos de firmware de la unidad en el cliente de gestión.
@@ -30,6 +31,7 @@ En este paso, vaya al sitio de soporte de NetApp para descargar los archivos de 
 
 
 
+[[step-2-begin-drive-firmware-upgrade]]
 == Paso 2: Comience la actualización del firmware de la unidad
 
 En este paso, se actualiza el firmware de las unidades.

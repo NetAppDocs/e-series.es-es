@@ -15,6 +15,7 @@ Para completar la sustitución del controlador de tu sistema de almacenamiento E
 
 
 
+[[step-1-ensure-latest-version-of-santricity-os-verify-volume-ownership-and-collect-support-data]]
 == Paso 1: asegúrate de tener la última versión de SANtricity OS, verifica la propiedad del volumen y recopila los datos de soporte
 
 Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS está instalada, verifica que todos los volúmenes se han devuelto a sus controladores propietarios y recopila los datos de soporte para que puedas reanudar las operaciones.
@@ -65,6 +66,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Paso 2: devuelve la pieza defectuosa a NetApp
 
 Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

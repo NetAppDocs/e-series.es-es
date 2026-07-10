@@ -23,6 +23,7 @@ Para mostrar y gestionar recursos de almacenamiento, debe utilizar la interfaz d
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Paso 1: Introduzca las direcciones de red para la detección
 
 .Pasos
@@ -61,6 +62,7 @@ Si desea importar certificados firmados por CA, cancele el asistente de detecci�
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Paso 2: Resolver certificados que no son de confianza durante la detección
 
 Debe resolver todos los problemas de los certificados antes de continuar con el proceso de detección.
@@ -77,6 +79,7 @@ Debe resolver todos los problemas de los certificados antes de continuar con el 
 
 
 
+[[step-3-provide-passwords]]
 == Paso 3: Proporcionar contraseñas
 
 Como último paso para la detección, debe introducir las contraseñas de las cabinas de almacenamiento que desea añadir al dominio de gestión.

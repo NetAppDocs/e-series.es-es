@@ -25,6 +25,7 @@ Asegúrese de tener lo siguiente:
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Paso 1: Preparar la sustitución de la controladora
 
 Para preparar el reemplazo de un contenedor de controladora, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. A continuación, es posible detener las operaciones de I/O del host y colocarla en un estado sin conexión o apagada.
@@ -208,6 +209,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 ====
 
 
+[[step-2-remove-failed-controller]]
 == Paso 2: Quitar una controladora que ha fallado
 
 Sustituya el compartimento con errores por uno nuevo.
@@ -236,6 +238,7 @@ El LED verde de caché activa de la parte posterior de la controladora está enc
 
 
 
+[[step-3-remove-the-battery]]
 == Paso 3: Retire la batería
 
 Retire la batería del controlador averiado e instálelo en el controlador de sustitución.
@@ -278,6 +281,7 @@ NOTE: No enchufe la batería todavía. Lo conectará una vez que el resto de los
 
 
 
+[[step-4-remove-the-hic]]
 == Paso 4: Quite la HIC
 
 Retire el marco de HIC y la tarjeta PCIe HIC del módulo de controlador dañado.
@@ -297,6 +301,7 @@ NOTE: Puede aflojar los tornillos con los dedos o con un destornillador.
 
 
 
+[[step-5-move-the-dimms]]
 == Paso 5: Mueva los DIMM
 
 Quite los DIMM del compartimento de controladora deficiente e instálelos en el compartimento de controladora de reemplazo.
@@ -353,6 +358,7 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 
 
 
+[[step-6-install-the-hic]]
 == Paso 6: Instale la HIC
 
 Instale la HIC en el compartimento de controladoras de reemplazo.
@@ -365,6 +371,7 @@ Instale la HIC en el compartimento de controladoras de reemplazo.
 
 
 
+[[step-7-install-the-battery]]
 == Paso 7: Instale la batería
 
 Instale la batería en el compartimento de controladoras de reemplazo.
@@ -381,6 +388,7 @@ Asegúrese de que el enchufe se bloquea en la toma de la batería de la placa ba
 
 
 
+[[step-8-complete-controller-replacement]]
 == Paso 8: Sustitución completa de la controladora
 
 Vuelva a establecer la conexión con la bandeja de controladoras, recoger datos de soporte y reanudar las operaciones.

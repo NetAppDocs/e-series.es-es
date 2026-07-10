@@ -15,6 +15,7 @@ Prepárate para instalar tu sistema de almacenamiento EF50 o EF80 preparando el 
 
 
 
+[[step-1-prepare-the-site]]
 == Paso 1: preparar el sitio
 
 Asegúrate de que el sitio y el armario o rack que planeas usar cumplen con las especificaciones de tu sistema de almacenamiento.
@@ -50,6 +51,7 @@ Si lo necesitas, consulta https://hwu.netapp.com["Hardware Universe de NetApp"^]
 
 
 
+[[step-2-understand-the-lifting-precautions]]
 == Paso 2: entiende las precauciones de elevación
 
 Antes de desempacar las cajas, y luego cuando instales tu sistema de almacenamiento, deberías conocer el peso de tu sistema de almacenamiento para que puedas tomar las precauciones necesarias al levantarlo y moverlo.
@@ -60,6 +62,7 @@ image::../media/drw_g_lifting_weight_ieops-1831.svg[Icono de precaución de peso
 
 
 
+[[step-3-unpack-the-boxes]]
 == Paso 3: desembala las cajas
 
 Después de asegurarte de que el sitio y el armario o rack que planeas usar cumplen con las especificaciones de tu sistema de almacenamiento, y entiendes las precauciones de levantamiento, desempaca todas las cajas y compara el contenido con los artículos en el albarán.
@@ -106,6 +109,7 @@ Si es necesario, consulta https://hwu.netapp.com/["Hardware Universe de NetApp"^
 
 
 
+[[step-4-register-your-storage-system]]
 == Paso 4: registra tu sistema de almacenamiento
 
 Después de que te hayas asegurado de que tu sitio cumple con las especificaciones de tu sistema de almacenamiento y hayas verificado que tienes todas las piezas que pediste, deberías registrar tu sistema de almacenamiento.

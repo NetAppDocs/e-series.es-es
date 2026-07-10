@@ -25,6 +25,7 @@ CAUTION: Para evitar el sobrecalentamiento, no dejes el compartimento del contro
 
 
 
+[[step-1-remove-the-controller]]
 == Paso 1: quitar el controlador
 
 Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables del controlador dañado y luego retira el controlador dañado del chasis.
@@ -107,6 +108,7 @@ Si es necesario, gira las asas hacia arriba (junto a las lengüetas) para aparta
 
 
 
+[[step-2-move-the-power-supply]]
 == Paso 2: mueve la fuente de alimentación
 
 Mueve la fuente de alimentación (PSU) al controlador de reemplazo.
@@ -165,6 +167,7 @@ NOTE: Para evitar dañar el conector interno, no uses demasiada fuerza al desliz
 
 
 
+[[step-3-move-the-fans]]
 == Paso 3: mueve los ventiladores
 
 Mueve los ventiladores al controlador de reemplazo.
@@ -194,6 +197,7 @@ image::../media/icon_round_2.png[Llamada número 2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Paso 4: mover la batería NV
 
 Mueve la batería NV al controlador de reemplazo.
@@ -247,6 +251,7 @@ La batería NV debe quedar al ras en su compartimento.
 
 
 
+[[step-5-move-system-dimms]]
 == Paso 5: mueve los módulos DIMM del sistema
 
 Mueve los módulos DIMM al controlador de reemplazo.
@@ -312,6 +317,7 @@ Cuando se inserta correctamente, el DIMM entra fácilmente pero queda bien ajust
 
 
 
+[[step-6-move-the-io-modules]]
 == Paso 6: mueve los módulos de E/S
 
 Mueve los módulos de E/S y cualquier módulo de supresión de E/S al controlador de sustitución.
@@ -360,6 +366,7 @@ Puedes usar la lengüeta de la izquierda y el tornillo de mariposa de la derecha
 
 
 
+[[step-7-install-the-controller]]
 == Paso 7: instala el controlador
 
 Instala el controlador de repuesto en el chasis, vuelve a conectar su cable de alimentación y todos sus cables.

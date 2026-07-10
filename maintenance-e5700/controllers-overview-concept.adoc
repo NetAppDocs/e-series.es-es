@@ -18,6 +18,7 @@ Cada contenedor de controladora contiene una tarjeta de controladora, una bater�
 
 
 
+[[procedure-overview]]
 == Descripción general del procedimiento
 
 Cuando reemplaza un compartimento de controladoras con errores, debe quitar la batería y la HIC, si hay alguna instalada, del compartimento de controladoras original y instalarlas en el compartimento de controladoras de reemplazo.
@@ -59,6 +60,7 @@ NOTE: Este procedimiento se aplica a intercambios o sustituciones similares de I
 
 
 
+[[requirements-for-replacing-a-failed-controller]]
 == Requisitos para reemplazar una controladora con fallos
 
 Antes de sustituir una controladora, debe tener:
@@ -84,6 +86,7 @@ De manera opcional, puede usar la interfaz de línea de comandos (CLI) para real
 
 
 
+[[duplex-configuration-requirements]]
 == Requisitos de configuración doble
 
 En el caso de una bandeja de controladoras con dos controladoras (configuración doble), es posible sustituir un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, siempre que se cumplan las siguientes condiciones:

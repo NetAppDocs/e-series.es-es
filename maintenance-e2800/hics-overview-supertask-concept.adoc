@@ -16,6 +16,7 @@ Antes de añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC)
 
 
 
+[[procedure-overview]]
 == Descripción general del procedimiento
 
 Los pasos para reemplazar una HIC dependen de si tiene una o dos controladoras de la siguiente manera:
@@ -50,6 +51,7 @@ Dos controladoras (E2860, E2824 o E2812 dúplex)
 |===
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Requisitos para añadir, actualizar o reemplazar una HIC
 
 Si planea añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC), tenga en cuenta los siguientes requisitos.

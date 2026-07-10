@@ -15,6 +15,7 @@ Después de mover el armario, baje los pies de nivelación y el pie de estabilid
 
 
 
+[[step-1-lower-leveling-feet-and-stability-foot]]
 == Paso 1: Baje los pies de nivelación y la base de estabilidad
 
 Para estabilizar el armario, ajuste sus pies. Las patas de nivelación soportan el armario fuera de las ruedas. El pie de estabilidad evita que el armario se caiga después de colocarse en su posición permanente.
@@ -52,6 +53,7 @@ Pie de estabilidad
 
 
 
+[[step-2-reinstall-trays]]
 == Paso 2: Vuelva a instalar las bandejas
 
 Después de mover el armario, puede volver a instalar las bandejas en sus ubicaciones originales.
@@ -76,6 +78,7 @@ Para evitar conflictos de dirección y pérdida del acceso a los datos, reemplac
 
 
 
+[[step-3-install-cable-spools-and-tie-wraps]]
 == Paso 3: Instalar las bobinas de cable y las bridas
 
 Después de volver a instalar las bandejas, instale las bobinas de cable y las bridas. Las bobinas de cable y las bridas admiten la longitud excesiva del cable y el tendido del cable para los controladores y las bandejas.
@@ -106,6 +109,7 @@ Carrete de cable
 
 
 
+[[step-4-install-additional-trays]]
 == Paso 4: Instalar bandejas adicionales
 
 Si es necesario, puede instalar bandejas adicionales. Debe cubrir las posiciones no utilizadas de las bandejas para garantizar un flujo de aire correcto.
@@ -121,6 +125,7 @@ Es necesario cubrir los espacios vacíos para mantener el flujo de aire correcto
 
 
 
+[[step-5-install-additional-mounting-rails]]
 == Paso 5: Instale rieles de montaje adicionales
 
 Si va a instalar soportes de controladoras-unidades o soportes de unidades que se enviaron por separado (no están instalados ya en el armario), puede que deba instalar rieles de montaje adicionales en el armario.
@@ -230,6 +235,7 @@ NOTE: Los dos orificios de tornillo restantes se utilizan para montar la bandeja
 
 
 
+[[step-6-connect-the-cabinet-to-power]]
 == Paso 6: Conecte el armario a la alimentación
 
 Para completar la instalación del armario, encienda los componentes del armario.

@@ -15,6 +15,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de 
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 
@@ -63,6 +64,7 @@ n.a.
 |===
 
 
+[[recommended-configuration]]
 == Configuración recomendada
 
 En una topología de conexión directa, uno o más hosts están conectados directamente al subsistema. En la versión 11.50 de SANtricity OS, admitimos una única conexión desde cada host a una controladora del subsistema, como se muestra a continuación. En esta configuración, un puerto HCA (adaptador de canal de host) de cada host debe estar en la misma subred que el puerto de la controladora E-Series al que está conectado, pero en una subred diferente del otro puerto HCA.
@@ -71,6 +73,7 @@ image::../media/nvmeof_direct_connect.gif[Ejemplo de conexión directa de NVMe o
 
 
 
+[[target-nqn]]
 == NQN objetivo
 
 Documente el NQN objetivo para la cabina de almacenamiento. Utilizará esta información en xref:nvme-ib-configure-storage-connections-task.adoc[Configure las conexiones NVMe over InfiniBand de la cabina de almacenamiento].
@@ -90,6 +93,7 @@ Controladora de cabina (objetivo)
 |===
 
 
+[[network-configuration]]
 == Configuración de red
 
 Documentar la configuración de red que se utilizará para los hosts y el almacenamiento de la estructura InfiniBand. Estas instrucciones suponen que se utilizarán dos subredes para una redundancia total.
@@ -98,6 +102,7 @@ El administrador de red puede proporcionar la siguiente información. Esta infor
 
 
 
+[[subnet-a]]
 === Subred a
 
 Defina la subred que se va a usar.
@@ -157,6 +162,7 @@ Host 1, puerto 1
 |===
 
 
+[[subnet-b]]
 === Subred B
 
 Defina la subred que se va a usar.
@@ -216,6 +222,7 @@ Host 1, puerto 2
 |===
 
 
+[[mapping-host-name]]
 == Asignando el nombre de host
 
 

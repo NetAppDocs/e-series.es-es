@@ -18,6 +18,7 @@ Si va a actualizar controladoras en un soporte de controladora-unidad dúplex, r
 
 
 
+[[step-1-power-on-controller]]
 == Paso 1: Encienda la controladora
 
 Debe encender la bandeja de controladoras para confirmar que funciona correctamente.
@@ -95,6 +96,7 @@ Cambio de controladora con gestión de claves externas y todas las unidades prot
 
 
 
+[[step-2-check-status-of-controllers-and-trays]]
 == Paso 2: Comprobar el estado de las controladoras y los soportes
 
 Puede utilizar los LED y el software de administración del almacenamiento para comprobar el estado de las controladoras y los soportes.
@@ -119,6 +121,7 @@ Una vez que la controladora completa correctamente el reinicio, es posible detec
 
 
 
+[[step-3-validate-controller-software-version]]
 == Paso 3: Validar la versión del software de la controladora
 
 Debe asegurarse de que las nuevas controladoras se ejecuten con el nivel de sistema operativo (firmware de la controladora) correcto y NVSRAM.

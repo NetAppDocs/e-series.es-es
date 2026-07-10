@@ -38,6 +38,7 @@ Para obtener información acerca del hardware compatible, consulte https://mysup
 
 
 
+[[step-1-prepare-to-upgrade-host-interface-cards]]
 == Paso 1: Preparar la actualización de las tarjetas de interfaz del host
 
 Prepare para actualizar tarjetas de interfaz del host (HIC). Para ello, realice un backup de la base de datos de configuración de la cabina de almacenamiento, recoja datos de soporte y detenga las operaciones de I/o del host. Esto le permite apagar la bandeja de controladoras.
@@ -121,6 +122,7 @@ Espere a que se completen todas las operaciones antes de continuar con el siguie
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Se quita el contenedor de controladoras para poder actualizar la nueva tarjeta de interfaz del host (HIC). Cuando quita un compartimento de controladoras, debe desconectar todos los cables. Así, puede sacar el compartimento de controladoras de la bandeja de controladoras.
@@ -185,6 +187,7 @@ Si va a quitar el compartimento de controladoras de una bandeja de controladoras
 
 
 
+[[step-3-remove-a-host-interface-card]]
 == Paso 3: Extraiga una tarjeta de interfaz del host
 
 Quite la tarjeta de interfaz del host (HIC) original de manera que pueda reemplazarla por una actualizada.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retire la HIC de la
 
 
 
+[[step-4-install-host-interface-card]]
 == Paso 4: Instalar la tarjeta de interfaz del host
 
 Instale la nueva tarjeta de interfaz del host (HIC) para aumentar la cantidad de puertos de host en la cabina de almacenamiento.
@@ -272,6 +276,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de la controladora
 
 Vuelva a instalar el contenedor de controladoras en la bandeja de controladoras después de instalar la nueva tarjeta de interfaz del host (HIC).
@@ -315,6 +320,7 @@ NOTE: No conecte los cables de datos a los puertos HIC nuevos en este momento.
 
 
 
+[[step-6-complete-host-interface-card-upgrade]]
 == Paso 6: Actualización completa de la tarjeta de interfaz del host
 
 Complete el proceso de actualizar una tarjeta de interfaz del host. Para ello, revise los LED de la controladora y la pantalla de siete segmentos, y confirme que el estado de la controladora es óptimo.

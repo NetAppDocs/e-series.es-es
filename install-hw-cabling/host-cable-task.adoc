@@ -18,6 +18,7 @@ NOTE: La siguiente información no se aplica a todos los sistemas de almacenamie
 
 
 
+[[cabling-for-a-direct-attached-topology]]
 == Cableado para una topología de conexión directa
 
 Una topología de conexión directa conecta los adaptadores de host directamente a las controladoras del sistema de almacenamiento.
@@ -41,6 +42,7 @@ image::../media/2hosts_4hbas_ieops-2146.svg[Dos cables de host/cuatro HBA y dos 
 
 
 
+[[cabling-for-a-switch-topology]]
 == Cableado para una topología de switch
 
 Una topología de switch utiliza switches para conectar hosts a las controladoras en el sistema de almacenamiento. El switch debe admitir el tipo de conexión utilizada entre el host y la controladora.

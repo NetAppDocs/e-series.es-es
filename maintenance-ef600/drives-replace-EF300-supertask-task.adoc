@@ -21,6 +21,7 @@ El sistema EF300 y EF300C admite la expansión SAS con bandejas de 24 y 60 unida
 
 
 
+[[replace-drive-in-an-ef300-24-drive-shelf]]
 == Sustitución de unidad en una bandeja EF300 (24 unidades)
 
 Siga este procedimiento para sustituir una unidad en una bandeja de 24 unidades.
@@ -42,6 +43,7 @@ Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina d
 
 
 
+[[step-1-prepare-to-replace-drive-24-drive]]
 === Paso 1: Preparación para sustituir unidad (24 unidades)
 
 Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.
@@ -71,6 +73,7 @@ NOTE: Si va a sustituir una unidad de una bandeja que tiene un panel frontal, de
 
 
 
+[[step-2-remove-failed-drive-24-drive]]
 === Paso 2: Quitar una unidad con error (24 unidades)
 
 Quite una unidad con error para reemplazarla por una nueva.
@@ -101,6 +104,7 @@ NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y,
 
 
 
+[[step-3-install-new-drive-24-drive]]
 === Paso 3: Instalación de una nueva unidad (24 unidades)
 
 Se instala una unidad nueva para reemplazar la que presenta errores. Instale la Lo antes posible. de la unidad de reemplazo después de quitar la unidad con error. De lo contrario, existe el riesgo de que el equipo se recaliente.
@@ -120,6 +124,7 @@ NOTE: Según la configuración, es posible que la controladora reconstruya autom
 
 
 
+[[step-4-complete-drive-replacement-24-drive]]
 === Paso 4: Sustitución completa de la unidad (24 unidades)
 
 Confirme que la unidad nueva funciona correctamente.
@@ -160,6 +165,7 @@ Se completó el reemplazo de su unidad. Es posible reanudar las operaciones norm
 
 
 
+[[replace-drive-in-an-ef300-60-drive-shelf]]
 == Sustitución de unidad en una bandeja EF300 (60 unidades)
 
 Siga este procedimiento para sustituir una unidad en una bandeja de 60 unidades.
@@ -180,6 +186,7 @@ Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina d
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 === Paso 1: Preparación para sustituir unidad (60 unidades)
 
 Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.
@@ -237,6 +244,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED de a
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 === Paso 2: Quitar una unidad con error (60 unidades)
 
 Quite una unidad con error para reemplazarla por una nueva.
@@ -274,6 +282,7 @@ NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y,
 
 
 
+[[step-3-install-new-drive-60-drive]]
 === Paso 3: Instalación de una nueva unidad (60 unidades)
 
 Instale una unidad nueva para reemplazar la que presenta errores.
@@ -303,6 +312,7 @@ Según la configuración, es posible que la controladora reconstruya automática
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 === Paso 4: Sustitución completa de la unidad (60 unidades)
 
 Confirme que la unidad nueva funciona correctamente.

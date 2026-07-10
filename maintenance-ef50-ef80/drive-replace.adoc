@@ -20,6 +20,7 @@ Sustituye una unidad con error mientras tu sistema de almacenamiento EF50 o EF80
 
 
 
+[[step-1-prepare-to-replace-the-drive]]
 == Paso 1: prepárate para sustituir la unidad
 
 Prepárate para la sustitución de la unidad asegurándote de que la unidad ha fallado, confirmando que tienes una unidad de sustitución compatible, asegurándote de que tienes acceso a SANtricity System Manager, tomando precauciones contra descargas electrostáticas y localizando físicamente la unidad con error.
@@ -81,6 +82,7 @@ NOTE: Debes retirar el frontal del sistema de almacenamiento para ver los LED de
 
 
 
+[[step-2-replace-the-drive]]
 == Paso 2: reemplaza la unidad
 
 Sustituye la unidad con error por una nueva.
@@ -149,6 +151,7 @@ El LED verde de la unidad se ilumina cuando la unidad se inserta correctamente.
 
 
 
+[[step-3-complete-the-drive-replacement]]
 == Paso 3: completa la sustitución de la unidad
 
 Confirma que la unidad de sustitución está funcionando correctamente y asegúrate de que la reconstrucción de la unidad haya comenzado.
@@ -214,6 +217,7 @@ Cuando se completa la reconstrucción de la unidad, el grupo de volúmenes tiene
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Paso 4: devuelve la pieza defectuosa a NetApp
 
 Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

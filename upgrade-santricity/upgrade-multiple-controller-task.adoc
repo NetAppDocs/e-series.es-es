@@ -33,6 +33,7 @@ CAUTION: Si va a actualizar SANtricity OS en un dispositivo StorageGRID (por eje
 
 
 
+[[step-1-perform-pre-upgrade-health-check]]
 == Paso 1: Realizar la comprobación del estado previa a la actualización
 
 Una comprobación del estado se ejecuta como parte del proceso de actualización, pero también es posible ejecutarla por separado, antes de comenzar. La comprobación del estado evalúa los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización.
@@ -58,6 +59,7 @@ NOTE: Si ocurre un error en la comprobación del estado de alguna cabina, puede 
 
 
 
+[[step-2-download-software-files-from-support-site]]
 == Paso 2: Descargar archivos de software del sitio de soporte
 
 En este paso, vaya al sitio de soporte de NetApp para guardar los nuevos archivos de software del paquete descargable (DLP) en el sistema host de gestión.
@@ -85,6 +87,7 @@ NOTE: Se requiere firmware con firma digital en la versión 8.42 y posteriores. 
 
 
 
+[[step-3-transfer-software-files-to-the-controllers]]
 == Paso 3: Transfiera los archivos de software a las controladoras
 
 Puede cargar el archivo de software de sistema operativo SANtricity y el archivo NVSRAM en el repositorio para poder acceder al centro de actualización de Unified Manager.
@@ -163,6 +166,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre``up
 
 
 
+[[step-4-activate-staged-software-files-optional]]
 == Paso 4: Activación de archivos de software almacenados en etapas (opcional)
 
 Puede optar por activar el archivo de actualización inmediatamente o esperar hasta un momento más conveniente. Este procedimiento entiende que se optó por activar el archivo de software más adelante.

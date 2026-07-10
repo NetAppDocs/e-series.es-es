@@ -16,6 +16,7 @@ Como primer paso, debe verificar que su configuración de Linux sea compatible y
 
 
 
+[[verify-the-linux-configuration-is-supported]]
 == Compruebe que la configuración de Linux sea compatible
 
 Para garantizar una operación fiable, debe crear un plan de implementación y, a continuación, utilizar la herramienta de matriz de interoperabilidad (IMT) de NetApp para verificar que se admite toda la configuración.
@@ -37,12 +38,14 @@ Puede acceder a la información detallada de la configuración elegida en la pá
 
 
 
+[[verify-nvme-over-roce-restrictions]]
 == Verificar las restricciones de NVMe over roce
 
 Antes de usar NVMe over roce, consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para revisar las últimas restricciones de controladora, host y recuperación.
 
 
 
+[[switch-restrictions]]
 === Restricciones de conmutación
 
 
@@ -50,6 +53,7 @@ CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* Debes ejecutar NVMe sobre RoCE en un ent
 
 
 
+[[storage-and-disaster-recovery-restrictions]]
 === Restricciones de almacenamiento y recuperación ante desastres
 
 * No se admiten el mirroring asíncrono y síncrono.

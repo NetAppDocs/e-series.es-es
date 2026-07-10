@@ -15,6 +15,7 @@ Puede desinstalar el conector cloud de SANtricity mediante el desinstalador grá
 
 
 
+[[uninstall-using-graphical-mode]]
 == Desinstale utilizando el modo gráfico
 
 Puede utilizar el modo gráfico para desinstalar SANtricity Cloud Connector de un sistema operativo Linux.
@@ -46,6 +47,7 @@ El proceso de desinstalación ha finalizado y la aplicación SANtricity Cloud Co
 
 
 
+[[uninstall-using-console-mode]]
 == Desinstale mediante el modo de consola
 
 Puede utilizar el modo de consola para desinstalar el conector en nube de SANtricity en un sistema operativo Linux.

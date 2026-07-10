@@ -17,6 +17,7 @@ Una controladora consta de una placa, un firmware y un software. Controla las un
 
 
 
+[[controller-replacement-requirements]]
 == Requisitos de sustitución de controladoras
 
 Antes de sustituir una controladora, debe tener:
@@ -30,6 +31,7 @@ Antes de sustituir una controladora, debe tener:
 
 
 
+[[replacement-while-powered-on]]
 == Sustitución mientras está encendido
 
 Es posible sustituir un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, si se cumplen las siguientes condiciones:

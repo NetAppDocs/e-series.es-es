@@ -15,6 +15,7 @@ Antes de añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC)
 
 
 
+[[procedure-overview]]
 == Descripción general del procedimiento
 
 Es posible añadir, actualizar o reemplazar una HIC en la bandeja de controladoras E5724 y la bandeja de controladoras E5760.
@@ -30,6 +31,7 @@ A continuación, se ofrece información general de los pasos para reemplazar una
 
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Requisitos para añadir, actualizar o reemplazar una HIC
 
 Si planea añadir, actualizar o reemplazar una tarjeta de interfaz del host (HIC), tenga en cuenta los siguientes requisitos.

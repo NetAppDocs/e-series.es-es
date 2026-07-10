@@ -17,6 +17,7 @@ Los tipos de contenedor incluyen suministros de alimentación, contenedores de a
 
 
 
+[[power-supply]]
 == Suministro de alimentación
 
 
@@ -26,6 +27,7 @@ Cada bandeja de controladoras o bandeja de unidades de 12 o 24 unidades incluye 
 
 
 
+[[shelf-types-for-a-power-supply]]
 === Tipos de bandejas para un suministro de alimentación
 
 Es posible sustituir un suministro de alimentación en las siguientes bandejas:
@@ -47,6 +49,7 @@ El procedimiento para reemplazar un suministro de alimentación no describe cóm
 
 
 
+[[requirements-for-replacing-a-power-supply]]
 === Requisitos para sustituir un suministro de alimentación
 
 Si planea sustituir una fuente de alimentación, tenga en cuenta los siguientes requisitos.
@@ -67,12 +70,14 @@ NOTE: Si el segundo suministro de alimentación (contenedor de alimentación/ven
 
 
 
+[[power-canister]]
 == Contenedor de alimentación
 
 Cada bandeja de controladoras o bandeja de unidades de 60 unidades incluye dos contenedores de alimentación para redundancia de alimentación.
 
 
 
+[[shelf-types-for-a-power-canister]]
 === Tipos de bandejas para un contenedor de alimentación
 
 Es posible sustituir un contenedor de alimentación en las siguientes bandejas:
@@ -93,6 +98,7 @@ image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Contenedores de alimenta
 
 
 
+[[requirements-for-replacing-a-power-canister]]
 === Requisitos para sustituir un compartimento de alimentación
 
 Si planea sustituir un compartimento de alimentación, tenga en cuenta los siguientes requisitos.
@@ -118,12 +124,14 @@ NOTE: Si el segundo contenedor de alimentación de la bandeja no tiene el estado
 
 
 
+[[fan-canister]]
 == Contenedor de ventilador
 
 Cada bandeja de controladoras o bandeja de unidades de 60 unidades incluye dos contenedores de ventilador.
 
 
 
+[[shelf-types-for-a-fan-canister]]
 === Tipos de bandejas para un contenedor de ventilador
 
 Es posible sustituir un contenedor de ventilador en las siguientes bandejas:
@@ -147,6 +155,7 @@ CAUTION: *Posible daño en el equipo* -- Si sustituye un contenedor de ventilado
 
 
 
+[[requirements-for-replacing-a-fan-canister]]
 === Requisitos para reemplazar un contenedor de ventilador
 
 Si planea sustituir un compartimento de ventiladores, tenga en cuenta los siguientes requisitos.

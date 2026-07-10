@@ -32,6 +32,7 @@ La detección de cabinas es un procedimiento de varios pasos:
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Paso 1: Introduzca las direcciones de red para la detección
 
 Como primer paso para detectar cabinas de almacenamiento, se debe introducir una dirección IP única o un rango de direcciones IP para buscar en la subred local. La función Añadir/detectar abre un asistente que le guía durante el proceso de detección.
@@ -65,6 +66,7 @@ El sistema comprueba las credenciales de cada cabina que se añade al dominio de
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Paso 2: Resolver certificados que no son de confianza durante la detección
 
 Si es necesario, debe resolver todos los problemas de certificado antes de continuar con el proceso de detección.
@@ -83,6 +85,7 @@ Durante la detección, si alguna cabina de almacenamiento muestra el estado "cer
 
 
 
+[[step-3-provide-passwords]]
 == Paso 3: Proporcionar contraseñas
 
 Como último paso para la detección, debe introducir las contraseñas de las cabinas de almacenamiento que desea añadir al dominio de gestión.

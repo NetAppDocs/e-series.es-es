@@ -16,6 +16,7 @@ Es posible modificar la configuración del proxy de servicios web para cumplir c
 
 
 
+[[stop-or-restart-the-webserver]]
 == Detenga o reinicie el servidor web
 
 El servicio de WebServer se inicia durante la instalación y se ejecuta en segundo plano. Durante algunas tareas de configuración, es posible que necesite detener o reiniciar el servicio de WebServer.
@@ -37,6 +38,7 @@ El método más común para interactuar con el servicio es mediante el uso `syst
 
 
 
+[[resolve-port-conflicts]]
 == Resolver conflictos de puerto
 
 Si el proxy de servicios web está en ejecución mientras otra aplicación está disponible en el puerto o la dirección definidos, puede resolver el conflicto de puerto en el archivo wsconfig.xml.1.
@@ -107,6 +109,7 @@ No
 
 
 
+[[configure-load-balancing-andor-high-availability]]
 == Configuración de balanceo de carga y/o alta disponibilidad
 
 Para usar el proxy de servicios web en una configuración altamente disponible (ha), se puede configurar el balanceo de carga. En una configuración de alta disponibilidad, normalmente un solo nodo recibe todas las solicitudes mientras los demás están en espera o las solicitudes se equilibran de carga en todos los nodos.
@@ -134,6 +137,7 @@ Por ejemplo: `DEBUG_START_OPTIONS="-Dload-balance.enabled=true"`
 
 
 
+[[disable-symbol-https]]
 == Desactivar el símbolo HTTPS
 
 Puede deshabilitar los comandos Symbol (ajuste predeterminado) y enviar comandos a través de una llamada a procedimiento remoto (RPC). Esta configuración se puede cambiar en el archivo wsconfig.xml.
@@ -162,6 +166,7 @@ Por ejemplo:
 
 
 
+[[configure-cross-origin-resource-sharing]]
 == Configurar el uso compartido de recursos de origen cruzado
 
 Puede configurar el uso compartido de recursos de origen cruzado (CORS), que es un mecanismo que utiliza encabezados HTTP adicionales para proporcionar una aplicación web que se ejecuta en un origen para tener permiso para acceder a recursos seleccionados desde un servidor de un origen diferente.

@@ -17,6 +17,7 @@ En RHEL 9, RHEL 10, SLES 15 y SLES 16, una solución de multipathing NVMe nativa
 
 
 
+[[nvme-devices-are-io-targets]]
 == Los dispositivos NVMe son destinos de E/S
 
 . Introduce el siguiente comando para localizar los volúmenes asignados a este host desde una matriz E-Series.

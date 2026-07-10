@@ -18,6 +18,7 @@ En el complemento de almacenamiento para vCenter, puede crear contenedores de da
 
 
 
+[[volume-types-and-characteristics]]
 == Tipos de volúmenes y características
 
 Los volúmenes son contenedores de datos que gestionan y organizan el espacio de almacenamiento en la cabina de almacenamiento.
@@ -43,12 +44,14 @@ Durante la creación de volúmenes, se asigna capacidad a cada volumen y se otor
 
 
 
+[[capacity-for-volumes]]
 == Capacidad para volúmenes
 
 Las unidades de la cabina de almacenamiento proporcionan capacidad de almacenamiento físico para los datos. Antes de comenzar a almacenar datos, es necesario configurar la capacidad asignada a los componentes lógicos conocidos como pools o grupos de volúmenes. Estos objetos de almacenamiento se utilizan para configurar, almacenar, mantener y conservar los datos en la cabina de almacenamiento.
 
 
 
+[[capacity-to-create-and-expand-volumes]]
 === Capacidad para crear y expandir volúmenes
 
 Es posible crear volúmenes a partir de la capacidad sin asignar o de la capacidad libre en un pool o grupo de volúmenes.
@@ -62,6 +65,7 @@ NOTE: La interfaz del complemento no proporciona ninguna opción para crear vol�
 
 
 
+[[reported-capacity-for-volumes]]
 === Capacidad notificada para volúmenes
 
 La capacidad notificada del volumen es igual a la cantidad de capacidad de almacenamiento físico asignada. Se debe presentar la cantidad de capacidad de almacenamiento físico completa. El espacio asignado físicamente es igual al espacio que se notifica al host.
@@ -70,6 +74,7 @@ Normalmente, la capacidad notificada de un volumen se establece como la capacida
 
 
 
+[[capacity-limits]]
 === Límites de capacidad
 
 La capacidad mínima de un volumen es 1 MIB y la capacidad máxima se determina en función de la cantidad de unidades en el pool o el grupo de volúmenes y su capacidad.
@@ -83,6 +88,7 @@ Al aumentar la capacidad notificada para un volumen, tenga en cuenta las siguien
 
 
 
+[[application-specific-workloads]]
 == Cargas de trabajo específicas de una aplicación
 
 Al crear un volumen, se debe seleccionar una carga de trabajo para personalizar la configuración de la cabina de almacenamiento para una aplicación específica.
@@ -93,6 +99,7 @@ Durante la creación del volumen, el sistema solicita que se respondan preguntas
 
 
 
+[[types-of-workloads]]
 === Tipos de cargas de trabajo
 
 Es posible crear dos tipos de cargas de trabajo: Específicas para una aplicación y de otro tipo.
@@ -113,6 +120,7 @@ Se puede revisar la configuración de volumen recomendada y editar, añadir o el
 
 
 
+[[application-and-workload-views]]
 === Vistas de aplicaciones y cargas de trabajo
 
 Para ver aplicaciones y cargas de trabajo, inicie System Manager. Desde esa interfaz, es posible ver la información asociada a una carga de trabajo específica de la aplicación de dos maneras diferentes:

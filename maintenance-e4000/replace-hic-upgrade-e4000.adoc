@@ -38,6 +38,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Paso 1: Coloque la bandeja de controladoras en estado sin conexión
 
 Coloque la bandeja de controladoras en estado sin conexión para que pueda actualizar las HIC de forma segura.
@@ -98,6 +99,8 @@ El LED verde de caché activa de la parte posterior de cada controladora está e
 
 
 
+[[step-2-remove-controller-canister]]
+[[step2_remove_controller_canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
@@ -119,6 +122,8 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cub
 
 
 
+[[step-3-upgrade-the-hic]]
+[[step3_upgrade_hic]]
 == Paso 3: Actualice la HIC
 
 Quite y sustituya la HIC.
@@ -146,6 +151,8 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Quite HIC del módulo
 
 
 
+[[step-4-reinstall-controller-canister]]
+[[step4_reinstall_controller]]
 == Paso 4: Vuelva a instalar el compartimento de la controladora
 
 Vuelva a instalar el compartimento de controladoras en el chasis.
@@ -166,6 +173,7 @@ NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a 
 
 
 
+[[step-5-complete-the-hic-upgrade]]
 == Paso 5: Complete la actualización de HIC
 
 Coloque ambas controladoras en línea, recoja datos de soporte y reanude las operaciones.

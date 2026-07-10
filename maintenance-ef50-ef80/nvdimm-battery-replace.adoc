@@ -21,6 +21,7 @@ Reemplaza la batería NV de tu sistema de almacenamiento EF50 o EF80 cuando la b
 
 
 
+[[step-1-prepare-to-replace-the-nv-battery]]
 == Paso 1: prepárate para reemplazar la batería NV
 
 Prepárate para reemplazar la batería NV confirmando que la batería NV necesita ser reemplazada, asegurándote de que no hay otros problemas en el sistema de almacenamiento que debas solucionar, asegurándote de que los volúmenes estén en el estado correcto, reuniendo las herramientas y el equipo necesarios, y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
@@ -61,6 +62,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 
 
+[[step-2-place-the-controller-offline]]
 == Paso 2: pon el controlador fuera de línea
 
 Coloca el controlador deteriorado fuera de línea para que puedas realizar con seguridad el resto de este procedimiento.
@@ -99,6 +101,7 @@ CAUTION: Si en el campo *OK to remove* no aparece *Yes*, no sigas con la retirad
 
 
 
+[[step-3-remove-the-controller]]
 == Paso 3: quitar el controlador
 
 Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables del controlador dañado y luego retira el controlador dañado del chasis.
@@ -181,6 +184,7 @@ Si es necesario, gira las asas hacia arriba (junto a las lengüetas) para aparta
 
 
 
+[[step-4-replace-the-nv-battery]]
 == Paso 4: reemplaza la batería NV
 
 Localiza la batería NV defectuosa dentro del controlador deteriorado y reemplázala.
@@ -240,6 +244,7 @@ La batería NV debe quedar al ras en su compartimento.
 
 
 
+[[step-5-reinstall-the-controller]]
 == Paso 5: reinstalar el controlador
 
 Vuelve a instalar el controlador en el chasis, vuelve a conectar su cable de alimentación y todos sus cables.
@@ -298,6 +303,7 @@ NOTE: La reconexión de los cables debe realizarse antes de poner el controlador
 
 
 
+[[step-6-place-the-controller-online]]
 == Paso 6: pon el controlador en línea
 
 Vuelve a poner en línea el controlador deteriorado.
@@ -339,6 +345,7 @@ NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.c
 
 
 
+[[step-7-complete-the-nv-battery-replacement]]
 == Paso 7: Completa el reemplazo de la batería NV
 
 Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS está instalada, verifica que todos los volúmenes se han devuelto a sus controladores propietarios y recopila los datos de soporte para que puedas reanudar las operaciones.
@@ -389,6 +396,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
+[[step-8-return-the-failed-part-to-netapp]]
 == Paso 8: devuelve la pieza defectuosa a NetApp
 
 Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

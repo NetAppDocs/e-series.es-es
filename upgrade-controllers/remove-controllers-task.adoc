@@ -15,6 +15,7 @@ Después de preparar la actualización, puede extraer las controladoras y, si es
 
 
 
+[[step-1-remove-controller]]
 == Paso 1: Quitar la controladora
 
 [role="tabbed-block"]
@@ -79,6 +80,7 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Quite el cont
 ====
 
 
+[[step-2-remove-battery]]
 == Paso 2: Extraiga la batería
 
 Quite la batería solo si planea utilizar la batería del compartimento de controladoras antiguo en el compartimento de controladoras nuevo.

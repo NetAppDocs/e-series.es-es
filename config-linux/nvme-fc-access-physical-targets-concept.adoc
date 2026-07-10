@@ -17,6 +17,7 @@ Para RHEL 8, RHEL 9 y SLES 15, la I/o se dirige a los destinos de dispositivos N
 
 
 
+[[physical-nvme-devices-are-io-targets]]
 == Los dispositivos físicos NVMe son destinos de I/O.
 
 Se recomienda ejecutar I/o en los enlaces de `/dev/disk/by-id/nvme-eui.[uuid#]` en lugar de directamente a la ruta física del dispositivo nvme `/dev/nvme[subsys#]n[id#]`. El enlace entre estas dos ubicaciones se puede encontrar con el siguiente comando:

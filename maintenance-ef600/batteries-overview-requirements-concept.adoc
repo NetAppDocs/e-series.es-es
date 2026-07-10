@@ -18,6 +18,7 @@ Se incluye una batería con una controladora y conserva los datos almacenados en
 
 
 
+[[recovery-guru-alerts]]
 == Alertas de Recovery Guru
 
 Si Recovery Guru en SANtricity System Manager informa de uno de los siguientes Estados, debe sustituir la batería afectada:
@@ -30,6 +31,7 @@ En SANtricity System Manager, revise los detalles en Recovery Guru para confirma
 
 
 
+[[procedure-overview]]
 == Descripción general del procedimiento
 
 Para proteger los datos, es necesario reemplazar un Lo antes posible. de batería con fallos.
@@ -45,6 +47,7 @@ A continuación, se ofrece una descripción general de los pasos para sustituir 
 
 
 
+[[requirements]]
 == Requisitos
 
 Si planea sustituir una batería, debe tener:

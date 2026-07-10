@@ -36,6 +36,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 
 
 
+[[step-1-prepare-to-replace-hic]]
 == Paso 1: Prepárese para reemplazar HIC
 
 Apague la bandeja de controladoras (simple) o coloque la controladora afectada en estado sin conexión (doble) para poder sustituir con seguridad las HIC.
@@ -206,6 +207,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 ====
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
@@ -227,6 +229,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cub
 
 
 
+[[step-3-replace-the-hic]]
 == Paso 3: Reemplace la HIC
 
 Sustituya la HIC.
@@ -261,6 +264,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de la controladora
 
 Vuelva a instalar el compartimento de controladoras en el chasis.
@@ -280,6 +284,7 @@ NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a 
 
 
 
+[[step-5-complete-hic-replacement]]
 == Paso 5: Reemplazo de una HIC completa
 
 Encienda la controladora (simple) o coloque la controladora en línea (dúplex), recoja datos de soporte y reanude las operaciones.

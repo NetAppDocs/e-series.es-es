@@ -15,6 +15,7 @@ Antes de convertir el protocolo de puerto de host en E5700, revise los requisito
 
 
 
+[[host-ports-you-can-change]]
 == Los puertos de host que es posible cambiar
 
 
@@ -26,6 +27,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host y 
 
 
 
+[[requirements]]
 == Requisitos
 
 * Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
@@ -38,6 +40,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host y 
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Consideraciones que tener en cuenta al cambiar el protocolo del host
 
 Las consideraciones para cambiar el protocolo de host dependen de los protocolos de inicio y finalización de los puertos de host de la placa base y los puertos de HIC.
@@ -49,6 +52,7 @@ NOTE: Las siguientes consideraciones se aplican solo si se convierte una cabina 
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Conversión de FC a iSCSI
 
 * El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo.
@@ -75,6 +79,7 @@ CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de converti
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Conversión de iSCSI a FC
 
 * El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo. Si actualmente utiliza Mirroring asíncrono con los puertos en placa base, debe desactivar la función Mirroring asíncrono antes de cambiar el protocolo.
@@ -83,6 +88,7 @@ CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de converti
 
 
 
+[[converting-ib-iser-tofrom-ib-srp]]
 === Convertir IB-Iser a/desde IB-SRP
 
 * No es necesario realizar cambios en el hardware al convertir de/a Iser a SRP.
@@ -102,6 +108,7 @@ NOTE: Una vez deshabilitada, LA función DA no puede volver a habilitarse en el 
 
 
 
+[[mirroring-operations-need-same-host-protocol]]
 === Las operaciones de mirroring necesitan el mismo protocolo de host
 
 Las operaciones de mirroring no se ven afectadas si los puertos de host que se utilizan para el mirroring mantienen el mismo protocolo después de aplicar el paquete de funciones. Aún así, antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados. Después de aplicar el paquete de funciones, debe probar la comunicación entre la cabina de almacenamiento local y la cabina de almacenamiento remota. Consulte la ayuda en línea de System Manager de SANtricity si tiene alguna pregunta sobre cómo hacerlo.

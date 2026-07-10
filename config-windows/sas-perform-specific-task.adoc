@@ -15,6 +15,7 @@ Para el protocolo SAS, se determinan las direcciones de puerto de host y se real
 
 
 
+[[step-1-determine-sas-host-identifiers-windows]]
 == Paso 1: Determinar los identificadores de host de SAS--Windows
 
 Busque las direcciones SAS mediante la utilidad HBA y, a continuación, utilice el BIOS del HBA para realizar los ajustes de configuración adecuados.
@@ -36,6 +37,7 @@ Para establecer recomendaciones, consulte la columna Notas de http://mysupport.n
 
 
 
+[[step-2-record-your-configuration]]
 == Paso 2: Registre su configuración
 
 Puede generar e imprimir un PDF de esta página y utilizar la hoja de datos siguiente para registrar la información de configuración de almacenamiento específica del protocolo. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
@@ -44,6 +46,7 @@ image::../media/sas_topology_diagram_conf-win.gif[Diagrama: Topología de SAS]
 
 
 
+[[host-identifiers]]
 === Identificadores de host
 
 |===
@@ -92,12 +95,14 @@ Puerto de host (iniciador) 2 conectado a la controladora B, puerto 1
 |===
 
 
+[[target-identifiers]]
 === Identificadores de destino
 
 Las configuraciones recomendadas constan de dos puertos de destino.
 
 
 
+[[mapping-host-name]]
 === Asignando el nombre de host
 
 |===

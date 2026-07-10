@@ -18,6 +18,7 @@ En el complemento de almacenamiento para vCenter, puede gestionar las actualizac
 
 
 
+[[upgrade-workflow]]
 == Actualizar el flujo de trabajo
 
 Los siguientes pasos constituyen un flujo de trabajo de alto nivel para ejecutar actualizaciones de software:
@@ -39,24 +40,28 @@ NOTE: También es posible especificar que el software se active en otro momento.
 
 
 
+[[upgrade-considerations]]
 == Consideraciones de renovación
 
 Antes de actualizar varias cabinas de almacenamiento, revise las consideraciones fundamentales como parte de la planificación.
 
 
 
+[[current-versions]]
 === Versiones actuales
 
 Puede ver las versiones actuales del software de sistema operativo SANtricity desde la página gestionar del complemento de almacenamiento para vCenter para cada cabina de almacenamiento detectada. La versión se muestra en la columna Software de sistema operativo SANtricity. Si hace clic en la versión de sistema operativo en cada fila, puede encontrar información de NVSRAM y del firmware de la controladora en un cuadro de diálogo emergente.
 
 
 
+[[other-components-requiring-upgrade]]
 === Otros componentes que requieren actualización
 
 Como parte del proceso de actualización, es posible que también necesite actualizar el controlador de conmutación al nodo de respaldo/multivía del host o el controlador de HBA de modo que el host pueda interactuar con las controladoras correctamente. Para obtener información sobre compatibilidad, consulte link:https://imt.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^].
 
 
 
+[[dual-controllers]]
 === Controladoras dobles
 
 Si una cabina de almacenamiento contiene dos controladoras y existe un controlador multivía instalado, la cabina de almacenamiento puede seguir procesando las operaciones de I/o mientras se realiza la actualización. Durante la actualización, ocurre el siguiente proceso:

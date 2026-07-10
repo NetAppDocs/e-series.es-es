@@ -22,6 +22,7 @@ Sustituye un módulo de ventilador en tu sistema de almacenamiento EF50 o EF80 c
 
 
 
+[[step-1-prepare-to-replace-a-fan]]
 == Paso 1: prepárate para sustituir un ventilador
 
 Prepárate para sustituir un ventilador confirmando que está bien sustituirlo, reuniendo las herramientas y el equipo necesarios, y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
@@ -57,6 +58,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 
 
+[[step-2-place-the-controller-offline]]
 == Paso 2: pon el controlador fuera de línea
 
 Coloca el controlador deteriorado fuera de línea para que puedas realizar con seguridad el resto de este procedimiento.
@@ -95,6 +97,7 @@ CAUTION: Si en el campo *OK to remove* no aparece *Yes*, no sigas con la retirad
 
 
 
+[[step-3-remove-the-controller]]
 == Paso 3: quitar el controlador
 
 Verifica que todos los datos de la memoria caché se hayan escrito en las unidades, desconecta todos los cables del controlador dañado y luego retira el controlador dañado del chasis.
@@ -177,6 +180,7 @@ Si es necesario, gira las asas hacia arriba (junto a las lengüetas) para aparta
 
 
 
+[[step-4-replace-a-fan]]
 == Paso 4: reemplazar un ventilador
 
 Localiza el ventilador defectuoso dentro del controlador deteriorado y reemplázalo.
@@ -210,6 +214,7 @@ Guarda el material de embalaje para usarlo cuando devuelvas el ventilador defect
 
 
 
+[[step-5-reinstall-the-controller]]
 == Paso 5: reinstalar el controlador
 
 Vuelve a instalar el controlador en el chasis, vuelve a conectar su cable de alimentación y todos sus cables.
@@ -268,6 +273,7 @@ NOTE: La reconexión de los cables debe realizarse antes de poner el controlador
 
 
 
+[[step-6-place-the-controller-online]]
 == Paso 6: pon el controlador en línea
 
 Vuelve a poner en línea el controlador deteriorado.
@@ -309,6 +315,7 @@ NOTE: Si no puedes resolver el problema, contacta con https://mysupport.netapp.c
 
 
 
+[[step-7-complete-the-fan-replacement]]
 == Paso 7: completa la sustitución del ventilador
 
 Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS está instalada, verifica que todos los volúmenes se han devuelto a sus controladores propietarios y recopila los datos de soporte para que puedas reanudar las operaciones.
@@ -359,6 +366,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
+[[step-8-return-the-failed-part-to-netapp]]
 == Paso 8: devuelve la pieza defectuosa a NetApp
 
 Devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución y reemplazo de piezas"] página para más información.

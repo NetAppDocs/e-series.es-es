@@ -19,6 +19,7 @@ image::../media/port_identifiers_host_and_target_conf-lin.gif[Configuración de 
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 |===
@@ -51,6 +52,7 @@ Puerto de host 1 a zona 1 del switch FC
 |===
 
 
+[[target-identifiers]]
 == Identificadores de destino
 
 |===
@@ -108,6 +110,7 @@ Controladora B, puerto 2 al switch FC 2
 |===
 
 
+[[mapping-host]]
 == Host de asignación
 
 |===

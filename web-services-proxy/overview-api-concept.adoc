@@ -15,6 +15,7 @@ En la API de servicios web, las comunicaciones HTTP implican un ciclo de solicit
 
 
 
+[[url-elements-in-requests]]
 == Elementos de URL en las solicitudes
 
 Independientemente del lenguaje de programación o la herramienta utilizada, cada llamada a la API de servicios web tiene una estructura similar, con una dirección URL, un verbo HTTP y un encabezado Accept.
@@ -72,6 +73,7 @@ La ruta API consta de tres partes:
 |===
 
 
+[[supported-http-verbs]]
 == Verbos HTTP admitidos
 
 Los verbos HTTP admitidos incluyen GET, POST y DELETE:
@@ -86,12 +88,14 @@ NOTE: Actualmente, la API de servicios web no admite PUT ni PARCHE. En su lugar,
 
 
 
+[[accept-headers]]
 == Aceptar encabezados
 
 Al devolver un cuerpo de la solicitud, Web Services devuelve los datos en formato JSON (a menos que se especifique lo contrario). Algunos clientes solicitan por defecto "'text/html'" o algo similar. En estos casos, la API responde con un código HTTP 406, indicando que no puede proporcionar datos en este formato. Como práctica recomendada, debe definir el encabezado Accept como "'Application/json'" para los casos en los que espere JSON como tipo de respuesta. En otros casos en los que no se devuelve un cuerpo de respuesta (por ejemplo, ELIMINAR), siempre que el encabezado Accept no provoque ningún efecto no intencional.
 
 
 
+[[responses]]
 == Respuestas
 
 Cuando se realiza una solicitud a la API, una respuesta devuelve dos partes fundamentales de información:

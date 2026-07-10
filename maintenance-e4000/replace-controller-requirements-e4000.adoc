@@ -17,6 +17,7 @@ Cada contenedor de controladora contiene una tarjeta de la controladora y una ba
 
 
 
+[[requirements-for-adding-second-controller]]
 == Requisitos para agregar una segunda controladora
 
 Es posible añadir un segundo compartimento de controladoras a la versión simple de la bandeja de controladoras E4000. Antes de añadir una segunda controladora, debe tener:
@@ -42,6 +43,7 @@ De manera opcional, puede usar la interfaz de línea de comandos (CLI) para real
 
 
 
+[[requirements-for-replacing-controller]]
 == Requisitos para sustituir controladora
 
 Cuando se sustituye un compartimento de controladoras con errores, debe quitar la batería, la HIC y los DIMM del compartimento de controladora original e instalarlos en el compartimento de controladora de reemplazo.
@@ -66,6 +68,7 @@ De manera opcional, puede usar la interfaz de línea de comandos (CLI) para real
 
 
 
+[[duplex-configuration-requirements]]
 === Requisitos de configuración doble
 
 Si la bandeja de controladoras tiene dos controladoras (configuración doble), es posible reemplazar un contenedor de controladora mientras la cabina de almacenamiento está encendida y realizar operaciones de I/o del host, siempre que se cumplan las siguientes condiciones:
@@ -76,6 +79,7 @@ Si la bandeja de controladoras tiene dos controladoras (configuración doble), e
 
 
 
+[[simplex-configuration-requirements]]
 === Requisitos de configuración simple
 
 Si solo tiene un contenedor de controladora (configuración simple), no se podrá acceder a los datos en la cabina de almacenamiento hasta que se sustituya el contenedor de controladora. Debe detener las operaciones de I/o del host y apagar la cabina de almacenamiento.

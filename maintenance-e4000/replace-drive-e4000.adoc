@@ -15,6 +15,7 @@ Antes de reemplazar una unidad de E4000, revise los requisitos y consideraciones
 
 
 
+[[shelf-types]]
 == Tipos de bandeja
 
 Es posible reemplazar una unidad en una bandeja de controladoras o una bandeja de unidades de 12, 24 o 60 unidades.
@@ -24,6 +25,7 @@ NOTE: Las bandejas estándar de 24 unidades requieren la asombrosa cantidad de u
 
 
 
+[[drive-handling]]
 == Manejo de unidades
 
 Las unidades de la cabina de almacenamiento son frágiles. La gestión incorrecta de unidades es una causa principal de fallo de unidad.

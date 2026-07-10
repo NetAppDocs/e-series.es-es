@@ -29,6 +29,7 @@ No es necesario retirar los controladores del chasis porque se puede acceder a l
 
 
 
+[[step-1-prepare-to-upgrade-io-modules]]
 == Paso 1: prepárate para actualizar los módulos de E/S
 
 Prepárate para actualizar los módulos de E/S programando una ventana de mantenimiento de inactividad, reuniendo las herramientas y el equipo necesarios y haciendo una copia de seguridad de la base de datos de configuración del sistema de almacenamiento.
@@ -74,6 +75,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 
 
+[[step-2-power-off-both-controllers]]
 == Paso 2: apaga ambos controladores
 
 Apaga ambos controladores en el sistema de almacenamiento para que puedas actualizar de forma segura los módulos de E/S en ambos controladores.
@@ -143,6 +145,7 @@ Icono NV y LED NV Caching Active en el controlador
 
 
 
+[[step-3-upgrade-the-io-modules]]
 == Paso 3: actualiza los módulos de E/S
 
 Desconecta el cableado de los módulos de E/S que quieras actualizar (a menos que tengas módulos de supresión de E/S), reemplaza los módulos de E/S o los módulos de supresión de E/S por los nuevos módulos de E/S y luego conecta el cableado a los nuevos módulos de E/S.
@@ -201,6 +204,7 @@ Puedes usar la sección link:../install-hw-ef50-ef80/install-cable.html["Cablea 
 
 
 
+[[step-4-power-on-both-controllers]]
 == Paso 4: enciende ambos controladores
 
 Enciende ambos controladores.
@@ -233,6 +237,7 @@ NOTE: Si no puedes resolver el problema, contacta con https://www.netapp.com/com
 
 
 
+[[step-5-complete-the-io-module-upgrade]]
 == Paso 5: completa la actualización del módulo de E/S
 
 Usando SANtricity System Manager, asegúrate de que la última versión de SANtricity OS esté instalada, verifica que todos los volúmenes se hayan devuelto a sus controladores propietarios, recopila datos de soporte para que puedas reanudar las operaciones y, si lo necesitas, verifica y cambia el protocolo del módulo de I/O del host.

@@ -16,6 +16,7 @@ Para el protocolo iSCSI, es posible configurar los switches, configurar la red e
 
 
 
+[[step-1-configure-the-switches-iscsi-windows]]
 == Paso 1: Configuración de los switches: ISCSI, Windows
 
 Los switches se configuran según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
@@ -37,6 +38,7 @@ Consulte la documentación de su proveedor de switches.
 
 
 
+[[step-2-configure-networking-iscsi-windows]]
 == Paso 2: Configuración de redes: ISCSI Windows
 
 Es posible configurar la red iSCSI de varias maneras, según los requisitos de almacenamiento de datos. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
@@ -62,6 +64,7 @@ NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para s
 
 
 
+[[step-3-configure-array-side-networking-iscsi-windows]]
 == Paso 3: Configuración de redes en la cabina: ISCSI, Windows
 
 Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
@@ -194,6 +197,7 @@ Seleccione esta opción para habilitar el parámetro que determina la prioridad 
 
 
 
+[[step-4-configure-host-side-networking-iscsi]]
 == Paso 4: Configurar las redes en el lado del host--iSCSI
 
 Es necesario configurar las redes iSCSI en el lado del host para que el iniciador de iSCSI de Microsoft pueda establecer sesiones con la cabina.
@@ -230,6 +234,7 @@ Estos protocolos incluyen, entre otros, QoS, uso compartido de archivos e impres
 
 
 
+[[step-5-verify-ip-network-connections-iscsi-windows]]
 == Paso 5: Verifique las conexiones de red IP--iSCSI, Windows
 
 Para verificar las conexiones de red del Protocolo de Internet (IP), utilice las pruebas ping para asegurarse de que el host y la matriz pueden comunicarse.
@@ -276,12 +281,14 @@ NOTE: Si falla el comando (por ejemplo, devuelve `Packet needs to be fragmented 
 
 
 
+[[step-6-record-your-configuration]]
 == Paso 6: Registre su configuración
 
 Puede generar e imprimir un PDF de esta página y, a continuación, utilizar la hoja de trabajo siguiente para registrar la información de configuración del almacenamiento iSCSI. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
 
 
 
+[[recommended-configuration]]
 === Configuración recomendada
 
 Las configuraciones recomendadas constan de dos puertos de iniciador y cuatro puertos de destino con una o varias VLAN.
@@ -290,6 +297,7 @@ image::../media/50001_01_conf-win.gif[Identificadores de puertos iSCSI]
 
 
 
+[[target-iqn]]
 === IQN objetivo
 
 |===
@@ -305,6 +313,7 @@ Puerto de destino
 |===
 
 
+[[mapping-host-name]]
 === Asignando el nombre de host
 
 |===

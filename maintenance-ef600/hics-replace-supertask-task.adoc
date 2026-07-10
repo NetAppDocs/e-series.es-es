@@ -38,6 +38,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 
 
 
+[[step-1-place-the-controller-offline]]
 == Paso 1: Coloque la controladora en estado sin conexión
 
 Coloque la controladora afectada en estado sin conexión para poder sustituir las HIC de forma segura.
@@ -83,6 +84,7 @@ NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el compartimento de controladoras para poder sustituir la tarjeta de interfaz del host con errores.
@@ -116,6 +118,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-3-remove-the-hic]]
 == Paso 3: Quite la HIC
 
 Quite la HIC original de modo que pueda reemplazarla por una actualizada.
@@ -164,6 +167,7 @@ NOTE: La imagen anterior es un ejemplo; el aspecto de la HIC puede ser diferente
 
 
 
+[[step-4-replace-the-hic]]
 == Paso 4: Reemplace la HIC
 
 Después de quitar la HIC antigua, instale una nueva HIC.
@@ -198,6 +202,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de la controladora
 
 Después de sustituir la HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -220,6 +225,7 @@ Si está usando más de un protocolo de host, asegúrese de instalar los SFP en 
 
 
 
+[[step-6-complete-hic-replacement]]
 == Paso 6: Reemplazo de una HIC completa
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

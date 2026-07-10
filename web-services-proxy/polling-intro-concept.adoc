@@ -15,6 +15,7 @@ Es posible configurar el sondeo automático para todas las estadísticas de disc
 
 
 
+[[overview-of-statistics]]
 == Descripción general de las estadísticas
 
 Las estadísticas proporcionan información acerca de las tasas de recogida de datos y el rendimiento de los sistemas de almacenamiento.
@@ -31,12 +32,14 @@ Es posible recuperar las estadísticas sin procesar independientemente de si el 
 
 
 
+[[statistics-functionality]]
 == Funcionalidad de estadísticas
 
 El proxy de servicios web proporciona extremos API que permiten recuperar estadísticas sin configurar y analizadas de la controladora y la interfaz desde los modelos de hardware y las versiones de software compatibles.
 
 
 
+[[raw-statistics-apis]]
 === API de estadísticas sin procesar
 
 * `+/storage-systems/{system-id}/controller-statistics+`
@@ -47,6 +50,7 @@ El proxy de servicios web proporciona extremos API que permiten recuperar estad�
 
 
 
+[[analyzed-statistics-apis]]
 === API de estadísticas analizadas
 
 * `+/storage-systems/{id}/analysed-controller-statistics/+`
@@ -69,6 +73,7 @@ NOTE: Cuando se inicia el sistema, no hay ninguna recopilación de estadísticas
 
 
 
+[[configure-polling-intervals]]
 == Configurar intervalos de sondeo
 
 Para configurar los intervalos de sondeo, modifique el archivo wsconfig.xml para especificar un intervalo de sondeo en segundos.

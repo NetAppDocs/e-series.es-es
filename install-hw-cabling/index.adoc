@@ -19,6 +19,7 @@ La información de cableado está destinada a un instalador de hardware o admini
 
 
 
+[[applicable-hardware-model]]
 == Modelo de hardware aplicable
 
 La información de cableado se aplica a los siguientes modelos de hardware.
@@ -52,6 +53,7 @@ DE460C
 |===
 
 
+[[additional-cabling-information]]
 == Información adicional sobre cableado
 
 Si estás cableando para alguna de las siguientes configuraciones, consulta https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente."^]
@@ -73,4 +75,4 @@ E2760 Y E5660
 DE460C
 
 |===
-Para obtener información sobre el cableado para admitir las funciones de duplicación, consulte la https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].
+Para obtener información sobre el cableado necesario para las funciones de duplicación, consulta la  https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].

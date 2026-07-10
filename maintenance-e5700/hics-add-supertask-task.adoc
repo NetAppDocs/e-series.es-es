@@ -38,6 +38,7 @@ Para obtener información acerca del hardware compatible, consulte https://mysup
 
 
 
+[[step-1-prepare-to-add-hic]]
 == Paso 1: Preparar la adición de HIC
 
 Para preparar la adición de una HIC, realice un backup de la base de datos de configuración de la cabina de almacenamiento, recoja datos de soporte y detenga operaciones de I/o del host. Esto le permite apagar la bandeja de controladoras.
@@ -121,6 +122,7 @@ Espere a que se completen todas las operaciones antes de continuar con el siguie
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el contenedor de la controladora para poder añadir la nueva HIC.
@@ -181,6 +183,7 @@ Si va a retirar el compartimento de controladoras de una bandeja de controladora
 
 
 
+[[step-3-install-a-hic]]
 == Paso 3: Instale una HIC
 
 Instale la tarjeta de interfaz del host (HIC) para aumentar la cantidad de puertos de host en la cabina de almacenamiento.
@@ -235,6 +238,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale HIC en
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de la controladora
 
 Vuelva a instalar el compartimento de controladoras en la bandeja de controladoras después de instalar la nueva HIC.
@@ -277,6 +281,7 @@ CAUTION: No conecte los cables de datos a los puertos HIC nuevos en este momento
 
 
 
+[[step-5-complete-hic-addition]]
 == Paso 5: Adición de HIC completa
 
 Compruebe los LED de la controladora y la visualización de siete segmentos y confirme que el estado de la controladora es óptimo.

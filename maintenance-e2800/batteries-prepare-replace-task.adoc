@@ -25,6 +25,7 @@ Los pasos para prepararse para la sustitución de la batería dependen de si tie
 
 
 
+[[place-controller-offline-duplex]]
 == Colocar una controladora en estado sin conexión (doble)
 
 Si tiene una configuración doble, debe colocar la controladora afectada en estado sin conexión para poder quitar la batería con errores de forma segura. La controladora que no se coloca en estado sin conexión debe estar en línea (en el estado óptimo).
@@ -101,6 +102,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 
 
 
+[[power-down-the-controller-shelf-simplex]]
 == Apague la bandeja de controladoras (simple)
 
 Si tiene una configuración simple, apague la bandeja de controladoras para que pueda quitar de forma segura la batería con errores.

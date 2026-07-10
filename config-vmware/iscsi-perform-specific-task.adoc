@@ -16,6 +16,7 @@ Para el protocolo iSCSI, es posible configurar los switches y la red en el lado 
 
 
 
+[[step-1-configure-the-switches-iscsi-vmware]]
 == Paso 1: Configuración de los switches--iSCSI, VMware
 
 Los switches se configuran según las recomendaciones del proveedor para iSCSI. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código.
@@ -37,6 +38,7 @@ Consulte la documentación de su proveedor de switches.
 
 
 
+[[step-2-configure-networking-iscsi-vmware]]
 == Paso 2: Configuración de redes--iSCSI VMware
 
 Es posible configurar la red iSCSI de varias maneras, según los requisitos de almacenamiento de datos. Consulte al administrador de red si desea obtener consejos sobre cómo seleccionar la mejor configuración para su entorno.
@@ -72,6 +74,7 @@ NOTE: Muchos switches de red deben configurarse por encima de 9,000 bytes para s
 
 
 
+[[step-3-configure-array-side-networking-iscsi-vmware]]
 == Paso 3: Configuración de redes en la cabina: ISCSI, VMware
 
 Es posible utilizar la interfaz gráfica de usuario de SANtricity System Manager para configurar redes iSCSI en el lado de la cabina.
@@ -87,7 +90,7 @@ Asegúrese de tener lo siguiente:
 En esta tarea, se describe cómo acceder a la configuración del puerto iSCSI desde la página hardware. También puede acceder a la configuración desde MENU:System[Ajustes > Configurar puertos iSCSI].
 
 
-NOTE: Para obtener información adicional sobre cómo configurar la red en la cabina de almacenamiento en la configuración de VMware, consulte el siguiente informe técnico: https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x."^].
+NOTE: Para obtener más información sobre cómo configurar la red del lado de la matriz en tu configuración de VMware, consulta el siguiente informe técnico: https://www.netapp.com/pdf.html?item=/media/17017-tr4789.pdf["Guía de configuración de VMware para la integración de iSCSI de SANtricity E-Series con ESXi 6.x y 7.x."^].
 
 .Pasos
 . Desde el explorador, introduzca la siguiente URL: `+https://<DomainNameOrIPAddress>+`
@@ -197,6 +200,7 @@ Seleccione esta opción e introduzca una dirección estática en los campos. En 
 
 
 
+[[step-4-configure-host-side-networking-iscsi]]
 == Paso 4: Configurar las redes en el lado del host--iSCSI
 
 La configuración de redes iSCSI en el lado del host permite que el iniciador de VMware iSCSI establezca una sesión con la cabina.
@@ -222,6 +226,7 @@ Las interfaces varían en funcionalidad y el flujo de trabajo exacto variará.
 
 
 
+[[step-5-verify-ip-network-connections-iscsi-vmware]]
 == Paso 5: Verificar las conexiones de red IP--iSCSI, VMware
 
 Para verificar las conexiones de red del Protocolo de Internet (IP), utilice las pruebas ping para asegurarse de que el host y la matriz pueden comunicarse.
@@ -270,12 +275,14 @@ NOTE: Si el comando falla con el mensaje `sendto() failed (Message too long)`, V
 
 
 
+[[step-6-record-your-configuration]]
 == Paso 6: Registre su configuración
 
 Puede generar e imprimir un PDF de esta página y utilizar la hoja de datos siguiente para registrar la información de configuración de almacenamiento específica del protocolo. Esta información es necesaria para ejecutar tareas de aprovisionamiento.
 
 
 
+[[recommended-configuration]]
 === Configuración recomendada
 
 Las configuraciones recomendadas constan de dos puertos de iniciador y cuatro puertos de destino con una o varias VLAN.
@@ -284,6 +291,7 @@ image::../media/50001_01_conf-vmw.gif[Identificador de puerto iSCSI]
 
 
 
+[[target-iqn]]
 === IQN objetivo
 
 |===
@@ -299,6 +307,7 @@ Puerto de destino
 |===
 
 
+[[mapping-host-name]]
 === Asignando el nombre de host
 
 |===

@@ -30,6 +30,7 @@ Si falla un suministro de alimentación, debe reemplazarlo Lo antes posible. par
 
 
 
+[[step-1-remove-failed-power-supply]]
 == Paso 1: Retire la fuente de alimentación defectuosa
 
 Quite una fuente de alimentación con fallos para poder reemplazarla por una nueva.
@@ -62,6 +63,7 @@ image::../media/psup_3.png[Deslice la fuente de alimentación hacia afuera]
 
 
 
+[[step-2-install-new-power-supply-and-complete-the-replacement]]
 == Paso 2: Instale una fuente de alimentación nueva y complete la sustitución
 
 Después de extraer la fuente de alimentación defectuosa, instale una nueva.

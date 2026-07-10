@@ -39,6 +39,7 @@ Algunos motivos para activar la actualización más adelante pueden ser:
 
 
 
+[[step-1-download-software-files-from-support-site]]
 == Paso 1: Descargue los archivos de software del sitio de soporte
 
 En este paso, vaya al sitio de soporte de NetApp para guardar los nuevos archivos de software del paquete descargable (DLP) en el sistema host de gestión.
@@ -63,6 +64,7 @@ NOTE: Se requiere firmware con firma digital en la versión 8.42 y posteriores. 
 
 
 
+[[step-2-transfer-software-files-to-the-controllers]]
 == Paso 2: Transfiera los archivos de software a las controladoras
 
 En este paso, se transfieren los archivos de software a la controladora para poder comenzar el proceso de actualización. Los componentes se copian del cliente de gestión a las controladoras y se colocan en un área de almacenamiento provisional de la memoria flash.
@@ -109,6 +111,7 @@ Si ya ha activado sus archivos de software, vaya a. <<Paso 4: Actualización com
 
 
 
+[[step-3-activate-software-files]]
 == Paso 3: Activar los archivos de software
 
 Siga este paso solo si dispone de software o firmware transferido, pero no activado. Para comprobar este estado, busque una notificación en el área Notificaciones de la página principal de System Manager o en la página Centro de actualización.
@@ -126,6 +129,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre, `d
 
 
 
+[[step-4-complete-software-and-firmware-upgrade]]
 == Paso 4: Actualización completa de software y firmware
 
 Complete la actualización de software y firmware verificando las versiones del cuadro de diálogo Inventario de software y firmware.

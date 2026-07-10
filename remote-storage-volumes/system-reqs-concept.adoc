@@ -15,10 +15,12 @@ Antes de configurar la función volúmenes de almacenamiento remoto, revise los 
 
 
 
+[[hardware-requirements]]
 == Requisitos de hardware
 
 
 
+[[supported-protocols]]
 === Protocolos compatibles
 
 En el lanzamiento inicial de la función volúmenes de almacenamiento remoto, la compatibilidad solo está disponible para los protocolos iSCSI y IPv4.
@@ -27,6 +29,7 @@ Consulte la http://mysupport.netapp.com/matrix["Herramienta de matriz de interop
 
 
 
+[[storage-system-requirements]]
 === Requisitos del sistema de almacenamiento
 
 El sistema de almacenamiento E-Series debe incluir:
@@ -41,12 +44,14 @@ El sistema remoto puede ser un sistema de almacenamiento E-Series o un sistema d
 
 
 
+[[volume-requirements]]
 == Requisitos del volumen
 
 Los volúmenes utilizados para las importaciones deben cumplir los requisitos de tamaño, estado y otros criterios.
 
 
 
+[[remote-storage-volume]]
 === Volumen de almacenamiento remoto
 
 El volumen de origen de una importación se denomina "volumen de almacenamiento remoto". Este volumen debe cumplir con los siguientes criterios:
@@ -73,6 +78,7 @@ Cada volumen de almacenamiento remoto se asocia con un solo objeto de almacenami
 
 
 
+[[target-volume-candidates]]
 === Candidatos de volumen objetivo
 
 El volumen de destino es el volumen de destino en el sistema E-Series local.
@@ -93,6 +99,7 @@ System Manager comprueba automáticamente estos requisitos como parte del asiste
 
 
 
+[[restrictions]]
 == Restricciones
 
 La función de almacenamiento remoto tiene las siguientes restricciones:
@@ -111,6 +118,7 @@ La función de almacenamiento remoto tiene las siguientes restricciones:
 
 
 
+[[preparation-for-production-imports]]
 == Preparación para las importaciones de producción
 
 Debe realizar una prueba o una importación de "ejecución en seco" antes de importar la producción para verificar la configuración correcta del almacenamiento y del tejido.

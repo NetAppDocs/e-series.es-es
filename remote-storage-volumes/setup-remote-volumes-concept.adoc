@@ -15,6 +15,7 @@ El sistema de almacenamiento E-Series debe configurarse para comunicarse con el 
 
 
 
+[[configure-remote-storage-device-and-e-series-array]]
 == Configuración del dispositivo de almacenamiento remoto y de la cabina E-Series
 
 Antes de continuar con SANtricity System Manager para configurar la función almacenamiento remoto volúmenes, haga lo siguiente:
@@ -38,6 +39,7 @@ NOTE: Recomendación: Realice un backup del volumen de origen remoto antes de in
 
 
 
+[[cable-the-storage-arrays]]
 == Conecte los cables de las cabinas de almacenamiento
 
 Como parte del proceso de configuración, las cabinas de almacenamiento y el host de I/o deben cablearse a la interfaz compatible con iSCSI.
@@ -48,6 +50,7 @@ image:../media/remote_target_volumes_iscsi_use_case_1.png["Cableado de almacenam
 
 
 
+[[configure-the-iscsi-ports]]
 == Configure los puertos iSCSI
 
 Debe configurar los puertos iSCSI para garantizar la comunicación entre el destino (cabina de almacenamiento E-Series local) y el origen (cabina de almacenamiento remota).

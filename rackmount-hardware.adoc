@@ -17,6 +17,7 @@ Para los sistemas de almacenamiento más recientes, puedes verificar el hardware
 
 
 
+[[adjustable-support-rails]]
 == Rieles de soporte ajustables
 
 Acceso https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalación de rieles de soporte ajustables"^] para la instalación de un soporte de controladora-unidad o un soporte de unidades que se envió por separado (no instalado ya en el armario). Este procedimiento se aplica a las siguientes bandejas 2U (9 cm o 3.5 pulgadas):
@@ -28,18 +29,21 @@ Acceso https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalaci
 
 
 
+[[two-post-rack-2u]]
 == Rack de dos puestos - 2U
 
 Acceso https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Instalación del equipo de 2U en un rack de dos postes"^].
 
 
 
+[[four-post-rack-or-cabinet-2u]]
 == Rack o armario de cuatro postes -- 2U
 
 Acceso https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Instalación de un compartimento 2U de 12 unidades en un rack o armario de cuatro parantes"^].
 
 
 
+[[four-post-rack-superrail]]
 == Rack de cuatro postes -- SuperRail
 
 Accede a https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Instala SuperRail en una estantería de cuatro postes"^].

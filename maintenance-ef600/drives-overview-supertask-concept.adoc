@@ -18,6 +18,7 @@ CAUTION: Tenga en cuenta que las unidades de la cabina de almacenamiento son fr�
 
 
 
+[[drive-replacement-requirements]]
 == Requisitos de sustitución de unidades
 
 Siga estas reglas para evitar dañar las unidades de la cabina de almacenamiento:
@@ -48,6 +49,7 @@ Los campos magnéticos pueden destruir todos los datos de la unidad y causar da�
 
 
 
+[[drive-staggering-in-24-drive-controller-shelf]]
 == Impulse la asombrosa bandeja de controladoras de 24 unidades
 
 Las bandejas estándar de 24 unidades requieren la asombrosa cantidad de unidades. La siguiente figura muestra el número de las unidades en cada bandeja (se ha extraído el panel frontal de la bandeja).

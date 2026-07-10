@@ -38,6 +38,7 @@ Es posible utilizar la herramienta multivía para el asignador de dispositivos (
 ----
 . Guarde la versión del kernel ejecutando `uname -r` comando.
 +
+[[step4]]
 [listing]
 ----
 # uname -r

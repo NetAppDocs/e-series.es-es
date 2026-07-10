@@ -18,6 +18,7 @@ Es posible cambiar el protocolo utilizado por los puertos de host integrados en 
 
 
 
+[[step-1-determine-whether-you-have-dual-protocol-sfps]]
 == Paso 1: Determinar si tiene SFP con doble protocolo
 
 Utilice System Manager de SANtricity para determinar qué tipo de transceptores SFP posee. Como estos SFP se pueden utilizar con protocolos FC e iSCSI, se denominan SFP _dual-protocol_ o _Unified_.
@@ -83,6 +84,7 @@ NOTE: Los SFP de FC de 8 Gbps NO son compatibles con las controladoras E28xx o E
 
 
 
+[[step-2-obtain-the-feature-pack]]
 == Paso 2: Obtenga el paquete de funciones
 
 Para obtener el paquete de funciones, se necesita el número de serie de la bandeja de controladoras, un código de activación de la función y el identificador de habilitación de funciones de la cabina de almacenamiento.
@@ -492,6 +494,7 @@ NOTE: El sitio web de activación de funciones Premium incluye un enlace a «'in
 
 
 
+[[step-3-stop-host-io]]
 == Paso 3: Detener la actividad de I/o del host
 
 Debe detener todas las operaciones de I/o del host antes de convertir el protocolo de los puertos de host. No es posible acceder a los datos en la cabina de almacenamiento hasta que se complete correctamente la conversión.
@@ -534,6 +537,7 @@ LED de caché activa
 
 
 
+[[step-4-change-the-feature-pack]]
 == Paso 4: Cambie el paquete de funciones
 
 Cambie el paquete de funciones para convertir el protocolo de host de los puertos de host de la placa base, los puertos HIC IB o ambos tipos de puertos.

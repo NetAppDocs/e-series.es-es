@@ -38,6 +38,7 @@ Para obtener información acerca del hardware compatible, consulte https://mysup
 
 
 
+[[step-1-prepare-to-upgrade-hics]]
 == Paso 1: Preparar la actualización de las HIC
 
 Para preparar la actualización de una HIC, realice un backup de la base de datos de configuración de la cabina de almacenamiento, recoja datos de soporte y detenga operaciones de I/o del host. Esto le permite apagar la bandeja de controladoras.
@@ -121,6 +122,7 @@ Espere a que se completen todas las operaciones antes de continuar con el siguie
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el contenedor de la controladora para que pueda actualizar la nueva HIC.
@@ -185,6 +187,7 @@ Si va a retirar el compartimento de controladoras de una bandeja de controladora
 
 
 
+[[step-3-remove-a-hic]]
 == Paso 3: Quite una HIC
 
 Quite la HIC original de modo que pueda reemplazarla por una actualizada.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Quite HIC de la tar
 
 
 
+[[step-4-install-the-new-hic]]
 == Paso 4: Instale la nueva HIC
 
 Instale el nuevo host HIC.
@@ -272,6 +276,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de la controladora
 
 Después de instalar la nueva HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -315,6 +320,7 @@ NOTE: No conecte los cables de datos a los puertos HIC nuevos en este momento.
 
 
 
+[[step-6-complete-the-hic-upgrade]]
 == Paso 6: Complete la actualización de HIC
 
 Compruebe los LED de la controladora y la pantalla de siete segmentos y confirme que el estado de la controladora es óptimo.

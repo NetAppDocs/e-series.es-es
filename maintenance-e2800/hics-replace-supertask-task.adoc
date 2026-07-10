@@ -34,6 +34,7 @@ Cuando sustituye una HIC, puede colocar la controladora en estado sin conexión,
 
 
 
+[[step-1-place-controller-offline]]
 == Paso 1: Coloque la controladora en estado sin conexión
 
 Los pasos para colocar una controladora en estado sin conexión dependen de si tiene una controladora (simple) o dos controladoras (doble). Vaya a las instrucciones correspondientes para:
@@ -44,6 +45,7 @@ Los pasos para colocar una controladora en estado sin conexión dependen de si t
 
 
 
+[[duplex-place-controller-offline]]
 === Duplex: Coloque la controladora en estado sin conexión
 
 Si tiene una configuración doble, siga este paso para colocar la controladora en estado sin conexión para poder quitar de forma segura la HIC con errores.
@@ -118,6 +120,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 
 
 
+[[simplex-power-down-the-controller-shelf]]
 === Simplex: Apague la bandeja de controladoras
 
 Si tiene una configuración simple, apague la bandeja de controladoras para que pueda quitar de forma segura la HIC con errores.
@@ -188,6 +191,7 @@ El LED verde de caché activa de la parte posterior de la controladora está enc
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el contenedor de la controladora para poder añadir la nueva tarjeta de interfaz del host (HIC).
@@ -248,6 +252,7 @@ Si va a quitar el compartimento de controladoras de una bandeja de controladoras
 
 
 
+[[step-3-install-a-hic]]
 == Paso 3: Instale una HIC
 
 Instale una HIC para reemplazar el que ha fallado con una HIC nueva.
@@ -302,6 +307,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Vuelva a insta
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de la controladora
 
 Después de instalar la HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -344,12 +350,14 @@ NOTE: No conecte los cables de datos a los puertos HIC nuevos en este momento.
 
 
 
+[[step-5-place-controller-online]]
 == Paso 5: Coloque la controladora en línea
 
 Los pasos para colocar una controladora en línea dependen de si tiene una controladora (simple) o dos controladoras (doble).
 
 
 
+[[duplex-place-controller-online]]
 === Duplex: Coloque la controladora en línea
 
 Para una configuración doble, conectar la controladora a la red, recoger datos de soporte y reanudar las operaciones.
@@ -439,6 +447,7 @@ Póngase en contacto con el soporte técnico en http://mysupport.netapp.com["Sop
 
 
 
+[[simplex-power-up-the-controller-shelf]]
 === Simplex: Encienda la bandeja de controladoras
 
 En el caso de una configuración simple, aplique alimentación a la bandeja de controladoras, recoja datos de soporte y reanude operaciones.

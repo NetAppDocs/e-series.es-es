@@ -15,6 +15,7 @@ Antes de instalar o actualizar el complemento de almacenamiento de SANtricity pa
 
 
 
+[[installation-requirements]]
 == Requisitos de instalación
 
 Puede instalar y configurar el complemento de almacenamiento para vCenter en un sistema host de Windows. La instalación del plugin incluye los siguientes requisitos.
@@ -63,6 +64,7 @@ El complemento de almacenamiento para vCenter es un producto gratuito e independ
 |===
 
 
+[[upgrade-considerations]]
 == Consideraciones de renovación
 
 Si va a actualizar desde una versión anterior, tenga en cuenta que el plugin debe quedar sin registrar desde la instancia de vcsa antes de la actualización.

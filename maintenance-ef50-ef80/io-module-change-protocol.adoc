@@ -66,6 +66,7 @@ Empieza con el procedimiento link:../upgrade-controllers/index.html["Obtenga inf
 
 
 
+[[step-1-prepare-for-the-protocol-change]]
 == Paso 1: prepárate para el cambio de protocolo
 
 Prepárate para cambiar el protocolo en los módulos de E/S de host verificando el protocolo actual que se está usando, determinando si necesitas cambiar el protocolo y, si es así, programando una ventana de mantenimiento.
@@ -107,6 +108,7 @@ Continúa con este procedimiento para cambiar el protocolo.
 
 
 
+[[step-2-stop-host-io-operations]]
 == Paso 2: detén las operaciones de E/S del host
 
 Debes detener todas las operaciones de E/S del host y luego eliminar todos los hosts definidos del sistema de almacenamiento antes de cambiar el protocolo.
@@ -169,6 +171,7 @@ Para obtener instrucciones, consulta el https://docs.netapp.com/us-en/e-series-s
 
 
 
+[[step-3-change-the-protocol]]
 == Paso 3: cambia el protocolo
 
 Usando SANtricity System Manager, cambia el protocolo en los módulos de E/S del host, espera a que los controladores completen su ciclo de reinicio, confirma que su estado es Óptimo y luego vuelve a crear las definiciones del host.
@@ -195,6 +198,7 @@ Para obtener instrucciones, consulta el https://docs.netapp.com/us-en/e-series-s
 
 
 
+[[step-4-configure-the-host-to-use-the-new-protocol]]
 == Paso 4: configura el host para usar el nuevo protocolo
 
 Después de cambiar el protocolo del host, debes configurar el host para que use el nuevo protocolo.

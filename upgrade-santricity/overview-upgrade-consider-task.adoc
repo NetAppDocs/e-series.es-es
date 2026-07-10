@@ -16,12 +16,14 @@ Para garantizar que la actualización se realice correctamente, revise las sigui
 
 
 
+[[controller-upgrades-single-or-multiple]]
 == Actualizaciones de controladoras (únicas o múltiples)
 
 Revise estas consideraciones clave antes de actualizar las controladoras.
 
 
 
+[[current-versions]]
 === Versiones actuales
 
 Puede ver las versiones actuales del software y el firmware de la siguiente manera:
@@ -32,6 +34,7 @@ Puede ver las versiones actuales del software y el firmware de la siguiente mane
 
 
 
+[[components-included-in-the-upgrade]]
 === Componentes incluidos en la actualización
 
 Los siguientes componentes se incluyen en el proceso de actualización del sistema operativo SANtricity:
@@ -44,6 +47,7 @@ Los siguientes componentes se incluyen en el proceso de actualización del siste
 
 
 
+[[components-to-upgrade-separately]]
 === Componentes que se actualizarán por separado
 
 Deben actualizarse los siguientes componentes por separado:
@@ -58,6 +62,7 @@ Deben actualizarse los siguientes componentes por separado:
 
 
 
+[[dual-controllers-and-io-processing]]
 === Controladoras dobles y procesamiento de I/O.
 
 Si una cabina de almacenamiento contiene dos controladoras y existe un controlador multivía instalado, la cabina de almacenamiento puede seguir procesando las operaciones de I/o mientras se realiza la actualización. Durante la actualización, ocurre el siguiente proceso:
@@ -72,6 +77,7 @@ Una vez que finaliza la actualización, es posible que sea necesario redistribui
 
 
 
+[[health-check]]
 === Comprobación del estado
 
 Se ejecuta una comprobación del estado como parte del proceso de actualización. Esta comprobación del estado evalúa todos los componentes de la cabina de almacenamiento para garantizar que se pueda proceder con la actualización. Las siguientes condiciones podrían evitar la actualización:
@@ -91,6 +97,7 @@ También se puede ejecutar la comprobación del estado antes de la actualizació
 
 
 
+[[immediate-or-staged-upgrade]]
 === Actualización inmediata o almacenamiento temporal
 
 Puede activar la actualización de inmediato o almacenarla temporalmente para otro momento. Puede optar por activarlos más tarde por los siguientes motivos:
@@ -101,18 +108,21 @@ Puede activar la actualización de inmediato o almacenarla temporalmente para ot
 
 
 
+[[drive-firmware-upgrade]]
 == Actualización del firmware de la unidad
 
 Revise estas consideraciones clave antes de actualizar el firmware de la unidad.
 
 
 
+[[drive-compatibility]]
 === Compatibilidad de unidades
 
 Cada archivo de firmware de la unidad contiene información sobre el tipo de unidad en el que se ejecuta el firmware. Es posible descargar el archivo de firmware específico solo en una unidad compatible. System Manager comprueba automáticamente la compatibilidad durante el proceso de actualización.
 
 
 
+[[drive-upgrade-methods]]
 === Métodos de actualización de unidades
 
 Existen dos tipos de métodos de actualización del firmware de la unidad: En línea y sin conexión.

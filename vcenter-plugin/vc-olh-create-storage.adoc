@@ -19,6 +19,7 @@ En el complemento de almacenamiento para vCenter, debe crear almacenamiento. Par
 
 
 
+[[step-1-create-workloads]]
 == Paso 1: Crear cargas de trabajo
 
 Una carga de trabajo es un objeto de almacenamiento que admite una aplicación. Se pueden definir una o más cargas de trabajo o instancias por aplicación.
@@ -47,6 +48,7 @@ Se muestra el cuadro de diálogo Crear carga de trabajo de la aplicación.
 
 
 
+[[step-2-create-volumes]]
 == Paso 2: Crear volúmenes
 
 Se crean volúmenes para añadir capacidad de almacenamiento a una carga de trabajo específica de la aplicación y para que los volúmenes creados sean visibles para un host o clúster de hosts específicos.
@@ -60,6 +62,7 @@ El proceso para crear un volumen es un procedimiento de varios pasos.
 
 
 
+[[step-2a-select-host-for-a-volume]]
 === Paso 2a: Seleccione un host para un volumen
 
 En el primer paso, puede seleccionar un host o un clúster de hosts específicos para el volumen, o puede elegir asignar el host más adelante.
@@ -101,6 +104,7 @@ Se muestra el cuadro de diálogo Seleccionar carga de trabajo.
 
 
 
+[[step-2b-select-a-workload-for-a-volume]]
 === Paso 2b: Seleccionar una carga de trabajo para un volumen
 
 En el segundo paso, debe seleccionar una carga de trabajo para personalizar la configuración de la cabina de almacenamiento para una aplicación específica, por ejemplo, VMware.
@@ -132,6 +136,7 @@ Tenga en cuenta estas directrices:
 
 
 
+[[step-2c-add-or-edit-volumes]]
 === Paso 2c: Añadir o editar volúmenes
 
 En el tercer paso, debe definir la configuración de volumen.
@@ -329,6 +334,7 @@ Recurso aprovisionado (solo EF300 y EF600)
 
 
 
+[[step-2d-review-volume-configuration]]
 === Paso 2d: Revisar la configuración de volumen
 
 En el último paso, debe revisar un resumen de los volúmenes que pretende crear y realizar los cambios necesarios.

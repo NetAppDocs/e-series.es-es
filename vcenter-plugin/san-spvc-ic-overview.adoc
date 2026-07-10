@@ -18,6 +18,7 @@ El complemento de almacenamiento de SANtricity para vCenter proporciona gestión
 
 
 
+[[available-tasks]]
 == Tareas disponibles
 
 Puede utilizar el plugin para realizar las siguientes tareas:
@@ -41,12 +42,14 @@ image:../media/vcenter_communication2.png["Entorno de comunicación del vCenter"
 
 
 
+[[interface-overview]]
 == Información general de la interfaz
 
 Al iniciar sesión en el plugin, la página principal se abre en *Administrar - todo*. En esta página, es posible ver y gestionar todas las cabinas de almacenamiento detectadas en la red.
 
 
 
+[[navigation-sidebar]]
 === Barra lateral Navegación
 
 La barra lateral de navegación muestra lo siguiente:
@@ -64,6 +67,7 @@ NOTE: Algunas operaciones no están disponibles si una cabina de almacenamiento 
 
 
 
+[[supported-browsers]]
 === Exploradores compatibles
 
 A partir de varios tipos de exploradores, se puede acceder al complemento de almacenamiento para vCenter. Se admiten los siguientes exploradores en las versiones mencionadas.
@@ -75,12 +79,14 @@ A partir de varios tipos de exploradores, se puede acceder al complemento de alm
 
 
 
+[[user-roles-and-permissions]]
 === Roles y permisos de usuario
 
 Para acceder a las tareas del complemento de almacenamiento para vCenter, el usuario debe tener permisos de lectura y escritura. De forma predeterminada, todos los ID de usuario de VMware vCenter definidos no tienen permisos para realizar tareas en el plugin.
 
 
 
+[[configuration-overview]]
 == Información general de configuración
 
 La configuración incluye los pasos siguientes:
@@ -94,6 +100,7 @@ La configuración incluye los pasos siguientes:
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 Para obtener más información sobre la gestión de almacenes de datos en vSphere Client, consulte https://docs.vmware.com/en/VMware-vSphere/index.html["Documentación de VMware vSphere"^].

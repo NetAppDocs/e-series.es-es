@@ -15,12 +15,14 @@ Antes de sustituir una unidad, revise los requisitos y consideraciones.
 
 
 
+[[shelf-types]]
 == Tipos de bandeja
 
 Es posible sustituir una unidad en una bandeja de 24 unidades, una bandeja de 60 unidades o un cajón de unidades.
 
 
 
+[[24-drive-shelves]]
 === bandejas de 24 unidades
 
 Las figuras muestran la forma en que las unidades están numeradas en cada tipo de bandeja (se quitaron el bisel frontal o las tapas de cierre de la bandeja).
@@ -34,6 +36,7 @@ NOTE: La cabina de almacenamiento E5724 puede incluir uno o varios soportes de u
 
 
 
+[[60-drive-shelves]]
 === bandejas de 60 unidades
 
 La bandeja de controladoras E5760 y la bandeja de unidades DE460C constan de cinco cajones de unidades que contienen cada uno 12 ranuras de unidad. El cajón de unidades 1 está en la parte superior y el cajón de unidades 5 está en la parte inferior.
@@ -49,6 +52,7 @@ NOTE: La cabina de almacenamiento E5760 puede incluir uno o varios soportes de u
 
 
 
+[[drive-drawer]]
 === Cajón de unidades
 
 Es posible sustituir un cajón de unidades en una bandeja de controladoras E5760 y una bandeja de unidades DE460C. Cada una de estas bandejas de 60 unidades tiene cinco cajones de unidades.
@@ -61,6 +65,7 @@ image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Cajó
 
 
 
+[[requirements-for-handling-drives]]
 == Requisitos para gestionar unidades
 
 

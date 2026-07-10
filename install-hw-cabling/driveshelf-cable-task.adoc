@@ -25,6 +25,7 @@ Si va a cablear una bandeja de controladoras anterior a DE212C, DE224C o DE460, 
 
 
 
+[[cabling-e2800-and-e5700]]
 == Cableado de E2800 y E5700
 
 La siguiente información se aplica al cableado de un E2800, E2800B, EF280, E5700, EF5700B, O bandeja de controladoras EF570 a una bandeja de unidades DE212C, DE224C o DE460.
@@ -52,6 +53,7 @@ image::../media/60_cabling.png[Una bandeja de controladoras y bandejas de 60 uni
 ====
 
 
+[[cabling-ef300-and-ef600]]
 == Cableado EF300 y EF600
 
 La siguiente información se aplica al cableado de una bandeja de controladoras EF300, EF600, EF300C o EF600C a una bandeja de unidades DE212C, DE224C o DE460.
@@ -82,6 +84,7 @@ image::../media/ef_to_de460c.png[Una bandeja de controladoras y bandejas de 60 u
 ====
 
 
+[[cabling-e4000]]
 == Cableado E4000
 
 La siguiente información se aplica al cableado de una bandeja de controladoras E4000 a una bandeja de unidades DE212C, DE224C o DE460.

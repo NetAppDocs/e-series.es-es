@@ -18,6 +18,7 @@ CAUTION: *RIESGO DE PÉRDIDA DE DATOS.* Debes ejecutar NVMe/RoCE en un entorno s
 
 
 
+[[global-pause-frames]]
 == Marcos de pausa globales
 
 Los marcos en pausa globales son la forma más básica de control de flujo y la más sencilla de implementar. Cuando el tráfico satura un puerto de red, se generan marcos en pausa que detienen todo el tráfico en ese puerto hasta que el tráfico anterior se haya procesado lo suficiente como para que el puerto de red pueda seguir el ritmo sin descartar el tráfico entrante.
@@ -29,6 +30,7 @@ Los marcos en pausa globales son la forma más básica de control de flujo y la 
 
 
 
+[[priority-flow-control]]
 == Control de flujo prioritario
 
 El control de flujo por prioridades (PFC) es una forma más compleja de control de flujo que asigna diferentes niveles de prioridad a distintos tipos de tráfico. Cuando se recibe demasiado tráfico en una prioridad, este se detiene, mientras que se permite que el tráfico correspondiente a otros niveles de prioridad continúe, lo que ayuda a evitar que el tráfico intenso de determinados tipos ralentice otras formas de tráfico.

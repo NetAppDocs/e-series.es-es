@@ -26,6 +26,7 @@ El uso de certificados firmados por CA implica un procedimiento de tres pasos:
 
 
 
+[[step-1-complete-a-csr-file]]
 == Paso 1: Complete un archivo CSR
 
 Primero, debe generar un archivo de solicitud de firma de certificación (CSR), que identifica a la organización y al sistema host donde se ejecuta el plugin. También puede generar un archivo CSR con una herramienta como OpenSSL y saltar a. <<Paso 2: Enviar archivo CSR>>.
@@ -55,6 +56,7 @@ Primero, debe generar un archivo de solicitud de firma de certificación (CSR), 
 
 
 
+[[step-2-submit-csr-file]]
 == Paso 2: Enviar archivo CSR
 
 Después de crear un archivo de solicitud de firma de certificación (CSR), se envía el archivo CSR generado a una CA para recibir certificados de gestión firmados para el sistema donde se aloja el plugin.
@@ -76,6 +78,7 @@ Cada vez que se genera una CSR, el sistema crea una pareja de claves pública y 
 
 
 
+[[step-3-import-management-certificates]]
 == Paso 3: Importar certificados de gestión
 
 Después de recibir certificados firmados de la entidad de certificación (CA), importe los certificados en el sistema host donde se instaló el plugin.

@@ -17,6 +17,7 @@ image::../media/port_identifiers_ib_srp.gif[Identificadores de puerto SRB over I
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 
@@ -70,12 +71,14 @@ Puerto de host 2 al conmutador IB 2 (ruta "B")
 |===
 
 
+[[recommended-configuration]]
 == Configuración recomendada
 
 Las configuraciones recomendadas constan de dos puertos iniciador y cuatro puertos de destino.
 
 
 
+[[mapping-host-name]]
 == Asignando el nombre de host
 
 

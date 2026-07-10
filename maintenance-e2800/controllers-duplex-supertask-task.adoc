@@ -35,6 +35,7 @@ Asegúrese de tener lo siguiente:
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Paso 1: Preparar la sustitución de la controladora (dúplex)
 
 Prepare el reemplazo de la controladora para verificar que el compartimento de controladoras de reemplazo tiene el número de pieza de FRU correcto, realizar backups de la configuración y recoger datos de soporte. Si la controladora sigue en línea, debe desconectarla.
@@ -138,12 +139,14 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 
 
 
+[[step-2-remove-failed-controller-duplex]]
 == Paso 2: Quitar una controladora con fallos (dúplex)
 
 Sustituya el compartimento con errores por uno nuevo.
 
 
 
+[[step-2a-remove-controller-canister-duplex]]
 === Paso 2a: Retire el contenedor de la controladora (dúplex)
 
 Quite el compartimento de controladoras con errores para poder reemplazarlo por un nuevo.
@@ -200,6 +203,7 @@ Si va a quitar el compartimento de controladoras de una bandeja de controladoras
 
 
 
+[[step-2b-remove-battery-duplex]]
 === Paso 2b: Retirar la batería (dúplex)
 
 Extraiga la batería para poder instalar la nueva controladora.
@@ -235,6 +239,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Quite la batería de
 
 
 
+[[step-2c-remove-host-interface-card-duplex]]
 === Paso 2c: Quitar la tarjeta de interfaz host (dúplex)
 
 Si el contenedor de controladora incluye una tarjeta de interfaz del host (HIC), debe quitar la HIC del contenedor de controladora original para poder utilizarla en el nuevo contenedor de controladoras.
@@ -268,12 +273,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Quite HIC de la tar
 
 
 
+[[step-3-install-new-controller-duplex]]
 == Paso 3: Instale una nueva controladora (dúplex)
 
 Instale un compartimento de controladoras nuevo para sustituir el que presenta errores. Realice esta tarea solo si la cabina de almacenamiento tiene dos controladoras (configuración doble).
 
 
 
+[[step-3a-install-battery-duplex]]
 === Paso 3a: Instalación de la batería (dúplex)
 
 Debe instalar la batería en el compartimento de controladoras de reemplazo. Puede instalar la batería que quitó del compartimento de controladoras original o instalar una batería nueva que haya pedido.
@@ -319,6 +326,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Brida metáli
 
 
 
+[[step-3b-install-host-interface-card-duplex]]
 === Paso 3b: Instalar la tarjeta de interfaz del host (dúplex)
 
 Si quitó una HIC del contenedor de controladora original, debe instalar esa HIC en el contenedor de controladora nuevo.
@@ -355,6 +363,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Vuelva a insta
 
 
 
+[[step-3c-install-new-controller-canister-duplex]]
 === Paso 3c: Instale un nuevo compartimento de controladoras (doble)
 
 Después de instalar la batería y la tarjeta de interfaz del host (HIC), si se instaló inicialmente uno, es posible instalar el nuevo compartimento de controladoras en la bandeja de controladoras.
@@ -395,6 +404,7 @@ NOTE: Si la controladora original no utilizó DHCP para la dirección IP, la nue
 
 
 
+[[step-4-complete-controller-replacement-duplex]]
 == Paso 4: Sustitución completa de la controladora (dúplex)
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

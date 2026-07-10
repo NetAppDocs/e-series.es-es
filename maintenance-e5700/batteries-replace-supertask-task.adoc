@@ -32,6 +32,7 @@ Cada contenedor de controladora E5700 incluye una batería que conserva los dato
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Paso 1: Colocar la controladora en estado sin conexión (dúplex)
 
 Si tiene una configuración doble, coloque a la controladora afectada en estado sin conexión para poder quitar de forma segura la batería con errores. La controladora que no se coloca en estado sin conexión debe estar en línea (en el estado óptimo).
@@ -108,6 +109,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Para poder quitar la batería con errores, debe quitar el compartimento de controladoras.
@@ -161,6 +163,7 @@ Si va a retirar el compartimento de controladoras de una bandeja de controladora
 
 
 
+[[step-3-remove-failed-battery]]
 == Paso 3: Retire la batería que ha fallado
 
 Después de quitar el compartimento de controladoras de la bandeja de controladoras, quite la batería.
@@ -201,6 +204,7 @@ CAUTION: Para cumplir con las normativas de la Asociación Internacional de Tran
 
 
 
+[[step-4-install-new-battery]]
 == Paso 4: Instale la batería nueva
 
 Después de extraer la batería que ha fallado, instale una nueva.
@@ -249,6 +253,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Brida de bate
 
 
 
+[[step-5-re-install-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de controladoras
 
 Después de instalar la batería nueva, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -281,6 +286,7 @@ image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Vuelva a in
 
 
 
+[[step-6-place-controller-online-duplex]]
 == Paso 6: Colocar la controladora en línea (dúplex)
 
 Para una configuración doble, coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

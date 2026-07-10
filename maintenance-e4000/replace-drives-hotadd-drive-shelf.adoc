@@ -33,6 +33,7 @@ NOTE: Para mantener la integridad del sistema, debe seguir el procedimiento exac
 
 
 
+[[step-1-prepare-to-add-the-drive-shelf]]
 == Paso 1: Prepárese para añadir la bandeja de unidades
 
 Para prepararse para añadir una bandeja de unidades en caliente, debe comprobar los eventos críticos y comprobar el estado de los IOM.
@@ -87,6 +88,8 @@ Aparece el cuadro de diálogo Configuración de componentes de bandeja con la fi
 
 
 
+[[step-2-install-the-drive-shelf-and-apply-power]]
+[[step2_install_drive_shelf]]
 == Paso 2: Instale la bandeja de unidades y aplique alimentación
 
 Debe instalar una bandeja de unidades nueva o una bandeja de unidades instalada previamente, encender la alimentación y comprobar si existen LED que requieran atención.
@@ -106,6 +109,7 @@ NOTE: Consulte las instrucciones de instalación de su modelo para obtener el pr
 
 
 
+[[step-3-cable-your-system]]
 == Paso 3: Conecte los cables del sistema
 
 La bandeja de unidades se conecta a la controladora A, confirme el estado del IOM y luego conecte la bandeja de unidades a la controladora B.
@@ -156,6 +160,7 @@ NOTE: El estado óptima indica que se resolvió la pérdida de error de redundan
 
 
 
+[[step-4-complete-hot-add]]
 == Paso 4: Complete la adición activa
 
 La función de adición de activos se completa comprobando si hay errores y confirmando que la bandeja de unidades recién añadida utiliza el firmware más reciente.

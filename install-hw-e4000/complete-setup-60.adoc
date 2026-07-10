@@ -15,6 +15,7 @@ Aprenda a conectar las controladoras a la red y a completar la instalación y la
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Paso 1: Conectar los hosts de datos
 
 Conecte los cables del sistema según la topología de red.
@@ -51,6 +52,7 @@ image:../media/drw_e4060_fabric_topology_ieops-2159.svg["E4060 Topología de la 
 ====
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Paso 2: Conecte y configure la conexión de administración
 
 Es posible configurar los puertos de gestión de la controladora con un servidor DHCP o una dirección IP estática.
@@ -123,6 +125,7 @@ NOTE: Si se pierde la conexión con la controladora B, puede utilizar la conexi�
 ====
 
 
+[[step-3-configure-and-manage-your-storage-system]]
 == Paso 3: Configure y gestione el sistema de almacenamiento
 
 Después de instalar el hardware, use el software SANtricity para configurar y gestionar el sistema de almacenamiento.

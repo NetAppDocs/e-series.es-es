@@ -38,6 +38,7 @@ CAUTION: Este procedimiento debe realizarse con ambos contenedores de la control
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Paso 1: Coloque la bandeja de controladoras en estado sin conexión
 
 Coloque la bandeja de controladoras en estado sin conexión para que pueda añadir la tarjeta de expansión SAS de forma segura.
@@ -94,6 +95,7 @@ El LED verde de caché activa de la parte posterior de cada controladora está e
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el compartimento de controladoras para poder añadir la tarjeta de ampliación SAS nueva.
@@ -124,6 +126,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-3-add-the-new-sas-expansion-card]]
 == Paso 3: Añada la nueva tarjeta de expansión SAS
 
 Instale la tarjeta de expansión SAS para permitir la expansión de la bandeja de unidades.
@@ -149,6 +152,7 @@ No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de controladoras
 
 Después de instalar la tarjeta de expansión SAS nueva, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -167,6 +171,7 @@ image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 
 
+[[step-5-complete-sas-expansion-card-addition]]
 == Paso 5: Adición de tarjeta de expansión SAS completa
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

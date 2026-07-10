@@ -26,6 +26,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Dirección de la len
 
 
 
+[[step-1-cable-the-inter-controller-mirroring-connections]]
 == Paso 1: cablea las conexiones de duplicación entre controladores
 
 Conecta los controladores entre sí para habilitar la duplicación entre controladores. Las conexiones de duplicación entre controladores aseguran la redundancia total del sistema y se usan para la duplicación de caché y el envío de I/O. El cableado es el mismo para los sistemas de almacenamiento EF50 y EF80.
@@ -53,6 +54,7 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["conexión de ca
 
 
 
+[[step-2-cable-the-host-connections]]
 == Paso 2: Cablea las conexiones del host
 
 Conecta las conexiones del host de tu sistema de almacenamiento según tu topología de red: conexión directa o conexión en red.

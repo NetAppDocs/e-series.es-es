@@ -31,6 +31,7 @@ Asegúrese de tener lo siguiente:
 
 
 
+[[step-1-verify-the-new-controllers-part-number]]
 == Paso 1: Verifique el número de pieza de la nueva controladora
 
 Confirme que la nueva controladora tiene el mismo número de pieza que la controladora instalada actualmente.
@@ -65,6 +66,7 @@ CAUTION: *Posible pérdida de acceso a datos* -- Si los dos números de pieza no
 
 
 
+[[step-2-install-host-interface-card]]
 == Paso 2: Instalar la tarjeta de interfaz del host
 
 Si la controladora instalada actualmente incluye una HIC, debe instalar el mismo modelo de tarjeta de interfaz del host (HIC) en el segundo contenedor de controladora.
@@ -110,6 +112,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Instale la pla
 
 
 
+[[step-3-collect-support-data]]
 == Paso 3: Recoger datos de soporte
 
 Recoger datos de soporte antes y después de reemplazar un componente para garantizar que pueda enviar un conjunto completo de registros al soporte técnico en caso de que el reemplazo no resuelva el problema.
@@ -148,6 +151,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 
 
 
+[[step-4-change-configuration-to-duplex]]
 == Paso 4: Cambie la configuración a dúplex
 
 Antes de añadir una segunda controladora a la bandeja de controladoras, debe cambiar la configuración a doble. Para ello, instale un nuevo archivo NVSRAM y utilice la interfaz de línea de comandos para configurar la cabina de almacenamiento en doble. La versión doble del archivo NVSRAM se incluye con el archivo de descarga del software de sistema operativo SANtricity (firmware de la controladora).
@@ -264,6 +268,7 @@ Cuando el controlador se haya reiniciado, se mostrará un mensaje de error "'fal
 
 
 
+[[step-5-remove-the-controller-blank]]
 == Paso 5: Retire el espacio en blanco de la controladora
 
 Quite el blanco de la controladora antes de instalar la segunda controladora. Se instala una controladora vacía en las bandejas de controladoras que solo tienen una controladora.
@@ -278,6 +283,7 @@ Al retirar el controlador en blanco, una solapa se balancea en su lugar para blo
 
 
 
+[[step-6-install-second-controller-canister]]
 == Paso 6: Instale el segundo compartimento de controladoras
 
 Instale un segundo contenedor de controladora para cambiar una configuración simple a una configuración doble.
@@ -300,6 +306,7 @@ image::../media/28_dwg_e2824_add_controller_canister.gif[Instale el segundo comp
 
 
 
+[[step-7-complete-adding-a-second-controller]]
 == Paso 7: Complete la adición de una segunda controladora
 
 Complete el proceso de añadir una segunda controladora confirmando que funciona correctamente, reinstale el archivo NVSRAM dúplex, distribuya volúmenes entre las controladoras y recoja datos de soporte.

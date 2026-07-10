@@ -17,6 +17,7 @@ Los procedimientos de mantenimiento suponen que tu sistema de almacenamiento EF5
 
 
 
+[[system-components]]
 == Componentes del sistema
 
 Para tu sistema de almacenamiento EF50 o EF80, puedes realizar procedimientos de mantenimiento en los siguientes componentes.

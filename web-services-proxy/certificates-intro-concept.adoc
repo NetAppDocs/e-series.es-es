@@ -15,6 +15,7 @@ Para obtener seguridad en el proxy de servicios web, es posible especificar una 
 
 
 
+[[enable-ssl]]
 == Habilite SSL
 
 El proxy de servicios web utiliza Secure Sockets Layer (SSL) para obtener seguridad, que se habilita durante la instalación. Puede cambiar la designación de puerto SSL en el archivo wsconfig.xml.
@@ -43,6 +44,7 @@ Cuando el servidor se inicia con SSL configurado, el servidor busca los archivos
 
 
 
+[[bypass-certificate-validation]]
 == Omitir la validación del certificado
 
 Para admitir conexiones seguras, el proxy de servicios web valida los certificados de los sistemas de almacenamiento con sus propios certificados de confianza. Si es necesario, puede especificar que el proxy omita esa validación antes de conectarse a los sistemas de almacenamiento.
@@ -69,6 +71,7 @@ Para admitir conexiones seguras, el proxy de servicios web valida los certificad
 
 
 
+[[generate-and-import-a-host-management-certificate]]
 == Genere e importe un certificado de gestión de host
 
 Los certificados identifican propietarios de sitios web para lograr conexiones seguras entre servidores y clientes. Para generar e importar certificados de una entidad de certificación (CA) para el sistema host donde está instalado el proxy de servicios web, puede usar extremos de API.
@@ -132,6 +135,7 @@ Mediante el uso de una sesión de exploración incognito o en privado, puede abr
 
 
 
+[[login-lockout-feature]]
 == Función de bloqueo de inicio de sesión
 
 Se puede configurar solo mediante la API de REST, puede limitar el número de intentos de inicio de sesión para los servicios web incrustados y proxy. Según la configuración, la función de bloqueo se activará una vez que se supere el número de intentos de inicio de sesión de los servicios web.

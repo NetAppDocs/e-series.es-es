@@ -26,6 +26,7 @@ NOTE: Las cabinas de almacenamiento EF600 y EF300 no admiten las funciones de mi
 
 
 
+[[santricity-system-manager]]
 == System Manager de SANtricity
 
 System Manager es un software de gestión basado en web integrado en cada controladora. Para acceder a la interfaz de usuario, apunte un explorador a la dirección IP de la controladora. Un asistente de configuración le ayuda a comenzar con la configuración del sistema.
@@ -92,6 +93,7 @@ Ver datos de diagnóstico, gestionar actualizaciones y configurar AutoSupport, q
 |===
 
 
+[[santricity-unified-manager]]
 == Unified Manager de SANtricity
 
 Unified Manager es un software basado en web que se usa para gestionar todo tu dominio. Desde una vista central, puedes ver el estado de todas las matrices E-Series y EF-Series más recientes, como la EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C y EF600C. También puedes realizar operaciones por lotes en las matrices de almacenamiento seleccionadas.
@@ -160,6 +162,7 @@ Configurar la autenticación de usuario que requiere que los usuarios inicien se
 |===
 
 
+[[santricity-web-services-proxy]]
 == Proxy de servicios web de SANtricity
 
 El proxy de servicios web es un servidor API RESTful que puede gestionar cientos de cabinas E-Series nuevas y antiguas. El proxy se instala por separado en servidores Windows o Linux.
@@ -168,6 +171,7 @@ Web Services incluye documentación de API que permite interactuar directamente 
 
 
 
+[[command-line-interface-cli]]
 == Interfaz de línea de comandos (CLI)
 
 La interfaz de línea de comandos (CLI) es una aplicación de software que proporciona una forma de configurar y supervisar las matrices de almacenamiento. Usando la CLI, puedes ejecutar comandos desde un indicador del sistema operativo, como el indicador `DOS C:`, una ruta del sistema operativo Linux o una ruta del sistema operativo Solaris.

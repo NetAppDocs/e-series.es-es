@@ -16,12 +16,14 @@ La siguiente tabla describe las nuevas funciones en las últimas versiones de SA
 
 
 
+[[new-features-in-version-12-0r1]]
 == Novedades en la versión 12.0R1
 
 Esta versión solo contiene cambios menores y ninguna función nueva. Para más información sobre los cambios en esta versión, consulta el archivo README de E-Series SANtricity OS 12.0R1.
 
 
 
+[[new-features-in-version-12-0]]
 == Novedades en la versión 12.0
 
 
@@ -70,18 +72,21 @@ Ahora tienes disponible un nuevo editor de secuencias de comandos dentro de SANt
 |===
 
 
+[[new-features-in-version-11-90r5]]
 == Novedades en la versión 11.90R5
 
 Esta versión contiene solo correcciones de defectos y ninguna función nueva. Para más información sobre los cambios en esta versión, consulta el README de E-Series SANtricity OS 11.90R5.
 
 
 
+[[new-features-in-version-11-90r4]]
 == Nuevas características en la versión 11.90R4
 
 Esta versión solo contiene cambios menores y ninguna función nueva. Para más información sobre los cambios en esta versión, consulta el archivo README de E-Series SANtricity OS 11.90R4.
 
 
 
+[[new-features-in-version-11-90r3]]
 == Nuevas características en la versión 11.90R3
 
 [cols="35h,~"]
@@ -97,12 +102,14 @@ La compatibilidad con los módulos SAS-3 IOM12C y DCM3 ya está disponible para 
 |===
 
 
+[[new-features-in-version-11-90r2]]
 == Nuevas características en la versión 11.90R2
 
 Esta versión contiene solo cambios menores y no nuevas características. Para obtener más información sobre los cambios en esta versión, consulte la https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Notas de la versión de E-Series 11,90"^].
 
 
 
+[[new-features-in-version-11-90r1]]
 == Nuevas características en la versión 11.90R1
 
 [cols="35h,~"]
@@ -125,6 +132,7 @@ La controladora E4000 ahora admite tarjetas de interfaz del host SAS de 12Gb Gb.
 |===
 
 
+[[new-features-in-version-11-90]]
 == Nuevas funciones en la versión 11,90
 
 [cols="35h,~"]
@@ -168,24 +176,28 @@ Se puede configurar solo mediante la API de REST, ahora hay una nueva opción de
 |===
 
 
+[[new-features-in-version-11-80-1r4]]
 == Nuevas características en la versión 11.80.1R4
 
 Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.
 
 
 
+[[new-features-in-version-11-80-1r3]]
 == Nuevas características en la versión 11.80.1R3
 
 Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.
 
 
 
+[[new-features-in-version-11-80-1r2]]
 == Nuevas características en la versión 11.80.1R2
 
 Esta versión contiene solo cambios menores y no nuevas características o restricciones. Para obtener más información sobre los cambios en esta versión, consulte el archivo README.
 
 
 
+[[new-features-in-version-11-80-1r1]]
 == Nuevas características en la versión 11.80.1R1
 
 [cols="35h,~"]
@@ -201,6 +213,7 @@ La longitud del tamaño de clave de certificado de gestión para el certificado 
 |===
 
 
+[[new-features-in-version-11-80-1]]
 == Nuevas funciones en la versión 11.80.1
 
 [cols="35h,~"]
@@ -244,6 +257,7 @@ Web Services Proxy se actualizó a la versión 6,1 para ser compatible con la ve
 |===
 
 
+[[new-features-in-version-11-80]]
 == Nuevas funciones en la versión 11,80
 
 [cols="35h,~"]

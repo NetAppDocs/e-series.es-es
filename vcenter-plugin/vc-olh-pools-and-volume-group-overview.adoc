@@ -18,6 +18,7 @@ Para aprovisionar almacenamiento en el complemento de almacenamiento para vCente
 
 
 
+[[provisioning]]
 == El provisionamiento
 
 El hardware físico se aprovisiona en componentes lógicos para que los datos puedan organizarse y recuperarse fácilmente. Se admiten dos tipos de agrupamientos:
@@ -39,6 +40,7 @@ Es posible tener pools o grupos de volúmenes en el mismo sistema de almacenamie
 
 
 
+[[pools]]
 == Piscinas
 
 Los pools están diseñados para añadir unidades de disco duro físicas a un gran espacio de almacenamiento y proporcionar protección RAID. Un pool crea muchos conjuntos RAID virtuales de la cantidad de unidades totales asignadas al pool y reparte los datos de manera uniforme entre todas las unidades participantes. Si se pierde o se añade una unidad, el sistema vuelve a equilibrar dinámicamente los datos entre todas las unidades activas.
@@ -47,12 +49,14 @@ Los pools funcionan como otro nivel de RAID y virtualizan la arquitectura RAID s
 
 
 
+[[drive-matching]]
 === Emparejamiento de unidades
 
 Es posible seleccionar HDD o SSD para usar en pools; sin embargo, como sucede con los grupos de volúmenes, todas las unidades del pool deben usar la misma tecnología. Los controladores seleccionan automáticamente las unidades que deben incluirse; por lo tanto, debe asegurarse de contar con la cantidad suficiente de unidades para la tecnología seleccionada.
 
 
 
+[[managing-failed-drives]]
 === Gestión de unidades con error
 
 Los pools tienen una capacidad mínima de 11 discos; sin embargo, se reserva la capacidad equivalente a una unidad para capacidad de reserva en caso de fallo de unidad. Esta capacidad de reserva se denomina “capacidad de conservación”.
@@ -63,6 +67,7 @@ Después de crear el pool, es posible cambiar el valor de capacidad de conservac
 
 
 
+[[volume-groups]]
 == Grupos de volúmenes
 
 Los grupos de volúmenes definen de qué forma se asigna la capacidad a los volúmenes en el sistema de almacenamiento. Las unidades de disco se organizan en grupos y volúmenes RAID entre las unidades en un grupo RAID. Por lo tanto, las opciones de configuración de grupos de volúmenes identifican qué unidades forman parte del grupo y qué nivel de RAID se utiliza.
@@ -71,6 +76,7 @@ Cuando se crea un grupo de volúmenes, las controladoras seleccionan automática
 
 
 
+[[drive-matching]]
 === Emparejamiento de unidades
 
 Debe emparejar las unidades del grupo de volúmenes según el tamaño y el rendimiento. Si existen unidades pequeñas y grandes en el grupo de volúmenes, se reconocen todas las unidades con el tamaño de capacidad menor. Si existen unidades lentas y rápidas en el grupo de volúmenes, se reconocen todas las unidades con la velocidad menor. Estos factores afectan al rendimiento y a la capacidad general del sistema de almacenamiento.
@@ -79,6 +85,7 @@ No puede combinar tecnologías de unidad distintas (unidades de disco duro y uni
 
 
 
+[[managing-failed-drives]]
 === Gestión de unidades con error
 
 Los grupos de volúmenes utilizan unidades de repuesto como reserva en caso de fallos en los volúmenes RAID 1/10, RAID 3, RAID 5 o RAID 6 incluidos en un grupo de volúmenes. Una unidad de repuesto no contiene datos y añade otro nivel de redundancia a una cabina de almacenamiento.
@@ -87,10 +94,12 @@ Si se produce un error en una unidad de la cabina de almacenamiento, la unidad d
 
 
 
+[[decide-whether-to-use-pools-or-volume-groups]]
 == Decidir si se deben usar pools o grupos de volúmenes
 
 
 
+[[choose-a-pool]]
 === Seleccione un pool
 
 * Si necesita recompilaciones de la unidad más rápidas y gestión de almacenamiento simplificada y/o tiene una carga de trabajo altamente aleatoria.
@@ -99,6 +108,7 @@ Si se produce un error en una unidad de la cabina de almacenamiento, la unidad d
 
 
 
+[[choose-a-volume-group]]
 === Seleccione un grupo de volúmenes
 
 * Si necesita el máximo ancho de banda del sistema, la capacidad para modificar la configuración de almacenamiento y una carga de trabajo altamente secuencial.
@@ -111,6 +121,7 @@ NOTE: Debido a que los pools pueden coexistir con los grupos de volúmenes, una 
 
 
 
+[[automatic-versus-manual-pool-creation]]
 == Creación de pools automática versus manual
 
 Según la configuración del almacenamiento, puede permitir que el sistema cree pools de forma automática o puede crearlos manualmente. Un pool es un conjunto de unidades agrupadas lógicamente.
@@ -119,6 +130,7 @@ Antes de crear y gestionar pools, revise las siguientes secciones sobre cómo se
 
 
 
+[[automatic-creation]]
 === Creación automática
 
 Cuando el sistema detecta capacidad sin asignar en la cabina de almacenamiento, inicia la creación automática de pools cuando el sistema detecta capacidad sin asignar en una cabina de almacenamiento. Solicita automáticamente crear uno o varios pools, añadir la capacidad sin asignar a un pool existente, o ambas opciones.
@@ -135,6 +147,7 @@ La creación de pools automática se produce cuando se cumple alguna de estas co
 
 
 
+[[manual-creation]]
 === Creación manual
 
 Quizás sea conveniente crear un pool manualmente cuando la creación automática no puede determinar cuál es la mejor configuración. Esta situación puede ocurrir por uno de los siguientes motivos:

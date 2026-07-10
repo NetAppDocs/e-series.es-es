@@ -15,6 +15,7 @@ Una vez instalado correctamente, puede configurar la aplicación SANtricity Clou
 
 
 
+[[log-in-to-the-santricity-cloud-connector-for-the-first-time]]
 == Inicie sesión en el conector cloud de SANtricity por primera vez
 
 Al inicializar SANtricity Cloud Connector por primera vez, debe introducir una contraseña predeterminada para acceder a la aplicación.
@@ -37,6 +38,7 @@ Aparece el asistente de configuración del conector de cloud de SANtricity.
 
 
 
+[[using-the-configuration-wizard]]
 == Uso del Asistente de configuración
 
 El asistente de configuración aparece cuando se inicia sesión correctamente en el conector cloud de SANtricity.
@@ -45,6 +47,7 @@ Con el asistente de configuración, configuró la contraseña de administrador, 
 
 
 
+[[step-1-set-administrator-password]]
 === Paso 1: Establecer la contraseña de administrador
 
 Puede personalizar la contraseña utilizada para los inicios de sesión posteriores en SANtricity Cloud Connector a través de la página establecer contraseña de administrador.
@@ -66,6 +69,7 @@ NOTE: La contraseña de administrador definida por el usuario no se establece ha
 
 
 
+[[step-2-set-pass-phrase]]
 === Paso 2: Configurar la frase de contraseña
 
 En la página Enter the Encryption pass phrase, puede especificar una frase de contraseña alfanumérica de entre 8 y 32 caracteres.
@@ -83,6 +87,7 @@ La frase de contraseña introducida para la aplicación SANtricity Cloud Connect
 
 
 
+[[step-3-select-target-type]]
 === Paso 3: Seleccione el tipo de destino
 
 Las funcionalidades de backup y restauración están disponibles para los tipos de destino de Amazon S3, AltaVault y StorageGRID mediante el conector Cloud de SANtricity. Puede especificar el tipo de destino de almacenamiento deseado para la aplicación SANtricity Cloud Connector, en la página Select the Target Type.
@@ -211,6 +216,7 @@ El tipo de destino especificado para el conector cloud de SANtricity se acepta y
 
 
 
+[[step-4-connect-to-web-services-proxy]]
 === Paso 4: Conectarse al proxy de servicios web
 
 La información de inicio de sesión y conexión para el proxy de servicios web que se utiliza junto con el conector cloud de SANtricity se introduce a través de la página Enter Web Services Proxy URL and Credentials.
@@ -232,6 +238,7 @@ Las credenciales de proxy de servicios web para el conector cloud de SANtricity 
 
 
 
+[[step-5-select-storage-arrays]]
 === Paso 5: Seleccione las cabinas de almacenamiento
 
 Según las credenciales del proxy de servicios web de SANtricity introducidas mediante el asistente de configuración, se muestra una lista de las cabinas de almacenamiento disponibles en la página Seleccionar cabinas de almacenamiento. A través de esta página, puede seleccionar las cabinas de almacenamiento que el conector cloud de SANtricity utiliza para trabajos de backup y restauración.
@@ -256,6 +263,7 @@ NOTE: Debe configurar una contraseña válida para todas las cabinas de almacena
 
 
 
+[[step-6-select-hosts]]
 === Paso 6: Seleccione hosts
 
 Según las cabinas de almacenamiento alojadas en el proxy de servicios web seleccionadas mediante el asistente de configuración, puede seleccionar un host disponible para asignar los volúmenes candidatos de backup y restaurar a la aplicación SANtricity Cloud Connector a través de la página Select hosts.
@@ -274,6 +282,7 @@ Se acepta el host seleccionado para el conector en nube de SANtricity y se muest
 
 
 
+[[step-7-review-the-initial-configuration]]
 === Paso 7: Revise la configuración inicial
 
 En la última página del asistente de configuración de SANtricity Cloud Connector, se proporciona un resumen de los resultados introducidos para su revisión.

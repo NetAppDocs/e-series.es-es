@@ -15,6 +15,7 @@ Antes de convertir el protocolo de host para una cabina E2800, revise los requis
 
 
 
+[[host-ports-you-can-change]]
 == Los puertos de host que es posible cambiar
 
 
@@ -99,6 +100,7 @@ Los puertos de host de la placa base y los puertos HIC pueden usar el mismo prot
 
 
 
+[[requirements-for-changing-the-host-protocol]]
 == Requisitos para cambiar el protocolo del host
 
 * Debe programar una ventana de mantenimiento de tiempo de inactividad para este procedimiento.
@@ -111,6 +113,7 @@ Los puertos de host de la placa base y los puertos HIC pueden usar el mismo prot
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Consideraciones que tener en cuenta al cambiar el protocolo del host
 
 Las consideraciones para cambiar el protocolo de host dependen de los protocolos de inicio y finalización de los puertos de host de la placa base y los puertos de HIC.
@@ -122,6 +125,7 @@ NOTE: Las siguientes consideraciones se aplican solo si se convierte una cabina 
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Conversión de FC a iSCSI
 
 * Si su configuración contiene hosts DE arranque SAN conectados a los puertos de placa base FC, compruebe el https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidad de NetApp"^] Para garantizar que la configuración sea compatible con iSCSI. Si no lo es, no es posible convertir el protocolo de host a iSCSI.
@@ -151,6 +155,7 @@ CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de converti
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Conversión de iSCSI a FC
 
 * El mirroring asíncrono requiere que tanto la cabina de almacenamiento local como la cabina de almacenamiento remota usen el mismo protocolo. Si actualmente utiliza Mirroring asíncrono con los puertos en placa base, debe desactivar la función Mirroring asíncrono antes de cambiar el protocolo.
@@ -159,6 +164,7 @@ CAUTION: Si no desactiva las relaciones de mirroring síncrono antes de converti
 
 
 
+[[converting-from-fc-to-fciscsi]]
 === Conversión de FC a FC/iSCSI
 
 Consideraciones de mirroring:
@@ -244,6 +250,7 @@ No es necesario realizar ninguna acción antes de aplicar el paquete de funcione
 
 
 
+[[converting-from-iscsi-to-fciscsi]]
 === Conversión de iSCSI a FC/iSCSI
 
 * Si planea convertir un puerto que se está utilizando para la duplicación, debe mover las relaciones de mirroring a un puerto que permanecerá iSCSI después de la conversión.
@@ -258,6 +265,7 @@ Antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de
 
 
 
+[[converting-from-fciscsi-to-fc]]
 === Convertir de FC/iSCSI a FC
 
 * Cuando se convierten todos los puertos de host en FC, tenga en cuenta que la función de mirroring asíncrono mediante FC debe producirse en el puerto FC con el número más alto.
@@ -322,6 +330,7 @@ Elimine las relaciones de mirroring antes y vuelva a establecer el mirroring des
 
 
 
+[[converting-from-fciscsi-to-iscsi]]
 === Conversión de FC/iSCSI a iSCSI
 
 * ISCSI no admite el mirroring síncrono.
@@ -337,6 +346,7 @@ CAUTION: *Posible pérdida de datos* -- Si no elimina las relaciones de mirrorin
 
 
 
+[[same-host-protocol-and-mirroring-operations]]
 === El mismo protocolo de host y las mismas operaciones de mirroring
 
 Las operaciones de mirroring no se ven afectadas si los puertos de host que se utilizan para el mirroring mantienen el mismo protocolo después de aplicar el paquete de funciones. Aún así, antes de aplicar el paquete de funciones, debe confirmar que todos los grupos de coherencia de reflejos estén sincronizados.

@@ -20,6 +20,7 @@ NOTE: Todas las marcas de hora de los trabajos de backup y restauración que se 
 
 
 
+[[create-a-new-image-based-restore]]
 == Crear una nueva restauración basada en imágenes
 
 Puede crear nuevas restauraciones basadas en imágenes mediante la función Crear en la página Restore de la aplicación Cloud Connector de SANtricity.
@@ -54,6 +55,7 @@ La restauración para el volumen de host objetivo seleccionado se inicia, y el e
 
 
 
+[[create-a-new-file-based-restore]]
 == Crear una nueva restauración basada en archivos
 
 Puede crear nuevas restauraciones basadas en archivos mediante la función Crear en la página Restore de la aplicación Cloud Connector de SANtricity.
@@ -92,6 +94,7 @@ La restauración para el volumen de host objetivo seleccionado se inicia, y el e
 
 
 
+[[delete-a-restore]]
 == Eliminar una restauración
 
 Puede utilizar la función Eliminar para eliminar un elemento de restauración seleccionado de la sección de lista de resultados de la página Restaurar.

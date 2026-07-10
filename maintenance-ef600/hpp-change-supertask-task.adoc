@@ -16,6 +16,7 @@ Siga este procedimiento para cambiar el protocolo de puerto de host en una cabin
 
 
 
+[[step-1-obtain-the-feature-pack-key]]
 == Paso 1: Obtenga la clave del paquete de funciones
 
 Para obtener la clave de paquete de funciones, se necesita el número de serie de la bandeja de controladoras, un código de activación de la función y el identificador de habilitación de la función para la cabina de almacenamiento.
@@ -616,6 +617,7 @@ NOTE: El sitio web de activación de funciones Premium incluye un enlace a «'in
 
 
 
+[[step-2-stop-host-io]]
 == Paso 2: Detener la actividad de I/o del host
 
 Detenga todas las operaciones de I/o del host antes de convertir el protocolo de los puertos de host.
@@ -648,6 +650,7 @@ El LED verde de caché activa de la parte posterior de cada controladora está e
 
 
 
+[[step-3-change-the-feature-pack]]
 == Paso 3: Cambie el paquete de funciones
 
 Cambie el paquete de funciones para convertir el protocolo de host de los puertos de host.

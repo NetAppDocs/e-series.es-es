@@ -22,6 +22,7 @@ Para ver las instrucciones de cableado específicas para tu sistema de almacenam
 ====
 
 
+[[direct-topology]]
 == Topología directa
 
 Una topología directa conecta su controladora directamente a una red Ethernet.
@@ -33,6 +34,7 @@ image::../media/74167.gif[Conexiones directas de gestión del almacenamiento]
 
 
 
+[[fabric-topology]]
 == Topología de estructura
 
 Una topología de estructura utiliza un switch para conectar la controladora a una red Ethernet.

@@ -15,6 +15,7 @@ Después de encender tu sistema de almacenamiento EF50 o EF80, completas la conf
 
 
 
+[[step-1-cable-and-configure-the-management-ports]]
 == Paso 1: cablea y configura los puertos de gestión
 
 Conecta el puerto de gestión de cada controlador y luego configura los puertos usando un servidor DHCP o una dirección IP estática.
@@ -106,6 +107,7 @@ NOTE: Si se pierde la conexión con la controladora B, puede utilizar la conexi�
 ====
 
 
+[[step-2-configure-your-storage-system]]
 == Paso 2: configura tu sistema de almacenamiento
 
 Usa SANtricity System Manager para configurar y gestionar tu sistema de almacenamiento.
@@ -125,6 +127,7 @@ Puedes consultar la ayuda en línea incluida con SANtricity System Manager.
 
 
 
+[[step-3-verify-the-host-io-module-protocol-is-correct]]
 == Paso 3: verifica que el protocolo del módulo E/S anfitrión es correcto
 
 Tu sistema de almacenamiento se entrega con un protocolo predeterminado en los módulos de E/S del host. Si el protocolo predeterminado no es el que quieres, puedes cambiarlo.

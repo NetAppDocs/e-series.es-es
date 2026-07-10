@@ -15,6 +15,7 @@ Consulte los siguientes enlaces para acceder a informes técnicos relacionados c
 
 
 
+[[ef50-ef80-and-e4000-platform-trs]]
 == TR de las plataformas EF50, EF80 y E4000
 
 [cols="9,9,9"]
@@ -28,13 +29,14 @@ Consulte los siguientes enlaces para acceder a informes técnicos relacionados c
 |===
 
 
+[[legacy-platform-trs]]
 == TRs de plataforma heredada
 
 [cols="9,9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Descripción general de las funciones de las cabinas EF300++*"^] | https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Descripción general de las funciones de las matrices E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Visión general de las cabinas E5700++*"^] 
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800.pdf["*TR-4800: Descripción general de las funciones de las cabinas EF600*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Descripción general de las funciones de las cabinas EF300++*"^] | https://www.netapp.com/pdf.html?item=/media/17026-tr4725.pdf["*TR-4725: Descripción general de las funciones de las matrices E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724.pdf["*+++TR-4724: Visión general de las cabinas E5700++*"^] 
 
 
 | Describe las características de hardware y software de la cabina all-flash EF600 y las nuevas funciones de SANtricity OS. | Describe las características de hardware y software de la cabina all-flash EF300 y las nuevas funciones de SANtricity OS. | Describe las características de hardware y software de la cabina híbrida E2800 y las últimas funciones de SANtricity OS. | Describe la información del producto E5700, incluidas las nuevas funciones de hardware y software que se introdujeron con la última versión de SANtricity. 

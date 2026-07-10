@@ -15,6 +15,7 @@ Aprenda a conectar las controladoras a la red y a completar la instalación y la
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Paso 1: Conectar los hosts de datos
 
 Conecte los cables del sistema según la topología de red.
@@ -24,6 +25,7 @@ NOTE: Si utiliza AIX®, debe instalar el controlador multivía E-Series en el ho
 
 
 
+[[option-1-direct-attach-topology]]
 === Opción 1: Topología de conexión directa
 
 El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una topología de conexión directa.
@@ -40,6 +42,7 @@ image:../media/2U_DirectTopology.png["Cableado de topología de conexión direct
 |===
 
 
+[[option-2-fabric-topology]]
 === Opción 2: Topología de estructura
 
 El siguiente ejemplo muestra el cableado hacia los hosts de datos mediante una topología de estructura.
@@ -57,12 +60,14 @@ image:../media/2U_FabricTopology.png["Cableado de topología estructural"]
 |===
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Paso 2: Conecte y configure la conexión de administración
 
 Es posible configurar los puertos de gestión de la controladora con una de estas dos opciones: Con un servidor DHCP o con una dirección IP estática.
 
 
 
+[[option-1-dhcp-server]]
 === Opción 1: Servidor DHCP
 
 Aprenda a configurar los puertos de gestión con un servidor DHCP.
@@ -106,6 +111,7 @@ Puerto de gestión P1 de la controladora E5700
 
 
 
+[[option-2-static-ip-address]]
 === Opción 2: Dirección IP estática
 
 Aprenda a configurar los puertos de gestión de forma manual. Para ello, introduzca la dirección IP y la máscara de subred.
@@ -181,6 +187,7 @@ NOTE: Si se pierde la conexión con la controladora B, puede utilizar la conexi�
 
 
 
+[[step-3-configure-storage-system]]
 == Paso 3: Configure el sistema de almacenamiento
 
 Después de instalar el hardware, use el software SANtricity para configurar y gestionar el sistema de almacenamiento.

@@ -28,6 +28,7 @@ Puede sustituir un DIMM en el E4000 si hay una discrepancia de memoria presente 
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Paso 1: Determine si necesita sustituir un DIMM
 
 Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
@@ -45,6 +46,7 @@ Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM
 
 
 
+[[step-2-prepare-to-replace-a-dimm]]
 == Paso 2: Prepárese para reemplazar un DIMM
 
 Prepare para sustituir un DIMM; para ello, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. A continuación, es posible detener las operaciones de I/O del host y colocarla en un estado sin conexión o apagada.
@@ -164,6 +166,7 @@ NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
 ====
 
 
+[[step-3-remove-controller-canister]]
 == Paso 3: Quite el contenedor de controladora
 
 Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
@@ -186,6 +189,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cub
 
 
 
+[[step-4-replace-the-dimms]]
 == Paso 4: Reemplace los DIMM
 
 Localice el DIMM dentro de la controladora, quítelo y sustitúyalo.
@@ -237,6 +241,7 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de controladoras
 
 Vuelva a instalar el compartimento de controladoras en el chasis.
@@ -256,6 +261,7 @@ NOTE: Si ha quitado los convertidores de medios (QSFP o SFP), recuerde volver a 
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Paso 6: Complete el reemplazo de DIMM
 
 [role="tabbed-block"]

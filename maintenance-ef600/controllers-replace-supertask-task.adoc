@@ -53,6 +53,7 @@ NOTE: El LED de atención ámbar del controlador se apagará siempre que se prod
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Paso 1: Preparar la sustitución de la controladora
 
 Prepare para sustituir un compartimento de controladoras con errores. Para ello, compruebe que el compartimento de controladoras de reemplazo tiene el número de pieza de FRU correcto, respalde la configuración y recoja datos de soporte.
@@ -119,6 +120,7 @@ CAUTION: No inicie ninguna otra operación hasta que se haya actualizado el esta
 
 
 
+[[step-2-remove-failed-controller]]
 == Paso 2: Quitar una controladora que ha fallado
 
 Quite un compartimento de controladoras para sustituir el compartimento con errores por uno nuevo.
@@ -127,6 +129,7 @@ Se trata de un procedimiento de varios pasos que requiere la extracción de los 
 
 
 
+[[step-2a-remove-controller-canister]]
 === Paso 2a: Retire el contenedor del controlador
 
 Quite el compartimento de controladoras con errores para poder reemplazarlo por un nuevo.
@@ -160,6 +163,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-2b-remove-battery]]
 === Paso 2b: Retirar la batería
 
 Quite la batería del compartimento de controladoras con errores para que pueda instalarla en el compartimento de controladoras nuevo.
@@ -183,6 +187,7 @@ image:../media/batt_4.png["Levante la batería del controlador"]
 
 
 
+[[step-2c-remove-the-hic]]
 === Paso 2c: Quite la HIC
 
 Si el contenedor de controladoras incluye una HIC, es necesario quitar la HIC del contenedor de controladora original. De lo contrario, puede omitir este paso.
@@ -218,6 +223,7 @@ image::../media/hic_4.png[Quite HIC de la tarjeta de la controladora]
 
 
 
+[[step-2d-remove-power-supply]]
 === Paso 2d: Retire la fuente de alimentación
 
 Retire la fuente de alimentación para que pueda instalarla en la nueva controladora.
@@ -246,6 +252,7 @@ CAUTION: Al extraer una fuente de alimentación, utilice siempre dos manos para 
 
 
 
+[[step-2e-remove-dimms]]
 === Paso 2e: Retire los módulos DIMM
 
 Extraiga los módulos DIMM para que pueda instalarlos en el nuevo controlador.
@@ -272,6 +279,7 @@ image::../media/dimim_3.png[Retire la DIMM]
 
 
 
+[[step-2f-remove-fans]]
 === Paso 2f: Retire los ventiladores
 
 Extraiga los ventiladores para que pueda instalarlos en la nueva controladora.
@@ -286,6 +294,7 @@ image::../media/fan_2.png[Retire el ventilador]
 
 
 
+[[step-3-install-new-controller]]
 == Paso 3: Instale una nueva controladora
 
 Instale un compartimento de controladoras nuevo para sustituir el que presenta errores.
@@ -294,6 +303,7 @@ Se trata de un procedimiento de varios pasos que requiere la instalación de los
 
 
 
+[[step-3a-install-battery]]
 === Paso 3a: Instale la batería
 
 Instale la batería en el compartimento de controladoras de reemplazo.
@@ -317,6 +327,7 @@ La batería hace clic en su sitio.
 
 
 
+[[step-3b-install-the-hic]]
 === Paso 3b: Instale la HIC
 
 Si quitó una HIC del contenedor de controladora original, debe instalar esa HIC en el contenedor de controladora nuevo. De lo contrario, puede omitir este paso.
@@ -355,6 +366,7 @@ NOTE: La imagen anterior es un ejemplo; el aspecto de la HIC puede ser diferente
 
 
 
+[[step-3c-install-power-supply]]
 === Paso 3c: Instale la fuente de alimentación
 
 Instale el suministro de alimentación en el compartimento de controladoras de reemplazo.
@@ -375,6 +387,7 @@ image::../media/psup_4.png[Instale la fuente de alimentación en el controlador]
 
 
 
+[[step-3d-install-dimms]]
 === Paso 3d: Instalar DIMM
 
 Instale los DIMM en el nuevo compartimento de controladoras.
@@ -407,6 +420,7 @@ image::../media/dimm_5.png[Presione los pestillos hacia arriba en la ranura DIMM
 
 
 
+[[step-3e-install-fans]]
 === Paso 3e: Instale los ventiladores
 
 Instale los ventiladores en el compartimento de controladoras de reemplazo.
@@ -424,6 +438,7 @@ image::../media/fan_3_a.png[Instale el ventilador en el controlador]
 
 
 
+[[step-3f-install-new-controller-canister]]
 === Paso 3f: Instale el nuevo compartimento de controladoras
 
 Por último, instale el compartimento de controladoras nuevo en la bandeja de controladoras.
@@ -451,6 +466,7 @@ NOTE: Si la controladora original no utilizó DHCP para la dirección IP, la nue
 
 
 
+[[step-4-complete-controller-replacement]]
 == Paso 4: Sustitución completa de la controladora
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

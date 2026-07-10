@@ -30,6 +30,7 @@ Recovery Guru en SANtricity System Manager supervisa las unidades en la cabina d
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Paso 1: Preparar la sustitución de la unidad
 
 Prepare la sustitución de la unidad. Para ello, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.
@@ -59,6 +60,7 @@ NOTE: Si va a sustituir una unidad de una bandeja que tiene un panel frontal, de
 
 
 
+[[step-2-remove-drive]]
 == Paso 2: Quitar la unidad
 
 Quite una unidad con error para reemplazarla por una nueva.
@@ -88,6 +90,7 @@ NOTE: Si quita accidentalmente una unidad activa, espere al menos 60 segundos y,
 
 
 
+[[step-3-install-new-drive]]
 == Paso 3: Instale una nueva unidad
 
 Instale una unidad nueva para reemplazar la que presenta errores. Debe instalar la unidad Lo antes posible. de reemplazo después de quitar la unidad con error.
@@ -107,6 +110,7 @@ NOTE: Según la configuración, es posible que la controladora reconstruya autom
 
 
 
+[[step-4-complete-drive-replacement]]
 == Paso 4: Sustitución completa de la unidad
 
 Complete la sustitución de la unidad para confirmar que la unidad nueva funciona correctamente.

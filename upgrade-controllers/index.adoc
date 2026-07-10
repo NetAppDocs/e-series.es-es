@@ -15,12 +15,14 @@ Es posible actualizar la cabina de almacenamiento mediante la sustitución de la
 
 
 
+[[controller-components]]
 == Componentes de la controladora
 
 Una controladora consta de una placa, un firmware y un software. Controla las unidades y también implementa las funciones del software de administración.
 
 
 
+[[when-to-use-this-procedure]]
 == Cuándo utilizar este procedimiento
 
 Normalmente, debe utilizar este procedimiento cuando desea actualizar todas las controladoras a un modelo o plataforma diferente. Este procedimiento implica sustituir todas las controladoras de un soporte de controladora-unidad

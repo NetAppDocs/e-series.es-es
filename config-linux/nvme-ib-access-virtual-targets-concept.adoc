@@ -17,6 +17,7 @@ En SLES 12, el host Linux dirige la E/S a los destinos de los dispositivos virtu
 
 
 
+[[virtual-devices-are-io-targets]]
 == Los dispositivos virtuales son destinos de I/O.
 
 Asegúrese de ejecutar I/o solo en los dispositivos virtuales creados por DM-MP, no en las rutas de los dispositivos físicos. Si ejecuta I/o en las rutas físicas, DM-MP no podrá gestionar un evento de conmutación al nodo de respaldo y la I/o fallará.
@@ -30,6 +31,7 @@ Puede acceder a estos dispositivos de bloque a través del `dm` o el `symlink` e
 ----
 
 
+[[example-output]]
 == Resultado de ejemplo
 
 El siguiente ejemplo es el resultado de `nvme list` El comando muestra el nombre del nodo del host y su correlación con el identificador de espacio de nombres.

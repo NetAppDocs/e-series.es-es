@@ -18,6 +18,7 @@ La función Importar configuración es una operación en lote que permite replic
 
 
 
+[[settings-available-for-import]]
 == Configuración disponible para la importación
 
 Las siguientes configuraciones pueden importarse de una cabina a otra:
@@ -43,6 +44,7 @@ Las siguientes configuraciones pueden importarse de una cabina a otra:
 
 
 
+[[configuration-workflow]]
 == Flujo de trabajo de configuración
 
 Para importar la configuración, siga este flujo de trabajo:
@@ -55,12 +57,14 @@ Para importar la configuración, siga este flujo de trabajo:
 
 
 
+[[requirements-for-replicating-storage-configurations]]
 == Requisitos para replicar configuraciones de almacenamiento
 
 Antes de importar una configuración de almacenamiento desde una cabina de almacenamiento a otra, revise los requisitos y las directrices.
 
 
 
+[[shelves]]
 === Bandejas
 
 * Las bandejas donde residen las controladoras deben ser idénticas en las cabinas de origen y objetivo.
@@ -70,6 +74,7 @@ Antes de importar una configuración de almacenamiento desde una cabina de almac
 
 
 
+[[controllers]]
 === Controladoras
 
 * El tipo de controladora puede ser diferente para las cabinas de origen y objetivo, pero el tipo de compartimento RBOD debe ser idéntico.
@@ -80,6 +85,7 @@ Antes de importar una configuración de almacenamiento desde una cabina de almac
 
 
 
+[[status]]
 === Estado
 
 * Las cabinas objetivo deben tener el estado óptimo.
@@ -88,6 +94,7 @@ Antes de importar una configuración de almacenamiento desde una cabina de almac
 
 
 
+[[storage]]
 === Reducida
 
 * La capacidad de una unidad puede variar entre las cabinas de origen y las objetivo, siempre y cuando la capacidad de volumen en la cabina objetivo sea mayor que en la de origen. (Una cabina objetivo puede tener unidades más nuevas y con mayor capacidad que la operación de replicación quizás no configure por completo en volúmenes).

@@ -40,6 +40,7 @@ CAUTION: *Posible pérdida de acceso a los datos*: No instale nunca una HIC en u
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Paso 1: Coloque la bandeja de controladoras en estado sin conexión
 
 Coloque la bandeja de controladoras en estado sin conexión para que pueda actualizar las HIC de forma segura.
@@ -96,6 +97,7 @@ El LED verde de caché activa de la parte posterior de cada controladora está e
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Quite el contenedor de la controladora para que pueda actualizar la nueva HIC.
@@ -129,6 +131,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-3-remove-the-hic]]
 == Paso 3: Quite la HIC
 
 Quite la HIC original de modo que pueda reemplazarla por una actualizada.
@@ -177,6 +180,7 @@ NOTE: La imagen anterior es un ejemplo, el aspecto de la HIC puede ser diferente
 
 
 
+[[step-4-upgrade-the-hic]]
 == Paso 4: Actualice la HIC
 
 Después de quitar la HIC antigua, debe instalar la nueva.
@@ -219,6 +223,7 @@ NOTE: No utilice un destornillador, o puede apretar los tornillos en exceso.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de la controladora
 
 Después de actualizar HIC, vuelva a instalar el compartimento de controladoras en la bandeja de controladoras.
@@ -241,6 +246,7 @@ Si está usando más de un protocolo de host, asegúrese de instalar los SFP en 
 
 
 
+[[step-6-complete-the-hic-upgrade]]
 == Paso 6: Complete la actualización de HIC
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

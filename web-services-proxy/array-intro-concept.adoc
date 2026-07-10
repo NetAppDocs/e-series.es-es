@@ -16,12 +16,14 @@ Para gestionar los sistemas de almacenamiento en la red, primero debe detectarlo
 
 
 
+[[discover-storage-systems]]
 == Detectar sistemas de almacenamiento
 
 Es posible establecer la detección automática o detectar manualmente los sistemas de almacenamiento.
 
 
 
+[[automatically-discover-storage-systems]]
 === Detección automática de sistemas de almacenamiento
 
 Se puede especificar que los sistemas de almacenamiento se detecten automáticamente en la red mediante la modificación de la configuración del archivo wsconfig.xml. De manera predeterminada, la detección automática de IPv6 está deshabilitada y IPv4 está habilitada.
@@ -56,6 +58,7 @@ NOTE: Cuando las rutas están configuradas, pero no configuradas para que el ser
 
 
 
+[[discover-and-add-storage-systems-using-api-endpoints]]
 === Detectar y añadir sistemas de almacenamiento con extremos API
 
 Puede usar extremos de API para detectar y añadir sistemas de almacenamiento en la lista gestionada. Este procedimiento crea una conexión de gestión entre el sistema de almacenamiento y la API.
@@ -248,6 +251,7 @@ No es necesario ningún parámetro.
 
 
 
+[[scale-up-the-number-of-managed-storage-systems]]
 == Escale verticalmente el número de sistemas de almacenamiento gestionados
 
 De forma predeterminada, la API puede gestionar hasta 100 sistemas de almacenamiento. Si necesita administrar más, debe mejorar los requisitos de memoria para el servidor.

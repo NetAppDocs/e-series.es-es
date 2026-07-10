@@ -15,6 +15,7 @@ Puede generar e imprimir un PDF de esta página y utilizar la siguiente hoja de 
 
 
 
+[[direct-connect-topology]]
 == Topología de conexión directa
 
 En una topología de conexión directa, uno o varios hosts están conectados directamente a la controladora.
@@ -33,6 +34,7 @@ image::../media/nvme_fc_direct_topology.png[Ejemplo de topología de conexión d
 
 
 
+[[switch-connect-topology]]
 == Topología de la conexión del interruptor
 
 En una topología de estructura, se utilizan uno o varios switches. Consulte https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] si desea obtener una lista de switches compatibles.
@@ -41,6 +43,7 @@ image::../media/nvme_fc_fabric_topology.png[Ejemplo de topología de conexión d
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 Busque y documente el iniciador NQN de cada host.
@@ -62,6 +65,7 @@ Host (iniciador) 2
 |===
 
 
+[[target-nqn]]
 == NQN objetivo
 
 Documente el NQN objetivo para la cabina de almacenamiento.
@@ -77,6 +81,7 @@ Controladora de cabina (objetivo)
 |===
 
 
+[[target-nqns]]
 == NQN de destino
 
 Documente los NQN que utilizarán los puertos de la matriz.
@@ -110,6 +115,7 @@ Controladora B, puerto 2
 |===
 
 
+[[mapping-host-name]]
 == Asignando el nombre de host
 
 

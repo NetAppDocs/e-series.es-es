@@ -33,6 +33,7 @@ Cada contenedor de controladora incluye una batería que conserva los datos en c
 
 
 
+[[step-1-place-controller-offline]]
 == Paso 1: Coloque la controladora en estado sin conexión
 
 Realice backup de los datos y coloque a la controladora afectada en estado sin conexión.
@@ -79,6 +80,7 @@ NOTE: No inicie ninguna otra operación hasta que se haya actualizado el estado.
 
 
 
+[[step-2-remove-controller-canister]]
 == Paso 2: Quite el contenedor de la controladora
 
 Reemplace la batería que ha fallado por una nueva.
@@ -109,6 +111,7 @@ image::../media/remove_controller_6.png[Utilice dos manos para sostener el peso 
 
 
 
+[[step-3-remove-failed-battery]]
 == Paso 3: Retire la batería que ha fallado
 
 Tire de la batería con error para sacarla de la controladora.
@@ -141,6 +144,7 @@ CAUTION: Para cumplir con las normativas de la Asociación Internacional de Tran
 
 
 
+[[step-4-install-new-battery]]
 == Paso 4: Instale la batería nueva
 
 Después de quitar la batería con errores del compartimento de controladoras, siga este paso para instalar la batería nueva.
@@ -163,6 +167,7 @@ La batería hace clic en su sitio.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de la controladora
 
 Vuelva a instalar la controladora en la bandeja de controladoras.
@@ -181,6 +186,7 @@ image::../media/remove_controller_7.png[Instale la controladora en la bandeja]
 
 
 
+[[step-6-complete-battery-replacement]]
 == Paso 6: Sustitución completa de la batería
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

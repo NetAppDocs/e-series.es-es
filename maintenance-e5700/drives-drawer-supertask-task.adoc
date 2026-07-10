@@ -49,6 +49,7 @@ CAUTION: *Posible pérdida de acceso a los datos* -- Si un volumen ya está en e
 
 
 
+[[step-1-prepare-to-replace-drive-drawer-60-drive]]
 == Paso 1: Preparar la sustitución del cajón de la unidad (60 unidades)
 
 Para preparar el reemplazo de un cajón de unidades, determine si se puede realizar el procedimiento de reemplazo mientras la bandeja de unidades está en línea o si es necesario detener la actividad de I/o del host y apagar cualquiera de las bandejas que se encendió. Si va a sustituir un cajón en una bandeja con protección contra pérdida de cajón, no es necesario detener la actividad de I/o del host y apagar cualquiera de las bandejas.
@@ -150,6 +151,7 @@ El procedimiento de sustitución se puede realizar con el cajón de la unidad en
 
 
 
+[[step-2-remove-cable-chains]]
 == Paso 2: Quitar las cadenas para cables
 
 Quite ambas cadenas para cables de manera que pueda quitar y reemplazar un cajón de unidades con errores. Las cadenas para cables izquierda y derecha permiten que los cajones se deslizen hacia adentro y hacia afuera.
@@ -289,6 +291,7 @@ El LED puede permanecer encendido durante un minuto después de reinstalar el ve
 
 
 
+[[step-3-remove-failed-drive-drawer-60-drive]]
 == Paso 3: Quitar el cajón de unidades con fallos (60 unidades)
 
 Quite un cajón de unidades con errores para reemplazarlo con uno nuevo.
@@ -343,6 +346,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[Suelte 
 
 
 
+[[step-4-install-new-drive-drawer-60-drive]]
 == Paso 4: Instalación del cajón de unidades nuevo (60 unidades)
 
 Instale un cajón de unidades nuevo para reemplazar el con errores.
@@ -383,6 +387,7 @@ CAUTION: *Riesgo de daños en el equipo* -- deje de empujar el cajón de acciona
 
 
 
+[[step-5-attach-cable-chains]]
 == Paso 5: Fije las cadenas para cables
 
 Conecte las cadenas para cables de manera que pueda volver a instalar las unidades en el cajón de las unidades.
@@ -466,6 +471,7 @@ El LED puede permanecer encendido durante un minuto después de reinstalar el ve
 
 
 
+[[step-6-complete-drive-drawer-replacement-60-drive]]
 == Paso 6: Sustitución completa del cajón de la unidad (60 unidades)
 
 Complete la sustitución del cajón de unidades reinsertando las unidades y reemplazando el embellecedor frontal en el orden correcto.

@@ -18,6 +18,7 @@ Para gestionar el almacenamiento con el complemento de almacenamiento para vCent
 
 
 
+[[manual-host-creation]]
 == Creación manual de hosts
 
 La creación de un host es uno de los pasos necesarios para indicar a la cabina de almacenamiento qué hosts están conectados a ella y para permitir el acceso de I/o a los volúmenes. Un host se puede crear manualmente.
@@ -27,6 +28,7 @@ La creación de un host es uno de los pasos necesarios para indicar a la cabina 
 
 
 
+[[how-volumes-are-assigned]]
 == Cómo se asignan volúmenes
 
 Para que un host envíe I/o a un volumen, se debe asignar el volumen. Es posible seleccionar un host o un clúster de hosts cuando se crea un volumen, o asignar un volumen a un host o clúster de hosts más adelante. Un clúster de hosts es un grupo de hosts. Se crea un clúster de hosts para facilitar la asignación de los mismos volúmenes en varios hosts.
