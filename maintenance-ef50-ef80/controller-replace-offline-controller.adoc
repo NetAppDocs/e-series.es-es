@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, offline the impaired controller 
 summary: Coloca el controlador dañado fuera de línea en tu sistema de almacenamiento EF50 o EF80 para evitar la pérdida de datos y asegurar la estabilidad del sistema cuando reemplaces el controlador. 
 ---
-= Desconectar el controlador deteriorado - EF50 y EF80
+= Desconectar el controlador defectuoso en los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

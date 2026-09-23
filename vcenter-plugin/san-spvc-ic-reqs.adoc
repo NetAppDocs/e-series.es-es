@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade vCenter 
 summary: Requisitos de instalación y actualización y consideraciones para el complemento vCenter. 
 ---
-= Requisitos de instalación y actualización del complemento de almacenamiento de SANtricity para vCenter
+= Requisitos de instalación y actualización para el complemento SANtricity Storage Plugin para vCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

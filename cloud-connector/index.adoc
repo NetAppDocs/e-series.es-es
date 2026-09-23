@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector 
 summary: Conector Cloud de SANtricity 
 ---
-= Descripción general del conector SANtricity® Cloud
+= Conoce SANtricity Cloud Connector
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,10 +1,10 @@
 ---
 permalink: maintenance-e2800/hpp-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+keywords: E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP optical host ports, E2800, E-Series, eseries 
 summary: Revise los requisitos para la conversión del protocolo del puerto de host en una E2800. 
 ---
-= Requisitos para cambiar el protocolo de puerto de host - E2800
+= Requisitos para cambiar el protocolo del puerto del host en una matriz E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

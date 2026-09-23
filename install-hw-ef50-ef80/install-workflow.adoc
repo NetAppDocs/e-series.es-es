@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Para instalar y configurar tu sistema de almacenamiento EF50 o EF80, debes preparar tu sitio, instalar y cablear los componentes de hardware, encender el sistema de almacenamiento y completar la configuración del sistema de almacenamiento. 
 ---
-= Instala y configura - EF50 y EF80
+= Flujo de trabajo de instalación y configuración para los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,11 +23,11 @@ Para instalar el hardware, instala el hardware de montaje en rack en el armario 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]link:install-cable.html["Cablea el hardware"]
 [role="quick-margin-para"]
-Para cablear el hardware, conecta las controladoras entre sí para activar la duplicación entre controladoras, que garantiza la redundancia total del sistema y se utiliza para la duplicación de caché y el envío de E/S, y luego conecta las controladoras a tu red host.
+Para realizar el cableado del hardware, conecta los controladores entre sí para habilitar la duplicación entre controladores, lo que garantiza una redundancia total del sistema y se usa para la duplicación de caché y el envío de E/S. Luego, conecta los controladores a tu red del host y después conecta las bandejas de expansión SAS si corresponde.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]link:install-power-hardware.html["Enciende el sistema de almacenamiento"]
 [role="quick-margin-para"]
-Para encender tu sistema de almacenamiento, conecta un cable de alimentación a cada fuente de alimentación de los controladores y luego conéctalos a fuentes de alimentación en circuitos diferentes
+Para encender tu sistema de almacenamiento, primero enciende los bastidores y asigna los ID de bastidor (si aplica), y luego enciende los controladores.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:install-complete-setup.html["Completa la configuración del sistema de almacenamiento"]
 [role="quick-margin-para"]

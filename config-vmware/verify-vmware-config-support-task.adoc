@@ -1,7 +1,7 @@
 ---
 permalink: config-vmware/verify-vmware-config-support-task.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Compruebe que la configuración de VMware es compatible. 
 ---
 = Compruebe la compatibilidad de la configuración de VMware en E-Series
@@ -30,10 +30,11 @@ Se muestra la sección criterios de búsqueda de afinado. En esta sección, pued
 
  a| 
 ** Es posible que necesite instalar controladores listos para usar para garantizar una funcionalidad y compatibilidad adecuadas. Los controladores HBA pueden instalarse mediante el shell ESXi o una conexión SSH remota al host ESXi. Para acceder al host mediante cualquiera de estos métodos, se debe habilitar el shell ESXi y el acceso SSH. Para obtener más información sobre el shell ESXi, consulte la base de conocimientos de VMware acerca del uso del shell ESXi en ESXi. Para ver los comandos de instalación, consulte las instrucciones que acompañan a los controladores HBA.
-** Cada proveedor de HBA tiene métodos específicos para actualizar el código de arranque y el firmware. Algunos de estos métodos pueden incluir el uso de un complemento de vCenter o la instalación del proveedor CIM en el host ESXi. Los complementos de vCenter se pueden usar para obtener información acerca del HBA específico del proveedor. Consulte la sección de asistencia técnica del sitio web del proveedor para obtener las instrucciones y el software necesarios para actualizar el código de arranque o el firmware del HBA. Consulte la _Guía de compatibilidad de VMware_ o el sitio web del proveedor de HBA para obtener el código de arranque o el firmware correctos.
+** Cada fabricante de HBA dispone de métodos específicos para actualizar el código de arranque y el firmware. Algunos de estos métodos podrían incluir el uso de un complemento de vCenter o la instalación de un proveedor CIM en el host ESXi. Los complementos de vCenter se pueden utilizar para obtener información sobre el HBA específico del fabricante. Consulta la sección de soporte del sitio web del fabricante para obtener las instrucciones y el software necesarios para actualizar el código de arranque o el firmware del HBA. Consulta https://compatibilityguide.broadcom.com/search?program=io&persona=live&column=brandName&order=asc["_Guía de compatibilidad de VMware_"] o el sitio web del fabricante del HBA para obtener el código de arranque o el firmware correctos.
+** Revisa las alertas y la información asociadas con la configuración seleccionada para cualquier sistema operativo específico, sistema operativo invitado, HBA u otros ajustes o información relacionada que pueda necesitar aplicarse a tu configuración.
 
  a| 
-FC
+FCP
  a| 
 Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
 
@@ -50,6 +51,27 @@ Controlador de la tarjeta de interfaz de red (NIC), firmware y código de inicio
 SAS
  a| 
 Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+
+
+ a| 
+NVMe sobre FC
+ a| 
+Controlador, firmware y código de arranque del adaptador de bus de host (HBA)
+
+
+
+ a| 
+NVMe over roce
+ a| 
+Controlador de Remote Direct Memory Access (RDMA), firmware y bootcode
+
+
+
+ a| 
+NVMe sobre TCP
+ a| 
+Controlador de la tarjeta de interfaz de red (NIC), firmware y código de inicio
 
 |===
 

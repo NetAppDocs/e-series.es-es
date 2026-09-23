@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: En SLES 12, se crea un sistema de archivos en el espacio de nombres y se monta el sistema de archivos. 
 ---
-= Creación de sistemas de archivos en E-Series - Linux SLES 12 (NVMe sobre InfiniBand)
+= Crear sistemas de archivos en hosts Linux SLES 12 E-Series con NVMe sobre InfiniBand
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

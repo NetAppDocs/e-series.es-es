@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
 summary: Descripción general de la instalación de bandejas de unidades en armarios 40U E-Series 3040 
 ---
-= Instala bandejas en el armario 3040 40U - E-Series
+= Bandejas compatibles con el armario E-Series 3040 de 40U
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

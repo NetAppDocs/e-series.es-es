@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive power canister, replacing E2800 power canister, E2800, E-Series, eseries 
 summary: Sustituya una bandeja de controladoras o una bandeja de unidades de 60 unidades, que incluye dos contenedores de alimentación por motivos de redundancia de alimentación. 
 ---
-= Sustituya el compartimento de alimentación - E2800 (60 unidades)
+= Sustituye el módulo de alimentación en una bandeja E2800 de 60 unidades
 :allow-uri-read: 
 :experimental: 
 :icons: font

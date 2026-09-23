@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iSER worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Use esta hoja de datos para registrar la información de configuración de almacenamiento Iser over InfiniBand. 
 ---
-= Registre la configuración de iSER over InfiniBand en E-Series - Linux
+= Hoja de trabajo de configuración de iSER sobre InfiniBand para hosts Linux de E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

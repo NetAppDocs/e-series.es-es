@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya el controlador - E4000
+= Sustituir el controlador en un sistema de almacenamiento E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -126,7 +126,7 @@ Guarde los materiales de empaque que se deben usar para enviar el compartimento 
 Cuando una controladora tiene un error y se debe sustituir, el número de pieza de repuesto se muestra en el área Detalles de Recovery Guru. Si necesita encontrar este número manualmente, siga estos pasos:
 
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Localice la bandeja de controladoras, que se marca con el icono de la controladora.
 .. Haga clic en el icono de la controladora.
 .. Seleccione el controlador y haga clic en *Siguiente*.
@@ -178,8 +178,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 +
 ** Desde SANtricity System Manager:
 +
-... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+... Selecciona el menú: Hardware [Controller and components].
 ... Seleccione la controladora que desea colocar en estado sin conexión.
 ... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -479,7 +478,7 @@ donde:
 
 . En SANtricity System Manager, confirme que el estado de la nueva controladora es óptimo.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú: Hardware [Controller and components].
 .. Para la bandeja del controlador, seleccione *Mostrar parte posterior de la bandeja*.
 .. Seleccione el compartimento de controladoras que reemplazó.
 .. Seleccione *Ver configuración*.
@@ -547,7 +546,7 @@ NOTE: Si no puede resolver el problema, póngase en contacto con el soporte téc
 . Si es necesario, redistribuya los volúmenes de vuelta a su propietario preferido mediante System Manager de SANtricity.
 +
 .. Selecciona *Almacenamiento › Volúmenes*.
-.. Selecciona *Más › Redistribuir volúmenes*.
+.. Selecciona el icono de la elipse › Redistribute volumes.
 
 
 . Haga clic en *Hardware › Soporte › Centro de actualización* para asegurarse de que está instalada la última versión del software del sistema operativo SANtricity (firmware del controlador).

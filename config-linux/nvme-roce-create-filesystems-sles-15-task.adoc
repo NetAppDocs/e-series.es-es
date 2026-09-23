@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Para RHEL 9, RHEL 10, SLES 15 y SLES 16, creas un sistema de archivos en el dispositivo NVMe nativo y montas el sistema de archivos. 
 ---
-= Crear sistemas de archivos en E-Series - Linux (NVMe sobre RoCE)
+= Crear sistemas de archivos en un host Linux para E-Series NVMe over RoCE
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

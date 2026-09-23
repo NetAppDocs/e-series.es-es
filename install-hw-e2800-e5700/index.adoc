@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale y configure la cabina E2800 o E5700. 
 ---
-= Instalación y configuración: Sistemas de almacenamiento E2800 y E5700
+= Flujo de trabajo de instalación y configuración para los sistemas de almacenamiento E2800 y E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Instale y configure la cabina E2800 o E5700.
 Aprenda a instalar y configurar el sistema de almacenamiento E2800 o E5700.
 
 Puede elegir uno de los siguientes formatos para guiarle en la instalación y configuración del nuevo sistema de almacenamiento.
+
+
+NOTE: Los sistemas de almacenamiento E2800 y E5700 son productos fuera de comercialización (EOA) y ya no están disponibles para su compra, pero todavía cuentan con soporte. La información de esta sección se proporciona solo como referencia.
 
 * *PDF*
 +

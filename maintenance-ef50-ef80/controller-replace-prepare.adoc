@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, prepare the impaired controller 
 summary: Prepárate para reemplazar el controlador dañado en tu sistema de almacenamiento EF50 o EF80 desempaquetando el controlador de reemplazo, confirmando que el número de pieza es correcto y haciendo una copia de seguridad de la base de datos de configuración. 
 ---
-= Prepara la sustitución del controlador - EF50 y EF80
+= Prepárate para sustituir un controlador en los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -214,6 +214,7 @@ Se abre la página Configurar hosts.
 +
 Se muestra el cuadro de diálogo Crear host.
 
+. Haz clic en *+Add Host Port* para acceder al campo «Puertos de host» y añadir los identificadores de puerto de host. Puedes añadir uno o varios identificadores de puerto de host para asociarlos al host.
 . Seleccione la configuración del host que corresponda.
 +
 [cols="25h,~"]

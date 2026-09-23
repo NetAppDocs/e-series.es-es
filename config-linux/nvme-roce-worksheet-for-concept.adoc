@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over RoCE worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilice esta hoja de datos para registrar la información de configuración del almacenamiento NVMe over roce. 
 ---
-= Registre la configuración de NVMe over RoCE en E-Series - Linux
+= Hoja de trabajo de configuración de NVMe sobre RoCE para hosts Linux E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -53,27 +53,35 @@ Busque y documente el iniciador NQN de cada host.
  a| 
 Host (iniciador) 1
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 
 
  a| 
 Host (iniciador) 2
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 |===
 

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
 summary: 'Después de instalar el hardware de tu sistema de almacenamiento EF50 o EF80, conecta el cableado para la replicación entre controladores y las conexiones de red del host. (Los puertos de administración se cablean más adelante, en la sección de configuración completa del sistema de almacenamiento.)' 
 ---
-= Cablea el hardware - EF50 y EF80
+= Cablea el hardware de los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Después de instalar el hardware de tu sistema de almacenamiento EF50 o EF80, conecta el cableado para la replicación entre controladores y las conexiones de red del host. (Los puertos de administración se cablean más adelante, en la sección de configuración completa del sistema de almacenamiento.)
+Después de instalar el hardware de tu sistema de almacenamiento EF50 o EF80, conecta la duplicación entre controladores, las conexiones de red del host y los estantes SAS si corresponde. (Conectarás los puertos de gestión más adelante, en la sección de configuración completa del sistema de almacenamiento).
 
 .Acerca de esta tarea
 * El término _I/O module_ se utiliza para referirse a las tarjetas de interfaz del host (HIC) en este procedimiento.
@@ -60,7 +60,10 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["conexión de ca
 Conecta las conexiones del host de tu sistema de almacenamiento según tu topología de red: conexión directa o conexión en red.
 
 .Acerca de esta tarea
-* Dependiendo del modelo de tu sistema de almacenamiento, el tipo de módulos de E/S de host instalados en el sistema de almacenamiento puede ser Ethernet o Fibre Channel (FC). Los ejemplos de cableado en este procedimiento muestran ambos tipos de módulos de E/S de host como los admiten los modelos de sistemas de almacenamiento.
+* Dependiendo del modelo de tu sistema de almacenamiento y de la versión de SANtricity que esté ejecutando, se admiten diferentes tipos de módulos de E/S de host. Los ejemplos de cableado en este procedimiento muestran módulos de E/S de host de Ethernet y Fibre Channel (FC).
++
+Para consultar todos los módulos de E/S de host compatibles y las prioridades de las ranuras para el modelo de tu sistema de almacenamiento, consulta link:https://hwu.netapp.com["Hardware Universe de NetApp"^].
+
 * Los ejemplos de cableado no muestran los HBA FC de 64 Gb y 4 puertos en el host 1 y el host 2; sin embargo, si tienes estos instalados, conecta cada puerto alterno de la misma manera que se muestra para los HBA de 2 puertos.
 
 
@@ -330,5 +333,93 @@ image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["Topología EF80 f
 =====
 --
 ====
+
+
+[[step-3-cable-the-sas-shelf-connections]]
+== Paso 3: conecta los cables de las conexiones del shelf SAS
+
+Los siguientes procedimientos muestran cómo conectar los controladores a una bandeja DE460C o a una pila de tres bandejas DE460C.
+
+.Acerca de esta tarea
+* Los ejemplos de cableado muestran bastidores DE460C; sin embargo, el mismo cableado es válido para todos los bastidores SAS compatibles. Consulta link:https://hwu.netapp.com["Hardware Universe de NetApp"^] para los bastidores SAS compatibles.
+* Para conocer el número máximo de estantes que admite tu sistema de almacenamiento y todas las opciones de cableado, como el cableado óptico, consulta link:https://hwu.netapp.com["Hardware Universe de NetApp"^].
+* En los procedimientos de cableado se muestran controladores con un módulo de E/S SAS en la ranura 3. Esta es la única configuración de módulo de E/S SAS compatible con SANtricity 12.10.
+* En los esquemas de cableado, el cableado del controlador A aparece en azul y el del controlador B, en rojo.
+* Siempre tienes que cablear los controladores y una o más bandejas de manera que haya dos conexiones de cable para la ruta del lado A (IOMA) y la ruta del lado B (IOMB), como se muestra en las ilustraciones de cableado.
+* Debes utilizar los cables de almacenamiento que se incluyen con tu sistema de almacenamiento, que pueden ser del siguiente tipo:
++
+*cable mini-SAS HD*
+
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cable mini-SAS HD]
+
+
+
+[role="tabbed-block"]
+====
+.Opción 1: una estantería DE460C
+--
+Conecta cada controlador a cada módulo IOM12 del shelf DE460C, de modo que los controladores tengan una ruta por el lado A (IOMA) y otra por el lado B (IOMB) hacia el shelf.
+
+.Pasos
+. Conecta el puerto 3a del controlador A al puerto 1 del IOMA del shelf.
+. Conecta el puerto 3b del controlador A al puerto 2 del IOMA del shelf.
+. Conecta el puerto 3c del controlador A al puerto 3 del IOMB del shelf.
+. Conecta el puerto 3d del controlador A al puerto 4 del IOMB del shelf.
+. Conecta el cable del puerto 3a del controlador B al puerto 3 del IOMA del shelf.
+. Conecta el puerto 3b del controlador B al puerto 4 del IOMA del shelf.
+. Conecta el puerto 3c del controlador B al puerto 1 del IOMB del shelf.
+. Conecta el puerto 3d del controlador B al puerto 2 del IOMB del shelf.
+
+
+Cuando hayas terminado de cablear la estantería, el cableado debería tener el siguiente aspecto:
+
+image:../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg["conecta los puertos del controlador a una bandeja DE460C"]
+
+--
+.Opción 2: Tres estantes DE460C
+--
+Conecta los tres racks entre sí (conexiones entre racks) y luego conecta cada controlador a cada extremo de la pila de racks (rack 1 y rack 3), de modo que los controladores tengan una ruta del lado A (IOMA) y una ruta del lado B (IOMB) hacia la pila de racks.
+
+. Conecta los cables entre estantes para la ruta IOMA:
++
+.. Cable del shelf 1, puerto 1 del IOMA, al shelf 2, puerto 4 del IOMA.
+.. Cable el shelf 1 puerto IOMA 2 al shelf 2 puerto IOMA 3.
+.. Conecta el cable del shelf 2, puerto IOMA 1, al shelf 3, puerto IOMA 4.
+.. Cable del shelf 2, puerto 2 del IOMA, al shelf 3, puerto 3 del IOMA.
+
+
+. Conecta los cables entre estantes para la ruta IOMB:
++
+.. Cable del shelf 1, puerto 1 del IOMB, al shelf 2, puerto 3 del IOMB.
+.. Cable el shelf 1 puerto IOMB 2 al shelf 2 puerto IOMB 4.
+.. Cable el shelf 2 puerto IOMB 1 al shelf 3 puerto IOMB 3.
+.. Cable del shelf 2, puerto 2 del IOMB, al shelf 3, puerto 4 del IOMB.
+
+
+. Conecta el controlador A al shelf 3 (ruta IOMA) y al 1 (ruta IOMB):
++
+.. Cablea el puerto 3a del controlador A al puerto 1 del IOMA del shelf 3
+.. Cablea el puerto 3b del controlador A al puerto 2 del IOMA del shelf 3.
+.. Cablea el puerto 3c del controlador A al puerto 3 del IOMB del shelf 1.
+.. Cablea el puerto 3d del controlador A al puerto 4 del IOMB del shelf 1.
+
+
+. Cablea el controlador B a la estantería 1 (ruta IOMA) y 3 (ruta IOMB):
++
+.. Cablea el puerto 3a del controlador B al puerto 3 del IOMA de la shelf 1.
+.. Cablea el puerto 3b del controlador B al puerto 4 del IOMA del shelf 1.
+.. Cablea el puerto 3c del controlador B al puerto 1 del IOMB del shelf 3.
+.. Cablea el puerto 3d del controlador B al puerto 2 del IOMB del shelf 3.
+
+
+
+
+Cuando hayas terminado de cablear las estanterías, el cableado debería tener el siguiente aspecto:
+
+image:../media/drw_ef50-ef80_3_de460c_cabling_ieops-2992.svg["conecta los controladores a los racks DE460C 1 y 3"]
+
+--
+====
 .El futuro
-Después de cablear la duplicación entre controladores y las conexiones de host para tu sistema de almacenamiento, link:install-power-hardware.html["enciende tu sistema de almacenamiento"].
+Una vez que hayas conectado tu sistema de almacenamiento, link:install-power-hardware.html["enciende tu sistema de almacenamiento"].

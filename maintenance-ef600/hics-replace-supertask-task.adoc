@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
 summary: 'Reemplace una tarjeta de interfaz del host (HIC) EF300 o EF600 con fallos.' 
 ---
-= Sustituya la tarjeta de interfaz del host (HIC) con errores: EF300 o EF600
+= Sustituir un HIC averiado en un sistema de almacenamiento EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -16,6 +16,9 @@ Siga este procedimiento para reemplazar una tarjeta de interfaz del host (HIC) c
 
 .Acerca de esta tarea
 Cuando sustituyes un HIC averiado, debes desconectar un controlador para poner el sistema en un estado sin redundancia, reemplazar el HIC y volver a poner el controlador en línea.
+
+
+NOTE: No es necesario apagar las matrices de almacenamiento EF300 y EF600 al sustituir un HIC del mismo tipo de protocolo (por ejemplo, al sustituir un HIC de Fibre Channel por otro HIC de Fibre Channel).
 
 .Antes de empezar
 * Revisar link:hics-overview-supertask-concept.html["Requisitos para las actualizaciones de EF 300 o EF600 HIC"].
@@ -262,7 +265,7 @@ Si es necesario, instale la versión más reciente.
 
 . Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
 +
-.. Seleccione MENU:Storage[Volumes]. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione MENU:More[Cambiar propiedad] para ver los propietarios del volumen.
+.. Selecciona el menú: Storage [Volumes]. En la página *All Volumes*, comprueba que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona el *ellipsis icon* > *Change ownership* para ver los propietarios de los volúmenes.
 .. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
 .. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya al menú:más[redistribuir volúmenes].
 .. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras la distribución automática o la distribución manual, debe comprobar Recovery Guru para encontrar problemas de conectividad de host.

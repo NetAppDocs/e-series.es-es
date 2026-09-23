@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conecte un host directamente a una controladora o utilice switches. 
 ---
-= Cableado de tu sistema de almacenamiento - E-Series
+= Conoce el cableado de los sistemas de almacenamiento E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -75,4 +75,4 @@ E2760 Y E5660
 DE460C
 
 |===
-Para obtener información sobre el cableado necesario para las funciones de duplicación, consulta la  https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].
+Para obtener información sobre el cableado necesario para las funciones de duplicación, consulta la  https://www.netapp.com/pdf.html?item=/media/19405-tr-4839.pdf["Descripciones de las funciones de mirroring síncrono y asíncrono y guía de puesta en marcha"^].

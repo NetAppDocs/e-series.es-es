@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Prepárese para instalar - E4012 y E4060
+= Prepárate para instalar un sistema de almacenamiento E4012 o E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,16 @@ summary:
 Debe preparar su sitio para que cumpla con las especificaciones del sistema de almacenamiento de la serie E4000.
 
 .Pasos
-. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
+. Registra tu sistema:
++
+
+NOTE: Puedes registrar tu sistema ahora o más adelante. Más adelante, al iniciar el sistema, se te pedirá que registres tu sistema.
+
++
+.. Crea una cuenta en http://mysupport.netapp.com/["Soporte de NetApp"^] si aún no tienes una.
+.. Registra tu sistema siguiendo las instrucciones del artículo de la base de conocimientos de NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Cómo registrar un nuevo sistema"^].
+
+
 . Asegúrese de que los siguientes elementos están en la caja que recibió:
 +
 [role="tabbed-block"]

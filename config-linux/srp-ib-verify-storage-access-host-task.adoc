@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Antes de usar el volumen, debe verificar que el host puede escribir datos en el volumen y leerlos nuevamente. 
 ---
-= Verifique el acceso al almacenamiento en el host en E-Series - Linux (SRP over InfiniBand)
+= Verifica el acceso al almacenamiento en un host Linux en E-Series para SRP a través de InfiniBand
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

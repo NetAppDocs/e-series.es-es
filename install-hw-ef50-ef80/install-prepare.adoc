@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Prepárate para instalar tu sistema de almacenamiento EF50 o EF80 preparando el sitio, entendiendo las precauciones de elevación para tu sistema de almacenamiento, desempaquetando las cajas y comparando el contenido con el albarán de embalaje, y registrando el sistema de almacenamiento para acceder a los beneficios de soporte. 
 ---
-= Prepárate para instalar - EF50 y EF80
+= Prepárate para instalar un sistema de almacenamiento EF50 o EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,10 +21,10 @@ Prepárate para instalar tu sistema de almacenamiento EF50 o EF80 preparando el 
 Asegúrate de que el sitio y el armario o rack que planeas usar cumplen con las especificaciones de tu sistema de almacenamiento.
 
 .Pasos
-. Usa https://hwu.netapp.com["Hardware Universe de NetApp"^] para confirmar que tu sitio cumple los requisitos medioambientales y eléctricos de tu sistema de almacenamiento.
+. Utiliza link:https://hwu.netapp.com["Hardware Universe de NetApp"^] para comprobar que tu instalación cumple los requisitos medioambientales y eléctricos para tu sistema de almacenamiento.
 . Asegúrate de tener suficiente espacio en el armario o en el rack para tu sistema de almacenamiento y cualquier switch.
 +
-Si lo necesitas, consulta https://hwu.netapp.com["Hardware Universe de NetApp"^] para conocer las dimensiones exactas de tu sistema de almacenamiento.
+Si es necesario, consulta link:https://hwu.netapp.com["Hardware Universe de NetApp"^] para conocer las dimensiones exactas de tu sistema de almacenamiento.
 
 +
 ** 2U para un sistema de almacenamiento
@@ -81,7 +81,7 @@ NOTE: Si hay discrepancias, anótalas para tomar medidas más adelante.
 Los siguientes artículos son algunos de los contenidos que puedes ver en las cajas.
 
 +
-Si es necesario, consulta https://hwu.netapp.com/["Hardware Universe de NetApp"^] para ver otros cables compatibles e identificar su uso.
+Si es necesario, consulta link:https://hwu.netapp.com["Hardware Universe de NetApp"^] para ver otros cables compatibles e identificar su uso.
 
 +
 [cols="9,9,5"]
@@ -114,9 +114,12 @@ Si es necesario, consulta https://hwu.netapp.com/["Hardware Universe de NetApp"^
 
 Después de que te hayas asegurado de que tu sitio cumple con las especificaciones de tu sistema de almacenamiento y hayas verificado que tienes todas las piezas que pediste, deberías registrar tu sistema de almacenamiento.
 
-. Cree una cuenta y registre su hardware en http://mysupport.netapp.com/["Soporte de NetApp"^].
+
+NOTE: Puedes registrar tu sistema de almacenamiento ahora o más adelante. Más adelante, al iniciar el sistema, se te pedirá que registres tu sistema.
+
+. Anota el número de serie (SN) de cada controlador.
 +
-El proceso de registro requiere el número de serie (SN) de cada controlador. Puedes encontrar el número de serie en los siguientes lugares:
+Puedes encontrar el número de serie en los siguientes lugares:
 
 +
 ** En cada controlador
@@ -127,6 +130,8 @@ image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[ejemplo de la etiqueta del
 
 
 
+. Crea una cuenta en http://mysupport.netapp.com/["Soporte de NetApp"^] si aún no tienes una.
+. Registra tu sistema siguiendo las instrucciones del artículo de la base de conocimientos de NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Cómo registrar un nuevo sistema"^].
 
 
 .El futuro

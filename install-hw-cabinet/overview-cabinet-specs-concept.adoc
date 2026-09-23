@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet specs, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
 summary: Revise la descripción general y las especificaciones de la instalación del armario. 
 ---
-= Especificaciones del armario 3040 40U (E-Series)
+= Especificaciones del armario de 40U de E-Series 3040
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

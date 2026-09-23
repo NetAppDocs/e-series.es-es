@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Revise los tipos y requisitos de contenedor E4000. 
 ---
-= Sustituya el compartimento de ventilador: E4000 (60 unidades).
+= Sustituir el compartimento del ventilador en una bandeja de 60 unidades E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,13 +54,12 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 . En SANtricity System Manager, determine qué contenedor de ventilador tiene errores.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Observe el icono de ventiladorimage:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icono de ventilador"], situado a la derecha de las listas desplegables *Bandeja*, para determinar qué bandeja tiene el compartimento de ventilador con errores.
 +
 Si un componente falla, este icono está en rojo.
 
-.. Cuando encuentre el estante con un icono rojo, seleccione *Controlador y componentes*.
-.. Seleccione el compartimento de ventiladores o el icono de ventilador rojo.
+.. Cuando encuentres la estantería con un icono rojo, selecciona el canister del ventilador o el icono rojo del ventilador.
 .. En la ficha *ventiladores*, observe los Estados de los contenedores de ventilador para determinar qué contenedor de ventilador se debe sustituir.
 +
 Es necesario sustituir un componente con un estado *fallido*.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Cambie el protocolo del puerto de host para una cabina EF300 o EF600. 
 ---
-= Cambie el protocolo de host: EF300 y EF600
+= Cambiar el protocolo de host en un sistema de almacenamiento EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -35,7 +35,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Busque el *identificador de submodelo del paquete de funciones*.
 +
 .. En el Administrador del sistema de SANtricity, seleccione *Soporte*.
-.. Selecciona el mosaico *Recursos de soporte*.
+.. Selecciona la pestaña *Recursos de asistencia*.
 .. En la ficha Recursos de soporte, busque y seleccione el enlace *Perfil de matriz de almacenamiento*.
 .. Escriba *Id. De submodelo del paquete de funciones* en el cuadro de texto y haga clic en *Buscar*.
 .. Busque el identificador de submodelo del paquete de funciones para la configuración de inicio.
@@ -669,8 +669,7 @@ Comienza la migración del paquete de funciones. Las dos controladoras se reinic
 
 . Confirme que los puertos de host tienen el protocolo esperado.
 +
-.. En el Administrador del sistema de SANtricity, seleccione *hardware*.
-.. Haga clic en *Mostrar parte posterior de la bandeja*.
+.. En SANtricity System Manager, selecciona el menú: hardware [Controladores y componentes].
 .. Seleccione el gráfico de la controladora a o de la controladora B.
 .. Seleccione *Ver ajustes* en el menú contextual.
 .. Seleccione la ficha *interfaces de host*.

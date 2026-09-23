@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF300C, replace drive, drive failure 
 summary: Sustituya una unidad en una matriz EF300. 
 ---
-= Sustituya la unidad - EF300
+= Sustituye una unidad en una matriz EF300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtrici
 . Si Recovery Guru en SANtricity System Manager le notificó un _error inminente de unidad_, pero la unidad aún no falló, siga las instrucciones en Recovery Guru para conmutar la unidad.
 . Si es necesario, use System Manager de SANtricity para confirmar que tiene una unidad de reemplazo adecuada.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú: Hardware [Drives].
 .. Seleccione la unidad con error en el gráfico de bandeja.
 .. Haga clic en la unidad para mostrar el menú contextual y, a continuación, seleccione *Ver configuración*.
 .. Confirme que la unidad de sustitución tiene una capacidad igual o mayor que la unidad que desea reemplazar y que tiene las funciones que espera.
@@ -147,7 +147,7 @@ Cuando se inserta una unidad por primera vez, es posible que el LED de atención
 NOTE: Realice esta operación solo cuando el soporte técnico o Recovery Guru se lo indiquen.
 
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú: Hardware [Drives].
 .. Haga clic en la unidad que sustituyó.
 .. En el menú contextual de la unidad, seleccione *reconstruir*.
 .. Confirme que desea llevar a cabo esta operación.
@@ -332,7 +332,7 @@ Confirme que la unidad nueva funciona correctamente.
 NOTE: Realice esta operación solo cuando el soporte técnico o Recovery Guru se lo indiquen.
 
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú: Hardware [Drives].
 .. Haga clic en la unidad que sustituyó.
 .. En el menú contextual de la unidad, seleccione *reconstruir*.
 .. Confirme que desea llevar a cabo esta operación.

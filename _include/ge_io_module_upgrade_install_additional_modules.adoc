@@ -3,7 +3,9 @@
 
 
 .Acerca de esta tarea
-Empiezas con un controlador y luego repites los pasos para el otro controlador.
+* Empiezas con un controlador y luego repites los pasos para el otro controlador.
+* La ilustración muestra cómo extraer un módulo de E/S de la ranura 2. Dependiendo del tipo de módulo de E/S al que vayas a actualizar, la ranura puede ser diferente.
+
 
 .Pasos
 . Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
@@ -47,9 +49,11 @@ Puedes usar la lengüeta de la izquierda y el tornillo de mariposa para empujar 
 .. Gira el tornillo en el sentido de las agujas del reloj para apretarlo.
 
 
-. Conecta el módulo de E/S a la red host.
+. Conecta el módulo de E/S a la red del host o a la bandeja de expansión SAS.
 +
-Puedes usar la sección link:../install-hw-ef50-ef80/install-cable.html["Cablea el hardware"^] del contenido de instalación y configuración del sistema para el cableado de red del host.
+** Para el cableado de la red del host, puedes usar la sección link:../install-hw-ef50-ef80/install-cable.html["Cablea el hardware"^] del contenido de instalación y configuración del sistema para el cableado de la red del host.
+** Para el cableado de la bandeja de expansión SAS, puedes usar el procedimiento link:../install-hw-cabling/hotadd-drive-shelf-task.html["Incorpora en caliente una bandeja de discos en un sistema de almacenamiento E-Series"^].
+
 
 . Repite estos pasos para actualizar un módulo de E/S en el otro controlador.
 

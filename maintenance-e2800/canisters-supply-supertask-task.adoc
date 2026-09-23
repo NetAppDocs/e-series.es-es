@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: Sustituya una bandeja de controladoras E2800 de 12 o 24 unidades o una bandeja de unidades, que incluye dos fuentes de alimentación con ventiladores integrados. 
 ---
-= Sustituya la fuente de alimentación - E2800 (12 o 24 unidades)
+= Sustituye la fuente de alimentación en un shelf E2800 de 12 o 24 unidades
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -62,7 +62,7 @@ Esta información se puede encontrar en el área Detalles de Recovery Guru, o bi
 
 +
 .. Seleccione *hardware*.
-.. Observe los iconos de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["'Icono de ventilador'"]situados a la derecha de las listas desplegables de *Bandeja* para determinar qué bandeja tiene el suministro de alimentación fallido.
+.. Fíjate en los iconos de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"] y del ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icono de ventilador"] a la derecha de las listas desplegables *Shelf* para saber en qué estante está la fuente de alimentación con error.
 +
 Si un componente ha fallado, estos iconos o ambos son de color rojo.
 

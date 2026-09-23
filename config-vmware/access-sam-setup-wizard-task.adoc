@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/access-sam-setup-wizard-task.html 
 sidebar: sidebar 
-keywords: access System Manager vmware, express vmware configuration,software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: access System Manager vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: El asistente de configuración de SANtricity System Manager se utiliza para configurar la cabina de almacenamiento. 
 ---
-= Configure el almacenamiento con SANtricity System Manager, VMware
+= Configura el almacenamiento E-Series usando SANtricity System Manager para VMware
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -77,7 +77,7 @@ La primera vez que se abre SANtricity System Manager en una cabina sin configura
 
 . Introduzca la contraseña del administrador del sistema para la función admin en los campos Set Administrator Password y Confirm Password y, a continuación, haga clic en *Set Password*.
 +
-El asistente de configuración se inicia si no hay pools, grupos de volúmenes, cargas de trabajo ni notificaciones configurados.
+El asistente de configuración se inicia si no hay ningún pool, grupo de volúmenes, carga de trabajo ni notificación configurados.
 
 . Use el asistente de configuración para realizar las siguientes tareas:
 +
@@ -91,6 +91,6 @@ El asistente de configuración se inicia si no hay pools, grupos de volúmenes, 
 . Si todavía no creó un volumen, cree uno en menu:Storage[Volumes > Create > Volume].
 +
 
-NOTE: Para EF300 y EF600, debe configurar el tamaño de bloque en 512 bytes para garantizar la compatibilidad con VMware. Consulte la ayuda en línea de SANtricity System Manager para obtener más información sobre cómo configurar un volumen en 512 bytes.
+NOTE: Los volúmenes deben configurarse para utilizar la emulación de 512 bytes (512e) cuando se utilicen unidades de 4096 bytes para garantizar la compatibilidad con VMware. Consulta la ayuda en línea de SANtricity System Manager para obtener más información sobre cómo configurar un volumen para que utilice la emulación de 512 bytes (512e).
 
 

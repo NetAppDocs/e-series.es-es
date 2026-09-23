@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/overview-concept.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Revise los requisitos para usar el método exprés para configurar una cabina E-Series y un host de VMware. 
 ---
-= Supuestos (E-Series y VMware)
+= Supuestos de configuración express de VMware para E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -64,12 +64,13 @@ Aprovisionamiento de almacenamiento
  a| 
 * No se utilizarán volúmenes compartidos.
 * Se crearán pools en lugar de grupos de volúmenes.
+* Los volúmenes deben configurarse para utilizar la emulación de 512 bytes (512e) cuando se utilicen unidades de 4096 bytes para garantizar la compatibilidad con VMware. Consulta la ayuda en línea de SANtricity System Manager para obtener más información sobre cómo configurar un volumen para que utilice la emulación de 512 bytes (512e).
 
 
 
 
  a| 
-Protocolo: FC
+Protocolo: Fibre Channel (FCP)
  a| 
 * Ha activado todas las conexiones FC del lado del host y la división en zonas de switches.
 * Utiliza switches y HBA de FC compatibles con NetApp.
@@ -102,6 +103,26 @@ Protocolo: SAS
  a| 
 * Utiliza HBA SAS compatibles con NetApp.
 * Utiliza versiones de controlador y firmware SAS HBA tal como se indica en la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+
+ a| 
+Protocolo: NVMe sobre RoCE (RDMA sobre Ethernet convergente)
+ a| 
+* Estás utilizando conmutadores Ethernet compatibles con tráfico RDMA
+* Has configurado los conmutadores Ethernet para una red sin pérdidas usando el control de flujo prioritario (PFC) basado en Differentiated Services Code Point (DSCP)
+* Estás utilizando las versiones del controlador y del firmware de RDMA que figuran en http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+
+ a| 
+Protocolo: NVMe sobre TCP
+ a| 
+* Estás utilizando conmutadores Ethernet compatibles con tráfico TCP
+* Has configurado los conmutadores Ethernet según la recomendación del proveedor para TCP.
+* Estás utilizando las versiones de controlador de red y firmware que figuran en http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
 
 
 |===

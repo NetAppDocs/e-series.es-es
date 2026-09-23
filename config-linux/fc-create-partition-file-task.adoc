@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, 
 summary: Una nueva LUN no tiene ninguna partición ni sistema de archivos cuando el host Linux lo detecta por primera vez. Debe formatear la LUN para poder utilizarla. 
 ---
-= Crear particiones y sistemas de archivos en E-Series - Linux (FC)
+= Crear particiones y sistemas de archivos en hosts Linux FC E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

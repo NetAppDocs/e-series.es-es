@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, prerequisite, replace the controller module 
 summary: Antes de sustituir el controlador en tu sistema de almacenamiento EF50 o EF80, asegúrate de cumplir los requisitos para una sustitución exitosa. Esto incluye verificar que tienes un controlador con error, comprobar el estado de tu sistema de almacenamiento, conseguir las herramientas para el procedimiento y contar con una estación de gestión y un navegador para acceder a SANtricity System Manager. 
 ---
-= Requisitos para reemplazar un controlador - EF50 y EF80
+= Requisitos para la sustitución del controlador en los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

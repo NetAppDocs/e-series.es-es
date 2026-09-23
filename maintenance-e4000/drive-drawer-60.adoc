@@ -2,9 +2,9 @@
 permalink: maintenance-e4000/drive-drawer-60.html 
 sidebar: sidebar 
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
-summary: Sustituya un cajón de unidades en una bandeja de controladoras E2860 o una bandeja de unidades DE460C. 
+summary: Es posible sustituir un cajón de unidades en una bandeja de controladoras E4060 o una bandeja de unidades DE460C. 
 ---
-= Sustituir el cajón de unidades: E4000 (bandeja de 60 unidades)
+= Reemplaza la bandeja de unidades en un shelf E4000 de 60 unidades
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,7 +15,7 @@ summary: Sustituya un cajón de unidades en una bandeja de controladoras E2860 o
 Es posible sustituir un cajón de unidades en una bandeja de controladoras E4060 o una bandeja de unidades DE460C.
 
 .Acerca de esta tarea
-Los pasos para reemplazar un cajón de unidades con error en una bandeja de controladoras E4060 o una bandeja de unidades DE460C dependen de si los volúmenes del cajón están protegidos por la protección contra pérdida de cajón. Si todos los volúmenes del cajón de la unidad están en pools de discos o grupos de volúmenes con protección contra pérdida de cajón, puede realizar este procedimiento en línea. De lo contrario, se debe detener toda la actividad de I/o del host y apagar la bandeja antes de sustituir el cajón de la unidad.
+Los pasos para sustituir un cajón de unidades con error en un estante de controlador E4060 o en un estante de unidades DE460C dependen de si los volúmenes del cajón están protegidos por Drawer Loss Protection. Si todos los volúmenes del cajón de unidades están en pools de discos o grupos de volúmenes que tienen Drawer Loss Protection, puedes realizar este procedimiento en línea. De lo contrario, debes realizar este procedimiento fuera de línea, deteniendo toda la actividad de E/S del host y apagando todo el sistema de almacenamiento (el estante del controlador y todos los estantes de expansión) antes de sustituir un cajón de unidades.
 
 .Antes de empezar
 * Asegúrese de que la bandeja de unidades cumpla todas las siguientes condiciones:
@@ -46,14 +46,14 @@ CAUTION: *Posible pérdida de acceso a los datos* -- Si un volumen ya está en e
 
 
 
-NOTE: Si necesita información sobre cómo reemplazar una bandeja de expansión E-Series DE460c, consulte https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de conocimientos de NetApp"^] el .
+NOTE: Si necesitas información sobre cómo sustituir una bandeja de expansión DE460C de la E-Series, consulta el  https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de conocimientos de NetApp"^].
 
 
 
 [[step-1-prepare-to-replace-drive-drawer]]
 == Paso 1: Preparar la sustitución del cajón de la unidad
 
-Determine si puede realizar el procedimiento de reemplazo mientras la bandeja de unidades está en línea o si necesita detener la actividad de I/o del host y apagar cualquiera de las bandejas que se encuentran encendidas.
+Determina si puedes llevar a cabo el procedimiento de sustitución mientras el bastidor de unidades está en línea o si necesitas detener la actividad de E/S del host y apagar cualquiera de los bastidores que estén encendidos (realizar el procedimiento fuera de línea).
 
 Si va a sustituir un cajón en una bandeja con protección contra pérdida de cajón, no es necesario detener la actividad de I/o del host y apagar cualquiera de las bandejas.
 
@@ -64,11 +64,11 @@ Si va a sustituir un cajón en una bandeja con protección contra pérdida de ca
 ** Si la alimentación está encendida, pasar al siguiente paso.
 
 
-. Acceda a la CLI y, a continuación, escriba el comando siguiente:
+. Accede a la CLI y, a continuación, introduce el siguiente comando para poner el cajón de destino en modo de servicio:
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "array_password" -c "set tray [trayID] drawer [drawerID]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [trayID] drawer [drawerID]
 serviceAllowedIndicator=on;"
 ----
 +
@@ -76,6 +76,7 @@ donde:
 
 +
 ** `<ctlr_IP1>` es el identificador de la controladora.
+**  `array_username` es el nombre de usuario de la matriz de almacenamiento. Debes escribir el valor de  `array_username` entre comillas dobles ("").
 **  `array_password` es la contraseña de la cabina de almacenamiento. Debe escribir el valor entre sí `array_password` entre comillas dobles ("").
 ** `[trayID]` es el identificador de la bandeja de unidades que contiene el cajón de unidades que se desea reemplazar. Los valores de ID de bandeja de unidades abarcan de 0 a 99. Debe escribir el valor entre sí `trayID` entre corchetes.
 ** `[drawerID]` es el identificador del cajón de la unidad que se desea reemplazar. Los valores de ID de cajón abarcan de 1 (cajón superior) a 5 (cajón inferior). Debe escribir el valor entre sí `drawerID` entre corchetes.
@@ -87,7 +88,7 @@ Este comando garantiza quitar el cajón más alto de la bandeja de unidades 10:
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Determine si necesita detener la actividad de I/o del host, de la siguiente manera:
@@ -120,7 +121,7 @@ CAUTION: *Posible pérdida de datos* -- Si continúa este procedimiento mientras
 +
 El LED verde de caché activa de la parte posterior de cada controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
-. En la página Inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. En el panel izquierdo de SANtricity System Manager, selecciona el menú: almacenamiento [Operaciones en curso].
 . Espere a que se completen todas las operaciones antes de continuar con el siguiente paso.
 . Apague las bandejas mediante uno de los siguientes procedimientos:
 +
@@ -160,7 +161,7 @@ Los extremos metálicos de las cadenas para cables se deslizan en los rieles gu�
 
 
 
-CAUTION: *Posible daño de hardware* -- Si la bandeja de la unidad está encendida, la cadena del cable se activa hasta que ambos extremos se desenchufan. Para evitar cortocircuitos en el equipo, no permita que el conector de la cadena de cables desenchufado toque el chasis metálico si el otro extremo de la cadena de cables sigue enchufado.
+CAUTION: *Posible daño en el hardware* -- Si el bastidor de unidades está encendido, la cadena de cables permanece bajo tensión hasta que se desconecten ambos extremos. Para evitar que se produzca un cortocircuito en el equipo, no permitas que el conector de la cadena de cables desconectado entre en contacto con el chasis metálico si el otro extremo de la cadena de cables sigue conectado.
 
 .Pasos
 . Asegúrese de que la bandeja de unidades y la bandeja de controladoras ya no tengan actividad de I/o y esté apagada, o bien haya emitido el `Set Drawer Attention Indicator` Comando de la CLI.
@@ -176,8 +177,8 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 +
 *(1)* _manivela del contenedor de ventilador_
 
-.. Mediante la palanca, tire del contenedor de ventilador para sacarlo de la bandeja de unidades y separarlo.
-.. Si la bandeja está encendida, asegúrese de que el ventilador izquierdo alcance su velocidad máxima.
+.. Usando el asa, saca el compartimento del ventilador de la bandeja de unidades y déjalo a un lado.
+.. Si la bandeja está encendida, asegúrese de que el ventilador izquierdo vaya a su velocidad máxima.
 +
 
 CAUTION: *Posible daño en el equipo debido al sobrecalentamiento* -- Si la bandeja está encendida, no extraiga ambos ventiladores al mismo tiempo. De lo contrario, el equipo podría sobrecalentarse.
@@ -271,7 +272,7 @@ CAUTION: *Posibles daños en el equipo debido al sobrecalentamiento* -- Si la ba
 .. Para desenchufar la cadena de cables, tire hacia usted aproximadamente 2.5 cm (1 pulgada). Dejar el conector de la cadena de cables dentro del raíl guía vertical.
 +
 
-CAUTION: *Posible daño de hardware* -- Si la bandeja de la unidad está encendida, la cadena del cable se activa hasta que ambos extremos se desenchufan. Para evitar cortocircuitos en el equipo, no permita que el conector de la cadena de cables desenchufado toque el chasis metálico si el otro extremo de la cadena de cables sigue enchufado.
+CAUTION: *Posible daño en el hardware* -- Si el bastidor de unidades está encendido, la cadena de cables permanece bajo tensión hasta que se desconecten ambos extremos. Para evitar que se produzca un cortocircuito en el equipo, no permitas que el conector de la cadena de cables desconectado entre en contacto con el chasis metálico si el otro extremo de la cadena de cables sigue conectado.
 
 
 
@@ -393,7 +394,7 @@ Al conectar una cadena de cables, invierta el orden que utilizó al desconectar 
 .Pasos
 . Asegúrese de que:
 +
-** Se instaló un nuevo cajón de unidades.
+** Se ha instalado una nueva bandeja para discos.
 ** Tiene dos cadenas para cables de repuesto, marcadas COMO IZQUIERDA y DERECHA (en el conector horizontal junto al cajón de la unidad).
 
 
@@ -470,7 +471,7 @@ El LED puede permanecer encendido durante un minuto después de reinstalar el ve
 [[step-6-complete-drive-drawer-replacement]]
 == Paso 6: Sustitución completa del cajón de la unidad
 
-Vuelva a insertar las unidades y sustituya el embellecedor frontal en el orden correcto.
+Vuelve a insertar las unidades en el orden correcto, reinstala la bandeja de unidades en el estante de unidades, vuelve a colocar el frontal, vuelve a aplicar la alimentación (si es necesario) y luego reconstruye manualmente las unidades (si es necesario).
 
 
 CAUTION: *Posible pérdida de acceso a datos* -- debe instalar cada unidad en su ubicación original en el cajón de la unidad.
@@ -533,6 +534,10 @@ CAUTION: *Riesgo de avería del equipo* -- Asegúrese de cerrar completamente el
 
 
 
+
+. Si realizaste el procedimiento de sustitución de la bandeja de unidades en línea y alguna de las unidades de la bandeja de recambio es una unidad con error, debes reconstruir las unidades manualmente.
++
+Utilizando SANtricity System Manager, completa el procedimiento link:https://docs.netapp.com/us-en/e-series-santricity/sm-hardware/reconstruct-drive-manually.html["Reconstruir una unidad manualmente"^].
 
 
 

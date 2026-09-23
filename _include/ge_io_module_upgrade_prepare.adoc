@@ -4,20 +4,21 @@
 
 .Pasos
 . Programa una ventana de mantenimiento de tiempo de inactividad para este procedimiento. No puedes acceder a los datos en el sistema de almacenamiento hasta que completes con éxito este procedimiento. Como ambos controladores deben tener la misma configuración de módulo de E/S cuando están encendidos, la alimentación debe estar apagada cuando actualices los módulos de E/S.
+. Actualiza el firmware a la última versión. Para actualizar el firmware, sigue las instrucciones en link:../upgrade-santricity/index.html["Actualizar el sistema operativo SANtricity"^]
 . Asegúrese de tener lo siguiente:
 +
 ** Los nuevos módulos de E/S a los que te estás actualizando.
 +
-Asegúrate de que los módulos de E/S a los que vas a actualizar sean compatibles con tu sistema de almacenamiento, que tienes el mismo tipo y número de módulos de E/S para cada controlador y que entiendes la prioridad de la ranura (el nuevo módulo de E/S debe instalarse en la misma ranura en cada controlador).
+Asegúrate de que los módulos de E/S a los que vas a actualizar sean compatibles con tu sistema de almacenamiento y con la versión de SANtricity, de que tengas el mismo tipo y número de módulos de E/S para cada controlador, y de que comprendas la prioridad de la ranura (el nuevo módulo de E/S debe instalarse en la misma ranura en cada controlador).
+
++
+Puedes consultar los módulos de E/S compatibles y la prioridad de las ranuras de tu sistema de almacenamiento en https://hwu.netapp.com["Hardware Universe de NetApp"^].
 
 +
 
 CAUTION: *Posible pérdida de acceso a los datos* -- La presencia de módulos de I/O incompatibles o no coincidentes hace que los controladores se bloqueen al aplicar alimentación.
 
-+
-Si lo necesitas, puedes confirmar los módulos de E/S compatibles y la prioridad de las ranuras de tu sistema de almacenamiento en https://hwu.netapp.com["Hardware Universe de NetApp"^].
-
-** Cables para conectar los nuevos módulos de E/S a tu red.
+** Cables para conectar los nuevos módulos de E/S a tu red o a las bandejas de expansión SAS.
 ** Una pulsera ESD o que hayas tomado otras precauciones antiestáticas.
 ** Una superficie de trabajo plana y sin electricidad estática.
 ** Una estación de gestión con un navegador que puede acceder a SANtricity System Manager para los controladores.

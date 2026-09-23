@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Una nueva LUN no tiene ninguna partición ni sistema de archivos cuando el host Linux lo detecta por primera vez. Debe formatear la LUN para poder utilizarla. 
 ---
-= Crear particiones y sistemas de archivos en E-Series - Linux (SAS)
+= Crear particiones y sistemas de archivos para hosts Linux SAS E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

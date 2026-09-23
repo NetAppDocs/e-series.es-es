@@ -1,21 +1,28 @@
 ---
 permalink: config-vmware/configure-storage-host-task.html 
 sidebar: sidebar 
-keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Es posible usar el almacenamiento asignado a un host ESXi como almacén de datos Virtual Machine File System \(VMFS\) o una asignación de dispositivo sin formato \(RDM\). No se admiten RDM en el protocolo NVMe over Fibre Channel.' 
+keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
+summary: 'Puedes usar el almacenamiento asignado a un host ESXi como un almacén de datos del sistema de archivos de máquinas virtuales (VMFS) o como una asignación de dispositivo sin formato (RDM). Los RDM no son compatibles con los protocolos NVMe over fabric (NVMe over FC, NVMe over RoCE, NVMe over TCP).' 
 ---
-= Configuración del almacenamiento en el host en E-Series - VMware
+= Configura el almacenamiento en el host en E-Series para VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Es posible usar el almacenamiento asignado a un host ESXi como almacén de datos Virtual Machine File System (VMFS) o una asignación de dispositivo sin formato (RDM). No se admiten RDM en el protocolo NVMe over Fibre Channel.
+Puedes usar el almacenamiento asignado a un host ESXi como un almacén de datos del sistema de archivos de máquinas virtuales (VMFS) o como una asignación de dispositivo sin formato (RDM). Los RDM no son compatibles con los protocolos NVMe over fabric (NVMe over FC, NVMe over RoCE, NVMe over TCP).
 
-Las versiones 6._x_ y 7 _x_ de ESXi admiten las versiones 5 y 6 de VMFS.
+Todas las versiones actuales de ESXi son compatibles con las versiones 5 y 6 de VMFS.
+
+
+NOTE: No se recomienda el uso de extensiones VMFS en VMware. En lugar de añadir otro volumen como extensión a un almacén de datos VMFS ya existente para aumentar la capacidad, se recomienda realizar una operación DVE (https://kb.netapp.com/on-prem/E-Series/Management-Apps-KBs/How_to_expand_Volumes["Cómo ampliar volúmenes - base de conocimientos de NetApp"^] en el volumen de respaldo existente y ampliar el almacén de datos VMFS.
+
+
+NOTE: Se recomienda utilizar RDM virtuales o discos virtuales en lugar de RDM físicos en máquinas virtuales Linux.
 
 .Pasos
 . Asegúrese de que los volúmenes asignados al host ESXi se hayan detectado correctamente.
-. Para obtener instrucciones sobre la creación de almacenes de datos VMFS o el uso de volúmenes como RDM con vSphere Client o vSphere Web Client, consulte el https://docs.vmware.com/index.html["Sitio web de documentación de VMware"^].
+. Para obtener instrucciones sobre cómo crear almacenes de datos VMFS, consulta https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-concepts-and-operations/create-a-vsphere-vmfs-datastore.html["Crea un almacén de datos VMFS de vSphere"^].
+. Para obtener instrucciones sobre cómo crear RDM, consulta https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/raw-device-mapping-in-vsphere.html["Raw Device Mapping en vSphere"^].
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya los DIMM - E4000
+= Sustituye los módulos DIMM en un sistema de almacenamiento E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,8 +144,7 @@ El archivo se guarda en la carpeta Descargas de su navegador con el nombre, *Con
 
 . Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
 +
-.. Seleccione *hardware*.
-.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Selecciona el menú: Hardware [Controllers and components]
 .. Seleccione la controladora que desea colocar en estado sin conexión.
 .. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -325,9 +324,9 @@ Si el estado no es óptimo o si alguno de los LED de atención está encendido, 
 
 . Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
 +
-.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *All Volumes*, comprueba que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona *icono de elipse › Cambiar titularidad* para ver los propietarios de los volúmenes.
 .. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 6.
-.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si no se ha devuelto ninguno de los volúmenes, debes devolver los volúmenes manualmente. Ve a *icono de la elipse › Redistribuir volúmenes*.
 .. Si no hay ninguna instancia de Recovery Guru presente o si sigue los pasos de Recovery Guru, los volúmenes aún no vuelven a sus propietarios preferidos, póngase en contacto con el soporte de.
 
 

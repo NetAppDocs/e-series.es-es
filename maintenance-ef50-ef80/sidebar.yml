@@ -25,6 +25,8 @@ entries:
   url: "/maintenance-ef50-ef80/dimm-replace.html"
 - title: Unidad
   url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Cajón de unidades
+  url: "/maintenance-ef50-ef80/drive-drawer-de460c-replace.html"
 - title: Ventilador
   url: "/maintenance-ef50-ef80/fan-replace.html"
 - title: Módulo E/S

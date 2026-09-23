@@ -2,9 +2,9 @@
 permalink: config-windows/configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Utilice el Protocolo de configuración dinámica de host \(DHCP\) para proporcionar direcciones IP en el método Express de Windows.' 
+summary: 'Utiliza el Protocolo de configuración dinámica de host (DHCP) para proporcionar direcciones IP en el método exprés de Windows.' 
 ---
-= Configure las direcciones IP mediante DHCP en E-Series - Windows
+= Configura direcciones IP usando DHCP para hosts Windows en E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Después de encender tu sistema de almacenamiento EF50 o EF80, completas la configuración del sistema conectando y configurando el puerto de administración en cada controlador para la administración fuera de banda del sistema de almacenamiento, configurando tu sistema de almacenamiento y luego verificando que el protocolo del módulo de E/S del host sea el correcto. 
 ---
-= Configuración completa del sistema de almacenamiento - EF50 y EF80
+= Configuración completa del sistema de almacenamiento para los sistemas EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

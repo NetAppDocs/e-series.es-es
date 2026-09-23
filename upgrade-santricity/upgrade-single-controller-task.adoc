@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Actualice el software y el firmware en una única controladora E-Series. 
 ---
-= Actualice el software y el firmware de una sola controladora
+= Actualizar el software y el firmware de un único controlador E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

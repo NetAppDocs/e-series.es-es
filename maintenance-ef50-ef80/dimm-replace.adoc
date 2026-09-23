@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace a dimm 
 summary: Sustituye un DIMM en tu sistema de almacenamiento EF50 o EF80 cuando haya fallado, informe que no está en un estado óptimo o tenga una capacidad que no coincida. 
 ---
-= Reemplaza un DIMM - EF50 y EF80
+= Reemplaza un DIMM en los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Sustituya una sola controladora en una bandeja de controladoras EF300 o EF600. 
 ---
-= Sustituya el controlador - EF300 y EF600
+= Sustituye el controlador en una matriz EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -69,7 +69,7 @@ Guarde los materiales de empaque que se deben usar para enviar el compartimento 
 Cuando una controladora tiene un error y se debe sustituir, el número de pieza de repuesto se muestra en el área Detalles de Recovery Guru. Si necesita encontrar este número manualmente, siga estos pasos:
 
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Localice la bandeja de controladoras, que se Marca con el icono de la controladora image:../media/sam1130_ss_hardware_controller_icon_maint-ef600.gif[""].
 .. Haga clic en el icono de la controladora.
 .. Seleccione el controlador y haga clic en *Siguiente*.
@@ -100,8 +100,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *co
 
 . Si la controladora aún no está desconectada, desconectarla ahora mediante System Manager de SANtricity.
 +
-.. Seleccione *hardware*.
-.. Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Seleccione la controladora que desea colocar en estado sin conexión.
 .. En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 

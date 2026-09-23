@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure el host para que ejecute la conmutación al nodo de respaldo. 
 ---
-= Configuración de la conmutación por error en el host en E-Series - Linux (NVMe over RoCE)
+= Configura la conmutación por error en un host Linux usando NVMe sobre RoCE en E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,60 @@ Consulta el  https://mysupport.netapp.com/matrix["Herramienta de matriz de inter
 
 .Acerca de esta tarea
 Para SLES 15, SLES 16, RHEL 9 y RHEL 10, la multirruta NVMe nativa está habilitada de manera predeterminada y no se requiere ninguna configuración adicional.
+
+
+
+[[configure-nvme-io-policy]]
+== Configura la política de E/S de NVMe
+
+.Acerca de esta tarea
+El multipathing nativo de NVMe en Linux puede estar configurado por defecto con la política de E/S  `numa`. Para las configuraciones NVMe-over-Fabrics de E-Series y EF-Series, la política de E/S recomendada es  `round-robin`, que distribuye la E/S de manera uniforme entre todas las rutas disponibles.
+
+.Pasos
+. Comprueba la política de E/S de NVMe actual:
++
+[listing]
+----
+# cat /sys/module/nvme_core/parameters/iopolicy
+numa
+----
+. Configura la política de E/S usando uno de los siguientes métodos: `round-robin`
++
+** *Persistente (recomendado)* — Crea un archivo de reglas de udev:
++
+.<code>/etc/udev/rules.d/71-nvme-io-policy.rules</code>
+[listing]
+----
+ACTION=="add|change", SUBSYSTEM=="nvme-subsystem", ATTR{iopolicy}="round-robin"
+----
++
+Luego, recarga y aplica las reglas:
+
++
+[listing]
+----
+udevadm control --reload
+udevadm trigger --subsystem-match=nvme-subsystem
+----
+** *Configuración global al arrancar* — Añade el siguiente parámetro de kernel a la configuración de tu gestor de arranque:
++
+[listing]
+----
+nvme_core.iopolicy=round-robin
+----
+** *No persistente (en línea, sin interrupción de E/S)* — aplica inmediatamente sin reiniciar:
++
+[listing]
+----
+echo "round-robin" > /sys/class/nvme-subsystem/nvme-subsys0/iopolicy
+----
++
+
+NOTE: Esta configuración no se mantiene tras reiniciar el sistema.
+
+
+
+
 
 .El futuro
 Con la función nativa de rutas multivías NVMe activada, link:nvme-roce-access-physical-targets-concept.html["acceder a los volúmenes NVMe de un destino E-Series desde el host"].

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya la batería - E4000
+= Sustituir la batería en un sistema de almacenamiento E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -94,7 +94,7 @@ CAUTION: * Posible pérdida de datos*--Si continúa este procedimiento mientras 
 +
 El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
-. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. En el panel izquierdo de SANtricity System Manager, selecciona el menú: almacenamiento [Operaciones en curso].
 . Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
 . Apague ambos switches de alimentación de la bandeja de controladoras.
 . Espere a que se apagen todos los LED de la bandeja de controladoras.
@@ -142,8 +142,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre, su
 +
 ** Desde SANtricity System Manager:
 +
-... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, selecciona *Controller & Components* para mostrar los controladores
+... Selecciona el menú: Hardware [Controladores y componentes] para mostrar los controladores.
 ... Seleccione la controladora que desea colocar en estado sin conexión.
 ... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -318,8 +317,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 +
 ** Desde SANtricity System Manager:
 +
-... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, seleccione *Controlador y componentes*.
+... Selecciona el menú: Hardware [Controlador y componentes].
 ... Seleccione la controladora que desea colocar en línea.
 ... Seleccione *colocar en línea* en el menú contextual y confirme que desea realizar la operación.
 +
@@ -346,9 +344,9 @@ NOTE: Si no puede resolver el problema, póngase en contacto con el soporte téc
 
 . Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
 +
-.. Selecciona *Storage › Volumes*. Desde la página *All Volumes*, verifica que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona *More › Change ownership* para ver los propietarios de los volúmenes
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *All Volumes*, comprueba que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona *icono de elipse › Cambiar titularidad del volumen* para ver los propietarios de los volúmenes.
 .. Si todos los volúmenes pertenecen al propietario preferente, continúa con el paso 4.
-.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si no se ha devuelto ninguno de los volúmenes, debes devolver los volúmenes manualmente. Ve a *icono de la elipse › Redistribuir volúmenes*.
 .. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras distribución automática o distribución manual, debe comprobar Recovery Guru para los problemas de conectividad de host.
 .. Si no existe Recovery Guru presente o si después de seguir los pasos de Recovery Guru, los volúmenes siguen sin devolverse a sus propietarios preferidos, póngase en contacto con el servicio de soporte.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Añada un segundo contenedor: E4000
+= Agrega un segundo módulo de controlador a una cabina E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,7 +39,7 @@ Confirme que la nueva controladora tiene el mismo número de pieza que la contro
 . Localice las etiquetas de dirección MAC y número de pieza de FRU en la parte posterior del compartimento de controladoras.
 . En SANtricity System Manager, busque el número de pieza de repuesto para el compartimento de controladoras instalado.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Localice la bandeja de controladoras, que se marca con el icono de la controladora.
 .. Haga clic en el icono del controlador image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF del icono del controlador"].
 .. Seleccione el controlador y haga clic en *Siguiente*.
@@ -324,7 +324,7 @@ Comienza la operación de transferencia de control.
 . Después de reiniciar las controladoras, opcionalmente, distribuya los volúmenes entre la controladora A y la nueva controladora B.
 +
 .. Selecciona *Almacenamiento › Volúmenes*.
-.. En la pestaña Todos los volúmenes, seleccione *Más › Cambiar propiedad*.
+.. En la pestaña «Todos los volúmenes», selecciona el *icono de tres puntos › Cambiar ownership*.
 .. Escriba el siguiente comando en el cuadro de texto: `change ownership`
 +
 El botón Cambiar propiedad está activado.

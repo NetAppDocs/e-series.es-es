@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace the NV battery, NV battery 
 summary: Reemplaza la batería NV de tu sistema de almacenamiento EF50 o EF80 cuando la batería empiece a perder carga o falle, ya que es la responsable de preservar los datos críticos del sistema durante los cortes de energía. 
 ---
-= Reemplaza la batería NV - EF50 y EF80
+= Sustituye la batería NV en un sistema de almacenamiento EF50 o EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

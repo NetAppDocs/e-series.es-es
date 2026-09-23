@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Después de que te prepares para instalar tu sistema de almacenamiento EF50 o EF80, instala el hardware de montaje en rack en un gabinete o rack de telecomunicaciones y luego instala y asegura tu sistema de almacenamiento. 
 ---
-= Instala el hardware - EF50 y EF80
+= Instala el hardware de los sistemas de almacenamiento EF50 y EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

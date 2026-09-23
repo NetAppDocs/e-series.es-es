@@ -29,6 +29,7 @@ El método exprés de Linux incluye los siguientes pasos.
 ** SRP over InfiniBand
 ** NVMe over InfiniBand
 ** NVMe over roce
+** NVMe sobre TCP
 ** NVMe over Fibre Channel
 
 

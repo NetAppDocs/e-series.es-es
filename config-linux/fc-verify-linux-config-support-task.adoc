@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, 
 summary: Compruebe que la configuración de Linux es compatible. 
 ---
-= Comprobar la compatibilidad de configuración de Linux en E-Series (FC)
+= Verifica la compatibilidad de la configuración FC de Linux en E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

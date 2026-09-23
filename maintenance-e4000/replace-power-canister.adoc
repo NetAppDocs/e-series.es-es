@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Sustituya una bandeja de controladoras o una bandeja de unidades de 60 unidades, que incluye dos contenedores de alimentación por motivos de redundancia de alimentación. 
 ---
-= Sustituya el compartimento de alimentación - E4000 (60 unidades)
+= Sustituye un módulo de alimentación en un shelf de 60 unidades E4000
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -56,13 +56,12 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 . En SANtricity System Manager, determine qué contenedor de alimentación ha fallado.
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Mire el icono de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"]a la derecha de las listas desplegables *Bandeja* para determinar qué bandeja tiene el contenedor de alimentación con errores.
 +
 Si un componente falla, este icono está en rojo.
 
-.. Cuando encuentre el estante con un icono rojo, seleccione *Controlador y componentes*.
-.. Seleccione el compartimento de alimentación o el icono de alimentación rojo.
+.. Cuando encuentres la estantería con un icono rojo, selecciona el canister de energía o el icono rojo de energía.
 .. En la ficha *fuentes de alimentación*, observe los Estados de los contenedores de alimentación para determinar qué contenedor de alimentación debe sustituirse.
 +
 Es necesario sustituir un componente con un estado *fallido*.

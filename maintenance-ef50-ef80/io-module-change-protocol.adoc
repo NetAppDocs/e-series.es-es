@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF50, EF80 
 summary: Puedes cambiar el protocolo en los módulos de E/S de host en tu sistema de almacenamiento EF50 o EF80 cuando necesites un protocolo diferente en tus módulos de E/S existentes, como parte de una actualización de módulo de E/S, o cuando el protocolo predeterminado en los nuevos controladores que forman parte de una nueva instalación de sistema de almacenamiento o actualización de controladores no sea el protocolo que quieres. 
 ---
-= Cambiar el protocolo del módulo de I/O del host - EF50 y EF80
+= Cambiar el protocolo del módulo de E/S del host en un sistema EF50 o EF80
 :allow-uri-read: 
 :experimental: 
 :icons: font

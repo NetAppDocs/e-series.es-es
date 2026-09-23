@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/understand-vmware-workflow-concept.html 
 sidebar: sidebar 
-keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
-summary: Utilice el flujo de trabajo de configuración exprés de WVMware. 
+keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand, vmware, VMware 
+summary: Utiliza el flujo de trabajo de configuración express de VMware. 
 ---
-= Conozca el flujo de trabajo de VMware en E-Series
+= Flujo de trabajo de configuración express de VMware para E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,4 +13,4 @@ summary: Utilice el flujo de trabajo de configuración exprés de WVMware.
 [role="lead"]
 Este flujo de trabajo lo guía por el "método exprés" para configurar la cabina de almacenamiento y System Manager de SANtricity para que el almacenamiento esté disponible para un host de VMware.
 
-image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Flujo de trabajo de la guía exprés de VMware»]
+image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Flujo de trabajo de la guía express de VMware]

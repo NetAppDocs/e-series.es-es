@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Los switches se configuran según las recomendaciones del proveedor para NVMe over roce. Estas recomendaciones pueden incluir tanto directivas de configuración como actualizaciones de código. 
 ---
-= Configura los switches en E-Series - Linux (NVMe sobre RoCE)
+= Configura conmutadores para NVMe sobre RoCE en un entorno Linux de E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Los marcos en pausa globales son la forma más básica de control de flujo y la 
 
 El control de flujo por prioridades (PFC) es una forma más compleja de control de flujo que asigna diferentes niveles de prioridad a distintos tipos de tráfico. Cuando se recibe demasiado tráfico en una prioridad, este se detiene, mientras que se permite que el tráfico correspondiente a otros niveles de prioridad continúe, lo que ayuda a evitar que el tráfico intenso de determinados tipos ralentice otras formas de tráfico.
 
-En este momento, debes estar utilizando una EF600 E-Series Array con HICs Ethernet de 200 Gb/s (PN 111-04583) ejecutando 11.80.1 o una EF80 E-Series Array funcionando con cualquier HIC NVMe/RoCE compatible. Los parámetros PFC están codificados de forma fija en la array y requieren que el tráfico NVMe/RoCE se etiquete como prioridad 3 con un valor DSCP de `106`.
+En este momento, debes estar utilizando una EF600 E-Series Array con HICs Ethernet de 200 Gb/s (PN 111-04583) ejecutando 11.80.1 o una EF80 E-Series Array funcionando con cualquier HIC NVMe/RoCE compatible. Los parámetros PFC están codificados de forma fija en la array y requieren que el tráfico NVMe/RoCE se etiquete como prioridad 3 con un valor DSCP de `26`.
 
 .Pasos
 . Consulta la documentación del fabricante del switch para obtener más información sobre cómo configurar tu red usando los valores PFC.

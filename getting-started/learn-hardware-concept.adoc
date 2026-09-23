@@ -22,12 +22,12 @@ A continuación se muestran algunos de los modelos de array E-Series disponibles
 * Serie E4000: Híbrido de gama básica
 * Serie EF600: All-flash de rango medio, todo NVMe
 * Serie EF300 -- All-NVMe, all-flash de gama básica
-* Serie EF300C -- All-NVMe, all-flash de gama básica
-* Serie EF600C: All-flash de rango medio, todo NVMe
-* Serie E2800: Híbrido de gama básica
-* Serie EF280: All Flash de gama básica
-* Serie E5700: Híbrido de gama media
-* Serie EF570: All-flash de rango medio
+* Serie EF300C -- all flash de gama básica y alta densidad NVMe
+* Serie EF600C -- all flash de gama media, NVMe de alta densidad
+* Serie E2800 (End-of-availability) — híbrido básico
+* Serie EF280 (fuera de comercialización) -- modelo básico all flash
+* Serie E5700 (fuera de comercialización) -- híbrido de gama media
+* Serie EF570 (fin de disponibilidad) -- gama media all flash
 
 
 
@@ -57,6 +57,10 @@ Unidades::
 ** 15,3 TB
 ** 30 TB
 ** 60 TB
++
+
+NOTE: Para las unidades de 30 TB y 60 TB, el EF50 solo admite el uso de Dynamic Disk Pool sin compatibilidad con RAID tradicional.
+
 
 
 * Admite hasta 24 unidades SSD NVMe en el estante del controlador.
@@ -65,6 +69,13 @@ Unidades::
 +
 
 NOTE: Es fundamental conectar correctamente los cables de duplicación al configurar tu sistema EF50. Para más información, consulta https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Cablea las conexiones de duplicación entre controladores - EF50 y EF80"].
+
+* Compatibilidad con una tarjeta de ampliación SAS opcional, que permite conexiones de bandeja de ampliación SAS.
+* Se crea automáticamente un único grupo de discos si hay suficientes unidades sin asignar durante el arranque del sistema.
+* A partir de SANtricity OS 12.10, el EF50 admite la combinación de unidades de 3,8 TB, 7,6 TB y 15,3 TB con unidades de 30 TB y 60 TB. Estas unidades, en una bandeja mixta, se colocarán automáticamente en un único grupo de discos sin compatibilidad con RAID.
++
+
+NOTE: Los grupos de discos creados automáticamente se pueden eliminar a través de SANtricity System Manager o SANtricity CLI. Para obtener más información, consulta https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Eliminar un grupo de discos - Guía de la CLI de SANtricity"^] y https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Eliminar un pool o un grupo de volúmenes - Guía de SANtricity System Manager"^].
 
 
 
@@ -76,6 +87,7 @@ Disponible con las siguientes interfaces:
 
 * 64Gb NVMe / Fibre Channel
 * Fibre Channel de 64 Gb
+* ISCSI de 25 GB
 
 
 --
@@ -104,6 +116,10 @@ Unidades::
 ** 15,3 TB
 ** 30 TB
 ** 60 TB
++
+
+NOTE: Para las unidades de 30 TB y 60 TB, el EF80 solo admite el uso de Dynamic Disk Pool sin compatibilidad con RAID tradicional.
+
 
 
 * Admite hasta 24 unidades SSD NVMe en el estante del controlador.
@@ -113,6 +129,12 @@ Unidades::
 
 NOTE: Es fundamental conectar correctamente los cables de duplicación al configurar tu sistema EF80. Para más información, mira https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Cablea las conexiones de duplicación entre controladores - EF50 y EF80"].
 
+* Compatibilidad con una tarjeta de ampliación SAS opcional, que permite conexiones de bandeja de ampliación SAS.
++
+Si se instala la tarjeta de expansión SAS, el número máximo de tarjetas de interfaz del host para la conectividad de host se limita a dos por controlador.
+
+* Se crea automáticamente un único grupo de discos si hay suficientes unidades sin asignar durante el arranque del sistema.
+* A partir de SANtricity OS 12.10, el EF80 admite la combinación de unidades de 3,8 TB, 7,6 TB y 15,3 TB con unidades de 30 TB y 60 TB. Estas unidades, en una bandeja mixta, se colocarán automáticamente en un único grupo de discos sin compatibilidad con RAID. + NOTA: Los grupos de discos creados automáticamente se pueden eliminar a través de SANtricity System Manager o de la CLI de SANtricity. Para obtener más información, consulta https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Eliminar un grupo de discos - Guía de la CLI de SANtricity"^] y https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Eliminar un pool o un grupo de volúmenes - Guía de SANtricity System Manager"^].
 
 
 --
@@ -121,6 +143,7 @@ Interfaces::
 --
 Disponible con las siguientes interfaces:
 
+* 200 Gb NVMe / TCP
 * NVMe/roce de 200 GB
 * 64Gb NVMe / Fibre Channel
 * 200 GB NVMe/IB
@@ -162,6 +185,7 @@ Interfaces::
 --
 Disponible con las siguientes interfaces:
 
+* ISCSI de 25 GB
 * SAS de 12 GB
 * 1Gb o 10Gb Base-T iSCSI
 * ISCSI de 1GB, 10Gb o 25GB Gb
@@ -250,7 +274,11 @@ Unidades::
 ** No admite las configuraciones de bandeja de ampliación.
 
 
-* Un único pool de discos se crea automáticamente si no hay suficientes unidades sin asignar durante el arranque del sistema.
+* Se crea automáticamente un único grupo de discos si hay suficientes unidades sin asignar durante el arranque del sistema.
++
+
+NOTE: Los grupos de discos creados automáticamente se pueden eliminar a través de SANtricity System Manager o SANtricity CLI. Para obtener más información, consulta https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Eliminar un grupo de discos - Guía de la CLI de SANtricity"^] y https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Eliminar un pool o un grupo de volúmenes - Guía de SANtricity System Manager"^].
+
 
 
 --
@@ -342,6 +370,10 @@ Unidades::
 
 * Compatibilidad con una tarjeta de interfaz del host por controladora.
 * Un único pool de discos se crea automáticamente si no hay suficientes unidades sin asignar durante el arranque del sistema.
++
+
+NOTE: Los grupos de discos creados automáticamente se pueden eliminar a través de SANtricity System Manager o SANtricity CLI. Para obtener más información, consulta https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Eliminar un grupo de discos - Guía de la CLI de SANtricity"^] y https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Eliminar un pool o un grupo de volúmenes - Guía de SANtricity System Manager"^].
+
 
 
 --
@@ -363,7 +395,7 @@ Disponible con las siguientes interfaces:
 
 
 --
-.Modelos E2800
+.Modelos E2800 (EOA)
 --
 Tamaños de rack::
 +
@@ -405,7 +437,7 @@ Disponible con las siguientes interfaces:
 
 
 --
-.Modelos EF280
+.Modelos EF280 (EOA)
 --
 Tamaños de rack::
 +
@@ -435,7 +467,7 @@ Disponible con las siguientes interfaces:
 
 
 --
-.Modelos E5700
+.Modelos E5700 (EOA)
 --
 Tamaños de rack::
 +
@@ -481,7 +513,7 @@ Disponible con las siguientes interfaces:
 
 
 --
-.Modelos de EF570
+.Modelos EF570 (EOA)
 --
 Tamaños de rack::
 +

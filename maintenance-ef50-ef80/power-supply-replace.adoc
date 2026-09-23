@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace a power supply 
 summary: 'Sustituye una fuente de alimentación (PSU) en tu sistema de almacenamiento EF50 o EF80 cuando falle o se averíe, asegurando que tu sistema siga recibiendo la energía necesaria para un funcionamiento estable.' 
 ---
-= Reemplazar una fuente de alimentación - EF50 y EF80
+= Sustituir una fuente de alimentación en un sistema de almacenamiento EF50 o EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

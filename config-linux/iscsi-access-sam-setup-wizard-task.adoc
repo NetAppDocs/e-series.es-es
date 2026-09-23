@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: El asistente de configuración de SANtricity System Manager se utiliza para configurar la cabina de almacenamiento. 
 ---
-= Configuración del almacenamiento mediante System Manager de SANtricity - Linux (iSCSI)
+= Configura el almacenamiento iSCSI en E-Series usando SANtricity System Manager
 :allow-uri-read: 
 :experimental: 
 :icons: font

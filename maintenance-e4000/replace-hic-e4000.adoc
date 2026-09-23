@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Reemplace la tarjeta de interfaz del host (HIC) - E4000
+= Sustituir una tarjeta de interfaz del host E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -116,7 +116,7 @@ CAUTION: * Posible pérdida de datos* — Si continúa este procedimiento mientr
 +
 El LED verde de caché activa de la parte posterior de la controladora está encendido cuando los datos en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
 
-. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. En la página de inicio de SANtricity System Manager, selecciona el menú: Storage [Operations in Progress].
 . Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
 . Apague ambos switches de alimentación de la bandeja de controladoras.
 . Espere a que se apagen todos los LED de la bandeja de controladoras.
@@ -137,7 +137,7 @@ Guarde los materiales de empaque que se deben usar para enviar el compartimento 
 Cuando una controladora tiene un error y se debe sustituir, el número de pieza de repuesto se muestra en el área Detalles de Recovery Guru. Si necesita encontrar este número manualmente, siga estos pasos:
 
 +
-.. Seleccione *hardware*.
+.. Selecciona el menú:Hardware[Controllers and components].
 .. Localice la bandeja de controladoras, que se marca con el icono de la controladora.
 .. Haga clic en el icono de la controladora.
 .. Seleccione el controlador y haga clic en *Siguiente*.
@@ -176,8 +176,7 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 +
 ** Desde SANtricity System Manager:
 +
-... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja* para mostrar las controladoras.
+... Selecciona el menú:Hardware[Controllers and components].
 ... Seleccione la controladora que desea colocar en estado sin conexión.
 ... En el menú contextual, seleccione *colocar fuera de línea* y confirme que desea realizar la operación.
 +
@@ -328,8 +327,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 +
 ** Desde SANtricity System Manager:
 +
-... Seleccione *hardware*.
-... Si el gráfico muestra las unidades, seleccione *Mostrar parte posterior de la bandeja*.
+... Selecciona el menú:Hardware[Controllers and components].
 ... Seleccione la controladora que desea colocar en línea.
 ... Seleccione *colocar en línea* en el menú contextual y confirme que desea realizar la operación.
 +
@@ -356,9 +354,9 @@ NOTE: Si no puede resolver el problema, póngase en contacto con el soporte téc
 
 . Verifique que todos los volúmenes se hayan devuelto al propietario preferido.
 +
-.. Selecciona *Almacenamiento › Volúmenes*. En la página *todos los volúmenes*, compruebe que los volúmenes se distribuyen a sus propietarios preferidos. Seleccione *Más › Cambiar propiedad* para ver los propietarios del volumen.
+.. Selecciona *Almacenamiento › Volúmenes*. En la página *All Volumes*, comprueba que los volúmenes estén distribuidos a sus propietarios preferidos. Selecciona *icono de elipse › Cambiar titularidad* para ver los propietarios de los volúmenes.
 .. Si todos los volúmenes son propiedad del propietario preferido, continúe con el paso 5.
-.. Si ninguno de los volúmenes se devuelve, debe devolver manualmente los volúmenes. Vaya a *Más › Redistribuir volúmenes*.
+.. Si no se ha devuelto ninguno de los volúmenes, debes devolver los volúmenes manualmente. Ve a *icono de la elipse › Redistribuir volúmenes*.
 .. Si solo algunos de los volúmenes se devuelven a sus propietarios preferidos tras distribución automática o distribución manual, debe comprobar Recovery Guru para los problemas de conectividad de host.
 .. Si no existe Recovery Guru presente o si después de seguir los pasos de Recovery Guru, los volúmenes siguen sin devolverse a sus propietarios preferidos, póngase en contacto con el servicio de soporte.
 

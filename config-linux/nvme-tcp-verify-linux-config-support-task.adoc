@@ -1,0 +1,56 @@
+---
+permalink: config-linux/nvme-tcp-verify-linux-config-support-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Para garantizar una operación fiable, debe crear un plan de implementación y, a continuación, utilizar la herramienta de matriz de interoperabilidad (IMT) de NetApp para verificar que se admite toda la configuración.' 
+---
+= Verifica la compatibilidad de la configuración de NVMe over TCP en Linux en E-Series
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como primer paso, debe verificar que la configuración de Linux es compatible y revisar también las restricciones de la controladora, el host y la recuperación.
+
+
+
+[[verify-the-linux-configuration-is-supported]]
+== Compruebe que la configuración de Linux sea compatible
+
+Para garantizar una operación fiable, debe crear un plan de implementación y, a continuación, utilizar la herramienta de matriz de interoperabilidad (IMT) de NetApp para verificar que se admite toda la configuración.
+
+.Pasos
+. Vaya a la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].
+. Haga clic en el icono *Búsqueda de soluciones*.
+. En el área de menú:Protocolos[Host SAN], haga clic en el botón *Agregar* situado junto a *Host SAN E-Series*.
+. Haga clic en *Ver criterios de búsqueda de afinado*.
++
+Se muestra la sección criterios de búsqueda de afinado. En esta sección, puede seleccionar el protocolo aplicable, así como otros criterios para la configuración como sistema operativo, sistema operativo de NetApp y controlador multivía de host.
+
+. Seleccione los criterios que sabe que desea utilizar para su configuración y, a continuación, vea los elementos de configuración compatibles que se aplican.
+. Según sea necesario, realice las actualizaciones para el sistema operativo y el protocolo que se prescriben en la herramienta.
++
+Puede acceder a la información detallada de la configuración elegida en la página Ver configuraciones admitidas haciendo clic en la flecha de la página derecha.
+
+
+
+
+
+[[verify-nvme-over-tcp-restrictions]]
+== Verifica las restricciones de NVMe sobre TCP
+
+Antes de utilizar NVMe sobre TCP, consulta la  https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^] para revisar las últimas restricciones de controladores, hosts y recuperación.
+
+
+
+[[storage-and-disaster-recovery-restrictions]]
+=== Restricciones de almacenamiento y recuperación ante desastres
+
+* No se admiten el mirroring asíncrono y síncrono.
+* No se admite thin provisioning (la creación de volúmenes finos).
+
+
+.El futuro
+Después de que verifiques la compatibilidad de la configuración con Linux y revises las restricciones, link:nvme-tcp-configure-ip-address-dhcp-task.html["configurar direcciones IP mediante DHCP"].

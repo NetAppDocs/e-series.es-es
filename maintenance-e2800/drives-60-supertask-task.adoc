@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive drawer, replacing E2800 drive drawer, E2800 replace drive drawer, replacing E2800 drive drawer, E2800, E-Series, eseries 
 summary: Sustituya un cajón de unidades en una bandeja de controladoras E2860 o una bandeja de unidades DE460C. 
 ---
-= Reemplazar un cajón de unidades: E2800 (bandeja de 60 unidades)
+= Sustituye una bandeja de unidades en un shelf E2800 de 60 unidades
 :allow-uri-read: 
 :experimental: 
 :icons: font
