@@ -17,7 +17,7 @@ Debe conectar cada controladora de la bandeja de controladoras a un módulo de I
 * Este procedimiento se aplica a los estantes de unidades IOM12, IOM12B e IOM12C.
 +
 
-NOTE: Los módulos IOM12C sólo se admiten en SANtricity OS 11.70.2 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12C.
+NOTE: Los módulos IOM12C solo son compatibles con SANtricity OS 11.90R3 en adelante. Asegúrese de que el firmware de la controladora se haya actualizado antes de instalar o actualizar a un IOM12C.
 
 * Si va a cablear una bandeja de controladoras anterior a DE212C, DE224C o DE460, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adición de bandejas de unidades IOM a una bandeja de controladoras E27XX, Safari o EF560 existente"^].
 * Si vas a conectar un sistema de almacenamiento EF50 o EF80 a bandejas de expansión SAS como parte de la instalación de un nuevo sistema, consulta el procedimiento link:../install-hw-ef50-ef80/install-cable.html["Cablea el hardware de los sistemas de almacenamiento EF50 y EF80"].
